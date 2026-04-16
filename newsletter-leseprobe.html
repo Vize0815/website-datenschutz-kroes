@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsflash – Leseprobe | Datenschutz Kroes</title>
+  <meta name="description" content="Leseprobe des monatlichen Datenschutz-Newsletters für Inhaber, Geschäftsführungen und Verantwortliche.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:    #0F1F3D;
+      --accent:  #1B4F8A;
+      --gold:    #C9A84C;
+      --fog:     #F4F5F7;
+      --white:   #FFFFFF;
+      --ink:     #1A1A2E;
+      --slate:   #5C6B82;
+      --mist:    #DDE3EC;
+      --verdant: #2D6A4F;
+      --serif:   'Fraunces', Georgia, serif;
+      --sans:    'DM Sans', system-ui, sans-serif;
+      --mono:    'DM Mono', 'Courier New', monospace;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: #E2E6ED;
+      color: var(--ink);
+      line-height: 1.6;
+      padding: 48px 16px 96px;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .nl { max-width: 640px; margin: 0 auto; }
+
+    /* Topbar */
+    .nl__topbar {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: #6B7A8F;
+      margin-bottom: 28px;
+      line-height: 1.8;
+    }
+    .nl__topbar a { color: #6B7A8F; text-decoration: underline; }
+
+    /* Header */
+    .nl__header {
+      background: var(--navy);
+      padding: 36px 48px 32px;
+    }
+    .nl__header-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    .nl__logo-name {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+    .nl__logo-tag {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 5px;
+    }
+    .nl__issue-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      text-align: right;
+    }
+    .nl__issue-number {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--gold);
+      text-align: right;
+      margin-top: 5px;
+    }
+    .nl__header-subject {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nl__subject-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      white-space: nowrap;
+    }
+    .nl__subject-text {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* Gold bar */
+    .nl__gold-bar {
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold) 0%, #E8C76A 50%, var(--gold) 100%);
+    }
+
+    /* Greeting */
+    .nl__greeting-band {
+      background: var(--white);
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      padding: 32px 48px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .nl__avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .nl__greeting-text {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.7;
+    }
+    .nl__greeting-text strong { color: var(--ink); }
+    .nl__greeting-sig {
+      margin-top: 16px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+    .nl__greeting-sig span { color: var(--gold); }
+
+    /* TOC */
+    .nl__toc {
+      background: var(--fog);
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      border-top: 1px solid var(--mist);
+      padding: 24px 48px;
+    }
+    .nl__toc-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 12px;
+    }
+    .nl__toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .nl__toc-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    .nl__toc-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--gold);
+      width: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Section label */
+    .nl__section {
+      background: var(--fog);
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      border-top: 1px solid var(--mist);
+      padding: 18px 48px 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+    .nl__section::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--mist);
+    }
+
+    /* Top story */
+    .nl__top-story {
+      background: var(--navy);
+      border-left: 1px solid var(--navy);
+      border-right: 1px solid var(--navy);
+      padding: 44px 48px;
+    }
+    .nl__tag {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .nl__top-story h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .nl__top-story p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .nl__pullquote {
+      background: rgba(201,168,76,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 2px 2px 0;
+    }
+    .nl__pullquote p {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold) !important;
+      margin: 0 !important;
+      line-height: 1.5;
+    }
+    .nl__infobox {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 3px;
+      padding: 16px 20px;
+      margin-top: 20px;
+    }
+    .nl__infobox-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .nl__infobox ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .nl__infobox ul li {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .nl__infobox ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 11px;
+    }
+
+    /* White content block */
+    .nl__block {
+      background: var(--white);
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      padding: 36px 48px;
+    }
+    .nl__block h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .nl__block p {
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+    .nl__block p:last-child { margin-bottom: 0; }
+    .nl__block strong { color: var(--ink); }
+
+    /* Article cards */
+    .nl__cards {
+      background: var(--white);
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      padding: 8px 48px 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .nl__card {
+      border: 1px solid var(--mist);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .nl__card-badge {
+      padding: 7px 12px;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--mist);
+      background: var(--fog);
+      color: var(--slate);
+    }
+    .nl__card-badge--warn  { background: #FFF5E6; color: #A85200; border-bottom-color: #FFDCAA; }
+    .nl__card-badge--tip   { background: #E8F4EE; color: #1E5C3A; border-bottom-color: #B4D9C4; }
+    .nl__card-badge--law   { background: #EEF2F8; color: var(--accent); border-bottom-color: #C4D0E4; }
+    .nl__card-badge--info  { background: #F0EEF8; color: #4A3A8A; border-bottom-color: #C8C0E0; }
+    .nl__card-body { padding: 14px 12px; }
+    .nl__card h4 {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 7px;
+    }
+    .nl__card p {
+      font-size: 12px;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* Tip box */
+    .nl__tip {
+      background: #EBF5F0;
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      border-top: 1px solid var(--mist);
+      padding: 32px 48px;
+    }
+    .nl__tip-inner {
+      border: 1px solid #B0D4C0;
+      border-radius: 3px;
+      padding: 28px;
+      background: var(--white);
+    }
+    .nl__tip-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--verdant);
+      margin-bottom: 10px;
+    }
+    .nl__tip-inner h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .nl__tip-intro {
+      font-size: 13px;
+      color: var(--slate);
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+    .nl__tip-steps {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .nl__tip-steps li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .nl__step-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--gold);
+      background: #FFF8E8;
+      border: 1px solid #EDD898;
+      border-radius: 2px;
+      padding: 2px 7px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .nl__tip-steps li p {
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .nl__tip-steps li p strong { color: var(--navy); }
+
+    /* Divider */
+    .nl__divider {
+      height: 1px;
+      background: var(--mist);
+      margin: 0 48px;
+      border-left: 1px solid var(--mist);
+    }
+    .nl__divider-wrap {
+      background: var(--white);
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      padding: 0 48px;
+    }
+    .nl__divider-inner { height: 1px; background: var(--mist); }
+
+    /* Numbers */
+    .nl__numbers {
+      background: var(--white);
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      padding: 36px 48px;
+    }
+    .nl__numbers-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 8px;
+    }
+    .nl__numbers h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .nl__numbers-intro {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .nl__number-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .nl__number-item {
+      border: 1px solid var(--mist);
+      border-radius: 3px;
+      padding: 20px 14px;
+      text-align: center;
+    }
+    .nl__number-val {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .nl__number-val--gold { color: var(--gold); }
+    .nl__number-val--green { color: var(--verdant); }
+    .nl__number-desc {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-top: 8px;
+      line-height: 1.45;
+    }
+
+    /* Interview / Q&A */
+    .nl__qa {
+      background: var(--fog);
+      border-left: 1px solid var(--mist);
+      border-right: 1px solid var(--mist);
+      border-top: 1px solid var(--mist);
+      padding: 36px 48px;
+    }
+    .nl__qa h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .nl__qa-item { margin-bottom: 20px; }
+    .nl__qa-item:last-child { margin-bottom: 0; }
+    .nl__question {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .nl__q-badge {
+      font-family: var(--mono);
+      font-size: 9px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 2px 6px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .nl__answer {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.7;
+      padding-left: 32px;
+    }
+
+    /* Quote */
+    .nl__quote {
+      background: var(--navy);
+      border-left: 1px solid var(--navy);
+      border-right: 1px solid var(--navy);
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .nl__quote-mark {
+      font-family: var(--serif);
+      font-size: 72px;
+      line-height: 0.5;
+      color: var(--gold);
+      opacity: 0.25;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .nl__quote-text {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+    .nl__quote-source {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* CTA */
+    .nl__cta {
+      background: var(--accent);
+      padding: 44px 48px;
+      text-align: center;
+    }
+    .nl__cta-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 10px;
+    }
+    .nl__cta h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .nl__cta p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .nl__cta-btn {
+      display: inline-block;
+      padding: 13px 36px;
+      background: var(--gold);
+      color: var(--navy) !important;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      border-radius: 2px;
+    }
+    .nl__cta-btn:hover { opacity: 0.88; }
+    .nl__cta-micro {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.08em;
+      margin-top: 14px;
+    }
+
+    /* Footer */
+    .nl__footer {
+      background: var(--navy);
+      padding: 36px 48px 32px;
+      text-align: center;
+    }
+    .nl__footer-logo {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .nl__footer-tag {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .nl__footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-bottom: 16px;
+    }
+    .nl__footer-links a {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+      text-decoration: none;
+    }
+    .nl__footer-links a:hover { color: rgba(255,255,255,0.75); }
+    .nl__footer-copy {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: rgba(255,255,255,0.22);
+      letter-spacing: 0.06em;
+      line-height: 1.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body { padding: 16px 8px 60px; }
+      .nl__header,
+      .nl__greeting-band,
+      .nl__toc,
+      .nl__section,
+      .nl__top-story,
+      .nl__block,
+      .nl__cards,
+      .nl__tip,
+      .nl__numbers,
+      .nl__qa,
+      .nl__quote,
+      .nl__cta,
+      .nl__footer { padding-left: 20px; padding-right: 20px; }
+      .nl__cards { grid-template-columns: 1fr; }
+      .nl__number-grid { grid-template-columns: 1fr; }
+      .nl__header-top { flex-direction: column; gap: 12px; }
+      .nl__issue-label, .nl__issue-number { text-align: left; }
+      .nl__divider { margin: 0 20px; }
+      .nl__tip-inner { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="nl">
+
+  <!-- Topbar -->
+  <p class="nl__topbar">
+    Dies ist eine Leseprobe des monatlichen Datenschutz-Newsletters &nbsp;·&nbsp;
+    <a href="index.html">Zur Website</a> &nbsp;·&nbsp;
+    <a href="index.html#newsletter">Kostenlos abonnieren</a>
+  </p>
+
+  <!-- Header -->
+  <header class="nl__header">
+    <div class="nl__header-top">
+      <div>
+        <div class="nl__logo-name">Datenschutz Kroes</div>
+        <div class="nl__logo-tag">Newsflash &nbsp;·&nbsp; Monatlicher Newsletter</div>
+      </div>
+      <div>
+        <div class="nl__issue-label">Ausgabe</div>
+        <div class="nl__issue-number">April 2026 &nbsp;·&nbsp; #12</div>
+      </div>
+    </div>
+    <div class="nl__header-subject">
+      <span class="nl__subject-label">Themen</span>
+      <span class="nl__subject-text">EuGH-Urteil zu Bußgeldern &nbsp;·&nbsp; Verarbeitungsverzeichnis in 5 Schritten &nbsp;·&nbsp; NIS2-Update</span>
+    </div>
+  </header>
+
+  <!-- Gold bar -->
+  <div class="nl__gold-bar"></div>
+
+  <!-- Greeting -->
+  <div class="nl__greeting-band">
+    <div class="nl__avatar">AK</div>
+    <div>
+      <p class="nl__greeting-text">
+        <strong>Guten Tag,</strong><br><br>
+        der April bringt Bewegung: Ein wegweisendes EuGH-Urteil verändert, wie Datenschutzbehörden künftig mit Verstößen umgehen — und was das für Ihr Unternehmen bedeutet, lesen Sie gleich. Dazu: Warum Ihr Verarbeitungsverzeichnis wahrscheinlich Lücken hat, wie Sie das in fünf Schritten beheben, und welche drei Datenschutz-Irrtümer ich immer wieder höre.
+      </p>
+      <p class="nl__greeting-sig">Alexander Kroes &nbsp;<span>·</span>&nbsp; Externer Datenschutzbeauftragter &nbsp;<span>·</span>&nbsp; Kufstein, Tirol</p>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="nl__toc">
+    <p class="nl__toc-label">In dieser Ausgabe</p>
+    <ul class="nl__toc-list">
+      <li><span class="nl__toc-num">01</span> EuGH: Behörden müssen Bußgelder verhängen — kein Ermessen mehr</li>
+      <li><span class="nl__toc-num">02</span> Vier Datenschutznews, die Sie kennen sollten</li>
+      <li><span class="nl__toc-num">03</span> Praxis-Tipp: Verarbeitungsverzeichnis in 5 Schritten DSGVO-fit machen</li>
+      <li><span class="nl__toc-num">04</span> Zahlen & Fakten: DSGVO-Bußgelder 2025</li>
+      <li><span class="nl__toc-num">05</span> Die drei Datenschutz-Irrtümer im KMU-Alltag</li>
+    </ul>
+  </div>
+
+  <!-- Section -->
+  <div class="nl__section">01 &nbsp; Titelthema</div>
+
+  <!-- Top Story -->
+  <div class="nl__top-story">
+    <p class="nl__tag">EuGH-Urteil &nbsp;·&nbsp; C-741/21 &nbsp;·&nbsp; März 2026</p>
+    <h2>EuGH: Datenschutzbehörden müssen Bußgelder verhängen — kein Ermessen mehr</h2>
+    <p>
+      Der Europäische Gerichtshof hat klargestellt: Stellt eine Datenschutzbehörde einen DSGVO-Verstoß fest, ist sie grundsätzlich verpflichtet, ein Bußgeld zu verhängen. Eine bloße Verwarnung oder Empfehlung genügt nur noch in begründeten Ausnahmefällen — und diese Ausnahme muss die Behörde aktiv begründen.
+    </p>
+    <div class="nl__pullquote">
+      <p>„Wer bisher auf die Kulanz der Behörde gehofft hat, sollte seine Datenschutzmaßnahmen jetzt überprüfen. Die Schonzeit ist vorbei."</p>
+    </div>
+    <p>
+      Für österreichische und deutsche KMU heißt das konkret: Die Zeiten, in denen ein Behördenbrief mit einer freundlichen Empfehlung endete, sind vorbei. Fehlende Verarbeitungsverzeichnisse, lückenhafte Datenschutzerklärungen oder fehlende Auftragsverarbeitungsverträge sind die häufigsten Beanstandungen — und genau dort setzt die Behörde nun mit erhöhtem Nachdruck an.
+    </p>
+    <div class="nl__infobox">
+      <p class="nl__infobox-label">Was das für Sie bedeutet</p>
+      <ul>
+        <li>Prüfen Sie, ob Ihr Verarbeitungsverzeichnis vollständig und aktuell ist.</li>
+        <li>Stellen Sie sicher, dass AVV mit allen relevanten Dienstleistern geschlossen sind.</li>
+        <li>Überprüfen Sie Ihre Website-Datenschutzerklärung — besonders Cookie-Banner.</li>
+        <li>Dokumentieren Sie Ihre Datenschutzmaßnahmen nachweisbar (Rechenschaftspflicht).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section -->
+  <div class="nl__section">02 &nbsp; Aktuelles</div>
+
+  <!-- Cards -->
+  <div class="nl__cards">
+    <div class="nl__card">
+      <div class="nl__card-badge nl__card-badge--warn">Achtung</div>
+      <div class="nl__card-body">
+        <h4>Mitarbeiterliste per E-Mail? Das ist ein Verstoß.</h4>
+        <p>Interne Verteilerlisten, die unverschlüsselt weitergeleitet werden, verstoßen regelmäßig gegen Art. 32 DSGVO. Eine einfache Ende-zu-Ende-Verschlüsselung schafft Abhilfe.</p>
+      </div>
+    </div>
+    <div class="nl__card">
+      <div class="nl__card-badge nl__card-badge--law">Recht</div>
+      <div class="nl__card-body">
+        <h4>Videoüberwachung: neue Grenzen durch BAG-Urteil</h4>
+        <p>Kameraüberwachung im Lager ist auch ohne Betriebsrat unter strengen Bedingungen zulässig — aber nur mit dokumentiertem Verdacht und verhältnismäßiger Dauer.</p>
+      </div>
+    </div>
+    <div class="nl__card">
+      <div class="nl__card-badge nl__card-badge--tip">Praxis</div>
+      <div class="nl__card-body">
+        <h4>Cookie-Banner: Ablehnen muss so einfach sein wie Zustimmen</h4>
+        <p>Viele Banner sind immer noch nicht konform. Entscheidend: Der "Ablehnen"-Button darf nicht versteckt oder kleiner gestaltet sein als "Zustimmen".</p>
+      </div>
+    </div>
+    <div class="nl__card">
+      <div class="nl__card-badge nl__card-badge--warn">Frist</div>
+      <div class="nl__card-body">
+        <h4>NIS2: Erste Überprüfungen in DE ab Q3 2026</h4>
+        <p>Behörden haben angekündigt, ab Sommer aktiv zu prüfen. Betroffene Unternehmen sollten ihre Meldewege und Sicherheitsmaßnahmen jetzt dokumentieren.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section -->
+  <div class="nl__section">03 &nbsp; Praxis-Tipp des Monats</div>
+
+  <!-- Tip -->
+  <div class="nl__tip">
+    <div class="nl__tip-inner">
+      <p class="nl__tip-label">Schritt für Schritt</p>
+      <h3>Verarbeitungsverzeichnis in 5 Schritten DSGVO-fit machen</h3>
+      <p class="nl__tip-intro">Das Verarbeitungsverzeichnis ist die Grundlage jeder DSGVO-Prüfung — und bei vielen KMU der erste Schwachpunkt. So machen Sie es sauber:</p>
+      <ul class="nl__tip-steps">
+        <li>
+          <span class="nl__step-num">01</span>
+          <p><strong>Vollständigkeit prüfen:</strong> Erfassen Sie alle Verarbeitungstätigkeiten — auch kleine wie die Visitenkartensammlung, den Bewerberpool oder das Newsletter-Tool.</p>
+        </li>
+        <li>
+          <span class="nl__step-num">02</span>
+          <p><strong>Rechtsgrundlage benennen:</strong> Für jede Tätigkeit muss eine Rechtsgrundlage nach Art. 6 DSGVO dokumentiert sein. "Berechtigtes Interesse" reicht nur mit Interessenabwägung.</p>
+        </li>
+        <li>
+          <span class="nl__step-num">03</span>
+          <p><strong>Löschfristen festlegen:</strong> Wann werden welche Daten gelöscht? Orientieren Sie sich an gesetzlichen Aufbewahrungsfristen und dokumentieren Sie die Entscheidung.</p>
+        </li>
+        <li>
+          <span class="nl__step-num">04</span>
+          <p><strong>Auftragsverarbeiter eintragen:</strong> Cloud-Dienste, Buchhaltungssoftware, E-Mail-Anbieter — all das muss ins Verzeichnis, inklusive geschlossenem AVV.</p>
+        </li>
+        <li>
+          <span class="nl__step-num">05</span>
+          <p><strong>Aktuell halten:</strong> Das Verzeichnis ist kein Einmal-Dokument. Bei jeder neuen Software oder Datennutzung sofort ergänzen und jährlich vollständig überprüfen.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section -->
+  <div class="nl__section">04 &nbsp; Zahlen &amp; Fakten</div>
+
+  <!-- Numbers -->
+  <div class="nl__numbers">
+    <p class="nl__numbers-label">DSGVO-Bußgelder 2025</p>
+    <h3>Ein Jahr in Zahlen</h3>
+    <p class="nl__numbers-intro">Die europäischen Datenschutzbehörden haben 2025 erneut Rekordsummen verhängt. Ein Blick auf die Daten zeigt: Es trifft nicht nur Konzerne.</p>
+    <div class="nl__number-grid">
+      <div class="nl__number-item">
+        <div class="nl__number-val">4,3 Mrd.</div>
+        <div class="nl__number-desc">Euro Bußgelder gesamt in der EU 2025</div>
+      </div>
+      <div class="nl__number-item">
+        <div class="nl__number-val nl__number-val--gold">31 %</div>
+        <div class="nl__number-desc">der betroffenen Unternehmen sind KMU</div>
+      </div>
+      <div class="nl__number-item">
+        <div class="nl__number-val nl__number-val--green">68 %</div>
+        <div class="nl__number-desc">der Bußgelder wegen fehlender Rechtsgrundlage</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section -->
+  <div class="nl__section">05 &nbsp; Aus der Praxis</div>
+
+  <!-- Q&A -->
+  <div class="nl__qa">
+    <h3>Die drei häufigsten Datenschutz-Irrtümer im KMU-Alltag</h3>
+    <div class="nl__qa-item">
+      <div class="nl__question">
+        <span class="nl__q-badge">Irrtum 1</span>
+        „Wir sind zu klein, um für die Datenschutzbehörde interessant zu sein."
+      </div>
+      <p class="nl__answer">Falsch. Größe schützt nicht. Behörden reagieren auf Beschwerden — und die kommen häufiger von Mitarbeitenden oder Kunden als durch aktive Kontrollen. Ein einziges unzufriedenes ehemaliges Teammitglied reicht aus, um eine Prüfung auszulösen.</p>
+    </div>
+    <div class="nl__qa-item">
+      <div class="nl__question">
+        <span class="nl__q-badge">Irrtum 2</span>
+        „Wir haben eine Datenschutzerklärung auf der Website, das reicht."
+      </div>
+      <p class="nl__answer">Eine Datenschutzerklärung ist nur ein kleiner Teil der DSGVO-Compliance. Verarbeitungsverzeichnis, technische und organisatorische Maßnahmen, Schulungen, AVV mit Dienstleistern — all das gehört dazu. Die Erklärung auf der Website ist das Schaufenster, aber nicht das ganze Haus.</p>
+    </div>
+    <div class="nl__qa-item">
+      <div class="nl__question">
+        <span class="nl__q-badge">Irrtum 3</span>
+        „Datenschutz kostet nur Zeit und bringt uns nichts."
+      </div>
+      <p class="nl__answer">Gutes Datenschutzmanagement ist ein Wettbewerbsvorteil — besonders im B2B-Bereich. Immer mehr Auftraggeber verlangen Nachweise über Datenschutz-Compliance als Voraussetzung für die Zusammenarbeit. Und: Kunden vertrauen Unternehmen mehr, die transparent mit ihren Daten umgehen.</p>
+    </div>
+  </div>
+
+  <!-- Quote -->
+  <div class="nl__quote">
+    <span class="nl__quote-mark">"</span>
+    <p class="nl__quote-text">Datenschutz ist kein Hindernis für Ihr Geschäft. Er ist der Beweis, dass Sie Ihr Geschäft ernst nehmen.</p>
+    <p class="nl__quote-source">Alexander Kroes &nbsp;·&nbsp; Externer Datenschutzbeauftragter</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="nl__cta">
+    <p class="nl__cta-label">Newsflash – Jetzt anmelden &nbsp;·&nbsp; Für Inhaber, Geschäftsführungen und Verantwortliche</p>
+    <h3>Datenschutz-Praxis-Wissen,<br>direkt in Ihr Postfach.</h3>
+    <p>Monatlich: aktuelle News im Datenschutzrecht, praxisnahe Tipps für Ihr Unternehmen und Hinweise auf neue Bußgeldentscheidungen. Kompakt und garantiert ohne Juristendeutsch.</p>
+    <a href="index.html#newsletter" class="nl__cta-btn">Jetzt kostenlos abonnieren</a>
+    <p class="nl__cta-micro">Kein Spam &nbsp;·&nbsp; Jederzeit abmeldbar &nbsp;·&nbsp; Kostenlos</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="nl__footer">
+    <div class="nl__footer-logo">Datenschutz Kroes</div>
+    <div class="nl__footer-tag">Zertifizierter externer Datenschutzbeauftragter &nbsp;·&nbsp; Kufstein, Tirol</div>
+    <nav class="nl__footer-links">
+      <a href="index.html">Website</a>
+      <a href="index.html#leistungen">Leistungen</a>
+      <a href="dsgvo-seminar.html">DSGVO-Seminar</a>
+      <a href="nis2-seminar.html">NIS2-Seminar</a>
+      <a href="index.html#kontakt">Kontakt</a>
+      <a href="#">Datenschutzerklärung</a>
+    </nav>
+    <p class="nl__footer-copy">
+      © 2026 Datenschutz Kroes &nbsp;·&nbsp; info@datenschutz-kroes.at &nbsp;·&nbsp; Kufstein, Tirol<br>
+      Diese E-Mail wurde an Sie gesendet, weil Sie den Newsletter abonniert haben. Sie können sich jederzeit abmelden.
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>

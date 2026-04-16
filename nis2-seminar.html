@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIS2 Kompakt – Cybersicherheit Seminar | Datenschutz Kroes</title>
+  <meta name="description" content="NIS2 Kompakt: Das Praxis-Seminar für Geschäftsführer und Entscheider. 120 Minuten, 349€ zzgl. MwSt. Ob und warum Ihr Unternehmen unter NIS2 fällt – klar erklärt.">
+  <link rel="canonical" href="https://www.datenschutz-kroes.at/nis2-seminar.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #F4F5F7;
+      --color-surface: #FFFFFF;
+      --color-navy: #0F1F3D;
+      --color-ink: #1A1A2E;
+      --color-slate: #5C6B82;
+      --color-slate-light: #8A99AD;
+      --color-prussian: #1B4F8A;
+      --color-sky-tint: #E8EFF8;
+      --color-gold: #C9A84C;
+      --color-gold-light: #E8D5A0;
+      --color-mist: #DDE3EC;
+      --color-verdant: #2D6A4F;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --transition-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-card: 0 2px 16px rgba(15,31,61,0.08);
+      --shadow-elevated: 0 8px 40px rgba(15,31,61,0.14);
+      --font-sans: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-ink); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; border: none; background: none; cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+    /* ===== TOPBAR ===== */
+    .topbar {
+      position: relative;
+      height: 38px;
+      background-color: rgba(10,18,36,0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center;
+    }
+    .topbar__inner { display: flex; align-items: center; justify-content: space-between; }
+    .topbar__left { display: flex; align-items: center; gap: 20px; }
+    .topbar__item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.82); white-space: nowrap; transition: color var(--transition-base); }
+    .topbar__item:hover { color: var(--color-gold); }
+    .topbar__divider { width: 1px; height: 14px; background-color: rgba(255,255,255,0.18); flex-shrink: 0; }
+    .topbar__callback { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--color-gold); background: none; border: none; cursor: pointer; transition: color var(--transition-base); }
+    .topbar__callback:hover { color: #e8c66a; }
+    .topbar__right { display: flex; align-items: center; gap: 14px; }
+    .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color var(--transition-base); }
+    .topbar__social:hover { color: var(--color-gold); }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: relative;
+      height: auto; padding: 8px 0;
+      display: flex; align-items: center;
+      background-color: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--color-mist);
+    }
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav__logo { display: flex; align-items: center; gap: 12px; color: var(--color-navy); font-weight: 600; font-size: 16px; }
+    .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
+    .nav__links { display: flex; align-items: center; gap: 0; }
+    .nav__links li { display: flex; align-items: center; }
+    .nav__links li + li::before { content: '·'; color: var(--color-gold); font-size: 18px; line-height: 1; padding: 0 14px; pointer-events: none; user-select: none; }
+    .nav__link { font-size: 15px; font-weight: 500; color: var(--color-slate); position: relative; transition: color var(--transition-base); }
+    .nav__link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background-color: var(--color-gold); transform: scaleX(0); transform-origin: left; transition: transform 380ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__link:hover { color: var(--color-navy); }
+    .nav__link:hover::after { transform: scaleX(1); }
+    .nav__cta { font-size: 14px; font-weight: 600; color: var(--color-surface); background-color: var(--color-navy); padding: 10px 22px; border-radius: var(--radius-md); transition: background-color var(--transition-base), transform var(--transition-base); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+    .nav__cta:hover { background-color: var(--color-prussian); transform: translateY(-1px); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; width: 28px; cursor: pointer; padding: 4px; }
+    .nav__hamburger span { display: block; height: 2px; background-color: var(--color-navy); border-radius: 2px; transition: transform var(--transition-base), opacity var(--transition-base); }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav__mobile-overlay { position: fixed; inset: 0; background-color: var(--color-navy); z-index: 103; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 600ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__mobile-overlay.open { opacity: 1; pointer-events: all; }
+    .nav__mobile-link { font-size: 32px; font-weight: 500; color: var(--color-surface); transition: color var(--transition-base); }
+    .nav__mobile-link:hover { color: var(--color-gold); }
+    .nav__mobile-cta { font-size: 16px; font-weight: 600; color: var(--color-navy); background-color: var(--color-gold); padding: 14px 32px; border-radius: var(--radius-md); cursor: pointer; }
+
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      background-color: var(--color-surface);
+      padding-top: 80px;
+      padding-bottom: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: 'NIS2';
+      position: absolute; right: -20px; bottom: -40px;
+      font-size: 220px; font-weight: 700;
+      color: var(--color-navy); opacity: 0.03;
+      pointer-events: none; user-select: none;
+      line-height: 1;
+    }
+    .page-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .page-hero__back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 500;
+      color: var(--color-slate-light);
+      margin-bottom: 24px;
+      transition: color var(--transition-base);
+    }
+    .page-hero__back:hover { color: var(--color-gold); }
+    .page-hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--color-gold); margin-bottom: 16px;
+    }
+    .page-hero__title {
+      font-size: clamp(28px, 4vw, 44px); font-weight: 500;
+      color: var(--color-navy); line-height: 1.15;
+      letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .page-hero__lead {
+      font-size: 16px; font-weight: 300;
+      color: var(--color-slate); line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .page-hero__checks { display: flex; flex-direction: column; gap: 12px; }
+    .page-hero__check { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; font-weight: 300; color: var(--color-slate); line-height: 1.5; }
+    .page-hero__check-icon { width: 20px; height: 20px; border-radius: 50%; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.35); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+
+    /* YouTube Consent */
+    .yt-consent {
+      background: var(--color-navy);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .yt-consent__placeholder {
+      aspect-ratio: 16/9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 24px;
+      text-align: center;
+      background-image: url('https://img.youtube.com/vi/TLT9Tu1mOzI/maxresdefault.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .yt-consent__placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 18, 36, 0.72);
+    }
+    .yt-consent__icon,
+    .yt-consent__text,
+    .yt-consent__btn {
+      position: relative;
+      z-index: 1;
+    }
+    .yt-consent__icon { color: #FF0000; opacity: 0.9; }
+    .yt-consent__text { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; max-width: 260px; }
+    .yt-consent__text a { color: var(--color-gold); text-decoration: underline; }
+    .yt-consent__btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #FF0000; color: #fff;
+      font-family: var(--font-sans); font-size: 13px; font-weight: 600;
+      padding: 9px 18px; border-radius: 4px; border: none; cursor: pointer;
+      transition: background var(--transition-base);
+    }
+    .yt-consent__btn:hover { background: #cc0000; }
+    .yt-embed { display: none; aspect-ratio: 16/9; }
+    .yt-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+    .yt-embed.active { display: block; }
+    .yt-consent.hidden { display: none; }
+
+    /* Seminar Info Box */
+    .seminar-info-box {
+      background: var(--color-surface);
+      border: 1px solid var(--color-mist);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .seminar-info-box__img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; }
+    .seminar-info-box__body { padding: 24px 28px 28px; }
+    .seminar-info-box__title { font-size: 16px; font-weight: 600; color: var(--color-navy); margin-bottom: 20px; }
+    .seminar-info-box__stats { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .seminar-info-box__stat { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--color-slate); }
+    .seminar-info-box__stat svg { color: var(--color-gold); flex-shrink: 0; }
+    .seminar-info-box__stat strong { color: var(--color-navy); font-weight: 500; }
+    .seminar-info-box__price { font-size: 24px; font-weight: 600; color: var(--color-navy); margin-bottom: 4px; }
+    .seminar-info-box__price-note { font-size: 12px; color: var(--color-slate-light); margin-bottom: 20px; }
+    .btn-download {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 12px 20px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--color-navy); background: var(--color-gold);
+      border-radius: var(--radius-md);
+      transition: background var(--transition-base), transform var(--transition-base);
+    }
+    .btn-download:hover { background: #e0bc5a; transform: translateY(-1px); }
+
+    /* ===== VIDEO SECTION ===== */
+    .video-section { background: var(--color-bg); padding: 80px 0; }
+    .video-section__header { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+    .video-section__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 16px; }
+    .video-section__title { font-size: clamp(22px, 3vw, 32px); font-weight: 500; color: var(--color-navy); line-height: 1.25; margin-bottom: 16px; }
+    .video-section__lead { font-size: 15px; font-weight: 300; color: var(--color-slate); line-height: 1.7; }
+    .video-section__player { max-width: 800px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-elevated); }
+
+    /* ===== MAIN CONTENT ===== */
+    .seminar-content { background: var(--color-surface); padding: 80px 0; }
+    .seminar-content__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+
+    /* Left column */
+    .seminar-detail__block { margin-bottom: 40px; }
+    .seminar-detail__block:last-child { margin-bottom: 0; }
+    .seminar-detail__heading { font-size: 18px; font-weight: 600; color: var(--color-navy); margin-bottom: 12px; }
+    .seminar-detail__text { font-size: 15px; font-weight: 300; color: var(--color-slate); line-height: 1.7; margin-bottom: 12px; }
+    .seminar-detail__list { display: flex; flex-direction: column; gap: 8px; }
+    .seminar-detail__list li { font-size: 15px; font-weight: 300; color: var(--color-slate); padding-left: 20px; position: relative; line-height: 1.65; }
+    .seminar-detail__list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--color-gold); }
+    .seminar-detail__divider { border: none; border-top: 1px solid var(--color-mist); margin: 36px 0; }
+
+    /* Right column — Form */
+    .seminar-form__wrap { position: sticky; top: 24px; }
+    .seminar-form__box { background: var(--color-bg); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 36px; }
+    .seminar-form__title { font-size: 22px; font-weight: 500; color: var(--color-navy); margin-bottom: 8px; }
+    .seminar-form__lead { font-size: 14px; font-weight: 300; color: var(--color-slate); line-height: 1.6; margin-bottom: 28px; }
+    .sf-form { display: flex; flex-direction: column; gap: 18px; }
+    .sf-field { display: flex; flex-direction: column; gap: 6px; }
+    .sf-field--row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .sf-label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-slate); }
+    .sf-required { color: var(--color-gold); }
+    .sf-input, .sf-select, .sf-textarea {
+      font-family: var(--font-sans); font-size: 15px; color: var(--color-ink);
+      background: var(--color-surface); border: 1.5px solid var(--color-mist);
+      border-radius: var(--radius-md); padding: 11px 14px; width: 100%;
+      transition: border-color var(--transition-base), box-shadow var(--transition-base);
+      outline: none; appearance: none;
+    }
+    .sf-input::placeholder, .sf-textarea::placeholder { color: var(--color-slate-light); }
+    .sf-input:focus, .sf-select:focus, .sf-textarea:focus { border-color: var(--color-prussian); box-shadow: 0 0 0 3px rgba(27,79,138,0.1); }
+    .sf-input.error, .sf-select.error, .sf-textarea.error { border-color: #C0392B; }
+    .sf-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235C6B82' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
+    .sf-textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+    .sf-sub-label { font-size: 11px; color: var(--color-slate-light); text-align: center; }
+    .sf-consent { display: flex; align-items: flex-start; gap: 10px; }
+    .sf-consent input[type="checkbox"] { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; accent-color: var(--color-prussian); cursor: pointer; }
+    .sf-consent-text { font-size: 13px; color: var(--color-slate); line-height: 1.5; }
+    .sf-captcha {
+      display: flex; align-items: center; gap: 12px;
+      border: 1px solid var(--color-mist); border-radius: var(--radius-md);
+      padding: 12px 16px; background: var(--color-surface);
+    }
+    .sf-captcha-check { width: 20px; height: 20px; border: 1.5px solid var(--color-mist); border-radius: 3px; flex-shrink: 0; }
+    .sf-captcha-text { font-size: 14px; color: var(--color-ink); flex: 1; }
+    .sf-captcha-logo { font-size: 9px; color: var(--color-slate-light); text-align: center; line-height: 1.4; flex-shrink: 0; }
+    .sf-submit {
+      width: 100%; padding: 14px 28px;
+      font-size: 15px; font-weight: 600;
+      color: var(--color-surface); background: var(--color-navy);
+      border: none; border-radius: var(--radius-md); cursor: pointer;
+      transition: background var(--transition-base), transform var(--transition-base);
+    }
+    .sf-submit:hover { background: var(--color-prussian); transform: translateY(-1px); }
+    .sf-error-msg { font-size: 12px; color: #C0392B; display: none; }
+    .sf-error-msg.visible { display: block; }
+
+    /* Success state */
+    .sf-success { display: none; text-align: center; padding: 40px 20px; }
+    .sf-success.visible { display: block; }
+    .sf-success__icon { width: 56px; height: 56px; border-radius: 50%; background: var(--color-sky-tint); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--color-prussian); }
+    .sf-success__title { font-size: 20px; font-weight: 500; color: var(--color-navy); margin-bottom: 8px; }
+    .sf-success__text { font-size: 14px; color: var(--color-slate); line-height: 1.6; }
+
+    /* ===== TESTIMONIALS ===== */
+    .seminar-testimonials { background: var(--color-bg); padding: 80px 0; }
+    .seminar-testimonials__header { text-align: center; max-width: 600px; margin: 0 auto 56px; }
+    .seminar-testimonials__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 14px; }
+    .seminar-testimonials__title { font-size: clamp(22px, 3vw, 30px); font-weight: 500; color: var(--color-navy); line-height: 1.25; }
+    .seminar-testimonials__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .seminar-tcard { background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 28px; display: flex; flex-direction: column; gap: 16px; box-shadow: var(--shadow-card); }
+    .seminar-tcard__stars { color: var(--color-gold); font-size: 13px; letter-spacing: 2px; }
+    .seminar-tcard__quote { font-size: 15px; font-weight: 300; color: var(--color-slate); line-height: 1.7; flex: 1; }
+    .seminar-tcard__author { font-size: 14px; font-weight: 600; color: var(--color-navy); }
+    .seminar-tcard__role { font-size: 13px; color: var(--color-slate-light); margin-top: 2px; }
+    @media (max-width: 1024px) { .seminar-testimonials__grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .seminar-testimonials__grid { grid-template-columns: 1fr; } }
+
+    /* ===== CTA BAND ===== */
+    .nis2-cta-band { background: #ffffff; padding: 80px 0; }
+    .nis2-cta-band__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .nis2-cta-band__text { font-size: clamp(20px, 2.5vw, 28px); font-weight: 500; color: var(--color-navy); line-height: 1.35; }
+    .nis2-cta-band__sub { font-size: 15px; font-weight: 300; color: var(--color-slate); margin-top: 12px; }
+    .nis2-cta-band__img { border-radius: var(--radius-lg); overflow: hidden; display: flex; justify-content: center; }
+    .nis2-cta-band__img img { width: 394px; height: 559px; object-fit: cover; border-radius: var(--radius-lg); border: 2px solid var(--color-navy); }
+    .btn-outline-gold {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 28px;
+      font-size: 14px; font-weight: 600;
+      color: var(--color-gold); border: 1.5px solid var(--color-gold);
+      padding: 12px 24px; border-radius: var(--radius-md);
+      transition: background var(--transition-base), color var(--transition-base);
+    }
+    .btn-outline-gold:hover { background: var(--color-gold); color: var(--color-navy); }
+
+    /* ===== FOOTER ===== */
+    .footer { background-color: var(--color-navy); padding: 80px 0 0; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 64px; }
+    .footer__logo { width: 140px; margin-bottom: 16px; filter: brightness(0) invert(1); opacity: 0.8; }
+    .footer__tagline { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    .footer__col-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 20px; }
+    .footer__links { display: flex; flex-direction: column; gap: 10px; }
+    .footer__link { font-size: 14px; color: rgba(255,255,255,0.55); transition: color var(--transition-base); }
+    .footer__link:hover { color: rgba(255,255,255,0.9); }
+    .footer__contact-line { display: flex; align-items: center; gap: 10px; }
+    .footer__contact-line svg { color: var(--color-gold); flex-shrink: 0; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; position: relative; }
+    .footer__copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer__made-by { position: absolute; left: 50%; transform: translateX(-50%); }
+    .footer__upprime-link { font-weight: 600; position: relative; display: inline-block; }
+    .footer__upprime-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background: linear-gradient(to right, #FFFFFF, #A044D4); transform: scaleX(0); transform-origin: left; transition: transform 400ms cubic-bezier(0.4,0,0.2,1); }
+    .footer__upprime-link:hover::after { transform: scaleX(1); }
+    .footer__upprime-white { color: #FFFFFF; }
+    .footer__upprime-purple { color: #A044D4; }
+    .footer__legal { display: flex; align-items: center; gap: 20px; }
+    .footer__legal a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color var(--transition-base); }
+    .footer__legal a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      .page-hero__inner { gap: 48px; }
+      .seminar-content__grid { gap: 48px; }
+      .nis2-cta-band__inner { gap: 48px; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 1024px) {
+      .seminar-form__wrap { position: sticky; top: 24px; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .nav__links, .nav__cta { display: none; }
+      .nav__hamburger { display: flex; }
+      .page-hero { padding-top: 48px; padding-bottom: 48px; }
+      .page-hero__inner { grid-template-columns: 1fr; gap: 40px; }
+      .seminar-content__grid { grid-template-columns: 1fr; }
+      .seminar-form__wrap { position: static; }
+      .sf-field--row { grid-template-columns: 1fr; }
+      .nis2-cta-band__inner { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer__bottom { flex-direction: column; align-items: center; text-align: center; }
+      .footer__made-by { position: static; transform: none; }
+      .footer__legal { justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .topbar { display: none; }
+      .page-hero { padding-top: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+4353382010" class="topbar__item">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5 1.5h2l1 2.5-1.25 1.25a7 7 0 003 3L8.5 7l2.5 1v2a1 1 0 01-1 1A9.5 9.5 0 011.5 2.5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          +43 (0) 5338-20105
+        </a>
+        <div class="topbar__divider"></div>
+        <a href="mailto:info@datenschutz-kroes.at" class="topbar__item">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2.5" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4l5.5 3.5L12 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          info@datenschutz-kroes.at
+        </a>
+        <div class="topbar__divider"></div>
+        <button class="topbar__callback" onclick="window.location.href='index.html#kontakt'">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9 1.5A5 5 0 116.5 11M9 1.5H6.5M9 1.5v2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Rückruf anfordern
+        </button>
+      </div>
+      <div class="topbar__right">
+        <a href="#" class="topbar__social" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="topbar__social" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark">
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li><a href="index.html#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="index.html#ueber-uns" class="nav__link">Über uns</a></li>
+          <li><a href="index.html#prozess" class="nav__link">Prozess</a></li>
+          <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+          <li><a href="downloads.html" class="nav__link">Downloads</a></li>
+        </ul>
+        <a href="index.html#kontakt" class="nav__cta">
+          Erstgespräch vereinbaren
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav__mobile-overlay" id="mobile-overlay">
+    <nav><ul style="list-style:none;text-align:center;display:flex;flex-direction:column;gap:32px;" role="list">
+      <li><a href="index.html#leistungen" class="nav__mobile-link" onclick="closeMobileNav()">Leistungen</a></li>
+      <li><a href="index.html#seminare" class="nav__mobile-link" onclick="closeMobileNav()">Seminare</a></li>
+      <li><a href="index.html#ueber-uns" class="nav__mobile-link" onclick="closeMobileNav()">Über uns</a></li>
+      <li><a href="index.html#prozess" class="nav__mobile-link" onclick="closeMobileNav()">Prozess</a></li>
+      <li><a href="index.html#faq" class="nav__mobile-link" onclick="closeMobileNav()">FAQ</a></li>
+    </ul></nav>
+    <a href="index.html#kontakt" class="nav__mobile-cta" onclick="closeMobileNav()">Erstgespräch vereinbaren</a>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+
+          <!-- Left -->
+          <div>
+            <a href="index.html#seminare" class="page-hero__back">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Zurück zu den Seminaren
+            </a>
+            <p class="page-hero__eyebrow">Seminar-Reihe · Cybersicherheit</p>
+            <h1 class="page-hero__title">NIS2 – Die neue EU Richtlinie zur Cybersicherheit</h1>
+            <p class="page-hero__lead">In diesem praxisnahen Datenschutz-Seminar erhalten Sie einen klaren Überblick über NIS2, DSGVO und die tatsächlichen Auswirkungen auf Ihr Unternehmen – als Orientierung, Entscheidungsgrundlage und realistische Handlungsrichtlinie.</p>
+            <div class="page-hero__checks">
+              <div class="page-hero__check">
+                <div class="page-hero__check-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Ob und warum Ihr Unternehmen unter NIS2 fällt
+              </div>
+              <div class="page-hero__check">
+                <div class="page-hero__check-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Welche Verantwortung Geschäftsführer tatsächlich tragen
+              </div>
+              <div class="page-hero__check">
+                <div class="page-hero__check-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Welche rechtlichen und organisatorischen Mindestanforderungen gelten
+              </div>
+              <div class="page-hero__check">
+                <div class="page-hero__check-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Welche Fehlannahmen aktuell teuer werden können
+              </div>
+              <div class="page-hero__check">
+                <div class="page-hero__check-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                Welche Entscheidungen sinnvoll sind – von Ihrer Ausgangslage
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Info Box -->
+          <div class="seminar-info-box">
+            <img src="NIS2-Seminar.png" alt="NIS2 Kompakt Seminar" class="seminar-info-box__img">
+            <div class="seminar-info-box__body">
+              <p class="seminar-info-box__title">NIS2 Kompakt – Seminar-Übersicht</p>
+              <div class="seminar-info-box__stats">
+                <div class="seminar-info-box__stat">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/><path d="M8 5v3.5l2 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  <span>Dauer: <strong>120 Minuten</strong></span>
+                </div>
+                <div class="seminar-info-box__stat">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1a4 4 0 100 8A4 4 0 008 1zM1.5 15c0-2.5 2.91-4.5 6.5-4.5s6.5 2 6.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  <span>Teilnehmer: <strong>min. 2 – max. 8</strong></span>
+                </div>
+                <div class="seminar-info-box__stat">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1v3M11 1v3M2 7h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  <span>Uhrzeit: <strong>16:00 – 18:00 Uhr</strong></span>
+                </div>
+                <div class="seminar-info-box__stat">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="7" r="3" stroke="currentColor" stroke-width="1.2"/><path d="M8 1a6 6 0 010 12C5.239 13 1 11 1 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  <span>Format: <strong>Online / Präsenz / Inhouse</strong></span>
+                </div>
+              </div>
+              <p class="seminar-info-box__price">295,00 €</p>
+              <p class="seminar-info-box__price-note">zzgl. MwSt. pro Teilnehmer / Buchung</p>
+              <a href="mailto:info@datenschutz-kroes.at?subject=Anfrage%3A%20NIS2%20Kompakt%20Seminar" class="btn-download">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                NIS2 Kompakt – Jetzt anfragen
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="video-section">
+      <div class="container">
+        <div class="video-section__header">
+          <p class="video-section__eyebrow">Seminar-Vorschau</p>
+          <h2 class="video-section__title">Was erwartet Sie im NIS2 Kompakt Seminar?</h2>
+          <p class="video-section__lead">In diesem kurzen Video erhalten Sie einen ersten Eindruck: Worum geht es bei NIS2, wen betrifft die Richtlinie – und warum ist jetzt der richtige Zeitpunkt zu handeln.</p>
+        </div>
+        <div class="video-section__player">
+          <div class="yt-consent" id="yt-consent">
+            <div class="yt-consent__placeholder">
+              <svg class="yt-consent__icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+              </svg>
+              <p class="yt-consent__text">Dieses Video wird von YouTube bereitgestellt. Beim Ansehen werden Daten an Google übertragen. Weitere Informationen in unserer <a href="index.html#footer">Datenschutzerklärung</a>.</p>
+              <button class="yt-consent__btn" id="yt-load-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                Video auf YouTube ansehen
+              </button>
+            </div>
+          </div>
+          <div class="yt-embed" id="yt-embed"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="seminar-content" id="anfrage">
+      <div class="container">
+        <div class="seminar-content__grid">
+
+          <!-- Left: Detail -->
+          <div>
+            <div class="seminar-detail__block">
+              <h2 class="seminar-detail__heading">Das Ziel des Praxis-Seminars</h2>
+              <p class="seminar-detail__text">Das Seminar vermittelt Grundlagen, Zusammenhänge und Entscheidungsgrundlagen zu NIS2 aus unternehmerischer und organisatorischer Perspektive.</p>
+              <p class="seminar-detail__text">Ziel ist es, Teilnehmer in die Lage zu versetzen, Risiken einzuordnen, Verantwortlichkeiten zu verstehen und nächste Schritte strukturiert zu planen.</p>
+            </div>
+
+            <hr class="seminar-detail__divider">
+
+            <div class="seminar-detail__block">
+              <h2 class="seminar-detail__heading">Welche Kursinhalte werden im Seminar behandelt?</h2>
+              <ul class="seminar-detail__list">
+                <li>Einordnung der NIS2-Richtlinie: Was ist neu, was wurde verschärft?</li>
+                <li>Betroffenheitslogik: Wann und warum Unternehmen unter NIS2 fallen</li>
+                <li>Abgrenzung: NIS2 vs. DSGVO vs. IT-Sicherheit</li>
+                <li>Einordnung: Rechtsformen, Zertifizierung von Lieferanten</li>
+                <li>Rolle und Verantwortung von Geschäftsführung &amp; Leitung</li>
+                <li>Typische Fehlannahmen und Praxisrisiken</li>
+                <li>Bußgelder (Höhe, Haftung, Verantwortlichkeiten)</li>
+                <li>Überblick über organisatorische, technische und dokumentarische Pflichten</li>
+                <li>Entscheidungsoptionen je nach Ausgangslage des Unternehmens</li>
+                <li>Strukturierter Ausblick auf nächste sinnvolle Schritte</li>
+              </ul>
+            </div>
+
+            <hr class="seminar-detail__divider">
+
+            <div class="seminar-detail__block">
+              <h2 class="seminar-detail__heading">Für wen ist das Seminar geeignet?</h2>
+              <ul class="seminar-detail__list">
+                <li>Geschäftsführer:innen</li>
+                <li>Vorstände</li>
+                <li>Bereichs- und Abteilungsleiter</li>
+                <li>Verantwortliche für Organisation, Datenschutz &amp; Risikomanagement</li>
+              </ul>
+            </div>
+
+            <hr class="seminar-detail__divider">
+
+            <div class="seminar-detail__block">
+              <h2 class="seminar-detail__heading">Welche Voraussetzungen müssen Teilnehmer mitbringen?</h2>
+              <ul class="seminar-detail__list">
+                <li>Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von Vorteil.</li>
+              </ul>
+            </div>
+
+            <hr class="seminar-detail__divider">
+
+            <div class="seminar-detail__block">
+              <h2 class="seminar-detail__heading">Was ist nicht Bestandteil des Seminars?</h2>
+              <ul class="seminar-detail__list">
+                <li>Keine individuelle Rechtsberatung (Einzelfallprüfung optional im Anschluss möglich)</li>
+                <li>Keine Prüfung konkreter Unternehmensfälle (Einzelfallprüfung optional im Anschluss möglich)</li>
+                <li>Verbindliche rechtliche oder technische Handlungsempfehlungen, da Verantwortung zur Umsetzung beim jeweiligen Unternehmen liegt. (Einzelberatung optional im Anschluss möglich)</li>
+              </ul>
+            </div>
+
+            <hr class="seminar-detail__divider">
+
+            <div class="seminar-detail__block">
+              <h2 class="seminar-detail__heading">Abschluss</h2>
+              <ul class="seminar-detail__list">
+                <li>Teilnehmer erhalten ein Teilnahmezertifikat</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="seminar-form__wrap">
+            <div class="seminar-form__box">
+              <div id="seminarFormContent">
+                <h2 class="seminar-form__title">Sie haben Fragen zum Seminar?</h2>
+                <p class="seminar-form__lead">Gerne klären wir Ihre Fragen persönlich und geben Ihnen eine realistische Einschätzung, ob das Seminar für Ihr Unternehmen sinnvoll ist. Nutzen Sie das Formular für eine unverbindliche Anfrage.</p>
+                <form class="sf-form" id="seminarForm" novalidate>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-anrede">Anrede <span class="sf-required">*</span></label>
+                    <select class="sf-select" id="sf-anrede" name="anrede" required>
+                      <option value="">— Auswahl treffen —</option>
+                      <option>Herr</option>
+                      <option>Frau</option>
+                      <option>Divers</option>
+                    </select>
+                    <span class="sf-error-msg" id="sf-anrede-err">Bitte wählen Sie eine Anrede.</span>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-titel">Titel</label>
+                    <input class="sf-input" type="text" id="sf-titel" name="titel">
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label">Person <span class="sf-required">*</span></label>
+                    <div class="sf-field--row">
+                      <div class="sf-field">
+                        <input class="sf-input" type="text" id="sf-vorname" name="vorname" required>
+                        <span class="sf-sub-label">Vorname</span>
+                        <span class="sf-error-msg" id="sf-vorname-err">Pflichtfeld</span>
+                      </div>
+                      <div class="sf-field">
+                        <input class="sf-input" type="text" id="sf-nachname" name="nachname" required>
+                        <span class="sf-sub-label">Nachname</span>
+                        <span class="sf-error-msg" id="sf-nachname-err">Pflichtfeld</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-firma">Firma <span class="sf-required">*</span></label>
+                    <input class="sf-input" type="text" id="sf-firma" name="firma" required>
+                    <span class="sf-error-msg" id="sf-firma-err">Bitte geben Sie Ihre Firma ein.</span>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-email">E-Mail <span class="sf-required">*</span></label>
+                    <input class="sf-input" type="email" id="sf-email" name="email" required>
+                    <span class="sf-error-msg" id="sf-email-err">Bitte geben Sie eine gültige E-Mail ein.</span>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-website">Website</label>
+                    <input class="sf-input" type="url" id="sf-website" name="website">
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-telefon">Telefon <span class="sf-required">*</span></label>
+                    <input class="sf-input" type="tel" id="sf-telefon" name="telefon" required>
+                    <span class="sf-error-msg" id="sf-telefon-err">Bitte geben Sie Ihre Telefonnummer ein.</span>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-teilnehmer">Anzahl Teilnehmer <span class="sf-required">*</span></label>
+                    <select class="sf-select" id="sf-teilnehmer" name="teilnehmer" required>
+                      <option value="">— Auswahl treffen —</option>
+                      <option>2 Personen</option>
+                      <option>3 Personen</option>
+                      <option>4 Personen</option>
+                      <option>5 Personen</option>
+                      <option>6 Personen</option>
+                      <option>7 Personen</option>
+                      <option>8 Personen</option>
+                    </select>
+                    <span class="sf-error-msg" id="sf-teilnehmer-err">Bitte wählen Sie die Teilnehmerzahl.</span>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-ort">Gewünschter Seminar Ort <span class="sf-required">*</span></label>
+                    <select class="sf-select" id="sf-ort" name="ort" required>
+                      <option value="">— Auswahl treffen —</option>
+                      <option>Online</option>
+                      <option>Inhouse (bei Ihnen im Unternehmen)</option>
+                      <option>Kufstein, Tirol</option>
+                    </select>
+                    <span class="sf-error-msg" id="sf-ort-err">Bitte wählen Sie einen Seminarort.</span>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-termin">Gewünschter Seminartermin <span class="sf-required">*</span></label>
+                    <select class="sf-select" id="sf-termin" name="termin" required>
+                      <option value="">— Auswahl treffen —</option>
+                      <option>21.05.2026</option>
+                      <option>18.06.2026</option>
+                      <option>23.07.2026</option>
+                      <option>20.08.2026</option>
+                      <option>24.09.2026</option>
+                      <option>15.10.2026</option>
+                      <option>19.11.2026</option>
+                      <option>15.12.2026</option>
+                      <option>Individueller Termin erwünscht</option>
+                    </select>
+                    <span class="sf-error-msg" id="sf-termin-err">Bitte wählen Sie einen Termin.</span>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label" for="sf-nachricht">Anforderungen &amp; Ziele <span class="sf-required">*</span></label>
+                    <textarea class="sf-textarea" id="sf-nachricht" name="nachricht" placeholder="Bitte erläutern Sie kurz Ihre Anforderungen an das Seminar und die gewünschten Ziele…" required></textarea>
+                    <span class="sf-error-msg" id="sf-nachricht-err">Bitte beschreiben Sie kurz Ihre Anforderungen.</span>
+                  </div>
+
+                  <div class="sf-field">
+                    <label class="sf-label">Einwilligungserklärung</label>
+                    <div class="sf-consent">
+                      <input type="checkbox" id="sf-consent" name="consent" required>
+                      <label class="sf-consent-text" for="sf-consent">Ich willige ein, dass diese Website meine übermittelten Informationen speichert, sodass meine Anfrage beantwortet werden kann.</label>
+                    </div>
+                    <span class="sf-error-msg" id="sf-consent-err">Bitte stimmen Sie der Einwilligungserklärung zu.</span>
+                  </div>
+
+                  <button type="submit" class="sf-submit">Anfrage absenden</button>
+                </form>
+              </div>
+              <!-- Success -->
+              <div class="sf-success" id="seminarSuccess">
+                <div class="sf-success__icon">
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" stroke="#1B4F8A" stroke-width="1.5"/><path d="M7.5 13l4 4 7-7" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <p class="sf-success__title">Vielen Dank für Ihre Anfrage!</p>
+                <p class="sf-success__text">Wir haben Ihre Seminar-Anfrage erhalten und melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="seminar-testimonials">
+      <div class="container">
+        <div class="seminar-testimonials__header">
+          <p class="seminar-testimonials__eyebrow">Stimmen aus dem Seminar</p>
+          <h2 class="seminar-testimonials__title">Was Teilnehmer über NIS2 Kompakt sagen</h2>
+        </div>
+        <div class="seminar-testimonials__grid">
+
+          <div class="seminar-tcard">
+            <div class="seminar-tcard__stars">★★★★★</div>
+            <p class="seminar-tcard__quote">„Das Seminar hat mir endlich Klarheit gebracht. Ich wusste danach genau, ob und wie NIS2 für uns gilt – und konnte sofort handeln."</p>
+            <div>
+              <p class="seminar-tcard__author">Markus Hinterberger</p>
+              <p class="seminar-tcard__role">Geschäftsführer</p>
+            </div>
+          </div>
+
+          <div class="seminar-tcard">
+            <div class="seminar-tcard__stars">★★★★★</div>
+            <p class="seminar-tcard__quote">„Sehr praxisnah und ohne unnötiges Juristendeutsch. Ich hätte nicht gedacht, dass man NIS2 so verständlich erklären kann."</p>
+            <div>
+              <p class="seminar-tcard__author">Sandra Wimmer</p>
+              <p class="seminar-tcard__role">IT-Leiterin</p>
+            </div>
+          </div>
+
+          <div class="seminar-tcard">
+            <div class="seminar-tcard__stars">★★★★★</div>
+            <p class="seminar-tcard__quote">„Die zwei Stunden waren gut investiert. Wir haben konkrete nächste Schritte mitgenommen und sofort umgesetzt."</p>
+            <div>
+              <p class="seminar-tcard__author">Thomas Gruber</p>
+              <p class="seminar-tcard__role">Inhaber</p>
+            </div>
+          </div>
+
+          <div class="seminar-tcard">
+            <div class="seminar-tcard__stars">★★★★★</div>
+            <p class="seminar-tcard__quote">„Endlich jemand, der die Zusammenhänge zwischen NIS2 und DSGVO klar erklärt. Das hat mir viel Unsicherheit genommen."</p>
+            <div>
+              <p class="seminar-tcard__author">Maria Huber</p>
+              <p class="seminar-tcard__role">Prokuristin</p>
+            </div>
+          </div>
+
+          <div class="seminar-tcard">
+            <div class="seminar-tcard__stars">★★★★★</div>
+            <p class="seminar-tcard__quote">„Sehr kompetent und direkt auf den Punkt. Keine unnötigen Folien, dafür echter Mehrwert für die Praxis."</p>
+            <div>
+              <p class="seminar-tcard__author">Klaus Steiner</p>
+              <p class="seminar-tcard__role">Bereichsleiter</p>
+            </div>
+          </div>
+
+          <div class="seminar-tcard">
+            <div class="seminar-tcard__stars">★★★★★</div>
+            <p class="seminar-tcard__quote">„Ich war skeptisch, ob ein Online-Seminar das leisten kann. Es hat mehr gebracht als ein ganztägiger Workshop bei einer Beratungskanzlei."</p>
+            <div>
+              <p class="seminar-tcard__author">Andrea Mayr</p>
+              <p class="seminar-tcard__role">Geschäftsführerin</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PDF DOWNLOAD BAND -->
+    <section class="nis2-cta-band">
+      <div class="container">
+        <div class="nis2-cta-band__inner">
+          <div class="nis2-cta-band__img">
+            <img src="NIS2-Leitfaden-Deckblatt.jpg" alt="NIS2 Kompakt – Leitfaden Deckblatt">
+          </div>
+          <div>
+            <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold);margin-bottom:12px;">Kostenloser Download</p>
+            <p class="nis2-cta-band__text">PDF-Handout „NIS2 Kompakt" – jetzt kostenlos herunterladen</p>
+            <p class="nis2-cta-band__sub">Kompakte Zusammenfassung der wichtigsten NIS2-Inhalte für Geschäftsführer und Entscheider. Ideal zur Vorbereitung oder als Nachschlagewerk.</p>
+            <a href="NIS2 - Management Briefing.pdf" download class="btn-download" style="display:inline-flex;width:auto;margin-top:28px;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <path d="M7.5 1v9M4.5 7l3 3 3-3M2 12h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              NIS2 Kompakt – PDF herunterladen
+            </a>
+            <p style="font-size:12px;color:var(--color-slate-light);margin-top:10px;">Kein E-Mail-Pflichtfeld, keine Registrierung – garantiert kostenlos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="footer__logo">
+          <p class="footer__tagline">Externer Datenschutzbeauftragter für KMU in Tirol, Salzburg, München und Rosenheim.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Leistungen</p>
+          <ul class="footer__links">
+            <li><a href="index.html#leistungen" class="footer__link">Externer DSB</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">DSGVO-Erstanalyse</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Mitarbeiterschulungen</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Dokumentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Seminare</p>
+          <ul class="footer__links">
+            <li><a href="nis2-seminar.html" class="footer__link">NIS2 Kompakt</a></li>
+            <li><a href="dsgvo-seminar.html" class="footer__link">DSGVO Grundlagen</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Kontakt</p>
+          <ul class="footer__links" style="gap:14px;">
+            <li class="footer__contact-line">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.2"/><path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              <a href="mailto:info@datenschutz-kroes.at" class="footer__link">info@datenschutz-kroes.at</a>
+            </li>
+            <li class="footer__contact-line">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V13a1 1 0 01-1 1h-2C7.82 14 2 8.18 2 1V3h1z" stroke="currentColor" stroke-width="1.2"/></svg>
+              <a href="tel:+4353382010" class="footer__link">+43 (0) 5338-20105</a>
+            </li>
+            <li class="footer__contact-line">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1a4 4 0 100 8A4 4 0 008 1zM1.5 15c0-2.5 2.91-4.5 6.5-4.5s6.5 2 6.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              <span class="footer__link">Kufstein, Tirol</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Datenschutz Kroes. Alle Rechte vorbehalten.</p>
+        <p class="footer__copy footer__made-by">Website by <a href="https://upprime-connect.at/" target="_blank" rel="noopener noreferrer" class="footer__upprime-link"><span class="footer__upprime-white">Upprime</span> <span class="footer__upprime-purple">Connect</span></a></p>
+        <nav class="footer__legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutzerklärung</a>
+          <a href="#">AGB</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('mobile-overlay');
+    let navOpen = false;
+    hamburger.addEventListener('click', () => {
+      navOpen = !navOpen;
+      hamburger.classList.toggle('open', navOpen);
+      overlay.classList.toggle('open', navOpen);
+      hamburger.setAttribute('aria-expanded', navOpen);
+      document.body.style.overflow = navOpen ? 'hidden' : '';
+    });
+    function closeMobileNav() {
+      navOpen = false;
+      hamburger.classList.remove('open');
+      overlay.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && navOpen) closeMobileNav(); });
+
+    // Form validation
+    document.getElementById('seminarForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      const fields = [
+        { id: 'sf-anrede',     err: 'sf-anrede-err',     check: v => v !== '' },
+        { id: 'sf-vorname',    err: 'sf-vorname-err',    check: v => v.trim() !== '' },
+        { id: 'sf-nachname',   err: 'sf-nachname-err',   check: v => v.trim() !== '' },
+        { id: 'sf-firma',      err: 'sf-firma-err',      check: v => v.trim() !== '' },
+        { id: 'sf-email',      err: 'sf-email-err',      check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+        { id: 'sf-telefon',    err: 'sf-telefon-err',    check: v => v.trim() !== '' },
+        { id: 'sf-teilnehmer', err: 'sf-teilnehmer-err', check: v => v !== '' },
+        { id: 'sf-ort',        err: 'sf-ort-err',        check: v => v !== '' },
+        { id: 'sf-termin',     err: 'sf-termin-err',     check: v => v !== '' },
+        { id: 'sf-nachricht',  err: 'sf-nachricht-err',  check: v => v.trim().length >= 10 },
+      ];
+
+      // Clear errors
+      fields.forEach(f => {
+        document.getElementById(f.id).classList.remove('error');
+        document.getElementById(f.err).classList.remove('visible');
+      });
+      document.getElementById('sf-consent').classList.remove('error');
+      document.getElementById('sf-consent-err').classList.remove('visible');
+
+      // Validate
+      fields.forEach(f => {
+        const el = document.getElementById(f.id);
+        if (!f.check(el.value)) {
+          el.classList.add('error');
+          document.getElementById(f.err).classList.add('visible');
+          valid = false;
+        }
+      });
+
+      const consent = document.getElementById('sf-consent');
+      if (!consent.checked) {
+        consent.classList.add('error');
+        document.getElementById('sf-consent-err').classList.add('visible');
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      // Show success
+      document.getElementById('seminarFormContent').style.display = 'none';
+      document.getElementById('seminarSuccess').classList.add('visible');
+    });
+
+    // YouTube Consent
+    document.getElementById('yt-load-btn').addEventListener('click', function() {
+      window.open('https://youtu.be/TLT9Tu1mOzI', '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>

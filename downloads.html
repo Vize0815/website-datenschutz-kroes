@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloads | Datenschutz Kroes</title>
+  <meta name="description" content="Kostenlose Datenschutz-Unterlagen, Checklisten und Leitfäden für KMU und Geschäftsführungen — zum Download bereitgestellt von Datenschutz Kroes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-navy:    #0F1F3D;
+      --color-accent:  #1B4F8A;
+      --color-gold:    #C9A84C;
+      --color-fog:     #F4F5F7;
+      --color-white:   #FFFFFF;
+      --color-ink:     #1A1A2E;
+      --color-slate:   #5C6B82;
+      --color-mist:    #DDE3EC;
+      --color-sky:     #E8EFF8;
+      --color-verdant: #2D6A4F;
+      --font-serif:    'Fraunces', Georgia, serif;
+      --font-sans:     'DM Sans', system-ui, sans-serif;
+      --font-mono:     'DM Mono', 'Courier New', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-fog);
+      color: var(--color-ink);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    /* ── Topbar ── */
+    .topbar {
+      position: relative;
+      height: 38px;
+      background-color: rgba(10,18,36,0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center;
+    }
+    .topbar__inner { display: flex; align-items: center; justify-content: space-between; }
+    .topbar__left { display: flex; align-items: center; gap: 20px; }
+    .topbar__item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.82); white-space: nowrap; transition: color 200ms ease; text-decoration: none; }
+    .topbar__item:hover { color: var(--color-gold); }
+    .topbar__divider { width: 1px; height: 14px; background-color: rgba(255,255,255,0.18); flex-shrink: 0; }
+    .topbar__callback { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--color-gold); background: none; border: none; cursor: pointer; transition: color 200ms ease; }
+    .topbar__callback:hover { color: #e8c66a; }
+    .topbar__right { display: flex; align-items: center; gap: 14px; }
+    .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color 200ms ease; }
+    .topbar__social:hover { color: var(--color-gold); }
+
+    /* ── Nav ── */
+    .nav { position: relative; height: auto; padding: 8px 0; display: flex; align-items: center; background-color: rgba(255,255,255,0.96); border-bottom: 1px solid var(--color-mist); }
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav__logo { display: flex; align-items: center; gap: 12px; color: var(--color-navy); font-weight: 600; font-size: 16px; }
+    .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
+    .nav__links { display: flex; align-items: center; gap: 0; list-style: none; }
+    .nav__links li { display: flex; align-items: center; }
+    .nav__links li + li::before { content: '·'; color: var(--color-gold); font-size: 18px; line-height: 1; padding: 0 14px; pointer-events: none; user-select: none; }
+    .nav__link { font-size: 15px; font-weight: 500; color: var(--color-slate); position: relative; transition: color 200ms ease; }
+    .nav__link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background-color: var(--color-gold); transform: scaleX(0); transform-origin: left; transition: transform 380ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__link:hover { color: var(--color-navy); }
+    .nav__link:hover::after, .nav__link--active::after { transform: scaleX(1); }
+    .nav__link--active { color: var(--color-navy); }
+    .nav__cta { font-size: 14px; font-weight: 600; color: #fff; background-color: var(--color-navy); padding: 10px 22px; border-radius: 3px; transition: background-color 200ms ease, transform 200ms ease; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+    .nav__cta:hover { background-color: var(--color-accent); transform: translateY(-1px); }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--color-navy);
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero__text { padding: 0; }
+
+    .hero__photo {
+      width: 341px;
+      height: 512px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      align-self: center;
+      border: 2px solid var(--color-gold);
+    }
+
+    .hero__photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    @media (max-width: 768px) {
+      .hero__photo { display: none; }
+      .hero__text { padding-bottom: 52px; }
+    }
+
+    .hero::before {
+      content: 'DL';
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      font-family: var(--font-serif);
+      font-size: 320px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 20px;
+    }
+
+    .hero__headline {
+      font-family: var(--font-sans);
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 500;
+      color: var(--color-white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      max-width: 700px;
+    }
+
+    .hero__lead {
+      font-family: var(--font-sans);
+      font-size: clamp(16px, 1.6vw, 18px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.68);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* ── Filter Bar ── */
+    .filter-bar {
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-mist);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .filter-bar .container {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .filter-bar .container::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      flex-shrink: 0;
+      padding: 16px 24px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      transition: color 200ms ease, border-color 200ms ease;
+    }
+
+    .filter-btn:hover { color: var(--color-navy); }
+    .filter-btn.active {
+      color: var(--color-navy);
+      border-bottom-color: var(--color-gold);
+      font-weight: 500;
+    }
+
+    /* ── Main Content ── */
+    .downloads-main {
+      padding: 72px 0 96px;
+    }
+
+    .downloads-section {
+      margin-bottom: 64px;
+    }
+
+    .downloads-section:last-child { margin-bottom: 0; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-mist);
+    }
+
+    .section-header h2 {
+      font-family: var(--font-sans);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--color-navy);
+    }
+
+    .section-count {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+    }
+
+    /* ── Download Cards ── */
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .dl-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-mist);
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 250ms ease, transform 250ms ease;
+    }
+
+    .dl-card:hover {
+      box-shadow: 0 8px 32px rgba(15,31,61,0.10);
+      transform: translateY(-3px);
+    }
+
+    .dl-card__thumb {
+      width: 130px;
+      height: 158px;
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid var(--color-mist);
+      flex-shrink: 0;
+    }
+
+    .dl-card__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .dl-card__top {
+      padding: 24px 24px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .dl-card__icon {
+      width: 44px;
+      height: 52px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .dl-card__icon--pdf  { background: #FEECEC; }
+    .dl-card__icon--doc  { background: #E8EFF8; }
+    .dl-card__icon--xls  { background: #E8F4EE; }
+    .dl-card__icon--zip  { background: #F5F0E8; }
+
+    .dl-card__icon svg { width: 22px; height: 22px; }
+
+    .dl-card__badge {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .dl-card__badge--free {
+      background: #E8F4EE;
+      color: var(--color-verdant);
+    }
+
+    .dl-card__badge--new {
+      background: #FFF5E0;
+      color: #A86A00;
+    }
+
+    .dl-card__body {
+      padding: 16px 24px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dl-card__category {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 8px;
+    }
+
+    .dl-card__title {
+      font-family: var(--font-sans);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-navy);
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .dl-card__desc {
+      font-size: 13px;
+      color: var(--color-slate);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .dl-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-mist);
+      margin-bottom: 16px;
+    }
+
+    .dl-card__format {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+    }
+
+    .dl-card__size {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--color-slate);
+    }
+
+    .dl-card__btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--color-fog);
+      border: 1px solid var(--color-mist);
+      border-radius: 2px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-navy);
+      text-decoration: none;
+      transition: background 200ms ease, border-color 200ms ease;
+      cursor: pointer;
+    }
+
+    .dl-card__btn:hover {
+      background: var(--color-sky);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    .dl-card__btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* Coming soon card */
+    .dl-card--soon {
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .dl-card--soon .dl-card__btn {
+      background: var(--color-fog);
+      color: var(--color-slate);
+    }
+
+    /* ── Info Band ── */
+    .info-band {
+      background: var(--color-sky);
+      border: 1px solid var(--color-mist);
+      border-radius: 3px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .info-band svg { flex-shrink: 0; margin-top: 2px; }
+
+    .info-band p {
+      font-size: 14px;
+      color: var(--color-accent);
+      line-height: 1.65;
+    }
+
+    .info-band strong { color: var(--color-navy); }
+
+    /* ── CTA ── */
+    .dl-cta {
+      background: var(--color-navy);
+      border-radius: 3px;
+      padding: 48px;
+      text-align: center;
+      margin-top: 64px;
+    }
+
+    .dl-cta__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 16px;
+    }
+
+    .dl-cta h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .dl-cta p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 28px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.65;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: var(--color-gold);
+      color: var(--color-navy);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: opacity 200ms ease;
+    }
+
+    .btn-primary:hover { opacity: 0.88; }
+
+    /* ── Footer ── */
+    .footer { background-color: #0A1828; padding: 80px 0 0; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 2fr; gap: 48px; margin-bottom: 64px; }
+    .footer__logo { display: flex; align-items: center; gap: 12px; color: #fff; font-family: var(--font-sans); font-weight: 600; font-size: 16px; margin-bottom: 16px; }
+    .footer__tagline { font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 240px; }
+    .footer__col-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 20px; }
+    .footer__links { display: flex; flex-direction: column; gap: 12px; list-style: none; }
+    .footer__link { font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.45); transition: color 200ms ease; }
+    .footer__link:hover { color: #fff; }
+    .footer__contact-line { display: flex; align-items: center; gap: 10px; font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 10px; }
+    .footer__contact-line svg { color: var(--color-gold); flex-shrink: 0; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; position: relative; }
+    .footer__copy { font-family: var(--font-sans); font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer__made-by { position: absolute; left: 50%; transform: translateX(-50%); }
+    .footer__upprime-link { font-weight: 600; position: relative; display: inline-block; }
+    .footer__upprime-white { color: #fff; }
+    .footer__upprime-purple { color: #A044D4; }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { font-family: var(--font-sans); font-size: 13px; color: rgba(255,255,255,0.3); transition: color 200ms ease; }
+    .footer__legal a:hover { color: #fff; }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .downloads-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .hero { padding: 56px 0 52px; }
+      .nav__links, .nav__cta { display: none; }
+      .downloads-grid { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: 1fr; gap: 24px; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .dl-cta { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+4353382010" class="topbar__item">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5 1.5h2l1 2.5-1.25 1.25a7 7 0 003 3L8.5 7l2.5 1v2a1 1 0 01-1 1A9.5 9.5 0 011.5 2.5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          +43 (0) 5338-20105
+        </a>
+        <div class="topbar__divider"></div>
+        <a href="mailto:info@datenschutz-kroes.at" class="topbar__item">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2.5" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4l5.5 3.5L12 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          info@datenschutz-kroes.at
+        </a>
+        <div class="topbar__divider"></div>
+        <button class="topbar__callback" onclick="window.location.href='index.html#kontakt'">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9 1.5A5 5 0 116.5 11M9 1.5H6.5M9 1.5v2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Rückruf anfordern
+        </button>
+      </div>
+      <div class="topbar__right">
+        <a href="#" class="topbar__social" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="topbar__social" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
+          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark">
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li><a href="index.html#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="index.html#ueber-uns" class="nav__link">Über uns</a></li>
+          <li><a href="index.html#prozess" class="nav__link">Prozess</a></li>
+          <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+          <li><a href="downloads.html" class="nav__link nav__link--active">Downloads</a></li>
+        </ul>
+        <a href="index.html#kontakt" class="nav__cta">
+          Erstgespräch vereinbaren
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Downloads Übersicht">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Kostenlose Unterlagen</p>
+          <h1 class="hero__headline">Datenschutz-Wissen zum Mitnehmen.</h1>
+          <p class="hero__lead">Checklisten, Leitfäden, Vorlagen und Benennungsurkunde — kostenlos für Inhaber, Geschäftsführungen und Verantwortliche. Einfach herunterladen und direkt einsetzen.</p>
+        </div>
+        <div class="hero__photo">
+          <img src="alexander-kroes-8.png" alt="Alexander Kroes – Externer Datenschutzbeauftragter">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar" role="navigation" aria-label="Kategorien filtern">
+    <div class="container">
+      <button class="filter-btn active" data-filter="all">Alle Unterlagen</button>
+      <button class="filter-btn" data-filter="checklisten">Checklisten</button>
+      <button class="filter-btn" data-filter="leitfaeden">Leitfäden</button>
+      <button class="filter-btn" data-filter="vorlagen">Vorlagen</button>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main class="downloads-main">
+    <div class="container">
+
+      <!-- Info Band -->
+      <div class="info-band" role="note">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <circle cx="10" cy="10" r="9" stroke="#1B4F8A" stroke-width="1.5"/>
+          <path d="M10 9v5M10 6.5v.5" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <p><strong>Alle Unterlagen sind kostenlos.</strong> Sie benötigen keine Registrierung. Legen Sie die Dateien einfach in Ihrem Unternehmen ab und nutzen Sie sie als Ausgangspunkt für Ihre Datenschutz-Dokumentation.</p>
+      </div>
+
+      <!-- Checklisten -->
+      <div class="downloads-section" data-section="checklisten">
+        <div class="section-header">
+          <h2>Checklisten</h2>
+          <span class="section-count">1 Dokument</span>
+        </div>
+        <div class="downloads-grid">
+
+          <div class="dl-card" data-category="checklisten">
+            <div class="dl-card__top">
+              <div class="dl-card__icon dl-card__icon--pdf">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4" y="2" width="12" height="16" rx="1" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M14 2v5h5" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M7 12h6M7 15h4" stroke="#D93025" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="dl-card__badge dl-card__badge--free">Kostenlos</span>
+            </div>
+            <div class="dl-card__body">
+              <p class="dl-card__category">Checkliste</p>
+              <h3 class="dl-card__title">NIS2-Selbstcheck für Unternehmen</h3>
+              <p class="dl-card__desc">Mit nur 10 Fragen zu mehr Klarheit und Sicherheit für Ihr Unternehmen.<br><br>Die NIS2-Richtlinie betrifft deutlich mehr Unternehmen als ihr Vorgänger NIS — von kritischen Infrastrukturen bis hin zu zahlreichen Dienstleistern. Doch wer genau ist betroffen und wer nicht? Und welche Pflichten ergeben sich daraus?<br><br>Mit diesem Quick-Check prüfen Sie, ob Ihr Unternehmen unter die NIS2-Richtlinie fällt.</p>
+              <div class="dl-card__meta" style="align-items:center;">
+                <div class="dl-card__thumb">
+                  <img src="NIS2-Selbstcheck .jpg" alt="NIS2-Selbstcheck Vorschau">
+                </div>
+                <span class="dl-card__format">PDF</span>
+                <span class="dl-card__size">(2 Seiten)</span>
+              </div>
+              <a href="NIS2-Selbstcheck-Unternehmen.pdf" download class="dl-card__btn" aria-label="NIS2-Selbstcheck herunterladen">
+                Herunterladen
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Leitfäden -->
+      <div class="downloads-section" data-section="leitfaeden">
+        <div class="section-header">
+          <h2>Leitfäden</h2>
+          <span class="section-count">5 Dokumente</span>
+        </div>
+        <div class="downloads-grid">
+
+          <div class="dl-card" data-category="leitfaeden">
+            <div class="dl-card__top">
+              <div class="dl-card__icon dl-card__icon--pdf">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4" y="2" width="12" height="16" rx="1" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M14 2v5h5" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M7 12h6M7 15h4" stroke="#D93025" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="dl-card__badge dl-card__badge--free">Kostenlos</span>
+            </div>
+            <div class="dl-card__body">
+              <p class="dl-card__category">Leitfaden</p>
+              <h3 class="dl-card__title">NIS2 – Management Briefing</h3>
+              <p class="dl-card__desc">Dieses Management Briefing gibt Ihnen als Führungskraft einen klaren, praxisorientierten Überblick über die NIS2-Richtlinie — ohne technischen Fachjargon. Sie erfahren, welche Unternehmen betroffen sind, welche Pflichten sich daraus ergeben und welche Konsequenzen bei Nichteinhaltung drohen.<br><br>So sind Sie als Entscheider informiert und können die richtigen Weichen für Ihre Organisation stellen.</p>
+              <div class="dl-card__meta" style="align-items:center;">
+                <div class="dl-card__thumb">
+                  <img src="NIS2-Leitfaden-Deckblatt.jpg" alt="NIS2 Management Briefing Vorschau">
+                </div>
+                <span class="dl-card__format">PDF</span>
+                <span class="dl-card__size">(8 Seiten)</span>
+              </div>
+              <a href="NIS2 - Management Briefing.pdf" download class="dl-card__btn" aria-label="NIS2 Management Briefing herunterladen">
+                Herunterladen
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="dl-card" data-category="leitfaeden">
+            <div class="dl-card__top">
+              <div class="dl-card__icon dl-card__icon--pdf">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4" y="2" width="12" height="16" rx="1" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M14 2v5h5" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M7 12h6M7 15h4" stroke="#D93025" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="dl-card__badge dl-card__badge--free">Kostenlos</span>
+            </div>
+            <div class="dl-card__body">
+              <p class="dl-card__category">Leitfaden</p>
+              <h3 class="dl-card__title">Risikoanalyse nach NIS2</h3>
+              <p class="dl-card__desc">In dieser Schritt-für-Schritt-Anleitung werden Sie durch das Erstellen einer systematischen Risikoanalyse nach NIS2 geführt. Diese Risikoanalyse ist die zentrale Grundlage von NIS2 und ermöglicht es, Bedrohungen und Schwachstellen zu erkennen, Auswirkungen zu bewerten und angemessene Schutzmaßnahmen einzuleiten.<br><br>So gewinnen Sie Sicherheit und können fundiert entscheiden, welche nächsten Schritte für Ihre Organisation relevant sind.</p>
+              <div class="dl-card__meta" style="align-items:center;">
+                <div class="dl-card__thumb">
+                  <img src="Risikoanalyse nach NIS2 .png" alt="Risikoanalyse nach NIS2 Vorschau">
+                </div>
+                <span class="dl-card__format">PDF</span>
+                <span class="dl-card__size">(6 Seiten)</span>
+              </div>
+              <a href="Risikoanalyse-nach-NIS2.pdf" download class="dl-card__btn" aria-label="Risikoanalyse nach NIS2 herunterladen">
+                Herunterladen
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="dl-card" data-category="leitfaeden">
+            <div class="dl-card__top">
+              <div class="dl-card__icon dl-card__icon--pdf">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4" y="2" width="12" height="16" rx="1" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M14 2v5h5" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M7 12h6M7 15h4" stroke="#D93025" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="dl-card__badge dl-card__badge--free">Kostenlos</span>
+            </div>
+            <div class="dl-card__body">
+              <p class="dl-card__category">Leitfaden</p>
+              <h3 class="dl-card__title">NIS2-Quick-Steps – Wie kann ich heute mit der Umsetzung beginnen?</h3>
+              <p class="dl-card__desc">Ihre ersten Schritte zu mehr Sicherheit und Compliance unter NIS2.<br><br>Die Zeit drängt, doch nicht alles muss sofort perfekt sein. Erfahren Sie in diesem Leitfaden, mit welchen gezielten Schritten Sie schon heute entscheidende Fortschritte auf Ihrem Weg zur NIS2-Compliance machen. Ich stelle praxisnahe Quick Steps vor, mit denen Sie sofort selbst beginnen können.<br><br>Mit diesen Quick-Steps schaffen Sie sofort spürbare Fortschritte Richtung NIS2-Compliance.</p>
+              <div class="dl-card__meta" style="align-items:center;">
+                <div class="dl-card__thumb">
+                  <img src="NIS2-Quick-Steps .jpg" alt="NIS2-Quick-Steps Vorschau">
+                </div>
+                <span class="dl-card__format">PDF</span>
+                <span class="dl-card__size">(5 Seiten)</span>
+              </div>
+              <a href="Quick-Steps NIS2-Richtlinie.pdf" download class="dl-card__btn" aria-label="NIS2-Quick-Steps herunterladen">
+                Herunterladen
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="dl-card" data-category="leitfaeden">
+            <div class="dl-card__top">
+              <div class="dl-card__icon dl-card__icon--pdf">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4" y="2" width="12" height="16" rx="1" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M14 2v5h5" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M7 12h6M7 15h4" stroke="#D93025" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="dl-card__badge dl-card__badge--free">Kostenlos</span>
+            </div>
+            <div class="dl-card__body">
+              <p class="dl-card__category">Leitfaden</p>
+              <h3 class="dl-card__title">DSGVO – in 3 Schritten zu Ihrem Quick-Check</h3>
+              <p class="dl-card__desc">Wissen Sie wirklich, ob Ihr Unternehmen DSGVO-konform aufgestellt ist? Dieser Praxis-Leitfaden führt Sie in drei konkreten Schritten durch einen strukturierten DSGVO-Check — ohne Juristendeutsch, ohne unnötigen Aufwand.<br><br>Sie erfahren, worauf es wirklich ankommt, wo die häufigsten Lücken entstehen und wie Sie gezielt gegensteuern können. Ideal als erster Überblick oder zur regelmäßigen Selbstkontrolle.</p>
+              <div class="dl-card__meta" style="align-items:center;">
+                <div class="dl-card__thumb">
+                  <img src="Praxis Leitfaden DSGVO Check .jpg" alt="DSGVO Quick-Check Vorschau">
+                </div>
+                <span class="dl-card__format">PDF</span>
+                <span class="dl-card__size">(8 Seiten)</span>
+              </div>
+              <a href="Praxis Leitfaden DSGVO Check.pdf" download class="dl-card__btn" aria-label="DSGVO Quick-Check herunterladen">
+                Herunterladen
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="dl-card" data-category="leitfaeden">
+            <div class="dl-card__top">
+              <div class="dl-card__icon dl-card__icon--pdf">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4" y="2" width="12" height="16" rx="1" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M14 2v5h5" stroke="#D93025" stroke-width="1.5"/>
+                  <path d="M7 12h6M7 15h4" stroke="#D93025" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="dl-card__badge dl-card__badge--free">Kostenlos</span>
+            </div>
+            <div class="dl-card__body">
+              <p class="dl-card__category">Leitfaden</p>
+              <h3 class="dl-card__title">DSGVO & KI – 10 Praxis-Tipps zur datenschutzkonformen KI-Nutzung im Unternehmen</h3>
+              <p class="dl-card__desc">Künstliche Intelligenz bietet enorme Chancen — stellt Unternehmen datenschutzrechtlich aber vor neue Herausforderungen. Dieser Leitfaden zeigt Ihnen in 10 konkreten Praxis-Tipps, wie Sie KI-Tools rechtssicher und DSGVO-konform in Ihrem Unternehmen einsetzen können.<br><br>Von der Auswahl geeigneter Tools über den Umgang mit personenbezogenen Daten bis hin zu Mitarbeiterrichtlinien — praxisnah und verständlich aufbereitet.</p>
+              <div class="dl-card__meta" style="align-items:center;">
+                <div class="dl-card__thumb">
+                  <img src="Praxis Leitfaden DSGVO und KI .jpg" alt="DSGVO & KI Leitfaden Vorschau">
+                </div>
+                <span class="dl-card__format">PDF</span>
+                <span class="dl-card__size">(11 Seiten)</span>
+              </div>
+              <a href="Praxis-Leitfaden-DSGVO-KI.pdf" download class="dl-card__btn" aria-label="DSGVO & KI Leitfaden herunterladen">
+                Herunterladen
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Vorlagen -->
+      <div class="downloads-section" data-section="vorlagen">
+        <div class="section-header">
+          <h2>Vorlagen</h2>
+          <span class="section-count">1 Dokument</span>
+        </div>
+        <div class="downloads-grid">
+
+          <div class="dl-card" data-category="vorlagen">
+            <div class="dl-card__top">
+              <div class="dl-card__icon dl-card__icon--doc">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4" y="2" width="12" height="16" rx="1" stroke="#1B4F8A" stroke-width="1.5"/>
+                  <path d="M14 2v5h5" stroke="#1B4F8A" stroke-width="1.5"/>
+                  <path d="M7 12h6M7 15h4" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="dl-card__badge dl-card__badge--free">Kostenlos</span>
+            </div>
+            <div class="dl-card__body">
+              <p class="dl-card__category">Vorlage</p>
+              <h3 class="dl-card__title">DSGVO-konforme Datenschutzerklärung für Bewerbungsverfahren</h3>
+              <p class="dl-card__desc">Eine fertige Muster-Vorlage zur individuellen Anpassung — rechtssicher auf Basis der DSGVO.<br><br>Wenn Unternehmen Bewerberdaten erheben und verarbeiten, sind sie zur Information der Bewerber verpflichtet. Diese Vorlage enthält alle relevanten Pflichtangaben nach Art. 13 DSGVO und kann direkt an Ihre Unternehmensangaben angepasst werden.</p>
+              <div class="dl-card__meta" style="align-items:center;">
+                <div class="dl-card__thumb">
+                  <img src="Mustervorlage Bewerbung .jpg" alt="Datenschutzerklärung Bewerbungsverfahren Vorschau">
+                </div>
+                <span class="dl-card__format">PDF</span>
+                <span class="dl-card__size">(8 Seiten)</span>
+              </div>
+              <a href="Datenschutzerklärung für Bewerbungsverfahren.pdf" download class="dl-card__btn" aria-label="Datenschutzerklärung für Bewerbungsverfahren herunterladen">
+                Herunterladen
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" style="height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+            Datenschutz Kroes
+          </div>
+          <p class="footer__tagline">Externer Datenschutzbeauftragter für den Mittelstand. Zertifiziert. Persönlich. Verlässlich.</p>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Leistungen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#leistungen" class="footer__link">Externer DSB</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">DSGVO-Erstanalyse</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Mitarbeiterschulungen</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Dokumentation</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Datenschutz-Folgenabschätzung</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Incident Response</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Unternehmen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#ueber-uns" class="footer__link">Über uns</a></li>
+            <li><a href="index.html#prozess" class="footer__link">Prozess</a></li>
+            <li><a href="index.html#faq" class="footer__link">FAQ</a></li>
+            <li><a href="index.html#kontakt" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Kontakt</p>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <a href="mailto:info@datenschutz-kroes.at" class="footer__link">info@datenschutz-kroes.at</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V13a1 1 0 01-1 1h-2C7.82 14 2 8.18 2 1V3h1z" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+            <a href="tel:+4353382010" class="footer__link">+43 (0) 5338-20105</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 1a4 4 0 100 8A4 4 0 008 1zM1.5 15c0-2.5 2.91-4.5 6.5-4.5s6.5 2 6.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <span class="footer__link">Kufstein, Tirol</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Datenschutz Kroes. Alle Rechte vorbehalten.</p>
+        <p class="footer__copy footer__made-by">Website by <a href="https://upprime-connect.at/" target="_blank" rel="noopener noreferrer" class="footer__upprime-link"><span class="footer__upprime-white">Upprime</span> <span class="footer__upprime-purple">Connect</span></a></p>
+        <nav class="footer__legal" aria-label="Rechtliche Links">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutzerklärung</a>
+          <a href="#">AGB</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const sections = document.querySelectorAll('.downloads-section');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        sections.forEach(section => {
+          if (filter === 'all' || section.dataset.section === filter) {
+            section.style.display = '';
+          } else {
+            section.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

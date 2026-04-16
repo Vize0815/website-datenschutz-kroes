@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "ai-image-generation": {
+      "source": "tool-belt/skills",
+      "sourceType": "github",
+      "computedHash": "37d8c07aff78080f9f610623f8df6d858528a583525c8ad28f3cf0c42927f884"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "2e91c1a968d435712d1deb3845a35021842c168f132f81027c071ad43f78cb0a"
+    },
+    "ui-ux-pro-max": {
+      "source": "kimny1143/claude-code-template",
+      "sourceType": "github",
+      "computedHash": "b6f3a46da860714b6b7c733abc81d6ccb71018666ba46f478ebb5f43cefcf361"
+    }
+  }
+}

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benennungsurkunde | Datenschutz Kroes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-navy:    #0F1F3D;
+      --color-accent:  #1B4F8A;
+      --color-gold:    #C9A84C;
+      --color-fog:     #F4F5F7;
+      --color-white:   #FFFFFF;
+      --color-ink:     #1A1A2E;
+      --color-slate:   #5C6B82;
+      --color-mist:    #DDE3EC;
+      --color-sky:     #E8EFF8;
+      --font-serif:    'Fraunces', Georgia, serif;
+      --font-sans:     'DM Sans', system-ui, sans-serif;
+      --font-mono:     'DM Mono', 'Courier New', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-fog);
+      color: var(--color-ink);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    /* ── Topbar ── */
+    .topbar {
+      position: relative;
+      height: 38px;
+      background-color: rgba(10,18,36,0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center;
+    }
+    .topbar__inner { display: flex; align-items: center; justify-content: space-between; }
+    .topbar__left { display: flex; align-items: center; gap: 20px; }
+    .topbar__item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.82); white-space: nowrap; transition: color 200ms ease; text-decoration: none; }
+    .topbar__item:hover { color: var(--color-gold); }
+    .topbar__divider { width: 1px; height: 14px; background-color: rgba(255,255,255,0.18); flex-shrink: 0; }
+    .topbar__callback { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--color-gold); background: none; border: none; cursor: pointer; transition: color 200ms ease; }
+    .topbar__callback:hover { color: #e8c66a; }
+    .topbar__right { display: flex; align-items: center; gap: 14px; }
+    .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color 200ms ease; }
+    .topbar__social:hover { color: var(--color-gold); }
+
+    /* ── Nav ── */
+    .nav { position: relative; height: auto; padding: 8px 0; display: flex; align-items: center; background-color: rgba(255,255,255,0.96); border-bottom: 1px solid var(--color-mist); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav__logo { display: flex; align-items: center; gap: 12px; color: var(--color-navy); font-weight: 600; font-size: 16px; }
+    .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
+    .nav__links { display: flex; align-items: center; gap: 0; list-style: none; }
+    .nav__links li { display: flex; align-items: center; }
+    .nav__links li + li::before { content: '·'; color: var(--color-gold); font-size: 18px; line-height: 1; padding: 0 14px; pointer-events: none; user-select: none; }
+    .nav__link { font-size: 15px; font-weight: 500; color: var(--color-slate); position: relative; transition: color 200ms ease; }
+    .nav__link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background-color: var(--color-gold); transform: scaleX(0); transform-origin: left; transition: transform 380ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__link:hover { color: var(--color-navy); }
+    .nav__link:hover::after, .nav__link--active::after { transform: scaleX(1); }
+    .nav__link--active { color: var(--color-navy); }
+    .nav__cta { font-size: 14px; font-weight: 600; color: #fff; background-color: var(--color-navy); padding: 10px 22px; border-radius: 3px; transition: background-color 200ms ease, transform 200ms ease; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+    .nav__cta:hover { background-color: var(--color-accent); transform: translateY(-1px); }
+
+    /* ── Page Header ── */
+    .page-header {
+      background: var(--color-navy);
+      padding: 56px 0 48px;
+    }
+    .page-header__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 16px;
+    }
+    .page-header__title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .page-header__lead {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* ── Main ── */
+    .main {
+      padding: 64px 0 96px;
+    }
+
+    /* ── Form Card ── */
+    .form-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-mist);
+      border-radius: 4px;
+      overflow: hidden;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .form-card__header {
+      background: var(--color-navy);
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .form-card__header-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+
+    .form-card__header-sub {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-top: 6px;
+    }
+
+    .form-card__logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+      flex-shrink: 0;
+    }
+
+    .form-card__body {
+      padding: 48px;
+    }
+
+    /* ── Section Label ── */
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--color-mist);
+    }
+
+    /* ── Field Groups ── */
+    .field-group {
+      margin-bottom: 32px;
+    }
+
+    .field-row {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .field-row--2 { grid-template-columns: 1fr 1fr; }
+    .field-row--3 { grid-template-columns: 2fr 1fr 1fr; }
+    .field-row--1 { grid-template-columns: 1fr; }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+    }
+
+    .field input,
+    .field textarea {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--color-ink);
+      background: var(--color-fog);
+      border: 1px solid var(--color-mist);
+      border-radius: 3px;
+      padding: 10px 14px;
+      transition: border-color 200ms ease, background 200ms ease;
+      outline: none;
+      width: 100%;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--color-accent);
+      background: var(--color-white);
+    }
+
+    .field input[readonly],
+    .field textarea[readonly] {
+      background: var(--color-sky);
+      color: var(--color-accent);
+      font-weight: 600;
+      cursor: default;
+      border-color: rgba(27,79,138,0.2);
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    /* ── Legal Text ── */
+    .legal-block {
+      background: var(--color-fog);
+      border: 1px solid var(--color-mist);
+      border-radius: 3px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+    }
+
+    .legal-block__title {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin-bottom: 12px;
+    }
+
+    .legal-block p {
+      font-size: 13px;
+      color: var(--color-slate);
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .legal-block p:last-child { margin-bottom: 0; }
+
+    .legal-block ol {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+    .legal-block ol li {
+      font-size: 13px;
+      color: var(--color-slate);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--color-mist);
+      margin: 36px 0;
+    }
+
+    /* ── Signature Row ── */
+    .signature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 32px;
+    }
+
+    .signature-block {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .signature-block__label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+      margin-bottom: 4px;
+    }
+
+    .signature-block__line {
+      width: 100%;
+      border-bottom: 1.5px solid var(--color-ink);
+      height: 48px;
+      margin-bottom: 8px;
+    }
+
+    .signature-block__caption {
+      font-size: 12px;
+      color: var(--color-slate);
+    }
+
+    /* ── Actions ── */
+    .form-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 32px 48px;
+      background: var(--color-fog);
+      border-top: 1px solid var(--color-mist);
+    }
+
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background: var(--color-navy);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 200ms ease;
+    }
+    .btn-print:hover { background: var(--color-accent); }
+
+    .btn-reset {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: none;
+      color: var(--color-slate);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid var(--color-mist);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: border-color 200ms ease, color 200ms ease;
+    }
+    .btn-reset:hover { border-color: var(--color-slate); color: var(--color-navy); }
+
+    .form-actions__note {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--color-slate);
+      font-family: var(--font-mono);
+    }
+
+    /* ── Info Banner ── */
+    .info-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--color-sky);
+      border: 1px solid var(--color-mist);
+      border-radius: 3px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .info-banner p { font-size: 13px; color: var(--color-accent); line-height: 1.65; }
+    .info-banner strong { color: var(--color-navy); }
+
+    /* ── Footer ── */
+    .footer { background-color: #0A1828; padding: 80px 0 0; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 2fr; gap: 48px; margin-bottom: 64px; }
+    .footer__logo { display: flex; align-items: center; gap: 12px; color: #fff; font-family: var(--font-sans); font-weight: 600; font-size: 16px; margin-bottom: 16px; }
+    .footer__tagline { font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 240px; }
+    .footer__col-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 20px; }
+    .footer__links { display: flex; flex-direction: column; gap: 12px; list-style: none; }
+    .footer__link { font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.45); transition: color 200ms ease; }
+    .footer__link:hover { color: #fff; }
+    .footer__contact-line { display: flex; align-items: center; gap: 10px; font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 10px; }
+    .footer__contact-line svg { color: var(--color-gold); flex-shrink: 0; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; position: relative; }
+    .footer__copy { font-family: var(--font-sans); font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer__made-by { position: absolute; left: 50%; transform: translateX(-50%); }
+    .footer__upprime-link { font-weight: 600; position: relative; display: inline-block; }
+    .footer__upprime-white { color: #fff; }
+    .footer__upprime-purple { color: #A044D4; }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { font-family: var(--font-sans); font-size: 13px; color: rgba(255,255,255,0.3); transition: color 200ms ease; }
+    .footer__legal a:hover { color: #fff; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .form-card__body { padding: 28px 24px; }
+      .form-card__header { padding: 24px; flex-direction: column; align-items: flex-start; }
+      .field-row--2, .field-row--3 { grid-template-columns: 1fr; }
+      .signature-row { grid-template-columns: 1fr; gap: 32px; }
+      .form-actions { padding: 24px; flex-wrap: wrap; }
+      .form-actions__note { margin-left: 0; }
+      .footer__grid { grid-template-columns: 1fr; gap: 24px; }
+      .nav__links, .nav__cta { display: none; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      .topbar, .nav, .page-header, .info-banner, .form-actions, .footer { display: none !important; }
+      body { background: white; }
+      .main { padding: 0; }
+      .form-card { max-width: 100%; border: none; box-shadow: none; }
+      .form-card__header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .field input, .field textarea { background: transparent !important; border: none !important; border-bottom: 1px solid #999 !important; border-radius: 0 !important; padding: 4px 0 !important; font-size: 13px; }
+      .field input[readonly] { color: #1A1A2E !important; font-weight: 600; background: transparent !important; }
+      .legal-block { background: #f9f9f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .signature-block__line { border-bottom: 1px solid #333; }
+      .field label { color: #888; }
+      .section-label { color: #C9A84C !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+4353382010" class="topbar__item">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5 1.5h2l1 2.5-1.25 1.25a7 7 0 003 3L8.5 7l2.5 1v2a1 1 0 01-1 1A9.5 9.5 0 011.5 2.5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          +43 (0) 5338-20105
+        </a>
+        <div class="topbar__divider"></div>
+        <a href="mailto:info@datenschutz-kroes.at" class="topbar__item">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2.5" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4l5.5 3.5L12 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          info@datenschutz-kroes.at
+        </a>
+        <div class="topbar__divider"></div>
+        <button class="topbar__callback" onclick="window.location.href='index.html#kontakt'">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9 1.5A5 5 0 116.5 11M9 1.5H6.5M9 1.5v2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Rückruf anfordern
+        </button>
+      </div>
+      <div class="topbar__right">
+        <a href="#" class="topbar__social" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="topbar__social" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
+          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark">
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li><a href="index.html#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="index.html#ueber-uns" class="nav__link">Über uns</a></li>
+          <li><a href="index.html#prozess" class="nav__link">Prozess</a></li>
+          <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+          <li><a href="downloads.html" class="nav__link">Downloads</a></li>
+        </ul>
+        <a href="index.html#kontakt" class="nav__cta">
+          Erstgespräch vereinbaren
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <p class="page-header__eyebrow">Rechtsdokument</p>
+      <h1 class="page-header__title">Benennungsurkunde</h1>
+      <p class="page-header__lead">Füllen Sie das Formular aus und drucken Sie die fertige Benennungsurkunde für Ihre Unterlagen.</p>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="container">
+
+      <!-- Info -->
+      <div class="info-banner">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" flex-shrink="0">
+          <circle cx="10" cy="10" r="9" stroke="#1B4F8A" stroke-width="1.5"/>
+          <path d="M10 9v5M10 6.5v.5" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <p><strong>So verwenden Sie dieses Formular:</strong> Füllen Sie die Felder des Auftraggebers aus, drucken Sie das Dokument und unterzeichnen Sie es gemeinsam mit Alexander Kroes. Je eine Ausfertigung verbleibt beim Auftraggeber und beim Datenschutzbeauftragten.</p>
+      </div>
+
+      <!-- Form Card -->
+      <div class="form-card">
+
+        <!-- Card Header -->
+        <div class="form-card__header">
+          <div>
+            <div class="form-card__header-title">Benennungsurkunde</div>
+            <div class="form-card__header-sub">Benennung zum externen Datenschutzbeauftragten · Art. 37–39 DSGVO</div>
+          </div>
+          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="form-card__logo">
+        </div>
+
+        <!-- Card Body -->
+        <form class="form-card__body" id="benennungsform" onsubmit="return false;">
+
+          <!-- Auftraggeber -->
+          <p class="section-label">Auftraggeber (Ihr Unternehmen)</p>
+          <div class="field-group">
+            <div class="field-row field-row--1">
+              <div class="field">
+                <label for="company">Unternehmen / Firma *</label>
+                <input type="text" id="company" name="company" placeholder="Mustermann GmbH" required>
+              </div>
+            </div>
+            <div class="field-row field-row--2">
+              <div class="field">
+                <label for="street">Straße und Hausnummer *</label>
+                <input type="text" id="street" name="street" placeholder="Musterstraße 1">
+              </div>
+              <div class="field">
+                <label for="city">PLZ und Ort *</label>
+                <input type="text" id="city" name="city" placeholder="6330 Kufstein">
+              </div>
+            </div>
+            <div class="field-row field-row--2">
+              <div class="field">
+                <label for="representative">Vertreten durch (Name, Funktion)</label>
+                <input type="text" id="representative" name="representative" placeholder="Max Mustermann, Geschäftsführer">
+              </div>
+              <div class="field">
+                <label for="effective-date">Bestellung wirksam zum *</label>
+                <input type="date" id="effective-date" name="effective-date">
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <!-- DSB -->
+          <p class="section-label">Datenschutzbeauftragter</p>
+          <div class="field-group">
+            <div class="field-row field-row--2">
+              <div class="field">
+                <label for="dsb-name">Name</label>
+                <input type="text" id="dsb-name" name="dsb-name" value="Alexander Kroes" readonly>
+              </div>
+              <div class="field">
+                <label for="dsb-company">Unternehmen</label>
+                <input type="text" id="dsb-company" name="dsb-company" value="Datenschutz Kroes" readonly>
+              </div>
+            </div>
+            <div class="field-row field-row--2">
+              <div class="field">
+                <label for="dsb-address">Adresse</label>
+                <input type="text" id="dsb-address" name="dsb-address" value="Kufstein, Tirol, Österreich" readonly>
+              </div>
+              <div class="field">
+                <label for="dsb-contact">Kontakt</label>
+                <input type="text" id="dsb-contact" name="dsb-contact" value="info@datenschutz-kroes.at" readonly>
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <!-- Legal Text -->
+          <p class="section-label">Rechtliche Grundlage und Aufgaben</p>
+
+          <div class="legal-block">
+            <p class="legal-block__title">Benennung zum externen Datenschutzbeauftragten</p>
+            <p>Die oben genannte Auftraggeberin / der oben genannte Auftraggeber bestellt hiermit Alexander Kroes (Datenschutz Kroes) mit Wirkung zum angegebenen Datum zum externen Datenschutzbeauftragten im Sinne der Art. 37–39 DSGVO und § 38 BDSG.</p>
+            <p>Der Datenschutzbeauftragte ist bei der Ausführung seiner Tätigkeit auf dem Gebiet des Datenschutzes weisungsfrei und wird bei der Erfüllung seiner Aufgaben von der Geschäftsleitung unterstützt. Er hat hierbei einen Anspruch auf ordnungsgemäße und frühzeitige Einbindung in jegliche, das Unternehmen betreffende, datenschutzrechtliche Fragestellungen und auf die notwendige Unterstützung durch das Unternehmen.</p>
+            <p>Seine Aufgabe umfasst die Überprüfung der Einhaltung der Datenschutzgrundverordnung (DSGVO) sowie anderer Vorschriften über den Datenschutz. Gemäß Art. 39 Abs. 1 DSGVO beinhaltet dies:</p>
+            <ol type="a">
+              <li>Unterrichtung und Beratung des Verantwortlichen oder des Auftragsverarbeiters und der Beschäftigten, die Verarbeitungen durchführen, hinsichtlich ihrer Pflichten nach dieser Verordnung sowie nach sonstigen Datenschutzvorschriften der Union bzw. der Mitgliedstaaten;</li>
+              <li>Überwachung der Einhaltung dieser Verordnung, anderer Datenschutzvorschriften der Union bzw. der Mitgliedstaaten sowie der Strategien des Verantwortlichen oder des Auftragsverarbeiters für den Schutz personenbezogener Daten einschließlich der Zuweisung von Zuständigkeiten, der Sensibilisierung und Schulung der an den Verarbeitungsvorgängen beteiligten Mitarbeiter und der diesbezüglichen Überprüfungen;</li>
+              <li>Beratung – auf Anfrage – im Zusammenhang mit der Datenschutz-Folgenabschätzung und Überwachung ihrer Durchführung gemäß Art. 35 DSGVO;</li>
+              <li>Zusammenarbeit mit der Aufsichtsbehörde;</li>
+              <li>Tätigkeit als Anlaufstelle für die Aufsichtsbehörde in mit der Verarbeitung zusammenhängenden Fragen, einschließlich der vorherigen Konsultation gemäß Art. 36 DS-GVO, und gegebenenfalls Beratung zu allen sonstigen Fragen.</li>
+            </ol>
+            <p>Der Datenschutzbeauftragte trägt gemäß Art. 39 Abs. 2 DS-GVO bei der Erfüllung seiner Aufgaben dem mit den Verarbeitungsvorgängen verbundenen Risiko gebührend Rechnung. Des Weiteren ist der Datenschutzbeauftragte zur Verschwiegenheit verpflichtet in Bezug auf die Identität Betroffener sowie auf Umstände, die Rückschlüsse auf die Betroffenen zulassen, soweit er davon nicht ausdrücklich durch die Betroffenen befreit wurde.</p>
+          </div>
+
+          <hr class="divider">
+
+          <!-- Signatures -->
+          <p class="section-label">Unterschriften</p>
+
+          <div class="signature-row">
+            <div class="signature-block">
+              <p class="signature-block__label">Auftraggeber</p>
+              <div class="field field-row--1" style="margin-bottom:12px;">
+                <label for="sig-place-ag">Ort</label>
+                <input type="text" id="sig-place-ag" name="sig-place-ag" placeholder="Kufstein">
+              </div>
+              <div class="field field-row--1" style="margin-bottom:16px;">
+                <label for="sig-date-ag">Datum</label>
+                <input type="date" id="sig-date-ag" name="sig-date-ag">
+              </div>
+              <div class="signature-block__line"></div>
+              <p class="signature-block__caption">Unterschrift Auftraggeber</p>
+            </div>
+
+            <div class="signature-block">
+              <p class="signature-block__label">Datenschutzbeauftragter</p>
+              <div class="field field-row--1" style="margin-bottom:12px;">
+                <label>Ort</label>
+                <input type="text" value="Kufstein" readonly>
+              </div>
+              <div class="field field-row--1" style="margin-bottom:16px;">
+                <label for="sig-date-dsb">Datum</label>
+                <input type="date" id="sig-date-dsb" name="sig-date-dsb">
+              </div>
+              <div class="signature-block__line"></div>
+              <p class="signature-block__caption">Alexander Kroes · Datenschutz Kroes</p>
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Actions -->
+        <div class="form-actions">
+          <button class="btn-print" onclick="window.print()">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <rect x="3" y="1" width="9" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+              <rect x="3" y="9" width="9" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M3 6h9M1 6h13v6H1z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+            Drucken / Als PDF speichern
+          </button>
+          <button class="btn-reset" onclick="document.getElementById('benennungsform').reset(); document.getElementById('dsb-name').value='Alexander Kroes'; document.getElementById('dsb-company').value='Datenschutz Kroes'; document.getElementById('dsb-address').value='Kufstein, Tirol, Österreich'; document.getElementById('dsb-contact').value='info@datenschutz-kroes.at';">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M1 7a6 6 0 106-6H5M5 1L3 3l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Zurücksetzen
+          </button>
+          <span class="form-actions__note">Benennungsurkunde 2025 · Datenschutz Kroes</span>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" style="height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+            Datenschutz Kroes
+          </div>
+          <p class="footer__tagline">Externer Datenschutzbeauftragter für den Mittelstand. Zertifiziert. Persönlich. Verlässlich.</p>
+        </div>
+        <div>
+          <p class="footer__col-label">Leistungen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#leistungen" class="footer__link">Externer DSB</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">DSGVO-Erstanalyse</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Mitarbeiterschulungen</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Dokumentation</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Datenschutz-Folgenabschätzung</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Incident Response</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Unternehmen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#ueber-uns" class="footer__link">Über uns</a></li>
+            <li><a href="index.html#prozess" class="footer__link">Prozess</a></li>
+            <li><a href="index.html#faq" class="footer__link">FAQ</a></li>
+            <li><a href="index.html#kontakt" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Kontakt</p>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <a href="mailto:info@datenschutz-kroes.at" class="footer__link">info@datenschutz-kroes.at</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V13a1 1 0 01-1 1h-2C7.82 14 2 8.18 2 1V3h1z" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+            <a href="tel:+4353382010" class="footer__link">+43 (0) 5338-20105</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Datenschutz Kroes · Alexander Kroes · Kufstein, Tirol</p>
+        <div class="footer__made-by">
+          <span class="footer__copy">Made by </span>
+          <a href="https://upprime.at" target="_blank" rel="noopener" class="footer__upprime-link">
+            <span class="footer__upprime-white">up</span><span class="footer__upprime-purple">prime</span>
+          </a>
+        </div>
+        <div class="footer__legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutzerklärung</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
