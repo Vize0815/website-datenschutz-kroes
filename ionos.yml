@@ -1,0 +1,8 @@
+name: website-datenschutz-kroes
+buildSteps:
+  - name: "Static Website Ready"
+    commands:
+      - echo "Website is ready for deployment"
+publishDirectory: ./
+nodeVersion: "18"
+runtimeVersion: "18"
