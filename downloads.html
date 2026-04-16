@@ -579,9 +579,35 @@
           Erstgespräch vereinbaren
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+
+        <button
+          class="nav__hamburger"
+          id="hamburger"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="mobile-overlay">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav__mobile-overlay" id="mobile-overlay" aria-hidden="true" role="dialog" aria-label="Navigation">
+    <nav aria-label="Mobile Navigation">
+      <ul style="list-style:none; text-align:center; display:flex; flex-direction:column; gap:32px;" role="list">
+        <li><a href="index.html#leistungen" class="nav__mobile-link" onclick="closeMobileNav()">Leistungen</a></li>
+        <li><a href="index.html#seminare" class="nav__mobile-link" onclick="closeMobileNav()">Seminare</a></li>
+        <li><a href="index.html#ueber-uns" class="nav__mobile-link" onclick="closeMobileNav()">Über uns</a></li>
+        <li><a href="index.html#prozess" class="nav__mobile-link" onclick="closeMobileNav()">Prozess</a></li>
+        <li><a href="index.html#faq" class="nav__mobile-link" onclick="closeMobileNav()">FAQ</a></li>
+        <li><a href="downloads.html" class="nav__mobile-link" onclick="closeMobileNav()">Downloads</a></li>
+      </ul>
+    </nav>
+    <a href="index.html#kontakt" class="nav__mobile-cta" onclick="closeMobileNav()">Erstgespräch vereinbaren</a>
+  </div>
 
   <!-- Hero -->
   <section class="hero" aria-label="Downloads Übersicht">

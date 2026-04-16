@@ -358,32 +358,57 @@
   </div>
 
   <!-- ===== NAV ===== -->
-  <nav class="nav" aria-label="Hauptnavigation">
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
     <div class="container">
       <div class="nav__inner">
-        <div class="nav__logo">
-          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark">
-        </div>
+        <a href="index.html" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
+          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark">
+        </a>
+
         <ul class="nav__links" role="list">
-          <li><a href="index.html" class="nav__link">Start</a></li>
           <li><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li><a href="index.html#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="index.html#ueber-uns" class="nav__link">Über uns</a></li>
+          <li><a href="index.html#prozess" class="nav__link">Prozess</a></li>
+          <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
           <li><a href="downloads.html" class="nav__link">Downloads</a></li>
-          <li><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
         </ul>
-        <button class="nav__cta" onclick="window.location.href='mailto:info@datenschutz-kroes.at'">Direkt anfragen</button>
-        <button class="nav__hamburger" aria-label="Menü" aria-expanded="false" id="hamburger">
-          <span></span><span></span><span></span>
+
+        <a href="index.html#kontakt" class="nav__cta">
+          Erstgespräch vereinbaren
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <button
+          class="nav__hamburger"
+          id="hamburger"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="mobile-overlay">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </div>
-    <div class="nav__mobile-overlay" id="mobileOverlay">
-      <a href="index.html" class="nav__mobile-link">Start</a>
-      <a href="index.html#leistungen" class="nav__mobile-link">Leistungen</a>
-      <a href="downloads.html" class="nav__mobile-link">Downloads</a>
-      <a href="index.html#kontakt" class="nav__mobile-link">Kontakt</a>
-      <button class="nav__mobile-cta" onclick="window.location.href='mailto:info@datenschutz-kroes.at'">Direkt anfragen</button>
-    </div>
   </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav__mobile-overlay" id="mobile-overlay" aria-hidden="true" role="dialog" aria-label="Navigation">
+    <nav aria-label="Mobile Navigation">
+      <ul style="list-style:none; text-align:center; display:flex; flex-direction:column; gap:32px;" role="list">
+        <li><a href="index.html#leistungen" class="nav__mobile-link" onclick="closeMobileNav()">Leistungen</a></li>
+        <li><a href="index.html#seminare" class="nav__mobile-link" onclick="closeMobileNav()">Seminare</a></li>
+        <li><a href="index.html#ueber-uns" class="nav__mobile-link" onclick="closeMobileNav()">Über uns</a></li>
+        <li><a href="index.html#prozess" class="nav__mobile-link" onclick="closeMobileNav()">Prozess</a></li>
+        <li><a href="index.html#faq" class="nav__mobile-link" onclick="closeMobileNav()">FAQ</a></li>
+        <li><a href="downloads.html" class="nav__mobile-link" onclick="closeMobileNav()">Downloads</a></li>
+      </ul>
+    </nav>
+    <a href="index.html#kontakt" class="nav__mobile-cta" onclick="closeMobileNav()">Erstgespräch vereinbaren</a>
+  </div>
 
   <!-- ===== PAGE HERO ===== -->
   <section class="page-hero">
