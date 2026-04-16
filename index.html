@@ -354,10 +354,17 @@
     }
 
     @media (max-width: 768px) {
+      .topbar {
+        position: static;
+      }
       .topbar__left .topbar__item:nth-child(2),
       .topbar__left .topbar__divider:nth-child(2),
       .topbar__left .topbar__divider:nth-child(3),
       .topbar__callback { display: none; }
+      .nav {
+        position: static;
+        top: auto;
+      }
     }
 
     @media (max-width: 480px) {
