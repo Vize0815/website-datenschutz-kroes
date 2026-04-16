@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | Datenschutz Kroes</title>
+  <meta name="description" content="Impressum und rechtliche Informationen von Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU.">
+  <link rel="canonical" href="https://www.datenschutz-kroes.at/impressum.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #F4F5F7;
+      --color-surface: #FFFFFF;
+      --color-navy: #0F1F3D;
+      --color-ink: #1A1A2E;
+      --color-slate: #5C6B82;
+      --color-slate-light: #8A99AD;
+      --color-prussian: #1B4F8A;
+      --color-sky-tint: #E8EFF8;
+      --color-gold: #C9A84C;
+      --color-gold-light: #E8D5A0;
+      --color-mist: #DDE3EC;
+      --color-verdant: #2D6A4F;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --transition-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-card: 0 2px 16px rgba(15,31,61,0.08);
+      --shadow-elevated: 0 8px 40px rgba(15,31,61,0.14);
+      --font-sans: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-ink); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; border: none; background: none; cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+    /* ===== TOPBAR ===== */
+    .topbar {
+      position: relative;
+      height: 38px;
+      background-color: rgba(10,18,36,0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center;
+    }
+    .topbar__inner { display: flex; align-items: center; justify-content: space-between; }
+    .topbar__left { display: flex; align-items: center; gap: 20px; }
+    .topbar__item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.82); white-space: nowrap; transition: color var(--transition-base); }
+    .topbar__item:hover { color: var(--color-gold); }
+    .topbar__divider { width: 1px; height: 14px; background-color: rgba(255,255,255,0.18); flex-shrink: 0; }
+    .topbar__callback { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--color-gold); background: none; border: none; cursor: pointer; transition: color var(--transition-base); }
+    .topbar__callback:hover { color: #e8c66a; }
+    .topbar__right { display: flex; align-items: center; gap: 14px; }
+    .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color var(--transition-base); }
+    .topbar__social:hover { color: var(--color-gold); }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: relative;
+      height: auto; padding: 8px 0;
+      display: flex; align-items: center;
+      background-color: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--color-mist);
+    }
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav__logo { display: flex; align-items: center; gap: 12px; color: var(--color-navy); font-weight: 600; font-size: 16px; }
+    .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
+    .nav__links { display: flex; align-items: center; gap: 0; }
+    .nav__links li { display: flex; align-items: center; }
+    .nav__links li + li::before { content: '·'; color: var(--color-gold); font-size: 18px; line-height: 1; padding: 0 14px; pointer-events: none; user-select: none; }
+    .nav__link { font-size: 15px; font-weight: 500; color: var(--color-slate); position: relative; transition: color var(--transition-base); }
+    .nav__link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background-color: var(--color-gold); transform: scaleX(0); transform-origin: left; transition: transform 380ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__link:hover { color: var(--color-navy); }
+    .nav__link:hover::after { transform: scaleX(1); }
+    .nav__cta { font-size: 14px; font-weight: 600; color: var(--color-surface); background-color: var(--color-navy); padding: 10px 22px; border-radius: var(--radius-md); transition: background-color var(--transition-base), transform var(--transition-base); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+    .nav__cta:hover { background-color: var(--color-prussian); transform: translateY(-1px); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; width: 28px; cursor: pointer; padding: 4px; }
+    .nav__hamburger span { display: block; height: 2px; background-color: var(--color-navy); border-radius: 2px; transition: transform var(--transition-base), opacity var(--transition-base); }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav__mobile-overlay { position: fixed; inset: 0; background-color: var(--color-navy); z-index: 103; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 600ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__mobile-overlay.open { opacity: 1; pointer-events: all; }
+    .nav__mobile-link { font-size: 32px; font-weight: 500; color: var(--color-surface); transition: color var(--transition-base); }
+    .nav__mobile-link:hover { color: var(--color-gold); }
+    .nav__mobile-cta { font-size: 16px; font-weight: 600; color: var(--color-navy); background-color: var(--color-gold); padding: 14px 32px; border-radius: var(--radius-md); cursor: pointer; }
+
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      background-color: var(--color-surface);
+      padding-top: 80px;
+      padding-bottom: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .page-hero__back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 500;
+      color: var(--color-slate-light);
+      margin-bottom: 24px;
+      transition: color var(--transition-base);
+    }
+    .page-hero__back:hover { color: var(--color-gold); }
+    .page-hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--color-gold); margin-bottom: 16px;
+    }
+    .page-hero__title {
+      font-size: clamp(28px, 4vw, 44px); font-weight: 500;
+      color: var(--color-navy); line-height: 1.15;
+      letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .page-hero__lead {
+      font-size: 16px; font-weight: 300;
+      color: var(--color-slate); line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    /* ===== CONTENT SECTION ===== */
+    .content-section {
+      background-color: var(--color-surface);
+      padding: 80px 0;
+    }
+    .content-section__body {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--color-ink);
+    }
+    .content-section__body h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin: 40px 0 16px 0;
+      margin-top: 40px;
+    }
+    .content-section__body h2:first-child {
+      margin-top: 0;
+    }
+    .content-section__body p {
+      margin-bottom: 16px;
+    }
+    .content-section__body ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+    .content-section__body li {
+      list-style: disc;
+      margin-bottom: 8px;
+    }
+    .content-section__body a {
+      color: var(--color-prussian);
+      text-decoration: underline;
+      transition: color var(--transition-base);
+    }
+    .content-section__body a:hover {
+      color: var(--color-navy);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: #0A1828;
+      padding: 80px 0 0;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1.5fr 1.5fr 2fr;
+      gap: 72px;
+      margin-bottom: 60px;
+    }
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .footer__tagline {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+    .footer__col-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+    }
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer__link {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      transition: color var(--transition-base);
+    }
+    .footer__link:hover {
+      color: var(--color-surface);
+    }
+    .footer__contact-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer__contact-line svg {
+      color: var(--color-gold);
+      flex-shrink: 0;
+    }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+    .footer__made-by {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+    .footer__upprime-link {
+      font-weight: 600;
+      position: relative;
+    }
+    .footer__upprime-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.4);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 280ms ease;
+    }
+    .footer__upprime-link:hover::after {
+      transform: scaleX(1);
+    }
+    .footer__upprime-white {
+      color: #FFFFFF;
+    }
+    .footer__upprime-purple {
+      color: #A044D4;
+    }
+    .footer__copy {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer__legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer__legal a {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      transition: color var(--transition-base);
+    }
+    .footer__legal a:hover {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .container { padding: 0 36px; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .nav__hamburger { display: flex; }
+      .nav__links { display: none; }
+      .nav__cta { display: none; }
+      .page-hero { padding-top: 60px; padding-bottom: 60px; }
+      .footer__grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; }
+      .footer__made-by { position: static; transform: none; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .page-hero__title { font-size: 28px; }
+      .footer__legal { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar" aria-label="Topbar">
+    <div class="container" style="width:100%;max-width:100%;padding:0 48px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="topbar__left">
+        <span class="topbar__item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Kufstein, Tirol
+        </span>
+        <div class="topbar__divider"></div>
+        <span class="topbar__item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          +43 (0) 5338-20105
+        </span>
+      </div>
+      <div class="topbar__right">
+        <a href="https://www.facebook.com/datenschutz-kroes" class="topbar__social" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@DatenschutzKroes" class="topbar__social" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" aria-label="Hauptnavigation">
+    <div class="container">
+      <div class="nav__inner">
+        <div class="nav__logo">
+          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark">
+        </div>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" class="nav__link">Start</a></li>
+          <li><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li><a href="downloads.html" class="nav__link">Downloads</a></li>
+          <li><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
+        </ul>
+        <button class="nav__cta" onclick="window.location.href='mailto:info@datenschutz-kroes.at'">Direkt anfragen</button>
+        <button class="nav__hamburger" aria-label="Menü" aria-expanded="false" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__mobile-overlay" id="mobileOverlay">
+      <a href="index.html" class="nav__mobile-link">Start</a>
+      <a href="index.html#leistungen" class="nav__mobile-link">Leistungen</a>
+      <a href="downloads.html" class="nav__mobile-link">Downloads</a>
+      <a href="index.html#kontakt" class="nav__mobile-link">Kontakt</a>
+      <button class="nav__mobile-cta" onclick="window.location.href='mailto:info@datenschutz-kroes.at'">Direkt anfragen</button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div>
+          <a href="index.html" class="page-hero__back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M10 12L6 8l4-4"></path>
+            </svg>
+            Zurück zur Startseite
+          </a>
+          <p class="page-hero__eyebrow">RECHTLICHE INFORMATIONEN</p>
+          <h1 class="page-hero__title">Impressum</h1>
+          <p class="page-hero__lead">Verantwortliche Personen und Kontaktinformationen von Datenschutz Kroes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT SECTION ===== -->
+  <section class="content-section">
+    <div class="container">
+      <div class="content-section__body">
+        <h2>Betreiber und Anbieter</h2>
+        <p><strong>Alexander Kroes</strong></p>
+        <p>Datenschutz Kroes<br>
+        Kufstein, Tirol, Österreich</p>
+
+        <h2>Kontaktinformationen</h2>
+        <p><strong>Telefon:</strong> <a href="tel:+4353382010">+43 (0) 5338-20105</a></p>
+        <p><strong>E-Mail:</strong> <a href="mailto:info@datenschutz-kroes.at">info@datenschutz-kroes.at</a></p>
+
+        <h2>Tätigkeit und Qualifikation</h2>
+        <p>Alexander Kroes arbeitet als externer Datenschutzbeauftragter (DSB) nach Artikel 37 ff. der Datenschutz-Grundverordnung (DSGVO). Er ist zertifizierter Datenschutzbeauftragter und Mitglied des Berufsverbands der Datenschutzbeauftragten Deutschlands (BvD) e.V.</p>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt und überprüft. Eine Haftung für die Genauigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen kann jedoch nicht übernommen werden. Insbesondere werden keine Zusicherungen oder Garantien in Bezug auf Inhalte, die auf dieser Website bereitgestellt werden, gegeben oder impliziert. Die Website dient ausschließlich zu Informationszwecken und stellt keine rechtliche oder professionelle Beratung dar. Für konkrete Rechtsfragen sollte ein Rechtsanwalt oder ein sachverständiger Berater konsultiert werden.</p>
+
+        <h2>Verlinkung zu Webseiten Dritter</h2>
+        <p>Diese Website kann Links zu Webseiten von Dritten enthalten. Wir sind nicht verantwortlich für die Inhalte von Webseiten Dritter und machen uns diese Inhalte nicht zu eigen. Wir übernehmen keine Gewährleistung oder Haftung für die Verfügbarkeit, den Inhalt oder die Genauigkeit von Inhalten Dritter.</p>
+
+        <h2>Urheberrecht und Geistiges Eigentum</h2>
+        <p>Alle auf dieser Website enthaltenen Inhalte, einschließlich Texte, Grafiken, Logos, Bilder und Software, sind Eigentum von Datenschutz Kroes oder von Dritten, von denen die Lizenz erworben wurde. Diese Inhalte sind durch Urheberrecht, Markenrecht und andere Gesetze zum Schutz des geistigen Eigentums geschützt. Sie dürfen nicht ohne ausdrückliche schriftliche Genehmigung reproduziert, verbreitet oder für kommerzielle Zwecke genutzt werden.</p>
+
+        <h2>Datenschutz</h2>
+        <p>Weitere Informationen darüber, wie wir Ihre Daten verarbeiten und welche Rechte Sie haben, finden Sie in unserer <a href="#datenschutzerklaerung">Datenschutzerklärung</a>.</p>
+
+        <h2>Änderungen an dieser Website</h2>
+        <p>Wir behalten uns das Recht vor, die Inhalte dieser Website jederzeit und ohne vorherige Ankündigung zu ändern, zu aktualisieren oder zu ergänzen. Ebenso behalten wir uns das Recht vor, diese Website jederzeit und ohne vorherige Ankündigung ganz oder teilweise zu schließen.</p>
+
+        <h2>Anwendbares Recht</h2>
+        <p>Diese Website und alle Inhalte werden gemäß den Gesetzen der Republik Österreich bereitgestellt. Alle Ansprüche, die sich aus der Nutzung dieser Website ergeben, unterliegen österreichischem Recht. Gerichtsstand ist Kufstein, Tirol.</p>
+
+        <h2>Streitbeilegung</h2>
+        <p>Die Europäische Kommission stellt eine Plattform für die Online-Streitbeilegung (OS) bereit unter <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">ec.europa.eu/consumers/odr/</a>. Wir nehmen nicht an Streitbeilegungsverfahren vor Verbraucherschlichtungsstellen teil.</p>
+
+        <h2>Stand des Impressums</h2>
+        <p><strong>Letzte Aktualisierung:</strong> April 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" style="height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+            Datenschutz Kroes
+          </div>
+          <p class="footer__tagline">Externer Datenschutzbeauftragter für den Mittelstand. Zertifiziert. Persönlich. Verlässlich.</p>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Leistungen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#leistungen" class="footer__link">Externer DSB</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">DSGVO-Erstanalyse</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Mitarbeiterschulungen</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Dokumentation</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Datenschutz-Folgenabschätzung</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Incident Response</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Unternehmen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#ueber-uns" class="footer__link">Über uns</a></li>
+            <li><a href="index.html#prozess" class="footer__link">Prozess</a></li>
+            <li><a href="index.html#faq" class="footer__link">FAQ</a></li>
+            <li><a href="index.html#kontakt" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Kontakt</p>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <a href="mailto:info@datenschutz-kroes.at" class="footer__link">info@datenschutz-kroes.at</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V13a1 1 0 01-1 1h-2C7.82 14 2 8.18 2 1V3h1z" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+            <a href="tel:+4353382010" class="footer__link">+43 (0) 5338-20105</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 1a4 4 0 100 8A4 4 0 008 1zM1.5 15c0-2.5 2.91-4.5 6.5-4.5s6.5 2 6.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <span class="footer__link">Kufstein, Tirol</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Datenschutz Kroes. Alle Rechte vorbehalten.</p>
+        <p class="footer__copy footer__made-by">Website by <a href="https://upprime-connect.at/" target="_blank" rel="noopener noreferrer" class="footer__upprime-link"><span class="footer__upprime-white">Upprime</span> <span class="footer__upprime-purple">Connect</span></a></p>
+        <nav class="footer__legal" aria-label="Rechtliche Links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutzerklärung</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const hamburger = document.getElementById('hamburger');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    hamburger.addEventListener('click', function() {
+      const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isOpen);
+      hamburger.classList.toggle('open');
+      mobileOverlay.classList.toggle('open');
+    });
+    mobileOverlay.querySelectorAll('a, button').forEach(item => {
+      item.addEventListener('click', () => {
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
