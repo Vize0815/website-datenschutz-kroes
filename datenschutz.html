@@ -353,6 +353,7 @@
       .footer__legal { flex-direction: column; gap: 8px; }
     }
   </style>
+  <link rel="stylesheet" href="cookie-banner.css">
 </head>
 <body>
 
@@ -620,28 +621,32 @@
         <h2>10. Schriftarten (lokal gehostet)</h2>
         <p>Diese Website verwendet die Schriftarten „DM Sans" und „DM Mono" von Google Fonts. Die Schriftarten sind <strong>lokal auf unserem Server gespeichert</strong> und werden nicht von externen Servern (z. B. Google) geladen. Beim Aufruf unserer Website wird daher <strong>keine Verbindung zu Google-Servern hergestellt</strong> und es werden keine personenbezogenen Daten an Google übertragen.</p>
 
-        <h2>11. Cookies</h2>
-        <p>Diese Website verwendet technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind. Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gesetzt.</p>
-        <p>Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden. Sie richten keinen Schaden an und enthalten keine Viren. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren.</p>
+        <h2>11. Cookies und Cookie-Banner</h2>
+        <p>Diese Website verwendet ausschließlich <strong>technisch notwendige Cookies bzw. lokalen Speicher (localStorage)</strong>, die für den Betrieb der Website erforderlich sind. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionsfähigen Website) bzw. § 165 Abs. 3 TKG 2021 (unbedingt erforderliche Speicherung).</p>
+        <p>Beim ersten Besuch der Website wird ein <strong>Cookie-Banner</strong> angezeigt, mit dem Sie gleichwertig zwischen „Akzeptieren" und „Ablehnen" wählen können. Das Ablehnen ist genauso einfach wie das Akzeptieren. Es sind keine Häkchen vorausgewählt (Privacy by Default). Ihre Entscheidung wird lokal in Ihrem Browser gespeichert, damit Sie nicht bei jedem Besuch erneut gefragt werden.</p>
+        <p><strong>Einwilligung widerrufen oder ändern:</strong> Sie können Ihre Entscheidung jederzeit <a href="#" onclick="if(window.DSKCookieConsent){window.DSKCookieConsent.reset();}return false;">hier widerrufen und den Cookie-Banner erneut öffnen</a>. Alternativ können Sie den lokalen Speicher Ihres Browsers für diese Website löschen.</p>
 
         <table>
           <thead>
             <tr>
-              <th>Cookie</th>
+              <th>Bezeichnung</th>
               <th>Zweck</th>
+              <th>Speicherort</th>
               <th>Speicherdauer</th>
               <th>Typ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>cookie_consent</td>
-              <td>Speichert Ihre Cookie-Einstellungen</td>
-              <td>1 Jahr</td>
-              <td>Notwendig</td>
+              <td>dsk_cookie_consent_v1</td>
+              <td>Speichert Ihre Entscheidung zum Cookie-Banner (akzeptiert/abgelehnt)</td>
+              <td>localStorage (Browser)</td>
+              <td>Bis zur Löschung durch Sie</td>
+              <td>Technisch notwendig</td>
             </tr>
           </tbody>
         </table>
+        <p>Es werden darüber hinaus <strong>keine Tracking-, Analyse- oder Marketing-Cookies</strong> gesetzt – weder bei Zustimmung noch bei Ablehnung. Die Zustimmung ist derzeit nur relevant für optionale eingebettete YouTube-Videos auf Unterseiten (siehe Abschnitt 8).</p>
 
         <h2>12. Keine Tracking- oder Analyse-Tools</h2>
         <p>Wir setzen auf dieser Website <strong>keine Tracking- oder Analyse-Tools</strong> ein (z. B. Google Analytics, Matomo, Facebook Pixel oder ähnliche Dienste). Ihr Nutzungsverhalten wird nicht erfasst, ausgewertet oder an Dritte weitergegeben.</p>
@@ -781,5 +786,6 @@
     });
   </script>
 
+  <script src="cookie-banner.js" defer></script>
 </body>
 </html>
