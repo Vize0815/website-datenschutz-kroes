@@ -621,32 +621,62 @@
         <h2>10. Schriftarten (lokal gehostet)</h2>
         <p>Diese Website verwendet die Schriftarten „DM Sans" und „DM Mono" von Google Fonts. Die Schriftarten sind <strong>lokal auf unserem Server gespeichert</strong> und werden nicht von externen Servern (z. B. Google) geladen. Beim Aufruf unserer Website wird daher <strong>keine Verbindung zu Google-Servern hergestellt</strong> und es werden keine personenbezogenen Daten an Google übertragen.</p>
 
-        <h2>11. Cookies und Cookie-Banner</h2>
-        <p>Diese Website verwendet ausschließlich <strong>technisch notwendige Cookies bzw. lokalen Speicher (localStorage)</strong>, die für den Betrieb der Website erforderlich sind. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionsfähigen Website) bzw. § 165 Abs. 3 TKG 2021 (unbedingt erforderliche Speicherung).</p>
-        <p>Beim ersten Besuch der Website wird ein <strong>Cookie-Banner</strong> angezeigt, mit dem Sie gleichwertig zwischen „Akzeptieren" und „Ablehnen" wählen können. Das Ablehnen ist genauso einfach wie das Akzeptieren. Es sind keine Häkchen vorausgewählt (Privacy by Default). Ihre Entscheidung wird lokal in Ihrem Browser gespeichert, damit Sie nicht bei jedem Besuch erneut gefragt werden.</p>
-        <p><strong>Einwilligung widerrufen oder ändern:</strong> Sie können Ihre Entscheidung jederzeit <a href="#" onclick="if(window.DSKCookieConsent){window.DSKCookieConsent.reset();}return false;">hier widerrufen und den Cookie-Banner erneut öffnen</a>. Alternativ können Sie den lokalen Speicher Ihres Browsers für diese Website löschen.</p>
+        <h2 id="cookies">11. Cookies und Cookie-Banner</h2>
+        <p>Beim ersten Besuch der Website wird ein <strong>Cookie-Banner</strong> angezeigt, der Sie über die Verwendung von Cookies und ähnlichen Technologien (localStorage) informiert und Ihre Einwilligung einholt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) bzw. für technisch notwendige Speicherung Art. 6 Abs. 1 lit. f DSGVO i.V.m. § 165 Abs. 3 TKG 2021.</p>
 
+        <h3>11.1 Kategorien</h3>
+        <p>Der Cookie-Banner ermöglicht Ihnen eine <strong>granulare Zustimmung</strong> nach folgenden Kategorien:</p>
+        <ul>
+          <li><strong>Notwendig</strong> – technisch erforderlich, immer aktiv, keine Einwilligung nötig.</li>
+          <li><strong>Präferenzen</strong> – speichern Einstellungen (z.B. Sprache). Aktuell nicht im Einsatz.</li>
+          <li><strong>Statistiken</strong> – anonymisierte Nutzungsanalyse. Aktuell nicht im Einsatz.</li>
+          <li><strong>Marketing</strong> – u.a. eingebettete YouTube-Videos auf Unterseiten (Google Ireland Ltd.). Werden nur bei Zustimmung geladen.</li>
+        </ul>
+
+        <h3>11.2 Ihre Wahlmöglichkeiten</h3>
+        <p>Der Banner bietet drei gleichwertige Optionen:</p>
+        <ul>
+          <li><strong>Ablehnen</strong> – nur technisch notwendige Speicherung.</li>
+          <li><strong>Auswahl erlauben</strong> – individuelle Aktivierung einzelner Kategorien per Toggle.</li>
+          <li><strong>Alle zulassen</strong> – Zustimmung zu allen Kategorien.</li>
+        </ul>
+        <p>Alle Optionen sind gleich einfach zugänglich. Nicht-notwendige Kategorien sind standardmäßig <strong>deaktiviert (Privacy by Default)</strong>. Keine Kategorie wird vor Ihrer Einwilligung aktiv.</p>
+
+        <h3>11.3 Einwilligungsnachweis und Speicherdauer</h3>
+        <p>Ihre Einwilligung wird mit <strong>Zeitstempel, gewählten Kategorien, Einwilligungsmethode und Versions-ID</strong> ausschließlich lokal in Ihrem Browser (localStorage) gespeichert. Es findet keine Übertragung an unseren Server statt. Die Einwilligung ist <strong>1 Jahr gültig</strong> und wird danach automatisch erneut eingeholt.</p>
+
+        <h3>11.4 Widerruf und Änderung</h3>
+        <p>Sie können Ihre Einwilligung jederzeit widerrufen oder anpassen – genauso einfach wie die Erteilung: <a href="#" onclick="if(window.DSKCookieConsent){window.DSKCookieConsent.open();}return false;">Cookie-Einstellungen öffnen</a>. Alternativ: <a href="#" onclick="if(window.DSKCookieConsent){window.DSKCookieConsent.reset();}return false;">Zustimmung zurücksetzen und Banner neu anzeigen</a>.</p>
+
+        <h3>11.5 Verwendete Technologien</h3>
         <table>
           <thead>
             <tr>
               <th>Bezeichnung</th>
               <th>Zweck</th>
+              <th>Kategorie</th>
               <th>Speicherort</th>
               <th>Speicherdauer</th>
-              <th>Typ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>dsk_cookie_consent_v1</td>
-              <td>Speichert Ihre Entscheidung zum Cookie-Banner (akzeptiert/abgelehnt)</td>
+              <td>dsk_cookie_consent_v2</td>
+              <td>Einwilligungsnachweis: Zeitstempel, Kategorien, Methode, Versions-ID</td>
+              <td>Notwendig</td>
               <td>localStorage (Browser)</td>
-              <td>Bis zur Löschung durch Sie</td>
-              <td>Technisch notwendig</td>
+              <td>1 Jahr (danach automatische Erneuerung)</td>
+            </tr>
+            <tr>
+              <td>YouTube-Embed (optional)</td>
+              <td>Laden eingebetteter Videos (nur bei Einwilligung „Marketing")</td>
+              <td>Marketing</td>
+              <td>Drittanbieter-Cookies (Google Ireland Ltd.)</td>
+              <td>bis zu 2 Jahre</td>
             </tr>
           </tbody>
         </table>
-        <p>Es werden darüber hinaus <strong>keine Tracking-, Analyse- oder Marketing-Cookies</strong> gesetzt – weder bei Zustimmung noch bei Ablehnung. Die Zustimmung ist derzeit nur relevant für optionale eingebettete YouTube-Videos auf Unterseiten (siehe Abschnitt 8).</p>
+        <p>Es werden <strong>keine Analyse-Tools, kein Tracking und keine Werbe-Cookies</strong> eingesetzt – weder vor noch nach Einwilligung. Die Kategorien Präferenzen und Statistiken sind aktuell ohne Funktion und werden erst bei künftiger Erweiterung der Website relevant.</p>
 
         <h2>12. Keine Tracking- oder Analyse-Tools</h2>
         <p>Wir setzen auf dieser Website <strong>keine Tracking- oder Analyse-Tools</strong> ein (z. B. Google Analytics, Matomo, Facebook Pixel oder ähnliche Dienste). Ihr Nutzungsverhalten wird nicht erfasst, ausgewertet oder an Dritte weitergegeben.</p>
