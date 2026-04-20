@@ -12,6 +12,16 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://datenschutz-kroes.at/">
 
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="logo-datenschutz-kroes.png">
+  <link rel="apple-touch-icon" href="logo-datenschutz-kroes.png">
+
+  <!-- ===== LCP Preloads (Hero-Bild responsiv) ===== -->
+  <link rel="preload" as="image" href="alexander-kroes-mobile.webp" type="image/webp" media="(max-width: 480px)" fetchpriority="high">
+  <link rel="preload" as="image" href="alexander-kroes-tablet.webp" type="image/webp" media="(min-width: 481px) and (max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="alexander-kroes-desktop.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+
   <!-- ===== SEO: Open Graph (Facebook, LinkedIn) ===== -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://datenschutz-kroes.at/">
@@ -271,11 +281,7 @@
        6A. TOPBAR
     ============================================= */
     .topbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 101;
+      position: static;
       height: 38px;
       background-color: rgba(10, 18, 36, 0.92);
       backdrop-filter: blur(8px);
@@ -379,11 +385,7 @@
        6. NAVIGATION
     ============================================= */
     .nav {
-      position: fixed;
-      top: 38px;
-      left: 0;
-      right: 0;
-      z-index: 100;
+      position: static;
       height: auto;
       padding: 8px 0;
       display: flex;
@@ -577,11 +579,12 @@
        7. HERO
     ============================================= */
     .hero {
-      min-height: 100vh;
+      min-height: auto;
       background-color: var(--color-surface);
       display: flex;
       align-items: center;
-      padding-top: 212px;
+      padding-top: 64px;
+      padding-bottom: 96px;
     }
 
     .hero__inner {
@@ -601,8 +604,8 @@
 
     .hero__eyebrow {
       margin-bottom: 28px;
-      animation: fadeSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
-      animation-delay: 0.55s;
+      animation: fadeSlideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+      animation-delay: 0.1s;
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -650,17 +653,11 @@
 
     .hero__headline .line {
       display: block;
-      overflow: hidden;
     }
 
     .hero__headline .line-inner {
       display: block;
-      animation: lineReveal 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
     }
-
-    .hero__headline .line:nth-child(1) .line-inner { animation-delay: 0.6s; }
-    .hero__headline .line:nth-child(2) .line-inner { animation-delay: 0.72s; }
-    .hero__headline .line:nth-child(3) .line-inner { animation-delay: 0.84s; }
 
     .hero__lead {
       font-size: var(--text-lead);
@@ -669,8 +666,8 @@
       line-height: 1.75;
       margin-bottom: 40px;
       max-width: 560px;
-      animation: fadeSlideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
-      animation-delay: 1.05s;
+      animation: fadeSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+      animation-delay: 0.2s;
     }
 
     .hero__cta-row {
@@ -679,8 +676,8 @@
       gap: 20px;
       flex-wrap: wrap;
       margin-bottom: 48px;
-      animation: fadeSlideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
-      animation-delay: 1.15s;
+      animation: fadeSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+      animation-delay: 0.3s;
     }
 
     .btn-primary {
@@ -754,8 +751,8 @@
       align-items: center;
       gap: 0;
       flex-wrap: nowrap;
-      animation: fadeSlideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
-      animation-delay: 1.25s;
+      animation: fadeSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+      animation-delay: 0.4s;
       background-color: var(--color-sky-tint);
       border: 1px solid var(--color-mist);
       border-radius: var(--radius-md);
@@ -2758,7 +2755,8 @@
     }
 
   </style>
-  <link rel="stylesheet" href="cookie-banner.css">
+  <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
 </head>
 <body>
 
