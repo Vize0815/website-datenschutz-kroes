@@ -48,16 +48,19 @@
     .topbar {
       position: relative;
       height: 38px;
-      background-color: rgba(10,18,36,0.92);
+      background-color: rgba(10, 18, 36, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255,255,255,0.06);
       display: flex; align-items: center;
     }
     .topbar__inner { display: flex; align-items: center; justify-content: space-between; }
     .topbar__left { display: flex; align-items: center; gap: 20px; }
-    .topbar__item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.82); white-space: nowrap; transition: color var(--transition-base); }
+    .topbar__item { display: flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.82); white-space: nowrap; transition: color var(--transition-base); }
     .topbar__item:hover { color: var(--color-gold); }
+    .topbar__item svg { flex-shrink: 0; opacity: 0.7; }
     .topbar__divider { width: 1px; height: 14px; background-color: rgba(255,255,255,0.18); flex-shrink: 0; }
-    .topbar__callback { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--color-gold); background: none; border: none; cursor: pointer; transition: color var(--transition-base); }
+    .topbar__callback { display: flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-size: 12px; font-weight: 500; color: var(--color-gold); transition: color var(--transition-base), opacity var(--transition-base); }
     .topbar__callback:hover { color: #e8c66a; }
     .topbar__right { display: flex; align-items: center; gap: 14px; }
     .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color var(--transition-base); }
@@ -354,33 +357,41 @@
 <body>
 
   <!-- ===== TOPBAR ===== -->
-  <div class="topbar" aria-label="Topbar">
-    <div class="container" style="width:100%;max-width:100%;padding:0 48px;display:flex;justify-content:space-between;align-items:center;">
+  <div class="topbar" aria-label="Kontaktinformationen">
+    <div class="container topbar__inner">
       <div class="topbar__left">
-        <span class="topbar__item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          Kufstein, Tirol
-        </span>
-        <div class="topbar__divider"></div>
-        <span class="topbar__item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <a href="tel:+43053382010" class="topbar__item" aria-label="Anrufen">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+            <path d="M2.5 1.5h2l1 2.5-1.25 1.25a7 7 0 003 3L8.5 7l2.5 1v2a1 1 0 01-1 1A9.5 9.5 0 011.5 2.5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           +43 (0) 5338-20105
-        </span>
+        </a>
+        <div class="topbar__divider" aria-hidden="true"></div>
+        <a href="mailto:info@datenschutz-kroes.at" class="topbar__item" aria-label="E-Mail senden">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+            <rect x="1" y="2.5" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M1 4l5.5 3.5L12 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          info@datenschutz-kroes.at
+        </a>
+        <div class="topbar__divider" aria-hidden="true"></div>
+        <a href="index.html#kontakt" class="topbar__callback" aria-label="Rückruf anfordern">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+            <path d="M9 1.5A5 5 0 116.5 11M9 1.5H6.5M9 1.5v2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Rückruf anfordern
+        </a>
       </div>
       <div class="topbar__right">
-        <a href="https://www.facebook.com/datenschutz-kroes" class="topbar__social" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        <a href="https://www.facebook.com/datenschutz-kroes" target="_blank" class="topbar__social" aria-label="Facebook" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
           </svg>
         </a>
-        <a href="https://www.youtube.com/@DatenschutzKroes" class="topbar__social" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        <a href="https://www.youtube.com/@DatenschutzKroes" target="_blank" class="topbar__social" aria-label="YouTube" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/>
           </svg>
         </a>
       </div>
