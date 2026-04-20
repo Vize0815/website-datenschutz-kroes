@@ -108,14 +108,17 @@
   /* ---------- Build UI ---------- */
 
   function buildBanner(current) {
-    var overlay = el('div', { class: 'cc-overlay', 'aria-hidden': 'true' });
+    var overlay = el('div', {
+      class: 'cc-overlay',
+      role: 'presentation',
+      'aria-hidden': 'true'
+    });
 
     var banner = el('div', {
       class: 'cc-banner',
       role: 'dialog',
       'aria-modal': 'true',
-      'aria-labelledby': 'cc-title',
-      'aria-hidden': 'true'
+      'aria-labelledby': 'cc-title'
     });
 
     /* Header */
@@ -304,11 +307,12 @@
   function openBanner(current) {
     closeBanner();
     var nodes = buildBanner(current);
+    nodes.overlay.appendChild(nodes.banner);
     document.body.appendChild(nodes.overlay);
-    document.body.appendChild(nodes.banner);
+    document.documentElement.classList.add('cc-lock');
+
     requestAnimationFrame(function () {
       nodes.overlay.setAttribute('aria-hidden', 'false');
-      nodes.banner.setAttribute('aria-hidden', 'false');
     });
 
     wireBanner(nodes, function (categories, method) {
@@ -322,10 +326,13 @@
   }
 
   function closeBanner() {
-    document.querySelectorAll('.cc-banner, .cc-overlay').forEach(function (n) {
+    var nodes = document.querySelectorAll('.cc-overlay');
+    if (!nodes.length) return;
+    nodes.forEach(function (n) {
       n.setAttribute('aria-hidden', 'true');
-      setTimeout(function () { if (n.parentNode) n.parentNode.removeChild(n); }, 220);
+      setTimeout(function () { if (n.parentNode) n.parentNode.removeChild(n); }, 240);
     });
+    document.documentElement.classList.remove('cc-lock');
   }
 
   /* ---------- Init ---------- */
