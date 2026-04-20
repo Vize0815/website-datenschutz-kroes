@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benennungsurkunde | Datenschutz Kroes</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="logo-datenschutz-kroes.png">
+  <link rel="apple-touch-icon" href="logo-datenschutz-kroes.png">
+  <link rel="preload" as="image" href="logo-datenschutz-kroes.webp" type="image/webp" fetchpriority="high">
   <style>
     /* ===== LOCAL FONTS ===== */
     @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(fonts/dm-sans-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
@@ -80,6 +84,19 @@
     .nav__link--active { color: var(--color-navy); }
     .nav__cta { font-size: 14px; font-weight: 600; color: #fff; background-color: var(--color-navy); padding: 10px 22px; border-radius: 3px; transition: background-color 200ms ease, transform 200ms ease; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
     .nav__cta:hover { background-color: var(--color-accent); transform: translateY(-1px); }
+
+    /* ── Hamburger & Mobile Overlay ── */
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; width: 28px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav__hamburger span { display: block; height: 2px; background-color: var(--color-navy); border-radius: 2px; transition: transform 250ms ease, opacity 250ms ease; }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav__mobile-overlay { position: fixed; inset: 0; background-color: var(--color-navy); z-index: 103; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 380ms ease; }
+    .nav__mobile-overlay.open { opacity: 1; pointer-events: all; }
+    .nav__mobile-link { font-family: var(--font-sans); font-size: 32px; font-weight: 500; color: var(--color-white); transition: color 200ms ease; }
+    .nav__mobile-link:hover { color: var(--color-gold); }
+    .nav__mobile-cta { font-family: var(--font-sans); font-size: 16px; font-weight: 600; color: var(--color-navy); background-color: var(--color-gold); padding: 14px 32px; border-radius: 3px; cursor: pointer; }
 
     /* ── Page Header ── */
     .page-header {
@@ -420,6 +437,7 @@
       .form-actions__note { margin-left: 0; }
       .footer__grid { grid-template-columns: 1fr; gap: 24px; }
       .nav__links, .nav__cta { display: none; }
+      .nav__hamburger { display: flex; }
     }
 
     /* ── Print ── */
@@ -437,7 +455,8 @@
       .section-label { color: #C9A84C !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
   </style>
-  <link rel="stylesheet" href="cookie-banner.css">
+  <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
 </head>
 <body>
 
@@ -474,7 +493,7 @@
         <a href="index.html" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
           <picture>
             <source srcset="logo-datenschutz-kroes.webp" type="image/webp">
-            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark">
+            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
           </picture>
         </a>
         <ul class="nav__links" role="list">
@@ -758,6 +777,30 @@
     </div>
   </footer>
 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    let navOpen = false;
+    hamburger.addEventListener('click', () => {
+      navOpen = !navOpen;
+      hamburger.classList.toggle('open', navOpen);
+      mobileOverlay.classList.toggle('open', navOpen);
+      hamburger.setAttribute('aria-expanded', navOpen);
+      mobileOverlay.setAttribute('aria-hidden', !navOpen);
+      document.body.style.overflow = navOpen ? 'hidden' : '';
+    });
+    function closeMobileNav() {
+      navOpen = false;
+      hamburger.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      mobileOverlay.setAttribute('aria-hidden', true);
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navOpen) closeMobileNav();
+    });
+  </script>
   <script src="cookie-banner.js" defer></script>
 </body>
 </html>

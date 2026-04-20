@@ -6,6 +6,21 @@
       "sourceType": "github",
       "computedHash": "37d8c07aff78080f9f610623f8df6d858528a583525c8ad28f3cf0c42927f884"
     },
+    "code-review-graph": {
+      "source": "aradotso/trending-skills",
+      "sourceType": "github",
+      "computedHash": "2ef5ff05a35e0769608daf223242803e4a908fca110ff967595a0471cb38daf5"
+    },
+    "cookie-policy-page-generator": {
+      "source": "kostja94/marketing-skills",
+      "sourceType": "github",
+      "computedHash": "275d9c9b81594ac259c3fcb7746539f15f00823cd6cf70c6c53dbf27f34d47bc"
+    },
+    "cookie-sync": {
+      "source": "browserbase/skills",
+      "sourceType": "github",
+      "computedHash": "935e0f0895288ff176f9dd252db3d2d934b6529e54a1bd68ae84b1c9c6aea670"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
@@ -20,6 +35,11 @@
       "source": "kimny1143/claude-code-template",
       "sourceType": "github",
       "computedHash": "b6f3a46da860714b6b7c733abc81d6ccb71018666ba46f478ebb5f43cefcf361"
+    },
+    "web-design-reviewer": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "10c6fad8b4f01dbeae969009d81d6c306c8a96d56077cad9bfe2a73a38f5dcbe"
     }
   }
 }

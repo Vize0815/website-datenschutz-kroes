@@ -6,6 +6,10 @@
   <title>DSGVO für Geschäftsführungen – Praxis-Seminar | Datenschutz Kroes</title>
   <meta name="description" content="DSGVO für Geschäftsführungen: Das Praxis-Seminar für Entscheider. 120 Minuten, 295€ zzgl. MwSt. Was Geschäftsführer wirklich wissen müssen – klar, verständlich, ohne Juristendeutsch.">
   <link rel="canonical" href="https://datenschutz-kroes.at/dsgvo-seminar.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="logo-datenschutz-kroes.png">
+  <link rel="apple-touch-icon" href="logo-datenschutz-kroes.png">
+  <link rel="preload" as="image" href="logo-datenschutz-kroes.webp" type="image/webp" fetchpriority="high">
   <style>
     /* ===== LOCAL FONTS ===== */
     @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(fonts/dm-sans-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
@@ -329,7 +333,8 @@
       .page-hero { padding-top: 32px; }
     }
   </style>
-  <link rel="stylesheet" href="cookie-banner.css">
+  <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
 </head>
 <body>
 
@@ -366,7 +371,7 @@
         <a href="index.html" class="nav__logo">
           <picture>
             <source srcset="logo-datenschutz-kroes.webp" type="image/webp">
-            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark">
+            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
           </picture>
         </a>
         <ul class="nav__links" role="list">
