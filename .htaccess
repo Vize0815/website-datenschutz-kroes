@@ -1,0 +1,9 @@
+# Datenschutz Kroes Website
+
+# Redirect nackte Domain zu www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{HTTP_HOST} ^datenschutz-kroes\.at$ [NC]
+  RewriteRule ^(.*)$ https://www.datenschutz-kroes.at/$1 [L,R=301]
+</IfModule>
