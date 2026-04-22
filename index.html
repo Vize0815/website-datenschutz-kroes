@@ -2878,7 +2878,12 @@
 
       <!-- Form -->
       <div class="callback-modal__body" id="callbackFormWrap">
-        <form class="callback-form" id="callbackForm" action="send-callback.php" method="post" novalidate>
+        <form class="callback-form" id="callbackForm" action="https://api.web3forms.com/submit" method="post" novalidate>
+          <input type="hidden" name="access_key" value="6fd1eb1c-de92-4c2f-9b01-ba2b5ac0f8d8">
+          <input type="hidden" name="subject" value="Neue Rückruf-Anfrage von der Website">
+          <input type="hidden" name="from_name" value="Datenschutz Kroes Website">
+          <input type="hidden" name="to_email" value="info@datenschutz-kroes.at">
+          <input type="hidden" name="redirect" value="https://datenschutz-kroes.at/">
           <!-- Honeypot (Spam-Schutz, für Menschen unsichtbar) -->
           <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
             <label for="cb-website">Website</label>
@@ -4156,18 +4161,17 @@
       submit.innerHTML = 'Wird gesendet …';
 
       try {
+        const formData = new FormData(callbackForm);
         const res = await fetch(callbackForm.action, {
           method: 'POST',
-          body: new FormData(callbackForm),
+          body: formData,
           headers: { 'Accept': 'application/json' }
         });
-        const raw = await res.text();
-        let data;
-        try { data = JSON.parse(raw); } catch { data = { ok: false, error: 'non_json_response', raw: raw.slice(0, 500) }; }
+        const data = await res.json().catch(() => ({ success: false }));
 
-        if (!res.ok || !data.ok) {
-          console.error('[Rückruf] HTTP', res.status, data);
-          throw new Error(data.error || 'send_failed');
+        if (!data.success) {
+          console.error('[Rückruf] Request failed:', data);
+          throw new Error('send_failed');
         }
 
         // Show success
@@ -4179,6 +4183,7 @@
       } catch (err) {
         submit.disabled = false;
         submit.innerHTML = originalLabel;
+        console.error('[Rückruf] Error:', err);
         alert('Senden fehlgeschlagen. Bitte rufen Sie uns direkt an: +43 (0) 5338-20105 oder schreiben Sie an info@datenschutz-kroes.at.');
       }
     });
