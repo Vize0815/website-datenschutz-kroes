@@ -1,33 +1,12 @@
-# Redirect index.html to root
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  
-  # Redirect index.html to /
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP
-  RewriteRule ^index\.html$ / [R=301,L]
-  
-  # Redirect www to non-www (if needed)
-  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-  RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]
-  
-  # HTTPS enforcement
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# Datenschutz Kroes Website
+
+# Enable PHP execution
+<IfModule mod_php.c>
+  AddType application/x-httpd-php .php
 </IfModule>
 
-# Cache headers for images
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/webp "access plus 30 days"
-  ExpiresByType image/png "access plus 30 days"
-  ExpiresByType image/jpg "access plus 30 days"
-  ExpiresByType image/jpeg "access plus 30 days"
-  ExpiresByType text/css "access plus 7 days"
-  ExpiresByType application/javascript "access plus 7 days"
-</IfModule>
-
-# Gzip compression
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json
-</IfModule>
+# MIME types
+AddType text/html .html
+AddType text/css .css
+AddType application/javascript .js
+AddType image/webp .webp
