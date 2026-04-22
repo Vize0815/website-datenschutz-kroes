@@ -53,21 +53,33 @@ $body .= "Telefon:      {$phone}\r\n\r\n";
 $body .= "Eingegangen:  " . date('d.m.Y H:i') . " Uhr\r\n";
 $body .= "IP:           " . ($_SERVER['REMOTE_ADDR'] ?? 'unbekannt') . "\r\n";
 
-$fromDomain = $_SERVER['SERVER_NAME'] ?? 'datenschutz-kroes.at';
-$fromAddr   = 'noreply@' . preg_replace('/^www\./', '', $fromDomain);
+// IONOS verlangt eine echte Mailbox als Absender → dieselbe wie Empfänger.
+$fromAddr = $to;
 
 $headers   = [];
-$headers[] = 'From: Datenschutz Kroes Website <' . $fromAddr . '>';
+$headers[] = 'From: =?UTF-8?B?' . base64_encode('Datenschutz Kroes Website') . '?= <' . $fromAddr . '>';
 $headers[] = 'Reply-To: ' . $fromAddr;
 $headers[] = 'X-Mailer: PHP/' . phpversion();
 $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 
-$ok = @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers));
+// -f setzt den Envelope-Sender; auf IONOS oft Pflicht
+$ok = @mail(
+    $to,
+    '=?UTF-8?B?' . base64_encode($subject) . '?=',
+    $body,
+    implode("\r\n", $headers),
+    '-f' . $fromAddr
+);
 
 if (!$ok) {
+    $err = error_get_last();
     http_response_code(500);
-    echo json_encode(['ok' => false, 'error' => 'mail_failed']);
+    echo json_encode([
+        'ok'    => false,
+        'error' => 'mail_failed',
+        'detail'=> $err['message'] ?? 'unknown',
+    ]);
     exit;
 }
 
