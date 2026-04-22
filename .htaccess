@@ -1,7 +1,0 @@
-RewriteEngine On
-RewriteBase /
-
-# Wenn Host NICHT mit www. beginnt → www. prependen
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteCond %{HTTP_HOST} ^(.+)$
-RewriteRule ^(.*)$ https://www.%1/$1 [L,R=301]
