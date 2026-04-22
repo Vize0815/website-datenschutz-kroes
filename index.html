@@ -2878,7 +2878,13 @@
 
       <!-- Form -->
       <div class="callback-modal__body" id="callbackFormWrap">
-        <form class="callback-form" id="callbackForm" novalidate>
+        <form class="callback-form" id="callbackForm" action="send-callback.php" method="post" novalidate>
+          <!-- Honeypot (Spam-Schutz, für Menschen unsichtbar) -->
+          <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+            <label for="cb-website">Website</label>
+            <input type="text" id="cb-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
           <div class="callback-form__field">
             <label class="callback-form__label" for="cb-name">Ihr Name <span aria-hidden="true">*</span></label>
             <input
@@ -4117,13 +4123,14 @@
     });
 
     // Form validation & submission
-    callbackForm.addEventListener('submit', (e) => {
+    callbackForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       clearCallbackErrors();
 
       const name    = document.getElementById('cb-name');
       const company = document.getElementById('cb-company');
       const phone   = document.getElementById('cb-phone');
+      const submit  = callbackForm.querySelector('.callback-form__submit');
       let valid = true;
 
       if (!name.value.trim()) {
@@ -4144,12 +4151,31 @@
 
       if (!valid) return;
 
-      // Show success
-      callbackFormWrap.style.display = 'none';
-      callbackSuccess.classList.add('visible');
+      submit.disabled = true;
+      const originalLabel = submit.innerHTML;
+      submit.innerHTML = 'Wird gesendet …';
 
-      // Auto-close after 4s
-      setTimeout(closeCallbackModal, 4000);
+      try {
+        const res = await fetch(callbackForm.action, {
+          method: 'POST',
+          body: new FormData(callbackForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        const data = await res.json().catch(() => ({ ok: false }));
+
+        if (!res.ok || !data.ok) throw new Error(data.error || 'send_failed');
+
+        // Show success
+        callbackFormWrap.style.display = 'none';
+        callbackSuccess.classList.add('visible');
+
+        // Auto-close after 4s
+        setTimeout(closeCallbackModal, 4000);
+      } catch (err) {
+        submit.disabled = false;
+        submit.innerHTML = originalLabel;
+        alert('Senden fehlgeschlagen. Bitte rufen Sie uns direkt an: +43 (0) 5338-20105 oder schreiben Sie an info@datenschutz-kroes.at.');
+      }
     });
   </script>
   <script src="cookie-banner.js" defer></script>
