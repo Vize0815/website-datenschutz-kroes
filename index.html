@@ -1523,7 +1523,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
       gap: 64px;
-      align-items: end;
+      align-items: start;
     }
 
     .testimonials__eyebrow {
@@ -1532,6 +1532,13 @@
 
     .testimonials__headline {
       color: var(--color-surface);
+    }
+
+    .testimonials__lead {
+      margin-top: 24px;
+      max-width: 540px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.65);
     }
 
     .testimonials__photo {
@@ -3487,6 +3494,9 @@
           <div>
             <p class="testimonials__eyebrow t-eyebrow" data-reveal>Das sagen meine Kunden</p>
             <h2 class="t-h2 testimonials__headline" data-reveal data-reveal-delay="1">Unternehmen, die auf<br>Nummer sicher gehen.</h2>
+            <p class="testimonials__lead t-lead" data-reveal data-reveal-delay="2">
+              Die Zusammenarbeit basiert nicht auf Standardlösungen, sondern auf einem klaren Verständnis für Unternehmen, Strukturen und Entscheidungsprozesse. Wenn Sie sich fragen, ob Ihr Datenschutz wirklich trägt oder nur gut gemeint ist, dann lohnt sich ein genauer Blick.
+            </p>
           </div>
           <figure class="testimonials__photo" data-reveal data-reveal-delay="2">
             <img src="alexander-kroes-11-default.webp" alt="Alexander Kroes – Externer Datenschutzbeauftragter für KMU" width="480" height="320" loading="lazy" decoding="async">
