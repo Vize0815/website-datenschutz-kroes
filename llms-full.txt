@@ -1,0 +1,640 @@
+# Datenschutz Kroes
+
+> Externer Datenschutzbeauftragter (DSB) für KMU & Mittelstand in Tirol, Salzburg, Rosenheim und München. Inhaber Alexander Kroes übernimmt die rechtliche Verantwortung für DSGVO-Compliance, Mitarbeiterschulungen, Verarbeitungsverzeichnis, Datenschutz-Folgenabschätzung und Incident Response — persönlich, zertifiziert und mit festen Monatspauschalen.
+
+- **Anbieter:** Alexander Kroes e.U. – Datenschutz Kroes
+- **Adresse:** Glatzham 19, 6252 Breitenbach am Inn, Österreich
+- **Standort/Region:** Kufstein, Tirol
+- **Telefon:** +43 (0) 5338-20105
+- **E-Mail:** info@datenschutz-kroes.at
+- **Website:** https://datenschutz-kroes.at
+- **UID:** ATU81332979
+- **Firmenbuch:** FN 639208 m (Landesgericht Innsbruck)
+- **WKO:** Fachgruppe 704 Unternehmensberatung
+- **Berufshaftpflicht:** EXALI
+- **Aufsichtsbehörde:** Bezirkshauptmannschaft Innsbruck
+- **Hosting:** IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland
+- **Social:** Facebook (facebook.com/datenschutz-kroes), YouTube (@DatenschutzKroes), Instagram (instagram.com/datenschutz_kroes)
+- **Zertifizierung:** ÖVE/ÖNORM EN ISO/IEC 17024 (WIFI WKO)
+
+---
+
+## Seiten-Übersicht
+
+| URL | Titel | Zweck |
+|---|---|---|
+| `/index.html` | Startseite – Datenschutzbeauftragter für KMU & Mittelstand | Hauptseite mit Hero, Leistungen, Prozess, FAQ, Kontakt, Newsletter |
+| `/dsgvo-seminar.html` | DSGVO für Geschäftsführungen – Praxis-Seminar | Detail-Seite zum DSGVO-Seminar |
+| `/nis2-seminar.html` | NIS2 Kompakt – Cybersicherheit Seminar | Detail-Seite zum NIS2-Seminar |
+| `/downloads.html` | Downloads | Kostenlose Checklisten, Leitfäden, Vorlagen (PDF) |
+| `/benennungsurkunde.html` | Benennungsurkunde | Interaktives PDF-Formular zur DSB-Bestellung |
+| `/impressum.html` | Impressum | Rechtliche Pflichtangaben |
+| `/datenschutz.html` | Datenschutzerklärung | Datenschutz-Information nach DSGVO |
+| `/newsletter-leseprobe.html` | Newsflash – Leseprobe | Leseprobe des monatlichen Newsletters |
+
+---
+
+# 1. Startseite (index.html)
+
+**Title:** Datenschutzbeauftragter für KMU & Mittelstand
+**Meta-Description:** Externer Datenschutzbeauftragter für KMU & Mittelstand in Tirol, Salzburg, Rosenheim & München. Alexander Kroes – zertifizierter externer DSB.
+
+## Navigation
+
+- Alexander Kroes (#alexander-kroes)
+- Leistungen (#leistungen)
+- Seminare (#seminare)
+- Kontakt (#kontakt)
+- Downloads (downloads.html)
+- CTA: „Erstgespräch vereinbaren"
+
+## Hero
+
+**Eyebrow:** Datenschutzbeauftragter für KMU · Tirol · Salzburg · Rosenheim · München
+
+**Headline (H1):** Datenschutz, der Ihr Unternehmen schützt — nicht lähmt.
+
+**Lead:** Als externer Datenschutzbeauftragter übernehme ich die rechtliche Verantwortung für Ihr Unternehmen. Zuverlässig, rechtssicher und ohne Ablenkung von Ihrem Kerngeschäft.
+
+**CTAs:** „Kostenloses Erstgespräch vereinbaren" · „Angebote ansehen"
+
+**Trust-Row:**
+- 5 Jahre Datenschutz-Erfahrung
+- Zertifizierter DSB (BvD)
+- Persönliche Betreuung
+
+**Hero-Bild:** Alexander Kroes – Inhaber von Datenschutz Kroes
+
+## Trust-Signals
+
+- **5+ Jahre** Erfahrung
+- **100 %** rechtssichere Prüfungen
+- **∅ 48 h** Reaktionszeit bei Anfragen
+- **0** Datenschutzvorfälle bei aktiven Mandanten
+
+## Problem-Section: „Ohne Datenschutz: Ein unternehmerisches Risiko, welches Existenzen kosten kann."
+
+**Lead:** Die Datenschutz-Grundverordnung (DSGVO) gilt seit 2018, doch viele Unternehmen unterschätzen bei steigenden Anforderungen durch verschärfte Datenschutzgesetze die rechtlichen und persönlichen Konsequenzen für Geschäftsführungen. Durch die vermehrte Anwendung von KI-Systemen werden die Anforderungen durch den EU-AI-Act wesentlich strenger reguliert.
+
+### Risiken (3 Cards)
+
+1. **Bußgelder — Bis zu 20 Mio. €**
+   Oder 4 % des weltweiten Jahresumsatzes — je nachdem, was höher ist. Die Aufsichtsbehörden prüfen aktiv.
+
+2. **Reputationsschaden — Vertrauensverlust**
+   Ein einziger Datenschutzvorfall kann das Vertrauen von Kunden und Partnern nachhaltig und dauerhaft beschädigen.
+
+3. **Haftung — Persönliche Haftung**
+   Als Geschäftsführer haften Sie persönlich für Versäumnisse im Datenschutz — unabhängig von der Unternehmensform.
+
+**Hinweis:** Ein Datenschutzbeauftragter (DSB) ist nach Art. 9 DSGVO zwingend zu benennen, wenn mindestens 20 Mitarbeiter ständig automatisiert personenbezogene Daten verarbeiten (z.B. PC-Arbeitsplätze, Smartphones). Dies gilt auch bei geringerer Mitarbeiterzahl, falls die Kerntätigkeit in der Verarbeitung sensibler Daten, Videoüberwachung oder Datenübermittlung besteht.
+
+## Leistungen (#leistungen)
+
+**Headline:** Vollständiger Schutz für Ihr Unternehmen.
+
+**Intro:** Vom Erstgespräch bis zur laufenden Betreuung begleitet Sie Ihr persönlicher Ansprechpartner – alles aus einer Hand, ohne unnötige Schnittstellen. Individuell, erreichbar und lösungsorientiert statt anonymer Standardservice.
+
+### 1. Externer Datenschutzbeauftragter (Kernleistung)
+Ich übernehme offiziell die Funktion des Datenschutzbeauftragten (DSB) für Ihr Unternehmen und das mit allen gesetzlichen Pflichten, dokumentiert und rechtssicher. Sie sind entlastet und konzentrieren sich auf Ihr Kerngeschäft.
+*Tags:* Rechtssicherheit, Dokumentation
+
+### 2. Erstanalyse & Gap Assessment
+Strukturierte Bestandsaufnahme aller datenschutzrelevanten Prozesse in Ihrem Unternehmen mit priorisierten Handlungsempfehlungen und einem klaren Maßnahmenplan.
+*Tags:* Schwachstellenanalyse, Maßnahmenplan
+
+### 3. Datenschutz-Schulungen für Mitarbeiter
+Praxisnahe Schulungen für Ihre Mitarbeiter in Präsenz oder als Online-Format. Zugeschnitten auf Ihre Branche, Ihre Unternehmensstruktur und Ihre aktuellen Herausforderungen.
+*Tags:* Präsenz oder Online, Branchenspezifisch
+
+### 4. Verarbeitungsverzeichnis & Dokumentation
+Erstellung und Pflege aller gesetzlich vorgeschriebenen Dokumente — Verarbeitungsverzeichnis, Datenschutzrichtlinien, Einwilligungserklärungen und mehr.
+*Tags:* Rechtssichere Vorlagen, DSGVO Art. 30
+
+### 5. Datenschutz-Folgenabschätzung (DSFA)
+Systematische Analyse und Bewertung datenschutzrelevanter Risiken bei der Einführung neuer Systeme, Prozesse oder Technologien in Ihrem Unternehmen.
+*Tags:* DSGVO Art. 35, Risikobewertung
+
+### 6. Incident Response & Behördenmeldung
+Einleitung der gesetzlich vorgeschriebenen Reaktionsfrist auf Datenschutzvorfälle, die gesetzlich vorgeschriebene Meldung binnen 72 Stunden und Betreuung durch den gesamten Melde-Prozess.
+*Tags:* Behördenkommunikation, Krisenmanagement
+
+## Alexander Kroes / Why Datenschutz Kroes (#alexander-kroes)
+
+**Headline:** Kein Jurist. Kein Konzern. Ein Ansprechpartner.
+
+**Text:** Datenschutz Kroes ist kein anonymes Datenschutz-Portal und keine Kanzlei. Als zertifizierter externer Datenschutzbeauftragter bin ich persönlich für Sie da, mit direktem Draht und klaren Antworten, die Sie auch als Nicht-Jurist verstehen werden. Versprochen.
+
+### 4 Differenzierungsmerkmale
+
+- **Persönlich erreichbar** — Kein Ticketsystem. Kein Callcenter. Sie sprechen direkt mit mir — per Telefon, E-Mail oder vor Ort.
+- **Branchenkenntnis** — Erfahrung in Industrie, Handel, Dienstleistung und Gesundheitswesen — Beratung, die Ihre Branche kennt.
+- **Feste Preise** — Transparente Monatspauschalen ohne versteckte Kosten. Sie wissen immer, was Sie zahlen — und wofür.
+- **Sofort einsatzbereit** — Von der Unterzeichnung bis zur offiziellen Bestellungsmeldung: in der Regel unter 5 Werktagen.
+
+## Prozess (#prozess) — In 4 Schritten zu rechtssicherem Datenschutz
+
+1. **Erstgespräch** — Wir analysieren Ihre aktuelle Situation, klären offene Fragen und besprechen, welche Maßnahmen für Ihr Unternehmen sinnvoll sind.
+2. **Erstanalyse** — Strukturierte Bestandsaufnahme aller datenschutzrelevanten Prozesse — mit priorisierten Handlungsempfehlungen für Entscheider.
+3. **Umsetzung** — Gemeinsame Implementierung aller notwendigen Maßnahmen und Erstellung der gesetzlich vorgeschriebenen Dokumente.
+4. **Laufende Betreuung** — Als offiziell bestellter DSB stehe ich Ihnen dauerhaft zur Verfügung — für Anfragen, Vorfälle, Änderungen und Behördenkontakte.
+
+## Testimonials
+
+> ★★★★★ „Dank Datenschutz Kroes haben wir in drei Monaten alle offenen Punkte abgearbeitet. Ich schlafe jetzt deutlich ruhiger — und das ist keine Übertreibung."
+> — Thomas Bergmann, Geschäftsführer
+
+> ★★★★★ „Endlich jemand, der Datenschutz in einer Sprache erklärt, die auch ich als Kauffrau verstehe. Keine Juristensprache, direkte Antworten."
+> — Sandra Köhler, Inhaberin
+
+> ★★★★★ „Die feste Monatspauschale war für mich der entscheidende Faktor. Kalkulierbar, transparent — und der Service hält, was er verspricht."
+> — Michael Förster, Praxisinhaber
+
+## Seminare (#seminare)
+
+**Headline:** Datenschutz-Seminare für Unternehmen
+**Lead:** Alles Wichtige zu NIS2, DSGVO und Datenschutz – praxisnah für Unternehmen mit Verantwortung gestaltet.
+
+- **NIS2 Kompakt** (Cybersicherheit) → siehe `/nis2-seminar.html`
+- **DSGVO Grundlagen** (EU-Datenschutz-Grundverordnung) → siehe `/dsgvo-seminar.html`
+
+Alle Seminare werden auch als **Inhouse-Schulung** direkt im Unternehmen des Kunden angeboten.
+
+## FAQ (#faq)
+
+**Q: Ab wann bin ich verpflichtet, einen Datenschutzbeauftragten zu benennen?**
+A: Unternehmen müssen einen DSB benennen, wenn mindestens 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind. Darüber hinaus gibt es branchenspezifische Pflichten, z. B. für Gesundheitsdienstleister oder Unternehmen, die besondere Datenkategorien verarbeiten.
+
+**Q: Was ist der Unterschied zwischen einem internen und externen DSB?**
+A: Ein externer DSB bietet mehrere Vorteile: keine Weisungsgebundenheit, kein Abberufungsschutz-Problem, spezialisiertes Fachwissen ohne Schulungsaufwand und volle Haftungsübernahme für die DSB-Funktion. Für die meisten KMU ist der externe DSB die kosteneffizientere und rechtssicherere Lösung.
+
+**Q: Wie schnell können wir starten?**
+A: Nach unserem Erstgespräch und der Vertragsunterzeichnung ist die Bestellungsmeldung an die zuständige Aufsichtsbehörde in der Regel innerhalb von 5 Werktagen abgeschlossen. Die eigentliche Betreuung beginnt unmittelbar nach Vertragsabschluss.
+
+**Q: Was kostet ein externer Datenschutzbeauftragter?**
+A: Die Kosten hängen von der Unternehmensgröße, Branche und dem gewünschten Leistungsumfang ab. Transparente Monats-/oder Jahrespauschalen und das ohne versteckte Stundenabrechnung. Ihr genaues Angebot erhalten Sie nach einem kostenlosen und unverbindlichen Erstgespräch.
+
+**Q: Gilt die DSGVO auch für kleine Unternehmen und Selbstständige?**
+A: Ja. Die DSGVO gilt grundsätzlich für jedes Unternehmen, das personenbezogene Daten verarbeitet und das unabhängig von der Größe. Für Kleinunternehmen gibt es vereinfachte Pflichten, aber keine vollständige Ausnahme.
+
+**Q: Was passiert bei einem Datenschutzvorfall in meinem Unternehmen?**
+A: Bei einem Datenschutzvorfall muss dieser innerhalb von 72 Stunden der zuständigen Aufsichtsbehörde gemeldet werden. Als Ihr DSB übernehme ich diese Meldung, koordiniere die gesamte Reaktion und begleite Sie durch den Prozess.
+
+**Q: In welchen Branchen sind Sie tätig?**
+A: Ich betreue Unternehmen aus Dienstleistung, Handwerk, Gesundheitswesen und freien Berufen. Die DSGVO-Anforderungen variieren je nach Branche. Entsprechend ist meine Beratung stets branchenspezifisch angepasst.
+
+**Q: Bieten Sie auch Datenschutz-Schulungen für Mitarbeiter an?**
+A: Ja. Mitarbeiterschulungen sind ein zentraler Bestandteil eines wirksamen Datenschutzprogramms. Ich biete Präsenzschulungen und Online-Formate an zugeschnitten auf Ihre Unternehmensstruktur und Branche, mit dokumentierten Teilnahmenachweisen.
+
+## Final CTA (#kontakt)
+
+**Headline:** Ihr Datenschutz. Ihre Verantwortung. Unsere Lösung.
+**Text:** Vereinbaren Sie jetzt Ihr kostenloses und unverbindliches Erstgespräch. In 30 Minuten wissen Sie, wo Sie stehen und was als Nächstes zu tun ist.
+**CTA:** Kostenloses Erstgespräch vereinbaren (mailto:info@datenschutz-kroes.at)
+**Micro:** Kein Risiko · Keine Verpflichtung · Antwort innerhalb von 24 Stunden
+
+## Newsletter (#newsletter) — Newsflash
+
+**Headline:** Datenschutz-Praxis-Wissen, direkt in Ihr Postfach.
+**Zielgruppe:** Inhaber, Geschäftsführungen und Verantwortliche
+**Inhalt:** Monatlich aktuelle News im Datenschutzrecht, praxisnahe Tipps und Hinweise auf neue Bußgeldentscheidungen. Kompakt und ohne Juristendeutsch.
+**Versand:** Mailchimp (Intuit Inc., USA, EU-U.S. DPF zertifiziert), Double-Opt-In
+**Felder:** Vorname & Name (Pflicht), E-Mail (Pflicht), Unternehmen (optional), Einwilligung (Pflicht)
+
+## Rückruf-Modal
+
+**Felder:** Name (Pflicht), Unternehmen (Pflicht), Telefonnummer (Pflicht)
+**Versand:** Web3Forms an info@datenschutz-kroes.at
+**Hinweis:** Antwort innerhalb von 24 Stunden
+
+---
+
+# 2. NIS2 Kompakt Seminar (nis2-seminar.html)
+
+**Title:** NIS2 Kompakt – Cybersicherheit Seminar
+**Meta-Description:** NIS2 Kompakt: Das Praxis-Seminar für Geschäftsführer und Entscheider. 120 Minuten, 349€ zzgl. MwSt. Ob und warum Ihr Unternehmen unter NIS2 fällt – klar erklärt.
+
+## Hero
+
+**Eyebrow:** Seminar-Reihe · Cybersicherheit
+**H1:** NIS2 – Die neue EU Richtlinie zur Cybersicherheit
+**Lead:** In diesem praxisnahen Datenschutz-Seminar erhalten Sie einen klaren Überblick über NIS2, DSGVO und die tatsächlichen Auswirkungen auf Ihr Unternehmen – als Orientierung, Entscheidungsgrundlage und realistische Handlungsrichtlinie.
+
+**Was Sie lernen:**
+- Ob und warum Ihr Unternehmen unter NIS2 fällt
+- Welche Verantwortung Geschäftsführer tatsächlich tragen
+- Welche rechtlichen und organisatorischen Mindestanforderungen gelten
+- Welche Fehlannahmen aktuell teuer werden können
+- Welche Entscheidungen sinnvoll sind – ausgehend von Ihrer Ausgangslage
+
+## Eckdaten
+
+- **Dauer:** 120 Minuten
+- **Teilnehmer:** min. 2 – max. 8
+- **Uhrzeit:** 16:00 – 18:00 Uhr
+- **Format:** Online / Präsenz / Inhouse
+- **Preis:** 495,00 € zzgl. MwSt. pro Teilnehmer / Buchung
+- **Anfrage:** mailto:info@datenschutz-kroes.at?subject=Anfrage%3A%20NIS2%20Kompakt%20Seminar
+
+## Ziel des Praxis-Seminars
+
+Das Seminar vermittelt Grundlagen, Zusammenhänge und Entscheidungsgrundlagen zu NIS2 aus unternehmerischer und organisatorischer Perspektive. Ziel ist es, Teilnehmer in die Lage zu versetzen, Risiken einzuordnen, Verantwortlichkeiten zu verstehen und nächste Schritte strukturiert zu planen.
+
+## Kursinhalte
+
+- Einordnung der NIS2-Richtlinie: Was ist neu, was wurde verschärft?
+- Betroffenheitslogik: Wann und warum Unternehmen unter NIS2 fallen
+- Abgrenzung: NIS2 vs. DSGVO vs. IT-Sicherheit
+- Einordnung: Rechtsformen, Zertifizierung von Lieferanten
+- Rolle und Verantwortung von Geschäftsführung & Leitung
+- Typische Fehlannahmen und Praxisrisiken
+- Bußgelder (Höhe, Haftung, Verantwortlichkeiten)
+- Überblick über organisatorische, technische und dokumentarische Pflichten
+- Entscheidungsoptionen je nach Ausgangslage des Unternehmens
+- Strukturierter Ausblick auf nächste sinnvolle Schritte
+
+## Zielgruppe
+
+- Geschäftsführer:innen
+- Vorstände
+- Bereichs- und Abteilungsleiter
+- Verantwortliche für Organisation, Datenschutz & Risikomanagement
+
+## Voraussetzungen
+
+Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von Vorteil.
+
+## Was nicht Bestandteil ist
+
+- Keine individuelle Rechtsberatung (Einzelfallprüfung optional im Anschluss möglich)
+- Keine Prüfung konkreter Unternehmensfälle (Einzelfallprüfung optional im Anschluss möglich)
+- Verbindliche rechtliche oder technische Handlungsempfehlungen, da Verantwortung zur Umsetzung beim jeweiligen Unternehmen liegt
+
+## Abschluss
+
+- Teilnehmer erhalten ein Teilnahmezertifikat
+
+## Termine 2026 (Auswahl)
+
+21.05. · 18.06. · 23.07. · 20.08. · 24.09. · 15.10. · 19.11. · 15.12. · oder individueller Termin
+
+## Anfrage-Formular
+
+Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Online / Inhouse / Kufstein, Tirol), Seminartermin, Anforderungen & Ziele, Einwilligung.
+
+---
+
+# 3. DSGVO für Geschäftsführungen Seminar (dsgvo-seminar.html)
+
+**Title:** DSGVO für Geschäftsführungen – Praxis-Seminar
+**Meta-Description:** DSGVO für Geschäftsführungen: Das Praxis-Seminar für Entscheider. 120 Minuten, 495€ zzgl. MwSt. Was Geschäftsführer wirklich wissen müssen – klar, verständlich, ohne Juristendeutsch.
+
+## Hero
+
+**Eyebrow:** Seminar-Reihe · Datenschutz
+**H1:** DSGVO für Geschäftsführungen
+**Lead:** In diesem praxisnahen Seminar erhalten Geschäftsführer und Entscheider einen klaren Überblick über die DSGVO – ihre Pflichten, ihre Haftung und die konkreten Anforderungen an ihr Unternehmen. Ohne Juristendeutsch, direkt anwendbar.
+
+**Was Sie lernen:**
+- Was die DSGVO konkret von Ihrem Unternehmen verlangt
+- Welche persönliche Haftung Geschäftsführer tragen
+- Welche Fehler in der Praxis teuer werden können
+- Wie Sie Datenschutz effizient in den Betrieb integrieren
+- Welche nächsten Schritte für Ihr Unternehmen sinnvoll sind
+
+## Eckdaten
+
+- **Dauer:** 240 min
+- **Teilnehmer:** min. 2 – max. 8
+- **Uhrzeit:** 14:00 – 18:00 Uhr
+- **Format:** Präsenz / Inhouse
+- **Preis:** 895,00 € zzgl. MwSt. pro Teilnehmer / Buchung
+- **Anfrage:** mailto:info@datenschutz-kroes.at?subject=Anfrage%3A%20DSGVO%20f%C3%BCr%20Gesch%C3%A4ftsf%C3%BChrungen%20Seminar
+
+## Ziel des Praxis-Seminars
+
+Das Seminar vermittelt Grundlagen, Zusammenhänge und Entscheidungsgrundlagen der DSGVO aus unternehmerischer und organisatorischer Perspektive. Ziel ist es, die Teilnehmer in die Lage zu versetzen, Datenschutzthemen zu verstehen, Verantwortlichkeiten klar zu benennen und die wichtigsten Maßnahmen für eine datenschutzkonforme Umsetzung im Unternehmen zu planen.
+
+## Kursinhalte
+
+- Verarbeitungsverzeichnis: Typische Fehler in KMU, aktuelle Bußgelder und Bereiche, die häufig übersehen werden
+- Verarbeitungsverzeichnis und Rollen: Wer ist verantwortlich für welche Daten
+- Datenschutz-Folgenabschätzung: Wann ist eine DSFA gefordert und wie wird sie durchgeführt
+- Praktische Umsetzung: 30-Tage-Umsetzungsplan, Quick Wins, weitere Empfehlungen
+- Praxisbeispiele: Wie Datenschutz in bestehende Unternehmensprozesse eingebunden wird
+- Dokumentation: Mustertexte, Tools und Checklisten für DSGVO-Konformität
+
+## Zielgruppe
+
+- Geschäftsführer:innen
+- Bereichs- und Abteilungsleiter
+- Verantwortliche für Organisation, Datenschutz und Risikomanagement
+- Inhaber von KMU, die Datenschutz selbst verantworten
+
+## Voraussetzungen
+
+Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von Vorteil.
+
+## Was nicht Bestandteil ist
+
+- Keine individuelle Rechtsberatung
+- Keine Prüfung konkreter Unternehmensfälle
+- Verbindliche rechtliche oder technische Handlungsempfehlungen
+- Keine formellen Zertifikate oder Prüfungen
+
+## Abschluss
+
+- Praxisnahe Seminarunterlagen
+- 30-Tage-Umsetzungsplan
+- Tools & Vorlagen für Prozesse
+- Klarheit über Risiken & Handlungsoptionen
+
+## Termine 2026 (Auswahl)
+
+05.05. · 11.06. · 21.07. · 11.08. · 10.09. · 06.10. · 12.11. · 10.12. · oder individueller Termin
+
+## Testimonials zum Seminar
+
+> ★★★★★ „Nach dem Seminar hatte ich zum ersten Mal das Gefühl, wirklich zu verstehen, was von mir als Geschäftsführerin erwartet wird." — Christine Berger, Geschäftsführerin
+
+> ★★★★★ „Der 30-Tage-Plan war Gold wert. Wir haben in einem Monat mehr umgesetzt als in den zwei Jahren davor." — Robert Fischler, Inhaber
+
+> ★★★★★ „Kompetent, praxisnah und ohne Fachjargon. Genau das, was wir gebraucht haben." — Stefan Niedermayr, Geschäftsführer
+
+> ★★★★★ „Ich dachte, wir sind bereits gut aufgestellt. Das Seminar hat gezeigt, wo wir noch Lücken haben – und wie wir sie schließen." — Eva Schneider, Abteilungsleiterin
+
+> ★★★★★ „Vier Stunden, die sich gelohnt haben. Klare Struktur, relevante Inhalte, sofort umsetzbar." — Michael Bruckner, Geschäftsführer
+
+> ★★★★★ „Herr Kroes erklärt Datenschutz so, dass man ihn versteht und nicht fürchtet. Das war für unser Team ein echter Wendepunkt." — Sabine Hofer, Inhaberin
+
+## Anfrage-Formular
+
+Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Inhouse / Kufstein, Tirol), Seminartermin, Anforderungen & Ziele, Einwilligung.
+
+---
+
+# 4. Downloads (downloads.html)
+
+**Title:** Downloads
+**Meta-Description:** Kostenlose Datenschutz-Unterlagen, Checklisten und Leitfäden für KMU und Geschäftsführungen — zum Download bereitgestellt von Datenschutz Kroes.
+
+**Hero-Eyebrow:** Kostenlose Unterlagen
+**H1:** Datenschutz-Wissen zum Mitnehmen.
+**Lead:** Checklisten, Leitfäden, Vorlagen und Benennungsurkunde — kostenlos für Inhaber, Geschäftsführungen und Verantwortliche. Einfach herunterladen und direkt einsetzen.
+
+**Hinweis:** Alle Unterlagen sind kostenlos. Keine Registrierung erforderlich.
+
+**Filter-Kategorien:** Alle / Checklisten / Leitfäden / Vorlagen
+
+## Checklisten (1 Dokument)
+
+### NIS2-Selbstcheck für Unternehmen
+**Format:** PDF (2 Seiten)
+**Datei:** `NIS2-Selbstcheck-Unternehmen.pdf`
+**Beschreibung:** Mit nur 10 Fragen zu mehr Klarheit und Sicherheit für Ihr Unternehmen. Die NIS2-Richtlinie betrifft deutlich mehr Unternehmen als ihr Vorgänger NIS — von kritischen Infrastrukturen bis hin zu zahlreichen Dienstleistern. Doch wer genau ist betroffen und wer nicht? Mit diesem Quick-Check prüfen Sie, ob Ihr Unternehmen unter die NIS2-Richtlinie fällt.
+
+## Leitfäden (5 Dokumente)
+
+### NIS2 – Management Briefing
+**Format:** PDF (8 Seiten)
+**Datei:** `NIS2 - Management Briefing.pdf`
+**Beschreibung:** Klarer, praxisorientierter Überblick über die NIS2-Richtlinie für Führungskräfte — ohne technischen Fachjargon. Welche Unternehmen sind betroffen, welche Pflichten ergeben sich, welche Konsequenzen drohen bei Nichteinhaltung.
+
+### Risikoanalyse nach NIS2
+**Format:** PDF (6 Seiten)
+**Datei:** `Risikoanalyse-nach-NIS2.pdf`
+**Beschreibung:** Schritt-für-Schritt-Anleitung zur systematischen Risikoanalyse nach NIS2 — der zentralen Grundlage von NIS2: Bedrohungen und Schwachstellen erkennen, Auswirkungen bewerten, angemessene Schutzmaßnahmen einleiten.
+
+### NIS2-Quick-Steps – Wie kann ich heute mit der Umsetzung beginnen?
+**Format:** PDF (5 Seiten)
+**Datei:** `Quick-Steps NIS2-Richtlinie.pdf`
+**Beschreibung:** Praxisnahe Quick Steps für sofortige Fortschritte Richtung NIS2-Compliance.
+
+### DSGVO – in 3 Schritten zu Ihrem Quick-Check
+**Format:** PDF (8 Seiten)
+**Datei:** `Praxis Leitfaden DSGVO Check.pdf`
+**Beschreibung:** Strukturierter DSGVO-Check in drei Schritten — ohne Juristendeutsch. Worauf es wirklich ankommt, wo häufig Lücken entstehen, wie gegensteuern.
+
+### DSGVO & KI – 10 Praxis-Tipps zur datenschutzkonformen KI-Nutzung im Unternehmen
+**Format:** PDF (11 Seiten)
+**Datei:** `Praxis-Leitfaden-DSGVO-KI.pdf`
+**Beschreibung:** 10 konkrete Praxis-Tipps zum rechtssicheren und DSGVO-konformen Einsatz von KI-Tools. Auswahl geeigneter Tools, Umgang mit personenbezogenen Daten, Mitarbeiterrichtlinien.
+
+## Vorlagen (1 Dokument)
+
+### DSGVO-konforme Datenschutzerklärung für Bewerbungsverfahren
+**Format:** PDF (8 Seiten)
+**Datei:** `Datenschutzerklärung für Bewerbungsverfahren.pdf`
+**Beschreibung:** Fertige Muster-Vorlage zur individuellen Anpassung — rechtssicher auf Basis der DSGVO mit allen Pflichtangaben nach Art. 13 DSGVO.
+
+---
+
+# 5. Benennungsurkunde (benennungsurkunde.html)
+
+**Title:** Benennungsurkunde
+**Eyebrow:** Rechtsdokument
+**H1:** Benennungsurkunde
+**Lead:** Füllen Sie das Formular aus und drucken Sie die fertige Benennungsurkunde für Ihre Unterlagen.
+
+**Subtitle:** Benennung zum externen Datenschutzbeauftragten · Art. 37–39 DSGVO
+
+**Verwendung:** Felder des Auftraggebers ausfüllen, Dokument drucken, gemeinsam mit Alexander Kroes unterzeichnen. Je eine Ausfertigung verbleibt beim Auftraggeber und beim Datenschutzbeauftragten.
+
+## Formular-Felder
+
+### Auftraggeber (Ihr Unternehmen)
+- Unternehmen / Firma (Pflicht)
+- Straße und Hausnummer (Pflicht)
+- PLZ und Ort (Pflicht)
+- Vertreten durch (Name, Funktion)
+- Bestellung wirksam zum (Pflicht)
+
+### Datenschutzbeauftragter (vorbelegt, schreibgeschützt)
+- Name: Alexander Kroes
+- Unternehmen: Datenschutz Kroes
+- Adresse: Kufstein, Tirol, Österreich
+- Kontakt: info@datenschutz-kroes.at
+
+### Unterschriften
+Auftraggeber (Ort, Datum, Unterschrift) · Datenschutzbeauftragter (Ort: Kufstein, Datum, Unterschrift Alexander Kroes)
+
+## Rechtliche Grundlage und Aufgaben
+
+Die Auftraggeberin/der Auftraggeber bestellt Alexander Kroes (Datenschutz Kroes) zum externen Datenschutzbeauftragten im Sinne der Art. 37–39 DSGVO und § 38 BDSG.
+
+Der Datenschutzbeauftragte ist bei der Ausführung seiner Tätigkeit weisungsfrei. Er wird durch die Geschäftsleitung unterstützt, hat Anspruch auf ordnungsgemäße und frühzeitige Einbindung in datenschutzrechtliche Fragestellungen und auf die notwendige Unterstützung durch das Unternehmen.
+
+**Aufgaben gemäß Art. 39 Abs. 1 DSGVO:**
+a) Unterrichtung und Beratung des Verantwortlichen oder Auftragsverarbeiters und der Beschäftigten hinsichtlich ihrer Pflichten nach DSGVO und sonstigen Datenschutzvorschriften;
+b) Überwachung der Einhaltung der DSGVO und anderer Datenschutzvorschriften, einschließlich Zuweisung von Zuständigkeiten, Sensibilisierung und Schulung der Mitarbeiter;
+c) Beratung — auf Anfrage — zur Datenschutz-Folgenabschätzung und Überwachung ihrer Durchführung gemäß Art. 35 DSGVO;
+d) Zusammenarbeit mit der Aufsichtsbehörde;
+e) Tätigkeit als Anlaufstelle für die Aufsichtsbehörde, einschließlich vorheriger Konsultation gemäß Art. 36 DSGVO.
+
+Der Datenschutzbeauftragte trägt gemäß Art. 39 Abs. 2 DSGVO bei der Aufgabenerfüllung dem Risiko der Verarbeitungsvorgänge gebührend Rechnung und ist zur Verschwiegenheit verpflichtet.
+
+**Datenverarbeitung:** Alle Felder werden ausschließlich lokal im Browser verarbeitet. Es werden keine Daten an einen Server übertragen.
+
+---
+
+# 6. Impressum (impressum.html)
+
+**Title:** Impressum
+**Stand:** April 2026
+
+## Anbieter
+**Alexander Kroes e.U. – Datenschutz Kroes**
+Glatzham 19
+6252 Breitenbach am Inn
+Österreich
+
+## Kontaktinformationen
+- **Telefon:** +43 (0) 5338-20105
+- **E-Mail:** info@datenschutz-kroes.at
+
+## Unternehmensgegenstand
+Externe Datenschutzberatung und Datenschutzbeauftragter-Service gemäß DSGVO
+
+## Unternehmensdaten
+- **UID-Nummer:** ATU81332979
+- **Firmenbuchnummer:** FN 639208 m (Landesgericht Innsbruck)
+- **Unternehmensform:** Eingetragenes Einzelunternehmen
+
+## Aufsichtsbehörde
+Bezirkshauptmannschaft Innsbruck
+
+## Mitgliedschaften
+Wirtschaftskammer Tirol (WKÖ), Fachgruppe 704 Unternehmensberatung
+
+## Inhaber und Geschäftsführer
+Alexander Kroes, Zertifizierter Datenschutzbeauftragter
+
+## Berufshaftpflichtversicherung
+EXALI
+
+## Haftungs- und Urheberrechtshinweise
+- Inhalte mit Sorgfalt erstellt; keine Haftung für Genauigkeit/Vollständigkeit/Aktualität.
+- Keine Verantwortung für Inhalte verlinkter Webseiten Dritter.
+- Alle Inhalte (Texte, Grafiken, Logos, Bilder, Software) sind urheberrechtlich geschützt; keine Reproduktion ohne schriftliche Genehmigung.
+
+## Anwendbares Recht und Gerichtsstand
+Österreichisches Recht. Gerichtsstand: Landesgericht Innsbruck.
+
+## Streitbeilegung
+EU-Plattform für Online-Streitbeilegung: https://ec.europa.eu/consumers/odr/
+Datenschutz Kroes nimmt nicht an Streitbeilegungsverfahren vor Verbraucherschlichtungsstellen teil.
+
+---
+
+# 7. Datenschutzerklärung (datenschutz.html)
+
+**Title:** Datenschutzerklärung
+**Stand:** April 2026
+
+## 1. Verantwortlicher
+Alexander Kroes e.U. – Datenschutz Kroes, Glatzham 19, 6252 Breitenbach am Inn, Österreich. Tel: +43 (0) 5338-20105, E-Mail: info@datenschutz-kroes.at. UID: ATU81332979, FN 639208 m (LG Innsbruck).
+
+## 2. Allgemeines zur Datenverarbeitung
+Verarbeitung personenbezogener Daten nur soweit zur Bereitstellung der Website und Leistungen erforderlich, regelmäßig nur nach Einwilligung.
+
+## 3. Rechtsgrundlagen
+- Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) — z. B. Newsletter
+- Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO) — z. B. Kontaktanfragen
+- Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)
+- Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) — Bereitstellung/Sicherheit Website
+
+## 4. Hosting und Server-Log-Dateien
+
+**Hosting:** IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland. AVV gemäß Art. 28 DSGVO. Server in Deutschland.
+
+**Server-Log-Dateien:** IP-Adresse, Datum/Uhrzeit, abgerufene Datei, Datenmenge, HTTP-Status, Browsertyp/-version, Betriebssystem, Referrer-URL. Speicherung 30 Tage zur Sicherstellung des Betriebs und Angriffsabwehr.
+
+## 5. SSL-/TLS-Verschlüsselung
+Let's Encrypt, https-Verbindung mit Schloss-Symbol.
+
+## 6. Kontaktaufnahme
+
+**6.1 E-Mail/Telefon:** Verarbeitung übermittelter Daten zur Bearbeitung der Anfrage; Löschung sobald nicht mehr erforderlich.
+
+**6.2 Rückruf-Formular:** Felder Name, Unternehmen, Telefonnummer. Übermittlung über mailto-Link, keine serverseitige Verarbeitung.
+
+**6.3 Seminar-Anfrage:** Anrede, Titel (optional), Vor-/Nachname, Firma, E-Mail, Nachricht (optional). Übermittlung mailto, keine Server-Verarbeitung.
+
+**6.4 Benennungsurkunde:** Unternehmensname, Anrede, Titel, Vor-/Nachname, E-Mail, Datum. Verarbeitung ausschließlich lokal im Browser; PDF wird clientseitig erzeugt.
+
+## 7. Newsletter
+
+Daten: Vor-/Nachname, E-Mail, Unternehmen (optional). Versand über **Mailchimp** (Intuit Inc. – The Rocket Science Group LLC, 675 Ponce de Leon Ave NE, Suite 5000, Atlanta, GA 30308, USA). Mailchimp ist nach EU-U.S. Data Privacy Framework (DPF) zertifiziert.
+
+Double-Opt-In-Verfahren. Widerruf jederzeit über Abmeldelink im Newsletter oder per E-Mail. Speicherung nur für Dauer des Abos. Mailchimp-Analyse von Öffnungs-/Klickraten zur Optimierung der Inhalte.
+
+## 8. Eingebettete Inhalte (YouTube)
+
+YouTube-Einbettung von Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland) im erweiterten Datenschutzmodus (`youtube-nocookie.com`). Zwei-Klick-Lösung mit aktiver Einwilligung. Bei Wiedergabe können erfasst werden: IP-Adresse, Datum/Uhrzeit, Browsertyp, OS, Geräte-ID. Bei eingeloggtem Google-Konto Zuordnung zum Profil möglich.
+
+## 9. Social-Media-Links
+Hyperlinks zu Facebook, YouTube und Instagram (keine Plugins). Datenübermittlung erst nach Klick.
+
+## 10. Schriftarten
+DM Sans und DM Mono — lokal auf dem Server gespeichert, **keine** Verbindung zu Google-Servern.
+
+## 11. Cookies und Cookie-Banner
+
+**Kategorien:**
+- Notwendig (immer aktiv, keine Einwilligung nötig)
+- Präferenzen (aktuell nicht im Einsatz)
+- Statistiken (aktuell nicht im Einsatz)
+- Marketing (eingebettete YouTube-Videos auf Unterseiten – Google Ireland Ltd.)
+
+**Optionen:** Ablehnen / Auswahl erlauben / Alle zulassen — Privacy by Default. Speicherung Einwilligung mit Zeitstempel, Kategorien, Methode, Versions-ID nur in localStorage (Browser), keine Server-Übertragung. Gültigkeit 1 Jahr.
+
+**Verwendete Technologien:**
+
+| Bezeichnung | Zweck | Kategorie | Speicherort | Speicherdauer |
+|---|---|---|---|---|
+| dsk_cookie_consent_v2 | Einwilligungsnachweis | Notwendig | localStorage (Browser) | 1 Jahr |
+| YouTube-Embed (optional) | Einbettung Videos | Marketing | Drittanbieter-Cookies (Google Ireland Ltd.) | bis zu 2 Jahre |
+
+## 12. Keine Tracking- oder Analyse-Tools
+Kein Google Analytics, Matomo, Facebook Pixel oder vergleichbare Dienste.
+
+## 13. Betroffenenrechte (DSGVO)
+- 13.1 Auskunftsrecht (Art. 15 DSGVO)
+- 13.2 Berichtigungsrecht (Art. 16 DSGVO)
+- 13.3 Löschrecht (Art. 17 DSGVO)
+- 13.4 Recht auf Einschränkung (Art. 18 DSGVO)
+- 13.5 Datenübertragbarkeit (Art. 20 DSGVO)
+- 13.6 Widerspruchsrecht (Art. 21 DSGVO)
+- 13.7 Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)
+
+## 14. Beschwerderecht
+Österreichische Datenschutzbehörde, Barichgasse 40-42, 1030 Wien. Tel: +43 1 52 152-0, E-Mail: dsb@dsb.gv.at, Website: www.dsb.gv.at
+
+## 15. Datensicherheit
+Technische und organisatorische Sicherheitsmaßnahmen, fortlaufend an technologische Entwicklung angepasst.
+
+---
+
+# 8. Newsletter-Leseprobe (newsletter-leseprobe.html)
+
+**Title:** Newsflash – Leseprobe
+**Meta-Description:** Leseprobe des monatlichen Datenschutz-Newsletters für Inhaber, Geschäftsführungen und Verantwortliche.
+
+Beispielausgabe des Newsflash-Newsletters mit aktuellen Datenschutz-News, praxisnahen Tipps und Hinweisen auf Bußgeldentscheidungen — kompakt, ohne Juristendeutsch, monatlich. Anmeldung über die Startseite (#newsletter).
+
+---
+
+# Footer (alle Seiten identisch)
+
+**Tagline:** Externer Datenschutzbeauftragter für KMU & Mittelstand. — Zertifiziert. Persönlich. Verlässlich.
+**Zertifikat:** WIFI WKO — Zertifiziert nach ÖVE/ÖNORM EN ISO/IEC 17024
+
+**Spalten:**
+- **Leistungen:** Externer DSB · DSGVO-Erstanalyse · Mitarbeiterschulungen · Dokumentation · Datenschutz-Folgenabschätzung · Incident Response
+- **Unternehmen:** Alexander Kroes · Prozess · FAQ · Kontakt
+- **Kontakt:** info@datenschutz-kroes.at · +43 (0) 5338-20105 · Kufstein, Tirol
+
+**Social:** Facebook · YouTube · Instagram
+**Copyright:** © 2026 Datenschutz Kroes
+**Website by:** Upprime Connect (https://upprime-connect.at/)
+**Rechtliches:** Impressum · Datenschutzerklärung
