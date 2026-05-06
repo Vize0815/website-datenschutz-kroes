@@ -554,6 +554,27 @@
       pointer-events: all;
     }
 
+    .nav__mobile-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      color: var(--color-surface);
+      cursor: pointer;
+      padding: 0;
+      transition: color var(--transition-base);
+    }
+
+    .nav__mobile-close:hover {
+      color: var(--color-gold);
+    }
+
     .nav__mobile-link {
       font-family: var(--font-sans);
       font-size: 20px;
@@ -2933,6 +2954,12 @@
 
   <!-- Mobile overlay -->
   <div class="nav__mobile-overlay" id="mobile-overlay" aria-hidden="true" role="dialog" aria-label="Navigation">
+    <button type="button" class="nav__mobile-close" aria-label="Menü schließen" onclick="closeMobileNav()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="6" y1="6" x2="18" y2="18"/>
+        <line x1="18" y1="6" x2="6" y2="18"/>
+      </svg>
+    </button>
     <nav aria-label="Mobile Navigation">
       <ul style="list-style:none; text-align:center; display:flex; flex-direction:column; gap:20px;" role="list">
         <li><a href="#alexander-kroes" class="nav__mobile-link" onclick="closeMobileNav()">Alexander Kroes</a></li>
