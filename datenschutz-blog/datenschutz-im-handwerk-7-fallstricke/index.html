@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz im Handwerk: 7 Fallstricke vermeiden | Datenschutz Kroes</title>
+  <meta name="description" content="Sieben typische DSGVO-Risiken in Handwerksbetrieben — vom Excel-Kundenstamm über WhatsApp-Gruppen bis zu Baustellen-Fotos. Mit konkreten Lösungen aus der Praxis.">
+  <meta name="keywords" content="Datenschutz Handwerk, DSGVO Handwerksbetrieb, Datenschutz KMU Handwerk, AVV Subunternehmer, Baustellen Fotos DSGVO, WhatsApp DSGVO">
+  <link rel="canonical" href="https://datenschutz-kroes.at/datenschutz-blog/datenschutz-im-handwerk-7-fallstricke/">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" href="../../logo-datenschutz-kroes.png">
+  <link rel="apple-touch-icon" href="../../logo-datenschutz-kroes.png">
+  <link rel="preload" as="image" href="../../logo-datenschutz-kroes.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Datenschutz im Handwerk: 7 typische Fallstricke vermeiden">
+  <meta property="og:description" content="Sieben DSGVO-Risiken, die Handwerksbetriebe regelmäßig übersehen — vom Excel-Kundenstamm bis zu WhatsApp-Gruppen. Mit konkreten Lösungen.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://datenschutz-kroes.at/datenschutz-blog/datenschutz-im-handwerk-7-fallstricke/">
+  <meta property="og:image" content="https://datenschutz-kroes.at/alexander-kroes-og.webp">
+  <meta property="article:author" content="Alexander Kroes">
+  <meta property="article:published_time" content="2026-04-08">
+  <meta property="article:section" content="Branche">
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Datenschutz im Handwerk: 7 typische Fallstricke — und wie Sie sie vermeiden",
+    "description": "Sieben typische DSGVO-Risiken in Handwerksbetrieben — vom Excel-Kundenstamm über WhatsApp-Gruppen bis zu Baustellen-Fotos. Mit konkreten Lösungen aus der Praxis.",
+    "image": "https://datenschutz-kroes.at/alexander-kroes-og.webp",
+    "datePublished": "2026-04-08",
+    "dateModified": "2026-04-08",
+    "author": {
+      "@type": "Person",
+      "name": "Alexander Kroes",
+      "jobTitle": "Externer Datenschutzbeauftragter",
+      "url": "https://datenschutz-kroes.at/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Datenschutz Kroes",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://datenschutz-kroes.at/logo-datenschutz-kroes.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://datenschutz-kroes.at/datenschutz-blog/datenschutz-im-handwerk-7-fallstricke/"
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== LOCAL FONTS ===== */
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(../../fonts/dm-sans-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(../../fonts/dm-sans-latin.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(../../fonts/dm-mono-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(../../fonts/dm-mono-latin.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+    :root {
+      --color-bg: #F4F5F7;
+      --color-surface: #FFFFFF;
+      --color-navy: #0F1F3D;
+      --color-ink: #1A1A2E;
+      --color-slate: #5C6B82;
+      --color-slate-light: #8A99AD;
+      --color-prussian: #1B4F8A;
+      --color-sky-tint: #E8EFF8;
+      --color-gold: #C9A84C;
+      --color-gold-light: #E8D5A0;
+      --color-mist: #DDE3EC;
+      --color-verdant: #2D6A4F;
+      --color-rose: #B23A48;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --transition-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-card: 0 2px 16px rgba(15,31,61,0.08);
+      --shadow-elevated: 0 8px 40px rgba(15,31,61,0.14);
+      --font-sans: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-ink); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; border: none; background: none; cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+    /* ===== TOPBAR + NAV (identisch) ===== */
+    .topbar { position: relative; height: 38px; background-color: rgba(10,18,36,0.92); border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; }
+    .topbar__inner { display: flex; align-items: center; justify-content: space-between; }
+    .topbar__left { display: flex; align-items: center; gap: 20px; }
+    .topbar__item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,0.82); white-space: nowrap; transition: color var(--transition-base); }
+    .topbar__item:hover { color: var(--color-gold); }
+    .topbar__divider { width: 1px; height: 14px; background-color: rgba(255,255,255,0.18); flex-shrink: 0; }
+    .topbar__callback { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--color-gold); background: none; border: none; cursor: pointer; transition: color var(--transition-base); }
+    .topbar__callback:hover { color: #e8c66a; }
+    .topbar__right { display: flex; align-items: center; gap: 14px; }
+    .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color var(--transition-base); }
+    .topbar__social:hover { color: var(--color-gold); }
+
+    .nav { position: relative; height: auto; padding: 8px 0; display: flex; align-items: center; background-color: rgba(255,255,255,0.96); border-bottom: 1px solid var(--color-mist); }
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav__logo { display: flex; align-items: center; gap: 12px; color: var(--color-navy); font-weight: 600; font-size: 16px; }
+    .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
+    .nav__links { display: flex; align-items: center; gap: 0; }
+    .nav__links li { display: flex; align-items: center; }
+    .nav__links li + li::before { content: '·'; color: var(--color-gold); font-size: 18px; line-height: 1; padding: 0 14px; pointer-events: none; user-select: none; }
+    .nav__link { font-size: 15px; font-weight: 500; color: var(--color-slate); position: relative; transition: color var(--transition-base); }
+    .nav__link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background-color: var(--color-gold); transform: scaleX(0); transform-origin: left; transition: transform 380ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__link:hover { color: var(--color-navy); }
+    .nav__link:hover::after { transform: scaleX(1); }
+    .nav__cta { font-size: 14px; font-weight: 600; color: var(--color-surface); background-color: var(--color-navy); padding: 10px 22px; border-radius: var(--radius-md); transition: background-color var(--transition-base), transform var(--transition-base); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+    .nav__cta:hover { background-color: var(--color-prussian); transform: translateY(-1px); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; width: 28px; cursor: pointer; padding: 4px; }
+    .nav__hamburger span { display: block; height: 2px; background-color: var(--color-navy); border-radius: 2px; transition: transform var(--transition-base), opacity var(--transition-base); }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav__mobile-overlay { position: fixed; inset: 0; background-color: var(--color-navy); z-index: 103; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 600ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__mobile-overlay.open { opacity: 1; pointer-events: all; }
+    .nav__mobile-link { font-size: 28px; font-weight: 500; color: var(--color-surface); transition: color var(--transition-base); }
+    .nav__mobile-link:hover { color: var(--color-gold); }
+    .nav__mobile-cta { font-size: 16px; font-weight: 600; color: var(--color-navy); background-color: var(--color-gold); padding: 14px 32px; border-radius: var(--radius-md); cursor: pointer; }
+
+    /* ===== READING PROGRESS ===== */
+    .reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--color-gold); width: 0%; z-index: 100; transition: width 60ms linear; }
+
+    /* ===== ARTICLE HEADER ===== */
+    .article-header { background: var(--color-surface); padding: 64px 0 48px; position: relative; overflow: hidden; }
+    .article-header::before { content: ''; position: absolute; left: 0; top: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, var(--color-mist) 20%, var(--color-mist) 80%, transparent); }
+    .article-header__inner { max-width: 760px; margin: 0 auto; }
+    .article-header__back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--color-slate-light); margin-bottom: 28px; transition: color var(--transition-base); }
+    .article-header__back:hover { color: var(--color-gold); }
+    .article-header__category { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; background: var(--color-sky-tint); color: var(--color-prussian); border-radius: 100px; margin-bottom: 24px; }
+    .article-header__category-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--color-prussian); }
+    .article-header__title { font-size: clamp(32px, 4.6vw, 52px); font-weight: 500; color: var(--color-navy); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 24px; }
+    .article-header__dek { font-size: 19px; font-weight: 300; color: var(--color-slate); line-height: 1.65; margin-bottom: 36px; }
+    .article-header__meta { display: flex; align-items: center; gap: 16px; padding: 20px 0; border-top: 1px solid var(--color-mist); border-bottom: 1px solid var(--color-mist); flex-wrap: wrap; }
+    .article-header__author { display: flex; align-items: center; gap: 12px; }
+    .article-header__avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; background: var(--color-mist); flex-shrink: 0; }
+    .article-header__author-info { display: flex; flex-direction: column; }
+    .article-header__author-name { font-size: 14px; font-weight: 600; color: var(--color-navy); }
+    .article-header__author-role { font-size: 12.5px; color: var(--color-slate-light); }
+    .article-header__meta-divider { width: 1px; height: 32px; background: var(--color-mist); }
+    .article-header__meta-item { display: flex; flex-direction: column; gap: 2px; }
+    .article-header__meta-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-slate-light); }
+    .article-header__meta-value { font-size: 13.5px; font-weight: 500; color: var(--color-navy); }
+
+    /* ===== ARTICLE BODY ===== */
+    .article-body { background: var(--color-surface); padding: 56px 0 96px; }
+    .article-body__inner { max-width: 720px; margin: 0 auto; font-size: 17.5px; line-height: 1.78; color: var(--color-ink); }
+    .article-body__inner > * + * { margin-top: 1.4em; }
+    .article-body__inner > h2 + *,
+    .article-body__inner > h3 + * { margin-top: 0.8em; }
+    .article-body__inner p { font-weight: 300; }
+    .article-body__inner p strong { font-weight: 600; color: var(--color-navy); }
+    .article-body__inner a { color: var(--color-prussian); text-decoration: underline; text-decoration-color: rgba(27,79,138,0.3); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base); }
+    .article-body__inner a:hover { text-decoration-color: var(--color-prussian); }
+    .article-body__inner h2 { font-size: clamp(24px, 3vw, 30px); font-weight: 500; color: var(--color-navy); line-height: 1.25; letter-spacing: -0.015em; margin-top: 2.4em; }
+    .article-body__inner h3 { font-size: 20px; font-weight: 600; color: var(--color-navy); line-height: 1.3; margin-top: 2em; }
+    .article-body__inner ul, .article-body__inner ol { padding-left: 0; margin-left: 0; }
+    .article-body__inner ul li, .article-body__inner ol li { font-weight: 300; padding-left: 28px; position: relative; margin-top: 0.6em; }
+    .article-body__inner ul li::before { content: ''; position: absolute; left: 4px; top: 0.7em; width: 8px; height: 8px; border-radius: 50%; background: var(--color-gold); }
+    .article-body__inner ol { counter-reset: list-counter; }
+    .article-body__inner ol li { counter-increment: list-counter; }
+    .article-body__inner ol li::before { content: counter(list-counter, decimal-leading-zero); position: absolute; left: 0; top: 0; font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--color-gold); top: 0.3em; }
+
+    .article-body__inner blockquote { border-left: 3px solid var(--color-gold); padding: 8px 0 8px 28px; margin: 2.4em 0; font-size: 22px; font-weight: 300; line-height: 1.5; color: var(--color-navy); font-style: italic; letter-spacing: -0.01em; }
+    .article-body__inner blockquote cite { display: block; margin-top: 12px; font-size: 13px; font-style: normal; font-weight: 500; color: var(--color-slate); letter-spacing: 0.04em; }
+    .article-body__inner blockquote cite::before { content: '— '; }
+
+    .article-body__inner .lead { font-size: 19px; font-weight: 300; line-height: 1.7; color: var(--color-slate); border-bottom: 1px solid var(--color-mist); padding-bottom: 1.6em; }
+
+    /* Step Card */
+    .step-card { background: var(--color-bg); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 36px 36px 32px; margin: 2.4em 0; position: relative; overflow: hidden; }
+    .step-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--color-gold); }
+    .step-card__num { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
+    .step-card__title { font-size: 24px; font-weight: 600; color: var(--color-navy); line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 16px; }
+    .step-card__body { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--color-slate); }
+    .step-card__body p + p { margin-top: 0.8em; }
+    .step-card__body strong { color: var(--color-navy); font-weight: 600; }
+    .step-card__checklist { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; padding: 18px 20px; background: var(--color-surface); border-radius: var(--radius-md); border: 1px solid var(--color-mist); }
+    .step-card__check { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.55; color: var(--color-ink); }
+    .step-card__check svg { color: var(--color-verdant); flex-shrink: 0; margin-top: 4px; }
+
+    /* Callout */
+    .callout { display: flex; gap: 16px; padding: 24px 28px; border-radius: var(--radius-md); margin: 2em 0; }
+    .callout--warning { background: #fdf6e3; border: 1px solid #f0d878; }
+    .callout--warning .callout__icon { color: #b47e00; }
+    .callout--info { background: var(--color-sky-tint); border: 1px solid #c5d6ed; }
+    .callout--info .callout__icon { color: var(--color-prussian); }
+    .callout__icon { flex-shrink: 0; margin-top: 2px; }
+    .callout__body { font-size: 15px; font-weight: 300; line-height: 1.65; color: var(--color-ink); }
+    .callout__body strong { color: var(--color-navy); font-weight: 600; }
+    .callout__body p + p { margin-top: 0.6em; }
+
+    /* Tags */
+    .article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--color-mist); }
+    .article-tag { display: inline-flex; align-items: center; padding: 6px 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--color-slate); background: var(--color-bg); border-radius: 100px; }
+
+    /* ===== AUTHOR BOX ===== */
+    .author-box { background: var(--color-bg); padding: 64px 0; border-top: 1px solid var(--color-mist); }
+    .author-box__inner { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
+    .author-box__avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; background: var(--color-mist); }
+    .author-box__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
+    .author-box__name { font-size: 22px; font-weight: 600; color: var(--color-navy); margin-bottom: 10px; }
+    .author-box__bio { font-size: 14.5px; font-weight: 300; line-height: 1.7; color: var(--color-slate); margin-bottom: 16px; }
+    .author-box__cta { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--color-navy); transition: gap var(--transition-base), color var(--transition-base); }
+    .author-box__cta:hover { color: var(--color-prussian); gap: 10px; }
+
+    /* ===== END CTA ===== */
+    .end-cta { background: var(--color-navy); padding: 96px 0; position: relative; overflow: hidden; }
+    .end-cta::before, .end-cta::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 80px; height: 1px; background: var(--color-gold); }
+    .end-cta::before { top: 32px; }
+    .end-cta::after { bottom: 32px; }
+    .end-cta__inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .end-cta__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 18px; }
+    .end-cta__title { font-size: clamp(28px, 4vw, 40px); font-weight: 500; color: var(--color-surface); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 18px; }
+    .end-cta__lead { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .end-cta__buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .end-cta__btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 16px 28px; font-size: 14px; font-weight: 600; color: var(--color-navy); background: var(--color-gold); border-radius: var(--radius-md); transition: background var(--transition-base), transform var(--transition-base); }
+    .end-cta__btn-primary:hover { background: #e0bc5a; transform: translateY(-1px); }
+    .end-cta__btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 15px 28px; font-size: 14px; font-weight: 600; color: var(--color-surface); background: transparent; border: 1.5px solid rgba(255,255,255,0.2); border-radius: var(--radius-md); transition: border-color var(--transition-base); }
+    .end-cta__btn-ghost:hover { border-color: var(--color-gold); }
+
+    /* ===== FOOTER (identisch) ===== */
+    .footer { background-color: var(--color-navy); padding: 80px 0 0; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 64px; }
+    .footer__logo { display: flex; align-items: center; gap: 12px; color: #fff; font-family: var(--font-sans); font-weight: 600; font-size: 16px; margin-bottom: 16px; }
+    .footer__tagline { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.6; margin: 0; }
+    .footer__tagline-values { font-size: 14px; font-weight: 300; color: var(--color-gold); line-height: 1.6; margin-top: 12px; }
+    .footer__cert { display: block; margin-top: 20px; width: 88px; height: auto; opacity: 0.9; }
+    .footer__cert-caption { font-family: var(--font-sans); font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.5; max-width: 240px; margin-top: 8px; }
+    .footer__col-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 20px; }
+    .footer__links { display: flex; flex-direction: column; gap: 10px; }
+    .footer__link { font-size: 14px; color: rgba(255,255,255,0.55); transition: color var(--transition-base); }
+    .footer__link:hover { color: rgba(255,255,255,0.9); }
+    .footer__contact-line { display: flex; align-items: center; gap: 10px; }
+    .footer__contact-line svg { color: var(--color-gold); flex-shrink: 0; }
+    .footer__social { display: flex; justify-content: center; gap: 14px; padding: 28px 0 20px; }
+    .footer__social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.6); transition: color var(--transition-base), border-color var(--transition-base); }
+    .footer__social a:hover { color: var(--color-gold); border-color: var(--color-gold); }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; position: relative; }
+    .footer__copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer__made-by { position: absolute; left: 50%; transform: translateX(-50%); }
+    .footer__upprime-link { font-weight: 600; position: relative; display: inline-block; }
+    .footer__upprime-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background: linear-gradient(to right, #FFFFFF, #A044D4); transform: scaleX(0); transform-origin: left; transition: transform 400ms cubic-bezier(0.4,0,0.2,1); }
+    .footer__upprime-link:hover::after { transform: scaleX(1); }
+    .footer__upprime-white { color: #FFFFFF; }
+    .footer__upprime-purple { color: #A044D4; }
+    .footer__legal { display: flex; align-items: center; gap: 20px; }
+    .footer__legal a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color var(--transition-base); }
+    .footer__legal a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 768px) {
+      .topbar { position: static; }
+      .nav { position: static; top: auto; }
+      .container { padding: 0 20px; }
+      .nav__links, .nav__cta { display: none; }
+      .nav__hamburger { display: flex; }
+      .article-header { padding: 40px 0 32px; }
+      .article-header__meta { gap: 12px; }
+      .article-header__meta-divider { display: none; }
+      .article-body { padding: 40px 0 64px; }
+      .article-body__inner { font-size: 16.5px; }
+      .step-card { padding: 28px 24px 24px; }
+      .author-box__inner { grid-template-columns: 1fr; gap: 16px; }
+      .author-box__avatar { width: 72px; height: 72px; }
+      .end-cta { padding: 72px 0; }
+      .footer__grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer__bottom { flex-direction: column; align-items: center; text-align: center; }
+      .footer__made-by { position: static; transform: none; }
+      .footer__legal { justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .topbar { display: none; }
+      .article-body__inner blockquote { font-size: 19px; padding-left: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+      .reading-progress { transition: none; }
+    }
+  </style>
+  <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
+</head>
+<body>
+
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
+  <!-- TOPBAR -->
+  <div class="topbar" aria-label="Kontaktinformationen">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+4353382010" class="topbar__item" aria-label="Anrufen">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2.5 1.5h2l1 2.5-1.25 1.25a7 7 0 003 3L8.5 7l2.5 1v2a1 1 0 01-1 1A9.5 9.5 0 011.5 2.5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          +43 (0) 5338-20105
+        </a>
+        <div class="topbar__divider"></div>
+        <a href="mailto:info@datenschutz-kroes.at" class="topbar__item" aria-label="E-Mail">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><rect x="1" y="2.5" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4l5.5 3.5L12 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          info@datenschutz-kroes.at
+        </a>
+        <div class="topbar__divider"></div>
+        <a href="../../index.html#kontakt" class="topbar__callback" aria-label="Rückruf anfordern">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M9 1.5A5 5 0 116.5 11M9 1.5H6.5M9 1.5v2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Rückruf anfordern
+        </a>
+      </div>
+      <div class="topbar__right">
+        <a href="https://www.facebook.com/datenschutz-kroes" target="_blank" class="topbar__social" aria-label="Facebook" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://www.youtube.com/@DatenschutzKroes" target="_blank" class="topbar__social" aria-label="YouTube" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="../../index.html" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
+          <picture>
+            <source srcset="../../logo-datenschutz-kroes.webp" type="image/webp">
+            <img src="../../logo-datenschutz-kroes.png" alt="Datenschutz Kroes" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
+          </picture>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="../../index.html#alexander-kroes" class="nav__link">Alexander Kroes</a></li>
+          <li><a href="../../index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li><a href="../../datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
+          <li><a href="../../index.html#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="../../index.html#kontakt" class="nav__link">Kontakt</a></li>
+          <li><a href="../../downloads.html" class="nav__link">Downloads</a></li>
+          <li><a href="../" class="nav__link nav__link--active">Blog</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-overlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav__mobile-overlay" id="mobile-overlay" aria-hidden="true" role="dialog" aria-label="Navigation">
+    <nav aria-label="Mobile Navigation">
+      <ul style="list-style:none; text-align:center; display:flex; flex-direction:column; gap:28px;" role="list">
+        <li><a href="../../index.html#alexander-kroes" class="nav__mobile-link" onclick="closeMobileNav()">Alexander Kroes</a></li>
+        <li><a href="../../index.html#leistungen" class="nav__mobile-link" onclick="closeMobileNav()">Leistungen</a></li>
+        <li><a href="../../datenschutz-flatrate.html" class="nav__mobile-link" onclick="closeMobileNav()">Pakete &amp; Preise</a></li>
+        <li><a href="../../index.html#seminare" class="nav__mobile-link" onclick="closeMobileNav()">Seminare</a></li>
+        <li><a href="../../index.html#kontakt" class="nav__mobile-link" onclick="closeMobileNav()">Kontakt</a></li>
+        <li><a href="../../downloads.html" class="nav__mobile-link" onclick="closeMobileNav()">Downloads</a></li>
+        <li><a href="../" class="nav__mobile-link" onclick="closeMobileNav()">Blog</a></li>
+      </ul>
+    </nav>
+    <a href="../../index.html#kontakt" class="nav__mobile-cta" onclick="closeMobileNav()">Erstgespräch vereinbaren</a>
+  </div>
+
+  <main>
+
+    <!-- ===== ARTICLE HEADER ===== -->
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header__inner">
+          <a href="../" class="article-header__back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Zurück zum Blog
+          </a>
+          <span class="article-header__category" style="background:#e8f5ee;color:var(--color-verdant);">
+            <span class="article-header__category-dot" style="background:var(--color-verdant);"></span>
+            Branche
+          </span>
+          <h1 class="article-header__title">Datenschutz im Handwerk: 7 typische Fallstricke — und wie Sie sie vermeiden</h1>
+          <p class="article-header__dek">
+            Handwerksbetriebe glauben oft, Datenschutz beträfe sie kaum. Tatsächlich verarbeiten sie tagtäglich personenbezogene Daten — und übersehen dabei sieben Risiken, die im Audit teuer werden können.
+          </p>
+          <div class="article-header__meta">
+            <div class="article-header__author">
+              <picture>
+                <source srcset="../../alexander-kroes-1.png" type="image/png">
+                <img src="../../alexander-kroes-1.png" alt="Alexander Kroes" class="article-header__avatar" width="44" height="44" loading="lazy">
+              </picture>
+              <div class="article-header__author-info">
+                <span class="article-header__author-name">Alexander Kroes</span>
+                <span class="article-header__author-role">Externer Datenschutzbeauftragter</span>
+              </div>
+            </div>
+            <div class="article-header__meta-divider"></div>
+            <div class="article-header__meta-item">
+              <span class="article-header__meta-label">Veröffentlicht</span>
+              <time class="article-header__meta-value" datetime="2026-04-08">08. April 2026</time>
+            </div>
+            <div class="article-header__meta-divider"></div>
+            <div class="article-header__meta-item">
+              <span class="article-header__meta-label">Lesezeit</span>
+              <span class="article-header__meta-value">7 Min.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== ARTICLE BODY ===== -->
+    <article class="article-body">
+      <div class="container">
+        <div class="article-body__inner">
+
+          <p class="lead">
+            "Wir sind doch nur ein kleiner Handwerksbetrieb — uns trifft die DSGVO nicht." Diesen Satz höre ich seit Jahren regelmäßig. Er ist falsch. Tatsächlich verarbeiten Handwerker tagtäglich personenbezogene Daten — und übersehen dabei sieben Risiken, die im Bußgeldverfahren teuer werden können.
+          </p>
+
+          <p>
+            Im Folgenden die sieben häufigsten Fallstricke aus der Beratungspraxis — jeweils mit der konkreten Lösung, mit der Sie das Risiko in unter zwei Stunden eliminieren.
+          </p>
+
+          <!-- ===== FALLSTRICK 1 ===== -->
+          <div class="step-card">
+            <p class="step-card__num">Fallstrick 01 · Kundendaten</p>
+            <h3 class="step-card__title">Kundenstamm in Excel-Listen und WhatsApp-Gruppen</h3>
+            <div class="step-card__body">
+              <p>Adressen, Telefonnummern, Auftragsdetails landen häufig in geteilten Excel-Tabellen oder werden über private WhatsApp-Gruppen koordiniert. Das ist schnell, aber rechtlich problematisch: Excel-Tabellen sind selten zugriffsbeschränkt, WhatsApp läuft über Meta-Server (Drittlandtransfer) und ohne dokumentierte Rechtsgrundlage.</p>
+              <p><strong>Lösung:</strong> Ein einfaches CRM- oder Branchen-Tool (z.B. ToolTime, Streit V.1, openHandwerk) mit zugriffsbeschränkten Nutzerprofilen — und WhatsApp Business <em>nur</em> mit dokumentierter Einwilligung der Kunden.</p>
+            </div>
+          </div>
+
+          <!-- ===== FALLSTRICK 2 ===== -->
+          <div class="step-card">
+            <p class="step-card__num">Fallstrick 02 · Bewerbungen</p>
+            <h3 class="step-card__title">Bewerbungsunterlagen ohne Löschkonzept</h3>
+            <div class="step-card__body">
+              <p>Bewerbungen kommen per E-Mail, werden im Postfach abgelegt — und bleiben dort jahrelang. Das ist eine doppelte Verletzung: keine Zugriffsbeschränkung (jeder im Mail-System sieht sie) und keine Löschung nach Abschluss des Bewerbungsverfahrens. Standardpraxis im Handwerk, aber gegen Art.&nbsp;5 (1) e DSGVO ("Speicherbegrenzung").</p>
+              <p><strong>Lösung:</strong> Bewerbungs-Postfach getrennt einrichten, Zugriff nur Geschäftsführung &amp; HR. Nach Absage oder Einstellung: 6&nbsp;Monate Aufbewahrungsfrist (zur Verteidigung gegen Gleichbehandlungs-Klagen), danach Löschung. Schriftlich dokumentieren.</p>
+            </div>
+          </div>
+
+          <!-- ===== FALLSTRICK 3 ===== -->
+          <div class="step-card">
+            <p class="step-card__num">Fallstrick 03 · Baustellen-Fotos</p>
+            <h3 class="step-card__title">Personen im Hintergrund von Baustellen-Fotos</h3>
+            <div class="step-card__body">
+              <p>Foto vom abgeschlossenen Bad für Instagram. Im Spiegel: der Auftraggeber. Auf der Hausbaustelle: Nachbarskinder im Garten. Solche Aufnahmen sind personenbezogene Daten und brauchen eine Rechtsgrundlage — eine Einwilligung oder berechtigtes Interesse mit Interessenabwägung.</p>
+              <p><strong>Lösung:</strong> Vor Veröffentlichung gezielt prüfen, wer erkennbar ist. Im Zweifel verpixeln oder ausschneiden. Bei geplanten Referenzfotos: kurze schriftliche Einwilligung des Auftraggebers (zwei Sätze auf dem Auftragsformular reichen).</p>
+            </div>
+          </div>
+
+          <!-- ===== FALLSTRICK 4 ===== -->
+          <div class="step-card">
+            <p class="step-card__num">Fallstrick 04 · Subunternehmer</p>
+            <h3 class="step-card__title">Subunternehmer ohne Auftragsverarbeitungsvertrag</h3>
+            <div class="step-card__body">
+              <p>Sie geben Kundendaten an einen Subunternehmer (Elektriker, Bodenleger, Gerüstbauer). Damit wird er zum <strong>Auftragsverarbeiter nach Art.&nbsp;28 DSGVO</strong> — und braucht einen schriftlichen Auftragsverarbeitungsvertrag (AVV). Ohne AVV ist die Datenweitergabe rechtswidrig — auch wenn der Sub die Daten zur Auftragserfüllung braucht.</p>
+              <p><strong>Lösung:</strong> Standard-AVV-Vorlage (z. B. von der WKO) erstellen und mit jedem regelmäßigen Subunternehmer abschließen. Bei einmaliger Tätigkeit reicht meist eine kurze Datenschutz-Klausel im Werkvertrag.</p>
+            </div>
+          </div>
+
+          <!-- ===== FALLSTRICK 5 ===== -->
+          <div class="step-card">
+            <p class="step-card__num">Fallstrick 05 · Privatgeräte</p>
+            <h3 class="step-card__title">Mitarbeiter nutzen private Smartphones für Kundendaten</h3>
+            <div class="step-card__body">
+              <p>Der Polier ruft Kunden vom eigenen Handy an, speichert Adressen im persönlichen Kontaktbuch, fotografiert Schäden mit der privaten Kamera-App. Wenn er das Handy verliert oder den Job wechselt, sind die Daten unkontrolliert verteilt. Im Bußgeldfall: Sie haften für die mangelnde organisatorische Sicherheit.</p>
+              <p><strong>Lösung:</strong> Entweder Diensthandys ausgeben (sauber) oder eine schriftliche Bring-Your-Own-Device-Richtlinie mit verpflichtender App-Trennung (z.B. via Microsoft Intune) und Löschpflicht beim Austritt.</p>
+            </div>
+          </div>
+
+          <!-- ===== FALLSTRICK 6 ===== -->
+          <div class="step-card">
+            <p class="step-card__num">Fallstrick 06 · Social-Media-DMs</p>
+            <h3 class="step-card__title">Kundenanfragen über Instagram- und Facebook-DM</h3>
+            <div class="step-card__body">
+              <p>Anfragen kommen zunehmend über Direktnachrichten in Instagram oder Facebook. Praktisch — aber Sie können die Konversation nicht in Ihr CRM exportieren, nicht nach Kategorie suchen, nicht im DSAR-Fall (Auskunftsanfrage) sauber liefern. Plus: Daten landen unkontrolliert auf Meta-Servern in den USA.</p>
+              <p><strong>Lösung:</strong> In der Bio einen klaren Hinweis setzen: "Anfragen bitte per Mail an info@…". Über DMs eintreffende Anfragen aktiv in Ihr Mail-/CRM-System überführen, dann dort weiterbearbeiten. Den Übergang dokumentieren.</p>
+            </div>
+          </div>
+
+          <!-- ===== FALLSTRICK 7 ===== -->
+          <div class="step-card">
+            <p class="step-card__num">Fallstrick 07 · Cloud-Sicherheit</p>
+            <h3 class="step-card__title">Mitarbeiterdaten unverschlüsselt im Cloud-Tool</h3>
+            <div class="step-card__body">
+              <p>Lohnzettel, Krankenstandsmeldungen, Bewerbungsunterlagen, Verträge — alles im Dropbox-Ordner "HR" oder im Microsoft-OneDrive der Geschäftsführung. Häufig: keine Zwei-Faktor-Authentifizierung, keine Verschlüsselung, kein dokumentiertes Berechtigungskonzept.</p>
+              <p><strong>Lösung:</strong> 2FA aktivieren (Pflicht). Sensitive Ordner mit getrennten Zugriffsrechten anlegen. Verschlüsselung "at rest" prüfen (bei Microsoft 365 Business standardmäßig aktiv). Berechtigungskonzept dokumentieren — wer darf was.</p>
+            </div>
+          </div>
+
+          <h2>Wie viel Aufwand kommt auf Ihren Betrieb zu?</h2>
+          <p>
+            Realistisch: 15–25&nbsp;Stunden über vier bis sechs Wochen verteilt, plus die Kosten für ggf. neue Tools (CRM, Diensthandys, AVV-Vorlagen). Bei einem Stundensatz von 80&nbsp;€ in der Geschäftsführung sind das rund 1.500&nbsp;€ Eigenleistung — gegenüber Bußgeldern, die ab 5.000&nbsp;€ beginnen und in vergleichbaren Fällen auch sechsstellig werden können.
+          </p>
+
+          <blockquote>
+            Datenschutz im Handwerk ist nicht teuer. Teuer ist es nur, wenn man ihn ignoriert.
+            <cite>Aus der Beratungspraxis</cite>
+          </blockquote>
+
+          <div class="callout callout--info">
+            <svg class="callout__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div class="callout__body">
+              <p><strong>Tipp für die Reihenfolge:</strong> Beginnen Sie mit Fallstrick 04 (Subunternehmer-AVV) und 07 (Cloud-Sicherheit) — das sind die, die im Audit am häufigsten geprüft werden. Die anderen folgen, sobald die Basis steht.</p>
+            </div>
+          </div>
+
+          <h2>Was als Nächstes</h2>
+          <p>
+            Die meisten Handwerksbetriebe haben drei oder vier dieser Fallstricke gleichzeitig — und wissen es nicht. Eine kurze <a href="../../index.html#kontakt">DSGVO-Erstanalyse</a> deckt in 60&nbsp;Minuten die konkreten Lücken auf und priorisiert die Maßnahmen. Kostenlos, unverbindlich, ohne Verkaufsdruck.
+          </p>
+
+          <div class="article-tags" aria-label="Themen-Tags">
+            <span class="article-tag">Handwerk</span>
+            <span class="article-tag">DSGVO</span>
+            <span class="article-tag">KMU</span>
+            <span class="article-tag">AVV</span>
+            <span class="article-tag">Mitarbeiterdaten</span>
+            <span class="article-tag">Branchenanalyse</span>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== AUTHOR BOX ===== -->
+    <section class="author-box" aria-label="Über den Autor">
+      <div class="container">
+        <div class="author-box__inner">
+          <picture>
+            <source srcset="../../alexander-kroes-1.png" type="image/png">
+            <img src="../../alexander-kroes-1.png" alt="Alexander Kroes" class="author-box__avatar" width="88" height="88" loading="lazy">
+          </picture>
+          <div>
+            <p class="author-box__eyebrow">Über den Autor</p>
+            <h2 class="author-box__name">Alexander Kroes</h2>
+            <p class="author-box__bio">
+              Externer Datenschutzbeauftragter mit 12+ Jahren Erfahrung in der Beratung von KMU und Mittelstandsunternehmen. Zertifiziert nach ÖVE/ÖNORM EN ISO/IEC 17024. Spezialisiert auf pragmatische DSGVO-Umsetzung ohne juristischen Overhead — mit dem Anspruch, dass Datenschutz den Betrieb schützt, nicht lähmt.
+            </p>
+            <a href="../../index.html#alexander-kroes" class="author-box__cta">
+              Mehr über Alexander Kroes
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== END CTA ===== -->
+    <section class="end-cta" aria-label="Kontakt-Aufruf">
+      <div class="container">
+        <div class="end-cta__inner">
+          <p class="end-cta__eyebrow">Bereit für den nächsten Schritt?</p>
+          <h2 class="end-cta__title">Welche Fallstricke betreffen Ihren Betrieb?</h2>
+          <p class="end-cta__lead">
+            In 30 Minuten klären wir, welche der sieben Fallstricke bei Ihnen schon Thema sind, wo die Lücken liegen und was die nächsten Maßnahmen sind. Kostenlos. Unverbindlich. Ohne Verkaufsdruck.
+          </p>
+          <div class="end-cta__buttons">
+            <a href="../../index.html#kontakt" class="end-cta__btn-primary">
+              Kostenloses Erstgespräch
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="../" class="end-cta__btn-ghost">
+              Mehr im Blog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <img src="../../logo-datenschutz-kroes.png" alt="Datenschutz Kroes" style="height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+            Datenschutz Kroes
+          </div>
+          <p class="footer__tagline">Externer Datenschutzbeauftragter für KMU & Mittelstand.</p>
+          <p class="footer__tagline-values">Zertifiziert. Persönlich. Verlässlich.</p>
+          <img src="../../wifi-wko-zertifikat.jpg" alt="WIFI WKO Zertifikat" class="footer__cert" width="88" height="111" loading="lazy">
+          <p class="footer__cert-caption">Zertifiziert nach<br>ÖVE/ÖNORM<br>EN ISO / IEC<br>17024</p>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Leistungen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="../../index.html#leistungen" class="footer__link">Externer DSB</a></li>
+            <li><a href="../../datenschutz-flatrate.html" class="footer__link">Pakete &amp; Preise</a></li>
+            <li><a href="../../index.html#leistungen" class="footer__link">DSGVO-Erstanalyse</a></li>
+            <li><a href="../../index.html#leistungen" class="footer__link">Mitarbeiterschulungen</a></li>
+            <li><a href="../../index.html#leistungen" class="footer__link">Dokumentation</a></li>
+            <li><a href="../../index.html#leistungen" class="footer__link">Datenschutz-Folgenabschätzung</a></li>
+            <li><a href="../../index.html#leistungen" class="footer__link">Incident Response</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Unternehmen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="../../index.html#alexander-kroes" class="footer__link">Alexander Kroes</a></li>
+            <li><a href="../../index.html#prozess" class="footer__link">Prozess</a></li>
+            <li><a href="../../index.html#faq" class="footer__link">FAQ</a></li>
+            <li><a href="../" class="footer__link">Blog</a></li>
+            <li><a href="../../index.html#kontakt" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-label">Kontakt</p>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.2"/><path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <a href="mailto:info@datenschutz-kroes.at" class="footer__link">info@datenschutz-kroes.at</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V13a1 1 0 01-1 1h-2C7.82 14 2 8.18 2 1V3h1z" stroke="currentColor" stroke-width="1.2"/></svg>
+            <a href="tel:+4353382010" class="footer__link">+43 (0) 5338-20105</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1a4 4 0 100 8A4 4 0 008 1zM1.5 15c0-2.5 2.91-4.5 6.5-4.5s6.5 2 6.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="footer__link">Kufstein, Tirol</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__social" aria-label="Social Media">
+        <a href="https://www.facebook.com/datenschutz-kroes" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@DatenschutzKroes" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0F1F3D"/></svg>
+        </a>
+        <a href="https://www.instagram.com/datenschutz_kroes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Datenschutz Kroes. Alle Rechte vorbehalten.</p>
+        <p class="footer__copy footer__made-by">Website by <a href="https://upprime-connect.at/" target="_blank" rel="noopener noreferrer" class="footer__upprime-link"><span class="footer__upprime-white">Upprime</span> <span class="footer__upprime-purple">Connect</span></a></p>
+        <nav class="footer__legal" aria-label="Rechtliche Links">
+          <a href="../../impressum.html">Impressum</a>
+          <a href="../../datenschutz.html">Datenschutzerklärung</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Nav
+    const hamburger = document.getElementById('hamburger');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    let navOpen = false;
+
+    hamburger.addEventListener('click', () => {
+      navOpen = !navOpen;
+      hamburger.classList.toggle('open', navOpen);
+      mobileOverlay.classList.toggle('open', navOpen);
+      hamburger.setAttribute('aria-expanded', navOpen);
+      mobileOverlay.setAttribute('aria-hidden', !navOpen);
+      document.body.style.overflow = navOpen ? 'hidden' : '';
+    });
+
+    function closeMobileNav() {
+      navOpen = false;
+      hamburger.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileOverlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navOpen) closeMobileNav();
+    });
+
+    // Reading Progress
+    const progressBar = document.getElementById('reading-progress');
+    const article = document.querySelector('.article-body');
+    function updateProgress() {
+      if (!article) return;
+      const rect = article.getBoundingClientRect();
+      const start = window.scrollY + rect.top - window.innerHeight * 0.2;
+      const end = window.scrollY + rect.bottom - window.innerHeight * 0.5;
+      const total = end - start;
+      const current = Math.max(0, Math.min(total, window.scrollY - start));
+      const pct = total > 0 ? (current / total) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  </script>
+
+  <script src="../../cookie-banner.js" defer></script>
+</body>
+</html>
