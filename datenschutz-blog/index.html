@@ -127,12 +127,14 @@
 
     .article-card { background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base); }
     .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated); border-color: var(--color-slate-light); }
-    .article-card__cover { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: linear-gradient(135deg, var(--color-navy), var(--color-prussian)); display: flex; align-items: center; justify-content: center; }
-    .article-card__cover-mark { font-family: var(--font-sans); font-size: 88px; font-weight: 700; color: rgba(255,255,255,0.08); letter-spacing: -0.04em; line-height: 1; user-select: none; }
-    .article-card__cover--bussgeld { background: linear-gradient(135deg, #2a0c12 0%, #5a1a26 60%, var(--color-rose) 100%); }
-    .article-card__cover--branche { background: linear-gradient(135deg, #0a2a1d 0%, #14442e 60%, var(--color-verdant) 100%); }
-    .article-card__cover--howto { background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-prussian) 100%); }
-    .article-card__category { position: absolute; top: 16px; left: 16px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(255,255,255,0.95); color: var(--color-navy); border-radius: 100px; backdrop-filter: blur(6px); }
+    .article-card__cover { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background-color: var(--color-navy); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; transition: transform var(--transition-base); }
+    .article-card:hover .article-card__cover { transform: scale(1.03); }
+    .article-card__cover::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,31,61,0.78) 0%, rgba(27,79,138,0.62) 100%); z-index: 1; pointer-events: none; }
+    .article-card__cover--bussgeld::before { background: linear-gradient(135deg, rgba(42,12,18,0.84) 0%, rgba(90,26,38,0.7) 55%, rgba(178,58,72,0.58) 100%); }
+    .article-card__cover--branche::before { background: linear-gradient(135deg, rgba(10,42,29,0.84) 0%, rgba(20,68,46,0.7) 55%, rgba(45,106,79,0.58) 100%); }
+    .article-card__cover--howto::before { background: linear-gradient(135deg, rgba(15,31,61,0.82) 0%, rgba(27,79,138,0.62) 100%); }
+    .article-card__cover-mark { position: relative; z-index: 2; font-family: var(--font-sans); font-size: 88px; font-weight: 700; color: rgba(255,255,255,0.18); letter-spacing: -0.04em; line-height: 1; user-select: none; }
+    .article-card__category { position: absolute; top: 16px; left: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(255,255,255,0.95); color: var(--color-navy); border-radius: 100px; backdrop-filter: blur(6px); }
     .article-card__category-dot { width: 6px; height: 6px; border-radius: 50%; }
     .article-card__category-dot--bussgeld { background: var(--color-rose); }
     .article-card__category-dot--branche { background: var(--color-verdant); }
@@ -354,7 +356,7 @@
 
           <!-- Article 1: How-To (Template-Demo) -->
           <a href="dsgvo-compliance-5-schritte-kmu/" class="article-card" data-category="howto">
-            <div class="article-card__cover article-card__cover--howto">
+            <div class="article-card__cover article-card__cover--howto" style="background-image: url('../Praxis%20Leitfaden%20DSGVO%20Check%20.jpg');">
               <span class="article-card__cover-mark">01</span>
               <span class="article-card__category">
                 <span class="article-card__category-dot article-card__category-dot--howto"></span>
@@ -380,7 +382,7 @@
 
           <!-- Article 2: Bußgeldfall (Meta 1,2 Mrd.) -->
           <a href="meta-bussgeld-12-milliarden-lehren-kmu/" class="article-card" data-category="bussgeld">
-            <div class="article-card__cover article-card__cover--bussgeld">
+            <div class="article-card__cover article-card__cover--bussgeld" style="background-image: url('meta-bussgeld-12-milliarden-lehren-kmu/meta-muss-bussgeld-zahlen.webp');">
               <span class="article-card__cover-mark">02</span>
               <span class="article-card__category">
                 <span class="article-card__category-dot article-card__category-dot--bussgeld"></span>
@@ -406,7 +408,7 @@
 
           <!-- Article 3: Branche (Handwerk) -->
           <a href="datenschutz-im-handwerk-7-fallstricke/" class="article-card" data-category="branche">
-            <div class="article-card__cover article-card__cover--branche">
+            <div class="article-card__cover article-card__cover--branche" style="background-image: url('datenschutz-im-handwerk-7-fallstricke/DSGVO%20im%20Handwerksbetrieb.webp');">
               <span class="article-card__cover-mark">03</span>
               <span class="article-card__category">
                 <span class="article-card__category-dot article-card__category-dot--branche"></span>
@@ -432,7 +434,7 @@
 
           <!-- Article 4: How-To (NIS2) -->
           <a href="nis2-richtlinie-was-kmu-umsetzen-muessen/" class="article-card" data-category="howto">
-            <div class="article-card__cover article-card__cover--howto">
+            <div class="article-card__cover article-card__cover--howto" style="background-image: url('../NIS2-Leitfaden-Deckblatt.jpg');">
               <span class="article-card__cover-mark">04</span>
               <span class="article-card__category">
                 <span class="article-card__category-dot article-card__category-dot--howto"></span>
@@ -458,7 +460,7 @@
 
           <!-- Article 5: How-To (KI und Datenschutz) -->
           <a href="ki-und-datenschutz-dsgvo-konform-einsetzen/" class="article-card" data-category="howto">
-            <div class="article-card__cover article-card__cover--howto">
+            <div class="article-card__cover article-card__cover--howto" style="background-image: url('../Praxis%20Leitfaden%20DSGVO%20und%20KI%20.jpg');">
               <span class="article-card__cover-mark">05</span>
               <span class="article-card__category">
                 <span class="article-card__category-dot article-card__category-dot--howto"></span>
@@ -484,7 +486,7 @@
 
           <!-- Article 6: How-To (KI und Claude) -->
           <a href="ki-und-claude-dsgvo-konform-einsetzen/" class="article-card" data-category="howto">
-            <div class="article-card__cover article-card__cover--howto">
+            <div class="article-card__cover article-card__cover--howto" style="background-image: url('ki-und-claude-dsgvo-konform-einsetzen/KI%20und%20Claude.webp');">
               <span class="article-card__cover-mark">06</span>
               <span class="article-card__category">
                 <span class="article-card__category-dot article-card__category-dot--howto"></span>
