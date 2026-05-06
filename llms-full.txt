@@ -24,6 +24,7 @@
 | URL | Titel | Zweck |
 |---|---|---|
 | `/index.html` | Startseite – Datenschutzbeauftragter für KMU & Mittelstand | Hauptseite mit Hero, Leistungen, Prozess, FAQ, Kontakt, Newsletter |
+| `/datenschutz-flatrate.html` | Datenschutz-Flatrate – Externer DSB ab 290 €/Monat | Pakete & Preise, DSB-Flatrate-Modell mit 4 Tarifen |
 | `/dsgvo-seminar.html` | DSGVO für Geschäftsführungen – Praxis-Seminar | Detail-Seite zum DSGVO-Seminar |
 | `/nis2-seminar.html` | NIS2 Kompakt – Cybersicherheit Seminar | Detail-Seite zum NIS2-Seminar |
 | `/downloads.html` | Downloads | Kostenlose Checklisten, Leitfäden, Vorlagen (PDF) |
@@ -209,7 +210,148 @@ A: Ja. Mitarbeiterschulungen sind ein zentraler Bestandteil eines wirksamen Date
 
 ---
 
-# 2. NIS2 Kompakt Seminar (nis2-seminar.html)
+# 2. Datenschutz-Flatrate (datenschutz-flatrate.html)
+
+**Title:** Datenschutz-Flatrate – Externer DSB ab 290 €/Monat | Datenschutz Kroes
+**Meta-Description:** Datenschutz-Flatrate für KMU: Externer Datenschutzbeauftragter zur festen Monatspauschale ab 290 €. 4 Pakete, transparente Preise, kein Stundenrisiko.
+**Keywords:** Datenschutz Flatrate, DSB Pauschale, Datenschutzbeauftragter Kosten, Datenschutzbeauftragter Pauschale, externer Datenschutzbeauftragter monatlich, DSGVO Beratung Abo
+
+## Hero
+
+**Eyebrow:** Pakete & Preise · DSB-Flatrate
+**H1:** Datenschutz zur festen Monatspauschale.
+**Lead:** Externer Datenschutzbeauftragter im planbaren Retainer-Modell — feste Pakete, transparente Preise, kein Stundenrisiko. Compliance-Kosten, die kalkulierbar sind. Vier Pakete, abgestimmt auf Ihre Mitarbeiterzahl.
+**CTAs:** „Pakete vergleichen" · „Kostenloses Erstgespräch"
+
+**Trust-Row:** Feste Monatspauschale · Persönlicher Ansprechpartner · DSB nach Art. 37 DSGVO
+
+**Hero-Pricing-Card (Übersicht):**
+- Paket S · bis 20 Mitarbeiter — 290 €/Mon.
+- Paket M · bis 50 Mitarbeiter — 590 €/Mon.
+- Paket L · bis 100 Mitarbeiter — 990 €/Mon.
+- Paket XL · über 100 Mitarbeiter — ab 1.500 €/Mon.
+
+**Hinweis:** Alle Preise netto pro Monat zzgl. gesetzlicher MwSt. Konditionen und Laufzeit besprechen wir im persönlichen Erstgespräch.
+
+## Vorteile — Vier Gründe für die Pauschale
+
+**Lead:** Statt unkalkulierbarer Stundenabrechnung bekommen Sie ein festes Leistungspaket zu einer festen monatlichen Pauschale. Sie wissen jederzeit, was Sie zahlen — und was Sie dafür erhalten.
+
+1. **Planbare Compliance-Kosten** — Feste Monatspauschale ohne versteckte Stundenabrechnung. Ihr Datenschutz-Budget steht für 24 Monate fix.
+2. **DSB-Pflicht erfüllt** — Erfüllung Ihrer Bestellpflicht nach Art. 37 DSGVO. Offizielle Bestellung als externer DSB inklusive Bestellurkunde.
+3. **Reduziertes Bußgeldrisiko** — Mit dokumentierter Compliance senken Sie das Risiko von Bußgeldern bis zu 4 % des Konzernumsatzes deutlich.
+4. **Persönlicher Ansprechpartner** — Kein Ticketsystem. Sie sprechen direkt mit Alexander Kroes — per Telefon, E-Mail oder vor Ort.
+
+## Pakete — Vier Tarife im Detail
+
+**Lead:** Alle Pakete enthalten die Bestellung als externer Datenschutzbeauftragter, definierte Beratungszeit und Standard-Vorlagen. Mit der Größe Ihres Unternehmens wachsen die enthaltenen Leistungen mit.
+
+### Paket S — Starter (bis 20 Mitarbeiter)
+**Preis:** 290 € netto pro Monat · zzgl. MwSt.
+**Enthält:**
+- Bestellung als externer DSB
+- Verarbeitungsverzeichnis (Basis)
+- AVV-Prüfung 5 / Jahr
+- E-Mail-Support
+- 4 h Beratung pro Quartal
+
+### Paket M — Mittelstand (bis 50 Mitarbeiter) — *Beliebteste Wahl*
+**Preis:** 590 € netto pro Monat · zzgl. MwSt.
+**Alles aus S, plus:**
+- 1 Mitarbeiter-Schulung pro Jahr
+- AVV-Prüfung 15 / Jahr
+- Quartals-Call mit DSB
+- 8 h Beratung pro Quartal
+- DSFA Light
+
+### Paket L — Large (bis 100 Mitarbeiter)
+**Preis:** 990 € netto pro Monat · zzgl. MwSt.
+**Alles aus M, plus:**
+- 2 Vor-Ort-Termine pro Jahr
+- 2 Mitarbeiter-Schulungen pro Jahr
+- AVV-Prüfung unlimitiert
+- Vorfallsmanagement 24 h
+- 12 h Beratung pro Quartal
+- DSFA komplett
+
+### Paket XL — Enterprise (über 100 Mitarbeiter)
+**Preis:** ab 1.500 € netto pro Monat · individuell
+**Individuell, plus:**
+- Alles aus Paket L
+- ISO 27001 Vorbereitung
+- Konzern-Themen & Tochtergesellschaften
+- Internationale Datentransfers
+- Maßgeschneidertes Stundenkontingent
+
+**Hinweis zur Beschäftigtenzahl:** Maßgeblich ist die Gesamtzahl der Beschäftigten i. S. d. § 38 BDSG — also Voll- und Teilzeit, geringfügig Beschäftigte, Auszubildende, Praktikanten, Werkstudenten sowie die Geschäftsführung. Die genaue Einordnung legen wir gemeinsam im Erstgespräch fest.
+
+## Einmalige Setup-Gebühr
+
+Im ersten Monat fällt einmalig eine Setup-Gebühr für das Initial-Audit, den Aufbau des Verarbeitungsverzeichnisses und die offizielle Bestellungsmeldung an.
+
+| Paket | Setup-Gebühr |
+|---|---|
+| S | 990 € |
+| M | 1.490 € |
+| L | 2.490 € |
+| XL | individuell |
+
+## Leistungsumfang — Was enthalten ist und was nicht
+
+### Im Paket enthalten (Standardleistungen)
+- Erfüllung aller Aufgaben nach Art. 39 DSGVO
+- Ansprechpartner für Aufsichtsbehörde und Betroffene
+- Definiertes Stundenkontingent für laufende Beratung
+- Standard-Vorlagen: VVT, AVV, TOM, Datenschutzerklärung
+- Offizielle Bestellung als externer DSB inklusive Urkunde
+- Persönlicher Ansprechpartner per E-Mail und Telefon
+
+### Nicht enthalten — separat abgerechnet
+- Rechtsanwaltsleistungen und Vertretung vor Behörden
+- IT-Implementierung, Software-Auswahl und -Konfiguration
+- Datenpannenmanagement bei Großvorfällen über 8 Stunden
+- Übersetzungen und Audits bei Subunternehmern
+- M&A-Datenschutz und Due-Diligence-Prüfungen
+- Reisen über 50 km Anfahrt
+
+## Onboarding — In 4 Wochen voll einsatzbereit
+
+1. **Woche 1 — Kick-off:** Vertragsunterzeichnung, Bestellung als DSB, Stakeholder-Mapping und Aufnahme Ihrer Datenlandschaft per Fragebogen.
+2. **Woche 2 — Initial-Audit:** GAP-Analyse zum aktuellen DSGVO-Stand, Sichtung Bestandsdokumente und Übersicht über Ihre IT-Infrastruktur.
+3. **Woche 3 — Aufbau:** Erstellung oder Aktualisierung Ihres Verarbeitungsverzeichnisses, AVV-Status pro Dienstleister, TOM-Dokumentation.
+4. **Woche 4 — Übergabe:** Kick-off-Meeting mit Ihrem Team, Schulung der Schlüsselpersonen, Übergabe Doku-Paket, Eintrag bei der Aufsichtsbehörde.
+
+## FAQ — Was Sie zur Flatrate wissen sollten
+
+**Q: Welches Paket passt zu meinem Unternehmen?**
+A: Maßgeblich ist die Mitarbeiterzahl: bis 20 → Paket S, bis 50 → Paket M, bis 100 → Paket L, über 100 → Paket XL. Bei besonderem Datenschutzbedarf (Gesundheit, Finanz, IT, E-Commerce, HR) kann auch bei kleinerer Mitarbeiterzahl ein größeres Paket sinnvoll sein. Im kostenlosen Erstgespräch klären wir, welches Paket für Ihre Situation passt.
+
+**Q: Was passiert, wenn das Stundenkontingent aufgebraucht ist?**
+A: Sie werden frühzeitig informiert, sobald sich der Verbrauch dem Limit nähert. Mehraufwand wird transparent nach klaren Spielregeln abgerechnet — die genauen Konditionen erhalten Sie im Mustervertrag, den wir im Erstgespräch gemeinsam durchgehen.
+
+**Q: Was ist die Setup-Gebühr und warum fällt sie an?**
+A: Im ersten Monat fällt eine einmalige Setup-Gebühr für das Initial-Audit, den Aufbau Ihres Verarbeitungsverzeichnisses und die offizielle Bestellungsmeldung an. Diese Aufwände sind nicht Teil der laufenden Pauschale — sie schaffen die Grundlage, auf der die monatliche Betreuung aufbaut. Höhe je Paket: 990 € (S), 1.490 € (M), 2.490 € (L), individuell (XL).
+
+**Q: Was passiert bei einem Datenschutzvorfall?**
+A: Im Paket L und XL ist Vorfallsmanagement innerhalb von 24 Stunden Reaktionszeit enthalten — inklusive Behördenmeldung binnen 72 Stunden. In Paket S und M wird Vorfallsmanagement im Rahmen Ihres Stundenkontingents bearbeitet; bei Großvorfällen über 8 Stunden Aufwand wird der zusätzliche Aufwand separat abgerechnet.
+
+**Q: Sind die Preise verhandelbar?**
+A: Die Pakete S, M und L sind festpreis. Was für ein passendes Paket spricht, ist nicht der Preis, sondern der Leistungsumfang — wir empfehlen das Paket, das wirklich zu Ihrem Bedarf passt. Paket XL (über 100 Mitarbeiter) ist immer individuell kalkuliert: hier hängen Preis und Leistung von Ihrer Konzernstruktur, internationalen Datentransfers und gewünschten Zusatzthemen ab.
+
+**Q: Wie schnell startet die Betreuung?**
+A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung sofort. Der strukturierte 4-Wochen-Onboarding-Prozess führt Sie von Kick-off bis zur offiziellen Behördenmeldung. Sie sind in der Regel innerhalb von 5 Werktagen offiziell als bestellt gemeldet.
+
+## Final CTA
+
+**Eyebrow:** Bereit für planbaren Datenschutz
+**Headline:** Welches Paket passt zu Ihrem Unternehmen?
+**Text:** Vereinbaren Sie ein kostenloses, unverbindliches Erstgespräch. In 30 Minuten klären wir gemeinsam, welches Paket zu Ihrer Mitarbeiterzahl, Branche und Datenschutz-Ausgangslage passt — und wann Sie starten können.
+**CTA:** Kostenloses Erstgespräch vereinbaren (mailto:info@datenschutz-kroes.at)
+**Micro:** Kein Risiko · Keine Verpflichtung · Antwort innerhalb von 24 Stunden
+
+---
+
+# 3. NIS2 Kompakt Seminar (nis2-seminar.html)
 
 **Title:** NIS2 Kompakt – Cybersicherheit Seminar
 **Meta-Description:** NIS2 Kompakt: Das Praxis-Seminar für Geschäftsführer und Entscheider. 120 Minuten, 349€ zzgl. MwSt. Ob und warum Ihr Unternehmen unter NIS2 fällt – klar erklärt.
@@ -284,7 +426,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 
 ---
 
-# 3. DSGVO für Geschäftsführungen Seminar (dsgvo-seminar.html)
+# 4. DSGVO für Geschäftsführungen Seminar (dsgvo-seminar.html)
 
 **Title:** DSGVO für Geschäftsführungen – Praxis-Seminar
 **Meta-Description:** DSGVO für Geschäftsführungen: Das Praxis-Seminar für Entscheider. 120 Minuten, 495€ zzgl. MwSt. Was Geschäftsführer wirklich wissen müssen – klar, verständlich, ohne Juristendeutsch.
@@ -373,7 +515,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 
 ---
 
-# 4. Downloads (downloads.html)
+# 5. Downloads (downloads.html)
 
 **Title:** Downloads
 **Meta-Description:** Kostenlose Datenschutz-Unterlagen, Checklisten und Leitfäden für KMU und Geschäftsführungen — zum Download bereitgestellt von Datenschutz Kroes.
@@ -429,7 +571,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 
 ---
 
-# 5. Benennungsurkunde (benennungsurkunde.html)
+# 6. Benennungsurkunde (benennungsurkunde.html)
 
 **Title:** Benennungsurkunde
 **Eyebrow:** Rechtsdokument
@@ -477,7 +619,7 @@ Der Datenschutzbeauftragte trägt gemäß Art. 39 Abs. 2 DSGVO bei der Aufgabene
 
 ---
 
-# 6. Impressum (impressum.html)
+# 7. Impressum (impressum.html)
 
 **Title:** Impressum
 **Stand:** April 2026
@@ -526,7 +668,7 @@ Datenschutz Kroes nimmt nicht an Streitbeilegungsverfahren vor Verbraucherschlic
 
 ---
 
-# 7. Datenschutzerklärung (datenschutz.html)
+# 8. Datenschutzerklärung (datenschutz.html)
 
 **Title:** Datenschutzerklärung
 **Stand:** April 2026
@@ -615,7 +757,7 @@ Technische und organisatorische Sicherheitsmaßnahmen, fortlaufend an technologi
 
 ---
 
-# 8. Newsletter-Leseprobe (newsletter-leseprobe.html)
+# 9. Newsletter-Leseprobe (newsletter-leseprobe.html)
 
 **Title:** Newsflash – Leseprobe
 **Meta-Description:** Leseprobe des monatlichen Datenschutz-Newsletters für Inhaber, Geschäftsführungen und Verantwortliche.
