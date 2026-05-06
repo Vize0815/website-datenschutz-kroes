@@ -159,16 +159,16 @@
     .article-card--soon:hover { transform: none; box-shadow: none; border-color: var(--color-mist); }
 
     /* ===== NEWSLETTER BAND ===== */
-    .newsletter-band { background: var(--color-navy); padding: 80px 0; position: relative; overflow: hidden; }
-    .newsletter-band::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(201,168,76,0.5), transparent); }
+    .newsletter-band { background: var(--color-surface); padding: 80px 0; position: relative; overflow: hidden; border-top: 1px solid var(--color-mist); border-bottom: 1px solid var(--color-mist); }
+    .newsletter-band::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 2px; background: var(--color-gold); }
     .newsletter-band__inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
     .newsletter-band__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 16px; }
-    .newsletter-band__title { font-size: clamp(28px, 3.6vw, 38px); font-weight: 500; color: var(--color-surface); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
-    .newsletter-band__lead { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.7; }
+    .newsletter-band__title { font-size: clamp(28px, 3.6vw, 38px); font-weight: 500; color: var(--color-navy); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .newsletter-band__lead { font-size: 16px; font-weight: 300; color: var(--color-slate); line-height: 1.7; }
     .newsletter-band__cta-wrap { display: flex; flex-direction: column; gap: 12px; }
-    .newsletter-band__cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 28px; font-size: 15px; font-weight: 600; color: var(--color-navy); background: var(--color-gold); border-radius: var(--radius-md); transition: background var(--transition-base), transform var(--transition-base); }
-    .newsletter-band__cta:hover { background: #e0bc5a; transform: translateY(-1px); }
-    .newsletter-band__note { font-size: 13px; color: rgba(255,255,255,0.5); text-align: center; }
+    .newsletter-band__cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 28px; font-size: 15px; font-weight: 600; color: var(--color-surface); background: var(--color-navy); border: none; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: background var(--transition-base), transform var(--transition-base); }
+    .newsletter-band__cta:hover { background: var(--color-prussian); transform: translateY(-1px); }
+    .newsletter-band__note { font-size: 13px; color: var(--color-slate-light); text-align: center; }
 
     /* ===== FOOTER ===== */
     .footer { background-color: var(--color-navy); padding: 80px 0 0; }
@@ -439,7 +439,7 @@
             </p>
           </div>
           <div class="newsletter-band__cta-wrap">
-            <a href="../index.html#kontakt" class="newsletter-band__cta">
+            <a href="../index.html#newsletter" class="newsletter-band__cta">
               Newsletter abonnieren
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
