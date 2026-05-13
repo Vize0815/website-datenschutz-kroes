@@ -2864,6 +2864,636 @@
       .callback-modal__body   { padding: 24px 24px 28px; }
     }
 
+    /* =============================================
+       NIS-2 QUIZ
+    ============================================= */
+    .quiz-nis2 {
+      padding: var(--space-section) 0;
+      background-color: var(--color-surface);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quiz-nis2__bg-mark {
+      position: absolute;
+      top: -40px;
+      left: -30px;
+      font-family: var(--font-serif);
+      font-weight: 900;
+      font-size: clamp(220px, 22vw, 340px);
+      color: rgba(27, 79, 138, 0.05);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.04em;
+    }
+
+    .quiz-nis2__header {
+      max-width: 760px;
+      margin: 0 auto 56px;
+      text-align: center;
+      position: relative;
+    }
+
+    .quiz-nis2__eyebrow {
+      color: var(--color-gold);
+    }
+
+    .quiz-nis2__headline {
+      margin-top: 12px;
+    }
+
+    .quiz-nis2__lead {
+      margin-top: 16px;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .quiz-nis2__card {
+      position: relative;
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      border: 1px solid var(--color-mist);
+      border-radius: var(--radius-md);
+      padding: 48px;
+      box-shadow: 0 8px 32px -16px rgba(15, 31, 61, 0.08);
+    }
+
+    .quiz-nis2__progress-wrap {
+      margin-bottom: 32px;
+    }
+
+    .quiz-nis2__progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--color-slate);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .quiz-nis2__progress-meta strong {
+      color: var(--color-navy);
+      font-weight: 500;
+    }
+
+    .quiz-nis2__progress-bar {
+      height: 3px;
+      background-color: var(--color-mist);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .quiz-nis2__progress-fill {
+      height: 100%;
+      background-color: var(--color-gold);
+      width: 0%;
+      transition: width 360ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .quiz-nis2__step {
+      display: none;
+    }
+
+    .quiz-nis2__step.is-active {
+      display: block;
+      animation: quizFade 320ms ease both;
+    }
+
+    @keyframes quizFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .quiz-nis2__question {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: clamp(22px, 2.4vw, 28px);
+      line-height: 1.3;
+      color: var(--color-navy);
+      margin-bottom: 8px;
+    }
+
+    .quiz-nis2__hint {
+      font-size: 14px;
+      color: var(--color-slate);
+      margin-bottom: 24px;
+    }
+
+    .quiz-nis2__hint details {
+      margin-top: 8px;
+    }
+
+    .quiz-nis2__hint summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--color-prussian);
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .quiz-nis2__hint summary::-webkit-details-marker { display: none; }
+
+    .quiz-nis2__hint summary::after {
+      content: '+';
+      font-weight: 600;
+    }
+
+    .quiz-nis2__hint details[open] summary::after {
+      content: '−';
+    }
+
+    .quiz-nis2__hint-body {
+      margin-top: 10px;
+      padding: 14px 16px;
+      background: var(--color-sky-tint);
+      border-left: 2px solid var(--color-prussian);
+      border-radius: 2px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--color-ink);
+    }
+
+    .quiz-nis2__hint-body ul {
+      margin: 6px 0 0 18px;
+      padding: 0;
+    }
+
+    .quiz-nis2__hint-body li {
+      margin-bottom: 4px;
+    }
+
+    .quiz-nis2__options {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .quiz-nis2__option {
+      display: block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .quiz-nis2__option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .quiz-nis2__option-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 22px;
+      border: 1.5px solid var(--color-mist);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      transition: border-color 200ms ease, background-color 200ms ease, transform 200ms ease;
+    }
+
+    .quiz-nis2__option:hover .quiz-nis2__option-box {
+      border-color: var(--color-prussian);
+      background-color: #FAFCFE;
+    }
+
+    .quiz-nis2__option input:checked + .quiz-nis2__option-box {
+      border-color: var(--color-navy);
+      background-color: var(--color-sky-tint);
+    }
+
+    .quiz-nis2__option input:focus-visible + .quiz-nis2__option-box {
+      outline: 2px solid var(--color-gold);
+      outline-offset: 2px;
+    }
+
+    .quiz-nis2__option-marker {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--color-mist);
+      background: var(--color-surface);
+      position: relative;
+      margin-top: 2px;
+      transition: border-color 200ms ease;
+    }
+
+    .quiz-nis2__option input[type="checkbox"] + .quiz-nis2__option-box .quiz-nis2__option-marker {
+      border-radius: 4px;
+    }
+
+    .quiz-nis2__option input:checked + .quiz-nis2__option-box .quiz-nis2__option-marker {
+      border-color: var(--color-navy);
+      background: var(--color-navy);
+    }
+
+    .quiz-nis2__option input[type="radio"]:checked + .quiz-nis2__option-box .quiz-nis2__option-marker::after {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border-radius: 50%;
+      background: var(--color-surface);
+    }
+
+    .quiz-nis2__option input[type="checkbox"]:checked + .quiz-nis2__option-box .quiz-nis2__option-marker::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      width: 5px;
+      height: 9px;
+      border: solid var(--color-surface);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .quiz-nis2__option-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .quiz-nis2__option-title {
+      font-weight: 600;
+      color: var(--color-navy);
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 2px;
+    }
+
+    .quiz-nis2__option-desc {
+      font-size: 13px;
+      color: var(--color-slate);
+      line-height: 1.5;
+    }
+
+    .quiz-nis2__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-top: 8px;
+      border-top: 1px solid var(--color-mist);
+      margin-top: 8px;
+      padding-top: 24px;
+    }
+
+    .quiz-nis2__btn-back {
+      visibility: hidden;
+    }
+
+    .quiz-nis2__btn-back.is-visible {
+      visibility: visible;
+    }
+
+    .quiz-nis2__btn-next:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .quiz-nis2__btn-next:disabled:hover {
+      background-color: var(--color-navy);
+      transform: none;
+    }
+
+    /* ----- RESULT ----- */
+    .quiz-nis2__result {
+      display: none;
+    }
+
+    .quiz-nis2__result.is-active {
+      display: block;
+      animation: quizFade 380ms ease both;
+    }
+
+    .quiz-nis2__verdict {
+      padding: 28px 32px;
+      border-radius: var(--radius-md);
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quiz-nis2__verdict--essential {
+      background: var(--color-navy);
+      color: var(--color-surface);
+      border-left: 4px solid var(--color-gold);
+    }
+
+    .quiz-nis2__verdict--important {
+      background: var(--color-prussian);
+      color: var(--color-surface);
+      border-left: 4px solid var(--color-gold);
+    }
+
+    .quiz-nis2__verdict--supply {
+      background: var(--color-sky-tint);
+      color: var(--color-navy);
+      border-left: 4px solid var(--color-prussian);
+    }
+
+    .quiz-nis2__verdict--none {
+      background: var(--color-bg);
+      color: var(--color-navy);
+      border-left: 4px solid var(--color-verdant);
+    }
+
+    .quiz-nis2__verdict--check {
+      background: var(--color-bg);
+      color: var(--color-navy);
+      border-left: 4px solid var(--color-gold);
+    }
+
+    .quiz-nis2__verdict-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 8px;
+    }
+
+    .quiz-nis2__verdict-title {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: clamp(24px, 2.6vw, 32px);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .quiz-nis2__verdict-summary {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .quiz-nis2__result-section {
+      margin-bottom: 28px;
+    }
+
+    .quiz-nis2__result-h3 {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-mist);
+    }
+
+    .quiz-nis2__obligations {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .quiz-nis2__obligations li {
+      padding: 14px 16px;
+      background: var(--color-bg);
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--color-ink);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .quiz-nis2__obligations li::before {
+      content: '§';
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--color-gold);
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .quiz-nis2__obligations strong {
+      color: var(--color-navy);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .quiz-nis2__obligations cite {
+      display: block;
+      margin-top: 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-slate);
+      font-style: normal;
+      letter-spacing: 0.04em;
+    }
+
+    .quiz-nis2__penalty {
+      padding: 18px 22px;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid var(--color-gold-light);
+      border-radius: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .quiz-nis2__penalty-icon {
+      flex-shrink: 0;
+      font-family: var(--font-serif);
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--color-gold);
+    }
+
+    .quiz-nis2__penalty-body {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--color-ink);
+    }
+
+    .quiz-nis2__penalty-body strong {
+      display: block;
+      color: var(--color-navy);
+      margin-bottom: 2px;
+    }
+
+    .quiz-nis2__penalty-body cite {
+      display: block;
+      margin-top: 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-slate);
+      font-style: normal;
+    }
+
+    /* ----- LEAD FORM ----- */
+    .quiz-nis2__lead-form {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--color-mist);
+    }
+
+    .quiz-nis2__lead-h3 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--color-navy);
+      margin-bottom: 8px;
+    }
+
+    .quiz-nis2__lead-text {
+      font-size: 14px;
+      color: var(--color-slate);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .quiz-nis2__form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 16px;
+    }
+
+    .quiz-nis2__field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quiz-nis2__field--full {
+      grid-column: 1 / -1;
+    }
+
+    .quiz-nis2__label {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-slate);
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+
+    .quiz-nis2__label .req {
+      color: var(--color-gold);
+      margin-left: 2px;
+    }
+
+    .quiz-nis2__input,
+    .quiz-nis2__select {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--color-ink);
+      padding: 12px 14px;
+      border: 1.5px solid var(--color-mist);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      transition: border-color 200ms ease;
+      width: 100%;
+    }
+
+    .quiz-nis2__input:focus,
+    .quiz-nis2__select:focus {
+      outline: none;
+      border-color: var(--color-prussian);
+    }
+
+    .quiz-nis2__check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--color-ink);
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    .quiz-nis2__check input {
+      flex-shrink: 0;
+      margin-top: 2px;
+      width: 16px;
+      height: 16px;
+      accent-color: var(--color-navy);
+      cursor: pointer;
+    }
+
+    .quiz-nis2__check a {
+      color: var(--color-prussian);
+      text-decoration: underline;
+    }
+
+    .quiz-nis2__form-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .quiz-nis2__pdf-info {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-slate);
+      letter-spacing: 0.04em;
+    }
+
+    .quiz-nis2__restart {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .quiz-nis2__disclaimer {
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 18px 22px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-mist);
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--color-slate);
+    }
+
+    .quiz-nis2__disclaimer strong {
+      color: var(--color-navy);
+    }
+
+    /* ----- MOBILE ----- */
+    @media (max-width: 768px) {
+      .quiz-nis2 { padding: var(--space-section-sm) 0; }
+      .quiz-nis2__card { padding: 28px 22px; }
+      .quiz-nis2__verdict { padding: 22px; }
+      .quiz-nis2__form-grid { grid-template-columns: 1fr; }
+      .quiz-nis2__option-box { padding: 14px 16px; }
+      .quiz-nis2__nav { flex-direction: row; }
+      .quiz-nis2__nav .btn-primary { padding: 12px 18px; font-size: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .quiz-nis2__card { padding: 22px 16px; }
+      .quiz-nis2__question { font-size: 19px; }
+      .quiz-nis2__obligations li { grid-template-columns: 1fr; }
+      .quiz-nis2__obligations li::before { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .quiz-nis2__step,
+      .quiz-nis2__result,
+      .quiz-nis2__progress-fill,
+      .quiz-nis2__option-box {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
   </style>
   <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
@@ -3623,6 +4253,407 @@
       </div>
     </section>
 
+    <!-- ============= NIS-2 QUIZ ============= -->
+    <section class="quiz-nis2" id="nis2-quiz" aria-label="NIS-2 Selbsttest">
+      <div class="quiz-nis2__bg-mark" aria-hidden="true">NIS2</div>
+      <div class="container">
+        <header class="quiz-nis2__header" data-reveal>
+          <p class="t-eyebrow quiz-nis2__eyebrow">Selbsttest · 2 Minuten</p>
+          <h2 class="t-h2 quiz-nis2__headline">Sind Sie von NIS-2 betroffen?</h2>
+          <p class="t-lead quiz-nis2__lead">
+            Beantworten Sie 5 kurze Fragen und erhalten Sie eine orientierende Einschätzung — mit klaren Quellenangaben zur NIS-2-Richtlinie und zum österreichischen NISG 2024. Auf Wunsch laden Sie das Ergebnis als PDF herunter.
+          </p>
+        </header>
+
+        <div class="quiz-nis2__card" data-reveal data-reveal-delay="1">
+          <!-- PROGRESS -->
+          <div class="quiz-nis2__progress-wrap" data-quiz-progress-wrap>
+            <div class="quiz-nis2__progress-meta">
+              <span>Frage <strong data-quiz-step-current>1</strong> von <strong data-quiz-step-total>5</strong></span>
+              <span data-quiz-progress-label>20 %</span>
+            </div>
+            <div class="quiz-nis2__progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20">
+              <div class="quiz-nis2__progress-fill" data-quiz-progress-fill style="width:20%"></div>
+            </div>
+          </div>
+
+          <!-- QUIZ STEPS -->
+          <div data-quiz-steps>
+
+            <!-- FRAGE 1: SEKTOR -->
+            <div class="quiz-nis2__step is-active" data-quiz-step="1">
+              <h3 class="quiz-nis2__question">In welchem Sektor ist Ihr Unternehmen primär tätig?</h3>
+              <p class="quiz-nis2__hint">
+                NIS-2 unterscheidet zwei Sektor-Anhänge mit unterschiedlichen Pflichten.
+                <details>
+                  <summary>Sektoren anzeigen</summary>
+                  <div class="quiz-nis2__hint-body">
+                    <strong>Sektor hoher Kritikalität (Anhang I NIS-2-RL):</strong>
+                    <ul>
+                      <li>Energie (Strom, Fernwärme, Öl, Gas, Wasserstoff)</li>
+                      <li>Verkehr (Luft, Schiene, Wasser, Straße)</li>
+                      <li>Bankwesen &amp; Finanzmarktinfrastrukturen</li>
+                      <li>Gesundheitswesen (Krankenhäuser, Arzneimittel, Medizinprodukte)</li>
+                      <li>Trinkwasser &amp; Abwasser</li>
+                      <li>Digitale Infrastruktur (DNS, TLD, Rechenzentren, Cloud, CDN, ICN, TK)</li>
+                      <li>IKT-Dienstleistungsmanagement (B2B)</li>
+                      <li>Öffentliche Verwaltung (Bund / Land)</li>
+                      <li>Weltraum</li>
+                    </ul>
+                    <strong style="display:block;margin-top:10px;">Sonstige kritische Sektoren (Anhang II NIS-2-RL):</strong>
+                    <ul>
+                      <li>Post- &amp; Kurierdienste</li>
+                      <li>Abfallbewirtschaftung</li>
+                      <li>Herstellung &amp; Vertrieb von Chemikalien</li>
+                      <li>Produktion / Verarbeitung / Vertrieb von Lebensmitteln</li>
+                      <li>Hersteller von Medizin- / IVD-Produkten, Elektronik, Maschinen, Kfz, Fahrzeugen</li>
+                      <li>Anbieter digitaler Dienste (Online-Marktplätze, Suchmaschinen, soziale Netzwerke)</li>
+                      <li>Forschungseinrichtungen</li>
+                    </ul>
+                  </div>
+                </details>
+              </p>
+              <div class="quiz-nis2__options" role="radiogroup" aria-label="Sektor">
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="sektor" value="high">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Sektor hoher Kritikalität (Anhang I)</span>
+                      <span class="quiz-nis2__option-desc">Energie, Verkehr, Bank/Finanz, Gesundheit, Wasser, digitale Infrastruktur, IKT-B2B, öffentl. Verwaltung, Weltraum</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="sektor" value="other">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Sonstiger kritischer Sektor (Anhang II)</span>
+                      <span class="quiz-nis2__option-desc">Post/Kurier, Abfall, Chemie, Lebensmittel, Herstellung (Medizin, Elektronik, Maschinen, Kfz), digitale Anbieter, Forschung</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="sektor" value="none">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Keiner der genannten Sektoren</span>
+                      <span class="quiz-nis2__option-desc">z.B. Handwerk, Beratung, Einzelhandel, Gastronomie, Bauwesen, freie Berufe</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- FRAGE 2: MITARBEITER -->
+            <div class="quiz-nis2__step" data-quiz-step="2">
+              <h3 class="quiz-nis2__question">Wie viele Mitarbeiter beschäftigt Ihr Unternehmen?</h3>
+              <p class="quiz-nis2__hint">Bitte Vollzeitäquivalente (VZÄ) gemäß Empfehlung 2003/361/EG angeben — inklusive verbundener und Partnerunternehmen.</p>
+              <div class="quiz-nis2__options" role="radiogroup" aria-label="Mitarbeiter">
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="mitarbeiter" value="small">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Weniger als 50</span>
+                      <span class="quiz-nis2__option-desc">Klein- oder Kleinstunternehmen</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="mitarbeiter" value="medium">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">50 bis 249</span>
+                      <span class="quiz-nis2__option-desc">Mittleres Unternehmen</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="mitarbeiter" value="large">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">250 oder mehr</span>
+                      <span class="quiz-nis2__option-desc">Großunternehmen</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- FRAGE 3: UMSATZ -->
+            <div class="quiz-nis2__step" data-quiz-step="3">
+              <h3 class="quiz-nis2__question">Wie hoch ist Ihr Jahresumsatz oder Ihre Jahresbilanzsumme?</h3>
+              <p class="quiz-nis2__hint">Maßgeblich ist der jeweils höhere Wert. Verbundene und Partnerunternehmen sind anteilig einzurechnen (Art. 6 Empfehlung 2003/361/EG).</p>
+              <div class="quiz-nis2__options" role="radiogroup" aria-label="Umsatz">
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="umsatz" value="small">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Bis 10 Mio. €</span>
+                      <span class="quiz-nis2__option-desc">Umsatz oder Bilanzsumme</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="umsatz" value="medium">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Mehr als 10 bis 50 Mio. €</span>
+                      <span class="quiz-nis2__option-desc">Umsatz oder Bilanzsumme</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="umsatz" value="large">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Über 50 Mio. €</span>
+                      <span class="quiz-nis2__option-desc">Umsatz oder über 43 Mio. € Bilanzsumme</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- FRAGE 4: SONDERFALL -->
+            <div class="quiz-nis2__step" data-quiz-step="4">
+              <h3 class="quiz-nis2__question">Trifft eines dieser Sonderkriterien auf Sie zu?</h3>
+              <p class="quiz-nis2__hint">Mehrfachauswahl möglich. Bei einem dieser Kriterien gilt NIS-2 <strong>unabhängig von der Unternehmensgröße</strong> (Art. 2 Abs. 2 NIS-2-RL).</p>
+              <div class="quiz-nis2__options" aria-label="Sonderkriterien">
+                <label class="quiz-nis2__option">
+                  <input type="checkbox" name="sonderfall" value="vertrauen">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Vertrauensdiensteanbieter (qualifiziert oder nicht qualifiziert)</span>
+                      <span class="quiz-nis2__option-desc">z.B. qualifizierte Signaturen, Zeitstempel, Webauthentifizierung</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="checkbox" name="sonderfall" value="dns">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">TLD-Name-Registry oder DNS-Diensteanbieter</span>
+                      <span class="quiz-nis2__option-desc">Betrieb von Top-Level-Domains oder DNS-Auflösungsdiensten</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="checkbox" name="sonderfall" value="tk">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Anbieter öffentlicher elektronischer Kommunikationsnetze / -dienste</span>
+                      <span class="quiz-nis2__option-desc">z.B. ISPs, Mobilfunk, VoIP, öffentl. WLAN-Dienste</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="checkbox" name="sonderfall" value="verwaltung">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Einrichtung der öffentlichen Verwaltung</span>
+                      <span class="quiz-nis2__option-desc">Bund oder Land (Gemeinden nur, wenn vom Mitgliedstaat erfasst)</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="checkbox" name="sonderfall" value="alleinig">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Alleinanbieter eines in Österreich essenziellen Dienstes</span>
+                      <span class="quiz-nis2__option-desc">Eine Störung hätte erhebliche Auswirkungen auf öffentl. Sicherheit, Gesundheit oder Wirtschaft</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="checkbox" name="sonderfall" value="none">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Nein, keines davon trifft zu</span>
+                      <span class="quiz-nis2__option-desc">Keine der genannten Sonderkonstellationen</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- FRAGE 5: LIEFERKETTE -->
+            <div class="quiz-nis2__step" data-quiz-step="5">
+              <h3 class="quiz-nis2__question">Beliefern Sie Unternehmen, die unter NIS-2 fallen?</h3>
+              <p class="quiz-nis2__hint">NIS-2 verpflichtet erfasste Unternehmen, auch die Sicherheit ihrer Lieferkette zu adressieren (Art. 21 Abs. 2 lit. d NIS-2-RL). Damit können Anforderungen vertraglich an Sie weitergegeben werden.</p>
+              <div class="quiz-nis2__options" role="radiogroup" aria-label="Lieferkette">
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="lieferkette" value="yes">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Ja, regelmäßig</span>
+                      <span class="quiz-nis2__option-desc">Wesentliche IT-, Software-, Cloud-, Beratungs- oder Wartungsleistungen</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="lieferkette" value="maybe">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Vereinzelt oder unsicher</span>
+                      <span class="quiz-nis2__option-desc">Einzelne Kunden könnten betroffen sein</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option">
+                  <input type="radio" name="lieferkette" value="no">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__option-title">Nein</span>
+                      <span class="quiz-nis2__option-desc">Keine Geschäftsbeziehungen zu NIS-2-pflichtigen Unternehmen</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- NAVIGATION -->
+          <div class="quiz-nis2__nav" data-quiz-nav>
+            <button type="button" class="btn-ghost quiz-nis2__btn-back" data-quiz-back aria-label="Zurück">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M12 7H2M7 12L2 7l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Zurück
+            </button>
+            <button type="button" class="btn-primary quiz-nis2__btn-next" data-quiz-next disabled>
+              <span data-quiz-next-label>Weiter</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- RESULT -->
+          <div class="quiz-nis2__result" data-quiz-result aria-live="polite">
+            <!-- VERDICT (befüllt durch JS) -->
+            <div class="quiz-nis2__verdict" data-quiz-verdict>
+              <p class="quiz-nis2__verdict-label" data-quiz-verdict-label>Ergebnis</p>
+              <h3 class="quiz-nis2__verdict-title" data-quiz-verdict-title></h3>
+              <p class="quiz-nis2__verdict-summary" data-quiz-verdict-summary></p>
+            </div>
+
+            <!-- PFLICHTEN -->
+            <div class="quiz-nis2__result-section" data-quiz-obligations-wrap>
+              <p class="quiz-nis2__result-h3">Daraus folgende Pflichten</p>
+              <ul class="quiz-nis2__obligations" data-quiz-obligations></ul>
+            </div>
+
+            <!-- BUSSGELD -->
+            <div class="quiz-nis2__result-section" data-quiz-penalty-wrap>
+              <div class="quiz-nis2__penalty">
+                <span class="quiz-nis2__penalty-icon" aria-hidden="true">!</span>
+                <div class="quiz-nis2__penalty-body" data-quiz-penalty></div>
+              </div>
+            </div>
+
+            <!-- LEAD FORM -->
+            <form class="quiz-nis2__lead-form" data-quiz-form novalidate>
+              <h4 class="quiz-nis2__lead-h3">Ergebnis als PDF herunterladen</h4>
+              <p class="quiz-nis2__lead-text">
+                Personalisieren Sie das PDF mit Ihren Angaben — oder laden Sie es direkt anonym herunter.
+                Die Daten werden ausschließlich lokal in Ihrem Browser verarbeitet und nicht an Dritte übertragen.
+              </p>
+              <div class="quiz-nis2__form-grid">
+                <div class="quiz-nis2__field">
+                  <label class="quiz-nis2__label" for="quiz-name">Name <span class="req" aria-hidden="true">*</span></label>
+                  <input class="quiz-nis2__input" type="text" id="quiz-name" name="name" autocomplete="name" required>
+                </div>
+                <div class="quiz-nis2__field">
+                  <label class="quiz-nis2__label" for="quiz-firma">Firma</label>
+                  <input class="quiz-nis2__input" type="text" id="quiz-firma" name="firma" autocomplete="organization">
+                </div>
+                <div class="quiz-nis2__field">
+                  <label class="quiz-nis2__label" for="quiz-branche">Branche</label>
+                  <select class="quiz-nis2__select" id="quiz-branche" name="branche">
+                    <option value="">— bitte wählen —</option>
+                    <option>Energie / Versorgung</option>
+                    <option>Verkehr / Logistik</option>
+                    <option>Bank- / Finanzwesen</option>
+                    <option>Gesundheitswesen</option>
+                    <option>Digitale Infrastruktur / IT</option>
+                    <option>Öffentliche Verwaltung</option>
+                    <option>Industrie / Produktion</option>
+                    <option>Lebensmittel / Chemie</option>
+                    <option>Handwerk</option>
+                    <option>Handel</option>
+                    <option>Beratung / Dienstleistung</option>
+                    <option>Bildung / Forschung</option>
+                    <option>Sonstige</option>
+                  </select>
+                </div>
+                <div class="quiz-nis2__field">
+                  <label class="quiz-nis2__label" for="quiz-email">E-Mail</label>
+                  <input class="quiz-nis2__input" type="email" id="quiz-email" name="email" autocomplete="email" placeholder="optional">
+                </div>
+                <div class="quiz-nis2__field">
+                  <label class="quiz-nis2__label" for="quiz-telefon">Telefon</label>
+                  <input class="quiz-nis2__input" type="tel" id="quiz-telefon" name="telefon" autocomplete="tel" placeholder="optional">
+                </div>
+                <div class="quiz-nis2__field quiz-nis2__field--full" style="margin-top:8px;">
+                  <label class="quiz-nis2__check">
+                    <input type="checkbox" name="newsletter" value="1">
+                    <span>Ja, ich möchte gelegentlich Updates zu Datenschutz, NIS-2 &amp; DSGVO erhalten (Newsletter). Abmeldung jederzeit möglich.</span>
+                  </label>
+                </div>
+                <div class="quiz-nis2__field quiz-nis2__field--full">
+                  <label class="quiz-nis2__check">
+                    <input type="checkbox" name="datenschutz" required>
+                    <span>Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> zur Kenntnis genommen. <span style="color:var(--color-gold);">*</span></span>
+                  </label>
+                </div>
+              </div>
+              <div class="quiz-nis2__form-actions">
+                <button type="submit" class="btn-primary" data-quiz-pdf>
+                  PDF herunterladen
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M7 2v8m0 0L3 6m4 4l4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <span class="quiz-nis2__pdf-info">≈ 80 KB · PDF · DIN A4</span>
+              </div>
+            </form>
+
+            <div class="quiz-nis2__restart">
+              <button type="button" class="btn-ghost" data-quiz-restart>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M12 7a5 5 0 11-1.5-3.5L12 5M12 2v3H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Test neu starten
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p class="quiz-nis2__disclaimer">
+          <strong>Wichtiger Hinweis:</strong> Dieses Quiz dient ausschließlich der orientierenden Selbsteinschätzung und ersetzt keine rechtsverbindliche Prüfung. Maßgeblich sind die Richtlinie (EU) 2022/2555 (NIS-2-Richtlinie), das österreichische Netz- und Informationssystemsicherheitsgesetz 2024 (NISG 2024) sowie etwaige delegierte Rechtsakte und Durchführungsrechtsakte der EU-Kommission. Eine verbindliche Bewertung Ihrer NIS-2-Pflichten erfordert eine einzelfallbezogene rechtliche Analyse. Stand der zugrundeliegenden Rechtsquellen: Mai 2026.
+        </p>
+      </div>
+    </section>
+
     <!-- ============= SEMINARE ============= -->
     <section class="seminare section section--fog" id="seminare" aria-label="Datenschutz-Seminare">
       <div class="container">
@@ -4353,6 +5384,567 @@
       }
     });
   </script>
+  <!-- ============= NIS-2 QUIZ LOGIC ============= -->
+  <script>
+  (function () {
+    const root = document.getElementById('nis2-quiz');
+    if (!root) return;
+
+    const stepsRoot     = root.querySelector('[data-quiz-steps]');
+    const steps         = Array.from(root.querySelectorAll('[data-quiz-step]'));
+    const totalSteps    = steps.length;
+    const navEl         = root.querySelector('[data-quiz-nav]');
+    const backBtn       = root.querySelector('[data-quiz-back]');
+    const nextBtn       = root.querySelector('[data-quiz-next]');
+    const nextLabel     = root.querySelector('[data-quiz-next-label]');
+    const progressFill  = root.querySelector('[data-quiz-progress-fill]');
+    const progressLabel = root.querySelector('[data-quiz-progress-label]');
+    const stepCurEl     = root.querySelector('[data-quiz-step-current]');
+    const stepTotalEl   = root.querySelector('[data-quiz-step-total]');
+    const progressBar   = root.querySelector('[role="progressbar"]');
+    const resultEl      = root.querySelector('[data-quiz-result]');
+    const progressWrap  = root.querySelector('[data-quiz-progress-wrap]');
+    const restartBtn    = root.querySelector('[data-quiz-restart]');
+    const form          = root.querySelector('[data-quiz-form]');
+
+    let currentStep = 1;
+    stepTotalEl.textContent = totalSteps;
+
+    /* ---- STEP NAVIGATION ---- */
+    function setStep(n) {
+      currentStep = Math.max(1, Math.min(totalSteps, n));
+      steps.forEach(s => {
+        s.classList.toggle('is-active', Number(s.dataset.quizStep) === currentStep);
+      });
+      const pct = Math.round((currentStep / totalSteps) * 100);
+      progressFill.style.width = pct + '%';
+      progressLabel.textContent = pct + ' %';
+      progressBar.setAttribute('aria-valuenow', pct);
+      stepCurEl.textContent = currentStep;
+      backBtn.classList.toggle('is-visible', currentStep > 1);
+      nextLabel.textContent = currentStep === totalSteps ? 'Ergebnis anzeigen' : 'Weiter';
+      updateNextDisabled();
+      // Scroll Card into view on mobile
+      if (window.innerWidth < 768) {
+        root.querySelector('.quiz-nis2__card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function currentStepEl() {
+      return steps.find(s => Number(s.dataset.quizStep) === currentStep);
+    }
+
+    function isCurrentStepValid() {
+      const stepEl = currentStepEl();
+      const checked = stepEl.querySelectorAll('input:checked');
+      return checked.length > 0;
+    }
+
+    function updateNextDisabled() {
+      nextBtn.disabled = !isCurrentStepValid();
+    }
+
+    /* ---- INPUT HANDLING ---- */
+    // "Keines davon" exklusiv bei Sonderfall-Checkboxes
+    const sonderfallInputs = root.querySelectorAll('input[name="sonderfall"]');
+    sonderfallInputs.forEach(inp => {
+      inp.addEventListener('change', () => {
+        if (inp.value === 'none' && inp.checked) {
+          sonderfallInputs.forEach(other => { if (other !== inp) other.checked = false; });
+        } else if (inp.value !== 'none' && inp.checked) {
+          const none = root.querySelector('input[name="sonderfall"][value="none"]');
+          if (none) none.checked = false;
+        }
+      });
+    });
+
+    // Update Next-Button bei jeder Auswahl
+    root.querySelectorAll('input[type="radio"], input[type="checkbox"][name="sonderfall"]').forEach(inp => {
+      inp.addEventListener('change', updateNextDisabled);
+    });
+
+    backBtn.addEventListener('click', () => setStep(currentStep - 1));
+    nextBtn.addEventListener('click', () => {
+      if (!isCurrentStepValid()) return;
+      if (currentStep === totalSteps) {
+        showResult();
+      } else {
+        setStep(currentStep + 1);
+      }
+    });
+
+    /* ---- RESULT EVALUATION ---- */
+    function collectAnswers() {
+      const get = name => {
+        const el = root.querySelector(`input[name="${name}"]:checked`);
+        return el ? el.value : null;
+      };
+      const sonderfall = Array.from(root.querySelectorAll('input[name="sonderfall"]:checked')).map(i => i.value);
+      return {
+        sektor:      get('sektor'),
+        mitarbeiter: get('mitarbeiter'),
+        umsatz:      get('umsatz'),
+        lieferkette: get('lieferkette'),
+        sonderfall:  sonderfall
+      };
+    }
+
+    function evaluate(a) {
+      const hasSonderfall = a.sonderfall.some(s => s !== 'none');
+      const sizeMedium = a.mitarbeiter === 'medium' || a.umsatz === 'medium';
+      const sizeLarge  = a.mitarbeiter === 'large'  || a.umsatz === 'large';
+      const sizeMeetsThreshold = sizeMedium || sizeLarge;
+
+      let verdict;
+      if (hasSonderfall) {
+        verdict = 'essential_special';
+      } else if (a.sektor === 'high') {
+        if (sizeLarge)        verdict = 'essential';
+        else if (sizeMedium)  verdict = 'important';
+        else                  verdict = 'check_high';
+      } else if (a.sektor === 'other') {
+        if (sizeMeetsThreshold) verdict = 'important';
+        else                    verdict = 'check_other';
+      } else {
+        verdict = (a.lieferkette === 'yes' || a.lieferkette === 'maybe') ? 'supply' : 'none';
+      }
+      return verdict;
+    }
+
+    /* ---- VERDICT CONTENT ---- */
+    const VERDICTS = {
+      essential: {
+        cls: 'quiz-nis2__verdict--essential',
+        label: 'Voraussichtlich erfasst',
+        title: 'Wesentliche Einrichtung',
+        summary: 'Aufgrund Ihres Sektors (Anhang I NIS-2-RL) und Ihrer Unternehmensgröße werden Sie voraussichtlich als <strong>wesentliche Einrichtung</strong> nach Art. 3 Abs. 1 lit. a NIS-2-Richtlinie eingestuft.',
+        obligations: 'full_essential',
+        penalty: 'high'
+      },
+      essential_special: {
+        cls: 'quiz-nis2__verdict--essential',
+        label: 'Größenunabhängig erfasst',
+        title: 'Wesentliche Einrichtung (Sonderkriterium)',
+        summary: 'Aufgrund eines Sonderkriteriums gem. Art. 2 Abs. 2 NIS-2-RL (z.B. Vertrauensdienste, DNS/TLD, öffentl. TK-Anbieter, öffentl. Verwaltung) gilt NIS-2 für Sie <strong>unabhängig von der Unternehmensgröße</strong>.',
+        obligations: 'full_essential',
+        penalty: 'high'
+      },
+      important: {
+        cls: 'quiz-nis2__verdict--important',
+        label: 'Voraussichtlich erfasst',
+        title: 'Wichtige Einrichtung',
+        summary: 'Sie sind voraussichtlich als <strong>wichtige Einrichtung</strong> nach Art. 3 Abs. 2 NIS-2-RL einzustufen. Die materiellen Pflichten entsprechen denen wesentlicher Einrichtungen — bei reduzierter Aufsichtsintensität (Art. 33 NIS-2-RL).',
+        obligations: 'full_important',
+        penalty: 'mid'
+      },
+      check_high: {
+        cls: 'quiz-nis2__verdict--check',
+        label: 'Einzelfallprüfung empfohlen',
+        title: 'Sektor erfasst, Schwelle unterschritten',
+        summary: 'Ihr Sektor (Anhang I NIS-2-RL) ist erfasst, jedoch unterschreiten Sie die KMU-Schwelle (50 MA / 10 Mio. €). Grundsätzlich greift die Kleinst-Ausnahme (Art. 2 Abs. 1 NIS-2-RL i.V.m. Empfehlung 2003/361/EG). <strong>Achtung:</strong> Verbundene Unternehmen sind anteilig einzurechnen, und Sonderkriterien können dennoch zur Erfassung führen.',
+        obligations: 'check',
+        penalty: null
+      },
+      check_other: {
+        cls: 'quiz-nis2__verdict--check',
+        label: 'Einzelfallprüfung empfohlen',
+        title: 'Sektor erfasst, Schwelle unterschritten',
+        summary: 'Ihr Sektor (Anhang II NIS-2-RL) ist erfasst, jedoch unterschreiten Sie die KMU-Schwelle. Grundsätzlich greift die Kleinst-Ausnahme (Art. 2 Abs. 1 NIS-2-RL i.V.m. Empfehlung 2003/361/EG). Bei verbundenen Unternehmen oder Sonderkonstellationen empfiehlt sich eine dokumentierte rechtliche Prüfung.',
+        obligations: 'check',
+        penalty: null
+      },
+      supply: {
+        cls: 'quiz-nis2__verdict--supply',
+        label: 'Mittelbar betroffen',
+        title: 'Lieferketten-Pflichten',
+        summary: 'Sie selbst sind voraussichtlich nicht unmittelbar nach NIS-2 verpflichtet. NIS-2-pflichtige Unternehmen müssen jedoch die Sicherheit ihrer Lieferkette adressieren (Art. 21 Abs. 2 lit. d NIS-2-RL) und werden Cybersecurity-Anforderungen vertraglich an Sie weitergeben.',
+        obligations: 'supply',
+        penalty: null
+      },
+      none: {
+        cls: 'quiz-nis2__verdict--none',
+        label: 'Voraussichtlich nicht betroffen',
+        title: 'Nicht von NIS-2 erfasst',
+        summary: 'Auf Basis Ihrer Angaben fallen Sie weder unter Anhang I oder II NIS-2-RL noch unter ein Sonderkriterium. Eine direkte NIS-2-Pflicht besteht voraussichtlich nicht. <strong>Hinweis:</strong> Sobald Sie als Zulieferer für NIS-2-pflichtige Unternehmen tätig werden, können vertragliche Cybersecurity-Anforderungen weitergegeben werden.',
+        obligations: 'none',
+        penalty: null
+      }
+    };
+
+    const OBLIGATIONS = {
+      full_essential: [
+        { t: 'Risikomanagement', d: 'Technische, operative und organisatorische Maßnahmen zur Beherrschung von Risiken (u.a. Zugriffskontrolle, Krypto, Backup, BCM, Incident Response).', s: 'Art. 21 NIS-2-RL · §§ 28 ff. NISG 2024' },
+        { t: 'Meldepflichten', d: 'Frühwarnung binnen 24 Std., Meldung binnen 72 Std., Abschlussbericht binnen 1 Monat nach erheblichem Sicherheitsvorfall.', s: 'Art. 23 NIS-2-RL · § 32 NISG 2024' },
+        { t: 'Registrierung', d: 'Pflicht zur Registrierung bei der zuständigen Behörde (in Österreich: Bundesministerium für Inneres / GovCERT).', s: 'Art. 27 NIS-2-RL · § 35 NISG 2024' },
+        { t: 'Verantwortung der Geschäftsleitung', d: 'Billigung der Maßnahmen, Überwachung der Umsetzung und verpflichtende Schulungen für Leitungsorgane.', s: 'Art. 20 NIS-2-RL · § 31 NISG 2024' },
+        { t: 'Proaktive Aufsicht', d: 'Vor-Ort-Inspektionen, regelmäßige &amp; gezielte Sicherheitsprüfungen, Sicherheits-Scans, Informationsabfragen.', s: 'Art. 32 NIS-2-RL' }
+      ],
+      full_important: [
+        { t: 'Risikomanagement', d: 'Technische, operative und organisatorische Maßnahmen zur Beherrschung von Risiken (u.a. Zugriffskontrolle, Krypto, Backup, BCM, Incident Response).', s: 'Art. 21 NIS-2-RL · §§ 28 ff. NISG 2024' },
+        { t: 'Meldepflichten', d: 'Frühwarnung binnen 24 Std., Meldung binnen 72 Std., Abschlussbericht binnen 1 Monat nach erheblichem Sicherheitsvorfall.', s: 'Art. 23 NIS-2-RL · § 32 NISG 2024' },
+        { t: 'Registrierung', d: 'Pflicht zur Registrierung bei der zuständigen Behörde.', s: 'Art. 27 NIS-2-RL · § 35 NISG 2024' },
+        { t: 'Verantwortung der Geschäftsleitung', d: 'Billigung der Maßnahmen, Überwachung der Umsetzung und verpflichtende Schulungen für Leitungsorgane.', s: 'Art. 20 NIS-2-RL · § 31 NISG 2024' },
+        { t: 'Reaktive Aufsicht', d: 'Ex-post-Aufsicht bei Anhaltspunkten — keine routinemäßigen Inspektionen, aber volle Ermittlungsbefugnisse im Anlassfall.', s: 'Art. 33 NIS-2-RL' }
+      ],
+      check: [
+        { t: 'Dokumentierte Einzelfallprüfung', d: 'Da Ihr Sektor erfasst ist, sollte die Anwendbarkeit der KMU-Ausnahme dokumentiert geprüft werden — insb. Berücksichtigung verbundener und Partnerunternehmen.', s: 'Art. 2 NIS-2-RL · Empfehlung 2003/361/EG' },
+        { t: 'Cybersecurity-Mindeststandards', d: 'Auch wenn NIS-2 selbst nicht greift: anerkannte Mindeststandards (ISO/IEC 27001, BSI-Grundschutz, NIST CSF) sind branchenüblich.', s: 'Best Practice' }
+      ],
+      supply: [
+        { t: 'Vertragliche Cybersecurity-Anforderungen', d: 'NIS-2-Adressaten müssen die Sicherheit der Lieferkette adressieren und werden konkrete Anforderungen (SLAs, Sicherheitsklauseln, Audit-Rechte) weitergeben.', s: 'Art. 21 Abs. 2 lit. d NIS-2-RL' },
+        { t: 'ISMS-Konformität', d: 'Erwartet werden anerkannte Sicherheitsstandards (ISO/IEC 27001, TISAX, SOC 2) sowie Nachweise zur Incident-Response-Fähigkeit.', s: 'Best Practice' },
+        { t: 'Audit- und Nachweispflichten', d: 'Auditbereitschaft und Belegfähigkeit der Sicherheitsmaßnahmen — typischerweise jährliche Re-Zertifizierung.', s: 'Vertragsrecht' }
+      ],
+      none: [
+        { t: 'Keine direkten NIS-2-Pflichten', d: 'Eine unmittelbare Anwendung von NIS-2 ist auf Basis Ihrer Angaben nicht ersichtlich.', s: 'Art. 2 NIS-2-RL' },
+        { t: 'Empfohlene Mindeststandards', d: 'Branchenübliche Cybersecurity-Hygiene (Patch-Management, MFA, Backups, Awareness) bleibt unabhängig von NIS-2 angezeigt.', s: 'Best Practice' }
+      ]
+    };
+
+    const PENALTIES = {
+      high: { t: 'Bußgeldrahmen', d: 'Bis zu <strong>10 Mio. €</strong> oder <strong>2 % des weltweiten Jahresumsatzes</strong> (jeweils höherer Betrag).', s: 'Art. 34 Abs. 4 NIS-2-RL · §§ 56 ff. NISG 2024' },
+      mid:  { t: 'Bußgeldrahmen', d: 'Bis zu <strong>7 Mio. €</strong> oder <strong>1,4 % des weltweiten Jahresumsatzes</strong> (jeweils höherer Betrag).', s: 'Art. 34 Abs. 5 NIS-2-RL · §§ 56 ff. NISG 2024' }
+    };
+
+    /* ---- RENDER RESULT ---- */
+    let lastResult = null;
+
+    function renderResult(verdictKey, answers) {
+      const v = VERDICTS[verdictKey];
+      lastResult = { verdictKey, verdict: v, answers };
+
+      const verdictEl = root.querySelector('[data-quiz-verdict]');
+      verdictEl.className = 'quiz-nis2__verdict ' + v.cls;
+      root.querySelector('[data-quiz-verdict-label]').textContent = v.label;
+      root.querySelector('[data-quiz-verdict-title]').textContent = v.title;
+      root.querySelector('[data-quiz-verdict-summary]').innerHTML = v.summary;
+
+      // Obligations
+      const obList = root.querySelector('[data-quiz-obligations]');
+      obList.innerHTML = '';
+      OBLIGATIONS[v.obligations].forEach(o => {
+        const li = document.createElement('li');
+        li.innerHTML = `<div><strong>${o.t}</strong>${o.d}<cite>${o.s}</cite></div>`;
+        obList.appendChild(li);
+      });
+
+      // Penalty
+      const penaltyWrap = root.querySelector('[data-quiz-penalty-wrap]');
+      if (v.penalty && PENALTIES[v.penalty]) {
+        const p = PENALTIES[v.penalty];
+        root.querySelector('[data-quiz-penalty]').innerHTML =
+          `<strong>${p.t}</strong>${p.d}<cite>${p.s}</cite>`;
+        penaltyWrap.style.display = '';
+      } else {
+        penaltyWrap.style.display = 'none';
+      }
+    }
+
+    function showResult() {
+      const answers = collectAnswers();
+      const verdict = evaluate(answers);
+      renderResult(verdict, answers);
+      stepsRoot.style.display = 'none';
+      navEl.style.display = 'none';
+      progressWrap.style.display = 'none';
+      resultEl.classList.add('is-active');
+      root.querySelector('.quiz-nis2__card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function resetQuiz() {
+      root.querySelectorAll('input').forEach(inp => {
+        if (inp.type === 'radio' || inp.type === 'checkbox') inp.checked = false;
+        else inp.value = '';
+      });
+      resultEl.classList.remove('is-active');
+      stepsRoot.style.display = '';
+      navEl.style.display = '';
+      progressWrap.style.display = '';
+      setStep(1);
+      root.querySelector('.quiz-nis2__card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    restartBtn.addEventListener('click', resetQuiz);
+
+    /* ---- PDF GENERATION ---- */
+    let jsPDFLoading = null;
+    function loadJsPDF() {
+      if (window.jspdf && window.jspdf.jsPDF) return Promise.resolve(window.jspdf);
+      if (jsPDFLoading) return jsPDFLoading;
+      jsPDFLoading = new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+        s.onload  = () => resolve(window.jspdf);
+        s.onerror = () => reject(new Error('jsPDF konnte nicht geladen werden.'));
+        document.head.appendChild(s);
+      });
+      return jsPDFLoading;
+    }
+
+    function fmtAnswer(key, val) {
+      const map = {
+        sektor:      { high: 'Sektor hoher Kritikalität (Anhang I NIS-2-RL)', other: 'Sonstiger kritischer Sektor (Anhang II NIS-2-RL)', none: 'Keiner der genannten Sektoren' },
+        mitarbeiter: { small: 'unter 50', medium: '50 – 249', large: '250 oder mehr' },
+        umsatz:      { small: 'bis 10 Mio. €', medium: '> 10 bis 50 Mio. €', large: 'über 50 Mio. €' },
+        lieferkette: { yes: 'ja, regelmäßig', maybe: 'vereinzelt / unsicher', no: 'nein' }
+      };
+      return (map[key] && map[key][val]) || val || '—';
+    }
+
+    function fmtSonderfall(arr) {
+      const map = {
+        vertrauen:  'Vertrauensdiensteanbieter',
+        dns:        'TLD-Name-Registry / DNS-Diensteanbieter',
+        tk:         'Anbieter öffentl. elektr. Kommunikationsnetze/-dienste',
+        verwaltung: 'Einrichtung der öffentl. Verwaltung',
+        alleinig:   'Alleinanbieter eines essenziellen Dienstes',
+        none:       'keines davon'
+      };
+      if (!arr || !arr.length) return '—';
+      return arr.map(s => map[s] || s).join(', ');
+    }
+
+    function stripHtml(s) {
+      return s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ');
+    }
+
+    async function generatePDF(leadData) {
+      const { jsPDF } = await loadJsPDF();
+      const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+
+      const PAGE_W = 210, PAGE_H = 297;
+      const M_X = 20;
+      const COL_W = PAGE_W - 2 * M_X;
+      const NAVY = [15, 31, 61];
+      const GOLD = [201, 168, 76];
+      const SLATE = [92, 107, 130];
+      const INK = [26, 26, 46];
+
+      let y = 20;
+
+      const setFont = (style, size, color) => {
+        doc.setFont('helvetica', style);
+        doc.setFontSize(size);
+        doc.setTextColor(color[0], color[1], color[2]);
+      };
+
+      const ensureSpace = (need) => {
+        if (y + need > PAGE_H - 25) {
+          doc.addPage();
+          y = 20;
+        }
+      };
+
+      const writeWrapped = (text, size, style, color, lineH, indent) => {
+        setFont(style, size, color);
+        const lines = doc.splitTextToSize(text, COL_W - (indent || 0));
+        lines.forEach(line => {
+          ensureSpace(lineH);
+          doc.text(line, M_X + (indent || 0), y);
+          y += lineH;
+        });
+      };
+
+      // ---- HEADER BAND ----
+      doc.setFillColor(NAVY[0], NAVY[1], NAVY[2]);
+      doc.rect(0, 0, PAGE_W, 14, 'F');
+      setFont('bold', 11, [255, 255, 255]);
+      doc.text('DATENSCHUTZ KROES', M_X, 9);
+      setFont('normal', 9, [201, 168, 76]);
+      doc.text('NIS-2 Selbsteinschätzung', PAGE_W - M_X, 9, { align: 'right' });
+
+      y = 26;
+
+      // ---- TITLE ----
+      setFont('bold', 22, NAVY);
+      doc.text('NIS-2 Selbsteinschätzung', M_X, y);
+      y += 7;
+      setFont('normal', 10, SLATE);
+      const datum = new Date().toLocaleDateString('de-AT', { day: '2-digit', month: 'long', year: 'numeric' });
+      doc.text('Erstellt am ' + datum, M_X, y);
+      y += 10;
+
+      // ---- LEAD DATA BOX ----
+      if (leadData.name || leadData.firma) {
+        doc.setDrawColor(221, 227, 236);
+        doc.setFillColor(244, 245, 247);
+        doc.roundedRect(M_X, y, COL_W, 22, 1.5, 1.5, 'FD');
+        setFont('bold', 9, NAVY);
+        doc.text('ERSTELLT FÜR', M_X + 4, y + 6);
+        setFont('normal', 11, INK);
+        let line = leadData.name || '';
+        if (leadData.firma) line += (line ? ' · ' : '') + leadData.firma;
+        doc.text(line, M_X + 4, y + 12);
+        if (leadData.branche || leadData.email) {
+          setFont('normal', 9, SLATE);
+          let l2 = leadData.branche || '';
+          if (leadData.email) l2 += (l2 ? ' · ' : '') + leadData.email;
+          doc.text(l2, M_X + 4, y + 18);
+        }
+        y += 28;
+      }
+
+      // ---- ANGABEN ----
+      ensureSpace(30);
+      setFont('bold', 9, SLATE);
+      doc.text('IHRE ANGABEN', M_X, y);
+      y += 1;
+      doc.setDrawColor(221, 227, 236);
+      doc.line(M_X, y, PAGE_W - M_X, y);
+      y += 5;
+
+      const angaben = [
+        ['Sektor',          fmtAnswer('sektor', lastResult.answers.sektor)],
+        ['Mitarbeiter',     fmtAnswer('mitarbeiter', lastResult.answers.mitarbeiter)],
+        ['Umsatz / Bilanz', fmtAnswer('umsatz', lastResult.answers.umsatz)],
+        ['Sonderkriterien', fmtSonderfall(lastResult.answers.sonderfall)],
+        ['Lieferkette',     fmtAnswer('lieferkette', lastResult.answers.lieferkette)]
+      ];
+      angaben.forEach(([k, v]) => {
+        ensureSpace(7);
+        setFont('normal', 9, SLATE);
+        doc.text(k, M_X, y);
+        setFont('normal', 10, INK);
+        const lines = doc.splitTextToSize(v, COL_W - 50);
+        lines.forEach((line, i) => {
+          doc.text(line, M_X + 50, y + (i * 5));
+        });
+        y += Math.max(6, lines.length * 5 + 1);
+      });
+      y += 4;
+
+      // ---- ERGEBNIS-BANNER ----
+      ensureSpace(28);
+      const v = lastResult.verdict;
+      const bannerColor =
+        v.cls.indexOf('essential') >= 0 ? NAVY :
+        v.cls.indexOf('important') >= 0 ? [27, 79, 138] :
+        v.cls.indexOf('supply')    >= 0 ? [232, 239, 248] :
+        v.cls.indexOf('none')      >= 0 ? [232, 239, 248] :
+        [244, 245, 247];
+      const bannerText = (v.cls.indexOf('essential') >= 0 || v.cls.indexOf('important') >= 0) ? [255,255,255] : NAVY;
+
+      doc.setFillColor(bannerColor[0], bannerColor[1], bannerColor[2]);
+      doc.rect(M_X, y, COL_W, 22, 'F');
+      doc.setFillColor(GOLD[0], GOLD[1], GOLD[2]);
+      doc.rect(M_X, y, 2, 22, 'F');
+
+      setFont('normal', 8, bannerText);
+      doc.text(v.label.toUpperCase(), M_X + 6, y + 7);
+      setFont('bold', 15, bannerText);
+      doc.text(v.title, M_X + 6, y + 16);
+      y += 28;
+
+      // ---- BEGRÜNDUNG ----
+      setFont('bold', 9, SLATE);
+      doc.text('BEGRÜNDUNG', M_X, y);
+      y += 1;
+      doc.line(M_X, y, PAGE_W - M_X, y);
+      y += 5;
+      writeWrapped(stripHtml(v.summary), 10, 'normal', INK, 5, 0);
+      y += 4;
+
+      // ---- PFLICHTEN ----
+      ensureSpace(20);
+      setFont('bold', 9, SLATE);
+      doc.text('DARAUS FOLGENDE PFLICHTEN', M_X, y);
+      y += 1;
+      doc.line(M_X, y, PAGE_W - M_X, y);
+      y += 5;
+
+      OBLIGATIONS[v.obligations].forEach(o => {
+        ensureSpace(18);
+        setFont('bold', 10, NAVY);
+        doc.text(o.t, M_X, y);
+        y += 5;
+        writeWrapped(stripHtml(o.d), 9, 'normal', INK, 4.4, 0);
+        y += 0.5;
+        setFont('italic', 8, SLATE);
+        const cite = doc.splitTextToSize(o.s, COL_W);
+        cite.forEach(line => {
+          ensureSpace(4);
+          doc.text(line, M_X, y);
+          y += 4;
+        });
+        y += 3;
+      });
+
+      // ---- BUSSGELD ----
+      if (v.penalty && PENALTIES[v.penalty]) {
+        const p = PENALTIES[v.penalty];
+        ensureSpace(24);
+        doc.setFillColor(253, 248, 233);
+        doc.setDrawColor(232, 213, 160);
+        doc.roundedRect(M_X, y, COL_W, 22, 1.5, 1.5, 'FD');
+        setFont('bold', 10, NAVY);
+        doc.text(p.t, M_X + 4, y + 6);
+        setFont('normal', 9, INK);
+        const lines = doc.splitTextToSize(stripHtml(p.d), COL_W - 8);
+        lines.forEach((line, i) => doc.text(line, M_X + 4, y + 11 + (i * 4)));
+        setFont('italic', 8, SLATE);
+        doc.text(p.s, M_X + 4, y + 19);
+        y += 28;
+      }
+
+      // ---- FOOTER (auf jeder Seite) ----
+      const pages = doc.internal.getNumberOfPages();
+      for (let i = 1; i <= pages; i++) {
+        doc.setPage(i);
+        doc.setDrawColor(221, 227, 236);
+        doc.line(M_X, PAGE_H - 20, PAGE_W - M_X, PAGE_H - 20);
+        setFont('normal', 7, SLATE);
+        const disclaimer = 'Orientierende Selbsteinschätzung. Keine Rechtsberatung. Maßgeblich sind Richtlinie (EU) 2022/2555 (NIS-2-RL) und NISG 2024.';
+        const disLines = doc.splitTextToSize(disclaimer, COL_W);
+        disLines.forEach((line, idx) => doc.text(line, M_X, PAGE_H - 16 + (idx * 3)));
+        setFont('normal', 8, NAVY);
+        doc.text('datenschutz-kroes.at · info@datenschutz-kroes.at · +43 (0) 5338-20105', M_X, PAGE_H - 8);
+        setFont('normal', 8, SLATE);
+        doc.text('Seite ' + i + ' / ' + pages, PAGE_W - M_X, PAGE_H - 8, { align: 'right' });
+      }
+
+      const filename = 'NIS2-Selbsteinschaetzung_' + new Date().toISOString().slice(0, 10) + '.pdf';
+      doc.save(filename);
+    }
+
+    /* ---- FORM SUBMIT ---- */
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const datenschutzOK = form.querySelector('input[name="datenschutz"]').checked;
+      const nameVal = form.querySelector('#quiz-name').value.trim();
+      if (!nameVal) {
+        form.querySelector('#quiz-name').focus();
+        return;
+      }
+      if (!datenschutzOK) {
+        alert('Bitte bestätigen Sie die Kenntnisnahme der Datenschutzerklärung.');
+        return;
+      }
+      const submitBtn = form.querySelector('[data-quiz-pdf]');
+      const origLabel = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'PDF wird erstellt …';
+      try {
+        await generatePDF({
+          name:       nameVal,
+          firma:      form.querySelector('#quiz-firma').value.trim(),
+          branche:    form.querySelector('#quiz-branche').value.trim(),
+          email:      form.querySelector('#quiz-email').value.trim(),
+          telefon:    form.querySelector('#quiz-telefon').value.trim(),
+          newsletter: form.querySelector('input[name="newsletter"]').checked
+        });
+      } catch (err) {
+        alert('PDF konnte nicht erstellt werden: ' + err.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = origLabel;
+      }
+    });
+
+    /* ---- INIT ---- */
+    setStep(1);
+  })();
+  </script>
+
   <script src="cookie-banner.js" defer></script>
 </body>
 </html>
