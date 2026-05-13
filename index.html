@@ -5684,13 +5684,22 @@
     let logoLoading = null;
     function loadLogo() {
       if (logoLoading) return logoLoading;
-      logoLoading = new Promise((resolve) => {
+      // Erst das Hero-Banner versuchen, dann Fallback aufs Standardlogo
+      const candidates = ['header-datenschutz-kroes.webp', 'logo-datenschutz-kroes.png'];
+      const tryLoad = (src) => new Promise((resolve) => {
         const img = new Image();
         img.crossOrigin = 'anonymous';
-        img.onload  = () => resolve(img);
-        img.onerror = () => resolve(null); // Fallback ohne Logo
-        img.src = 'logo-datenschutz-kroes.png';
+        img.onload  = () => resolve({ img, src });
+        img.onerror = () => resolve(null);
+        img.src = src;
       });
+      logoLoading = (async () => {
+        for (const c of candidates) {
+          const result = await tryLoad(c);
+          if (result) return result;
+        }
+        return null;
+      })();
       return logoLoading;
     }
 
@@ -5722,7 +5731,10 @@
     }
 
     async function generatePDF(leadData) {
-      const [{ jsPDF }, logo] = await Promise.all([loadJsPDF(), loadLogo()]);
+      const [{ jsPDF }, logoResult] = await Promise.all([loadJsPDF(), loadLogo()]);
+      const logo    = logoResult ? logoResult.img : null;
+      const logoSrc = logoResult ? logoResult.src : null;
+      const isBanner = logoSrc === 'header-datenschutz-kroes.webp';
       const doc = new jsPDF({ unit: 'mm', format: 'a4' });
 
       const PAGE_W = 210, PAGE_H = 297;
@@ -5758,40 +5770,62 @@
         });
       };
 
-      // ---- HEADER BAND (Logo + Eyebrow) ----
-      const HEADER_H = 30;
-      doc.setFillColor(NAVY[0], NAVY[1], NAVY[2]);
-      doc.rect(0, 0, PAGE_W, HEADER_H, 'F');
-
-      if (logo) {
-        // Logo proportional einbetten (max. Höhe 20mm, links bündig)
-        const targetH = 20;
-        const ratio = logo.naturalWidth / logo.naturalHeight;
-        const targetW = targetH * ratio;
-        doc.addImage(logo, 'PNG', M_X, (HEADER_H - targetH) / 2, targetW, targetH);
-      } else {
-        setFont('bold', 12, [255, 255, 255]);
-        doc.text('DATENSCHUTZ KROES', M_X, HEADER_H / 2 + 1);
-      }
-
-      // Rechts: Eyebrow + Titel
-      setFont('normal', 8, GOLD);
-      doc.text('DATENSCHUTZBEAUFTRAGTER FÜR KMU', PAGE_W - M_X, 12, { align: 'right' });
-      setFont('bold', 11, [255, 255, 255]);
-      doc.text('NIS-2 Selbsteinschätzung', PAGE_W - M_X, 19, { align: 'right' });
-      setFont('normal', 8, [180, 195, 220]);
-      doc.text('Tirol · Salzburg · Rosenheim · München', PAGE_W - M_X, 25, { align: 'right' });
-
-      y = HEADER_H + 12;
-
-      // ---- TITLE ----
-      setFont('bold', 22, NAVY);
-      doc.text('NIS-2 Selbsteinschätzung', M_X, y);
-      y += 7;
-      setFont('normal', 10, SLATE);
+      // ---- HEADER ----
       const datum = new Date().toLocaleDateString('de-AT', { day: '2-digit', month: 'long', year: 'numeric' });
-      doc.text('Erstellt am ' + datum, M_X, y);
-      y += 10;
+
+      if (isBanner && logo) {
+        // Hero-Banner: vollbreit über die gesamte Seite, proportional skaliert
+        const ratio = logo.naturalWidth / logo.naturalHeight;
+        const bannerW = PAGE_W;
+        const bannerH = bannerW / ratio;
+        doc.addImage(logo, 'WEBP', 0, 0, bannerW, bannerH);
+        // Schmaler Gold-Akzent direkt unter dem Banner
+        doc.setFillColor(GOLD[0], GOLD[1], GOLD[2]);
+        doc.rect(0, bannerH, PAGE_W, 0.8, 'F');
+        y = bannerH + 12;
+
+        // Titel-Block UNTER dem Banner
+        setFont('normal', 9, GOLD);
+        doc.text('NIS-2 SELBSTEINSCHÄTZUNG', M_X, y);
+        y += 7;
+        setFont('bold', 20, NAVY);
+        doc.text('Ihre orientierende Bewertung', M_X, y);
+        y += 6;
+        setFont('normal', 10, SLATE);
+        doc.text('Erstellt am ' + datum, M_X, y);
+        y += 12;
+      } else {
+        // Fallback: Navy-Header mit Logo rechts (alte Hero-Anordnung)
+        const HEADER_H = 52;
+        const LOGO_COL_W = 70;
+        doc.setFillColor(NAVY[0], NAVY[1], NAVY[2]);
+        doc.rect(0, 0, PAGE_W, HEADER_H, 'F');
+
+        setFont('normal', 8, GOLD);
+        doc.text('DATENSCHUTZBEAUFTRAGTER FÜR KMU', M_X, 16);
+        setFont('normal', 7, [180, 195, 220]);
+        doc.text('TIROL  ·  SALZBURG  ·  ROSENHEIM  ·  MÜNCHEN', M_X, 22);
+        setFont('bold', 20, [255, 255, 255]);
+        doc.text('NIS-2 Selbsteinschätzung', M_X, 36);
+        setFont('normal', 9, [180, 195, 220]);
+        doc.text('Erstellt am ' + datum, M_X, 44);
+
+        if (logo) {
+          const pad = 6;
+          const maxW = LOGO_COL_W - pad;
+          const maxH = HEADER_H - 2 * pad;
+          const ratio = logo.naturalWidth / logo.naturalHeight;
+          let w = maxW, h = w / ratio;
+          if (h > maxH) { h = maxH; w = h * ratio; }
+          const x = PAGE_W - M_X - w;
+          const yLogo = (HEADER_H - h) / 2;
+          doc.addImage(logo, 'PNG', x, yLogo, w, h);
+        }
+
+        doc.setFillColor(GOLD[0], GOLD[1], GOLD[2]);
+        doc.rect(0, HEADER_H, PAGE_W, 1, 'F');
+        y = HEADER_H + 14;
+      }
 
       // ---- LEAD DATA BOX ----
       if (leadData.name || leadData.firma) {
