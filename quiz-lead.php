@@ -97,8 +97,9 @@ $lines[] = 'entspricht dieser Einstufung.';
 
 $body = implode("\r\n", $lines);
 
+$fromAddr  = 'info@datenschutz-kroes.at';
 $headers   = [];
-$headers[] = 'From: NIS-2 Quiz <info@datenschutz-kroes.at>';
+$headers[] = 'From: NIS-2 Quiz <' . $fromAddr . '>';
 if ($email !== '' && filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $headers[] = 'Reply-To: ' . $email;
 }
@@ -107,9 +108,24 @@ $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 $headers[] = 'Content-Transfer-Encoding: 8bit';
 $headers[] = 'X-Mailer: datenschutz-kroes.at';
 
-$ok = @mail($to, $subject, $body, implode("\r\n", $headers));
+// 5. Parameter setzt den Envelope-Sender (-f). IONOS lehnt mail() sonst oft still ab.
+$ok = @mail(
+    $to,
+    $subject,
+    $body,
+    implode("\r\n", $headers),
+    '-f' . $fromAddr
+);
 
 if (!$ok) {
+    // Diagnose-Log neben der PHP-Datei. Bitte nach erfolgreichem Test wieder entfernen.
+    $err = error_get_last();
+    @file_put_contents(
+        __DIR__ . '/quiz-lead-error.log',
+        '[' . date('Y-m-d H:i:s') . '] mail() returned false. last_error=' .
+        ($err ? json_encode($err) : 'none') . PHP_EOL,
+        FILE_APPEND
+    );
     http_response_code(500);
     echo json_encode(['ok' => false, 'error' => 'mail']);
     exit;
