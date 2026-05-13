@@ -4574,10 +4574,16 @@
             <form class="quiz-nis2__lead-form" data-quiz-form novalidate>
               <h4 class="quiz-nis2__lead-h3">Ergebnis als PDF herunterladen</h4>
               <p class="quiz-nis2__lead-text">
-                Personalisieren Sie das PDF mit Ihren Angaben — oder laden Sie es direkt anonym herunter.
-                Die Daten werden ausschließlich lokal in Ihrem Browser verarbeitet und nicht an Dritte übertragen.
+                Personalisieren Sie das PDF mit Ihren Angaben. Die Angaben werden ausschließlich an
+                <strong>Datenschutz Kroes</strong> (Server in Deutschland, IONOS SE) übermittelt — keine
+                Weitergabe an Dritte. Details in unserer
+                <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.
               </p>
               <div class="quiz-nis2__form-grid">
+                <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+                  <label for="quiz-website">Website (nicht ausfüllen)</label>
+                  <input type="text" id="quiz-website" name="website" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="quiz-nis2__field">
                   <label class="quiz-nis2__label" for="quiz-name">Name <span class="req" aria-hidden="true">*</span></label>
                   <input class="quiz-nis2__input" type="text" id="quiz-name" name="name" autocomplete="name" required>
@@ -5998,6 +6004,22 @@
       doc.save(filename);
     }
 
+    /* ---- LEAD AN SERVER (quiz-lead.php) ---- */
+    function sendLead(payload) {
+      // Lead-Versand läuft "fire and forget" — Fehler werden geschluckt,
+      // damit der PDF-Download für den Besucher immer funktioniert.
+      try {
+        return fetch('quiz-lead.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true
+        }).catch(() => {});
+      } catch (_) {
+        return Promise.resolve();
+      }
+    }
+
     /* ---- FORM SUBMIT ---- */
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -6015,15 +6037,28 @@
       const origLabel = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'PDF wird erstellt …';
+
+      const leadData = {
+        name:       nameVal,
+        firma:      form.querySelector('#quiz-firma').value.trim(),
+        branche:    form.querySelector('#quiz-branche').value.trim(),
+        email:      form.querySelector('#quiz-email').value.trim(),
+        telefon:    form.querySelector('#quiz-telefon').value.trim(),
+        newsletter: form.querySelector('input[name="newsletter"]').checked
+      };
+
+      // Lead parallel zum PDF an den Server schicken (Honeypot mit)
+      sendLead({
+        ...leadData,
+        website:      form.querySelector('#quiz-website') ? form.querySelector('#quiz-website').value : '',
+        verdictKey:   lastResult ? lastResult.verdictKey : '',
+        verdictTitle: lastResult && lastResult.verdict ? lastResult.verdict.title : '',
+        verdictLabel: lastResult && lastResult.verdict ? lastResult.verdict.label : '',
+        answers:      lastResult ? lastResult.answers : null
+      });
+
       try {
-        await generatePDF({
-          name:       nameVal,
-          firma:      form.querySelector('#quiz-firma').value.trim(),
-          branche:    form.querySelector('#quiz-branche').value.trim(),
-          email:      form.querySelector('#quiz-email').value.trim(),
-          telefon:    form.querySelector('#quiz-telefon').value.trim(),
-          newsletter: form.querySelector('input[name="newsletter"]').checked
-        });
+        await generatePDF(leadData);
       } catch (err) {
         alert('PDF konnte nicht erstellt werden: ' + err.message);
       } finally {
