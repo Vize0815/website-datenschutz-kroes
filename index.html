@@ -5681,6 +5681,19 @@
       return jsPDFLoading;
     }
 
+    let logoLoading = null;
+    function loadLogo() {
+      if (logoLoading) return logoLoading;
+      logoLoading = new Promise((resolve) => {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload  = () => resolve(img);
+        img.onerror = () => resolve(null); // Fallback ohne Logo
+        img.src = 'logo-datenschutz-kroes.png';
+      });
+      return logoLoading;
+    }
+
     function fmtAnswer(key, val) {
       const map = {
         sektor:      { high: 'Sektor hoher Kritikalität (Anhang I NIS-2-RL)', other: 'Sonstiger kritischer Sektor (Anhang II NIS-2-RL)', none: 'Keiner der genannten Sektoren' },
@@ -5709,7 +5722,7 @@
     }
 
     async function generatePDF(leadData) {
-      const { jsPDF } = await loadJsPDF();
+      const [{ jsPDF }, logo] = await Promise.all([loadJsPDF(), loadLogo()]);
       const doc = new jsPDF({ unit: 'mm', format: 'a4' });
 
       const PAGE_W = 210, PAGE_H = 297;
@@ -5745,15 +5758,31 @@
         });
       };
 
-      // ---- HEADER BAND ----
+      // ---- HEADER BAND (Logo + Eyebrow) ----
+      const HEADER_H = 30;
       doc.setFillColor(NAVY[0], NAVY[1], NAVY[2]);
-      doc.rect(0, 0, PAGE_W, 14, 'F');
-      setFont('bold', 11, [255, 255, 255]);
-      doc.text('DATENSCHUTZ KROES', M_X, 9);
-      setFont('normal', 9, [201, 168, 76]);
-      doc.text('NIS-2 Selbsteinschätzung', PAGE_W - M_X, 9, { align: 'right' });
+      doc.rect(0, 0, PAGE_W, HEADER_H, 'F');
 
-      y = 26;
+      if (logo) {
+        // Logo proportional einbetten (max. Höhe 20mm, links bündig)
+        const targetH = 20;
+        const ratio = logo.naturalWidth / logo.naturalHeight;
+        const targetW = targetH * ratio;
+        doc.addImage(logo, 'PNG', M_X, (HEADER_H - targetH) / 2, targetW, targetH);
+      } else {
+        setFont('bold', 12, [255, 255, 255]);
+        doc.text('DATENSCHUTZ KROES', M_X, HEADER_H / 2 + 1);
+      }
+
+      // Rechts: Eyebrow + Titel
+      setFont('normal', 8, GOLD);
+      doc.text('DATENSCHUTZBEAUFTRAGTER FÜR KMU', PAGE_W - M_X, 12, { align: 'right' });
+      setFont('bold', 11, [255, 255, 255]);
+      doc.text('NIS-2 Selbsteinschätzung', PAGE_W - M_X, 19, { align: 'right' });
+      setFont('normal', 8, [180, 195, 220]);
+      doc.text('Tirol · Salzburg · Rosenheim · München', PAGE_W - M_X, 25, { align: 'right' });
+
+      y = HEADER_H + 12;
 
       // ---- TITLE ----
       setFont('bold', 22, NAVY);
@@ -5885,6 +5914,35 @@
         doc.text(p.s, M_X + 4, y + 19);
         y += 28;
       }
+
+      // ---- WICHTIGER HINWEIS (eigene Box am Ende) ----
+      y += 4;
+      const hinweisText =
+        'Dieses Quiz dient ausschließlich der orientierenden Selbsteinschätzung und ersetzt keine ' +
+        'rechtsverbindliche Prüfung. Maßgeblich sind die Richtlinie (EU) 2022/2555 (NIS-2-Richtlinie), ' +
+        'das österreichische Netz- und Informationssystemsicherheitsgesetz 2024 (NISG 2024) sowie ' +
+        'etwaige delegierte Rechtsakte und Durchführungsrechtsakte der EU-Kommission. Eine ' +
+        'verbindliche Bewertung Ihrer NIS-2-Pflichten erfordert eine einzelfallbezogene rechtliche ' +
+        'Analyse. Stand der zugrundeliegenden Rechtsquellen: Mai 2026.';
+
+      setFont('normal', 9, INK);
+      const hinweisLines = doc.splitTextToSize(hinweisText, COL_W - 10);
+      const hinweisHeight = 12 + hinweisLines.length * 4.2;
+      ensureSpace(hinweisHeight);
+
+      doc.setFillColor(244, 245, 247);
+      doc.setDrawColor(221, 227, 236);
+      doc.roundedRect(M_X, y, COL_W, hinweisHeight, 1.5, 1.5, 'FD');
+      doc.setFillColor(GOLD[0], GOLD[1], GOLD[2]);
+      doc.rect(M_X, y, 2, hinweisHeight, 'F');
+
+      setFont('bold', 10, NAVY);
+      doc.text('Wichtiger Hinweis', M_X + 6, y + 7);
+      setFont('normal', 9, INK);
+      hinweisLines.forEach((line, i) => {
+        doc.text(line, M_X + 6, y + 12 + (i * 4.2));
+      });
+      y += hinweisHeight + 4;
 
       // ---- FOOTER (auf jeder Seite) ----
       const pages = doc.internal.getNumberOfPages();
