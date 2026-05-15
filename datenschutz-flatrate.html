@@ -394,6 +394,66 @@
       .isms-configurator { padding: 28px 20px; }
       .isms-config__result { grid-template-columns: 1fr; }
     }
+
+    /* ===== SCHUTZSCHILD 1: RISIKO-TABELLE ===== */
+    .risiko-section { background: var(--color-navy); color: var(--color-surface); padding: 80px 0; }
+    .risiko-section .section__eyebrow { color: var(--color-gold); }
+    .risiko-section .section__title { color: var(--color-surface); }
+    .risiko-section .section__lead { color: rgba(255,255,255,0.7); }
+    .risiko-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+    .risiko-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; position: relative; transition: transform var(--transition-base), border-color var(--transition-base); overflow: hidden; }
+    .risiko-card:hover { transform: translateY(-4px); }
+    .risiko-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .risiko-card--risk::before { background: #D93025; }
+    .risiko-card--solution { background: var(--color-gold); color: var(--color-navy); border-color: var(--color-gold); }
+    .risiko-card--solution::before { background: var(--color-navy); }
+    .risiko-card__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+    .risiko-card--risk .risiko-card__label { color: #FF7363; }
+    .risiko-card--solution .risiko-card__label { color: var(--color-prussian); }
+    .risiko-card__amount { font-size: clamp(36px, 5vw, 52px); font-weight: 600; line-height: 1; letter-spacing: -0.02em; }
+    .risiko-card--solution .risiko-card__amount { color: var(--color-navy); }
+    .risiko-card__title { font-size: 16px; font-weight: 600; letter-spacing: -0.005em; }
+    .risiko-card--risk .risiko-card__title { color: var(--color-surface); }
+    .risiko-card--solution .risiko-card__title { color: var(--color-navy); }
+    .risiko-card__text { font-size: 13.5px; line-height: 1.6; }
+    .risiko-card--risk .risiko-card__text { color: rgba(255,255,255,0.65); }
+    .risiko-card--solution .risiko-card__text { color: rgba(15,31,61,0.78); }
+    .risiko-footnote { text-align: center; font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 28px; line-height: 1.6; }
+
+    /* ===== SCHUTZSCHILD 2: FESTPREIS-GARANTIE ===== */
+    .festpreis-garantie { margin-top: 48px; background: var(--color-navy); color: var(--color-surface); border-radius: var(--radius-lg); padding: 44px 48px; display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center; position: relative; overflow: hidden; }
+    .festpreis-garantie::before { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 6px; background: var(--color-gold); }
+    .festpreis-garantie__seal { width: 88px; height: 88px; border-radius: 50%; background: var(--color-gold); color: var(--color-navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .festpreis-garantie__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 10px; }
+    .festpreis-garantie__title { font-size: clamp(22px, 2.8vw, 30px); font-weight: 600; color: var(--color-surface); letter-spacing: -0.01em; margin-bottom: 12px; line-height: 1.25; }
+    .festpreis-garantie__text { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.78); margin-bottom: 14px; }
+    .festpreis-garantie__text strong { color: var(--color-surface); font-weight: 600; }
+    .festpreis-garantie__contrast { font-size: 13px; color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.55; }
+
+    /* ===== SCHUTZSCHILD 3: KOMBI-PAKET ===== */
+    .kombi-paket { margin-top: 40px; background: linear-gradient(135deg, var(--color-sky-tint) 0%, #DCE7F4 100%); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 36px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; position: relative; }
+    .kombi-paket__badge { position: absolute; top: -12px; left: 36px; background: var(--color-gold); color: var(--color-navy); font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; }
+    .kombi-paket__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-prussian); margin-bottom: 8px; }
+    .kombi-paket__title { font-size: 22px; font-weight: 600; color: var(--color-navy); margin-bottom: 10px; letter-spacing: -0.01em; line-height: 1.3; }
+    .kombi-paket__components { font-size: 14px; color: var(--color-slate); line-height: 1.6; margin-bottom: 14px; }
+    .kombi-paket__components strong { color: var(--color-navy); font-weight: 600; }
+    .kombi-paket__rebate { display: inline-block; font-size: 12px; font-weight: 600; color: var(--color-verdant); background: rgba(45,106,79,0.12); padding: 5px 12px; border-radius: 100px; letter-spacing: 0.02em; }
+    .kombi-paket__price-block { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+    .kombi-paket__price-row { display: flex; align-items: baseline; gap: 6px; }
+    .kombi-paket__price-amount { font-size: 26px; font-weight: 600; color: var(--color-navy); line-height: 1.1; letter-spacing: -0.02em; }
+    .kombi-paket__price-suffix { font-size: 12.5px; color: var(--color-slate); }
+    .kombi-paket__cta { margin-top: 12px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--color-surface); background: var(--color-navy); border-radius: var(--radius-md); transition: background var(--transition-base), transform var(--transition-base); }
+    .kombi-paket__cta:hover { background: var(--color-prussian); transform: translateY(-1px); }
+
+    @media (max-width: 900px) {
+      .risiko-section { padding: 64px 0; }
+      .risiko-grid { grid-template-columns: 1fr; }
+      .festpreis-garantie { grid-template-columns: 1fr; padding: 32px 24px; text-align: center; gap: 20px; }
+      .festpreis-garantie__seal { margin: 0 auto; }
+      .kombi-paket { grid-template-columns: 1fr; padding: 32px 22px; gap: 20px; }
+      .kombi-paket__badge { left: 22px; }
+      .kombi-paket__price-block { align-items: flex-start; }
+    }
   </style>
   <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
@@ -535,6 +595,44 @@
             <p class="hero-pricing-card__note">Alle Preise netto pro Monat zzgl. gesetzlicher MwSt. Konditionen und Laufzeit besprechen wir im persönlichen Erstgespräch.</p>
           </aside>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHUTZSCHILD 1: RISIKO-TABELLE ===== -->
+    <section class="section risiko-section" aria-label="Compliance-Risiken im Vergleich">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Preisanker</p>
+          <h2 class="section__title">Was Compliance kostet — und was Nicht-Compliance.</h2>
+          <p class="section__lead">Bevor Sie Preise vergleichen, vergleichen Sie das Risiko. Ein einziger Vorfall kostet ein Vielfaches dessen, was strukturierte Compliance pro Jahr kostet.</p>
+        </div>
+
+        <div class="risiko-grid">
+
+          <div class="risiko-card risiko-card--risk">
+            <p class="risiko-card__label">Risiko · NIS-2</p>
+            <p class="risiko-card__amount">10 Mio €</p>
+            <h3 class="risiko-card__title">Maximales Bußgeld nach NIS-2</h3>
+            <p class="risiko-card__text">Für wesentliche Einrichtungen: bis zu 10 Mio € oder 2 % des weltweiten Jahresumsatzes — je nachdem, was höher ist.</p>
+          </div>
+
+          <div class="risiko-card risiko-card--risk">
+            <p class="risiko-card__label">Risiko · Datenpanne</p>
+            <p class="risiko-card__amount">4,5 Mio €</p>
+            <h3 class="risiko-card__title">Durchschnittliche Kosten einer Datenpanne</h3>
+            <p class="risiko-card__text">Forensik, Benachrichtigungen, Anwälte, Produktivitätsverlust, Reputation, Aufsichtsverfahren — der Schnitt aller Branchen.</p>
+          </div>
+
+          <div class="risiko-card risiko-card--solution">
+            <p class="risiko-card__label">Vorsorge · ISMS</p>
+            <p class="risiko-card__amount">ab 9.900 €</p>
+            <h3 class="risiko-card__title">Ein ISMS bei Datenschutz Kroes</h3>
+            <p class="risiko-card__text">Festpreis. Audit-ready in 4 bis 12 Monaten. Sie kennen den Preis, bevor das Projekt startet — und das Risiko, das Sie damit eliminieren.</p>
+          </div>
+
+        </div>
+
+        <p class="risiko-footnote">Quellen: NIS-2-Richtlinie · IBM "Cost of a Data Breach 2024" · interne Festpreis-Kalkulation Datenschutz Kroes.</p>
       </div>
     </section>
 
@@ -968,6 +1066,31 @@
 
         <p class="pakete__footnote"><strong>Hinweis:</strong> Indikative Festpreise. Der endgültige Preis wird im Quick Check (kostenfrei, 30 Minuten) bestätigt. Externe Audit-Kosten der Zertifizierungsstelle werden bei Bedarf transparent durchgereicht und sind nicht im Festpreis enthalten.</p>
 
+        <!-- ===== SCHUTZSCHILD 3: KOMBI-PAKET ===== -->
+        <div class="kombi-paket">
+          <span class="kombi-paket__badge">Kombi-Angebot · 10 % Rabatt</span>
+          <div>
+            <p class="kombi-paket__label">ISMS + DSB im Bundle</p>
+            <h3 class="kombi-paket__title">ISMS Pro + DSB Retainer M.</h3>
+            <p class="kombi-paket__components"><strong>Aufbau ISMS Pro</strong> (Risikoanalyse, Doku, Lieferanten, NIS-2-Integration) <strong>+ DSB-Pflicht</strong> nach Art. 37 DSGVO mit 8 h Beratung pro Quartal — zwei Disziplinen, ein Vertrag, ein Ansprechpartner.</p>
+            <span class="kombi-paket__rebate">10 % Kombi-Rabatt auf monatlichen Betrieb</span>
+          </div>
+          <div class="kombi-paket__price-block">
+            <div class="kombi-paket__price-row">
+              <span class="kombi-paket__price-amount">18.500 €</span>
+              <span class="kombi-paket__price-suffix">einmalig, netto</span>
+            </div>
+            <div class="kombi-paket__price-row">
+              <span class="kombi-paket__price-amount">1.200 €</span>
+              <span class="kombi-paket__price-suffix">/ Monat, netto</span>
+            </div>
+            <a href="mailto:info@datenschutz-kroes.at?subject=Kombi-Angebot%20ISMS%20Pro%20%2B%20DSB%20M" class="kombi-paket__cta">
+              Kombi-Paket anfragen
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
         <!-- Konfigurator -->
         <div class="isms-configurator" id="isms-konfigurator" aria-label="ISMS Preis-Konfigurator">
           <div class="isms-config__head">
@@ -1025,6 +1148,22 @@
             Angebot per E-Mail anfordern
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+        </div>
+
+        <!-- ===== SCHUTZSCHILD 2: FESTPREIS-GARANTIE ===== -->
+        <div class="festpreis-garantie">
+          <div class="festpreis-garantie__seal" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 4l16 6v12c0 11-8 18-16 22-8-4-16-11-16-22V10l16-6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M16 24l6 6 12-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <p class="festpreis-garantie__label">Festpreis-Garantie</p>
+            <h3 class="festpreis-garantie__title">Wenn der Aufwand höher wird, tragen wir die Differenz.</h3>
+            <p class="festpreis-garantie__text">Sie zahlen den vereinbarten Festpreis — auch wenn das Projekt aufwendiger wird als kalkuliert. <strong>Schriftlich im Vertrag.</strong> Keine Nachforderungen, keine "Mehrstunden", keine bösen Überraschungen.</p>
+            <p class="festpreis-garantie__contrast">Was Stundensatz-Anbieter nicht versprechen können — weil ihr Geschäftsmodell darauf basiert, Stunden nachzufakturieren.</p>
+          </div>
         </div>
 
       </div>
