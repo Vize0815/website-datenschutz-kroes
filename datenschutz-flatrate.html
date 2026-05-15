@@ -355,6 +355,9 @@
     .pakete__grid--3 { grid-template-columns: repeat(3, 1fr); }
     .paket-card__price-period--secondary { margin-top: -16px; margin-bottom: 22px; font-size: 12.5px; color: var(--color-slate-light); }
     .paket-card--featured .paket-card__price-period--secondary { color: rgba(255,255,255,0.55); }
+    .paket-card__guarantee { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #2D6A4F; background: rgba(45,106,79,0.10); border: 1px solid rgba(45,106,79,0.32); padding: 6px 12px; border-radius: 100px; margin: -6px 0 20px; }
+    .paket-card__guarantee svg { flex-shrink: 0; }
+    .paket-card--featured .paket-card__guarantee { color: #8FE0A8; background: rgba(143,224,168,0.10); border-color: rgba(143,224,168,0.38); }
     .paket-card__feature--excluded { color: var(--color-slate-light); }
     .paket-card__feature--excluded svg { color: var(--color-slate-light); }
     .paket-card--featured .paket-card__feature--excluded { color: rgba(255,255,255,0.45); }
@@ -623,16 +626,16 @@
             <p class="risiko-card__text">Forensik, Benachrichtigungen, Anwälte, Produktivitätsverlust, Reputation, Aufsichtsverfahren — der Schnitt aller Branchen.</p>
           </div>
 
-          <div class="risiko-card risiko-card--solution">
-            <p class="risiko-card__label">Vorsorge · ISMS</p>
-            <p class="risiko-card__amount">ab 9.900 €</p>
-            <h3 class="risiko-card__title">Ein ISMS bei Datenschutz Kroes</h3>
-            <p class="risiko-card__text">Festpreis. Audit-ready in 4 bis 12 Monaten. Sie kennen den Preis, bevor das Projekt startet — und das Risiko, das Sie damit eliminieren.</p>
+          <div class="risiko-card risiko-card--risk">
+            <p class="risiko-card__label">Risiko · DSGVO-Präzedenzfall</p>
+            <p class="risiko-card__amount">10,4 Mio €</p>
+            <h3 class="risiko-card__title">notebooksbilliger.de — DSGVO-Bußgeld 2021</h3>
+            <p class="risiko-card__text">Festgesetzt von der LfD Niedersachsen wegen unzulässiger Mitarbeiter-Videoüberwachung — einer der größten dokumentierten Bußgeldbescheide gegen ein mittelständisches deutsches Unternehmen.</p>
           </div>
 
         </div>
 
-        <p class="risiko-footnote">Quellen: NIS-2-Richtlinie · IBM "Cost of a Data Breach 2024" · interne Festpreis-Kalkulation Datenschutz Kroes.</p>
+        <p class="risiko-footnote">Demgegenüber: Ein ISMS bei Datenschutz Kroes ab 9.900 € — Festpreis, siehe Pakete unten.<br>Quellen: NIS-2-Richtlinie · IBM "Cost of a Data Breach 2024" · LfD Niedersachsen, Pressemitteilung 08.01.2021.</p>
       </div>
     </section>
 
@@ -929,6 +932,13 @@
             </div>
             <p class="paket-card__price-period">Aufbau einmalig, netto · 4 bis 6 Monate</p>
             <p class="paket-card__price-period paket-card__price-period--secondary">+ 390 € pro Monat Betrieb (optional)</p>
+            <span class="paket-card__guarantee">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                <path d="M5.5 1l3.5 1.3v2.5c0 2.4-1.7 4-3.5 4.7-1.8-.7-3.5-2.3-3.5-4.7V2.3L5.5 1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                <path d="M3.8 5.5l1.3 1.3 2.4-2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Festpreis garantiert
+            </span>
             <div class="paket-card__divider"></div>
             <div class="paket-card__features">
               <p class="paket-card__feature-includes">Enthält:</p>
@@ -971,6 +981,13 @@
             </div>
             <p class="paket-card__price-period">Aufbau einmalig, netto · 6 bis 8 Monate</p>
             <p class="paket-card__price-period paket-card__price-period--secondary">+ 690 € pro Monat Betrieb (optional)</p>
+            <span class="paket-card__guarantee">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                <path d="M5.5 1l3.5 1.3v2.5c0 2.4-1.7 4-3.5 4.7-1.8-.7-3.5-2.3-3.5-4.7V2.3L5.5 1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                <path d="M3.8 5.5l1.3 1.3 2.4-2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Festpreis garantiert
+            </span>
             <div class="paket-card__divider"></div>
             <div class="paket-card__features">
               <p class="paket-card__feature-includes">Alles aus Start, plus:</p>
@@ -1008,6 +1025,13 @@
             </div>
             <p class="paket-card__price-period">Aufbau einmalig, netto · 8 bis 12 Monate</p>
             <p class="paket-card__price-period paket-card__price-period--secondary">+ 1.190 € pro Monat Betrieb (optional)</p>
+            <span class="paket-card__guarantee">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                <path d="M5.5 1l3.5 1.3v2.5c0 2.4-1.7 4-3.5 4.7-1.8-.7-3.5-2.3-3.5-4.7V2.3L5.5 1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                <path d="M3.8 5.5l1.3 1.3 2.4-2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Festpreis garantiert
+            </span>
             <div class="paket-card__divider"></div>
             <div class="paket-card__features">
               <p class="paket-card__feature-includes">Alles aus Pro, plus:</p>
@@ -1077,11 +1101,11 @@
           </div>
           <div class="kombi-paket__price-block">
             <div class="kombi-paket__price-row">
-              <span class="kombi-paket__price-amount">18.500 €</span>
+              <span class="kombi-paket__price-amount">16.550 €</span>
               <span class="kombi-paket__price-suffix">einmalig, netto</span>
             </div>
             <div class="kombi-paket__price-row">
-              <span class="kombi-paket__price-amount">1.200 €</span>
+              <span class="kombi-paket__price-amount">1.150 €</span>
               <span class="kombi-paket__price-suffix">/ Monat, netto</span>
             </div>
             <a href="mailto:info@datenschutz-kroes.at?subject=Kombi-Angebot%20ISMS%20Pro%20%2B%20DSB%20M" class="kombi-paket__cta">
@@ -1162,7 +1186,7 @@
             <p class="festpreis-garantie__label">Festpreis-Garantie</p>
             <h3 class="festpreis-garantie__title">Wenn der Aufwand höher wird, tragen wir die Differenz.</h3>
             <p class="festpreis-garantie__text">Sie zahlen den vereinbarten Festpreis — auch wenn das Projekt aufwendiger wird als kalkuliert. <strong>Schriftlich im Vertrag.</strong> Keine Nachforderungen, keine "Mehrstunden", keine bösen Überraschungen.</p>
-            <p class="festpreis-garantie__contrast">Was Stundensatz-Anbieter nicht versprechen können — weil ihr Geschäftsmodell darauf basiert, Stunden nachzufakturieren.</p>
+            <p class="festpreis-garantie__contrast">Ein Festpreis, ein Vertrag, ein persönlicher Ansprechpartner. Vom Erstgespräch bis zum Audit begleitet Sie Alexander Kroes — verbindlich, planbar, lokal in Österreich.</p>
           </div>
         </div>
 
