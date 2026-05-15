@@ -350,6 +350,50 @@
       .page-hero { padding-top: 32px; }
       .onboarding__steps { grid-template-columns: 1fr; }
     }
+
+    /* ===== ISMS PAKETE + KONFIGURATOR ===== */
+    .pakete__grid--3 { grid-template-columns: repeat(3, 1fr); }
+    .paket-card__price-period--secondary { margin-top: -16px; margin-bottom: 22px; font-size: 12.5px; color: var(--color-slate-light); }
+    .paket-card--featured .paket-card__price-period--secondary { color: rgba(255,255,255,0.55); }
+    .paket-card__feature--excluded { color: var(--color-slate-light); }
+    .paket-card__feature--excluded svg { color: var(--color-slate-light); }
+    .paket-card--featured .paket-card__feature--excluded { color: rgba(255,255,255,0.45); }
+    .paket-card--featured .paket-card__feature--excluded svg { color: rgba(255,255,255,0.45); }
+
+    .isms-configurator { margin-top: 48px; background: var(--color-bg); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 40px; }
+    .isms-config__slider { background: var(--color-mist); }
+    .isms-config__head { text-align: center; max-width: 560px; margin: 0 auto 32px; }
+    .isms-config__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 10px; }
+    .isms-config__title { font-size: 24px; font-weight: 600; color: var(--color-navy); margin-bottom: 8px; letter-spacing: -0.01em; }
+    .isms-config__sub { font-size: 14px; color: var(--color-slate); }
+    .isms-config__body { display: flex; flex-direction: column; gap: 28px; margin-bottom: 32px; }
+    .isms-config__field { display: flex; flex-direction: column; gap: 10px; }
+    .isms-config__field-head { display: flex; justify-content: space-between; align-items: baseline; }
+    .isms-config__field-label { font-size: 13px; font-weight: 600; color: var(--color-navy); letter-spacing: 0.01em; }
+    .isms-config__value { font-family: var(--font-mono); font-size: 20px; font-weight: 600; color: var(--color-prussian); }
+    .isms-config__slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 100px; background: var(--color-mist); outline: none; cursor: pointer; }
+    .isms-config__slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--color-navy); cursor: pointer; border: 3px solid var(--color-surface); box-shadow: 0 2px 8px rgba(15,31,61,0.25); transition: transform var(--transition-base); }
+    .isms-config__slider::-webkit-slider-thumb:hover { transform: scale(1.1); }
+    .isms-config__slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--color-navy); cursor: pointer; border: 3px solid var(--color-surface); box-shadow: 0 2px 8px rgba(15,31,61,0.25); }
+    .isms-config__scale { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; color: var(--color-slate-light); }
+    .isms-config__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .isms-chip { font-family: inherit; font-size: 13px; font-weight: 500; color: var(--color-slate); background: var(--color-surface); border: 1px solid var(--color-mist); padding: 10px 16px; border-radius: 100px; cursor: pointer; transition: all var(--transition-base); }
+    .isms-chip:hover { border-color: var(--color-prussian); color: var(--color-navy); }
+    .isms-chip.is-active { background: var(--color-navy); border-color: var(--color-navy); color: var(--color-surface); }
+    .isms-config__result { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--color-mist); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 16px; }
+    .isms-config__result-col { background: var(--color-sky-tint); padding: 24px; text-align: center; }
+    .isms-config__result-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-prussian); margin-bottom: 8px; }
+    .isms-config__result-amount { font-size: 32px; font-weight: 600; color: var(--color-navy); letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+    .isms-config__result-note { font-size: 12.5px; color: var(--color-slate); }
+    .isms-config__finepr { font-size: 12px; line-height: 1.6; color: var(--color-slate-light); text-align: center; margin-bottom: 20px; }
+    .isms-config__cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 16px 22px; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; color: var(--color-navy); background: var(--color-gold); border-radius: var(--radius-md); transition: background var(--transition-base), transform var(--transition-base); }
+    .isms-config__cta:hover { background: #e0bc5a; transform: translateY(-1px); }
+
+    @media (max-width: 900px) {
+      .pakete__grid--3 { grid-template-columns: 1fr; }
+      .isms-configurator { padding: 28px 20px; }
+      .isms-config__result { grid-template-columns: 1fr; }
+    }
   </style>
   <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
@@ -765,6 +809,227 @@
       </div>
     </section>
 
+    <!-- ===== ISMS PAKETE ===== -->
+    <section class="section section--white" id="isms-pakete" aria-label="ISMS-Pakete und Preise">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">ISMS-Pakete</p>
+          <h2 class="section__title">Festpreis statt Stundenfalle.</h2>
+          <p class="section__lead">Für KMU mit 10 bis 100 Mitarbeitern. Drei Pakete für den ISMS-Aufbau, klare Preise, keine versteckten Kosten. Optionaler Care-Retainer für den laufenden Betrieb nach dem Aufbau.</p>
+        </div>
+
+        <div class="pakete__grid pakete__grid--3">
+
+          <!-- ISMS Start -->
+          <article class="paket-card">
+            <p class="paket-card__tier">ISMS Start</p>
+            <h3 class="paket-card__name">Start</h3>
+            <p class="paket-card__size">10 bis 25 Mitarbeiter</p>
+            <div class="paket-card__price">
+              <span class="paket-card__price-amount">9.900</span>
+              <span class="paket-card__price-currency">€</span>
+            </div>
+            <p class="paket-card__price-period">Aufbau einmalig, netto · 4 bis 6 Monate</p>
+            <p class="paket-card__price-period paket-card__price-period--secondary">+ 390 € pro Monat Betrieb (optional)</p>
+            <div class="paket-card__divider"></div>
+            <div class="paket-card__features">
+              <p class="paket-card__feature-includes">Enthält:</p>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Risikoanalyse und SoA
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Komplette Doku audit-ready
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Awareness-Schulung
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                4 bis 6 Monate Projektdauer
+              </div>
+              <div class="paket-card__feature paket-card__feature--excluded">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                Zertifizierung als Option
+              </div>
+            </div>
+            <a href="mailto:info@datenschutz-kroes.at?subject=Quick%20Check%20ISMS%20Start" class="paket-card__cta">
+              Quick Check buchen, 30 Min. kostenfrei
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <!-- ISMS Pro (Featured) -->
+          <article class="paket-card paket-card--featured">
+            <span class="paket-card__badge">Beliebteste Wahl</span>
+            <p class="paket-card__tier">ISMS Pro</p>
+            <h3 class="paket-card__name">Pro</h3>
+            <p class="paket-card__size">25 bis 50 Mitarbeiter</p>
+            <div class="paket-card__price">
+              <span class="paket-card__price-amount">16.900</span>
+              <span class="paket-card__price-currency">€</span>
+            </div>
+            <p class="paket-card__price-period">Aufbau einmalig, netto · 6 bis 8 Monate</p>
+            <p class="paket-card__price-period paket-card__price-period--secondary">+ 690 € pro Monat Betrieb (optional)</p>
+            <div class="paket-card__divider"></div>
+            <div class="paket-card__features">
+              <p class="paket-card__feature-includes">Alles aus Start, plus:</p>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Lieferantenmanagement
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Externe Audit-Begleitung
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                NIS-2 Integration
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                6 bis 8 Monate Projektdauer
+              </div>
+            </div>
+            <a href="mailto:info@datenschutz-kroes.at?subject=Quick%20Check%20ISMS%20Pro" class="paket-card__cta">
+              Quick Check buchen, 30 Min. kostenfrei
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <!-- ISMS Enterprise -->
+          <article class="paket-card">
+            <p class="paket-card__tier">ISMS Enterprise</p>
+            <h3 class="paket-card__name">Enterprise</h3>
+            <p class="paket-card__size">50 bis 100 Mitarbeiter</p>
+            <div class="paket-card__price">
+              <span class="paket-card__price-amount">27.900</span>
+              <span class="paket-card__price-currency">€</span>
+            </div>
+            <p class="paket-card__price-period">Aufbau einmalig, netto · 8 bis 12 Monate</p>
+            <p class="paket-card__price-period paket-card__price-period--secondary">+ 1.190 € pro Monat Betrieb (optional)</p>
+            <div class="paket-card__divider"></div>
+            <div class="paket-card__features">
+              <p class="paket-card__feature-includes">Alles aus Pro, plus:</p>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Externer ISB im Retainer
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Vorfallsmanagement 24 h
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Zertifizierung inklusive
+              </div>
+              <div class="paket-card__feature">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                8 bis 12 Monate Projektdauer
+              </div>
+            </div>
+            <a href="mailto:info@datenschutz-kroes.at?subject=Quick%20Check%20ISMS%20Enterprise" class="paket-card__cta">
+              Quick Check buchen, 30 Min. kostenfrei
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- ISMS Care Band -->
+        <div class="setup-band">
+          <div class="setup-band__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 2l2.5 5 5.5.8-4 3.9.9 5.5L10 14.6l-4.9 2.6.9-5.5-4-3.9 5.5-.8L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="setup-band__content">
+            <p class="setup-band__label">Laufender Betrieb · ISMS Care</p>
+            <p class="setup-band__title">Pflege, Audits, Lieferantenchecks — monatlicher Retainer</p>
+            <p class="setup-band__text">Nach dem Aufbau übernehmen wir den laufenden ISMS-Betrieb. Drei Stufen, monatlich kündbar nach 24 Monaten Mindestlaufzeit.</p>
+          </div>
+          <div class="setup-band__prices">
+            <div class="setup-band__price-item">
+              <p class="setup-band__price-tier">Care S</p>
+              <p class="setup-band__price-amount">390 €</p>
+            </div>
+            <div class="setup-band__price-item">
+              <p class="setup-band__price-tier">Care M</p>
+              <p class="setup-band__price-amount">690 €</p>
+            </div>
+            <div class="setup-band__price-item">
+              <p class="setup-band__price-tier">Care L</p>
+              <p class="setup-band__price-amount">1.190 €</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="pakete__footnote"><strong>Hinweis:</strong> Indikative Festpreise. Der endgültige Preis wird im Quick Check (kostenfrei, 30 Minuten) bestätigt. Externe Audit-Kosten der Zertifizierungsstelle werden bei Bedarf transparent durchgereicht und sind nicht im Festpreis enthalten.</p>
+
+        <!-- Konfigurator -->
+        <div class="isms-configurator" id="isms-konfigurator" aria-label="ISMS Preis-Konfigurator">
+          <div class="isms-config__head">
+            <p class="isms-config__label">Konfigurator</p>
+            <h3 class="isms-config__title">Ihr individueller ISMS-Preis</h3>
+            <p class="isms-config__sub">Schieber bewegen, Auswahl treffen, Festpreis sehen.</p>
+          </div>
+
+          <div class="isms-config__body">
+            <div class="isms-config__field">
+              <div class="isms-config__field-head">
+                <label for="isms-ma" class="isms-config__field-label">Mitarbeiterzahl</label>
+                <span class="isms-config__value" id="isms-ma-display">30</span>
+              </div>
+              <input type="range" id="isms-ma" min="10" max="100" step="5" value="30" class="isms-config__slider" aria-describedby="isms-ma-display">
+              <div class="isms-config__scale"><span>10</span><span>100</span></div>
+            </div>
+
+            <div class="isms-config__field">
+              <p class="isms-config__field-label">Branche</p>
+              <div class="isms-config__chips" data-group="branche" role="radiogroup" aria-label="Branche">
+                <button type="button" class="isms-chip is-active" data-value="standard" role="radio" aria-checked="true">Standard</button>
+                <button type="button" class="isms-chip" data-value="gesundheit" role="radio" aria-checked="false">Gesundheit</button>
+                <button type="button" class="isms-chip" data-value="finanz" role="radio" aria-checked="false">Finanz</button>
+                <button type="button" class="isms-chip" data-value="kritis" role="radio" aria-checked="false">KRITIS</button>
+                <button type="button" class="isms-chip" data-value="it" role="radio" aria-checked="false">IT-Dienstleister</button>
+              </div>
+            </div>
+
+            <div class="isms-config__field">
+              <p class="isms-config__field-label">Ziel</p>
+              <div class="isms-config__chips" data-group="ziel" role="radiogroup" aria-label="Ziel">
+                <button type="button" class="isms-chip is-active" data-value="ready" role="radio" aria-checked="true">Audit-ready, ohne Zertifikat</button>
+                <button type="button" class="isms-chip" data-value="zerti" role="radio" aria-checked="false">Mit ISO 27001 Zertifizierung</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="isms-config__result">
+            <div class="isms-config__result-col">
+              <p class="isms-config__result-label">Aufbau einmalig</p>
+              <p class="isms-config__result-amount" id="isms-build">16.900 €</p>
+              <p class="isms-config__result-note" id="isms-build-note">Empfehlung: ISMS Pro</p>
+            </div>
+            <div class="isms-config__result-col">
+              <p class="isms-config__result-label">Betrieb monatlich</p>
+              <p class="isms-config__result-amount" id="isms-care">690 €</p>
+              <p class="isms-config__result-note">netto, kündbar nach 24 Monaten</p>
+            </div>
+          </div>
+
+          <p class="isms-config__finepr">Indikative Festpreise, Endpreis nach Quick Check. Externe Audit-Kosten der Zertifizierungsstelle werden bei Bedarf transparent durchgereicht.</p>
+
+          <a href="mailto:info@datenschutz-kroes.at?subject=ISMS%20Angebot%20anfordern" class="isms-config__cta" id="isms-config-cta">
+            Angebot per E-Mail anfordern
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ===== SCOPE ===== -->
     <section class="section section--fog" aria-label="Was ist enthalten">
       <div class="container">
@@ -1098,6 +1363,68 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navOpen) closeMobileNav();
     });
+
+    // ISMS Konfigurator
+    (function () {
+      const slider = document.getElementById('isms-ma');
+      if (!slider) return;
+      const maDisplay = document.getElementById('isms-ma-display');
+      const buildEl = document.getElementById('isms-build');
+      const buildNoteEl = document.getElementById('isms-build-note');
+      const careEl = document.getElementById('isms-care');
+      const cta = document.getElementById('isms-config-cta');
+      const chipGroups = document.querySelectorAll('.isms-config__chips');
+
+      const state = { ma: parseInt(slider.value, 10), branche: 'standard', ziel: 'ready' };
+      const fmt = (n) => n.toLocaleString('de-DE');
+
+      function pickPackage(ma) {
+        if (ma <= 25) return { name: 'ISMS Start', build: 9900, care: 390 };
+        if (ma <= 50) return { name: 'ISMS Pro', build: 16900, care: 690 };
+        return { name: 'ISMS Enterprise', build: 27900, care: 1190 };
+      }
+
+      function render() {
+        const pkg = pickPackage(state.ma);
+        maDisplay.textContent = state.ma;
+        buildEl.textContent = fmt(pkg.build) + ' €';
+        careEl.textContent = fmt(pkg.care) + ' €';
+
+        let note = 'Empfehlung: ' + pkg.name;
+        if (state.ziel === 'zerti' && pkg.name !== 'ISMS Enterprise') {
+          note += ' inkl. Zertifizierungsbegleitung';
+        }
+        buildNoteEl.textContent = note;
+
+        const brancheLabel = {
+          standard: 'Standard', gesundheit: 'Gesundheit', finanz: 'Finanz',
+          kritis: 'KRITIS', it: 'IT-Dienstleister'
+        }[state.branche];
+        const zielLabel = state.ziel === 'zerti' ? 'mit ISO 27001 Zertifizierung' : 'audit-ready, ohne Zertifikat';
+        const subject = `ISMS Angebot — ${pkg.name} · ${state.ma} MA · ${brancheLabel} · ${zielLabel}`;
+        cta.href = 'mailto:info@datenschutz-kroes.at?subject=' + encodeURIComponent(subject);
+      }
+
+      slider.addEventListener('input', (e) => { state.ma = parseInt(e.target.value, 10); render(); });
+
+      chipGroups.forEach((group) => {
+        const groupKey = group.getAttribute('data-group');
+        group.addEventListener('click', (e) => {
+          const chip = e.target.closest('.isms-chip');
+          if (!chip || !group.contains(chip)) return;
+          group.querySelectorAll('.isms-chip').forEach((c) => {
+            c.classList.remove('is-active');
+            c.setAttribute('aria-checked', 'false');
+          });
+          chip.classList.add('is-active');
+          chip.setAttribute('aria-checked', 'true');
+          state[groupKey] = chip.getAttribute('data-value');
+          render();
+        });
+      });
+
+      render();
+    })();
 
     // FAQ Accordion
     function toggleFlatrateFaq(header) {
