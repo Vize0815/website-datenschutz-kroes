@@ -1201,6 +1201,62 @@
       margin-bottom: 32px;
     }
 
+    .services__trust-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-top: 8px;
+      padding-top: 28px;
+      border-top: 1px solid var(--color-mist);
+    }
+    .services__trust-photo {
+      flex-shrink: 0;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--color-mist);
+      box-shadow: 0 1px 0 rgba(15, 23, 42, .08), 0 8px 22px rgba(27, 79, 138, .14);
+    }
+    .services__trust-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 15%;
+      display: block;
+    }
+    .services__trust-text {
+      flex: 1;
+      min-width: 0;
+      margin: 0;
+    }
+    .services__trust-quote {
+      font-family: var(--font-serif, 'Fraunces', Georgia, serif);
+      font-style: italic;
+      font-size: 17px;
+      line-height: 1.5;
+      color: var(--color-ink);
+      margin: 0 0 10px;
+    }
+    .services__trust-name {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--color-ink);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .services__trust-role {
+      font-size: 13px;
+      color: var(--color-prussian);
+      margin: 4px 0 0;
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 640px) {
+      .services__trust-card { gap: 14px; padding-top: 24px; }
+      .services__trust-photo { width: 72px; height: 72px; }
+      .services__trust-quote { font-size: 16px; }
+    }
+
     .services__list {
       display: flex;
       flex-direction: column;
@@ -4010,6 +4066,17 @@
             <h2 class="t-h2 services__aside-headline">Vollständiger Schutz für Ihr Unternehmen.</h2>
             <p class="t-body services__aside-text">Vom Erstgespräch bis zur laufenden Betreuung begleitet Sie Ihr persönlicher Ansprechpartner – alles aus einer Hand, ohne unnötige Schnittstellen.</p>
             <p class="t-body services__aside-text">Individuell, erreichbar und lösungsorientiert statt anonymer Standardservice.</p>
+
+            <figure class="services__trust-card" data-reveal data-reveal-delay="2">
+              <div class="services__trust-photo">
+                <img src="alexander-kroes-2.webp" alt="Alexander Kroes, externer zertifizierter Datenschutzbeauftragter" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="services__trust-text">
+                <p class="services__trust-quote">„Mit mir reden Sie persönlich – nicht mit einer Hotline."</p>
+                <p class="services__trust-name">Alexander Kroes</p>
+                <p class="services__trust-role">Externer zertifizierter DSB</p>
+              </figcaption>
+            </figure>
           </div>
 
           <div class="services__list" data-reveal data-reveal-delay="1">
