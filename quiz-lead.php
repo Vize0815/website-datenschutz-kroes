@@ -128,6 +128,9 @@ $lines[] = 'Verdict:      ' . ($verdictTitle !== '' ? $verdictTitle : '—')
                             . ($verdictKey !== '' ? ' (' . $verdictKey . ')' : '');
 $lines[] = '';
 $lines[] = '— Antworten —';
+$landRaw = $clean($answers['land'] ?? '');
+$landMap = ['at' => 'Österreich (NISG 2024)', 'de' => 'Deutschland (NIS2UmsuCG)'];
+$lines[] = 'Land:         ' . ($landMap[$landRaw] ?? ($landRaw ?: '—'));
 $lines[] = 'Sektor:       ' . ($clean($answers['sektor']      ?? '') ?: '—');
 $lines[] = 'Mitarbeiter:  ' . ($clean($answers['mitarbeiter'] ?? '') ?: '—');
 $lines[] = 'Umsatz:       ' . ($clean($answers['umsatz']      ?? '') ?: '—');

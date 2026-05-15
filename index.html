@@ -3134,6 +3134,54 @@
       line-height: 1.5;
     }
 
+    /* Land-Auswahl: 2-spaltige große Tiles mit Flagge */
+    .quiz-nis2__options--land {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .quiz-nis2__option--land .quiz-nis2__option-box {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 24px 24px 22px;
+      min-height: 200px;
+    }
+
+    .quiz-nis2__option--land .quiz-nis2__option-marker {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      margin-top: 0;
+    }
+
+    .quiz-nis2__land-flag {
+      display: block;
+      font-size: 44px;
+      line-height: 1;
+      margin-bottom: 14px;
+      filter: saturate(1.05);
+    }
+
+    .quiz-nis2__option--land .quiz-nis2__option-title {
+      font-family: var(--font-serif, 'Fraunces', serif);
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 640px) {
+      .quiz-nis2__options--land {
+        grid-template-columns: 1fr;
+      }
+      .quiz-nis2__option--land .quiz-nis2__option-box {
+        min-height: 0;
+      }
+      .quiz-nis2__land-flag {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+    }
+
     .quiz-nis2__nav {
       display: flex;
       justify-content: space-between;
@@ -4261,7 +4309,7 @@
           <p class="t-eyebrow quiz-nis2__eyebrow">Selbsttest · 2 Minuten</p>
           <h2 class="t-h2 quiz-nis2__headline">Sind Sie von NIS-2 betroffen?</h2>
           <p class="t-lead quiz-nis2__lead">
-            Beantworten Sie 5 kurze Fragen und erhalten Sie eine orientierende Einschätzung — mit klaren Quellenangaben zur NIS-2-Richtlinie und zum österreichischen NISG 2024. Auf Wunsch laden Sie das Ergebnis als PDF herunter.
+            Beantworten Sie 6 kurze Fragen und erhalten Sie eine orientierende Einschätzung — mit klaren Quellenangaben zur NIS-2-Richtlinie sowie zum österreichischen NISG&nbsp;2024 bzw. deutschen NIS2UmsuCG. Auf Wunsch laden Sie das Ergebnis als PDF herunter.
           </p>
         </header>
 
@@ -4269,19 +4317,49 @@
           <!-- PROGRESS -->
           <div class="quiz-nis2__progress-wrap" data-quiz-progress-wrap>
             <div class="quiz-nis2__progress-meta">
-              <span>Frage <strong data-quiz-step-current>1</strong> von <strong data-quiz-step-total>5</strong></span>
-              <span data-quiz-progress-label>20 %</span>
+              <span>Schritt <strong data-quiz-step-current>1</strong> von <strong data-quiz-step-total>6</strong></span>
+              <span data-quiz-progress-label>17 %</span>
             </div>
-            <div class="quiz-nis2__progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20">
-              <div class="quiz-nis2__progress-fill" data-quiz-progress-fill style="width:20%"></div>
+            <div class="quiz-nis2__progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="17">
+              <div class="quiz-nis2__progress-fill" data-quiz-progress-fill style="width:17%"></div>
             </div>
           </div>
 
           <!-- QUIZ STEPS -->
           <div data-quiz-steps>
 
-            <!-- FRAGE 1: SEKTOR -->
+            <!-- FRAGE 1: LAND -->
             <div class="quiz-nis2__step is-active" data-quiz-step="1">
+              <h3 class="quiz-nis2__question">In welchem Land hat Ihr Unternehmen seinen Hauptsitz?</h3>
+              <p class="quiz-nis2__hint">Die NIS-2-Richtlinie (EU 2022/2555) wird in jedem Mitgliedstaat durch nationales Recht umgesetzt. Behörde, Meldewege und Paragraphenverweise unterscheiden sich.</p>
+              <div class="quiz-nis2__options quiz-nis2__options--land" role="radiogroup" aria-label="Land">
+                <label class="quiz-nis2__option quiz-nis2__option--land">
+                  <input type="radio" name="land" value="at">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__land-flag" aria-hidden="true">🇦🇹</span>
+                      <span class="quiz-nis2__option-title">Österreich</span>
+                      <span class="quiz-nis2__option-desc">Umsetzung über NISG&nbsp;2024 — zuständige Behörde: BMI / Cybersicherheitsbehörde, Meldewege über die nationale Meldeplattform.</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="quiz-nis2__option quiz-nis2__option--land">
+                  <input type="radio" name="land" value="de">
+                  <span class="quiz-nis2__option-box">
+                    <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
+                    <span class="quiz-nis2__option-content">
+                      <span class="quiz-nis2__land-flag" aria-hidden="true">🇩🇪</span>
+                      <span class="quiz-nis2__option-title">Deutschland</span>
+                      <span class="quiz-nis2__option-desc">Umsetzung über NIS2UmsuCG (Änderung des BSI-Gesetzes) — zuständige Behörde: BSI, Meldewege über das BSI-Meldeportal.</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- FRAGE 2: SEKTOR -->
+            <div class="quiz-nis2__step" data-quiz-step="2">
               <h3 class="quiz-nis2__question">In welchem Sektor ist Ihr Unternehmen primär tätig?</h3>
               <p class="quiz-nis2__hint">
                 NIS-2 unterscheidet zwei Sektor-Anhänge mit unterschiedlichen Pflichten.
@@ -4347,8 +4425,8 @@
               </div>
             </div>
 
-            <!-- FRAGE 2: MITARBEITER -->
-            <div class="quiz-nis2__step" data-quiz-step="2">
+            <!-- FRAGE 3: MITARBEITER -->
+            <div class="quiz-nis2__step" data-quiz-step="3">
               <h3 class="quiz-nis2__question">Wie viele Mitarbeiter beschäftigt Ihr Unternehmen?</h3>
               <p class="quiz-nis2__hint">Bitte Vollzeitäquivalente (VZÄ) gemäß Empfehlung 2003/361/EG angeben — inklusive verbundener und Partnerunternehmen.</p>
               <div class="quiz-nis2__options" role="radiogroup" aria-label="Mitarbeiter">
@@ -4385,8 +4463,8 @@
               </div>
             </div>
 
-            <!-- FRAGE 3: UMSATZ -->
-            <div class="quiz-nis2__step" data-quiz-step="3">
+            <!-- FRAGE 4: UMSATZ -->
+            <div class="quiz-nis2__step" data-quiz-step="4">
               <h3 class="quiz-nis2__question">Wie hoch ist Ihr Jahresumsatz oder Ihre Jahresbilanzsumme?</h3>
               <p class="quiz-nis2__hint">Maßgeblich ist der jeweils höhere Wert. Verbundene und Partnerunternehmen sind anteilig einzurechnen (Art. 6 Empfehlung 2003/361/EG).</p>
               <div class="quiz-nis2__options" role="radiogroup" aria-label="Umsatz">
@@ -4423,8 +4501,8 @@
               </div>
             </div>
 
-            <!-- FRAGE 4: SONDERFALL -->
-            <div class="quiz-nis2__step" data-quiz-step="4">
+            <!-- FRAGE 5: SONDERFALL -->
+            <div class="quiz-nis2__step" data-quiz-step="5">
               <h3 class="quiz-nis2__question">Trifft eines dieser Sonderkriterien auf Sie zu?</h3>
               <p class="quiz-nis2__hint">Mehrfachauswahl möglich. Bei einem dieser Kriterien gilt NIS-2 <strong>unabhängig von der Unternehmensgröße</strong> (Art. 2 Abs. 2 NIS-2-RL).</p>
               <div class="quiz-nis2__options" aria-label="Sonderkriterien">
@@ -4491,8 +4569,8 @@
               </div>
             </div>
 
-            <!-- FRAGE 5: LIEFERKETTE -->
-            <div class="quiz-nis2__step" data-quiz-step="5">
+            <!-- FRAGE 6: LIEFERKETTE -->
+            <div class="quiz-nis2__step" data-quiz-step="6">
               <h3 class="quiz-nis2__question">Beliefern Sie Unternehmen, die unter NIS-2 fallen?</h3>
               <p class="quiz-nis2__hint">NIS-2 verpflichtet erfasste Unternehmen, auch die Sicherheit ihrer Lieferkette zu adressieren (Art. 21 Abs. 2 lit. d NIS-2-RL). Damit können Anforderungen vertraglich an Sie weitergegeben werden.</p>
               <div class="quiz-nis2__options" role="radiogroup" aria-label="Lieferkette">
@@ -5487,6 +5565,7 @@
       };
       const sonderfall = Array.from(root.querySelectorAll('input[name="sonderfall"]:checked')).map(i => i.value);
       return {
+        land:        get('land') || 'at',
         sektor:      get('sektor'),
         mitarbeiter: get('mitarbeiter'),
         umsatz:      get('umsatz'),
@@ -5577,47 +5656,69 @@
       }
     };
 
-    const OBLIGATIONS = {
-      full_essential: [
-        { t: 'Risikomanagement', d: 'Technische, operative und organisatorische Maßnahmen zur Beherrschung von Risiken (u.a. Zugriffskontrolle, Krypto, Backup, BCM, Incident Response).', s: 'Art. 21 NIS-2-RL · §§ 28 ff. NISG 2024' },
-        { t: 'Meldepflichten', d: 'Frühwarnung binnen 24 Std., Meldung binnen 72 Std., Abschlussbericht binnen 1 Monat nach erheblichem Sicherheitsvorfall.', s: 'Art. 23 NIS-2-RL · § 32 NISG 2024' },
-        { t: 'Registrierung', d: 'Pflicht zur Registrierung bei der zuständigen Behörde (in Österreich: Bundesministerium für Inneres / GovCERT).', s: 'Art. 27 NIS-2-RL · § 35 NISG 2024' },
-        { t: 'Verantwortung der Geschäftsleitung', d: 'Billigung der Maßnahmen, Überwachung der Umsetzung und verpflichtende Schulungen für Leitungsorgane.', s: 'Art. 20 NIS-2-RL · § 31 NISG 2024' },
-        { t: 'Proaktive Aufsicht', d: 'Vor-Ort-Inspektionen, regelmäßige &amp; gezielte Sicherheitsprüfungen, Sicherheits-Scans, Informationsabfragen.', s: 'Art. 32 NIS-2-RL' }
-      ],
-      full_important: [
-        { t: 'Risikomanagement', d: 'Technische, operative und organisatorische Maßnahmen zur Beherrschung von Risiken (u.a. Zugriffskontrolle, Krypto, Backup, BCM, Incident Response).', s: 'Art. 21 NIS-2-RL · §§ 28 ff. NISG 2024' },
-        { t: 'Meldepflichten', d: 'Frühwarnung binnen 24 Std., Meldung binnen 72 Std., Abschlussbericht binnen 1 Monat nach erheblichem Sicherheitsvorfall.', s: 'Art. 23 NIS-2-RL · § 32 NISG 2024' },
-        { t: 'Registrierung', d: 'Pflicht zur Registrierung bei der zuständigen Behörde.', s: 'Art. 27 NIS-2-RL · § 35 NISG 2024' },
-        { t: 'Verantwortung der Geschäftsleitung', d: 'Billigung der Maßnahmen, Überwachung der Umsetzung und verpflichtende Schulungen für Leitungsorgane.', s: 'Art. 20 NIS-2-RL · § 31 NISG 2024' },
-        { t: 'Reaktive Aufsicht', d: 'Ex-post-Aufsicht bei Anhaltspunkten — keine routinemäßigen Inspektionen, aber volle Ermittlungsbefugnisse im Anlassfall.', s: 'Art. 33 NIS-2-RL' }
-      ],
-      check: [
-        { t: 'Dokumentierte Einzelfallprüfung', d: 'Da Ihr Sektor erfasst ist, sollte die Anwendbarkeit der KMU-Ausnahme dokumentiert geprüft werden — insb. Berücksichtigung verbundener und Partnerunternehmen.', s: 'Art. 2 NIS-2-RL · Empfehlung 2003/361/EG' },
-        { t: 'Cybersecurity-Mindeststandards', d: 'Auch wenn NIS-2 selbst nicht greift: anerkannte Mindeststandards (ISO/IEC 27001, BSI-Grundschutz, NIST CSF) sind branchenüblich.', s: 'Best Practice' }
-      ],
-      supply: [
-        { t: 'Vertragliche Cybersecurity-Anforderungen', d: 'NIS-2-Adressaten müssen die Sicherheit der Lieferkette adressieren und werden konkrete Anforderungen (SLAs, Sicherheitsklauseln, Audit-Rechte) weitergeben.', s: 'Art. 21 Abs. 2 lit. d NIS-2-RL' },
-        { t: 'ISMS-Konformität', d: 'Erwartet werden anerkannte Sicherheitsstandards (ISO/IEC 27001, TISAX, SOC 2) sowie Nachweise zur Incident-Response-Fähigkeit.', s: 'Best Practice' },
-        { t: 'Audit- und Nachweispflichten', d: 'Auditbereitschaft und Belegfähigkeit der Sicherheitsmaßnahmen — typischerweise jährliche Re-Zertifizierung.', s: 'Vertragsrecht' }
-      ],
-      none: [
-        { t: 'Keine direkten NIS-2-Pflichten', d: 'Eine unmittelbare Anwendung von NIS-2 ist auf Basis Ihrer Angaben nicht ersichtlich.', s: 'Art. 2 NIS-2-RL' },
-        { t: 'Empfohlene Mindeststandards', d: 'Branchenübliche Cybersecurity-Hygiene (Patch-Management, MFA, Backups, Awareness) bleibt unabhängig von NIS-2 angezeigt.', s: 'Best Practice' }
-      ]
+    // Länderspezifischer Quellenverweis. resolveSrc(s, land) gibt String zurück.
+    const resolveSrc = (s, land) => (typeof s === 'string') ? s : (s[land] || s.at);
+
+    const SRC = {
+      risk:    { at: 'Art. 21 NIS-2-RL · §§ 28 ff. NISG 2024',          de: 'Art. 21 NIS-2-RL · § 30 BSIG (NIS2UmsuCG)' },
+      report:  { at: 'Art. 23 NIS-2-RL · § 32 NISG 2024',                de: 'Art. 23 NIS-2-RL · § 32 BSIG (NIS2UmsuCG)' },
+      reg:     { at: 'Art. 27 NIS-2-RL · § 35 NISG 2024',                de: 'Art. 27 NIS-2-RL · § 33 BSIG (NIS2UmsuCG)' },
+      mgmt:    { at: 'Art. 20 NIS-2-RL · § 31 NISG 2024',                de: 'Art. 20 NIS-2-RL · § 38 BSIG (NIS2UmsuCG)' },
+      penHigh: { at: 'Art. 34 Abs. 4 NIS-2-RL · §§ 56 ff. NISG 2024',   de: 'Art. 34 Abs. 4 NIS-2-RL · § 60 BSIG (NIS2UmsuCG)' },
+      penMid:  { at: 'Art. 34 Abs. 5 NIS-2-RL · §§ 56 ff. NISG 2024',   de: 'Art. 34 Abs. 5 NIS-2-RL · § 60 BSIG (NIS2UmsuCG)' }
     };
 
+    // Länder-spezifische Behörden-Texte für die Registrierungs-Beschreibung
+    const REG_AUTHORITY = {
+      at: 'Pflicht zur Registrierung bei der zuständigen Behörde (in Österreich: Bundesministerium für Inneres / GovCERT).',
+      de: 'Pflicht zur Registrierung beim Bundesamt für Sicherheit in der Informationstechnik (BSI) als zuständige Behörde.'
+    };
+
+    function buildObligations(land) {
+      const regDesc = REG_AUTHORITY[land] || REG_AUTHORITY.at;
+      return {
+        full_essential: [
+          { t: 'Risikomanagement', d: 'Technische, operative und organisatorische Maßnahmen zur Beherrschung von Risiken (u.a. Zugriffskontrolle, Krypto, Backup, BCM, Incident Response).', s: SRC.risk },
+          { t: 'Meldepflichten', d: 'Frühwarnung binnen 24 Std., Meldung binnen 72 Std., Abschlussbericht binnen 1 Monat nach erheblichem Sicherheitsvorfall.', s: SRC.report },
+          { t: 'Registrierung', d: regDesc, s: SRC.reg },
+          { t: 'Verantwortung der Geschäftsleitung', d: 'Billigung der Maßnahmen, Überwachung der Umsetzung und verpflichtende Schulungen für Leitungsorgane.', s: SRC.mgmt },
+          { t: 'Proaktive Aufsicht', d: 'Vor-Ort-Inspektionen, regelmäßige &amp; gezielte Sicherheitsprüfungen, Sicherheits-Scans, Informationsabfragen.', s: 'Art. 32 NIS-2-RL' }
+        ],
+        full_important: [
+          { t: 'Risikomanagement', d: 'Technische, operative und organisatorische Maßnahmen zur Beherrschung von Risiken (u.a. Zugriffskontrolle, Krypto, Backup, BCM, Incident Response).', s: SRC.risk },
+          { t: 'Meldepflichten', d: 'Frühwarnung binnen 24 Std., Meldung binnen 72 Std., Abschlussbericht binnen 1 Monat nach erheblichem Sicherheitsvorfall.', s: SRC.report },
+          { t: 'Registrierung', d: 'Pflicht zur Registrierung bei der zuständigen Behörde.', s: SRC.reg },
+          { t: 'Verantwortung der Geschäftsleitung', d: 'Billigung der Maßnahmen, Überwachung der Umsetzung und verpflichtende Schulungen für Leitungsorgane.', s: SRC.mgmt },
+          { t: 'Reaktive Aufsicht', d: 'Ex-post-Aufsicht bei Anhaltspunkten — keine routinemäßigen Inspektionen, aber volle Ermittlungsbefugnisse im Anlassfall.', s: 'Art. 33 NIS-2-RL' }
+        ],
+        check: [
+          { t: 'Dokumentierte Einzelfallprüfung', d: 'Da Ihr Sektor erfasst ist, sollte die Anwendbarkeit der KMU-Ausnahme dokumentiert geprüft werden — insb. Berücksichtigung verbundener und Partnerunternehmen.', s: 'Art. 2 NIS-2-RL · Empfehlung 2003/361/EG' },
+          { t: 'Cybersecurity-Mindeststandards', d: 'Auch wenn NIS-2 selbst nicht greift: anerkannte Mindeststandards (ISO/IEC 27001, BSI-Grundschutz, NIST CSF) sind branchenüblich.', s: 'Best Practice' }
+        ],
+        supply: [
+          { t: 'Vertragliche Cybersecurity-Anforderungen', d: 'NIS-2-Adressaten müssen die Sicherheit der Lieferkette adressieren und werden konkrete Anforderungen (SLAs, Sicherheitsklauseln, Audit-Rechte) weitergeben.', s: 'Art. 21 Abs. 2 lit. d NIS-2-RL' },
+          { t: 'ISMS-Konformität', d: 'Erwartet werden anerkannte Sicherheitsstandards (ISO/IEC 27001, TISAX, SOC 2) sowie Nachweise zur Incident-Response-Fähigkeit.', s: 'Best Practice' },
+          { t: 'Audit- und Nachweispflichten', d: 'Auditbereitschaft und Belegfähigkeit der Sicherheitsmaßnahmen — typischerweise jährliche Re-Zertifizierung.', s: 'Vertragsrecht' }
+        ],
+        none: [
+          { t: 'Keine direkten NIS-2-Pflichten', d: 'Eine unmittelbare Anwendung von NIS-2 ist auf Basis Ihrer Angaben nicht ersichtlich.', s: 'Art. 2 NIS-2-RL' },
+          { t: 'Empfohlene Mindeststandards', d: 'Branchenübliche Cybersecurity-Hygiene (Patch-Management, MFA, Backups, Awareness) bleibt unabhängig von NIS-2 angezeigt.', s: 'Best Practice' }
+        ]
+      };
+    }
+
     const PENALTIES = {
-      high: { t: 'Bußgeldrahmen', d: 'Bis zu <strong>10 Mio. €</strong> oder <strong>2 % des weltweiten Jahresumsatzes</strong> (jeweils höherer Betrag).', s: 'Art. 34 Abs. 4 NIS-2-RL · §§ 56 ff. NISG 2024' },
-      mid:  { t: 'Bußgeldrahmen', d: 'Bis zu <strong>7 Mio. €</strong> oder <strong>1,4 % des weltweiten Jahresumsatzes</strong> (jeweils höherer Betrag).', s: 'Art. 34 Abs. 5 NIS-2-RL · §§ 56 ff. NISG 2024' }
+      high: { t: 'Bußgeldrahmen', d: 'Bis zu <strong>10 Mio. €</strong> oder <strong>2 % des weltweiten Jahresumsatzes</strong> (jeweils höherer Betrag).', s: SRC.penHigh },
+      mid:  { t: 'Bußgeldrahmen', d: 'Bis zu <strong>7 Mio. €</strong> oder <strong>1,4 % des weltweiten Jahresumsatzes</strong> (jeweils höherer Betrag).', s: SRC.penMid }
     };
 
     /* ---- RENDER RESULT ---- */
     let lastResult = null;
 
     function renderResult(verdictKey, answers) {
-      const v = VERDICTS[verdictKey];
-      lastResult = { verdictKey, verdict: v, answers };
+      const v    = VERDICTS[verdictKey];
+      const land = (answers && answers.land) || 'at';
+      lastResult = { verdictKey, verdict: v, answers, land };
 
       const verdictEl = root.querySelector('[data-quiz-verdict]');
       verdictEl.className = 'quiz-nis2__verdict ' + v.cls;
@@ -5625,21 +5726,22 @@
       root.querySelector('[data-quiz-verdict-title]').textContent = v.title;
       root.querySelector('[data-quiz-verdict-summary]').innerHTML = v.summary;
 
-      // Obligations
+      // Obligations (länderabhängig)
+      const obligations = buildObligations(land);
       const obList = root.querySelector('[data-quiz-obligations]');
       obList.innerHTML = '';
-      OBLIGATIONS[v.obligations].forEach(o => {
+      obligations[v.obligations].forEach(o => {
         const li = document.createElement('li');
-        li.innerHTML = `<div><strong>${o.t}</strong>${o.d}<cite>${o.s}</cite></div>`;
+        li.innerHTML = `<div><strong>${o.t}</strong>${o.d}<cite>${resolveSrc(o.s, land)}</cite></div>`;
         obList.appendChild(li);
       });
 
-      // Penalty
+      // Penalty (länderabhängig)
       const penaltyWrap = root.querySelector('[data-quiz-penalty-wrap]');
       if (v.penalty && PENALTIES[v.penalty]) {
         const p = PENALTIES[v.penalty];
         root.querySelector('[data-quiz-penalty]').innerHTML =
-          `<strong>${p.t}</strong>${p.d}<cite>${p.s}</cite>`;
+          `<strong>${p.t}</strong>${p.d}<cite>${resolveSrc(p.s, land)}</cite>`;
         penaltyWrap.style.display = '';
       } else {
         penaltyWrap.style.display = 'none';
@@ -5742,6 +5844,16 @@
       const logoSrc = logoResult ? logoResult.src : null;
       const isBanner = logoSrc === 'header-datenschutz-kroes.webp';
       const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+
+      // Länderkontext (für Paragraphenverweise im PDF)
+      const land    = (lastResult && lastResult.land) || 'at';
+      const isDE    = land === 'de';
+      const landName  = isDE ? 'Deutschland' : 'Österreich';
+      const lawShort  = isDE ? 'NIS2UmsuCG' : 'NISG 2024';
+      const lawFull   = isDE
+        ? 'das deutsche NIS-2-Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG) zur Änderung des BSI-Gesetzes'
+        : 'das österreichische Netz- und Informationssystemsicherheitsgesetz 2024 (NISG 2024)';
+      const obligations = buildObligations(land);
 
       const PAGE_W = 210, PAGE_H = 297;
       const M_X = 20;
@@ -5921,7 +6033,7 @@
       doc.line(M_X, y, PAGE_W - M_X, y);
       y += 5;
 
-      OBLIGATIONS[v.obligations].forEach(o => {
+      obligations[v.obligations].forEach(o => {
         ensureSpace(18);
         setFont('bold', 10, NAVY);
         doc.text(o.t, M_X, y);
@@ -5929,7 +6041,7 @@
         writeWrapped(stripHtml(o.d), 9, 'normal', INK, 4.4, 0);
         y += 0.5;
         setFont('italic', 8, SLATE);
-        const cite = doc.splitTextToSize(o.s, COL_W);
+        const cite = doc.splitTextToSize(resolveSrc(o.s, land), COL_W);
         cite.forEach(line => {
           ensureSpace(4);
           doc.text(line, M_X, y);
@@ -5951,19 +6063,19 @@
         const lines = doc.splitTextToSize(stripHtml(p.d), COL_W - 8);
         lines.forEach((line, i) => doc.text(line, M_X + 4, y + 11 + (i * 4)));
         setFont('italic', 8, SLATE);
-        doc.text(p.s, M_X + 4, y + 19);
+        doc.text(resolveSrc(p.s, land), M_X + 4, y + 19);
         y += 28;
       }
 
       // ---- WICHTIGER HINWEIS (eigene Box am Ende) ----
       y += 4;
       const hinweisText =
-        'Dieses Quiz dient ausschließlich der orientierenden Selbsteinschätzung und ersetzt keine ' +
-        'rechtsverbindliche Prüfung. Maßgeblich sind die Richtlinie (EU) 2022/2555 (NIS-2-Richtlinie), ' +
-        'das österreichische Netz- und Informationssystemsicherheitsgesetz 2024 (NISG 2024) sowie ' +
-        'etwaige delegierte Rechtsakte und Durchführungsrechtsakte der EU-Kommission. Eine ' +
-        'verbindliche Bewertung Ihrer NIS-2-Pflichten erfordert eine einzelfallbezogene rechtliche ' +
-        'Analyse. Stand der zugrundeliegenden Rechtsquellen: Mai 2026.';
+        'Dieses Quiz dient ausschließlich der orientierenden Selbsteinschätzung für ' + landName +
+        ' und ersetzt keine rechtsverbindliche Prüfung. Maßgeblich sind die Richtlinie (EU) 2022/2555 ' +
+        '(NIS-2-Richtlinie), ' + lawFull + ' sowie etwaige delegierte Rechtsakte und ' +
+        'Durchführungsrechtsakte der EU-Kommission. Eine verbindliche Bewertung Ihrer NIS-2-Pflichten ' +
+        'erfordert eine einzelfallbezogene rechtliche Analyse. Stand der zugrundeliegenden ' +
+        'Rechtsquellen: Mai 2026.';
 
       setFont('normal', 9, INK);
       const hinweisLines = doc.splitTextToSize(hinweisText, COL_W - 10);
@@ -5991,7 +6103,7 @@
         doc.setDrawColor(221, 227, 236);
         doc.line(M_X, PAGE_H - 20, PAGE_W - M_X, PAGE_H - 20);
         setFont('normal', 7, SLATE);
-        const disclaimer = 'Orientierende Selbsteinschätzung. Keine Rechtsberatung. Maßgeblich sind Richtlinie (EU) 2022/2555 (NIS-2-RL) und NISG 2024.';
+        const disclaimer = 'Orientierende Selbsteinschätzung für ' + landName + '. Keine Rechtsberatung. Maßgeblich sind Richtlinie (EU) 2022/2555 (NIS-2-RL) und ' + lawShort + '.';
         const disLines = doc.splitTextToSize(disclaimer, COL_W);
         disLines.forEach((line, idx) => doc.text(line, M_X, PAGE_H - 16 + (idx * 3)));
         setFont('normal', 8, NAVY);
