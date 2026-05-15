@@ -448,6 +448,42 @@
     .kombi-paket__cta { margin-top: 12px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--color-surface); background: var(--color-navy); border-radius: var(--radius-md); transition: background var(--transition-base), transform var(--transition-base); }
     .kombi-paket__cta:hover { background: var(--color-prussian); transform: translateY(-1px); }
 
+    .kombi-section { margin-top: 56px; }
+    .kombi-section__head { text-align: center; margin-bottom: 32px; }
+    .kombi-section__eyebrow { display: inline-block; font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 10px; }
+    .kombi-section__title { font-size: 28px; font-weight: 600; color: var(--color-navy); letter-spacing: -0.01em; line-height: 1.25; margin-bottom: 8px; }
+    .kombi-section__sub { font-size: 14.5px; color: var(--color-slate); max-width: 560px; margin: 0 auto; line-height: 1.55; }
+    .kombi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .kombi-card { position: relative; background: linear-gradient(135deg, var(--color-sky-tint) 0%, #DCE7F4 100%); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 36px 26px 28px; display: flex; flex-direction: column; }
+    .kombi-card--featured { background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-prussian) 100%); border-color: var(--color-navy); color: var(--color-surface); transform: translateY(-8px); box-shadow: 0 24px 48px -16px rgba(15,31,61,0.32); }
+    .kombi-card__badge { position: absolute; top: -12px; left: 24px; background: var(--color-gold); color: var(--color-navy); font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; white-space: nowrap; }
+    .kombi-card__label { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-prussian); margin-bottom: 8px; }
+    .kombi-card--featured .kombi-card__label { color: var(--color-gold); }
+    .kombi-card__title { font-size: 19px; font-weight: 600; color: var(--color-navy); margin-bottom: 18px; letter-spacing: -0.01em; line-height: 1.3; }
+    .kombi-card--featured .kombi-card__title { color: var(--color-surface); }
+    .kombi-card__breakdown { font-size: 13px; line-height: 1.5; color: var(--color-slate); border-top: 1px solid rgba(15,31,61,0.10); padding-top: 14px; }
+    .kombi-card--featured .kombi-card__breakdown { color: rgba(255,255,255,0.72); border-top-color: rgba(255,255,255,0.18); }
+    .kombi-card__row { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; }
+    .kombi-card__row-label { color: var(--color-slate); }
+    .kombi-card--featured .kombi-card__row-label { color: rgba(255,255,255,0.7); }
+    .kombi-card__row-value { color: var(--color-navy); font-variant-numeric: tabular-nums; font-weight: 500; white-space: nowrap; }
+    .kombi-card--featured .kombi-card__row-value { color: var(--color-surface); }
+    .kombi-card__rebate-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; margin-top: 4px; border-top: 1px dashed rgba(15,31,61,0.18); color: var(--color-verdant); font-size: 12.5px; font-weight: 600; }
+    .kombi-card--featured .kombi-card__rebate-row { color: #8FE0A8; border-top-color: rgba(255,255,255,0.22); }
+    .kombi-card__totals { margin-top: 12px; padding-top: 14px; border-top: 1.5px solid var(--color-navy); }
+    .kombi-card--featured .kombi-card__totals { border-top-color: var(--color-gold); }
+    .kombi-card__total-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 4px 0; }
+    .kombi-card__total-label { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-navy); font-family: var(--font-mono); }
+    .kombi-card--featured .kombi-card__total-label { color: var(--color-gold); }
+    .kombi-card__total-value { font-size: 20px; font-weight: 600; color: var(--color-navy); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+    .kombi-card--featured .kombi-card__total-value { color: var(--color-surface); }
+    .kombi-card__total-suffix { font-size: 11.5px; color: var(--color-slate); white-space: nowrap; }
+    .kombi-card--featured .kombi-card__total-suffix { color: rgba(255,255,255,0.6); }
+    .kombi-card__cta { margin-top: 20px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--color-surface); background: var(--color-navy); border-radius: var(--radius-md); transition: background var(--transition-base), transform var(--transition-base); }
+    .kombi-card--featured .kombi-card__cta { background: var(--color-gold); color: var(--color-navy); }
+    .kombi-card__cta:hover { background: var(--color-prussian); transform: translateY(-1px); }
+    .kombi-card--featured .kombi-card__cta:hover { background: #DDC174; }
+
     @media (max-width: 900px) {
       .risiko-section { padding: 64px 0; }
       .risiko-grid { grid-template-columns: 1fr; }
@@ -456,6 +492,9 @@
       .kombi-paket { grid-template-columns: 1fr; padding: 32px 22px; gap: 20px; }
       .kombi-paket__badge { left: 22px; }
       .kombi-paket__price-block { align-items: flex-start; }
+      .kombi-grid { grid-template-columns: 1fr; gap: 20px; }
+      .kombi-card--featured { transform: none; }
+      .kombi-section__title { font-size: 24px; }
     }
   </style>
   <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -717,6 +756,10 @@
               <span class="paket-card__price-currency">€</span>
             </div>
             <p class="paket-card__price-period">netto pro Monat · zzgl. MwSt.</p>
+            <span class="paket-card__guarantee">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5.5-4 9-8 11-4-2-8-5.5-8-11V5l8-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Festpreis garantiert
+            </span>
             <div class="paket-card__divider"></div>
             <div class="paket-card__features">
               <p class="paket-card__feature-includes">Enthält:</p>
@@ -758,6 +801,10 @@
               <span class="paket-card__price-currency">€</span>
             </div>
             <p class="paket-card__price-period">netto pro Monat · zzgl. MwSt.</p>
+            <span class="paket-card__guarantee">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5.5-4 9-8 11-4-2-8-5.5-8-11V5l8-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Festpreis garantiert
+            </span>
             <div class="paket-card__divider"></div>
             <div class="paket-card__features">
               <p class="paket-card__feature-includes">Alles aus S, plus:</p>
@@ -798,6 +845,10 @@
               <span class="paket-card__price-currency">€</span>
             </div>
             <p class="paket-card__price-period">netto pro Monat · zzgl. MwSt.</p>
+            <span class="paket-card__guarantee">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5.5-4 9-8 11-4-2-8-5.5-8-11V5l8-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Festpreis garantiert
+            </span>
             <div class="paket-card__divider"></div>
             <div class="paket-card__features">
               <p class="paket-card__feature-includes">Alles aus M, plus:</p>
@@ -842,6 +893,10 @@
               <span class="paket-card__price-currency">€</span>
             </div>
             <p class="paket-card__price-period">netto pro Monat · individuell</p>
+            <span class="paket-card__guarantee">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5.5-4 9-8 11-4-2-8-5.5-8-11V5l8-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Festpreis nach Quick Check
+            </span>
             <div class="paket-card__divider"></div>
             <div class="paket-card__features">
               <p class="paket-card__feature-includes">Individuell, plus:</p>
@@ -1090,28 +1145,133 @@
 
         <p class="pakete__footnote"><strong>Hinweis:</strong> Indikative Festpreise. Der endgültige Preis wird im Quick Check (kostenfrei, 30 Minuten) bestätigt. Externe Audit-Kosten der Zertifizierungsstelle werden bei Bedarf transparent durchgereicht und sind nicht im Festpreis enthalten.</p>
 
-        <!-- ===== SCHUTZSCHILD 3: KOMBI-PAKET ===== -->
-        <div class="kombi-paket">
-          <span class="kombi-paket__badge">Kombi-Angebot · 10 % Rabatt</span>
-          <div>
-            <p class="kombi-paket__label">ISMS + DSB im Bundle</p>
-            <h3 class="kombi-paket__title">ISMS Pro + DSB Retainer M.</h3>
-            <p class="kombi-paket__components"><strong>Aufbau ISMS Pro</strong> (Risikoanalyse, Doku, Lieferanten, NIS-2-Integration) <strong>+ DSB-Pflicht</strong> nach Art. 37 DSGVO mit 8 h Beratung pro Quartal — zwei Disziplinen, ein Vertrag, ein Ansprechpartner.</p>
-            <span class="kombi-paket__rebate">10 % Kombi-Rabatt auf monatlichen Betrieb</span>
+        <!-- ===== SCHUTZSCHILD 3: KOMBI-PAKETE ===== -->
+        <div class="kombi-section">
+          <div class="kombi-section__head">
+            <span class="kombi-section__eyebrow">ISMS + DSB im Bundle</span>
+            <h3 class="kombi-section__title">Beides kombinieren, 10 % sparen.</h3>
+            <p class="kombi-section__sub">ISMS-Aufbau und DSB-Bestellung aus einer Hand — ein Vertrag, ein Ansprechpartner, ein Festpreis. Der Rechenweg ist offen, damit Sie genau sehen, wo der Rabatt wirkt.</p>
           </div>
-          <div class="kombi-paket__price-block">
-            <div class="kombi-paket__price-row">
-              <span class="kombi-paket__price-amount">16.550 €</span>
-              <span class="kombi-paket__price-suffix">einmalig, netto</span>
-            </div>
-            <div class="kombi-paket__price-row">
-              <span class="kombi-paket__price-amount">1.150 €</span>
-              <span class="kombi-paket__price-suffix">/ Monat, netto</span>
-            </div>
-            <a href="mailto:info@datenschutz-kroes.at?subject=Kombi-Angebot%20ISMS%20Pro%20%2B%20DSB%20M" class="kombi-paket__cta">
-              Kombi-Paket anfragen
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+
+          <div class="kombi-grid">
+
+            <!-- Kombi Start -->
+            <article class="kombi-card">
+              <span class="kombi-card__badge">Kombi · 10 % Rabatt</span>
+              <p class="kombi-card__label">Kleines Bundle</p>
+              <h4 class="kombi-card__title">ISMS Start + DSB Paket S</h4>
+              <div class="kombi-card__breakdown">
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">ISMS Start (Aufbau)</span>
+                  <span class="kombi-card__row-value">9.900 €</span>
+                </div>
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">ISMS Care S</span>
+                  <span class="kombi-card__row-value">390 € / Mo</span>
+                </div>
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">DSB Paket S</span>
+                  <span class="kombi-card__row-value">290 € / Mo</span>
+                </div>
+                <div class="kombi-card__rebate-row">
+                  <span>− 10 % Kombi-Rabatt</span>
+                  <span>− 990 € / − 68 €/Mo</span>
+                </div>
+              </div>
+              <div class="kombi-card__totals">
+                <div class="kombi-card__total-row">
+                  <span class="kombi-card__total-label">Einmalig</span>
+                  <span><span class="kombi-card__total-value">8.910 €</span> <span class="kombi-card__total-suffix">netto</span></span>
+                </div>
+                <div class="kombi-card__total-row">
+                  <span class="kombi-card__total-label">Monatlich</span>
+                  <span><span class="kombi-card__total-value">612 €</span> <span class="kombi-card__total-suffix">netto / Mo</span></span>
+                </div>
+              </div>
+              <a href="mailto:info@datenschutz-kroes.at?subject=Kombi-Angebot%20ISMS%20Start%20%2B%20DSB%20S" class="kombi-card__cta">
+                Kombi anfragen
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </article>
+
+            <!-- Kombi Pro (Featured) -->
+            <article class="kombi-card kombi-card--featured">
+              <span class="kombi-card__badge">Beliebteste Wahl · 10 %</span>
+              <p class="kombi-card__label">Mittleres Bundle</p>
+              <h4 class="kombi-card__title">ISMS Pro + DSB Paket M</h4>
+              <div class="kombi-card__breakdown">
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">ISMS Pro (Aufbau)</span>
+                  <span class="kombi-card__row-value">16.900 €</span>
+                </div>
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">ISMS Care M</span>
+                  <span class="kombi-card__row-value">690 € / Mo</span>
+                </div>
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">DSB Paket M</span>
+                  <span class="kombi-card__row-value">590 € / Mo</span>
+                </div>
+                <div class="kombi-card__rebate-row">
+                  <span>− 10 % Kombi-Rabatt</span>
+                  <span>− 1.690 € / − 128 €/Mo</span>
+                </div>
+              </div>
+              <div class="kombi-card__totals">
+                <div class="kombi-card__total-row">
+                  <span class="kombi-card__total-label">Einmalig</span>
+                  <span><span class="kombi-card__total-value">15.210 €</span> <span class="kombi-card__total-suffix">netto</span></span>
+                </div>
+                <div class="kombi-card__total-row">
+                  <span class="kombi-card__total-label">Monatlich</span>
+                  <span><span class="kombi-card__total-value">1.152 €</span> <span class="kombi-card__total-suffix">netto / Mo</span></span>
+                </div>
+              </div>
+              <a href="mailto:info@datenschutz-kroes.at?subject=Kombi-Angebot%20ISMS%20Pro%20%2B%20DSB%20M" class="kombi-card__cta">
+                Kombi anfragen
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </article>
+
+            <!-- Kombi Enterprise -->
+            <article class="kombi-card">
+              <span class="kombi-card__badge">Kombi · 10 % Rabatt</span>
+              <p class="kombi-card__label">Großes Bundle</p>
+              <h4 class="kombi-card__title">ISMS Enterprise + DSB Paket L</h4>
+              <div class="kombi-card__breakdown">
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">ISMS Enterprise (Aufbau)</span>
+                  <span class="kombi-card__row-value">27.900 €</span>
+                </div>
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">ISMS Care L</span>
+                  <span class="kombi-card__row-value">1.190 € / Mo</span>
+                </div>
+                <div class="kombi-card__row">
+                  <span class="kombi-card__row-label">DSB Paket L</span>
+                  <span class="kombi-card__row-value">990 € / Mo</span>
+                </div>
+                <div class="kombi-card__rebate-row">
+                  <span>− 10 % Kombi-Rabatt</span>
+                  <span>− 2.790 € / − 218 €/Mo</span>
+                </div>
+              </div>
+              <div class="kombi-card__totals">
+                <div class="kombi-card__total-row">
+                  <span class="kombi-card__total-label">Einmalig</span>
+                  <span><span class="kombi-card__total-value">25.110 €</span> <span class="kombi-card__total-suffix">netto</span></span>
+                </div>
+                <div class="kombi-card__total-row">
+                  <span class="kombi-card__total-label">Monatlich</span>
+                  <span><span class="kombi-card__total-value">1.962 €</span> <span class="kombi-card__total-suffix">netto / Mo</span></span>
+                </div>
+              </div>
+              <a href="mailto:info@datenschutz-kroes.at?subject=Kombi-Angebot%20ISMS%20Enterprise%20%2B%20DSB%20L" class="kombi-card__cta">
+                Kombi anfragen
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </article>
+
           </div>
         </div>
 
