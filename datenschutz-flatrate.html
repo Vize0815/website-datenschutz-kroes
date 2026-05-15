@@ -484,6 +484,33 @@
     .kombi-card__cta:hover { background: var(--color-prussian); transform: translateY(-1px); }
     .kombi-card--featured .kombi-card__cta:hover { background: #DDC174; }
 
+    /* ===== SO ARBEITEN WIR ZUSAMMEN ===== */
+    .partnerschaft { background: var(--color-navy); color: var(--color-surface); border-radius: var(--radius-lg); padding: 48px 48px 36px; position: relative; overflow: hidden; }
+    .partnerschaft::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--color-gold) 0%, #8FE0A8 100%); }
+    .partnerschaft__head { margin-bottom: 28px; }
+    .partnerschaft__eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 12px; }
+    .partnerschaft__title { font-size: clamp(24px, 2.8vw, 32px); font-weight: 600; color: var(--color-surface); letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 12px; }
+    .partnerschaft__lead { font-size: 15px; color: rgba(255,255,255,0.74); line-height: 1.6; max-width: 720px; }
+    .partnerschaft__split { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14); }
+    .partnerschaft__col-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .partnerschaft__col-icon { width: 24px; height: 24px; color: #8FE0A8; flex-shrink: 0; }
+    .partnerschaft__col-icon--gold { color: var(--color-gold); }
+    .partnerschaft__col-title { font-size: 15px; font-weight: 600; color: var(--color-surface); letter-spacing: 0; }
+    .partnerschaft__col-text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.78); }
+    .partnerschaft__zeit-head { margin-top: 28px; margin-bottom: 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-gold); font-family: var(--font-mono); }
+    .partnerschaft__zeit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .partnerschaft__zeit-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); border-radius: var(--radius-md); padding: 22px 22px 20px; }
+    .partnerschaft__zeit-name { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--color-surface); margin-bottom: 14px; }
+    .partnerschaft__zeit-name svg { color: var(--color-gold); flex-shrink: 0; }
+    .partnerschaft__zeit-label { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+    .partnerschaft__zeit-value { font-size: 22px; font-weight: 600; color: var(--color-surface); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; line-height: 1.2; margin-bottom: 4px; }
+    .partnerschaft__zeit-sub { font-size: 12.5px; color: rgba(255,255,255,0.55); line-height: 1.45; margin-bottom: 14px; }
+    .partnerschaft__zeit-divider { height: 1px; background: rgba(255,255,255,0.10); margin: 12px 0; }
+    .partnerschaft__zeit-aw-label { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 2px; }
+    .partnerschaft__zeit-aw-value { font-size: 14px; font-weight: 600; color: var(--color-surface); }
+    .partnerschaft__legal { margin-top: 24px; padding: 18px 20px; background: rgba(255,255,255,0.04); border-left: 3px solid var(--color-gold); border-radius: 6px; font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.72); }
+    .partnerschaft__legal strong { color: var(--color-surface); font-weight: 600; }
+
     @media (max-width: 900px) {
       .risiko-section { padding: 64px 0; }
       .risiko-grid { grid-template-columns: 1fr; }
@@ -495,6 +522,9 @@
       .kombi-grid { grid-template-columns: 1fr; gap: 20px; }
       .kombi-card--featured { transform: none; }
       .kombi-section__title { font-size: 24px; }
+      .partnerschaft { padding: 32px 22px 26px; }
+      .partnerschaft__split { grid-template-columns: 1fr; gap: 22px; padding: 22px 0; }
+      .partnerschaft__zeit-grid { grid-template-columns: 1fr; gap: 12px; }
     }
   </style>
   <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -1347,6 +1377,84 @@
             <h3 class="festpreis-garantie__title">Wenn der Aufwand höher wird, tragen wir die Differenz.</h3>
             <p class="festpreis-garantie__text">Sie zahlen den vereinbarten Festpreis — auch wenn das Projekt aufwendiger wird als kalkuliert. <strong>Schriftlich im Vertrag.</strong> Keine Nachforderungen, keine "Mehrstunden", keine bösen Überraschungen.</p>
             <p class="festpreis-garantie__contrast">Ein Festpreis, ein Vertrag, ein persönlicher Ansprechpartner. Vom Erstgespräch bis zum Audit begleitet Sie Alexander Kroes. Verbindlich. Planbar. In Österreich und Süddeutschland.</p>
+          </div>
+        </div>
+
+        <!-- ===== SO ARBEITEN WIR ZUSAMMEN ===== -->
+        <div class="partnerschaft" style="margin-top: 48px;">
+          <div class="partnerschaft__head">
+            <p class="partnerschaft__eyebrow">So arbeiten wir zusammen</p>
+            <h3 class="partnerschaft__title">Erfolgreiche ISMS-Projekte funktionieren nur als Partnerschaft.</h3>
+            <p class="partnerschaft__lead">Damit der Festpreis hält, brauchen wir die Mitwirkung Ihrer Schlüsselpersonen. Die folgenden Zeiten sind fest kalkulierbar und transparent — Sie können Ressourcen verbindlich einplanen.</p>
+          </div>
+
+          <div class="partnerschaft__split">
+            <div>
+              <div class="partnerschaft__col-head">
+                <svg class="partnerschaft__col-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2l8 3v6c0 5.5-4 9-8 11-4-2-8-5.5-8-11V5l8-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M8.5 12l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="partnerschaft__col-title">Was wir liefern</span>
+              </div>
+              <p class="partnerschaft__col-text">Risikoanalyse, Dokumentation, SoA, Policies, Awareness-Konzept, Audit-Begleitung. Komplette Projektsteuerung. Festpreis ohne Stundenfalle.</p>
+            </div>
+            <div>
+              <div class="partnerschaft__col-head">
+                <svg class="partnerschaft__col-icon partnerschaft__col-icon--gold" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="9" cy="8" r="3.5" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="17" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M3 19c0-3 2.7-5 6-5s6 2 6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M15.5 19c0-2 1.7-3.5 4-3.5s2.5 1.5 2.5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+                <span class="partnerschaft__col-title">Was Sie einbringen</span>
+              </div>
+              <p class="partnerschaft__col-text">Zugang zu Schlüsselpersonen, Informationen über Ihre Prozesse, Entscheidungsbefugnis im Management-Review, Teilnahme an Workshops und Schulungen.</p>
+            </div>
+          </div>
+
+          <p class="partnerschaft__zeit-head">Zeitaufwand auf Ihrer Seite, je nach Paket</p>
+          <div class="partnerschaft__zeit-grid">
+            <div class="partnerschaft__zeit-card">
+              <div class="partnerschaft__zeit-name">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 3v18M5 4h12l-3 4 3 4H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                ISMS Start
+              </div>
+              <p class="partnerschaft__zeit-label">Schlüsselpersonen</p>
+              <p class="partnerschaft__zeit-value">30 – 50 h</p>
+              <p class="partnerschaft__zeit-sub">verteilt über 4 – 6 Monate</p>
+              <div class="partnerschaft__zeit-divider"></div>
+              <p class="partnerschaft__zeit-aw-label">Awareness alle Mitarbeiter</p>
+              <p class="partnerschaft__zeit-aw-value">1 – 2 h je MA</p>
+            </div>
+            <div class="partnerschaft__zeit-card">
+              <div class="partnerschaft__zeit-name">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5.5-4 9-8 11-4-2-8-5.5-8-11V5l8-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                ISMS Pro
+              </div>
+              <p class="partnerschaft__zeit-label">Schlüsselpersonen</p>
+              <p class="partnerschaft__zeit-value">50 – 80 h</p>
+              <p class="partnerschaft__zeit-sub">verteilt über 6 – 8 Monate</p>
+              <div class="partnerschaft__zeit-divider"></div>
+              <p class="partnerschaft__zeit-aw-label">Awareness alle Mitarbeiter</p>
+              <p class="partnerschaft__zeit-aw-value">1 – 2 h je MA</p>
+            </div>
+            <div class="partnerschaft__zeit-card">
+              <div class="partnerschaft__zeit-name">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6M9 11h.01M15 11h.01M12 8h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                ISMS Enterprise
+              </div>
+              <p class="partnerschaft__zeit-label">Schlüsselpersonen</p>
+              <p class="partnerschaft__zeit-value">80 – 150 h</p>
+              <p class="partnerschaft__zeit-sub">verteilt über 8 – 12 Monate</p>
+              <div class="partnerschaft__zeit-divider"></div>
+              <p class="partnerschaft__zeit-aw-label">Awareness alle Mitarbeiter</p>
+              <p class="partnerschaft__zeit-aw-value">1 – 2 h je MA</p>
+            </div>
+          </div>
+
+          <div class="partnerschaft__legal">
+            <strong>Wichtiger Hinweis zu den Zeitangaben:</strong> Bei den genannten Stundenwerten handelt es sich um <strong>unverbindliche Erfahrungswerte und Richtgrößen</strong> aus vergleichbaren Mandaten. Sie dienen ausschließlich der Orientierung Ihrer Ressourcenplanung und stellen <strong>keinen vertraglich zugesicherten Aufwand</strong> dar. Der tatsächlich erforderliche Zeitaufwand auf Ihrer Seite hängt maßgeblich von Unternehmensgröße, Komplexität Ihrer Prozesse, Vorarbeiten, Reifegrad eines bestehenden Managementsystems sowie der Mitwirkung Ihrer Schlüsselpersonen ab. Verbindliche Werte werden im Quick Check und im individuellen Angebot festgelegt. <strong>Verzögerungen oder Mehraufwände, die aus mangelnder, verspäteter oder unvollständiger Mitwirkung des Auftraggebers resultieren, fallen nicht unter die Festpreis-Garantie</strong> und können nach Aufwand gesondert in Rechnung gestellt werden. Die Festpreis-Garantie gilt ausschließlich für Aufwände, die in der Sphäre des Auftragnehmers liegen.
           </div>
         </div>
 
