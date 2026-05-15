@@ -3156,10 +3156,12 @@
 
     .quiz-nis2__land-flag {
       display: block;
-      font-size: 44px;
-      line-height: 1;
+      width: 64px;
+      height: auto;
       margin-bottom: 14px;
-      filter: saturate(1.05);
+      border-radius: 4px;
+      box-shadow: 0 1px 0 rgba(15, 23, 42, .08), 0 2px 8px rgba(15, 23, 42, .12);
+      overflow: hidden;
     }
 
     .quiz-nis2__option--land .quiz-nis2__option-title {
@@ -3177,7 +3179,7 @@
         min-height: 0;
       }
       .quiz-nis2__land-flag {
-        font-size: 36px;
+        width: 52px;
         margin-bottom: 10px;
       }
     }
@@ -4338,7 +4340,7 @@
                   <span class="quiz-nis2__option-box">
                     <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
                     <span class="quiz-nis2__option-content">
-                      <span class="quiz-nis2__land-flag" aria-hidden="true">🇦🇹</span>
+                      <svg class="quiz-nis2__land-flag" viewBox="0 0 9 6" role="img" aria-label="Flagge Österreich"><rect width="9" height="6" fill="#ed2939"/><rect y="2" width="9" height="2" fill="#fff"/></svg>
                       <span class="quiz-nis2__option-title">Österreich</span>
                       <span class="quiz-nis2__option-desc">Umsetzung über NISG&nbsp;2024 — zuständige Behörde: BMI / Cybersicherheitsbehörde, Meldewege über die nationale Meldeplattform.</span>
                     </span>
@@ -4349,7 +4351,7 @@
                   <span class="quiz-nis2__option-box">
                     <span class="quiz-nis2__option-marker" aria-hidden="true"></span>
                     <span class="quiz-nis2__option-content">
-                      <span class="quiz-nis2__land-flag" aria-hidden="true">🇩🇪</span>
+                      <svg class="quiz-nis2__land-flag" viewBox="0 0 5 3" role="img" aria-label="Flagge Deutschland"><rect width="5" height="3" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg>
                       <span class="quiz-nis2__option-title">Deutschland</span>
                       <span class="quiz-nis2__option-desc">Umsetzung über NIS2UmsuCG (Änderung des BSI-Gesetzes) — zuständige Behörde: BSI, Meldewege über das BSI-Meldeportal.</span>
                     </span>
