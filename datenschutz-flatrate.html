@@ -531,6 +531,9 @@
   </style>
   <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
+  <!-- Calendly Widget (Inline + Popup) -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
@@ -1046,7 +1049,7 @@
                 Zertifizierung als Option
               </div>
             </div>
-            <a href="https://calendly.com/datenschutz-kroes-info/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
+            <a href="https://calendly.com/datenschutz-kroes-info/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta" onclick="if(window.Calendly){Calendly.initPopupWidget({url:'https://calendly.com/datenschutz-kroes-info/30min'});return false;}">
               Quick Check buchen, 30 Min. kostenfrei
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1091,7 +1094,7 @@
                 6 bis 8 Monate Projektdauer
               </div>
             </div>
-            <a href="https://calendly.com/datenschutz-kroes-info/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
+            <a href="https://calendly.com/datenschutz-kroes-info/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta" onclick="if(window.Calendly){Calendly.initPopupWidget({url:'https://calendly.com/datenschutz-kroes-info/30min'});return false;}">
               Quick Check buchen, 30 Min. kostenfrei
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1135,7 +1138,7 @@
                 8 bis 12 Monate Projektdauer
               </div>
             </div>
-            <a href="https://calendly.com/datenschutz-kroes-info/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
+            <a href="https://calendly.com/datenschutz-kroes-info/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta" onclick="if(window.Calendly){Calendly.initPopupWidget({url:'https://calendly.com/datenschutz-kroes-info/30min'});return false;}">
               Quick Check buchen, 30 Min. kostenfrei
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1574,6 +1577,19 @@
 
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== TERMIN BUCHEN ===== -->
+    <section class="section section--fog" id="termin-buchen" aria-label="Termin buchen">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Quick Check buchen</p>
+          <h2 class="section__title">30 Minuten kostenfrei. Termin direkt wählen.</h2>
+        </div>
+        <!-- Calendly Inline-Widget Beginn -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/datenschutz-kroes-info/30min" style="min-width:320px;height:700px;"></div>
+        <!-- Calendly Inline-Widget Ende -->
       </div>
     </section>
 
