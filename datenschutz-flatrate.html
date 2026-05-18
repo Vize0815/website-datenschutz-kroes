@@ -527,6 +527,21 @@
       .partnerschaft__split { grid-template-columns: 1fr; gap: 22px; padding: 22px 0; }
       .partnerschaft__zeit-grid { grid-template-columns: 1fr; gap: 12px; }
     }
+
+    /* ===== ZOOM SCHEDULER MODAL ===== */
+    .zoom-modal { position: fixed; inset: 0; z-index: 9000; display: none; align-items: center; justify-content: center; padding: 24px; background: rgba(15,31,61,0.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); opacity: 0; transition: opacity 220ms ease; }
+    .zoom-modal.is-open { display: flex; opacity: 1; }
+    .zoom-modal__dialog { position: relative; width: 100%; max-width: 920px; height: min(86vh, 760px); background: #FFFFFF; border-radius: 14px; box-shadow: 0 24px 80px rgba(15,31,61,0.32); overflow: hidden; transform: translateY(12px); transition: transform 240ms cubic-bezier(0.4,0,0.2,1); }
+    .zoom-modal.is-open .zoom-modal__dialog { transform: translateY(0); }
+    .zoom-modal__close { position: absolute; top: 12px; right: 12px; z-index: 2; width: 38px; height: 38px; border: none; border-radius: 50%; background: rgba(15,31,61,0.86); color: #FFFFFF; font-size: 22px; line-height: 1; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: background 180ms ease, transform 180ms ease; }
+    .zoom-modal__close:hover { background: var(--color-navy); transform: scale(1.05); }
+    .zoom-modal__close:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+    .zoom-modal__frame { width: 100%; height: 100%; border: 0; display: block; background: #F4F5F7; }
+    body.is-zoom-modal-open { overflow: hidden; }
+    @media (max-width: 640px) {
+      .zoom-modal { padding: 0; }
+      .zoom-modal__dialog { height: 100vh; max-width: 100%; border-radius: 0; }
+    }
   </style>
   <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
@@ -1045,7 +1060,7 @@
                 Zertifizierung als Option
               </div>
             </div>
-            <a href="https://cal.eu/datenschutz-kroes/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
+            <a href="https://scheduler.zoom.us/alexander-kroes/isms-pakete-besprechung-30min-" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
               Quick Check buchen, 30 Min. kostenfrei
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1090,7 +1105,7 @@
                 6 bis 8 Monate Projektdauer
               </div>
             </div>
-            <a href="https://cal.eu/datenschutz-kroes/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
+            <a href="https://scheduler.zoom.us/alexander-kroes/isms-pakete-besprechung-30min-" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
               Quick Check buchen, 30 Min. kostenfrei
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1134,7 +1149,7 @@
                 8 bis 12 Monate Projektdauer
               </div>
             </div>
-            <a href="https://cal.eu/datenschutz-kroes/30min" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
+            <a href="https://scheduler.zoom.us/alexander-kroes/isms-pakete-besprechung-30min-" target="_blank" rel="noopener noreferrer" class="paket-card__cta">
               Quick Check buchen, 30 Min. kostenfrei
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1869,6 +1884,37 @@
       render();
     })();
 
+    // Zoom Scheduler Modal
+    (function() {
+      const ZOOM_URL = 'https://scheduler.zoom.us/alexander-kroes/isms-pakete-besprechung-30min-?embed=true';
+      const modal = document.getElementById('zoomModal');
+      const frame = document.getElementById('zoomModalFrame');
+      const closeBtn = document.getElementById('zoomModalClose');
+      if (!modal || !frame || !closeBtn) return;
+
+      function openModal(e) {
+        if (e) e.preventDefault();
+        frame.src = ZOOM_URL;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('is-zoom-modal-open');
+        setTimeout(() => closeBtn.focus(), 50);
+      }
+      function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('is-zoom-modal-open');
+        frame.src = 'about:blank';
+      }
+
+      document.querySelectorAll('a.paket-card__cta[href*="scheduler.zoom.us"]').forEach(link => {
+        link.addEventListener('click', openModal);
+      });
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
+    })();
+
     // FAQ Accordion
     function toggleFlatrateFaq(header) {
       const item = header.closest('.faq-item');
@@ -1883,6 +1929,14 @@
       header.setAttribute('aria-expanded', !isOpen);
     }
   </script>
+
+  <!-- Zoom Scheduler Modal -->
+  <div id="zoomModal" class="zoom-modal" role="dialog" aria-modal="true" aria-label="Termin buchen" aria-hidden="true">
+    <div class="zoom-modal__dialog">
+      <button type="button" id="zoomModalClose" class="zoom-modal__close" aria-label="Fenster schließen">&times;</button>
+      <iframe id="zoomModalFrame" class="zoom-modal__frame" title="Zoom Scheduler – Termin buchen" src="about:blank" loading="lazy" allow="camera; microphone; fullscreen"></iframe>
+    </div>
+  </div>
 
   <script src="cookie-banner.js" defer></script>
 </body>
