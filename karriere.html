@@ -213,6 +213,38 @@
     .footer__legal a { font-family: var(--font-sans); font-size: 13px; color: rgba(255,255,255,0.3); transition: color 200ms ease; }
     .footer__legal a:hover { color: rgba(255,255,255,0.7); }
 
+    /* ===== BEWERBER DATENSCHUTZ PANEL ===== */
+    .privacy-panel { padding: 40px 0 56px; background: var(--color-bg); border-top: 1px solid var(--color-mist); }
+    .privacy-panel__toggle { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 18px 24px; background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-md); cursor: pointer; transition: border-color var(--transition-base), box-shadow var(--transition-base); text-align: left; }
+    .privacy-panel__toggle:hover { border-color: var(--color-prussian); box-shadow: var(--shadow-card); }
+    .privacy-panel__toggle[aria-expanded="true"] { border-color: var(--color-prussian); }
+    .privacy-panel__toggle-left { display: flex; align-items: center; gap: 14px; }
+    .privacy-panel__toggle-icon { width: 40px; height: 40px; border-radius: var(--radius-md); background: var(--color-sky-tint); display: flex; align-items: center; justify-content: center; color: var(--color-prussian); flex-shrink: 0; }
+    .privacy-panel__toggle-title { font-size: 15px; font-weight: 600; color: var(--color-navy); line-height: 1.4; }
+    .privacy-panel__toggle-sub { font-size: 13px; color: var(--color-slate); margin-top: 2px; }
+    .privacy-panel__chevron { width: 20px; height: 20px; color: var(--color-slate); transition: transform 380ms cubic-bezier(0.4,0,0.2,1); flex-shrink: 0; }
+    .privacy-panel__toggle[aria-expanded="true"] .privacy-panel__chevron { transform: rotate(180deg); }
+    .privacy-panel__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 440ms cubic-bezier(0.4,0,0.2,1); }
+    .privacy-panel__body.open { grid-template-rows: 1fr; }
+    .privacy-panel__body-inner { overflow: hidden; }
+    .privacy-panel__content { padding-top: 28px; }
+    .priv-section { padding: 20px 0; border-bottom: 1px solid var(--color-mist); }
+    .priv-section:last-child { border-bottom: none; }
+    .priv-section__heading { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; color: var(--color-prussian); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+    .priv-section__num { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: var(--color-prussian); color: white; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+    .priv-section p { font-size: 14px; color: var(--color-slate); line-height: 1.75; }
+    .priv-section p + p { margin-top: 8px; }
+    .priv-section ul { margin-top: 8px; padding-left: 18px; }
+    .priv-section ul li { font-size: 14px; color: var(--color-slate); line-height: 1.75; list-style: disc; }
+    .priv-section a { color: var(--color-prussian); text-decoration: underline; text-underline-offset: 2px; transition: color var(--transition-base); }
+    .priv-section a:hover { color: var(--color-gold); }
+    .priv-contact-box { margin-top: 28px; padding: 20px 24px; background: var(--color-sky-tint); border-radius: var(--radius-md); border-left: 3px solid var(--color-prussian); }
+    .priv-contact-box__title { font-size: 14px; font-weight: 600; color: var(--color-navy); margin-bottom: 8px; }
+    .priv-contact-box__items { display: flex; flex-direction: column; gap: 4px; }
+    .priv-contact-box__item { font-size: 14px; color: var(--color-slate); }
+    .priv-contact-box__item a { color: var(--color-prussian); text-decoration: none; transition: color var(--transition-base); }
+    .priv-contact-box__item a:hover { color: var(--color-gold); }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
       .container { padding: 0 36px; }
@@ -673,7 +705,7 @@
         <div class="form-group" data-reveal data-reveal-delay="1">
           <label class="form-consent">
             <input type="checkbox" name="datenschutz_consent" required oninvalid="this.setCustomValidity('Bitte bestätigen Sie dieses Kästchen, um fortzufahren.')" onchange="this.setCustomValidity('')">
-            <span class="form-consent-text">Ich stimme zu, dass meine Bewerbungsdaten zum Zweck der Personalauswahl gespeichert und verarbeitet werden. Weitere Informationen in der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>. <strong>*</strong></span>
+            <span class="form-consent-text">Ich stimme zu, dass meine Bewerbungsdaten zum Zweck der Personalauswahl gespeichert und verarbeitet werden. Weitere Informationen in den <a href="#bewerber-datenschutz">Datenschutzinformationen für Bewerber</a>. <strong>*</strong></span>
           </label>
         </div>
 
@@ -693,6 +725,119 @@
           <p class="form-error__text"></p>
         </div>
       </form>
+    </div>
+  </section>
+
+  <!-- ===== DATENSCHUTZINFORMATIONEN FÜR BEWERBER ===== -->
+  <section class="privacy-panel" id="bewerber-datenschutz" aria-label="Datenschutzinformationen für Bewerber">
+    <div class="container">
+      <button class="privacy-panel__toggle" id="privacy-panel-toggle" aria-expanded="false" aria-controls="privacy-panel-body">
+        <div class="privacy-panel__toggle-left">
+          <div class="privacy-panel__toggle-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="privacy-panel__toggle-title">Datenschutzinformationen für Bewerber</div>
+            <div class="privacy-panel__toggle-sub">Informationen gemäß Art. 13 DSGVO zur Verarbeitung Ihrer Bewerbungsdaten</div>
+          </div>
+        </div>
+        <svg class="privacy-panel__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <div class="privacy-panel__body" id="privacy-panel-body" role="region">
+        <div class="privacy-panel__body-inner">
+          <div class="privacy-panel__content">
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">1</span> Verantwortliche Stelle</div>
+              <p>Alexander Kroes e.U. (Datenschutz Kroes)<br>
+              Innstraße 1 (Coworking Space KISS / Innovationsraum Kufstein)<br>
+              6330 Kufstein, Österreich<br>
+              E-Mail: <a href="mailto:info@datenschutz-kroes.at">info@datenschutz-kroes.at</a><br>
+              Tel.: <a href="tel:+43533820105">+43 (0) 5338 – 20105</a></p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">2</span> Datenschutzbeauftragter</div>
+              <p>Als Einzelunternehmen sind wir gesetzlich nicht zur Bestellung eines betrieblichen Datenschutzbeauftragten verpflichtet. Für alle datenschutzrechtlichen Anliegen wenden Sie sich bitte direkt an die in Ziffer&nbsp;1 genannte verantwortliche Stelle.</p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">3</span> Zwecke und Rechtsgrundlagen der Verarbeitung</div>
+              <p>Wir verarbeiten Ihre personenbezogenen Daten zur Durchführung des Bewerbungsverfahrens und zur Entscheidung über die Begründung eines Beschäftigungsverhältnisses. Rechtsgrundlage ist Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO (vorvertragliche Maßnahmen).</p>
+              <p>Darüber hinaus können Ihre Daten auf Basis von Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;c DSGVO (gesetzliche Pflichten) oder Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO (berechtigte Interessen, z.&nbsp;B. zur Geltendmachung oder Abwehr von Rechtsansprüchen) verarbeitet werden.</p>
+              <p>Sofern Sie uns eine ausdrückliche Einwilligung erteilt haben, erfolgt die Verarbeitung auf Basis von Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO. Eine Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden.</p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">4</span> Kategorien personenbezogener Daten</div>
+              <p>Wir verarbeiten ausschließlich personenbezogene Daten, die im direkten Zusammenhang mit Ihrer Bewerbung stehen. Dazu gehören insbesondere:</p>
+              <ul>
+                <li>Name und Kontaktdaten (E-Mail-Adresse, Telefonnummer)</li>
+                <li>Lebenslauf und beruflicher Werdegang</li>
+                <li>Zeugnisse, Zertifikate und Weiterbildungsnachweise</li>
+                <li>Motivationsschreiben und Anschreiben</li>
+                <li>Alle weiteren Unterlagen und Informationen, die Sie uns im Rahmen Ihrer Bewerbung freiwillig übermitteln</li>
+              </ul>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">5</span> Quellen der Daten</div>
+              <p>Wir verarbeiten ausschließlich personenbezogene Daten, die Sie uns direkt über unser Online-Bewerbungsformular zur Verfügung stellen.</p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">6</span> Empfänger der Daten</div>
+              <p>Als Einzelunternehmen hat ausschließlich Alexander Kroes Zugang zu Ihren Bewerbungsunterlagen. Die technische Übermittlung des Bewerbungsformulars erfolgt über Web3Forms (web3forms.com), der als Auftragsverarbeiter gemäß Art.&nbsp;28 DSGVO tätig ist. Eine darüber hinausgehende Weitergabe Ihrer Daten an Dritte findet nicht statt.</p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">7</span> Übermittlung in ein Drittland</div>
+              <p>Die Nutzung von Web3Forms kann mit einer Datenübermittlung in Drittländer außerhalb der EU/des EWR verbunden sein. Der Dienstleister trifft hierfür geeignete Schutzmaßnahmen gemäß Art.&nbsp;46 DSGVO. Weiterführende Informationen entnehmen Sie bitte der Datenschutzerklärung von Web3Forms unter <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">web3forms.com/privacy</a>.</p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">8</span> Dauer der Datenspeicherung</div>
+              <p>Ihre Bewerbungsunterlagen werden nach Abschluss des Bewerbungsverfahrens – in der Regel spätestens sechs Monate nach Zusendung einer Absage – gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen oder Sie einer längeren Speicherung ausdrücklich zugestimmt haben.</p>
+              <p>Kommt es zu einem Beschäftigungsverhältnis, werden die erforderlichen Daten in die Personalunterlagen überführt und entsprechend den gesetzlichen Aufbewahrungsfristen gespeichert.</p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">9</span> Ihre Rechte als betroffene Person</div>
+              <p>Im Rahmen der DSGVO stehen Ihnen folgende Rechte zu:</p>
+              <ul>
+                <li>Auskunft über gespeicherte personenbezogene Daten (Art.&nbsp;15 DSGVO)</li>
+                <li>Berichtigung unrichtiger oder unvollständiger Daten (Art.&nbsp;16 DSGVO)</li>
+                <li>Löschung Ihrer Daten unter den gesetzlichen Voraussetzungen (Art.&nbsp;17 DSGVO)</li>
+                <li>Einschränkung der Verarbeitung (Art.&nbsp;18 DSGVO)</li>
+                <li>Datenübertragbarkeit, sofern technisch möglich (Art.&nbsp;20 DSGVO)</li>
+                <li>Widerspruch gegen die Verarbeitung auf Basis berechtigter Interessen (Art.&nbsp;21 DSGVO)</li>
+              </ul>
+              <p>Sofern die Verarbeitung auf Ihrer Einwilligung beruht, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen. Darüber hinaus haben Sie das Recht, sich bei der zuständigen Datenschutzbehörde zu beschweren. In Österreich ist dies die <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">Datenschutzbehörde (DSB)</a>, Barichgasse 40–42, 1030 Wien.</p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">10</span> Freiwilligkeit und Notwendigkeit der Datenangaben</div>
+              <p>Die Angabe Ihrer personenbezogenen Daten im Rahmen des Bewerbungsverfahrens erfolgt freiwillig. Ohne die für die Beurteilung Ihrer Bewerbung wesentlichen Angaben – insbesondere Name, E-Mail-Adresse und Lebenslauf – ist eine Prüfung Ihrer Bewerbung jedoch nicht möglich.</p>
+            </div>
+
+            <div class="priv-section">
+              <div class="priv-section__heading"><span class="priv-section__num">11</span> Keine automatisierte Entscheidungsfindung</div>
+              <p>Entscheidungen über Ihre Bewerbung werden nicht ausschließlich automatisiert getroffen (Art.&nbsp;22 DSGVO). Jede Bewerbung wird bei uns individuell und persönlich geprüft.</p>
+            </div>
+
+            <div class="priv-contact-box">
+              <div class="priv-contact-box__title">Fragen zum Datenschutz?</div>
+              <div class="priv-contact-box__items">
+                <div class="priv-contact-box__item">Alexander Kroes e.U. · Datenschutz Kroes</div>
+                <div class="priv-contact-box__item"><a href="mailto:info@datenschutz-kroes.at">info@datenschutz-kroes.at</a></div>
+                <div class="priv-contact-box__item"><a href="tel:+43533820105">+43 (0) 5338 – 20105</a></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -861,6 +1006,17 @@
         btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Bewerbung absenden';
       }
     });
+
+    // Privacy panel toggle
+    const privacyToggle = document.getElementById('privacy-panel-toggle');
+    const privacyBody = document.getElementById('privacy-panel-body');
+    if (privacyToggle && privacyBody) {
+      privacyToggle.addEventListener('click', () => {
+        const isOpen = privacyToggle.getAttribute('aria-expanded') === 'true';
+        privacyToggle.setAttribute('aria-expanded', String(!isOpen));
+        privacyBody.classList.toggle('open', !isOpen);
+      });
+    }
 
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
