@@ -5095,10 +5095,7 @@
           </a>
         </div>
 
-        <form class="newsletter__form" data-reveal data-reveal-delay="1"
-              action="mailto:info@datenschutz-kroes.at"
-              method="get"
-              enctype="text/plain"
+        <form class="newsletter__form" id="nl-form" data-reveal data-reveal-delay="1"
               aria-label="Newsletter-Anmeldeformular">
           <div class="newsletter__field">
             <label for="nl-name">Vorname &amp; Name</label>
@@ -6276,5 +6273,21 @@
   </script>
 
   <script src="cookie-banner.js" defer></script>
+  <script>
+    document.getElementById('nl-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('nl-name').value.trim();
+      var email = document.getElementById('nl-email').value.trim();
+      var company = document.getElementById('nl-company').value.trim();
+      var subject = encodeURIComponent('Newsletter-Anmeldung: ' + name);
+      var body = encodeURIComponent(
+        'Name: ' + name +
+        '\nE-Mail: ' + email +
+        (company ? '\nUnternehmen: ' + company : '') +
+        '\n\nZustimmung zur Newsletter-Zusendung erteilt.'
+      );
+      window.location.href = 'mailto:info@datenschutz-kroes.at?subject=' + subject + '&body=' + body;
+    });
+  </script>
 </body>
 </html>
