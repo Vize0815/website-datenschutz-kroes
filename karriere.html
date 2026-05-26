@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karriere | Datenschutz Kroes</title>
+  <meta name="description" content="Karriere bei Datenschutz Kroes – Werde Teil des Teams als externer Datenschutzberater. Offene Stellen und Initiativbewerbung.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://datenschutz-kroes.at/karriere.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="logo-datenschutz-kroes.png">
+  <link rel="apple-touch-icon" href="logo-datenschutz-kroes.png">
+  <link rel="preload" as="image" href="logo-datenschutz-kroes.webp" type="image/webp" fetchpriority="high">
+  <style>
+    /* ===== LOCAL FONTS ===== */
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(fonts/dm-sans-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 600; font-display: swap; src: url(fonts/dm-sans-latin.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/dm-mono-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/dm-mono-latin.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+    :root {
+      --color-bg: #F4F5F7;
+      --color-surface: #FFFFFF;
+      --color-navy: #0F1F3D;
+      --color-ink: #1A1A2E;
+      --color-slate: #5C6B82;
+      --color-slate-light: #8A99AD;
+      --color-prussian: #1B4F8A;
+      --color-sky-tint: #E8EFF8;
+      --color-gold: #C9A84C;
+      --color-gold-light: #E8D5A0;
+      --color-mist: #DDE3EC;
+      --color-verdant: #2D6A4F;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --transition-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-card: 0 2px 16px rgba(15,31,61,0.08);
+      --shadow-elevated: 0 8px 40px rgba(15,31,61,0.14);
+      --font-sans: 'DM Sans', -apple-system, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-sans); background-color: var(--color-bg); color: var(--color-ink); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; border: none; background: none; cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+    /* ===== TOPBAR ===== */
+    .topbar {
+      position: relative;
+      height: 38px;
+      background-color: rgba(10, 18, 36, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center;
+    }
+    .topbar__inner { display: flex; align-items: center; justify-content: space-between; }
+    .topbar__left { display: flex; align-items: center; gap: 20px; }
+    .topbar__item { display: flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.82); white-space: nowrap; transition: color var(--transition-base); }
+    .topbar__item:hover { color: var(--color-gold); }
+    .topbar__item svg { flex-shrink: 0; opacity: 0.7; }
+    .topbar__divider { width: 1px; height: 14px; background-color: rgba(255,255,255,0.18); flex-shrink: 0; }
+    .topbar__right { display: flex; align-items: center; gap: 14px; }
+    .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color var(--transition-base); }
+    .topbar__social:hover { color: var(--color-gold); }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: relative;
+      height: auto; padding: 8px 0;
+      display: flex; align-items: center;
+      background-color: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--color-mist);
+    }
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav__logo { display: flex; align-items: center; gap: 12px; color: var(--color-navy); font-weight: 600; font-size: 16px; }
+    .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
+    .nav__links { display: flex; align-items: center; gap: 0; }
+    .nav__links li { display: flex; align-items: center; }
+    .nav__links li + li::before { content: '·'; color: var(--color-gold); font-size: 18px; line-height: 1; padding: 0 14px; pointer-events: none; user-select: none; }
+    .nav__link { font-size: 15px; font-weight: 500; color: var(--color-slate); position: relative; transition: color var(--transition-base); }
+    .nav__link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background-color: var(--color-gold); transform: scaleX(0); transform-origin: left; transition: transform 380ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__link:hover { color: var(--color-navy); }
+    .nav__link:hover::after { transform: scaleX(1); }
+    .nav__cta { font-size: 14px; font-weight: 600; color: var(--color-surface); background-color: var(--color-navy); padding: 10px 22px; border-radius: var(--radius-md); transition: background-color var(--transition-base), transform var(--transition-base); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+    .nav__cta:hover { background-color: var(--color-prussian); transform: translateY(-1px); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; width: 28px; cursor: pointer; padding: 4px; }
+    .nav__hamburger span { display: block; height: 2px; background-color: var(--color-navy); border-radius: 2px; transition: transform var(--transition-base), opacity var(--transition-base); }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav__mobile-overlay { position: fixed; inset: 0; background-color: var(--color-navy); z-index: 103; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity 600ms cubic-bezier(0.4,0,0.2,1); }
+    .nav__mobile-overlay.open { opacity: 1; pointer-events: all; }
+    .nav__mobile-link { font-size: 20px; font-weight: 500; color: var(--color-surface); transition: color var(--transition-base); }
+    .nav__mobile-link:hover { color: var(--color-gold); }
+    .nav__mobile-close { position: absolute; top: 20px; right: 20px; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; background: none; border: none; color: var(--color-surface); cursor: pointer; padding: 0; transition: color var(--transition-base); }
+    .nav__mobile-close:hover { color: var(--color-gold); }
+    .nav__mobile-social { display: flex; gap: 14px; }
+    .nav__mobile-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.75); transition: color 200ms ease, border-color 200ms ease; }
+    .nav__mobile-social a:hover { color: var(--color-gold); border-color: var(--color-gold); }
+
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      background-color: var(--color-surface);
+      padding-top: 80px;
+      padding-bottom: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero__inner { display: grid; grid-template-columns: 1fr; gap: 72px; align-items: start; }
+    .page-hero__back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--color-slate-light); margin-bottom: 24px; transition: color var(--transition-base); }
+    .page-hero__back:hover { color: var(--color-gold); }
+    .page-hero__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 16px; }
+    .page-hero__title { font-size: clamp(28px, 4vw, 44px); font-weight: 500; color: var(--color-navy); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px; }
+    .page-hero__lead { font-size: 16px; font-weight: 300; color: var(--color-slate); line-height: 1.7; max-width: 640px; }
+
+    /* ===== SECTION ===== */
+    .section { padding: 80px 0; }
+    .section--fog { background-color: var(--color-bg); }
+    .section--white { background-color: var(--color-surface); }
+    .section--dark { background-color: var(--color-navy); }
+
+    .section__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 12px; }
+    .section__title { font-size: clamp(24px, 3vw, 36px); font-weight: 500; color: var(--color-navy); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .section__lead { font-size: 16px; font-weight: 300; color: var(--color-slate); line-height: 1.7; max-width: 560px; margin-bottom: 56px; }
+
+    /* ===== VALUES GRID ===== */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .value-card { background-color: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 32px; transition: box-shadow var(--transition-base), transform var(--transition-base); }
+    .value-card:hover { box-shadow: var(--shadow-elevated); transform: translateY(-2px); }
+    .value-card__icon { width: 44px; height: 44px; border-radius: var(--radius-md); background-color: var(--color-sky-tint); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--color-prussian); }
+    .value-card__title { font-size: 17px; font-weight: 600; color: var(--color-navy); margin-bottom: 10px; }
+    .value-card__text { font-size: 14px; color: var(--color-slate); line-height: 1.7; }
+
+    /* ===== JOB CARD ===== */
+    .jobs-list { display: flex; flex-direction: column; gap: 28px; }
+    .job-card { background-color: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow var(--transition-base); }
+    .job-card:hover { box-shadow: var(--shadow-elevated); }
+    .job-card__header { padding: 32px 36px; border-bottom: 1px solid var(--color-mist); display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .job-card__meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+    .job-card__tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; background-color: var(--color-sky-tint); color: var(--color-prussian); padding: 4px 10px; border-radius: 20px; }
+    .job-card__title { font-size: clamp(20px, 2.5vw, 26px); font-weight: 500; color: var(--color-navy); line-height: 1.2; }
+    .job-card__apply-btn { flex-shrink: 0; font-size: 14px; font-weight: 600; color: var(--color-surface); background-color: var(--color-navy); padding: 12px 24px; border-radius: var(--radius-md); transition: background-color var(--transition-base), transform var(--transition-base); display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; align-self: center; }
+    .job-card__apply-btn:hover { background-color: var(--color-prussian); transform: translateY(-1px); }
+    .job-card__body { padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .job-card__section-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 16px; }
+    .job-card__list { display: flex; flex-direction: column; gap: 10px; }
+    .job-card__list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--color-slate); line-height: 1.55; }
+    .job-card__list li::before { content: ''; flex-shrink: 0; margin-top: 7px; width: 5px; height: 5px; border-radius: 50%; background-color: var(--color-gold); }
+
+    /* ===== INITIATIVE CARD ===== */
+    .initiative-card { background-color: var(--color-navy); border-radius: var(--radius-lg); padding: 56px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+    .initiative-card__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 12px; }
+    .initiative-card__title { font-size: clamp(22px, 3vw, 32px); font-weight: 500; color: #FFFFFF; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .initiative-card__text { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 540px; }
+    .initiative-card__action { display: flex; flex-direction: column; gap: 12px; align-items: center; flex-shrink: 0; }
+    .initiative-card__btn { font-size: 14px; font-weight: 600; color: var(--color-navy); background-color: var(--color-gold); padding: 14px 28px; border-radius: var(--radius-md); transition: background-color var(--transition-base), transform var(--transition-base); display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+    .initiative-card__btn:hover { background-color: var(--color-gold-light); transform: translateY(-1px); }
+    .initiative-card__hint { font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; }
+
+    /* ===== FOOTER ===== */
+    .footer { background-color: #0A1828; padding: 80px 0 0; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 2fr; gap: 48px; margin-bottom: 64px; }
+    .footer__logo { display: flex; align-items: center; gap: 12px; color: #FFFFFF; font-family: var(--font-sans); font-weight: 600; font-size: 16px; margin-bottom: 16px; }
+    .footer__tagline { font-family: var(--font-sans); font-size: 14px; color: #8A99AD; line-height: 1.6; max-width: 240px; margin: 0; }
+    .footer__tagline-values { font-family: var(--font-sans); font-size: 14px; color: var(--color-gold); line-height: 1.6; max-width: 240px; margin-top: 12px; }
+    .footer__cert { display: block; margin-top: 20px; width: 88px; height: auto; opacity: 0.9; }
+    .footer__cert-caption { font-family: var(--font-sans); font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.5; max-width: 240px; margin-top: 8px; }
+    .footer__col-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 20px; }
+    .footer__links { display: flex; flex-direction: column; gap: 12px; list-style: none; padding: 0; margin: 0; }
+    .footer__link { font-family: var(--font-sans); font-size: 14px; color: #8A99AD; transition: color 200ms ease; }
+    .footer__link:hover { color: #FFFFFF; }
+    .footer__contact-line { display: flex; align-items: center; gap: 10px; font-family: var(--font-sans); font-size: 14px; color: #8A99AD; margin-bottom: 10px; }
+    .footer__contact-line svg { color: var(--color-gold); flex-shrink: 0; }
+    .footer__social { display: flex; justify-content: center; gap: 14px; padding: 28px 0 20px; }
+    .footer__social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.6); transition: color 200ms ease, border-color 200ms ease; }
+    .footer__social a:hover { color: var(--color-gold); border-color: var(--color-gold); }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; position: relative; }
+    .footer__copy { font-family: var(--font-sans); font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer__made-by { position: absolute; left: 50%; transform: translateX(-50%); }
+    .footer__upprime-link { font-weight: 600; position: relative; display: inline-block; }
+    .footer__upprime-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background: linear-gradient(to right, #FFFFFF, #A044D4); transform: scaleX(0); transform-origin: left; transition: transform 400ms cubic-bezier(0.4,0,0.2,1); }
+    .footer__upprime-link:hover::after { transform: scaleX(1); }
+    .footer__upprime-white { color: #FFFFFF; }
+    .footer__upprime-purple { color: #A044D4; }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { font-family: var(--font-sans); font-size: 13px; color: rgba(255,255,255,0.3); transition: color 200ms ease; }
+    .footer__legal a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ===== SCROLL REVEAL ===== */
+    [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+    [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+    [data-reveal-delay="1"] { transition-delay: 100ms; }
+    [data-reveal-delay="2"] { transition-delay: 200ms; }
+    [data-reveal-delay="3"] { transition-delay: 300ms; }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .container { padding: 0 36px; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .job-card__body { grid-template-columns: 1fr; gap: 28px; }
+      .initiative-card { grid-template-columns: 1fr; gap: 32px; }
+      .initiative-card__action { align-items: flex-start; }
+    }
+    @media (max-width: 768px) {
+      .topbar { position: static; }
+      .topbar__left .topbar__item:nth-child(2),
+      .topbar__left .topbar__divider:nth-child(2),
+      .topbar__left .topbar__divider:nth-child(3) { display: none; }
+      .nav { position: static; }
+      .container { padding: 0 24px; }
+      .nav__hamburger { display: flex; }
+      .nav__links { display: none; }
+      .nav__cta { display: none; }
+      .page-hero { padding-top: 60px; padding-bottom: 60px; }
+      .footer__grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; }
+      .footer__made-by { position: static; transform: none; }
+      .values-grid { grid-template-columns: 1fr; }
+      .job-card__header { flex-direction: column; }
+      .job-card__apply-btn { align-self: flex-start; }
+      .initiative-card { padding: 36px 24px; }
+    }
+    @media (max-width: 480px) {
+      .topbar { display: none; }
+      .container { padding: 0 16px; }
+      .page-hero__title { font-size: 28px; }
+      .footer__legal { flex-direction: column; gap: 8px; }
+    }
+  </style>
+  <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script>
+</head>
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar" aria-label="Kontaktinformationen">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+43053382010" class="topbar__item" aria-label="Anrufen">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+            <path d="M2.5 1.5h2l1 2.5-1.25 1.25a7 7 0 003 3L8.5 7l2.5 1v2a1 1 0 01-1 1A9.5 9.5 0 011.5 2.5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          +43 (0) 5338-20105
+        </a>
+        <div class="topbar__divider" aria-hidden="true"></div>
+        <a href="mailto:info@datenschutz-kroes.at" class="topbar__item" aria-label="E-Mail senden">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+            <rect x="1" y="2.5" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M1 4l5.5 3.5L12 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          info@datenschutz-kroes.at
+        </a>
+      </div>
+      <div class="topbar__right">
+        <a href="https://www.facebook.com/datenschutz-kroes" target="_blank" class="topbar__social" aria-label="Facebook" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/datenschutz_kroes" target="_blank" class="topbar__social" aria-label="Instagram" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@DatenschutzKroes" target="_blank" class="topbar__social" aria-label="YouTube" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
+          <picture>
+            <source srcset="logo-datenschutz-kroes.webp" type="image/webp">
+            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
+          </picture>
+        </a>
+        <ul class="nav__links" role="list">
+          <li><a href="index.html#alexander-kroes" class="nav__link">Alexander Kroes</a></li>
+          <li><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
+          <li><a href="datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
+          <li><a href="index.html#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
+          <li><a href="downloads.html" class="nav__link">Downloads</a></li>
+          <li><a href="datenschutz-blog/" class="nav__link">Blog</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-overlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav__mobile-overlay" id="mobile-overlay" aria-hidden="true" role="dialog" aria-label="Navigation">
+    <button type="button" class="nav__mobile-close" aria-label="Menü schließen" onclick="closeMobileNav()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <nav aria-label="Mobile Navigation">
+      <ul style="list-style:none; text-align:center; display:flex; flex-direction:column; gap:20px;" role="list">
+        <li><a href="index.html#alexander-kroes" class="nav__mobile-link" onclick="closeMobileNav()">Alexander Kroes</a></li>
+        <li><a href="index.html#leistungen" class="nav__mobile-link" onclick="closeMobileNav()">Leistungen</a></li>
+        <li><a href="datenschutz-flatrate.html" class="nav__mobile-link" onclick="closeMobileNav()">Pakete &amp; Preise</a></li>
+        <li><a href="index.html#seminare" class="nav__mobile-link" onclick="closeMobileNav()">Seminare</a></li>
+        <li><a href="index.html#kontakt" class="nav__mobile-link" onclick="closeMobileNav()">Kontakt</a></li>
+        <li><a href="downloads.html" class="nav__mobile-link" onclick="closeMobileNav()">Downloads</a></li>
+        <li><a href="datenschutz-blog/" class="nav__mobile-link" onclick="closeMobileNav()">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="nav__mobile-social" aria-label="Social Media">
+      <a href="https://www.facebook.com/datenschutz-kroes" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://www.youtube.com/@DatenschutzKroes" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0F1F3D"/></svg></a>
+      <a href="https://www.instagram.com/datenschutz_kroes" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div>
+          <a href="index.html" class="page-hero__back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12L6 8l4-4"></path></svg>
+            Zurück zur Startseite
+          </a>
+          <p class="page-hero__eyebrow">Karriere bei Datenschutz Kroes</p>
+          <h1 class="page-hero__title">Gestalte Datenschutz.<br>Von Tirol aus.</h1>
+          <p class="page-hero__lead">Wir sind ein spezialisiertes Datenschutz-Büro mit Sitz in Kufstein – persönlich, zertifiziert und nah an unseren Mandanten. Wenn Datenschutz für dich mehr als Compliance ist, bist du bei uns richtig.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WERTE ===== -->
+  <section class="section section--fog">
+    <div class="container">
+      <p class="section__eyebrow" data-reveal>Was uns ausmacht</p>
+      <h2 class="section__title" data-reveal data-reveal-delay="1">Warum Datenschutz Kroes?</h2>
+      <p class="section__lead" data-reveal data-reveal-delay="2">Kein Großkonzern-Getriebe, keine anonymen Teams. Bei uns arbeitest du direkt mit Mandanten, trägst Verantwortung und entwickelst echte Expertise – in einem Umfeld, das Verlässlichkeit lebt.</p>
+
+      <div class="values-grid">
+        <div class="value-card" data-reveal data-reveal-delay="1">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <p class="value-card__title">Direkter Mandantenkontakt</p>
+          <p class="value-card__text">Du berätst KMU und Handwerksbetriebe unmittelbar – keine langen Eskalationsketten, echte Verantwortung vom ersten Tag.</p>
+        </div>
+
+        <div class="value-card" data-reveal data-reveal-delay="2">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <p class="value-card__title">Fokus auf KI & Datenschutz</p>
+          <p class="value-card__text">Wir bewegen uns an der Schnittstelle von DSGVO und KI-Verordnung – ein Zukunftsfeld, das gerade erst beginnt.</p>
+        </div>
+
+        <div class="value-card" data-reveal data-reveal-delay="3">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p class="value-card__title">Flexible Arbeitsgestaltung</p>
+          <p class="value-card__text">Homeoffice und Vor-Ort-Termine im Gleichgewicht. Wir vertrauen auf selbstständiges Arbeiten und klare Ergebnisse – nicht auf Präsenz um der Präsenz willen.</p>
+        </div>
+
+        <div class="value-card" data-reveal data-reveal-delay="1">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="value-card__title">Weiterbildung &amp; Zertifizierung</p>
+          <p class="value-card__text">Wir unterstützen aktiv bei Zertifizierungen (DSB, CIPP/E) und begleiten deine fachliche Entwicklung mit konkreten Maßnahmen.</p>
+        </div>
+
+        <div class="value-card" data-reveal data-reveal-delay="2">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <p class="value-card__title">Modernes Arbeitsumfeld</p>
+          <p class="value-card__text">Büro im KISS Coworking Space in Kufstein – modernes Umfeld, kurze Wege, und ein Netzwerk aus Tiroler Unternehmen direkt vor Ort.</p>
+        </div>
+
+        <div class="value-card" data-reveal data-reveal-delay="3">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <p class="value-card__title">Sinnvolle Arbeit</p>
+          <p class="value-card__text">Datenschutz schützt Menschen – nicht nur Unternehmen. Was wir tun, hat Bedeutung. Das spüren auch unsere Mandanten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFFENE STELLEN ===== -->
+  <section class="section section--white">
+    <div class="container">
+      <p class="section__eyebrow" data-reveal>Offene Stellen</p>
+      <h2 class="section__title" data-reveal data-reveal-delay="1">Werde Teil des Teams</h2>
+
+      <div class="jobs-list">
+
+        <!-- Stelle 1: Legal Consultant / Volljurist -->
+        <article class="job-card" data-reveal data-reveal-delay="2">
+          <div class="job-card__header">
+            <div>
+              <div class="job-card__meta">
+                <span class="job-card__tag">Vollzeit / Teilzeit</span>
+                <span class="job-card__tag">Kufstein &amp; Remote</span>
+                <span class="job-card__tag">Festanstellung</span>
+              </div>
+              <h3 class="job-card__title">Legal Consultant / Volljurist (m/w/d)<br>Datenschutz &amp; KI</h3>
+            </div>
+            <a href="mailto:bewerbung@datenschutz-kroes.at?subject=Bewerbung%3A%20Legal%20Consultant%20%2F%20Volljurist" class="job-card__apply-btn" aria-label="Jetzt auf die Stelle als Legal Consultant bewerben">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Jetzt bewerben
+            </a>
+          </div>
+          <div class="job-card__body">
+            <div>
+              <p class="job-card__section-title">Deine Aufgaben</p>
+              <ul class="job-card__list" role="list">
+                <li>Betreuung von Mandanten als externer Datenschutzbeauftragter (DSB)</li>
+                <li>Datenschutzrechtliche Beratung zu DSGVO, nDSG, EU AI Act und weiteren Regularien</li>
+                <li>Durchführung von Datenschutz-Audits und Risikoanalysen</li>
+                <li>Erstellung und Pflege von Datenschutz-Dokumentationen (VVT, TOM, Einwilligungen)</li>
+                <li>Datenschutz-Folgenabschätzungen (DSFA) für risikobehaftete Verarbeitungen</li>
+                <li>Unterstützung bei Datenpannen und Meldepflichten gegenüber Behörden</li>
+                <li>Aufbau und Optimierung von Datenschutz-Managementsystemen</li>
+              </ul>
+            </div>
+            <div>
+              <p class="job-card__section-title">Dein Profil</p>
+              <ul class="job-card__list" role="list">
+                <li>Abgeschlossenes Studium als Volljurist (Österreich oder Deutschland) oder Master in Wirtschaftsjura</li>
+                <li>Kenntnisse im Datenschutzrecht (DSGVO, DSG) und idealerweise im KI-Recht (EU AI Act)</li>
+                <li>Technische Affinität und Verständnis für IT-Infrastrukturen und Datenverarbeitungsprozesse</li>
+                <li>Strukturierte, proaktive und lösungsorientierte Arbeitsweise</li>
+                <li>Ausgeprägte Mandantenorientierung und sichere Kommunikation auf allen Ebenen</li>
+                <li>Deutsch verhandlungssicher, Englisch von Vorteil</li>
+              </ul>
+            </div>
+            <div>
+              <p class="job-card__section-title">Was wir bieten</p>
+              <ul class="job-card__list" role="list">
+                <li>Umfassendes Onboarding mit persönlichem Mentoring durch Alexander Kroes</li>
+                <li>Unterstützung bei Zertifizierungen (zertifizierter DSB, CIPP/E)</li>
+                <li>Flexible Arbeitszeiten und Homeoffice-Möglichkeit</li>
+                <li>Büroarbeitsplatz im modernen KISS Coworking Space, Kufstein</li>
+                <li>Abwechslungsreiche Mandantenlandschaft: KMU, Handwerk, Dienstleistung</li>
+                <li>Direkte Mitgestaltung eines wachsenden Datenschutz-Büros</li>
+              </ul>
+            </div>
+            <div>
+              <p class="job-card__section-title">So bewirbst du dich</p>
+              <ul class="job-card__list" role="list">
+                <li>Lebenslauf und kurzes Motivationsschreiben per E-Mail</li>
+                <li>Keine aufwendige Bewerbungsmappe nötig – uns interessiert dein Hintergrund und deine Motivation</li>
+                <li>Bewerbungen an: <a href="mailto:bewerbung@datenschutz-kroes.at" style="color:var(--color-prussian);text-decoration:underline;">bewerbung@datenschutz-kroes.at</a></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INITIATIVBEWERBUNG ===== -->
+  <section class="section section--fog">
+    <div class="container">
+      <div class="initiative-card" data-reveal>
+        <div>
+          <p class="initiative-card__eyebrow">Initiativbewerbung</p>
+          <h2 class="initiative-card__title">Keine passende Stelle dabei?</h2>
+          <p class="initiative-card__text">Wir freuen uns über Initiativbewerbungen – besonders von Personen mit Hintergrund in Recht, Wirtschaftsinformatik oder IT-Sicherheit, die Datenschutz als ihre Berufung sehen. Schreib uns einfach, wer du bist und was dich antreibt.</p>
+        </div>
+        <div class="initiative-card__action">
+          <a href="mailto:bewerbung@datenschutz-kroes.at?subject=Initiativbewerbung" class="initiative-card__btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Initiativbewerbung senden
+          </a>
+          <p class="initiative-card__hint">bewerbung@datenschutz-kroes.at</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" style="height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+            Datenschutz Kroes
+          </div>
+          <p class="footer__tagline">Externer Datenschutzbeauftragter für KMU & Handwerk.</p>
+          <p class="footer__tagline-values">Zertifiziert. Persönlich. Verlässlich.</p>
+          <img src="wifi-wko-zertifikat.jpg" alt="WIFI WKO Zertifikat" class="footer__cert" width="88" height="111" loading="lazy">
+          <p class="footer__cert-caption">Zertifiziert nach<br>ÖVE/ÖNORM<br>EN ISO / IEC<br>17024</p>
+        </div>
+        <div>
+          <p class="footer__col-label">Leistungen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#leistungen" class="footer__link">Externer DSB</a></li>
+            <li><a href="datenschutz-flatrate.html" class="footer__link">Pakete &amp; Preise</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">DSGVO-Erstanalyse</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Mitarbeiterschulungen</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Dokumentation</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Datenschutz-Folgenabschätzung</a></li>
+            <li><a href="index.html#leistungen" class="footer__link">Incident Response</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Unternehmen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#alexander-kroes" class="footer__link">Alexander Kroes</a></li>
+            <li><a href="index.html#prozess" class="footer__link">Prozess</a></li>
+            <li><a href="index.html#faq" class="footer__link">FAQ</a></li>
+            <li><a href="datenschutz-blog/" class="footer__link">Blog</a></li>
+            <li><a href="index.html#kontakt" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Kontakt</p>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.2"/><path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <a href="mailto:info@datenschutz-kroes.at" class="footer__link">info@datenschutz-kroes.at</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V13a1 1 0 01-1 1h-2C7.82 14 2 8.18 2 1V3h1z" stroke="currentColor" stroke-width="1.2"/></svg>
+            <a href="tel:+4353382010" class="footer__link">+43 (0) 5338-20105</a>
+          </div>
+          <div class="footer__contact-line">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1a4 4 0 100 8A4 4 0 008 1zM1.5 15c0-2.5 2.91-4.5 6.5-4.5s6.5 2 6.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span class="footer__link">Kufstein, Tirol</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__social" aria-label="Social Media">
+        <a href="https://www.facebook.com/datenschutz-kroes" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://www.youtube.com/@DatenschutzKroes" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 00-1.95 1.97A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0F1F3D"/></svg></a>
+        <a href="https://www.instagram.com/datenschutz_kroes" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Datenschutz Kroes. Alle Rechte vorbehalten.</p>
+        <p class="footer__copy footer__made-by">Website by <a href="https://upprime-connect.at/" target="_blank" rel="noopener noreferrer" class="footer__upprime-link"><span class="footer__upprime-white">Upprime</span> <span class="footer__upprime-purple">Connect</span></a></p>
+        <nav class="footer__legal" aria-label="Rechtliche Links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutzerklärung</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function closeMobileNav() {
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.classList.remove('open');
+      document.getElementById('mobile-overlay').classList.remove('open');
+      document.getElementById('mobile-overlay').setAttribute('aria-hidden', 'true');
+    }
+
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', function() {
+      const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!isOpen));
+      hamburger.classList.toggle('open');
+      const overlay = document.getElementById('mobile-overlay');
+      overlay.classList.toggle('open');
+      overlay.setAttribute('aria-hidden', String(isOpen));
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+  </script>
+
+  <script src="cookie-banner.js" defer></script>
+</body>
+</html>
