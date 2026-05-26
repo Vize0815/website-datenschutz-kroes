@@ -132,7 +132,7 @@
     .job-row__trigger[aria-expanded="true"] .job-row__chevron { transform: rotate(180deg); color: var(--color-gold); }
     .job-row__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 420ms cubic-bezier(0.4,0,0.2,1); overflow: hidden; }
     .job-row__body.open { grid-template-rows: 1fr; }
-    .job-row__body-inner { overflow: hidden; padding-bottom: 40px; }
+    .job-row__body-inner { overflow: hidden; padding-bottom: 40px; min-height: 0; }
     .job-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 48px; }
     .job-detail-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 14px; }
     .job-detail-list { display: flex; flex-direction: column; gap: 9px; }
@@ -338,8 +338,8 @@
             Zurück zur Startseite
           </a>
           <p class="page-hero__eyebrow">Karriere bei Datenschutz Kroes</p>
-          <h1 class="page-hero__title">Gestalte Datenschutz.<br>Von Tirol aus.</h1>
-          <p class="page-hero__lead">Wir sind ein spezialisiertes Datenschutz-Büro mit Sitz in Kufstein – persönlich, zertifiziert und nah an unseren Mandanten. Wenn Datenschutz für dich mehr als Compliance ist, bist du bei uns richtig.</p>
+          <h1 class="page-hero__title">Gestalten Sie Datenschutz.<br>Von Tirol aus.</h1>
+          <p class="page-hero__lead">Wir sind ein spezialisiertes Datenschutz-Büro mit Sitz in Kufstein – persönlich, zertifiziert und nah an unseren Mandanten. Wenn Datenschutz für Sie mehr als Compliance ist, sind Sie bei uns richtig.</p>
         </div>
       </div>
     </div>
@@ -350,7 +350,7 @@
     <div class="container">
       <p class="section__eyebrow" data-reveal>Was uns ausmacht</p>
       <h2 class="section__title" data-reveal data-reveal-delay="1">Warum Datenschutz Kroes?</h2>
-      <p class="section__lead" data-reveal data-reveal-delay="2">Kein Großkonzern-Getriebe, keine anonymen Teams. Bei uns arbeitest du direkt mit Mandanten, trägst Verantwortung und entwickelst echte Expertise – in einem Umfeld, das Verlässlichkeit lebt.</p>
+      <p class="section__lead" data-reveal data-reveal-delay="2">Kein Großkonzern-Getriebe, keine anonymen Teams. Bei uns arbeiten Sie direkt mit Mandanten, tragen Verantwortung und entwickeln echte Expertise – in einem Umfeld, das Verlässlichkeit lebt.</p>
 
       <div class="values-grid">
         <div class="value-card" data-reveal data-reveal-delay="1">
@@ -358,7 +358,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
           <p class="value-card__title">Direkter Mandantenkontakt</p>
-          <p class="value-card__text">Du berätst KMU und Handwerksbetriebe unmittelbar – keine langen Eskalationsketten, echte Verantwortung vom ersten Tag.</p>
+          <p class="value-card__text">Sie beraten KMU und Handwerksbetriebe unmittelbar – keine langen Eskalationsketten, echte Verantwortung vom ersten Tag.</p>
         </div>
         <div class="value-card" data-reveal data-reveal-delay="2">
           <div class="value-card__icon" aria-hidden="true">
@@ -403,7 +403,7 @@
   <section class="section section--dark" id="stellen">
     <div class="container">
       <p class="section__eyebrow" data-reveal>Freie Stellen</p>
-      <h2 class="section__title" data-reveal data-reveal-delay="1">In diesen Rollen könntest du einsteigen</h2>
+      <h2 class="section__title" data-reveal data-reveal-delay="1">In diesen Rollen könnten Sie einsteigen</h2>
 
       <div class="jobs-accordion" data-reveal data-reveal-delay="2">
 
@@ -423,7 +423,7 @@
             <div class="job-row__body-inner">
               <div class="job-detail-grid">
                 <div>
-                  <p class="job-detail-label">Deine Aufgaben</p>
+                  <p class="job-detail-label">Ihre Aufgaben</p>
                   <ul class="job-detail-list" role="list">
                     <li>Betreuung von Mandanten als externer Datenschutzbeauftragter (DSB)</li>
                     <li>Datenschutzrechtliche Beratung zu DSGVO, nDSG, EU AI Act und weiteren Regularien</li>
@@ -435,7 +435,7 @@
                   </ul>
                 </div>
                 <div>
-                  <p class="job-detail-label">Dein Profil</p>
+                  <p class="job-detail-label">Ihr Profil</p>
                   <ul class="job-detail-list" role="list">
                     <li>Abgeschlossenes Studium als Volljurist (Österreich oder Deutschland) oder Master in Wirtschaftsjura</li>
                     <li>Kenntnisse im Datenschutzrecht (DSGVO, DSG) und idealerweise im KI-Recht (EU AI Act)</li>
@@ -483,7 +483,7 @@
             <div class="job-row__body-inner">
               <div class="job-detail-grid">
                 <div>
-                  <p class="job-detail-label">Deine Aufgaben</p>
+                  <p class="job-detail-label">Ihre Aufgaben</p>
                   <ul class="job-detail-list" role="list">
                     <li>Neukundenakquise im Bereich KMU, Handwerk und mittelständische Unternehmen in Tirol, Salzburg und Bayern</li>
                     <li>Erstgespräche mit Entscheidern: Bedarfsanalyse und Präsentation unserer Datenschutz-Leistungen</li>
@@ -494,7 +494,7 @@
                   </ul>
                 </div>
                 <div>
-                  <p class="job-detail-label">Dein Profil</p>
+                  <p class="job-detail-label">Ihr Profil</p>
                   <ul class="job-detail-list" role="list">
                     <li>Nachweisliche Erfahrung im B2B-Vertrieb, idealerweise in einer beratungsnahen Branche (Recht, IT, Versicherung, Steuerberatung)</li>
                     <li>Sicheres, verbindliches Auftreten gegenüber Geschäftsführern und Entscheidern</li>
@@ -539,7 +539,7 @@
           </button>
           <div class="job-row__body" id="job-body-3" role="region">
             <div class="job-row__body-inner">
-              <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.75;max-width:640px;margin-bottom:28px;">Keine passende Stelle dabei? Wir freuen uns über Initiativbewerbungen – besonders von Personen mit Hintergrund in Recht, Wirtschaftsinformatik oder IT-Sicherheit, die Datenschutz als ihre Berufung sehen. Schreib uns, wer du bist und was dich antreibt.</p>
+              <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.75;max-width:640px;margin-bottom:28px;">Keine passende Stelle dabei? Wir freuen uns über Initiativbewerbungen – besonders von Personen mit Hintergrund in Recht, Wirtschaftsinformatik oder IT-Sicherheit, die Datenschutz als ihre Berufung sehen. Schreiben Sie uns, wer Sie sind und was Sie antreibt.</p>
               <a href="#bewerben" class="job-row__apply-link" data-apply-for="initiativbewerbung">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
                 Initiativbewerbung senden
