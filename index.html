@@ -5110,7 +5110,7 @@
             <input type="text" id="nl-company" name="unternehmen" autocomplete="organization">
           </div>
           <div class="newsletter__consent">
-            <input type="checkbox" id="nl-consent" required>
+            <input type="checkbox" id="nl-consent" required oninvalid="this.setCustomValidity('Bitte bestätigen Sie dieses Kästchen, um fortzufahren.')" onchange="this.setCustomValidity('')">
             <span>Ich stimme zu, dass Datenschutz Kroes mir den Newsletter per E-Mail zusendet. Eine Abmeldung ist jederzeit möglich. <a href="datenschutz.html" target="_blank" rel="noopener" style="color:var(--color-accent);text-decoration:underline;">Datenschutzerklärung</a></span>
           </div>
           <button type="submit" class="newsletter__submit">
