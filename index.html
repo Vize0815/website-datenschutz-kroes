@@ -6274,19 +6274,42 @@
 
   <script src="cookie-banner.js" defer></script>
   <script>
-    document.getElementById('nl-form').addEventListener('submit', function(e) {
+    document.getElementById('nl-form').addEventListener('submit', async function(e) {
       e.preventDefault();
-      var name = document.getElementById('nl-name').value.trim();
-      var email = document.getElementById('nl-email').value.trim();
+      var btn = this.querySelector('button[type="submit"]');
+      var name    = document.getElementById('nl-name').value.trim();
+      var email   = document.getElementById('nl-email').value.trim();
       var company = document.getElementById('nl-company').value.trim();
-      var subject = encodeURIComponent('Newsletter-Anmeldung: ' + name);
-      var body = encodeURIComponent(
-        'Name: ' + name +
-        '\nE-Mail: ' + email +
-        (company ? '\nUnternehmen: ' + company : '') +
-        '\n\nZustimmung zur Newsletter-Zusendung erteilt.'
-      );
-      window.location.href = 'mailto:info@datenschutz-kroes.at?subject=' + subject + '&body=' + body;
+
+      btn.disabled = true;
+      btn.textContent = 'Wird angemeldet…';
+
+      try {
+        var payload = { email: email, name: name, company: company };
+
+        var res = await fetch('https://brevo-newsletter-proxy.alexanderkrosse.workers.dev', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.status === 201 || res.status === 204) {
+          this.innerHTML = '<p style="text-align:center;padding:40px 16px;font-family:var(--font-sans);font-size:16px;color:var(--color-navy);">Vielen Dank! Sie erhalten in Kürze eine Bestätigungsmail.</p>';
+        } else {
+          throw new Error('api-error');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = 'Jetzt anmelden <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        var errEl = document.getElementById('nl-api-error');
+        if (!errEl) {
+          errEl = document.createElement('p');
+          errEl.id = 'nl-api-error';
+          errEl.style.cssText = 'color:#c0392b;font-size:13px;margin-top:8px;font-family:var(--font-sans);';
+          btn.insertAdjacentElement('afterend', errEl);
+        }
+        errEl.textContent = 'Anmeldung fehlgeschlagen — bitte versuchen Sie es erneut.';
+      }
     });
   </script>
 </body>
