@@ -578,22 +578,30 @@
           <li>E-Mail-Adresse</li>
           <li>Unternehmen (optional)</li>
         </ul>
-        <p>Für den Versand des Newsletters nutzen wir den Dienst <strong>Mailchimp</strong> der Firma:</p>
-        <p><strong>Intuit Inc. – The Rocket Science Group LLC</strong><br>
-        675 Ponce de Leon Ave NE, Suite 5000<br>
-        Atlanta, GA 30308, USA</p>
-        <p>Mailchimp ist ein Dienst, mit dem u. a. der Versand von Newslettern organisiert und analysiert werden kann. Ihre zum Zweck des Newsletter-Empfangs eingegebenen Daten werden auf den Servern von Mailchimp in den USA gespeichert.</p>
+        <p>Für den Versand des Newsletters nutzen wir den Dienst <strong>Brevo</strong> (ehemals Sendinblue) der Firma:</p>
+        <p><strong>Sendinblue SAS</strong><br>
+        7 rue de Madrid<br>
+        75008 Paris<br>
+        Frankreich</p>
+        <p>Brevo ist ein E-Mail-Marketing-Dienst mit Sitz in Frankreich. Ihre zum Zweck des Newsletter-Empfangs eingegebenen Daten werden auf den Servern von Brevo innerhalb der Europäischen Union gespeichert.</p>
 
-        <h3>7.2 Datenübermittlung in die USA</h3>
-        <p>Mailchimp verfügt über eine Zertifizierung nach dem EU-U.S. Data Privacy Framework (DPF). Das DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA, das die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA sicherstellen soll. Mailchimp hat sich nach dem DPF zertifiziert und ist damit verpflichtet, die europäischen Datenschutzstandards einzuhalten.</p>
+        <h3>7.2 Technische Übermittlung über Cloudflare Workers</h3>
+        <p>Ihre Formulardaten werden beim Absenden zunächst an einen <strong>Cloudflare Worker</strong> übermittelt, der als serverseitiger Proxy zwischen Ihrer Eingabe und der Brevo-API fungiert. Der API-Schlüssel für Brevo ist ausschließlich in der gesicherten Cloudflare-Umgebung hinterlegt und ist zu keinem Zeitpunkt im Quellcode der Website sichtbar.</p>
+        <p>Anbieter ist:</p>
+        <p><strong>Cloudflare, Inc.</strong><br>
+        101 Townsend St, San Francisco, CA 94107, USA<br>
+        (im EWR: Cloudflare Germany GmbH, Rosental 7, 80331 München)</p>
+        <p>Der Cloudflare Worker verarbeitet ausschließlich die von Ihnen eingegebenen Formulardaten (E-Mail-Adresse, Name, Unternehmen) und leitet diese unmittelbar an Brevo weiter. Eine dauerhafte Speicherung durch Cloudflare findet nicht statt. Cloudflare, Inc. ist nach dem EU-US Data Privacy Framework (DPF) zertifiziert; ein angemessenes Schutzniveau gemäß Art. 45 DSGVO ist damit gewährleistet.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).</p>
 
         <h3>7.3 Einwilligung und Widerruf</h3>
         <p>Der Newsletter-Versand erfolgt auf Grundlage Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die Anmeldung erfolgt im Double-Opt-In-Verfahren: Nach Ihrer Anmeldung erhalten Sie eine E-Mail mit einem Bestätigungslink. Erst nach Klick auf diesen Link wird Ihre Anmeldung wirksam.</p>
         <p>Sie können Ihre Einwilligung jederzeit widerrufen und den Newsletter abbestellen. Der Widerruf kann über den in jedem Newsletter enthaltenen Abmeldelink oder per E-Mail an <a href="mailto:info@datenschutz-kroes.at">info@datenschutz-kroes.at</a> erfolgen.</p>
         <p><strong>Speicherdauer:</strong> Ihre Daten werden so lange gespeichert, wie Sie den Newsletter abonniert haben. Nach Abmeldung werden Ihre Daten unverzüglich gelöscht.</p>
 
-        <h3>7.4 Analyse durch Mailchimp</h3>
-        <p>Mailchimp bietet die Möglichkeit, die Nutzung des Newsletters zu analysieren (z. B. Öffnungsraten, Klickverhalten). Diese Analysen dienen ausschließlich der Optimierung unserer Inhalte. Rückschlüsse auf einzelne Personen werden von uns nicht gezogen.</p>
+        <h3>7.4 Auftragsverarbeitung</h3>
+        <p>Mit Brevo (Sendinblue SAS) besteht ein Vertrag zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO. Brevo verarbeitet Ihre Daten ausschließlich in unserem Auftrag und nach unserer Weisung. Eine Weitergabe an Dritte findet nicht statt.</p>
+        <p>Weitere Informationen entnehmen Sie der Datenschutzerklärung von Brevo: <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank" rel="noopener noreferrer">brevo.com/de/legal/privacypolicy</a>.</p>
 
         <h2>8. Eingebettete Inhalte von Drittanbietern</h2>
         <h3>8.1 YouTube-Videos</h3>
