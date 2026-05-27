@@ -36,6 +36,7 @@ jobs:
         deployment-id: ${{ fromJson(inputs.deployment-ids) }}
     steps:
       - name: Update deployment status
+        continue-on-error: true
         uses: ionos-deploy-now/project-action@v1.2.1-beta2
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
@@ -100,6 +101,7 @@ jobs:
 
       - name: Update deployment status
         if: ${{ always() }}
+        continue-on-error: true
         uses: ionos-deploy-now/project-action@v1.2.1-beta2
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
@@ -116,6 +118,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify all deployments finished
+        continue-on-error: true
         uses: ionos-deploy-now/project-action@v1.2.1-beta2
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
