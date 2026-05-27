@@ -1,0 +1,39 @@
+name: "Emergency Deploy (IONOS API Bypass)"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  emergency-deploy:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOYMENT_ID: dbed54b8-8c64-4693-acd3-add7dd4eb016
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p deployment
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.claude' \
+            --exclude='deployment' \
+            . deployment/
+
+      - name: Set SSH username secret name
+        run: |
+          echo "SSH_USERNAME_SECRET=IONOS_DEPLOYMENT_$(echo $DEPLOYMENT_ID | tr '[:lower:]' '[:upper:]' | tr '-' '_')_SSH_USERNAME" >> $GITHUB_ENV
+
+      - name: Deploy to IONOS
+        uses: ionos-deploy-now/deploy-to-ionos-action@v2
+        with:
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          service-host: api-eu.ionos.space
+          project-id: 1bee63c9-bd2c-44f2-957c-24cdd0fdefc7
+          branch-id: d3c574a1-9465-4960-b6b7-c8a1539327b1
+          deployment-id: ${{ env.DEPLOYMENT_ID }}
+          deployment-info: '{"remote-host":"access-5020246730.app-ionos.space","last-deployment-date":"2026-05-27T06:54:59.651538Z","site-url":"https://datenschutz-kroes.at","storage-quota":50003968,"webspace-id":"e9774c09-2cda-4bc6-aa54-62a91acc1763"}'
+          ssh-user: ${{ secrets[env.SSH_USERNAME_SECRET] }}
+          ssh-key: ${{ secrets.IONOS_SSH_KEY }}
