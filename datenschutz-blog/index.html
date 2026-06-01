@@ -755,5 +755,20 @@
   </script>
 
   <script src="../cookie-banner.js" defer></script>
+  <script>
+    document.querySelectorAll('.article-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var href = this.getAttribute('href') || '';
+        var slug = href.replace(/\//g, '').trim();
+        if (!slug) return;
+        fetch('https://brevo-newsletter-proxy.alexanderkrosse.workers.dev/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ slug: slug }),
+          keepalive: true
+        }).catch(function() {});
+      });
+    });
+  </script>
 </body>
 </html>
