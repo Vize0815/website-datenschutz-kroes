@@ -780,6 +780,43 @@
       transform: translateX(3px);
     }
 
+    .btn-audit {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-gold);
+      background: transparent;
+      border: 1.5px solid var(--color-gold);
+      padding: 13px 22px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-audit:hover {
+      background-color: var(--color-gold);
+      color: var(--color-navy);
+      transform: translateY(-2px);
+    }
+    .btn-audit__dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      flex-shrink: 0;
+      animation: auditPulse 1.8s ease-in-out infinite;
+    }
+    .btn-audit:hover .btn-audit__dot {
+      background: var(--color-navy);
+    }
+    @keyframes auditPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.7); }
+    }
+
     .hero__trust-row {
       display: inline-flex;
       align-items: center;
@@ -3954,6 +3991,10 @@
               <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
+          <button type="button" class="btn-audit" onclick="DKPopup.open()" aria-haspopup="dialog">
+            <span class="btn-audit__dot" aria-hidden="true"></span>
+            Kostenloses Mini Audit
+          </button>
         </div>
 
         <div class="hero__trust-row">
