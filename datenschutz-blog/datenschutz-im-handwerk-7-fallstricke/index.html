@@ -238,7 +238,7 @@
 
     /* ===== FOOTER (identisch) ===== */
     .footer { background-color: #0A1828; padding: 80px 0 0; }
-    .footer__grid { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 2fr; gap: 48px; margin-bottom: 64px; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1.3fr 1.3fr 1.3fr 1.8fr; gap: 48px; margin-bottom: 64px; }
     .footer__logo { display: flex; align-items: center; gap: 12px; color: #FFFFFF; font-family: var(--font-sans); font-weight: 600; font-size: 16px; margin-bottom: 16px; }
     .footer__tagline { font-family: var(--font-sans); font-size: 14px; color: #8A99AD; line-height: 1.6; max-width: 240px; margin: 0; }
     .footer__tagline-values { font-family: var(--font-sans); font-size: 14px; color: var(--color-gold); line-height: 1.6; max-width: 240px; margin-top: 12px; }
@@ -268,7 +268,7 @@
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
       .container { padding: 0 32px; }
-      .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .footer__grid { grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
     }
     @media (max-width: 768px) {
       .topbar { position: static; }
@@ -608,6 +608,16 @@
         </div>
 
         <div>
+          <p class="footer__col-label">Standorte</p>
+          <ul class="footer__links" role="list">
+            <li><a href="../../tirol/" class="footer__link">Datenschutz Tirol</a></li>
+            <li><a href="../../salzburg/" class="footer__link">Datenschutz Salzburg</a></li>
+            <li><a href="../../rosenheim/" class="footer__link">Datenschutz Rosenheim</a></li>
+            <li><a href="../../muenchen/" class="footer__link">Datenschutz München</a></li>
+          </ul>
+        </div>
+
+                <div>
           <p class="footer__col-label">Kontakt</p>
           <div class="footer__contact-line">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4z" stroke="currentColor" stroke-width="1.2"/><path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
