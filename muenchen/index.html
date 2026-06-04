@@ -136,7 +136,7 @@
     .btn-ghost:hover { color: var(--color-navy); } .btn-ghost svg { transition: transform var(--transition-base); } .btn-ghost:hover svg { transform: translateX(3px); }
 
     .hero { background-color: var(--color-surface); padding: 80px 0 96px; }
-    .hero__grid { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center; }
+    .hero__grid { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: start; }
     .hero__breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 28px; }
     .hero__breadcrumb a { color: var(--color-gold); transition: color var(--transition-base); } .hero__breadcrumb a:hover { color: var(--color-navy); }
     .hero__eyebrow { margin-bottom: 20px; }
@@ -144,9 +144,8 @@
     .hero__title em { font-style: normal; color: var(--color-prussian); }
     .hero__desc { max-width: 520px; margin-bottom: 40px; }
     .hero__cta-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-    .hero__badge { background: var(--color-sky-tint); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 28px 32px; width: 220px; flex-shrink: 0; }
-    .hero__badge-num { font-family: var(--font-sans); font-size: 32px; font-weight: 600; color: var(--color-navy); line-height: 1; letter-spacing: -0.03em; }
-    .hero__badge-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-slate); margin-top: 6px; }
+    .hero__photo-col { flex-shrink: 0; }
+    .hero__photo { width: 280px; height: 380px; object-fit: cover; object-position: top center; border-radius: var(--radius-lg); display: block; box-shadow: var(--shadow-elevated); }
 
     .trust-bar { background-color: var(--color-navy); padding: 28px 0; }
     .trust-bar__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
@@ -231,7 +230,7 @@
 
     @media (max-width: 1024px) {
       .container { padding: 0 32px; }
-      .hero__grid { grid-template-columns: 1fr; } .hero__badge { display: none; }
+      .hero__grid { grid-template-columns: 1fr; } .hero__photo-col { display: none; }
       .services__grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; } .about-photo { width: 160px; height: 200px; }
       .footer__grid { grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
@@ -350,9 +349,8 @@
             </a>
           </div>
         </div>
-        <div class="hero__badge" data-reveal data-reveal-delay="2">
-          <div class="hero__badge-num">BayLDA</div>
-          <p class="hero__badge-label">Bayerische Datenschutzaufsicht. Kompetenz für München</p>
+        <div class="hero__photo-col" data-reveal data-reveal-delay="2">
+          <img src="../alexander-kroes-20.webp" alt="Alexander Kroes – Externer Datenschutzbeauftragter München" class="hero__photo" width="280" height="380" loading="eager" decoding="async">
         </div>
       </div>
     </div>
@@ -732,6 +730,19 @@
       document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-trigger').setAttribute('aria-expanded', false); });
       if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', true); }
     }
+    (function alignHeroPhoto() {
+      function update() {
+        const desc = document.querySelector('.hero__desc');
+        const photoCol = document.querySelector('.hero__photo-col');
+        if (!desc || !photoCol) return;
+        if (window.innerWidth <= 1024) { photoCol.style.paddingTop = ''; return; }
+        const grid = document.querySelector('.hero__grid');
+        const offset = desc.getBoundingClientRect().top - grid.getBoundingClientRect().top;
+        photoCol.style.paddingTop = (offset > 0 ? offset : 0) + 'px';
+      }
+      document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', update) : update();
+      window.addEventListener('resize', update);
+    })();
   </script>
 </body>
 </html>
