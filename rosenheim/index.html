@@ -100,21 +100,21 @@
     .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color var(--transition-base); }
     .topbar__social:hover { color: var(--color-gold); }
 
-    .nav { padding: 12px 24px; display: flex; align-items: center; background: #FFFFFF; border-bottom: none; }
-    .nav.scrolled { background: #FFFFFF; backdrop-filter: none; border-bottom-color: transparent; }
-    .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; background: #1A1A2E; border-radius: 50px; padding: 6px 6px 6px 20px; box-shadow: 0 4px 24px rgba(15,31,61,0.15); }
+    .nav { padding: 8px 0; display: flex; align-items: center; transition: background-color var(--transition-base), border-color var(--transition-base); border-bottom: 1px solid transparent; }
+    .nav.scrolled { background-color: rgba(255,255,255,0.96); backdrop-filter: blur(16px); border-bottom-color: var(--color-mist); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
     .nav__logo { display: flex; align-items: center; gap: 12px; color: var(--color-navy); font-family: var(--font-sans); font-weight: 600; font-size: 16px; }
-    .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
+    .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
     .nav__links { display: flex; align-items: center; gap: 0; }
     .nav__links li { display: flex; align-items: center; }
     .nav__links li + li::before { content: '·'; color: var(--color-gold); font-size: 18px; padding: 0 12px; pointer-events: none; }
-    .nav__link { font-family: var(--font-sans); font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.82); position: relative; transition: color var(--transition-base); }
+    .nav__link { font-family: var(--font-sans); font-size: 14px; font-weight: 500; color: var(--color-slate); position: relative; transition: color var(--transition-base); }
     .nav__link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px; background-color: var(--color-gold); transform: scaleX(0); transform-origin: left; transition: transform 380ms cubic-bezier(0.4,0,0.2,1); }
-    .nav__link:hover { color: var(--color-gold); } .nav__link:hover::after { transform: scaleX(1); }
-    .nav__cta { font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--color-navy); background-color: var(--color-gold); padding: 10px 22px; border-radius: 50px; transition: background-color var(--transition-base), transform var(--transition-base); display: inline-flex; align-items: center; gap: 6px; }
-    .nav__cta:hover { background-color: var(--color-gold-light); transform: translateY(-1px); }
+    .nav__link:hover { color: var(--color-navy); } .nav__link:hover::after { transform: scaleX(1); }
+    .nav__cta { font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--color-surface); background-color: var(--color-navy); padding: 10px 20px; border-radius: var(--radius-md); transition: background-color var(--transition-base), transform var(--transition-base); display: inline-flex; align-items: center; gap: 6px; }
+    .nav__cta:hover { background-color: var(--color-prussian); transform: translateY(-1px); }
     .nav__hamburger { display: none; flex-direction: column; gap: 5px; width: 28px; cursor: pointer; padding: 4px; }
-    .nav__hamburger span { display: block; height: 2px; background-color: rgba(255,255,255,0.9); border-radius: 2px; transition: transform var(--transition-base), opacity var(--transition-base); }
+    .nav__hamburger span { display: block; height: 2px; background-color: var(--color-navy); border-radius: 2px; transition: transform var(--transition-base), opacity var(--transition-base); }
     .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav__hamburger.open span:nth-child(2) { opacity: 0; }
     .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -296,7 +296,6 @@
           <li><a href="../downloads.html" class="nav__link">Downloads</a></li>
           <li><a href="../datenschutz-blog/" class="nav__link">Blog</a></li>
         </ul>
-        <a href="#kontakt" class="nav__cta">Erstgespräch</a>
         <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-overlay"><span></span><span></span><span></span></button>
       </div>
     </div>
