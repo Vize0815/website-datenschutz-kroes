@@ -201,7 +201,7 @@
     .btn-outline:hover { border-color: var(--color-gold); color: var(--color-gold); }
 
     .footer { background-color: #0A1828; padding: 80px 0 0; }
-    .footer__grid { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 2fr; gap: 48px; margin-bottom: 64px; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1.3fr 1.3fr 1.3fr 1.8fr; gap: 48px; margin-bottom: 64px; }
     .footer__logo { display: flex; align-items: center; gap: 12px; color: var(--color-surface); font-family: var(--font-sans); font-weight: 600; font-size: 16px; margin-bottom: 16px; }
     .footer__tagline { font-family: var(--font-sans); font-size: 14px; color: var(--color-slate-light); line-height: 1.6; max-width: 240px; }
     .footer__tagline-values { font-family: var(--font-sans); font-size: 14px; color: var(--color-gold); line-height: 1.6; max-width: 240px; margin-top: 12px; }
@@ -209,7 +209,7 @@
     .footer__cert-caption { font-family: var(--font-sans); font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.5; max-width: 240px; margin-top: 8px; }
     .footer__col-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 20px; }
     .footer__links { display: flex; flex-direction: column; gap: 12px; }
-    .footer__link { font-family: var(--font-sans); font-size: 14px; color: var(--color-slate-light); transition: color var(--transition-base); }
+    .footer__link { font-family: var(--font-sans); font-size: 14px; color: var(--color-slate-light); transition: color var(--transition-base); white-space: nowrap; }
     .footer__link:hover { color: var(--color-surface); }
     .footer__contact-line { display: flex; align-items: center; gap: 10px; font-family: var(--font-sans); font-size: 14px; color: var(--color-slate-light); margin-bottom: 10px; }
     .footer__contact-line svg { color: var(--color-gold); flex-shrink: 0; }
@@ -232,7 +232,7 @@
       .hero__grid { grid-template-columns: 1fr; } .hero__badge { display: none; }
       .services__grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; } .about-photo { width: 160px; height: 200px; }
-      .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .footer__grid { grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
       .industries__grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
@@ -644,18 +644,29 @@
             <li><a href="../datenschutz-flatrate.html" class="footer__link">Pakete &amp; Preise</a></li>
             <li><a href="#leistungen" class="footer__link">DSGVO-Erstanalyse</a></li>
             <li><a href="#leistungen" class="footer__link">Mitarbeiterschulungen</a></li>
+            <li><a href="#leistungen" class="footer__link">Dokumentation</a></li>
             <li><a href="#leistungen" class="footer__link">Datenschutz-Folgenabschätzung</a></li>
+            <li><a href="#leistungen" class="footer__link">Incident Response</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer__col-label">Regionen</p>
+          <p class="footer__col-label">Unternehmen</p>
+          <ul class="footer__links" role="list">
+            <li><a href="#ueber-kroes" class="footer__link">Alexander Kroes</a></li>
+            <li><a href="#prozess" class="footer__link">Prozess</a></li>
+            <li><a href="#faq" class="footer__link">FAQ</a></li>
+            <li><a href="../datenschutz-blog/" class="footer__link">Blog</a></li>
+            <li><a href="../karriere.html" class="footer__link">Karriere</a></li>
+            <li><a href="#kontakt" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-label">Standorte</p>
           <ul class="footer__links" role="list">
             <li><a href="https://datenschutz-kroes.at/" class="footer__link">Datenschutz Tirol</a></li>
             <li><a href="../salzburg/" class="footer__link">Datenschutz Salzburg</a></li>
             <li><a href="../rosenheim/" class="footer__link">Datenschutz Rosenheim</a></li>
             <li><a href="../muenchen/" class="footer__link">Datenschutz München</a></li>
-            <li><a href="../datenschutz-blog/" class="footer__link">Blog</a></li>
-            <li><a href="../karriere.html" class="footer__link">Karriere</a></li>
           </ul>
         </div>
         <div>
