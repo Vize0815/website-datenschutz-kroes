@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Startseite -->
   <url>
     <loc>https://www.datenschutz-kroes.at/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Regionale Landingpages -->
+  <url>
+    <loc>https://www.datenschutz-kroes.at/muenchen/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/salzburg/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/rosenheim/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/tirol/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Leistungen -->
   <url>
     <loc>https://www.datenschutz-kroes.at/datenschutz-flatrate.html</loc>
     <lastmod>2026-05-06</lastmod>
@@ -25,14 +55,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.datenschutz-kroes.at/benennungsurkunde.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.datenschutz-kroes.at/downloads.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Unternehmen -->
+  <url>
+    <loc>https://www.datenschutz-kroes.at/karriere.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/</loc>
+    <loc>https://www.datenschutz-kroes.at/newsletter-leseprobe.html</loc>
     <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -73,11 +125,31 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/benennungsurkunde.html</loc>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/isms-informationssicherheitsmanagement-erklaert/</loc>
     <lastmod>2026-05-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/dora-verordnung-digitale-betriebsstabilitaet/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/lieferketten-compliance-sorgfaltspflichten/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/was-ist-ein-datenschutz-audit/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Rechtliches -->
   <url>
     <loc>https://www.datenschutz-kroes.at/impressum.html</loc>
     <lastmod>2026-05-06</lastmod>
@@ -90,4 +162,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
 </urlset>
