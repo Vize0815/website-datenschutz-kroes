@@ -387,22 +387,17 @@
        6. NAVIGATION
     ============================================= */
     .nav {
-      position: static;
-      height: auto;
-      padding: 8px 0;
+      padding: 12px 24px;
       display: flex;
       align-items: center;
-      transition: background-color var(--transition-base),
-                  backdrop-filter var(--transition-base),
-                  border-color var(--transition-base);
-      border-bottom: 1px solid transparent;
+      background: #FFFFFF;
+      border-bottom: none;
     }
 
     .nav.scrolled {
-      background-color: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom-color: var(--color-mist);
+      background: #FFFFFF;
+      backdrop-filter: none;
+      border-bottom-color: transparent;
     }
 
     .nav__inner {
@@ -410,6 +405,10 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      background: #1A1A2E;
+      border-radius: 50px;
+      padding: 6px 6px 6px 20px;
+      box-shadow: 0 4px 24px rgba(15,31,61,0.15);
     }
 
     .nav__logo {
@@ -429,7 +428,7 @@
       flex-shrink: 0;
       object-fit: contain;
       object-position: left center;
-      mix-blend-mode: multiply;
+      filter: brightness(0) invert(1);
     }
 
     .nav__links {
@@ -457,7 +456,7 @@
       font-family: var(--font-sans);
       font-size: 15px;
       font-weight: 500;
-      color: var(--color-slate);
+      color: rgba(255,255,255,0.82);
       position: relative;
       transition: color var(--transition-base);
     }
@@ -476,7 +475,7 @@
     }
 
     .nav__link:hover {
-      color: var(--color-navy);
+      color: var(--color-gold);
     }
 
     .nav__link:hover::after {
@@ -487,10 +486,10 @@
       font-family: var(--font-sans);
       font-size: 14px;
       font-weight: 600;
-      color: var(--color-surface);
-      background-color: var(--color-navy);
+      color: var(--color-navy);
+      background-color: var(--color-gold);
       padding: 10px 22px;
-      border-radius: var(--radius-md);
+      border-radius: 50px;
       transition: background-color var(--transition-base),
                   transform var(--transition-base);
       display: inline-flex;
@@ -500,7 +499,7 @@
     }
 
     .nav__cta:hover {
-      background-color: var(--color-prussian);
+      background-color: var(--color-gold-light);
       transform: translateY(-1px);
     }
 
@@ -518,7 +517,7 @@
     .nav__hamburger span {
       display: block;
       height: 2px;
-      background-color: var(--color-navy);
+      background-color: rgba(255,255,255,0.9);
       border-radius: 2px;
       transition: transform var(--transition-base), opacity var(--transition-base);
     }
@@ -3854,6 +3853,7 @@
           <li><a href="datenschutz-blog/" class="nav__link">Blog</a></li>
         </ul>
 
+        <a href="#kontakt" class="nav__cta">Erstgespräch</a>
         <button
           class="nav__hamburger"
           id="hamburger"
