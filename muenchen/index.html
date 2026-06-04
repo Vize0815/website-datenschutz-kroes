@@ -190,7 +190,8 @@
     .faq-body { display: none; padding: 0 24px 22px; font-family: var(--font-sans); font-size: 15px; color: var(--color-slate); line-height: 1.7; }
     .faq-item.open .faq-body { display: block; }
 
-    .cta-section { background: var(--color-navy); padding: 80px 0; text-align: center; }
+    .cta-section { background: #1A1A2E; padding: 80px 0; text-align: center; }
+    .cta-section .cta-micro { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 20px; }
     .cta-section .t-eyebrow { color: var(--color-gold-light); }
     .cta-section .t-h2 { color: #fff; margin: 16px 0 12px; }
     .cta-section .t-lead { color: rgba(255,255,255,0.7); max-width: 520px; margin: 0 auto 40px; }
@@ -608,18 +609,22 @@
   <section class="cta-section" id="kontakt" aria-labelledby="cta-title">
     <div class="container">
       <p class="t-eyebrow">Kostenlose Erstberatung</p>
-      <h2 class="t-h2" id="cta-title">Datenschutz München. Klar. Verbindlich.</h2>
-      <p class="t-lead">Ich erkläre Ihnen, was Ihr Münchner Betrieb wirklich braucht. Ohne Overhead, ohne Bürokratie um der Bürokratie willen.</p>
+      <h2 class="t-h2" id="cta-title">Datenschutz München.<br>Klar. Verbindlich. Persönlich.</h2>
+      <p class="t-lead">Vereinbaren Sie jetzt Ihr kostenloses und unverbindliches Erstgespräch. In 30 Minuten wissen Sie, wo Sie stehen und was als Nächstes zu tun ist.</p>
       <div class="cta-row">
-        <a href="mailto:info@datenschutz-kroes.at" class="btn-primary btn-primary--white">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          info@datenschutz-kroes.at
-        </a>
-        <a href="tel:+43053382010" class="btn-outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 .92h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          +43 (0) 5338-20105
+        <a href="#muenchen-calendly-widget" class="btn-primary btn-primary--white" id="muenchen-calendly-open-btn" onclick="document.getElementById('muenchen-calendly-widget').style.display='block';this.style.display='none';document.getElementById('muenchen-calendly-widget').scrollIntoView({behavior:'smooth'});return false;">
+          Kostenloses Erstgespräch vereinbaren
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </a>
       </div>
+      <!-- Calendly Inline-Widget -->
+      <div id="muenchen-calendly-widget" style="display:none;width:100%;margin-top:2rem;">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/datenschutz-kroes-info/30min" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </div>
+      <p class="cta-micro">Kein Risiko · Keine Verpflichtung · Antwort innerhalb von 24 Stunden</p>
     </div>
   </section>
 
@@ -681,7 +686,7 @@
           </div>
           <div class="footer__contact-line">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1a4 4 0 100 8A4 4 0 008 1zM1.5 15c0-2.5 2.91-4.5 6.5-4.5s6.5 2 6.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <span class="footer__link">Kufstein/Tirol, Betreuung DACH-Raum</span>
+            <span class="footer__link">Kufstein/Tirol<br>Betreuung DACH-Raum</span>
           </div>
         </div>
       </div>
