@@ -176,6 +176,12 @@
 
     .about-grid { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: start; }
     .about-photo { width: 200px; height: 240px; object-fit: cover; object-position: top center; border-radius: var(--radius-lg); flex-shrink: 0; }
+    .about-trust-card { display: flex; align-items: flex-start; gap: 14px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--color-mist); }
+    .about-trust-photo { flex-shrink: 0; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; background: var(--color-mist); box-shadow: 0 1px 0 rgba(15,23,42,.08), 0 6px 18px rgba(27,79,138,.12); }
+    .about-trust-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block; }
+    .about-trust-quote { font-family: var(--font-serif); font-style: italic; font-size: 16px; line-height: 1.5; color: var(--color-ink); margin: 0 0 8px; }
+    .about-trust-name { font-weight: 700; font-size: 14px; color: var(--color-ink); margin: 0; line-height: 1.3; }
+    .about-trust-role { font-size: 12px; color: var(--color-prussian); margin: 3px 0 0; letter-spacing: 0.02em; }
     .about-stat { display: flex; flex-direction: column; gap: 4px; padding: 20px 0; border-top: 1px solid var(--color-mist); }
     .about-stat__num { font-family: var(--font-sans); font-size: 28px; font-weight: 600; color: var(--color-navy); letter-spacing: -0.02em; }
     .about-stat__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-slate); }
@@ -523,6 +529,16 @@
             <source srcset="../alexander-kroes-tablet.webp" type="image/webp">
             <img src="../alexander-kroes.png" alt="Alexander Kroes, Externer Datenschutzbeauftragter München" class="about-photo" width="200" height="240" loading="lazy">
           </picture>
+          <figure class="about-trust-card">
+            <div class="about-trust-photo">
+              <img src="../alexander-kroes-2.webp" alt="Alexander Kroes" loading="lazy" decoding="async">
+            </div>
+            <figcaption>
+              <p class="about-trust-quote">„Mit mir reden Sie persönlich – nicht mit einer Hotline."</p>
+              <p class="about-trust-name">Alexander Kroes</p>
+              <p class="about-trust-role">Externer zertifizierter DSB</p>
+            </figcaption>
+          </figure>
         </div>
         <div data-reveal data-reveal-delay="1">
           <p class="t-eyebrow" style="margin-bottom:12px;">Über mich</p>
@@ -536,11 +552,11 @@
               <span class="about-stat__label">Gesamter Beratungsraum</span>
             </div>
             <div class="about-stat">
-              <span class="about-stat__num">200+</span>
+              <span class="about-stat__num">50+</span>
               <span class="about-stat__label">Betreute Unternehmen</span>
             </div>
             <div class="about-stat">
-              <span class="about-stat__num">10+</span>
+              <span class="about-stat__num">8+</span>
               <span class="about-stat__label">Jahre Erfahrung</span>
             </div>
           </div>
