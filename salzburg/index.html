@@ -101,8 +101,8 @@
     .topbar__social { display: flex; align-items: center; color: rgba(255,255,255,0.6); transition: color var(--transition-base); }
     .topbar__social:hover { color: var(--color-gold); }
 
-    .nav { padding: 8px 0; display: flex; align-items: center; transition: background-color var(--transition-base), border-color var(--transition-base); border-bottom: 1px solid transparent; }
-    .nav.scrolled { background-color: rgba(255,255,255,0.96); backdrop-filter: blur(16px); border-bottom-color: var(--color-mist); }
+    .nav { padding: 8px 0; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; background-color: var(--color-surface); border-bottom: 1px solid transparent; transition: border-color var(--transition-base), box-shadow var(--transition-base); }
+    .nav.scrolled { border-bottom-color: var(--color-mist); box-shadow: 0 1px 16px rgba(15,31,61,0.08); }
     .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
     .nav__logo { display: flex; align-items: center; gap: 12px; color: var(--color-navy); font-family: var(--font-sans); font-weight: 600; font-size: 16px; }
     .nav__logo-mark { width: 200px; height: 162.5px; flex-shrink: 0; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
@@ -232,21 +232,45 @@
       .hero__grid { grid-template-columns: 1fr; } .hero__photo-col { display: none; }
       .services__grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; } .about-photo { width: 160px; height: 200px; }
-      .footer__grid { grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+      .footer__grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
       .industries__grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
-      .container { padding: 0 24px; } .section { padding: 72px 0; }
+      .container { padding: 0 20px; }
+      .section { padding: 72px 0; } .section--sm { padding: 56px 0; }
       .topbar__left .topbar__item:nth-child(n+2), .topbar__divider { display: none; }
       .nav__links, .nav__cta { display: none; } .nav__hamburger { display: flex; }
+      .nav__logo-mark { width: 150px; height: 70px; }
+      .hero__title { hyphens: auto; }
+      .hero__cta-row { flex-direction: column; align-items: flex-start; }
       .services__grid { grid-template-columns: 1fr; } .law-grid { grid-template-columns: 1fr; }
-      .footer__grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
       .footer__bottom { flex-direction: column; align-items: flex-start; }
       .footer__made-by { position: static; transform: none; }
       .footer__legal { flex-direction: column; gap: 8px; }
-      .law-section { padding: 32px 24px; }
+      .law-section { padding: 32px 20px; }
+      .trust-divider { display: none; }
+      .trust-bar__inner { gap: 20px; }
     }
-    @media (max-width: 480px) { .topbar { display: none; } .hero { padding: 60px 0 72px; } }
+    @media (max-width: 480px) {
+      .topbar { display: none; }
+      .container { padding: 0 16px; }
+      .hero { padding: 48px 0 56px; }
+      .section { padding: 56px 0; } .section--sm { padding: 44px 0; }
+      .cta-section { padding: 60px 0; }
+      .nav__logo-mark { width: 128px; height: 56px; }
+      .hero__title { font-size: clamp(26px, 8vw, 36px); }
+      .trust-bar__inner { flex-direction: column; gap: 12px; text-align: center; }
+      .trust-item { justify-content: center; font-size: 14px; }
+      .service-card { padding: 24px; }
+      .law-section { padding: 24px 16px; }
+      .law-card { padding: 20px; }
+      .industries__grid { grid-template-columns: 1fr; }
+      .faq-trigger { font-size: 15px; padding: 18px 18px; }
+      .faq-body { padding: 0 18px 16px; font-size: 14px; }
+      .footer__grid { gap: 24px; }
+      .footer__copy { font-size: 12px; }
+    }
   </style>
   <link rel="preload" as="style" href="../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../cookie-banner.css"></noscript>
