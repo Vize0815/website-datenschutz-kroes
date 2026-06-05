@@ -483,6 +483,60 @@
       transform: scaleX(1);
     }
 
+    /* BRANCHEN DROPDOWN */
+    .nav__dropdown { position: relative; display: flex; align-items: center; }
+    .nav__dropdown-toggle {
+      font-family: var(--font-sans); font-size: 15px; font-weight: 500;
+      color: var(--color-slate); background: none; border: none; padding: 0;
+      cursor: pointer; display: flex; align-items: center; gap: 4px;
+      position: relative; transition: color var(--transition-base);
+    }
+    .nav__dropdown-toggle::after {
+      content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1.5px;
+      background-color: var(--color-gold); transform: scaleX(0); transform-origin: left;
+      transition: transform 380ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav__dropdown:hover .nav__dropdown-toggle,
+    .nav__dropdown:focus-within .nav__dropdown-toggle { color: var(--color-navy); }
+    .nav__dropdown:hover .nav__dropdown-toggle::after,
+    .nav__dropdown:focus-within .nav__dropdown-toggle::after { transform: scaleX(1); }
+    .nav__dropdown-chevron { transition: transform 280ms ease; flex-shrink: 0; }
+    .nav__dropdown:hover .nav__dropdown-chevron,
+    .nav__dropdown:focus-within .nav__dropdown-chevron { transform: rotate(180deg); }
+    .nav__dropdown-menu {
+      position: absolute; top: calc(100% + 14px); left: 50%;
+      transform: translateX(-50%) translateY(-4px);
+      background: var(--color-surface); border: 1px solid var(--color-mist);
+      border-radius: var(--radius-md); box-shadow: var(--shadow-elevated);
+      min-width: 200px; padding: 6px 0; list-style: none;
+      opacity: 0; pointer-events: none;
+      transition: opacity 200ms ease, transform 200ms ease; z-index: 200;
+    }
+    .nav__dropdown:hover .nav__dropdown-menu,
+    .nav__dropdown:focus-within .nav__dropdown-menu {
+      opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+    }
+    .nav__dropdown-menu li + li::before { content: none; }
+    .nav__dropdown-item {
+      display: block; padding: 9px 18px;
+      font-family: var(--font-sans); font-size: 14px; font-weight: 500;
+      color: var(--color-slate); white-space: nowrap;
+      transition: color var(--transition-base), background-color var(--transition-base);
+    }
+    .nav__dropdown-item:hover { color: var(--color-navy); background-color: var(--color-bg); }
+    /* mobile branchen */
+    .nav__mobile-branchen-toggle {
+      font-family: var(--font-sans); font-size: 20px; font-weight: 600;
+      color: rgba(255,255,255,0.9); background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; gap: 6px; justify-content: center;
+      transition: color 200ms ease;
+    }
+    .nav__mobile-branchen-toggle:hover { color: var(--color-gold); }
+    .nav__mobile-branchen-list { display: none; flex-direction: column; gap: 12px; padding-top: 8px; }
+    .nav__mobile-branchen-list.open { display: flex; }
+    .nav__mobile-branchen-item { font-family: var(--font-sans); font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.7); transition: color 200ms ease; }
+    .nav__mobile-branchen-item:hover { color: var(--color-gold); }
+
     .nav__cta {
       font-family: var(--font-sans);
       font-size: 14px;
@@ -3846,6 +3900,19 @@
         <ul class="nav__links" role="list">
           <li><a href="#alexander-kroes" class="nav__link">Alexander Kroes</a></li>
           <li><a href="#leistungen" class="nav__link">Leistungen</a></li>
+          <li class="nav__dropdown">
+            <button class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Branchen
+              <svg class="nav__dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 4 6 8 10 4"/></svg>
+            </button>
+            <ul class="nav__dropdown-menu" role="list">
+              <li><a href="steuerberater/" class="nav__dropdown-item">Steuerberater</a></li>
+              <li><a href="muenchen/" class="nav__dropdown-item">München</a></li>
+              <li><a href="tirol/" class="nav__dropdown-item">Tirol</a></li>
+              <li><a href="rosenheim/" class="nav__dropdown-item">Rosenheim</a></li>
+              <li><a href="salzburg/" class="nav__dropdown-item">Salzburg</a></li>
+            </ul>
+          </li>
           <li><a href="datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
           <li><a href="#seminare" class="nav__link">Seminare</a></li>
           <li><a href="karriere.html" class="nav__link">Karriere</a></li>
@@ -3880,6 +3947,19 @@
       <ul style="list-style:none; text-align:center; display:flex; flex-direction:column; gap:20px;" role="list">
         <li><a href="#alexander-kroes" class="nav__mobile-link" onclick="closeMobileNav()">Alexander Kroes</a></li>
         <li><a href="#leistungen" class="nav__mobile-link" onclick="closeMobileNav()">Leistungen</a></li>
+        <li>
+          <button class="nav__mobile-branchen-toggle" onclick="toggleMobileBranchen(this)" aria-expanded="false">
+            Branchen
+            <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 4 6 8 10 4"/></svg>
+          </button>
+          <ul class="nav__mobile-branchen-list" role="list">
+            <li><a href="steuerberater/" class="nav__mobile-branchen-item" onclick="closeMobileNav()">Steuerberater</a></li>
+            <li><a href="muenchen/" class="nav__mobile-branchen-item" onclick="closeMobileNav()">München</a></li>
+            <li><a href="tirol/" class="nav__mobile-branchen-item" onclick="closeMobileNav()">Tirol</a></li>
+            <li><a href="rosenheim/" class="nav__mobile-branchen-item" onclick="closeMobileNav()">Rosenheim</a></li>
+            <li><a href="salzburg/" class="nav__mobile-branchen-item" onclick="closeMobileNav()">Salzburg</a></li>
+          </ul>
+        </li>
         <li><a href="datenschutz-flatrate.html" class="nav__mobile-link" onclick="closeMobileNav()">Pakete &amp; Preise</a></li>
         <li><a href="#seminare" class="nav__mobile-link" onclick="closeMobileNav()">Seminare</a></li>
         <li><a href="karriere.html" class="nav__mobile-link" onclick="closeMobileNav()">Karriere</a></li>
@@ -5450,6 +5530,13 @@
       hamburger.setAttribute('aria-expanded', false);
       mobileOverlay.setAttribute('aria-hidden', true);
       document.body.style.overflow = '';
+    }
+
+    function toggleMobileBranchen(btn) {
+      const list = btn.nextElementSibling;
+      const open = list.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.querySelector('svg').style.transform = open ? 'rotate(180deg)' : '';
     }
 
     // Close on ESC
