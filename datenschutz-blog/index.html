@@ -149,6 +149,8 @@
     .article-card__category-dot--bussgeld { background: var(--color-rose); }
     .article-card__category-dot--branche { background: var(--color-verdant); }
     .article-card__category-dot--howto { background: var(--color-prussian); }
+    .article-card__category-dot--behoerde { background: #7C5CBF; }
+    .article-card__cover--behoerde::before { background: linear-gradient(135deg, rgba(28,16,56,0.86) 0%, rgba(60,34,112,0.72) 55%, rgba(124,92,191,0.58) 100%); }
 
     .article-card__body { padding: 26px 28px 28px; display: flex; flex-direction: column; flex: 1; }
     .article-card__meta { display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--color-slate-light); margin-bottom: 14px; }
@@ -369,7 +371,10 @@
             Branchen <span class="filter-chip__count">1</span>
           </button>
           <button class="filter-chip" data-filter="howto" aria-pressed="false">
-            How To <span class="filter-chip__count">7</span>
+            How To <span class="filter-chip__count">6</span>
+          </button>
+          <button class="filter-chip" data-filter="behoerde" aria-pressed="false">
+            Datenschutzbehörde <span class="filter-chip__count">1</span>
           </button>
         </div>
       </div>
@@ -380,13 +385,13 @@
       <div class="container">
         <div class="articles__grid" id="articles-grid">
 
-          <!-- Article 11: How-To (Prüfbereiche) — 05. Juni 2026 -->
-          <a href="pruefbereiche-datenschutzbehoerden/" class="article-card" data-category="howto">
-            <div class="article-card__cover article-card__cover--howto" style="background-image: url('../AUDIT%20.webp');">
+          <!-- Article 11: Behörde (Prüfbereiche) — 05. Juni 2026 -->
+          <a href="pruefbereiche-datenschutzbehoerden/" class="article-card" data-category="behoerde">
+            <div class="article-card__cover article-card__cover--behoerde" style="background-image: url('../Datenschutzbehoerde.webp');">
               <span class="article-card__cover-mark">10</span>
               <span class="article-card__category">
-                <span class="article-card__category-dot article-card__category-dot--howto"></span>
-                How To
+                <span class="article-card__category-dot article-card__category-dot--behoerde"></span>
+                Datenschutzbehörde
               </span>
             </div>
             <div class="article-card__body">

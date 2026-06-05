@@ -141,10 +141,6 @@
     .article-header__title { font-size: clamp(30px, 5vw, 46px); font-weight: 600; color: var(--color-navy); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px; }
     .article-header__dek { font-size: 18px; font-weight: 300; color: var(--color-slate); line-height: 1.65; margin-bottom: 36px; }
     .article-header__meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .article-header__author { display: flex; align-items: center; gap: 12px; }
-    .article-header__avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
-    .article-header__author-name { font-size: 14px; font-weight: 600; color: var(--color-navy); }
-    .article-header__author-role { font-size: 12px; color: var(--color-slate-light); margin-top: 1px; }
     .article-header__meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--color-mist); }
     .article-header__meta-item { display: flex; flex-direction: column; gap: 2px; }
     .article-header__meta-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-slate-light); }
@@ -191,16 +187,6 @@
     /* Tags */
     .article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--color-mist); }
     .article-tag { display: inline-flex; align-items: center; padding: 6px 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--color-slate); background: var(--color-bg); border-radius: 100px; }
-
-    /* ===== AUTHOR BOX ===== */
-    .author-box { background: #ffffff; padding: 64px 0; border-top: 1px solid var(--color-mist); }
-    .author-box__inner { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
-    .author-box__avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; background: var(--color-mist); }
-    .author-box__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
-    .author-box__name { font-size: 22px; font-weight: 600; color: var(--color-navy); margin-bottom: 10px; }
-    .author-box__bio { font-size: 14.5px; font-weight: 300; line-height: 1.7; color: var(--color-slate); margin-bottom: 16px; }
-    .author-box__cta { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--color-navy); transition: gap var(--transition-base), color var(--transition-base); }
-    .author-box__cta:hover { color: var(--color-prussian); gap: 10px; }
 
     /* ===== END CTA ===== */
     .end-cta { background: var(--color-navy); padding: 96px 0; position: relative; overflow: hidden; }
@@ -265,8 +251,6 @@
       .article-body { padding: 40px 0 64px; }
       .article-body__inner { font-size: 16.5px; }
       .step-card { padding: 28px 24px 24px; }
-      .author-box__inner { grid-template-columns: 1fr; gap: 16px; }
-      .author-box__avatar { width: 72px; height: 72px; }
       .end-cta { padding: 72px 0; }
       .footer__grid { grid-template-columns: 1fr; gap: 36px; }
       .footer__bottom { flex-direction: column; align-items: center; text-align: center; }
@@ -383,16 +367,6 @@
             Viele Unternehmen wissen nicht, ob sie DSGVO konform sind. Oder schlimmer: Sie glauben es zu sein. Ein Datenschutz Audit schafft Klarheit. Und das kostenlose Mini Audit ist der schnellste Weg dorthin.
           </p>
           <div class="article-header__meta">
-            <div class="article-header__author">
-              <picture>
-                <source srcset="../../alexander-kroes-desktop.webp" type="image/webp">
-                <img src="../../alexander-kroes-desktop.png" alt="Alexander Kroes" class="article-header__avatar" width="44" height="44" loading="lazy">
-              </picture>
-              <div class="article-header__author-info">
-                <span class="article-header__author-name">Alexander Kroes</span>
-                <span class="article-header__author-role">Externer Datenschutzbeauftragter</span>
-              </div>
-            </div>
             <div class="article-header__meta-divider"></div>
             <div class="article-header__meta-item">
               <span class="article-header__meta-label">Veröffentlicht</span>
@@ -531,27 +505,6 @@
         </div>
       </div>
     </article>
-
-    <!-- ===== AUTHOR BOX ===== -->
-    <section class="author-box" aria-label="Über den Autor">
-      <div class="container">
-        <div class="author-box__inner">
-          <picture>
-            <source srcset="../../alexander-kroes-desktop.webp" type="image/webp">
-            <img src="../../alexander-kroes-desktop.png" alt="Alexander Kroes" class="author-box__avatar" width="88" height="88" loading="lazy">
-          </picture>
-          <div>
-            <p class="author-box__eyebrow">Autor</p>
-            <p class="author-box__name">Alexander Kroes</p>
-            <p class="author-box__bio">Zertifizierter externer Datenschutzbeauftragter mit über 12 Jahren Praxiserfahrung. Spezialisiert auf KMU und Handwerksbetriebe in Österreich und Deutschland. Persönlich. Direkt. Ohne Hotline.</p>
-            <a href="../../index.html#alexander-kroes" class="author-box__cta">
-              Mehr über Alexander Kroes
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ===== END CTA ===== -->
     <section class="end-cta" aria-label="Mini Audit sichern">
