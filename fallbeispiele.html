@@ -193,7 +193,13 @@
     }
     .cases__header {
       margin-bottom: 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
     }
+    .cases__header-text { /* linke Spalte */ }
+    .cases__header-img { /* rechte Spalte */ }
     .cases__eyebrow {
       font-family: var(--font-mono);
       font-size: 11px;
@@ -457,15 +463,14 @@
 
     /* ===== CASE IMAGE PLACEHOLDER ===== */
     .case-img-wrap {
-      grid-column: span 2;
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      aspect-ratio: 16 / 6;
+      aspect-ratio: 4 / 3;
       background: linear-gradient(135deg, #0F1F3D 0%, #1B4F8A 60%, #0F1F3D 100%);
       cursor: pointer;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--color-mist);
+      box-shadow: var(--shadow-elevated);
+      border: 1px solid rgba(255,255,255,0.06);
     }
     .case-img-wrap::before {
       content: '';
@@ -555,10 +560,12 @@
       border-color: rgba(201,168,76,0.5);
     }
     @media (max-width: 1024px) {
-      .case-img-wrap { grid-column: span 1; aspect-ratio: 16 / 7; }
+      .cases__header { grid-template-columns: 1fr; gap: 32px; }
+      .cases__header-img { order: -1; max-height: 280px; }
+      .case-img-wrap { aspect-ratio: 16 / 7; }
     }
     @media (max-width: 480px) {
-      .case-img-wrap { aspect-ratio: 4 / 3; }
+      .case-img-wrap { aspect-ratio: 16 / 9; }
     }
 
     /* ===== BAFA ===== */
@@ -752,9 +759,23 @@
   <!-- ============= CASE STUDIES ============= -->
   <section class="cases" aria-label="Fallbeispiele">
     <div class="container">
-      <div class="cases__header" data-reveal>
-        <p class="cases__eyebrow">Dossiers</p>
-        <h2 class="cases__title">So arbeiten wir.<br>So sch&#252;tzen wir.</h2>
+      <div class="cases__header">
+        <div class="cases__header-text" data-reveal>
+          <p class="cases__eyebrow">Dossiers</p>
+          <h2 class="cases__title">So arbeiten wir.<br>So sch&#252;tzen wir.</h2>
+        </div>
+        <div class="cases__header-img" data-reveal data-reveal-delay="2">
+          <div class="case-img-wrap" aria-label="Vertrauliches Bildmaterial">
+            <span class="case-img-badge">Vertraulich</span>
+            <div class="case-img-inner">
+              <div class="case-img-inner__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+              <p class="case-img-inner__label">Bildmaterial wird erg&#228;nzt</p>
+              <p class="case-img-inner__caption">Foto / Dokument hier einsetzen</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="cases__grid">
@@ -785,18 +806,6 @@
             <p class="case-card__result-text"><strong>Bu&#223;geld vollst&#228;ndig abgewendet.</strong> Verfahren eingestellt.</p>
           </div>
         </article>
-
-        <!-- BILD PLATZHALTER über Dossier 02 -->
-        <div class="case-img-wrap" data-reveal data-reveal-delay="1" aria-label="Vertrauliches Bildmaterial">
-          <span class="case-img-badge">Vertraulich</span>
-          <div class="case-img-inner">
-            <div class="case-img-inner__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <p class="case-img-inner__label">Bildmaterial wird erg&#228;nzt</p>
-            <p class="case-img-inner__caption">Foto / Dokument hier einsetzen</p>
-          </div>
-        </div>
 
         <!-- FALL 02 -->
         <article class="case-card" data-reveal data-reveal-delay="2" aria-label="Fall 02">
