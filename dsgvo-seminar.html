@@ -343,8 +343,8 @@
     }
   
     /* BAFA Widget + Modal */
-    .bafa-widget{position:fixed;right:0;top:50%;transform:translateY(-50%);background:#0F2564;color:#fff;writing-mode:vertical-rl;text-orientation:mixed;padding:18px 10px;cursor:pointer;z-index:1000;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;border-radius:4px 0 0 4px;transition:background .2s,box-shadow .2s;box-shadow:-3px 0 14px rgba(0,0,0,.35);user-select:none;}
-    .bafa-widget:hover{background:#1B4F8A;box-shadow:-4px 0 20px rgba(0,0,0,.45);}
+    .bafa-widget{position:fixed;right:0;top:50%;transform:translateY(-50%);cursor:pointer;z-index:1000;padding:0;border-radius:4px 0 0 4px;overflow:hidden;box-shadow:-3px 0 18px rgba(0,0,0,.3);transition:box-shadow .2s,transform .2s;}.bafa-widget img{display:block;width:130px;height:auto;}
+    .bafa-widget:hover{box-shadow:-6px 0 26px rgba(0,0,0,.45);transform:translateY(-50%) translateX(-2px);}
     .bafa-overlay{position:fixed;inset:0;background:rgba(10,20,50,.7);display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;pointer-events:none;transition:opacity .28s;backdrop-filter:blur(5px);}
     .bafa-overlay.is-open{opacity:1;pointer-events:all;}
     .bafa-dialog{background:#fff;border-radius:16px;padding:36px 32px 28px;max-width:440px;width:90%;position:relative;transform:translateY(18px);transition:transform .3s;}
@@ -995,18 +995,11 @@
   <script src="cookie-banner.js" defer></script>
 
   <!-- BAFA Fixed Widget + Modal -->
-  <div class="bafa-widget" id="bafaWidget" onclick="document.getElementById('bafaOverlay').classList.toggle('is-open')" role="button" tabindex="0" aria-label="BAFA F&#246;rderung &#8211; Mehr erfahren">BAFA&nbsp;&#183;&nbsp;F&#214;RDERUNG</div>
+  <div class="bafa-widget" id="bafaWidget" onclick="document.getElementById('bafaOverlay').classList.toggle('is-open')" role="button" tabindex="0" aria-label="BAFA F&#246;rderung &#8211; Mehr erfahren"><img src="BAFA%20Siegel.png" alt="BAFA Siegel"></div>
   <div class="bafa-overlay" id="bafaOverlay" onclick="if(event.target===this)this.classList.remove('is-open')">
     <div class="bafa-dialog" role="dialog" aria-modal="true" aria-label="BAFA F&#246;rderung">
       <button class="bafa-close" onclick="document.getElementById('bafaOverlay').classList.remove('is-open')" aria-label="Schlie&#223;en">&times;</button>
-      <div class="bafa-seal">
-        <div class="bafa-seal__top">
-          <div class="bafa-seal__letters"><span style="color:#E41E20">B</span><span style="color:#1B3F8A">A</span><span style="color:#F08010">F</span><span style="color:#7A2090">A</span></div>
-          <div class="bafa-seal__bars"><span class="bafa-bar-el" style="background:#1A1A1A"></span><span class="bafa-bar-el" style="background:#CC0000"></span><span class="bafa-bar-el" style="background:#FFCC00"></span></div>
-          <div class="bafa-seal__stacked"><p>STAATLICH</p><p>SUBVENTIONIERTE</p><p>UNTERNEHMENSBERATUNG</p></div>
-        </div>
-        <div class="bafa-seal__bottom">REGISTRIERTES BERATUNGSUNTERNEHMEN</div>
-      </div>
+      <img src="BAFA%20Siegel.png" alt="BAFA Siegel" style="display:block;width:220px;height:auto;margin:0 auto 24px;">
       <h3>Staatlich gef&#246;rderte Beratung</h3>
       <p>Als BAFA-registriertes Beratungsunternehmen erhalten unsere Klienten bis zu <strong>80&nbsp;% staatlichen Zuschuss</strong> auf Datenschutz- und DSGVO-Beratung. F&#246;rderfähig f&#252;r KMU in Deutschland.</p>
       <a href="#kontakt" class="bafa-cta" onclick="document.getElementById('bafaOverlay').classList.remove('is-open')">F&#246;rderung anfragen</a>
