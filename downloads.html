@@ -1264,12 +1264,24 @@
   <!-- BAFA Fixed Widget + Modal -->
   <div class="bafa-widget" id="bafaWidget" onclick="document.getElementById('bafaOverlay').classList.toggle('is-open')" role="button" tabindex="0" aria-label="BAFA F&#246;rderung &#8211; Mehr erfahren"><img src="bafa-siegel.png" alt="BAFA Siegel"></div>
   <div class="bafa-overlay" id="bafaOverlay" onclick="if(event.target===this)this.classList.remove('is-open')">
-    <div class="bafa-dialog" role="dialog" aria-modal="true" aria-label="BAFA F&#246;rderung">
-      <button class="bafa-close" onclick="document.getElementById('bafaOverlay').classList.remove('is-open')" aria-label="Schlie&#223;en">&times;</button>
-      <img src="bafa-siegel.png" alt="BAFA Siegel" style="display:block;width:220px;height:auto;margin:0 auto 24px;">
-      <h3>Staatlich gef&#246;rderte Beratung</h3>
-      <p>Als BAFA-registriertes Beratungsunternehmen erhalten unsere Klienten bis zu <strong>80&nbsp;% staatlichen Zuschuss</strong> auf Datenschutz- und DSGVO-Beratung. F&#246;rderfähig f&#252;r KMU in Deutschland.</p>
-      <a href="#kontakt" class="bafa-cta" onclick="document.getElementById('bafaOverlay').classList.remove('is-open')">F&#246;rderung anfragen</a>
+        <div class="bafa-dialog" role="dialog" aria-modal="true" aria-label="BAFA Foerderung">
+      <div class="bafa-dialog__header">
+        <span class="bafa-dialog__htxt">REGISTRIERTER <strong>BAFA</strong> BERATER</span>
+        <button class="bafa-close" onclick="document.getElementById('bafaOverlay').classList.remove('is-open')" aria-label="Schliessen">&times;</button>
+      </div>
+      <div class="bafa-dialog__body">
+        <img src="bafa-siegel.png" alt="BAFA Siegel" class="bafa-dialog__seal">
+        <h2 class="bafa-dialog__title">Sparen Sie bis zu 2.800&nbsp;&#8364;<sup>*</sup></h2>
+        <p class="bafa-dialog__text">Datenschutz Kroes ist ein registriertes Beratungsunternehmen beim Bundesamt f&#252;r Wirtschaft und Ausfuhrkontrolle (BAFA). Ihre Investition in externe Datenschutzberatungen kann somit bei Firmensitz in Deutschland bis zu 50&nbsp;% gef&#246;rdert werden.</p>
+        <ul class="bafa-dialog__list">
+          <li>Staatlich subventionierte Beratung f&#252;r KMU in Deutschland</li>
+          <li>Fester Ansprechpartner, kein Callcenter</li>
+          <li>Berater-ID 228480, gelistet beim BAFA</li>
+        </ul>
+        <a href="#kontakt" class="bafa-dialog__cta" onclick="document.getElementById('bafaOverlay').classList.remove('is-open')">Ja, ich interessiere mich f&#252;r die F&#246;rderung</a>
+        <p class="bafa-dialog__fine">*Maximaler BAFA-F&#246;rderbetrag bei vollst&#228;ndiger Beantragung. Tats&#228;chliche F&#246;rderhöhe abh&#228;ngig von Programm- und Unternehmensstatus.</p>
+        <p class="bafa-dialog__fine">Datenschutz Kroes &middot; Alexander Kroes &middot; Berater-ID 228480</p>
+      </div>
     </div>
   </div>
 </body>
