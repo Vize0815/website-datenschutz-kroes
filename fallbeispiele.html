@@ -144,8 +144,9 @@
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 1fr 480px;
-      gap: 64px;
+      grid-template-columns: 1fr;
+      max-width: 740px;
+      gap: 0;
       align-items: center;
     }
     .page-hero__text { display: flex; flex-direction: column; }
@@ -630,8 +631,10 @@
           <li><a href="index.html#leistungen" class="nav__link">Leistungen</a></li>
           <li><a href="datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
           <li><a href="index.html#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="karriere.html" class="nav__link">Karriere</a></li>
           <li><a href="fallbeispiele.html" class="nav__link active">Fallbeispiele</a></li>
           <li><a href="index.html#kontakt" class="nav__link">Kontakt</a></li>
+          <li><a href="downloads.html" class="nav__link">Downloads</a></li>
           <li><a href="datenschutz-blog/" class="nav__link">Blog</a></li>
         </ul>
         <button class="nav__hamburger" id="hamburger" aria-label="Men&#252; &#246;ffnen" aria-expanded="false" aria-controls="mobile-overlay">
@@ -652,8 +655,10 @@
         <li><a href="index.html#leistungen" class="nav__mobile-link" onclick="closeMobileNav()">Leistungen</a></li>
         <li><a href="datenschutz-flatrate.html" class="nav__mobile-link" onclick="closeMobileNav()">Pakete &amp; Preise</a></li>
         <li><a href="index.html#seminare" class="nav__mobile-link" onclick="closeMobileNav()">Seminare</a></li>
+        <li><a href="karriere.html" class="nav__mobile-link" onclick="closeMobileNav()">Karriere</a></li>
         <li><a href="fallbeispiele.html" class="nav__mobile-link" onclick="closeMobileNav()">Fallbeispiele</a></li>
         <li><a href="index.html#kontakt" class="nav__mobile-link" onclick="closeMobileNav()">Kontakt</a></li>
+        <li><a href="downloads.html" class="nav__mobile-link" onclick="closeMobileNav()">Downloads</a></li>
         <li><a href="datenschutz-blog/" class="nav__mobile-link" onclick="closeMobileNav()">Blog</a></li>
       </ul>
     </nav>
@@ -689,9 +694,6 @@
           Kein Marketingversprechen. Nur dokumentierte F&#228;lle aus unserer t&#228;glichen Arbeit als externer Datenschutzbeauftragter f&#252;r KMU in Tirol, Salzburg, M&#252;nchen und Rosenheim.
         </p>
         <p class="page-hero__note" data-reveal data-reveal-delay="3">Alle Angaben anonymisiert &middot; Namen und Details ge&#228;ndert</p>
-      </div>
-      <div class="page-hero__img-wrap" data-reveal data-reveal-delay="2">
-        <img src="Referenz.webp" alt="Alexander Kroes bei der Arbeit mit Kunden" class="page-hero__img" loading="eager">
       </div>
     </div>
   </section>
