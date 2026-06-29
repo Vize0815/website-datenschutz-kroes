@@ -2262,6 +2262,16 @@
       max-width: 240px;
       margin-top: 8px;
     }
+    .footer__bafa {
+      display: block;
+      margin-top: 20px;
+      width: 120px;
+      height: auto;
+      opacity: 0.9;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .footer__bafa:hover { opacity: 1; }
 
     .footer__col-label {
       font-family: var(--font-mono);
@@ -5359,6 +5369,7 @@
           <p class="footer__tagline-values">Zertifiziert. Persönlich. Verlässlich.</p>
           <img src="wifi-wko-zertifikat.jpg" alt="WIFI WKO Zertifikat" class="footer__cert" width="88" height="111" loading="lazy">
           <p class="footer__cert-caption">Zertifiziert nach<br>ÖVE/ÖNORM<br>EN ISO / IEC<br>17024</p>
+          <img src="bafa-siegel.png" alt="BAFA Siegel" class="footer__bafa" loading="lazy" onclick="document.getElementById('bafaOverlay').classList.toggle('is-open')" role="button" tabindex="0" aria-label="BAFA F&#246;rderung">
         </div>
 
         <div>
