@@ -432,7 +432,7 @@
 .fh-overlay-name { font-family: var(--font-serif, 'Fraunces', Georgia, serif) !important; font-size: 18px !important; font-weight: 600 !important; color: var(--color-navy, #0F1F3D) !important; margin: 0 0 4px !important; letter-spacing: -0.02em !important; text-align: center !important; }
 .fh-overlay-role { font-family: var(--font-mono, 'DM Mono', monospace) !important; font-size: 10px !important; color: var(--color-slate, #5C6B82) !important; margin: 0 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; text-align: center !important; }
 /* Nav-Links im Panel */
-.nav__mobile-overlay > nav { width: 100% !important; background-color: transparent !important; flex: 1 !important; padding: 4px 40px 80px !important; box-sizing: border-box !important; box-shadow: none !important; transform: none !important; transition: none !important; }
+.nav__mobile-overlay > nav { width: 100% !important; background-color: transparent !important; flex: 1 !important; min-height: 0 !important; overflow-y: auto !important; padding: 4px 40px 20px !important; box-sizing: border-box !important; box-shadow: none !important; transform: none !important; transition: none !important; }
 .nav__mobile-overlay > nav > ul { gap: 0 !important; text-align: left !important; padding: 0 !important; list-style: none !important; display: flex !important; flex-direction: column !important; }
 .nav__mobile-link { font-size: 22px !important; font-weight: 400 !important; color: rgba(92,107,130,0.75) !important; letter-spacing: -0.01em !important; padding: 9px 0 !important; position: relative !important; display: block !important; transition: color 200ms ease !important; text-align: left !important; }
 .nav__mobile-link:hover { color: var(--color-navy, #0F1F3D) !important; }
@@ -451,7 +451,7 @@
 .nav__mobile-overlay.open ul li:nth-child(8) .nav__mobile-link { animation-delay: 0.47s; }
 .nav__mobile-overlay.open ul li:nth-child(9) .nav__mobile-link { animation-delay: 0.52s; }
 /* Social Icons */
-.nav__mobile-social { position: absolute !important; bottom: 32px !important; left: 0 !important; right: 0 !important; width: 100% !important; justify-content: flex-start !important; display: flex !important; gap: 10px !important; padding: 0 40px !important; box-sizing: border-box !important; z-index: 2 !important; background-color: transparent !important; transform: none !important; transition: none !important; }
+.nav__mobile-social { position: static !important; flex-shrink: 0 !important; width: 100% !important; justify-content: flex-start !important; display: flex !important; gap: 10px !important; padding: 20px 40px 32px !important; box-sizing: border-box !important; background-color: transparent !important; }
 .nav__mobile-social a { width: 36px !important; height: 36px !important; border-radius: 50% !important; border: 1px solid var(--color-mist, #DDE3EC) !important; color: var(--color-slate-light, #8A99AD) !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transition: color 200ms ease, border-color 200ms ease !important; background-color: transparent !important; }
 .nav__mobile-social a:hover { color: var(--color-navy, #0F1F3D) !important; border-color: var(--color-navy, #0F1F3D) !important; }
 /* ===== END FLUID NAVIGATION ===== */
