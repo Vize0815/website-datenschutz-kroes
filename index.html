@@ -4455,11 +4455,11 @@
 /* ===== HERO FULLBLEED ===== */
 .hero {
   position: relative;
-  min-height: 65vh;
+  min-height: 80vh;
   background-image: url('alexander-kroes-desktop.webp');
-  background-size: 42% auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 98% 5%;
+  background-position: right center;
   background-color: var(--color-navy, #0F1F3D);
   padding-top: 64px;
   padding-bottom: 0;
@@ -4475,11 +4475,11 @@
   z-index: 1;
   pointer-events: none;
   background: linear-gradient(
-    105deg,
-    rgba(15,31,61,0.95) 0%,
-    rgba(15,31,61,0.88) 40%,
-    rgba(15,31,61,0.55) 62%,
-    rgba(15,31,61,0.08) 100%
+    90deg,
+    rgba(15,31,61,0.97) 0%,
+    rgba(15,31,61,0.90) 35%,
+    rgba(15,31,61,0.55) 58%,
+    rgba(15,31,61,0.05) 100%
   );
 }
 .hero__inner {
@@ -4546,16 +4546,16 @@
 }
 
 @media (max-width: 1024px) {
-  .hero { background-position: 65% top; }
+  .hero { background-position: 70% center; }
   .hero__inner { padding: 32px 40px 80px; }
 }
 @media (max-width: 768px) {
-  .hero { min-height: 80vh; background-position: 72% top; }
+  .hero { min-height: 85vh; background-position: 72% center; }
   .hero__inner { padding: 24px 24px 72px; }
   .hero__content { max-width: 100%; }
 }
 @media (max-width: 480px) {
-  .hero { min-height: 100svh; background-position: 75% top; padding-top: 0 !important; }
+  .hero { min-height: 100svh; background-position: 75% center; padding-top: 0 !important; }
   .hero__inner { padding: 16px 20px 64px; }
   .topbar { display: none !important; }
 }
