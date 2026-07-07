@@ -4451,6 +4451,30 @@
 .nav__mobile-social a { width: 36px !important; height: 36px !important; border-radius: 50% !important; border: 1px solid var(--color-mist, #DDE3EC) !important; color: var(--color-slate-light, #8A99AD) !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transition: color 200ms ease, border-color 200ms ease !important; background-color: transparent !important; }
 .nav__mobile-social a:hover { color: var(--color-navy, #0F1F3D) !important; border-color: var(--color-navy, #0F1F3D) !important; }
 /* ===== END FLUID NAVIGATION ===== */
+
+/* ===== LATEST POSTS ===== */
+.latest-posts { padding: 80px 0; background: var(--color-sky-tint, #E8EFF8); }
+.latest-posts__header { text-align: center; margin-bottom: 48px; }
+.latest-posts__eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gold, #C9A84C); margin-bottom: 12px; display: block; }
+.latest-posts__title { font-family: var(--font-serif, 'Fraunces', serif); font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: var(--color-navy, #0F1F3D); line-height: 1.25; margin-bottom: 14px; }
+.latest-posts__subtitle { font-size: 16px; color: var(--color-slate, #5C6B82); max-width: 500px; margin: 0 auto; line-height: 1.6; }
+.latest-posts__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.post-card { background: #fff; border: 1px solid var(--color-mist, #DDE3EC); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; transition: box-shadow 280ms cubic-bezier(0.4,0,0.2,1), transform 280ms cubic-bezier(0.4,0,0.2,1); }
+.post-card:hover { box-shadow: 0 8px 40px rgba(15,31,61,0.14); transform: translateY(-4px); }
+.post-card__img-wrap { aspect-ratio: 16/9; overflow: hidden; }
+.post-card__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 400ms ease; }
+.post-card:hover .post-card__img { transform: scale(1.04); }
+.post-card__body { padding: 24px 24px 28px; display: flex; flex-direction: column; flex: 1; }
+.post-card__meta { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.post-card__category { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-gold, #C9A84C); background: rgba(201,168,76,0.12); padding: 3px 10px; border-radius: 20px; }
+.post-card__date { font-size: 12px; color: var(--color-slate, #5C6B82); }
+.post-card__title { font-family: var(--font-serif, 'Fraunces', serif); font-size: 18px; font-weight: 600; color: var(--color-navy, #0F1F3D); line-height: 1.4; margin-bottom: 10px; }
+.post-card__desc { font-size: 14px; color: var(--color-slate, #5C6B82); line-height: 1.65; flex: 1; margin-bottom: 20px; }
+.post-card__cta { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--color-prussian, #1B4F8A); transition: gap 200ms ease; }
+.post-card:hover .post-card__cta { gap: 10px; }
+.latest-posts__footer { text-align: center; margin-top: 40px; }
+@media (max-width: 1024px) { .latest-posts__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .latest-posts__grid { grid-template-columns: 1fr; } .latest-posts { padding: 56px 0; } }
 </style>
 </head>
 <body>
@@ -5199,6 +5223,80 @@
               <p class="process__step-text">Als offiziell bestellter DSB stehe ich Ihnen dauerhaft zur Verfügung — für Anfragen, Vorfälle, Änderungen und Behördenkontakte.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= LATEST POSTS ============= -->
+    <section class="latest-posts" aria-labelledby="latest-posts-title">
+      <div class="container">
+        <div class="latest-posts__header">
+          <span class="latest-posts__eyebrow">Aktuell aus dem Blog</span>
+          <h2 class="latest-posts__title" id="latest-posts-title">Wissen. Kompakt. Praxisnah.</h2>
+          <p class="latest-posts__subtitle">Aktuelle Beiträge zu DSGVO, Datensicherheit und rechtssicherem Umgang mit personenbezogenen Daten.</p>
+        </div>
+        <div class="latest-posts__grid">
+
+          <a class="post-card" href="datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/" aria-label="Beitrag lesen: DSGVO konforme KI-Plattformen für Unternehmen">
+            <div class="post-card__img-wrap">
+              <img src="alexander-kroes-og.webp" alt="DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026" class="post-card__img" width="600" height="338" loading="lazy" decoding="async">
+            </div>
+            <div class="post-card__body">
+              <div class="post-card__meta">
+                <span class="post-card__category">How-To</span>
+                <span class="post-card__date">18. Juni 2026</span>
+              </div>
+              <h3 class="post-card__title">DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026</h3>
+              <p class="post-card__desc">Welche KI-Plattformen 2026 wirklich DSGVO-konform sind. Multi-Tenant SaaS, Self-Hosted oder On-Premise: vier Kriterien und was KMU bei der Auswahl beachten müssen.</p>
+              <span class="post-card__cta">
+                Beitrag lesen
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="post-card" href="datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/" aria-label="Beitrag lesen: Datenschutz im Steuerrecht">
+            <div class="post-card__img-wrap">
+              <img src="datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/cover.webp" alt="Datenschutz im Steuerrecht: Was Steuerkanzleien wissen müssen" class="post-card__img" width="600" height="338" loading="lazy" decoding="async">
+            </div>
+            <div class="post-card__body">
+              <div class="post-card__meta">
+                <span class="post-card__category">Branche</span>
+                <span class="post-card__date">16. Juni 2026</span>
+              </div>
+              <h3 class="post-card__title">Datenschutz im Steuerrecht: Was Steuerkanzleien wissen müssen</h3>
+              <p class="post-card__desc">Steuerkanzleien verarbeiten täglich hochsensible Finanzdaten. Was DSGVO, BAO und AO fordern, welche Risiken drohen und was Kanzleien sofort tun müssen.</p>
+              <span class="post-card__cta">
+                Beitrag lesen
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="post-card" href="datenschutz-blog/pruefbereiche-datenschutzbehoerden/" aria-label="Beitrag lesen: Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden">
+            <div class="post-card__img-wrap">
+              <img src="AUDIT .webp" alt="Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden" class="post-card__img" width="600" height="338" loading="lazy" decoding="async">
+            </div>
+            <div class="post-card__body">
+              <div class="post-card__meta">
+                <span class="post-card__category">How-To</span>
+                <span class="post-card__date">5. Juni 2026</span>
+              </div>
+              <h3 class="post-card__title">Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden</h3>
+              <p class="post-card__desc">Was Datenschutzbehörden bei einer Prüfung wirklich kontrollieren. Die 10 wichtigsten Prüfbereiche nach DSGVO, mit besonderem Fokus auf Steuerkanzleien.</p>
+              <span class="post-card__cta">
+                Beitrag lesen
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+        <div class="latest-posts__footer">
+          <a href="datenschutz-blog/" class="btn-secondary" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:2px solid var(--color-navy,#0F1F3D);border-radius:8px;font-size:15px;font-weight:600;color:var(--color-navy,#0F1F3D);text-decoration:none;transition:background 200ms ease,color 200ms ease;" onmouseover="this.style.background='var(--color-navy,#0F1F3D)';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='var(--color-navy,#0F1F3D)';">
+            Alle Beiträge ansehen
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </section>
