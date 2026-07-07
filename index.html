@@ -4459,20 +4459,29 @@
 .latest-posts__title { font-family: var(--font-serif, 'Fraunces', serif); font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: var(--color-navy, #0F1F3D); line-height: 1.25; margin-bottom: 14px; }
 .latest-posts__subtitle { font-size: 16px; color: var(--color-slate, #5C6B82); max-width: 500px; margin: 0 auto; line-height: 1.6; }
 .latest-posts__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.post-card { background: #fff; border: 1px solid var(--color-mist, #DDE3EC); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; transition: box-shadow 280ms cubic-bezier(0.4,0,0.2,1), transform 280ms cubic-bezier(0.4,0,0.2,1); }
-.post-card:hover { box-shadow: 0 8px 40px rgba(15,31,61,0.14); transform: translateY(-4px); }
-.post-card__img-wrap { aspect-ratio: 16/9; overflow: hidden; }
-.post-card__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 400ms ease; }
-.post-card:hover .post-card__img { transform: scale(1.04); }
-.post-card__body { padding: 24px 24px 28px; display: flex; flex-direction: column; flex: 1; }
-.post-card__meta { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.post-card__category { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-gold, #C9A84C); background: rgba(201,168,76,0.12); padding: 3px 10px; border-radius: 20px; }
-.post-card__date { font-size: 12px; color: var(--color-slate, #5C6B82); }
-.post-card__title { font-family: var(--font-serif, 'Fraunces', serif); font-size: 18px; font-weight: 600; color: var(--color-navy, #0F1F3D); line-height: 1.4; margin-bottom: 10px; }
-.post-card__desc { font-size: 14px; color: var(--color-slate, #5C6B82); line-height: 1.65; flex: 1; margin-bottom: 20px; }
-.post-card__cta { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--color-prussian, #1B4F8A); transition: gap 200ms ease; }
-.post-card:hover .post-card__cta { gap: 10px; }
 .latest-posts__footer { text-align: center; margin-top: 40px; }
+.lp-card { background: #fff; border: 1px solid var(--color-mist, #DDE3EC); border-radius: var(--radius-lg, 16px); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; transition: transform var(--transition-base, 280ms ease), box-shadow var(--transition-base, 280ms ease), border-color var(--transition-base, 280ms ease); }
+.lp-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-elevated, 0 8px 40px rgba(15,31,61,0.14)); border-color: #8A99AD; }
+.lp-card__cover { position: relative; aspect-ratio: 16/9; overflow: hidden; background-color: var(--color-navy, #0F1F3D); background-size: cover; background-position: center; transition: transform var(--transition-base, 280ms ease); }
+.lp-card:hover .lp-card__cover { transform: scale(1.03); }
+.lp-card__cover::before { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(135deg, rgba(15,31,61,0.78) 0%, rgba(27,79,138,0.62) 100%); }
+.lp-card__cover--branche::before { background: linear-gradient(135deg, rgba(10,42,29,0.84) 0%, rgba(20,68,46,0.7) 55%, rgba(45,106,79,0.58) 100%); }
+.lp-card__cover--behoerde::before { background: linear-gradient(135deg, rgba(28,16,56,0.86) 0%, rgba(60,34,112,0.72) 55%, rgba(124,92,191,0.58) 100%); }
+.lp-card__badge { position: absolute; top: 16px; left: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(255,255,255,0.95); color: var(--color-navy, #0F1F3D); border-radius: 100px; backdrop-filter: blur(6px); }
+.lp-card__badge-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.lp-card__badge-dot--howto { background: var(--color-prussian, #1B4F8A); }
+.lp-card__badge-dot--branche { background: #2D6A4F; }
+.lp-card__badge-dot--behoerde { background: #7C5CBF; }
+.lp-card__body { padding: 26px 28px 28px; display: flex; flex-direction: column; flex: 1; }
+.lp-card__meta { display: flex; align-items: center; gap: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8A99AD; margin-bottom: 14px; }
+.lp-card__meta-dot { width: 3px; height: 3px; border-radius: 50%; background: #8A99AD; flex-shrink: 0; }
+.lp-card__title { font-size: 20px; font-weight: 600; color: var(--color-navy, #0F1F3D); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 12px; transition: color var(--transition-base, 280ms ease); }
+.lp-card:hover .lp-card__title { color: var(--color-prussian, #1B4F8A); }
+.lp-card__excerpt { font-size: 14.5px; font-weight: 300; color: var(--color-slate, #5C6B82); line-height: 1.65; margin-bottom: 22px; flex: 1; }
+.lp-card__read { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--color-navy, #0F1F3D); align-self: flex-start; transition: gap 280ms ease, color 280ms ease; }
+.lp-card__read svg { transition: transform 280ms ease; }
+.lp-card:hover .lp-card__read { color: var(--color-prussian, #1B4F8A); gap: 10px; }
+.lp-card:hover .lp-card__read svg { transform: translateX(2px); }
 @media (max-width: 1024px) { .latest-posts__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .latest-posts__grid { grid-template-columns: 1fr; } .latest-posts { padding: 56px 0; } }
 </style>
@@ -5237,65 +5246,77 @@
         </div>
         <div class="latest-posts__grid">
 
-          <a class="post-card" href="datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/" aria-label="Beitrag lesen: DSGVO konforme KI-Plattformen für Unternehmen">
-            <div class="post-card__img-wrap">
-              <img src="alexander-kroes-og.webp" alt="DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026" class="post-card__img" width="600" height="338" loading="lazy" decoding="async">
+          <a class="lp-card" href="datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/">
+            <div class="lp-card__cover lp-card__cover--howto" style="background-image:url('datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/cover.webp');" role="img" aria-label="DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026">
+              <span class="lp-card__badge">
+                <span class="lp-card__badge-dot lp-card__badge-dot--howto" aria-hidden="true"></span>
+                How To
+              </span>
             </div>
-            <div class="post-card__body">
-              <div class="post-card__meta">
-                <span class="post-card__category">How-To</span>
-                <span class="post-card__date">18. Juni 2026</span>
+            <div class="lp-card__body">
+              <div class="lp-card__meta">
+                <time datetime="2026-06-18">18. Juni 2026</time>
+                <span class="lp-card__meta-dot" aria-hidden="true"></span>
+                <span>10 Min. Lesezeit</span>
               </div>
-              <h3 class="post-card__title">DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026</h3>
-              <p class="post-card__desc">Welche KI-Plattformen 2026 wirklich DSGVO-konform sind. Multi-Tenant SaaS, Self-Hosted oder On-Premise: vier Kriterien und was KMU bei der Auswahl beachten müssen.</p>
-              <span class="post-card__cta">
-                Beitrag lesen
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3 class="lp-card__title">DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026</h3>
+              <p class="lp-card__excerpt">Multi-Tenant SaaS, Self-Hosted oder On-Premise? Vier datenschutzrechtliche Grundanforderungen, drei Hosting-Modelle und welche DACH-Plattformen für welches Unternehmen geeignet sind.</p>
+              <span class="lp-card__read">
+                Weiterlesen
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
             </div>
           </a>
 
-          <a class="post-card" href="datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/" aria-label="Beitrag lesen: Datenschutz im Steuerrecht">
-            <div class="post-card__img-wrap">
-              <img src="datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/cover.webp" alt="Datenschutz im Steuerrecht: Was Steuerkanzleien wissen müssen" class="post-card__img" width="600" height="338" loading="lazy" decoding="async">
+          <a class="lp-card" href="datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/">
+            <div class="lp-card__cover lp-card__cover--branche" style="background-image:url('datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/cover.webp');" role="img" aria-label="Datenschutz im Steuerrecht: Was Steuerkanzleien wissen müssen">
+              <span class="lp-card__badge">
+                <span class="lp-card__badge-dot lp-card__badge-dot--branche" aria-hidden="true"></span>
+                Branche
+              </span>
             </div>
-            <div class="post-card__body">
-              <div class="post-card__meta">
-                <span class="post-card__category">Branche</span>
-                <span class="post-card__date">16. Juni 2026</span>
+            <div class="lp-card__body">
+              <div class="lp-card__meta">
+                <time datetime="2026-06-16">16. Juni 2026</time>
+                <span class="lp-card__meta-dot" aria-hidden="true"></span>
+                <span>9 Min. Lesezeit</span>
               </div>
-              <h3 class="post-card__title">Datenschutz im Steuerrecht: Was Steuerkanzleien wissen müssen</h3>
-              <p class="post-card__desc">Steuerkanzleien verarbeiten täglich hochsensible Finanzdaten. Was DSGVO, BAO und AO fordern, welche Risiken drohen und was Kanzleien sofort tun müssen.</p>
-              <span class="post-card__cta">
-                Beitrag lesen
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3 class="lp-card__title">Datenschutz im Steuerrecht: Was Steuerkanzleien wissen müssen</h3>
+              <p class="lp-card__excerpt">Steuerkanzleien verarbeiten täglich hochsensible Finanz- und Gesundheitsdaten. Was DSGVO, BAO und AO fordern, welche Risiken drohen und wie das Spannungsfeld Aufbewahrungspflicht kontra Löschgebot aufgelöst wird.</p>
+              <span class="lp-card__read">
+                Weiterlesen
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
             </div>
           </a>
 
-          <a class="post-card" href="datenschutz-blog/pruefbereiche-datenschutzbehoerden/" aria-label="Beitrag lesen: Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden">
-            <div class="post-card__img-wrap">
-              <img src="AUDIT .webp" alt="Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden" class="post-card__img" width="600" height="338" loading="lazy" decoding="async">
+          <a class="lp-card" href="datenschutz-blog/pruefbereiche-datenschutzbehoerden/">
+            <div class="lp-card__cover lp-card__cover--behoerde" style="background-image:url('Datenschutzbehoerde.webp');" role="img" aria-label="Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden">
+              <span class="lp-card__badge">
+                <span class="lp-card__badge-dot lp-card__badge-dot--behoerde" aria-hidden="true"></span>
+                Datenschutzbehörde
+              </span>
             </div>
-            <div class="post-card__body">
-              <div class="post-card__meta">
-                <span class="post-card__category">How-To</span>
-                <span class="post-card__date">5. Juni 2026</span>
+            <div class="lp-card__body">
+              <div class="lp-card__meta">
+                <time datetime="2026-06-05">05. Juni 2026</time>
+                <span class="lp-card__meta-dot" aria-hidden="true"></span>
+                <span>12 Min. Lesezeit</span>
               </div>
-              <h3 class="post-card__title">Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden</h3>
-              <p class="post-card__desc">Was Datenschutzbehörden bei einer Prüfung wirklich kontrollieren. Die 10 wichtigsten Prüfbereiche nach DSGVO, mit besonderem Fokus auf Steuerkanzleien.</p>
-              <span class="post-card__cta">
-                Beitrag lesen
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3 class="lp-card__title">Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden</h3>
+              <p class="lp-card__excerpt">Was Aufsichtsbehörden bei einer DSGVO-Prüfung wirklich kontrollieren. Mit Fokus auf Verarbeitungsverzeichnis, TOMs, AVVs und den besonderen Risiken für Steuerkanzleien.</p>
+              <span class="lp-card__read">
+                Weiterlesen
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
             </div>
           </a>
 
         </div>
         <div class="latest-posts__footer">
-          <a href="datenschutz-blog/" class="btn-secondary" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:2px solid var(--color-navy,#0F1F3D);border-radius:8px;font-size:15px;font-weight:600;color:var(--color-navy,#0F1F3D);text-decoration:none;transition:background 200ms ease,color 200ms ease;" onmouseover="this.style.background='var(--color-navy,#0F1F3D)';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='var(--color-navy,#0F1F3D)';">
+          <a href="datenschutz-blog/" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:2px solid var(--color-navy,#0F1F3D);border-radius:8px;font-size:15px;font-weight:600;color:var(--color-navy,#0F1F3D);text-decoration:none;transition:background 200ms ease,color 200ms ease;" onmouseover="this.style.background='#0F1F3D';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='#0F1F3D';">
             Alle Beiträge ansehen
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
       </div>
