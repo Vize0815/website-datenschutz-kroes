@@ -4456,10 +4456,6 @@
 .hero {
   position: relative;
   min-height: 80vh;
-  background-image: url('alexander-kroes-desktop.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 80% top;
   background-color: var(--color-navy, #0F1F3D);
   padding-top: 64px;
   padding-bottom: 0;
@@ -4467,6 +4463,23 @@
   flex-direction: column !important;
   align-items: stretch !important;
   justify-content: flex-start !important;
+}
+/* Foto absolut rechts positioniert */
+.hero__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  display: block;
 }
 .hero::before {
   content: '';
@@ -4546,17 +4559,19 @@
 }
 
 @media (max-width: 1024px) {
-  .hero { background-position: 70% center; }
   .hero__inner { padding: 32px 40px 80px; }
+  .hero__photo { width: 50%; }
 }
 @media (max-width: 768px) {
-  .hero { min-height: 85vh; background-position: 72% center; }
+  .hero { min-height: 85vh; }
   .hero__inner { padding: 24px 24px 72px; }
   .hero__content { max-width: 100%; }
+  .hero__photo { width: 60%; opacity: 0.6; }
 }
 @media (max-width: 480px) {
-  .hero { min-height: 100svh; background-position: 75% center; padding-top: 0 !important; }
+  .hero { min-height: 100svh; padding-top: 0 !important; }
   .hero__inner { padding: 16px 20px 64px; }
+  .hero__photo { width: 80%; opacity: 0.4; }
   .topbar { display: none !important; }
 }
 
@@ -4824,6 +4839,9 @@
           </div>
         </div>
       </nav>
+      <div class="hero__photo" aria-hidden="true">
+        <img src="alexander-kroes-desktop.webp" alt="">
+      </div>
       <div class="hero__inner">
       <div class="hero__content">
         <div class="hero__eyebrow">
