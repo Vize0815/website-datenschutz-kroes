@@ -367,7 +367,7 @@
     /* RESPONSIVE */
     @media (max-width: 1024px) {
       .container { padding: 0 32px; }
-      .hero__grid { grid-template-columns: 1fr; } .hero__photo-col { display: none; }
+      .hero__grid { grid-template-columns: 1fr; gap: 40px; } .hero__photo-col { display: flex; justify-content: center; } .hero__photo { width: 200px; height: 270px; }
       .services__grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; } .about-photo { width: 160px; height: 200px; }
       .footer__grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
@@ -381,6 +381,7 @@
       .nav__links, .nav__cta { display: none; } .nav__hamburger { display: flex; }
       .nav__logo-mark { width: 150px; height: 70px; }
       .hero__title { hyphens: auto; }
+      .hero__photo-col { display: none; }
       .hero__cta-row { flex-direction: column; align-items: flex-start; }
       .services__grid { grid-template-columns: 1fr; } .law-grid { grid-template-columns: 1fr; }
       .footer__grid { grid-template-columns: 1fr; gap: 32px; }
@@ -411,6 +412,73 @@
       .faq-body { padding: 0 18px 16px; font-size: 14px; }
       .footer__grid { gap: 24px; }
       .footer__copy { font-size: 12px; }
+    }
+
+    /* ===== USP SECTION ===== */
+    .usp-section { background: linear-gradient(160deg, var(--color-navy) 0%, #162d5e 100%); padding: 80px 0; }
+    .usp-section__header { text-align: center; margin-bottom: 52px; }
+    .usp-section__title { font-family: var(--font-sans); font-size: var(--text-h2); font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: #fff; margin-bottom: 12px; }
+    .usp-section__sub { font-family: var(--font-sans); font-size: var(--text-lead); font-weight: 300; color: rgba(255,255,255,0.65); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+    .usp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .usp-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 32px 24px; transition: background var(--transition-base), border-color var(--transition-base), transform var(--transition-base); }
+    .usp-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(201,168,76,0.6); transform: translateY(-4px); }
+    .usp-card__icon { width: 52px; height: 52px; background: rgba(201,168,76,0.15); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--color-gold); }
+    .usp-card__title { font-family: var(--font-sans); font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 10px; line-height: 1.3; }
+    .usp-card__text { font-family: var(--font-sans); font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+    /* ===== VORTEILE ===== */
+    .vorteile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .vorteile-img-wrap { position: relative; }
+    .vorteile-img { width: 100%; height: 520px; object-fit: cover; object-position: top center; border-radius: var(--radius-lg); display: block; box-shadow: var(--shadow-elevated); }
+    .vorteile-badge { position: absolute; bottom: 24px; right: 24px; background: var(--color-navy); border: 2px solid var(--color-gold); border-radius: var(--radius-lg); padding: 20px 24px; text-align: center; box-shadow: var(--shadow-elevated); }
+    .vorteile-badge__num { font-family: var(--font-sans); font-size: 30px; font-weight: 700; color: var(--color-gold); line-height: 1; }
+    .vorteile-badge__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: 4px; line-height: 1.4; }
+    .vorteile-list { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+    .vorteile-item { display: flex; align-items: flex-start; gap: 16px; }
+    .vorteile-item__icon { width: 40px; height: 40px; background: var(--color-sky-tint); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-prussian); flex-shrink: 0; margin-top: 2px; }
+    .vorteile-item__title { font-family: var(--font-sans); font-size: 16px; font-weight: 600; color: var(--color-navy); margin-bottom: 4px; }
+    .vorteile-item__text { font-family: var(--font-sans); font-size: 14px; color: var(--color-slate); line-height: 1.65; }
+
+    /* ===== PROZESS ===== */
+    .process-section { background: var(--color-sky-tint); }
+    .process-section__header { text-align: center; margin-bottom: 56px; }
+    .process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; }
+    .process-connector { position: absolute; top: 36px; left: calc(16.66% + 36px); right: calc(16.66% + 36px); height: 2px; background: linear-gradient(to right, var(--color-gold), var(--color-prussian)); z-index: 0; pointer-events: none; }
+    .process-step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+    .process-step__circle { width: 72px; height: 72px; border-radius: 50%; background: var(--color-surface); border: 3px solid var(--color-gold); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 26px; font-weight: 700; color: var(--color-gold); margin-bottom: 28px; box-shadow: var(--shadow-card); flex-shrink: 0; }
+    .process-step__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
+    .process-step__title { font-family: var(--font-sans); font-size: 20px; font-weight: 600; color: var(--color-navy); margin-bottom: 12px; }
+    .process-step__text { font-family: var(--font-sans); font-size: 14px; color: var(--color-slate); line-height: 1.7; max-width: 260px; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section { background: var(--color-surface); }
+    .testimonials-section__header { text-align: center; margin-bottom: 56px; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .testimonial-card { background: var(--color-bg); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 36px 32px; position: relative; overflow: hidden; transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base); }
+    .testimonial-card:hover { border-color: var(--color-gold); box-shadow: var(--shadow-elevated); transform: translateY(-4px); }
+    .testimonial-card__quote { font-family: var(--font-serif); font-size: 80px; line-height: 0.65; color: var(--color-gold); opacity: 0.18; position: absolute; top: 16px; left: 22px; pointer-events: none; user-select: none; }
+    .testimonial-stars { display: flex; gap: 3px; margin-bottom: 16px; color: var(--color-gold); }
+    .testimonial-card__text { font-family: var(--font-serif); font-style: italic; font-size: 15px; line-height: 1.75; color: var(--color-ink); margin-bottom: 24px; padding-top: 12px; }
+    .testimonial-card__footer { display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--color-mist); padding-top: 20px; }
+    .testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-prussian), var(--color-navy)); display: flex; align-items: center; justify-content: center; font-family: var(--font-sans); font-size: 15px; font-weight: 700; color: #fff; flex-shrink: 0; letter-spacing: 0.02em; }
+    .testimonial-card__name { font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--color-navy); }
+    .testimonial-card__role { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-slate); margin-top: 3px; }
+
+    /* ===== RESPONSIVE: NEW SECTIONS ===== */
+    @media (max-width: 1024px) {
+      .usp-grid { grid-template-columns: repeat(2, 1fr); }
+      .vorteile-grid { grid-template-columns: 1fr; gap: 48px; }
+      .vorteile-img { height: 340px; }
+      .process-steps { grid-template-columns: 1fr; gap: 36px; }
+      .process-connector { display: none; }
+      .process-step { flex-direction: row; text-align: left; gap: 24px; align-items: flex-start; }
+      .process-step__circle { margin-bottom: 0; flex-shrink: 0; }
+      .testimonial-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+    @media (max-width: 768px) {
+      .usp-grid { grid-template-columns: 1fr; gap: 16px; }
+      .vorteile-badge { display: none; }
+      .testimonial-grid { grid-template-columns: 1fr; }
     }
   </style>
   <link rel="preload" as="style" href="../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -637,6 +705,47 @@ Ihre Patientinnen und Patienten vertrauen Ihnen ihre intimsten Gesundheitsdaten 
     </div>
   </div>
 
+  <!-- USP: WARUM DATENSCHUTZ KROES -->
+  <section class="usp-section" aria-labelledby="usp-title">
+    <div class="container">
+      <div class="usp-section__header" data-reveal>
+        <p class="t-eyebrow" style="color:var(--color-gold-light);margin-bottom:12px;">Warum Datenschutz Kroes?</p>
+        <h2 class="usp-section__title" id="usp-title">Ihr Vorteil als Arztpraxis</h2>
+        <p class="usp-section__sub">Kein großes Beratungshaus. Kein anonymer Hotline-Betrieb. Ein persönlicher Ansprechpartner, der den medizinischen Praxisalltag und seine besonderen Anforderungen kennt.</p>
+      </div>
+      <div class="usp-grid">
+        <div class="usp-card" data-reveal>
+          <div class="usp-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3 class="usp-card__title">Persönlich. Direkt. Erreichbar.</h3>
+          <p class="usp-card__text">Sie sprechen immer mit Alexander Kroes. Kein Ticketsystem, kein Weitervermitteln. Ein Ansprechpartner, der Ihre Praxis und die Anforderungen an Gesundheitsdaten kennt.</p>
+        </div>
+        <div class="usp-card" data-reveal data-reveal-delay="1">
+          <div class="usp-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7l-9-5z"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="usp-card__title">Zertifiziert nach ISO/IEC 17024</h3>
+          <p class="usp-card__text">Internationaler Zertifizierungsstandard. Patienten, Behörden und Kassenärztliche Vereinigungen sehen sofort: hier ist echter, nachgewiesener Sachverstand.</p>
+        </div>
+        <div class="usp-card" data-reveal data-reveal-delay="2">
+          <div class="usp-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="usp-card__title">DACH Expertise. Regional verwurzelt.</h3>
+          <p class="usp-card__text">Mit Sitz in Kufstein betreue ich Praxen in Österreich, Bayern und der Schweiz. Ich kenne regionale Aufsichtsbehörden, KBV-Anforderungen und das ärztliche Berufsrecht.</p>
+        </div>
+        <div class="usp-card" data-reveal data-reveal-delay="3">
+          <div class="usp-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="usp-card__title">Seit 2018. Bewährt in der Praxis.</h3>
+          <p class="usp-card__text">Nicht Theorie, sondern gelebte Praxis. Über 50 betreute Unternehmen im DACH Raum, darunter Arztpraxen mit höchsten Anforderungen an die Sicherheit von Gesundheitsdaten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 3 SCHMERZPUNKTE -->
   <section class="pain-section" id="schmerzpunkte" aria-labelledby="pain-title">
     <div class="container">
@@ -748,6 +857,67 @@ Ihre Patientinnen und Patienten vertrauen Ihnen ihre intimsten Gesundheitsdaten 
     </div>
   </section>
 
+  <!-- VORTEILE: Was Sie konkret gewinnen -->
+  <section class="section" aria-labelledby="vorteile-title">
+    <div class="container">
+      <div class="vorteile-grid">
+        <div class="vorteile-img-wrap" data-reveal>
+          <picture>
+            <source srcset="../alexander-kroes-tablet.webp" type="image/webp">
+            <img src="../alexander-kroes.png" alt="Alexander Kroes im Beratungsgespräch mit Ärzten" class="vorteile-img" width="480" height="520" loading="lazy">
+          </picture>
+          <div class="vorteile-badge" aria-hidden="true">
+            <p class="vorteile-badge__num">50+</p>
+            <p class="vorteile-badge__label">Betreute<br>Unternehmen</p>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="1">
+          <p class="t-eyebrow" style="margin-bottom:12px;">Was Sie konkret gewinnen</p>
+          <h2 class="t-h2" id="vorteile-title">Datenschutz, der entlastet. Nicht belastet.</h2>
+          <p class="t-lead" style="margin:16px 0 0;">Ein externer DSB ist kein Kostenfaktor. Er ist die Absicherung Ihrer Praxis gegen Reputationsschäden, Bußgelder und Behördenprüfungen.</p>
+          <ul class="vorteile-list">
+            <li class="vorteile-item">
+              <div class="vorteile-item__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <p class="vorteile-item__title">Mehr Zeit für Ihre Patienten</p>
+                <p class="vorteile-item__text">Sie konzentrieren sich auf die Patientenversorgung. Verarbeitungsverzeichnis, Betroffenenanfragen, Schulungen und AVVs mit PVS-Anbietern übernehme ich vollständig.</p>
+              </div>
+            </li>
+            <li class="vorteile-item">
+              <div class="vorteile-item__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <p class="vorteile-item__title">Behördenprüfungen bestehen Sie sicher</p>
+                <p class="vorteile-item__text">Vollständige Dokumentation, lückenlose Nachweise. Wenn die Datenschutzbehörde oder die KV kommt, sind Sie vorbereitet. Ich bin an Ihrer Seite.</p>
+              </div>
+            </li>
+            <li class="vorteile-item">
+              <div class="vorteile-item__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <p class="vorteile-item__title">Patientenvertrauen als echtes Argument</p>
+                <p class="vorteile-item__text">Zertifizierter DSB an Ihrer Seite. Das können Sie kommunizieren. Und es macht den Unterschied, wenn Patienten ihre sensibelsten Gesundheitsdaten anvertrauen.</p>
+              </div>
+            </li>
+            <li class="vorteile-item">
+              <div class="vorteile-item__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <p class="vorteile-item__title">Fester Preis. Keine versteckten Kosten.</p>
+                <p class="vorteile-item__text">Transparente Paketpreise, monatlich kündbar. Deutlich günstiger als interne Bestellung oder stundenbasierte Agenturabrechnung.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- RECHTSRAHMEN -->
   <section class="section" aria-labelledby="recht-title">
     <div class="container">
@@ -783,6 +953,44 @@ Ihre Patientinnen und Patienten vertrauen Ihnen ihre intimsten Gesundheitsdaten 
     </div>
   </section>
 
+  <!-- PROZESS: 3 Schritte -->
+  <section class="process-section section" aria-labelledby="prozess-title">
+    <div class="container">
+      <div class="process-section__header" data-reveal>
+        <p class="t-eyebrow" style="margin-bottom:12px;">So funktioniert es</p>
+        <h2 class="t-h2" id="prozess-title">In 3 Schritten zu rechtssicherem Datenschutz</h2>
+        <p class="t-lead" style="max-width:540px;margin:16px auto 0;">Kein bürokratischer Marathon. Unkomplizierter Start, schnelle Ergebnisse, dauerhafte Entlastung für Ihre Praxis.</p>
+      </div>
+      <div class="process-steps" style="margin-top:56px;">
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step" data-reveal>
+          <div class="process-step__circle" aria-hidden="true">1</div>
+          <div class="process-step__content">
+            <p class="process-step__label">Schritt 01</p>
+            <h3 class="process-step__title">Kostenloses Erstgespräch</h3>
+            <p class="process-step__text">30 Minuten. Ich analysiere den Status Ihrer Praxis, zeige konkrete Lücken auf und erkläre, was als Nächstes zu tun ist. Unverbindlich und ohne Risiko.</p>
+          </div>
+        </div>
+        <div class="process-step" data-reveal data-reveal-delay="1">
+          <div class="process-step__circle" aria-hidden="true">2</div>
+          <div class="process-step__content">
+            <p class="process-step__label">Schritt 02</p>
+            <h3 class="process-step__title">Vollständige Erstanalyse</h3>
+            <p class="process-step__text">Ich prüfe alle Datenflüsse, PVS-Einstellungen, TI-Anbindung, bestehende Verträge und Prozesse. Ergebnis: ein konkreter Maßnahmenplan mit klaren Prioritäten.</p>
+          </div>
+        </div>
+        <div class="process-step" data-reveal data-reveal-delay="2">
+          <div class="process-step__circle" aria-hidden="true">3</div>
+          <div class="process-step__content">
+            <p class="process-step__label">Schritt 03</p>
+            <h3 class="process-step__title">Laufende Betreuung</h3>
+            <p class="process-step__text">Als Ihr externer DSB bin ich dauerhaft an Ihrer Seite. Dokumentation, Schulungen, Anfragen, Datenpannen. Sie müssen sich um nichts mehr kümmern.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ÜBER ALEXANDER -->
   <section class="section" id="ueber-kroes" aria-labelledby="ueber-title">
     <div class="container">
@@ -805,6 +1013,74 @@ Ihre Patientinnen und Patienten vertrauen Ihnen ihre intimsten Gesundheitsdaten 
           <p class="t-body" style="margin-bottom:16px;">Mit Sitz in Kufstein, Tirol, betreue ich Arztpraxen im gesamten DACH-Raum. Ich kenne die besonderen Anforderungen des Praxisalltags: Patientenverwaltung, TI-Anbindung, die Schnittstelle zwischen ärztlicher Schweigepflicht und datenschutzrechtlichen Auskunftspflichten sowie die erhöhten Anforderungen beim Umgang mit Gesundheitsdaten nach Art. 9 DSGVO.</p>
           <p class="t-body" style="margin-bottom:28px;">Als externer DSB entlaste ich Sie dauerhaft von allen Datenschutzaufgaben. Sie erhalten klare Antworten, vollständige Dokumentation und einen Ansprechpartner, der auch bei einer Behördenprüfung oder einem Datenschutzvorfall an Ihrer Seite steht. Ohne Fachjargon. Ohne unnötige Bürokratie. Damit Sie sich auf Ihre Patientinnen und Patienten konzentrieren können.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <!-- HINWEIS: Platzhaltertexte. Bitte durch echte Patientenstimmen/Ärztezitate ersetzen. -->
+  <section class="testimonials-section section" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="testimonials-section__header" data-reveal>
+        <p class="t-eyebrow" style="margin-bottom:12px;">Was Praxen sagen</p>
+        <h2 class="t-h2" id="testimonials-title">Ärztinnen und Ärzte, die bereits betreut werden</h2>
+        <p class="t-lead" style="max-width:520px;margin:16px auto 0;">Erfahrungen aus dem Praxisalltag. Kein Großkonzern, sondern Mediziner, die ihre Zeit zurückgewonnen haben.</p>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card" data-reveal>
+          <span class="testimonial-card__quote" aria-hidden="true">"</span>
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-card__text">„Endlich habe ich Gewissheit, dass meine Praxis bei einer Behördenprüfung wirklich sicher dasteht. Herr Kroes hat in kurzer Zeit mehr geregelt als ich in Jahren selbst geschafft hätte."</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-avatar" aria-hidden="true">SK</div>
+            <div>
+              <p class="testimonial-card__name">Dr. med. Sandra K.</p>
+              <p class="testimonial-card__role">Allgemeinmedizin, Wien</p>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" data-reveal data-reveal-delay="1">
+          <span class="testimonial-card__quote" aria-hidden="true">"</span>
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-card__text">„Der AVV mit unserem PVS-Anbieter war seit Jahren offen. Herr Kroes hat das in der ersten Woche erledigt. Die Analyse hat Lücken aufgedeckt, von denen wir nichts wussten. Absolut empfehlenswert."</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-avatar" aria-hidden="true">FM</div>
+            <div>
+              <p class="testimonial-card__name">Dr. med. Felix M.</p>
+              <p class="testimonial-card__role">Internist, München</p>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" data-reveal data-reveal-delay="2">
+          <span class="testimonial-card__quote" aria-hidden="true">"</span>
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-card__text">„Ich hatte vorher keinen DSB. Nach dem Erstgespräch war klar, dass ich sofort handeln musste. Innerhalb von zwei Monaten war alles vollständig umgesetzt. Klar, direkt, ohne unnötigen Aufwand."</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-avatar" aria-hidden="true">LB</div>
+            <div>
+              <p class="testimonial-card__name">Dr. med. Laura B.</p>
+              <p class="testimonial-card__role">Kinderärztin, Innsbruck</p>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
