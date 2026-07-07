@@ -4529,9 +4529,9 @@
   border-bottom-color: transparent !important;
   z-index: 2 !important;
 }
-/* Logo auf dunklem Hero-Hintergrund: screen-Modus macht weißes Logo sichtbar */
+/* Weißes Logo auf dunklem Hero: normal-Modus, kein Blend */
 .nav .nav__logo-mark {
-  mix-blend-mode: screen !important;
+  mix-blend-mode: normal !important;
 }
 /* Nav-Rand entfernen */
 .nav {
@@ -4793,10 +4793,7 @@
         <div class="container">
           <div class="nav__inner">
             <a href="#" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
-              <picture>
-                <source srcset="logo-datenschutz-kroes.webp" type="image/webp">
-                <img src="logo-kroes-v2.png" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
-              </picture>
+              <img src="logo-kroes-white.png" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
             </a>
 
             <ul class="nav__links" role="list">
