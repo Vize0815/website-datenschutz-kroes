@@ -367,7 +367,7 @@
     /* RESPONSIVE */
     @media (max-width: 1024px) {
       .container { padding: 0 32px; }
-      .hero__grid { grid-template-columns: 1fr; } .hero__photo-col { display: none; }
+      .hero__grid { grid-template-columns: 1fr; gap: 40px; } .hero__photo-col { display: flex; justify-content: center; } .hero__photo { width: 200px; height: 270px; }
       .services__grid { grid-template-columns: repeat(2, 1fr); }
       .about-grid { grid-template-columns: 1fr; } .about-photo { width: 160px; height: 200px; }
       .footer__grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
@@ -382,6 +382,7 @@
       .nav__links, .nav__cta { display: none; } .nav__hamburger { display: flex; }
       .nav__logo-mark { width: 150px; height: 70px; }
       .hero__title { hyphens: auto; }
+      .hero__photo-col { display: none; }
       .hero__cta-row { flex-direction: column; align-items: flex-start; }
       .services__grid { grid-template-columns: 1fr; }
       .footer__grid { grid-template-columns: 1fr; gap: 32px; }
@@ -412,6 +413,55 @@
       .faq-body { padding: 0 18px 16px; font-size: 14px; }
       .footer__grid { gap: 24px; }
       .footer__copy { font-size: 12px; }
+    }
+    /* ───── NEW SECTIONS ───── */
+    .usp-section { background: linear-gradient(135deg, var(--color-navy) 0%, #162847 100%); padding: 80px 0; }
+    .usp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+    .usp-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.18); border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; transition: var(--transition-base); }
+    .usp-card:hover { background: rgba(255,255,255,0.10); border-color: rgba(201,168,76,0.35); transform: translateY(-2px); }
+    .usp-card__icon { width: 52px; height: 52px; background: rgba(201,168,76,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--color-gold); }
+    .usp-card__title { font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+    .usp-card__text { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+    .vorteile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 48px; }
+    .vorteile-img-wrap { position: relative; }
+    .vorteile-img { width: 100%; border-radius: var(--radius-lg); object-fit: cover; aspect-ratio: 4/5; box-shadow: var(--shadow-elevated); }
+    .vorteile-badge { position: absolute; bottom: 24px; left: 24px; background: var(--color-gold); color: var(--color-navy); font-family: var(--font-serif); font-size: 22px; font-weight: 700; padding: 12px 20px; border-radius: var(--radius-md); box-shadow: 0 4px 16px rgba(201,168,76,0.35); }
+    .vorteile-list { display: flex; flex-direction: column; gap: 24px; }
+    .vorteile-item { display: flex; gap: 16px; align-items: flex-start; }
+    .vorteile-item__icon { flex-shrink: 0; width: 44px; height: 44px; background: var(--color-sky-tint); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-prussian); margin-top: 2px; }
+    .vorteile-item__title { font-family: var(--font-serif); font-size: 17px; font-weight: 600; color: var(--color-navy); margin-bottom: 4px; }
+    .vorteile-item__text { font-size: 14px; color: var(--color-slate); line-height: 1.6; }
+    .process-section { background: var(--color-sky-tint); padding: 80px 0; }
+    .process-steps { display: flex; justify-content: center; gap: 0; margin-top: 48px; position: relative; }
+    .process-connector { position: absolute; top: 40px; left: calc(50% - 200px); width: 400px; height: 2px; background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-gold-light) 100%); z-index: 0; }
+    .process-step { flex: 1; max-width: 260px; text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+    .process-step__circle { width: 80px; height: 80px; background: var(--color-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--color-navy); box-shadow: 0 4px 20px rgba(201,168,76,0.4); }
+    .process-step__label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
+    .process-step__title { font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--color-navy); margin-bottom: 10px; }
+    .process-step__text { font-size: 14px; color: var(--color-slate); line-height: 1.65; }
+    .testimonials-section { padding: 80px 0; background: #fff; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
+    .testimonial-card { background: var(--color-sky-tint); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 32px 28px; display: flex; flex-direction: column; transition: var(--transition-base); }
+    .testimonial-card:hover { box-shadow: var(--shadow-elevated); transform: translateY(-3px); }
+    .testimonial-card__quote { color: var(--color-gold); font-size: 36px; line-height: 1; font-family: var(--font-serif); margin-bottom: 12px; }
+    .testimonial-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+    .testimonial-stars svg { color: var(--color-gold); }
+    .testimonial-card__text { font-size: 15px; color: var(--color-slate); line-height: 1.7; flex: 1; font-style: italic; }
+    .testimonial-card__footer { display: flex; align-items: center; gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-mist); }
+    .testimonial-avatar { width: 44px; height: 44px; background: var(--color-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 14px; font-weight: 700; color: var(--color-gold); flex-shrink: 0; }
+    .testimonial-card__name { font-weight: 600; font-size: 14px; color: var(--color-navy); }
+    .testimonial-card__role { font-size: 12px; color: var(--color-slate); }
+    @media (max-width: 1024px) {
+      .usp-grid { grid-template-columns: repeat(2, 1fr); }
+      .vorteile-grid { grid-template-columns: 1fr; gap: 40px; }
+      .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { flex-direction: column; align-items: center; gap: 32px; }
+      .process-connector { display: none; }
+      .process-step { max-width: 400px; }
+    }
+    @media (max-width: 768px) {
+      .usp-grid { grid-template-columns: 1fr; }
+      .testimonial-grid { grid-template-columns: 1fr; }
     }
   </style>
   <link rel="preload" as="style" href="../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -638,6 +688,46 @@ Ihr Betrieb verarbeitet täglich Kundendaten: Adressen, Baupläne, Zugangscodes,
     </div>
   </div>
 
+  <!-- USP -->
+  <section class="usp-section" aria-labelledby="usp-title">
+    <div class="container">
+      <div style="text-align:center;" data-reveal>
+        <p class="t-eyebrow" style="color:rgba(201,168,76,0.8);margin-bottom:12px;">Warum Handwerksbetriebe auf mich vertrauen</p>
+        <h2 class="t-h2" id="usp-title" style="color:#fff;">4 Gründe, die zählen</h2>
+      </div>
+      <div class="usp-grid">
+        <div class="usp-card" data-reveal>
+          <div class="usp-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="usp-card__title">Betrieb statt Kanzlei</h3>
+          <p class="usp-card__text">Keine abstrakten Gesetze. Lösungen, die in Ihrem Betriebsalltag auf der Baustelle, im Büro und im Außendienst wirklich funktionieren.</p>
+        </div>
+        <div class="usp-card" data-reveal data-reveal-delay="1">
+          <div class="usp-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7l-9-5z"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="usp-card__title">Zertifiziert</h3>
+          <p class="usp-card__text">Zertifizierter externer Datenschutzbeauftragter nach ÖVE/ÖNORM EN ISO/IEC 17024. Nachweisbare Kompetenz. Keine Selbstauskunft.</p>
+        </div>
+        <div class="usp-card" data-reveal data-reveal-delay="2">
+          <div class="usp-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          </div>
+          <h3 class="usp-card__title">DACH Expertise</h3>
+          <p class="usp-card__text">Handwerksbetriebe in Deutschland, Österreich und der Schweiz. DSGVO, BDSG und DSG im Griff. Grenzüberschreitende Betreuung aus einer Hand.</p>
+        </div>
+        <div class="usp-card" data-reveal data-reveal-delay="3">
+          <div class="usp-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="usp-card__title">Seit 2018</h3>
+          <p class="usp-card__text">Seit 2018 aktiv. Mit dem Erfahrungsschatz aus hunderten Beratungen für kleine und mittlere Betriebe aller Gewerke.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 3 SCHMERZPUNKTE -->
   <section class="pain-section" id="schmerzpunkte" aria-labelledby="pain-title">
     <div class="container">
@@ -749,6 +839,61 @@ Ihr Betrieb verarbeitet täglich Kundendaten: Adressen, Baupläne, Zugangscodes,
     </div>
   </section>
 
+  <!-- VORTEILE -->
+  <section class="section" aria-labelledby="vorteile-title">
+    <div class="container">
+      <div data-reveal>
+        <p class="t-eyebrow" style="margin-bottom:12px;">Ihre Vorteile</p>
+        <h2 class="t-h2" id="vorteile-title">Datenschutz, der in Ihrem<br>Betrieb wirklich funktioniert</h2>
+        <p class="t-lead" style="max-width:580px;margin-top:16px;">Handwerksbetriebe brauchen keine juristischen Abhandlungen. Sie brauchen klare Prozesse, die ihr Team im Alltag umsetzen kann.</p>
+      </div>
+      <div class="vorteile-grid">
+        <div class="vorteile-img-wrap" data-reveal>
+          <img src="../alexander-kroes-tablet.webp" alt="Alexander Kroes, Externer Datenschutzbeauftragter für Handwerksbetriebe" class="vorteile-img" width="480" height="600" loading="lazy">
+          <div class="vorteile-badge" aria-label="Über 50 betreute Handwerksbetriebe">50+<br><span style="font-size:12px;font-weight:500;">Betriebe</span></div>
+        </div>
+        <div class="vorteile-list" data-reveal data-reveal-delay="1">
+          <div class="vorteile-item">
+            <div class="vorteile-item__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <div>
+              <p class="vorteile-item__title">Kundendaten auf Baustellen gesichert</p>
+              <p class="vorteile-item__text">Klare Regeln für Fotos, Messenger und Zugangsdaten direkt an der Quelle. Ihr Team weiß, was erlaubt ist und was nicht.</p>
+            </div>
+          </div>
+          <div class="vorteile-item">
+            <div class="vorteile-item__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div>
+              <p class="vorteile-item__title">WhatsApp-Lösung für den Betrieb</p>
+              <p class="vorteile-item__text">Praxisnahe Alternative zur privaten Messenger-Nutzung. Eine Lösung, die Ihr Team akzeptiert und die rechtlich sauber ist.</p>
+            </div>
+          </div>
+          <div class="vorteile-item">
+            <div class="vorteile-item__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/><path d="M8 6h8M8 10h8M8 14h4"/></svg>
+            </div>
+            <div>
+              <p class="vorteile-item__title">Mobile Geräte rechtskonform</p>
+              <p class="vorteile-item__text">Diensthandys und private Smartphones auf der Baustelle rechtssicher konfiguriert. Kein unkontrollierter Datenzugriff mehr.</p>
+            </div>
+          </div>
+          <div class="vorteile-item">
+            <div class="vorteile-item__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7l-9-5z"/></svg>
+            </div>
+            <div>
+              <p class="vorteile-item__title">Weniger Aufwand. Mehr Sicherheit.</p>
+              <p class="vorteile-item__text">Ich übersetze DSGVO-Anforderungen in konkrete Handlungsschritte für Ihren Betriebsalltag. Kein Fachjargon. Nur das, was wirklich zählt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PRÜFSCHWERPUNKTE -->
   <section class="section" aria-labelledby="audit-title">
     <div class="container">
@@ -800,6 +945,37 @@ Ihr Betrieb verarbeitet täglich Kundendaten: Adressen, Baupläne, Zugangscodes,
     </div>
   </section>
 
+  <!-- PROZESS -->
+  <section class="process-section" aria-labelledby="prozess-title">
+    <div class="container">
+      <div style="text-align:center;" data-reveal>
+        <p class="t-eyebrow" style="margin-bottom:12px;">So läuft es ab</p>
+        <h2 class="t-h2" id="prozess-title">In 3 Schritten zu Ihrem<br>geschützten Betrieb</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step" data-reveal>
+          <div class="process-step__circle" aria-hidden="true">1</div>
+          <p class="process-step__label">Schritt 1</p>
+          <h3 class="process-step__title">Kostenloses Erstgespräch</h3>
+          <p class="process-step__text">30 Minuten. Ich lerne Ihren Betrieb kennen und erkläre, wo typische Risiken für Handwerksbetriebe liegen.</p>
+        </div>
+        <div class="process-step" data-reveal data-reveal-delay="1">
+          <div class="process-step__circle" aria-hidden="true">2</div>
+          <p class="process-step__label">Schritt 2</p>
+          <h3 class="process-step__title">Betriebsanalyse</h3>
+          <p class="process-step__text">Ich analysiere Ihre Datenflüsse, Mobilgeräte, Messenger und Kundenprozesse direkt im Betrieb. Klar und verständlich.</p>
+        </div>
+        <div class="process-step" data-reveal data-reveal-delay="2">
+          <div class="process-step__circle" aria-hidden="true">3</div>
+          <p class="process-step__label">Schritt 3</p>
+          <h3 class="process-step__title">Umsetzung und Betreuung</h3>
+          <p class="process-step__text">Klare Maßnahmenpakete. Schulung Ihres Teams. Laufende Betreuung, damit Ihr Betrieb dauerhaft geschützt bleibt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ÜBER ALEXANDER -->
   <section class="section" id="ueber-kroes" aria-labelledby="ueber-title">
     <div class="container">
@@ -822,6 +998,73 @@ Ihr Betrieb verarbeitet täglich Kundendaten: Adressen, Baupläne, Zugangscodes,
           <p class="t-body" style="margin-bottom:16px;">Mit Sitz in Kufstein, Tirol, betreue ich Handwerksbetriebe im gesamten DACH-Raum. Ich spreche kein Behördendeutsch und erwarte keines von Ihnen. Datenschutz für Handwerksbetriebe muss praktisch und umsetzbar sein, nicht theoretisch und bürokratisch.</p>
           <p class="t-body" style="margin-bottom:28px;">Als externer DSB entlaste ich Sie dauerhaft von allen Datenschutzaufgaben. Sie erhalten klare Regeln, vollständige Dokumentation und einen Ansprechpartner, der auch bei einer Behördenprüfung oder einem Datenverlust sofort an Ihrer Seite steht. Damit Sie sich auf Ihren Betrieb konzentrieren können.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <!-- HINWEIS: Platzhaltertexte – bitte durch echte Kundenstimmen ersetzen -->
+  <section class="testimonials-section" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div style="text-align:center;" data-reveal>
+        <p class="t-eyebrow" style="margin-bottom:12px;">Kundenstimmen</p>
+        <h2 class="t-h2" id="testimonials-title">Was Handwerksbetriebe<br>über die Zusammenarbeit sagen</h2>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card" data-reveal>
+          <div class="testimonial-card__quote" aria-hidden="true">"</div>
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-card__text">„Herr Kroes hat uns erklärt, was bei WhatsApp wirklich problematisch ist. Jetzt haben wir eine klare Lösung, die unser Team auch wirklich nutzt."</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-avatar" aria-hidden="true">TZ</div>
+            <div>
+              <p class="testimonial-card__name">Thomas Z.</p>
+              <p class="testimonial-card__role">Zimmereimeister, Wien</p>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" data-reveal data-reveal-delay="1">
+          <div class="testimonial-card__quote" aria-hidden="true">"</div>
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-card__text">„Endlich jemand, der nicht nur Gesetze zitiert, sondern versteht, wie ein Handwerksbetrieb funktioniert. Die Umsetzung war einfacher als erwartet."</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-avatar" aria-hidden="true">KM</div>
+            <div>
+              <p class="testimonial-card__name">Klaus M.</p>
+              <p class="testimonial-card__role">Elektromeister, München</p>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card" data-reveal data-reveal-delay="2">
+          <div class="testimonial-card__quote" aria-hidden="true">"</div>
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-card__text">„Wir dachten, Datenschutz ist nur für große Firmen. Nach dem Erstgespräch war klar, dass wir wirklich Handlungsbedarf hatten. Gut, dass wir uns gemeldet haben."</p>
+          <div class="testimonial-card__footer">
+            <div class="testimonial-avatar" aria-hidden="true">RS</div>
+            <div>
+              <p class="testimonial-card__name">Renate S.</p>
+              <p class="testimonial-card__role">Sanitär und Heizung, Innsbruck</p>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
