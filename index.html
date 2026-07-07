@@ -4482,7 +4482,7 @@
   position: relative;
   z-index: 2;
   display: block;
-  padding: 160px 48px 100px;
+  padding: 80px 48px 100px;
   max-width: 1280px;
 }
 .hero__content { max-width: 620px; padding: 0; }
@@ -4502,17 +4502,7 @@
 .hero .btn-ghost:hover { color: #fff; }
 .hero__visual { display: none; }
 
-/* Logo über dunklem Hero: weiß statt dunkel */
-.nav:not(.scrolled) .nav__logo-mark {
-  mix-blend-mode: normal !important;
-  filter: brightness(0) invert(1);
-}
-.nav.scrolled .nav__logo-mark {
-  mix-blend-mode: multiply !important;
-  filter: none;
-}
-
-/* Topbar + Nav als fixed Overlay über dem Hero */
+/* Topbar: bleibt beim Scrollen fixiert */
 .topbar {
   position: fixed !important;
   top: 0 !important;
@@ -4521,41 +4511,32 @@
   z-index: 1100 !important;
   width: 100% !important;
 }
+/* Nav scrollt mit der Seite, schiebt sich unter die fixe Topbar */
 .nav {
-  position: fixed !important;
-  top: 38px !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 1099 !important;
-  width: 100% !important;
-  background-color: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border-bottom-color: rgba(255,255,255,0.10) !important;
-}
-.nav.scrolled {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  margin-top: 38px !important;
   background-color: rgba(255,255,255,0.96) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
-  border-bottom-color: rgba(15,31,61,0.08) !important;
 }
 
 @media (max-width: 1024px) {
   .hero { background-position: 65% top; }
-  .hero__inner { padding: 148px 40px 80px; }
+  .hero__inner { padding: 64px 40px 80px; }
 }
 @media (max-width: 768px) {
   .hero { min-height: 80vh; background-position: 72% top; }
-  .hero__inner { padding: 112px 24px 72px; }
+  .hero__inner { padding: 48px 24px 72px; }
   .hero__content { max-width: 100%; }
-  .topbar { position: fixed !important; }
-  .nav { top: 38px !important; }
 }
 @media (max-width: 480px) {
   .hero { min-height: 100svh; background-position: 75% top; }
-  .hero__inner { padding: 96px 20px 64px; }
+  .hero__inner { padding: 40px 20px 64px; }
   .topbar { display: none !important; }
-  .nav { top: 0 !important; }
+  .nav { margin-top: 0 !important; }
 }
 
 /* ===== LATEST POSTS ===== */
