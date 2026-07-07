@@ -4459,14 +4459,21 @@
   background-color: var(--color-navy, #0F1F3D);
   background-image:
     linear-gradient(90deg,
-      rgba(15,31,61,1.00) 0%,
-      rgba(15,31,61,1.00) 63%,
-      rgba(15,31,61,0.00) 80%
+      rgba(15,31,61,0.97) 0%,
+      rgba(15,31,61,0.97) 42%,
+      rgba(15,31,61,0.00) 64%
     ),
+    url('alexander-kroes-desktop.webp'),
     url('alexander-kroes-desktop.webp');
-  background-size: auto, auto 100%;
-  background-position: center, right top;
-  background-repeat: no-repeat, no-repeat;
+  background-size:
+    auto,
+    auto 100%,
+    cover;
+  background-position:
+    center,
+    right top,
+    center top;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   padding-top: 64px;
   padding-bottom: 0;
   display: flex !important;
