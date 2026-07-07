@@ -4464,13 +4464,13 @@
   align-items: stretch !important;
   justify-content: flex-start !important;
 }
-/* Foto absolut rechts positioniert */
+/* Foto absolut, volle Flaeche, Gesicht rechts */
 .hero__photo {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  width: 55%;
   z-index: 0;
   overflow: hidden;
 }
@@ -4478,7 +4478,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left top;
+  object-position: 75% top;
   display: block;
 }
 .hero::before {
@@ -4489,10 +4489,11 @@
   pointer-events: none;
   background: linear-gradient(
     90deg,
-    rgba(15,31,61,0.97) 0%,
-    rgba(15,31,61,0.90) 35%,
-    rgba(15,31,61,0.55) 58%,
-    rgba(15,31,61,0.05) 100%
+    rgba(15,31,61,1.00) 0%,
+    rgba(15,31,61,1.00) 38%,
+    rgba(15,31,61,0.70) 52%,
+    rgba(15,31,61,0.20) 68%,
+    rgba(15,31,61,0.00) 82%
   );
 }
 .hero__inner {
