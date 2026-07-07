@@ -4452,6 +4452,69 @@
 .nav__mobile-social a:hover { color: var(--color-navy, #0F1F3D) !important; border-color: var(--color-navy, #0F1F3D) !important; }
 /* ===== END FLUID NAVIGATION ===== */
 
+/* ===== HERO FULLBLEED ===== */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('alexander-kroes-desktop.webp');
+  background-size: cover;
+  background-position: center top;
+  background-color: var(--color-navy, #0F1F3D);
+  padding-top: 0;
+  padding-bottom: 0;
+  align-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    rgba(15,31,61,0.92) 0%,
+    rgba(15,31,61,0.82) 32%,
+    rgba(15,31,61,0.48) 58%,
+    rgba(15,31,61,0.06) 100%
+  );
+}
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 160px 48px 100px;
+  max-width: 1280px;
+}
+.hero__content { max-width: 620px; padding: 0; }
+.hero__eyebrow-main { color: var(--color-gold, #C9A84C); }
+.hero__eyebrow-main::after { background-color: rgba(201,168,76,0.35); }
+.hero__eyebrow-sub { color: rgba(255,255,255,0.50); }
+.hero__headline { color: #fff; }
+.hero__lead { color: rgba(255,255,255,0.78); }
+.hero__trust-row { background-color: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.14); }
+.hero__trust-item { color: rgba(255,255,255,0.65); }
+.hero__trust-item:not(:last-child) { border-right-color: rgba(255,255,255,0.14); }
+.hero__trust-dot { background-color: #10b981; }
+.hero .btn-primary { background: rgba(255,255,255,0.95); color: var(--color-navy, #0F1F3D); }
+.hero .btn-primary:hover { background: #fff; transform: translateY(-2px); }
+.hero .btn-primary::after { background-color: var(--color-gold, #C9A84C); }
+.hero .btn-ghost { color: rgba(255,255,255,0.72); }
+.hero .btn-ghost:hover { color: #fff; }
+.hero__visual { display: none; }
+@media (max-width: 1024px) {
+  .hero { background-position: 65% top; }
+  .hero__inner { padding: 140px 40px 80px; }
+}
+@media (max-width: 768px) {
+  .hero { min-height: 80vh; background-position: 72% top; }
+  .hero__inner { padding: 120px 24px 72px; }
+  .hero__content { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .hero { min-height: 100svh; background-position: 75% top; }
+  .hero__inner { padding: 110px 20px 64px; }
+}
+
 /* ===== LATEST POSTS ===== */
 .latest-posts { padding: 80px 0; background: var(--color-sky-tint, #E8EFF8); }
 .latest-posts__header { text-align: center; margin-bottom: 48px; }
@@ -4767,30 +4830,6 @@
         </div>
       </div>
 
-      <div class="hero__visual">
-        <div class="hero__photo-wrap">
-          <picture>
-            <source srcset="alexander-kroes-mobile.webp" media="(max-width: 480px)" type="image/webp">
-            <source srcset="alexander-kroes-mobile.png" media="(max-width: 480px)">
-            <source srcset="alexander-kroes-tablet.webp" media="(max-width: 768px)" type="image/webp">
-            <source srcset="alexander-kroes-tablet.png" media="(max-width: 768px)">
-            <source srcset="alexander-kroes-desktop.webp" type="image/webp">
-            <img
-              class="hero__photo"
-              src="alexander-kroes-desktop.png"
-              alt="Alexander Kroes – Externer Datenschutzbeauftragter für KMU in Tirol, Salzburg, München und Rosenheim"
-              loading="eager"
-              fetchpriority="high"
-              width="700"
-              height="1050"
-            >
-          </picture>
-        </div>
-        <div class="hero__photo-caption">
-          <span class="hero__photo-name">Alexander Kroes</span>
-          <span class="hero__photo-role">Inhaber von Datenschutz Kroes</span>
-        </div>
-      </div>
       </div>
     </section>
 
