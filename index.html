@@ -4457,6 +4457,17 @@
   position: relative;
   min-height: 80vh;
   background-color: var(--color-navy, #0F1F3D);
+  background-image:
+    linear-gradient(90deg,
+      rgba(15,31,61,1.00) 0%,
+      rgba(15,31,61,1.00) 38%,
+      rgba(15,31,61,0.60) 54%,
+      rgba(15,31,61,0.00) 70%
+    ),
+    url('alexander-kroes-desktop.webp');
+  background-size: cover, auto 100%;
+  background-position: center, right top;
+  background-repeat: no-repeat, no-repeat;
   padding-top: 64px;
   padding-bottom: 0;
   display: flex !important;
@@ -4464,37 +4475,8 @@
   align-items: stretch !important;
   justify-content: flex-start !important;
 }
-/* Foto absolut, volle Flaeche, Gesicht rechts */
-.hero__photo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-.hero__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 75% top;
-  display: block;
-}
 .hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    rgba(15,31,61,1.00) 0%,
-    rgba(15,31,61,1.00) 38%,
-    rgba(15,31,61,0.70) 52%,
-    rgba(15,31,61,0.20) 68%,
-    rgba(15,31,61,0.00) 82%
-  );
+  display: none;
 }
 .hero__inner {
   position: relative;
@@ -4561,18 +4543,16 @@
 
 @media (max-width: 1024px) {
   .hero__inner { padding: 32px 40px 80px; }
-  .hero__photo { width: 50%; }
+  .hero { background-size: cover, auto 100%; background-position: center, right top; }
 }
 @media (max-width: 768px) {
-  .hero { min-height: 85vh; }
+  .hero { min-height: 85vh; background-size: cover, auto 100%; background-position: center, 80% top; }
   .hero__inner { padding: 24px 24px 72px; }
   .hero__content { max-width: 100%; }
-  .hero__photo { width: 60%; opacity: 0.6; }
 }
 @media (max-width: 480px) {
-  .hero { min-height: 100svh; padding-top: 0 !important; }
+  .hero { min-height: 100svh; padding-top: 0 !important; background-size: cover, auto 100%; background-position: center, 70% top; }
   .hero__inner { padding: 16px 20px 64px; }
-  .hero__photo { width: 80%; opacity: 0.4; }
   .topbar { display: none !important; }
 }
 
@@ -4840,9 +4820,6 @@
           </div>
         </div>
       </nav>
-      <div class="hero__photo" aria-hidden="true">
-        <img src="alexander-kroes-desktop.webp" alt="">
-      </div>
       <div class="hero__inner">
       <div class="hero__content">
         <div class="hero__eyebrow">
