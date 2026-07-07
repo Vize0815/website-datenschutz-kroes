@@ -4469,7 +4469,18 @@
   justify-content: flex-start !important;
 }
 .hero::before {
-  display: none;
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(15, 31, 61, 0.68) 0%,
+    rgba(15, 31, 61, 0.42) 45%,
+    rgba(15, 31, 61, 0.08) 70%,
+    rgba(15, 31, 61, 0.00) 100%
+  );
+  pointer-events: none;
 }
 .hero__inner {
   position: relative;
