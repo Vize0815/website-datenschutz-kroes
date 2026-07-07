@@ -4482,7 +4482,7 @@
   position: relative;
   z-index: 2;
   display: block;
-  padding: 205px 48px 100px;
+  padding: 48px 48px 100px;
   max-width: 1280px;
 }
 .hero__content { max-width: 620px; padding: 0; }
@@ -4511,13 +4511,13 @@
   z-index: 1100 !important;
   width: 100% !important;
 }
-/* Nav: transparent, scrollt mit der Seite */
+/* Nav: transparent, innerhalb des Hero-Bereichs */
 .nav {
   position: relative !important;
   top: auto !important;
   left: auto !important;
   right: auto !important;
-  margin-top: 38px !important;
+  margin-top: 0 !important;
   background-color: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -4528,25 +4528,25 @@
 .nav .nav__logo-mark {
   mix-blend-mode: normal !important;
 }
-/* Hero-Foto hinter die transparente Nav ziehen */
+/* Hero beginnt direkt unterhalb der fixen Topbar */
 .hero {
-  margin-top: -175px !important;
+  padding-top: 38px !important;
+  margin-top: 0 !important;
 }
 
 @media (max-width: 1024px) {
   .hero { background-position: 65% top; }
-  .hero__inner { padding: 190px 40px 80px; }
+  .hero__inner { padding: 40px 40px 80px; }
 }
 @media (max-width: 768px) {
   .hero { min-height: 80vh; background-position: 72% top; }
-  .hero__inner { padding: 180px 24px 72px; }
+  .hero__inner { padding: 32px 24px 72px; }
   .hero__content { max-width: 100%; }
 }
 @media (max-width: 480px) {
-  .hero { min-height: 100svh; background-position: 75% top; margin-top: -175px !important; }
-  .hero__inner { padding: 160px 20px 64px; }
+  .hero { min-height: 100svh; background-position: 75% top; padding-top: 0 !important; }
+  .hero__inner { padding: 24px 20px 64px; }
   .topbar { display: none !important; }
-  .nav { margin-top: 0 !important; }
 }
 
 /* ===== LATEST POSTS ===== */
@@ -4633,42 +4633,6 @@
     </div>
   </div>
 
-  <!-- ============= NAVIGATION ============= -->
-  <nav class="nav" id="nav" aria-label="Hauptnavigation">
-    <div class="container">
-      <div class="nav__inner">
-        <a href="#" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
-          <picture>
-            <source srcset="logo-datenschutz-kroes.webp" type="image/webp">
-            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
-          </picture>
-        </a>
-
-        <ul class="nav__links" role="list">
-          <li><a href="#alexander-kroes" class="nav__link">Alexander Kroes</a></li>
-          <li><a href="#leistungen" class="nav__link">Leistungen</a></li>
-          <li><a href="datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
-          <li><a href="#seminare" class="nav__link">Seminare</a></li>
-          <li><a href="karriere.html" class="nav__link">Karriere</a></li>
-          <li><a href="fallbeispiele.html" class="nav__link">Fallbeispiele</a></li>
-          <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
-          <li><a href="downloads.html" class="nav__link">Downloads</a></li>
-          <li><a href="datenschutz-blog/" class="nav__link">Blog</a></li>
-        </ul>
-
-        <button
-          class="nav__hamburger"
-          id="hamburger"
-          aria-label="Menü öffnen"
-          aria-expanded="false"
-          aria-controls="mobile-overlay">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
 
   <!-- Mobile overlay -->
   <div class="nav__mobile-overlay" id="mobile-overlay" aria-hidden="true" role="dialog" aria-label="Navigation">
@@ -4816,6 +4780,42 @@
   <main>
     <!-- ============= HERO ============= -->
     <section class="hero" aria-label="Einleitung">
+      <!-- ============= NAVIGATION ============= -->
+      <nav class="nav" id="nav" aria-label="Hauptnavigation">
+        <div class="container">
+          <div class="nav__inner">
+            <a href="#" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
+              <picture>
+                <source srcset="logo-datenschutz-kroes.webp" type="image/webp">
+                <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
+              </picture>
+            </a>
+
+            <ul class="nav__links" role="list">
+              <li><a href="#alexander-kroes" class="nav__link">Alexander Kroes</a></li>
+              <li><a href="#leistungen" class="nav__link">Leistungen</a></li>
+              <li><a href="datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
+              <li><a href="#seminare" class="nav__link">Seminare</a></li>
+              <li><a href="karriere.html" class="nav__link">Karriere</a></li>
+              <li><a href="fallbeispiele.html" class="nav__link">Fallbeispiele</a></li>
+              <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+              <li><a href="downloads.html" class="nav__link">Downloads</a></li>
+              <li><a href="datenschutz-blog/" class="nav__link">Blog</a></li>
+            </ul>
+
+            <button
+              class="nav__hamburger"
+              id="hamburger"
+              aria-label="Menü öffnen"
+              aria-expanded="false"
+              aria-controls="mobile-overlay">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
       <div class="hero__inner">
       <div class="hero__content">
         <div class="hero__eyebrow">
