@@ -30,3 +30,5 @@ vor Code-Generierung immer den 'frontend-design' Skill laden. Kein Überspringen
 ## Standardausgabe 
 Alle Layouts sind „mobile-first“. 
 Keine Bindestriche verwenden! Diese durch Punkt, Komma oder Bindewörter ersetzen! 
+strukturelle <style>-Eingriffe nur nach vollständiger CSS-Abhängigkeitsanalyse
+
