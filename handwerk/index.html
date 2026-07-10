@@ -554,6 +554,232 @@
 .nav__mobile-social a { width: 36px !important; height: 36px !important; border-radius: 50% !important; border: 1px solid var(--color-mist, #DDE3EC) !important; color: var(--color-slate-light, #8A99AD) !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transition: color 200ms ease, border-color 200ms ease !important; background-color: transparent !important; }
 .nav__mobile-social a:hover { color: var(--color-navy, #0F1F3D) !important; border-color: var(--color-navy, #0F1F3D) !important; }
 /* ===== END FLUID NAVIGATION ===== */
+
+/* ===== HANDWERK-FIT-RECHNER ===== */
+.fit-rechner {
+  background: linear-gradient(160deg, var(--color-navy) 0%, #0d1b38 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.fit-rechner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(201,168,76,0.09) 0%, transparent 65%);
+  pointer-events: none;
+}
+.fit-rechner__header { text-align: center; margin-bottom: 52px; position: relative; z-index: 1; }
+.fit-rechner__eyebrow { color: var(--color-gold); margin-bottom: 12px; }
+.fit-rechner__title {
+  font-family: var(--font-sans);
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 12px 0 16px;
+}
+.fit-rechner__sub {
+  font-family: var(--font-sans);
+  font-size: var(--text-lead);
+  font-weight: 300;
+  color: rgba(255,255,255,0.58);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.fit-selector {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+  position: relative;
+  z-index: 1;
+}
+.fit-selector__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 24px 44px;
+  border: 1.5px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.04);
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.4,0,0.2,1);
+  min-width: 192px;
+  font-family: inherit;
+  position: relative;
+}
+.fit-selector__btn:hover {
+  border-color: rgba(201,168,76,0.55);
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+.fit-selector__btn.active {
+  border-color: var(--color-gold);
+  background: rgba(201,168,76,0.11);
+}
+.fit-selector__btn.active .fit-selector__size { color: var(--color-gold); }
+.fit-selector__btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--color-gold);
+  border-radius: 2px;
+}
+.fit-selector__size {
+  font-family: var(--font-sans);
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  transition: color 280ms ease;
+}
+.fit-selector__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.fit-result {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.fit-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 28px 72px rgba(0,0,0,0.28);
+  animation: fitCardIn 340ms cubic-bezier(0.34,1.1,0.64,1) forwards;
+}
+@keyframes fitCardIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)  scale(1); }
+}
+.fit-card[hidden] { display: none; }
+.fit-card__header {
+  background: var(--color-navy);
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.fit-card__header--highlight {
+  background: linear-gradient(135deg, #1a3d75 0%, var(--color-navy) 100%);
+}
+.fit-card__pkg { display: flex; align-items: center; gap: 14px; }
+.fit-card__pkg-badge {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(201,168,76,0.14);
+  border: 1.5px solid rgba(201,168,76,0.38);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 22px; font-weight: 700;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+.fit-card__pkg-name {
+  font-family: var(--font-sans);
+  font-size: 20px; font-weight: 600;
+  color: #fff;
+  display: flex; align-items: center; gap: 10px;
+}
+.fit-card__pkg-popular {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-gold);
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 2px 8px; border-radius: 20px;
+}
+.fit-card__pkg-size {
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.45); margin-top: 4px;
+}
+.fit-card__price-block { text-align: right; }
+.fit-card__price {
+  font-family: var(--font-sans);
+  font-size: 34px; font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: -0.025em; line-height: 1;
+}
+.fit-card__price-label {
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); margin-top: 5px;
+}
+.fit-card__setup {
+  font-family: var(--font-sans);
+  font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 3px;
+}
+.fit-card__body { padding: 32px 36px 36px; }
+.fit-card__features { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+.fit-card__feature { display: flex; align-items: flex-start; gap: 12px; }
+.fit-card__feature-icon {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--color-sky-tint);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-prussian); flex-shrink: 0; margin-top: 1px;
+}
+.fit-card__feature-text { font-family: var(--font-sans); font-size: 15px; color: var(--color-ink); line-height: 1.55; }
+.fit-card__feature-text strong { font-weight: 600; color: var(--color-navy); }
+.fit-card__footer {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding-top: 24px; border-top: 1px solid var(--color-mist); flex-wrap: wrap;
+}
+.fit-card__guarantee {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-slate);
+}
+.fit-card__guarantee svg { color: var(--color-gold); flex-shrink: 0; }
+.fit-card__cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-sans); font-size: 15px; font-weight: 600;
+  color: var(--color-surface); background-color: var(--color-navy);
+  padding: 13px 24px; border-radius: var(--radius-md);
+  transition: background-color var(--transition-base), transform var(--transition-base);
+  text-decoration: none; white-space: nowrap;
+}
+.fit-card__cta:hover { background-color: var(--color-prussian); transform: translateY(-1px); }
+.fit-rechner__hint { text-align: center; margin-top: 28px; position: relative; z-index: 1; }
+.fit-rechner__hint a {
+  font-family: var(--font-sans); font-size: 14px;
+  color: rgba(255,255,255,0.35);
+  text-decoration: underline; text-underline-offset: 3px;
+  transition: color var(--transition-base);
+}
+.fit-rechner__hint a:hover { color: rgba(255,255,255,0.65); }
+@media (max-width: 768px) {
+  .fit-selector { gap: 12px; }
+  .fit-selector__btn { min-width: 0; flex: 1; padding: 18px 20px; }
+  .fit-card__header { padding: 22px 24px; }
+  .fit-card__body { padding: 24px; }
+  .fit-card__price { font-size: 28px; }
+  .fit-card__footer { flex-direction: column; align-items: flex-start; }
+  .fit-card__cta { width: 100%; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .fit-rechner { padding: 72px 0; }
+  .fit-selector { flex-direction: column; }
+  .fit-selector__btn { flex-direction: row; justify-content: space-between; align-items: center; padding: 14px 18px; }
+  .fit-selector__size { font-size: 18px; }
+}
+/* ===== END HANDWERK-FIT-RECHNER ===== */
 </style>
 </head>
 <body>
@@ -945,6 +1171,184 @@ Ihr Betrieb verarbeitet täglich Kundendaten: Adressen, Baupläne, Zugangscodes,
     </div>
   </section>
 
+  <!-- HANDWERK-FIT-RECHNER -->
+  <section class="fit-rechner" id="betrieb-paket" aria-labelledby="fit-rechner-title">
+    <div class="container">
+      <div class="fit-rechner__header" data-reveal>
+        <p class="t-eyebrow fit-rechner__eyebrow">Ihr Paket in Sekunden</p>
+        <h2 class="fit-rechner__title" id="fit-rechner-title">Welches Paket passt zu Ihrem Betrieb?</h2>
+        <p class="fit-rechner__sub">Wählen Sie Ihre Betriebsgröße und sehen Sie sofort Preis sowie alle enthaltenen Leistungen.</p>
+      </div>
+
+      <div class="fit-selector" role="group" aria-label="Betriebsgröße wählen" data-reveal data-reveal-delay="1">
+        <button class="fit-selector__btn" data-package="s" aria-pressed="false" type="button">
+          <span class="fit-selector__size">bis 20</span>
+          <span class="fit-selector__label">Mitarbeiter</span>
+        </button>
+        <button class="fit-selector__btn" data-package="m" aria-pressed="false" type="button">
+          <span class="fit-selector__size">20 bis 50</span>
+          <span class="fit-selector__label">Mitarbeiter</span>
+        </button>
+        <button class="fit-selector__btn" data-package="l" aria-pressed="false" type="button">
+          <span class="fit-selector__size">50 bis 100</span>
+          <span class="fit-selector__label">Mitarbeiter</span>
+        </button>
+      </div>
+
+      <div class="fit-result" id="fit-result-hw" aria-live="polite">
+
+        <!-- Paket S -->
+        <div class="fit-card" id="fit-card-hw-s" hidden>
+          <div class="fit-card__header">
+            <div class="fit-card__pkg">
+              <div class="fit-card__pkg-badge">S</div>
+              <div>
+                <p class="fit-card__pkg-name">Paket S</p>
+                <p class="fit-card__pkg-size">bis 20 Mitarbeiter</p>
+              </div>
+            </div>
+            <div class="fit-card__price-block">
+              <p class="fit-card__price">290 €</p>
+              <p class="fit-card__price-label">pro Monat · netto</p>
+              <p class="fit-card__setup">zzgl. 990 € Einrichtungsgebühr</p>
+            </div>
+          </div>
+          <div class="fit-card__body">
+            <ul class="fit-card__features" role="list">
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>Bestellung als externer DSB</strong> nach Art. 37 DSGVO. Volle Übernahme aller gesetzlichen DSB-Aufgaben.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>4 Stunden Beratung pro Quartal</strong> inklusive. Telefonischer und schriftlicher Support.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>5 AVV-Prüfungen pro Jahr</strong>. Auftragsverarbeitungsverträge mit Software-Dienstleistern und weiteren Anbietern.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>Alle Standardvorlagen</strong>: Verarbeitungsverzeichnis, Datenschutzerklärung, Einwilligungsformulare.</span>
+              </li>
+            </ul>
+            <div class="fit-card__footer">
+              <div class="fit-card__guarantee">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7l-9-5z"/></svg>
+                Festpreisgarantie inklusive
+              </div>
+              <a href="#hw-calendly-widget" class="fit-card__cta" onclick="document.getElementById('hw-calendly-widget').style.display='block';document.getElementById('hw-calendly-open-btn').style.display='none';document.getElementById('hw-calendly-widget').scrollIntoView({behavior:'smooth'});return false;">
+                Jetzt Erstgespräch vereinbaren
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paket M -->
+        <div class="fit-card" id="fit-card-hw-m" hidden>
+          <div class="fit-card__header fit-card__header--highlight">
+            <div class="fit-card__pkg">
+              <div class="fit-card__pkg-badge">M</div>
+              <div>
+                <p class="fit-card__pkg-name">Paket M <span class="fit-card__pkg-popular">Beliebt</span></p>
+                <p class="fit-card__pkg-size">20 bis 50 Mitarbeiter</p>
+              </div>
+            </div>
+            <div class="fit-card__price-block">
+              <p class="fit-card__price">590 €</p>
+              <p class="fit-card__price-label">pro Monat · netto</p>
+              <p class="fit-card__setup">zzgl. 1.490 € Einrichtungsgebühr</p>
+            </div>
+          </div>
+          <div class="fit-card__body">
+            <ul class="fit-card__features" role="list">
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>Bestellung als externer DSB</strong> nach Art. 37 DSGVO. Vollständige Übernahme aller DSB-Pflichten.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>8 Stunden Beratung pro Quartal</strong> inklusive. Prioritätssupport per Telefon und E-Mail.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>15 AVV-Prüfungen pro Jahr</strong> sowie eine Mitarbeiterschulung inklusive.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>Alle Vorlagen und Betriebsdokumentation</strong>: Verarbeitungsverzeichnis, AVVs, Datenschutzerklärung.</span>
+              </li>
+            </ul>
+            <div class="fit-card__footer">
+              <div class="fit-card__guarantee">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7l-9-5z"/></svg>
+                Festpreisgarantie inklusive
+              </div>
+              <a href="#hw-calendly-widget" class="fit-card__cta" onclick="document.getElementById('hw-calendly-widget').style.display='block';document.getElementById('hw-calendly-open-btn').style.display='none';document.getElementById('hw-calendly-widget').scrollIntoView({behavior:'smooth'});return false;">
+                Jetzt Erstgespräch vereinbaren
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paket L -->
+        <div class="fit-card" id="fit-card-hw-l" hidden>
+          <div class="fit-card__header">
+            <div class="fit-card__pkg">
+              <div class="fit-card__pkg-badge">L</div>
+              <div>
+                <p class="fit-card__pkg-name">Paket L</p>
+                <p class="fit-card__pkg-size">50 bis 100 Mitarbeiter</p>
+              </div>
+            </div>
+            <div class="fit-card__price-block">
+              <p class="fit-card__price">990 €</p>
+              <p class="fit-card__price-label">pro Monat · netto</p>
+              <p class="fit-card__setup">zzgl. 2.490 € Einrichtungsgebühr</p>
+            </div>
+          </div>
+          <div class="fit-card__body">
+            <ul class="fit-card__features" role="list">
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>Bestellung als externer DSB</strong> nach Art. 37 DSGVO. Volle Haftungsübernahme für die DSB-Funktion.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>12 Stunden Beratung pro Quartal</strong> sowie 2 Vor-Ort-Termine pro Jahr inklusive.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>Unbegrenzte AVV-Prüfungen</strong>. Mitarbeiterschulungen und vollständige Betriebsdokumentation.</span>
+              </li>
+              <li class="fit-card__feature">
+                <div class="fit-card__feature-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <span class="fit-card__feature-text"><strong>Soforterreichbarkeit bei Datenpannen</strong>. Koordination der behördlichen Meldung innerhalb der gesetzlichen Frist.</span>
+              </li>
+            </ul>
+            <div class="fit-card__footer">
+              <div class="fit-card__guarantee">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7l-9-5z"/></svg>
+                Festpreisgarantie inklusive
+              </div>
+              <a href="#hw-calendly-widget" class="fit-card__cta" onclick="document.getElementById('hw-calendly-widget').style.display='block';document.getElementById('hw-calendly-open-btn').style.display='none';document.getElementById('hw-calendly-widget').scrollIntoView({behavior:'smooth'});return false;">
+                Jetzt Erstgespräch vereinbaren
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="fit-rechner__hint" data-reveal>
+        <a href="../datenschutz-flatrate.html">Vollständige Preisübersicht mit allen Paketen und ISMS-Optionen ansehen</a>
+      </div>
+    </div>
+  </section>
+
   <!-- PROZESS -->
   <section class="process-section" aria-labelledby="prozess-title">
     <div class="container">
@@ -1202,6 +1606,27 @@ Ihr Betrieb verarbeitet täglich Kundendaten: Adressen, Baupläne, Zugangscodes,
       document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-trigger').setAttribute('aria-expanded', false); });
       if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', true); }
     }
+    (function initFitRechnerHw() {
+      var btns = document.querySelectorAll('.fit-selector__btn');
+      var cards = document.querySelectorAll('#fit-result-hw .fit-card');
+      btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var pkg = this.dataset.package;
+          btns.forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+          this.classList.add('active');
+          this.setAttribute('aria-pressed', 'true');
+          cards.forEach(function(c) { c.setAttribute('hidden', ''); });
+          var target = document.getElementById('fit-card-hw-' + pkg);
+          if (target) {
+            target.removeAttribute('hidden');
+            if (window.innerWidth < 768) {
+              setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 60);
+            }
+          }
+        });
+      });
+    })();
+
     (function alignHeroPhoto() {
       function update() {
         const desc = document.querySelector('.hero__desc');
