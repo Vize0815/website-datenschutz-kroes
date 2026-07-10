@@ -28,7 +28,7 @@
       required: false,
       description: 'Helfen zu verstehen, wie Besucher mit der Website interagieren, indem Informationen anonym gesammelt und gemeldet werden.',
       items: [
-        { name: 'Google Analytics 4 (GA4)', purpose: 'Erfasst anonymisierte Nutzungsdaten (Seitenaufrufe, Verweildauer, Einstiegsseiten) zur Reichweitenanalyse. Anbieter: Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland. Datenübertragung in die USA auf Basis von Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Mess-ID: G-XZKNK13MT1.', storage: 'Cookies (_ga, _ga_*)', duration: 'bis zu 2 Jahre' }
+        { name: 'Google Analytics 4 (GA4)', purpose: 'Erfasst anonymisierte Nutzungsdaten (Seitenaufrufe, Verweildauer, Einstiegsseiten) zur Reichweitenanalyse. Anbieter: Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland. Datenübertragung in die USA auf Basis von Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Mess-ID: G-VEP7SSRXMT.', storage: 'Cookies (_ga, _ga_*)', duration: 'bis zu 2 Jahre' }
       ]
     },
     {
