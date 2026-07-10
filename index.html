@@ -4452,113 +4452,6 @@
 .nav__mobile-social a:hover { color: var(--color-navy, #0F1F3D) !important; border-color: var(--color-navy, #0F1F3D) !important; }
 /* ===== END FLUID NAVIGATION ===== */
 
-/* ===== HERO FULLBLEED ===== */
-.hero {
-  position: relative;
-  min-height: 80vh;
-  background-color: var(--color-navy, #0F1F3D);
-  background-image: url('alexander-kroes-desktop.webp');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  padding-top: 64px;
-  padding-bottom: 0;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch !important;
-  justify-content: flex-start !important;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    to right,
-    rgba(15, 31, 61, 0.68) 0%,
-    rgba(15, 31, 61, 0.42) 45%,
-    rgba(15, 31, 61, 0.08) 70%,
-    rgba(15, 31, 61, 0.00) 100%
-  );
-  pointer-events: none;
-}
-.hero__inner {
-  position: relative;
-  z-index: 2;
-  display: block;
-  padding: 40px 48px 100px;
-  max-width: 1280px;
-}
-.hero__content { max-width: 620px; padding: 0; }
-.hero__eyebrow-main { color: var(--color-gold, #C9A84C); }
-.hero__eyebrow-main::after { background-color: rgba(201,168,76,0.35); }
-.hero__eyebrow-sub { color: rgba(255,255,255,0.50); }
-.hero__headline { color: #fff; }
-.hero__lead { color: rgba(255,255,255,0.78); }
-.hero__trust-row { background-color: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.14); }
-.hero__trust-item { color: rgba(255,255,255,0.65); }
-.hero__trust-item:not(:last-child) { border-right-color: rgba(255,255,255,0.14); }
-.hero__trust-dot { background-color: #10b981; }
-.hero .btn-primary { background: rgba(255,255,255,0.95); color: var(--color-navy, #0F1F3D); }
-.hero .btn-primary:hover { background: #fff; transform: translateY(-2px); }
-.hero .btn-primary::after { background-color: var(--color-gold, #C9A84C); }
-.hero .btn-ghost { color: rgba(255,255,255,0.72); }
-.hero .btn-ghost:hover { color: #fff; }
-.hero__visual { display: none; }
-
-/* Topbar: bleibt beim Scrollen fixiert */
-.topbar {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 1100 !important;
-  width: 100% !important;
-}
-/* Nav: erstes Flex-Kind im Hero, transparent */
-.nav {
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  width: 100% !important;
-  flex-shrink: 0 !important;
-  margin-top: 0 !important;
-  background-color: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border-bottom-color: transparent !important;
-  z-index: 2 !important;
-}
-/* Weißes Logo auf dunklem Hero: normal-Modus, kein Blend, größer */
-.nav .nav__logo-mark {
-  mix-blend-mode: normal !important;
-  width: 300px !important;
-  height: auto !important;
-}
-/* Nav-Rand entfernen */
-.nav {
-  border: none !important;
-}
-/* Dekorationslinie unter Eyebrow entfernen */
-.hero__eyebrow-main::after {
-  display: none !important;
-}
-
-@media (max-width: 1024px) {
-  .hero__inner { padding: 32px 40px 80px; }
-  .hero { background-size: cover, auto 100%; background-position: center, right top; }
-}
-@media (max-width: 768px) {
-  .hero { min-height: 85vh; background-size: cover, auto 100%; background-position: center, 80% top; }
-  .hero__inner { padding: 24px 24px 72px; }
-  .hero__content { max-width: 100%; }
-}
-@media (max-width: 480px) {
-  .hero { min-height: 100svh; padding-top: 0 !important; background-size: cover, auto 100%; background-position: center, 70% top; }
-  .hero__inner { padding: 16px 20px 64px; }
-  .topbar { display: none !important; }
-}
 
 /* ===== LATEST POSTS ===== */
 .latest-posts { padding: 80px 0; background: var(--color-sky-tint, #E8EFF8); }
@@ -4697,6 +4590,40 @@
     </div>
   </div>
 
+  <!-- ============= NAVIGATION ============= -->
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
+          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="#alexander-kroes" class="nav__link">Alexander Kroes</a></li>
+          <li><a href="#leistungen" class="nav__link">Leistungen</a></li>
+          <li><a href="datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
+          <li><a href="#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="karriere.html" class="nav__link">Karriere</a></li>
+          <li><a href="fallbeispiele.html" class="nav__link">Fallbeispiele</a></li>
+          <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+          <li><a href="downloads.html" class="nav__link">Downloads</a></li>
+          <li><a href="datenschutz-blog/" class="nav__link">Blog</a></li>
+        </ul>
+
+        <button
+          class="nav__hamburger"
+          id="hamburger"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          aria-controls="mobile-overlay">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
   <!-- ============= CALLBACK MODAL ============= -->
   <div class="callback-backdrop" id="callbackBackdrop" role="dialog" aria-modal="true" aria-labelledby="callbackTitle" aria-hidden="true">
     <div class="callback-modal" id="callbackModal">
@@ -4791,39 +4718,6 @@
   <main>
     <!-- ============= HERO ============= -->
     <section class="hero" aria-label="Einleitung">
-      <!-- ============= NAVIGATION ============= -->
-      <nav class="nav" id="nav" aria-label="Hauptnavigation">
-        <div class="container">
-          <div class="nav__inner">
-            <a href="#" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
-              <img src="logo-kroes-white.png?v=2" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
-            </a>
-
-            <ul class="nav__links" role="list">
-              <li><a href="#alexander-kroes" class="nav__link">Alexander Kroes</a></li>
-              <li><a href="#leistungen" class="nav__link">Leistungen</a></li>
-              <li><a href="datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
-              <li><a href="#seminare" class="nav__link">Seminare</a></li>
-              <li><a href="karriere.html" class="nav__link">Karriere</a></li>
-              <li><a href="fallbeispiele.html" class="nav__link">Fallbeispiele</a></li>
-              <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
-              <li><a href="downloads.html" class="nav__link">Downloads</a></li>
-              <li><a href="datenschutz-blog/" class="nav__link">Blog</a></li>
-            </ul>
-
-            <button
-              class="nav__hamburger"
-              id="hamburger"
-              aria-label="Menü öffnen"
-              aria-expanded="false"
-              aria-controls="mobile-overlay">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </nav>
       <div class="hero__inner">
       <div class="hero__content">
         <div class="hero__eyebrow">
@@ -4869,6 +4763,31 @@
             <span class="hero__trust-dot" aria-hidden="true"></span>
             Persönliche Betreuung
           </span>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__photo-wrap">
+          <picture>
+            <source srcset="alexander-kroes-mobile.webp" media="(max-width: 480px)" type="image/webp">
+            <source srcset="alexander-kroes-mobile.png" media="(max-width: 480px)">
+            <source srcset="alexander-kroes-tablet.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="alexander-kroes-tablet.png" media="(max-width: 768px)">
+            <source srcset="alexander-kroes-desktop.webp" type="image/webp">
+            <img
+              class="hero__photo"
+              src="alexander-kroes-desktop.png"
+              alt="Alexander Kroes – Externer Datenschutzbeauftragter für KMU in Tirol, Salzburg, München und Rosenheim"
+              loading="eager"
+              fetchpriority="high"
+              width="700"
+              height="1050"
+            >
+          </picture>
+        </div>
+        <div class="hero__photo-caption">
+          <span class="hero__photo-name">Alexander Kroes</span>
+          <span class="hero__photo-role">Inhaber von Datenschutz Kroes</span>
         </div>
       </div>
 
