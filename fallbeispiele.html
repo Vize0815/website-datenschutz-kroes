@@ -790,6 +790,8 @@
 .nav__mobile-social a:hover { color: var(--color-navy, #0F1F3D) !important; border-color: var(--color-navy, #0F1F3D) !important; }
 /* ===== END FLUID NAVIGATION ===== */
 </style>
+  <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
 </head>
 <body>
 
@@ -1328,5 +1330,8 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(function(el) { revealObserver.observe(el); });
   </script>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
+  <script src="cookie-banner.js" defer></script>
+<button class="cc-settings-btn" onclick="window.DSKCookieConsent&&window.DSKCookieConsent.open()" aria-label="Cookie-Einstellungen" title="Cookie-Einstellungen"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a9.85 9.85 0 0 0-1 .05 10 10 0 1 0 9 9.95A10 10 0 0 1 12 2zm0 18a8 8 0 1 1 5.29-13.93 3.88 3.88 0 0 0 4.25 4 7.93 7.93 0 0 1-9.54 9.93z"/><circle cx="8.5" cy="9.5" r="1.5"/><circle cx="15.5" cy="14.5" r="1.5"/><circle cx="9" cy="14.5" r="1"/><circle cx="14.5" cy="9" r="1"/></svg></button>
 </body>
 </html>
