@@ -894,7 +894,7 @@
         <ul>
           <li><strong>Notwendig</strong> – technisch erforderlich, immer aktiv, keine Einwilligung nötig.</li>
           <li><strong>Präferenzen</strong> – speichern Einstellungen (z.B. Sprache). Aktuell nicht im Einsatz.</li>
-          <li><strong>Statistiken</strong> – anonymisierte Nutzungsanalyse. Aktuell nicht im Einsatz.</li>
+          <li><strong>Statistiken</strong> – Google Analytics 4 zur anonymisierten Nutzungsanalyse. Wird nur bei ausdrücklicher Einwilligung aktiviert (siehe Abschnitt 12).</li>
           <li><strong>Marketing</strong> – u.a. eingebettete YouTube-Videos auf Unterseiten (Google Ireland Ltd.). Werden nur bei Zustimmung geladen.</li>
         </ul>
 
@@ -939,11 +939,46 @@
               <td>Drittanbieter-Cookies (Google Ireland Ltd.)</td>
               <td>bis zu 2 Jahre</td>
             </tr>
+            <tr>
+              <td>_ga</td>
+              <td>Anonymisierte Client-ID zur Nutzerunterscheidung in Google Analytics 4 (nur bei Einwilligung „Statistiken")</td>
+              <td>Statistiken</td>
+              <td>Cookie (First-Party)</td>
+              <td>2 Jahre</td>
+            </tr>
+            <tr>
+              <td>_ga_VEP7SSRXMT</td>
+              <td>Session-Status für Google Analytics 4, Mess-ID G-VEP7SSRXMT (nur bei Einwilligung „Statistiken")</td>
+              <td>Statistiken</td>
+              <td>Cookie (First-Party)</td>
+              <td>2 Jahre</td>
+            </tr>
           </tbody>
         </table>
-        <p>Es werden <strong>keine Werbe-Cookies und keine personenbezogenen Tracking-Tools</strong> eingesetzt. Zur reinen Reichweitenmessung kommt ausschließlich <strong>Cloudflare Web Analytics</strong> zum Einsatz – ein <em>cookieloses</em>, datenschutzfreundliches Verfahren ohne Profilbildung (siehe Abschnitt 12). Die Kategorie „Marketing" steuert ausschließlich das optionale Laden von YouTube-Embeds. Die Kategorien Präferenzen und Statistiken sind aktuell ohne Funktion und werden erst bei künftiger Erweiterung der Website relevant.</p>
+        <p>Zur Nutzungsanalyse wird bei Einwilligung <strong>Google Analytics 4</strong> (Kategorie „Statistiken") eingesetzt, Details siehe Abschnitt 12. Zur cookielosen Reichweitenmessung kommt ergänzend <strong>Cloudflare Web Analytics</strong> ohne Einwilligung zum Einsatz (siehe Abschnitt 13). Die Kategorie „Marketing" steuert ausschließlich das optionale Laden von YouTube-Embeds. Die Kategorie „Präferenzen" ist aktuell ohne Funktion.</p>
 
-        <h2>12. Reichweitenmessung mit Cloudflare Web Analytics</h2>
+        <h2>12. Google Analytics 4 (Nutzungsanalyse)</h2>
+        <p>Diese Website verwendet <strong>Google Analytics 4 (GA4)</strong>, einen Webanalysedienst der <strong>Google Ireland Limited</strong>, Gordon House, Barrow Street, Dublin 4, Irland.</p>
+
+        <h3>12.1 Zweck und Funktionsweise</h3>
+        <p>GA4 erfasst bei Einwilligung anonymisierte Daten über das Verhalten von Besucherinnen und Besuchern: aufgerufene Seiten, Verweildauer, Einstiegs- und Ausstiegsseiten, ungefähren Standort (Land/Region), Gerät und Browser. Diese Daten helfen uns, die Website nutzergerecht weiterzuentwickeln.</p>
+
+        <h3>12.2 Consent Mode v2 und Privacy by Default</h3>
+        <p>Wir setzen <strong>Google Consent Mode v2</strong> ein. GA4 lädt auf jeder Seite, übermittelt jedoch <strong>standardmäßig keine personenbezogenen Daten</strong>. Erst wenn Sie im Cookie-Banner der Kategorie <strong>„Statistiken"</strong> ausdrücklich zustimmen, werden personenbezogene Nutzungsdaten erfasst und an Google übertragen. Ohne Einwilligung sendet GA4 ausschließlich anonymisierte Signale ohne Cookies und ohne User-ID.</p>
+
+        <h3>12.3 Rechtsgrundlage</h3>
+        <p>Die Verarbeitung erfolgt ausschließlich auf Grundlage Ihrer <strong>Einwilligung</strong> gemäß Art. 6 Abs. 1 lit. a DSGVO. Ohne Einwilligung findet keine personenbezogene Verarbeitung statt.</p>
+
+        <h3>12.4 Drittlandübermittlung</h3>
+        <p>Google Ireland Limited kann Daten an die <strong>Google LLC</strong>, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA weitergeben. Google LLC ist nach dem <strong>EU-US Data Privacy Framework</strong> zertifiziert (Angemessenheitsbeschluss der EU-Kommission vom 10.07.2023). Ergänzend bestehen <strong>EU-Standardvertragsklauseln (SCC)</strong> gemäß Art. 46 Abs. 2 lit. c DSGVO.</p>
+
+        <h3>12.5 Speicherdauer</h3>
+        <p>Die durch GA4 gesetzten Cookies (<code>_ga</code>, <code>_ga_VEP7SSRXMT</code>) werden für <strong>maximal 2 Jahre</strong> gespeichert. Rohdaten auf Google-Servern werden nach eigenen Angaben nach 14 Monaten automatisch gelöscht.</p>
+
+        <h3>12.6 Widerruf</h3>
+        <p>Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen: <a href="#" onclick="if(window.DSKCookieConsent){window.DSKCookieConsent.open();}return false;">Cookie-Einstellungen öffnen</a>. Alternativ steht das Browser-Add-on zur Deaktivierung von Google Analytics zur Verfügung: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">tools.google.com/dlpage/gaoptout</a>. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
+
+        <h2>13. Reichweitenmessung mit Cloudflare Web Analytics</h2>
         <p>Zur Auswertung der Zugriffe auf diese Website setzen wir <strong>Cloudflare Web Analytics</strong> ein, einen Dienst der <strong>Cloudflare, Inc.</strong>, 101 Townsend St, San Francisco, CA 94107, USA (im EWR vertreten durch die Cloudflare Germany GmbH, Rosental 7, c/o Mindspace, 80331 München).</p>
         <p><strong>Was unterscheidet Cloudflare Web Analytics von klassischen Analyse-Tools?</strong></p>
         <ul>
@@ -958,7 +993,7 @@
         <p><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sie können der Verarbeitung jederzeit widersprechen. Ein einfacher Weg ist die Aktivierung der Funktion „Do Not Track" bzw. „Globale Datenschutzkontrolle" (GPC) in Ihrem Browser oder der Einsatz eines Browser-Add-ins, das das Laden von <code>static.cloudflareinsights.com</code> blockiert. Weitere Informationen finden Sie unter: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a> und <a href="https://www.cloudflare.com/web-analytics-privacy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/web-analytics-privacy/</a>.</p>
         <p>Darüber hinaus setzen wir <strong>keine weiteren Tracking-, Analyse- oder Werbe-Tools</strong> ein (z. B. Google Analytics, Matomo, Facebook Pixel). Ein seitenübergreifendes Nutzerverhalten wird nicht erfasst, nicht ausgewertet und nicht an Dritte weitergegeben.</p>
 
-        <h2>13. Betroffenenrechte</h2>
+        <h2>14. Betroffenenrechte</h2>
         <p>Sie haben als betroffene Person folgende Rechte gemäß DSGVO:</p>
 
         <h3>13.1 Auskunftsrecht (Art. 15 DSGVO)</h3>
@@ -982,7 +1017,7 @@
         <h3>13.7 Recht auf Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)</h3>
         <p>Sie haben das Recht, eine erteilte Einwilligung jederzeit zu widerrufen. Durch den Widerruf wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt.</p>
 
-        <h2>14. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+        <h2>15. Beschwerderecht bei einer Aufsichtsbehörde</h2>
         <p>Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt.</p>
         <p>Die für uns zuständige Aufsichtsbehörde ist:</p>
         <p><strong>Österreichische Datenschutzbehörde</strong><br>
@@ -993,10 +1028,10 @@
         <strong>E-Mail:</strong> <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a><br>
         <strong>Website:</strong> <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">www.dsb.gv.at</a></p>
 
-        <h2>15. Datensicherheit</h2>
+        <h2>16. Datensicherheit</h2>
         <p>Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten gegen Manipulation, Verlust, Zerstörung oder den Zugriff unberechtigter Personen zu schützen. Unsere Sicherheitsmaßnahmen werden entsprechend der technologischen Entwicklung fortlaufend verbessert.</p>
 
-        <h2>16. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+        <h2>17. Aktualität und Änderung dieser Datenschutzerklärung</h2>
         <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juni 2026. Durch die Weiterentwicklung unserer Website und Angebote oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf dieser Seite abgerufen werden.</p>
 
       </div>
