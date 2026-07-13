@@ -191,7 +191,12 @@ button{font-family:inherit;border:none;cursor:pointer}
 .haftung-num{font-family:var(--f-mono);font-size:clamp(28px,3.5vw,46px);font-weight:400;color:var(--gold);letter-spacing:-.02em;line-height:1;margin-bottom:12px}
 .haftung-card-title{font-size:14px;font-weight:700;color:var(--white);margin-bottom:6px}
 .haftung-card-sub{font-size:13px;color:rgba(255,255,255,.5);line-height:1.65}
-@media(max-width:640px){.haftung-grid{grid-template-columns:1fr}}
+.haftung-triggers{display:flex;justify-content:center;gap:28px;margin-top:32px;flex-wrap:wrap}
+.haftung-trigger{display:flex;align-items:flex-start;gap:10px;max-width:260px}
+.haftung-trigger-dot{width:20px;height:20px;background:rgba(201,168,76,.14);border:1px solid rgba(201,168,76,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:10px;color:var(--gold);font-weight:700}
+.haftung-trigger-txt strong{display:block;font-size:13px;font-weight:700;color:rgba(255,255,255,.82);margin-bottom:3px}
+.haftung-trigger-txt span{font-size:12px;color:rgba(255,255,255,.42);line-height:1.55}
+@media(max-width:640px){.haftung-grid{grid-template-columns:1fr}.haftung-triggers{flex-direction:column;gap:18px;align-items:flex-start;padding:0 8px}}
 /* ANTI-ANWALT */
 .vs-sec{background:var(--white);padding:80px 0}
 .vs-wrap{max-width:840px;margin:48px auto 0;border-radius:var(--r16);overflow:hidden;box-shadow:var(--sh-lg);display:grid;grid-template-columns:1fr 52px 1fr}
@@ -322,8 +327,8 @@ button{font-family:inherit;border:none;cursor:pointer}
   <div class="w">
     <div class="haftung-head">
       <p class="haftung-eye">Persönliche Haftung</p>
-      <h2 class="haftung-h2">Als Geschäftsführung haften Sie persönlich.<br>Unabhängig von der Rechtsform des Unternehmens.</h2>
-      <p class="haftung-sub">Die DSGVO kennt keine GmbH-Haftungsbeschränkung. Verantwortliche Personen haften direkt, auch als Inhaber eines Handwerksbetriebs.</p>
+      <h2 class="haftung-h2">Die GmbH schützt Sie nicht immer.<br>Als Geschäftsführer können Sie privat in Anspruch genommen werden.</h2>
+      <p class="haftung-sub">Die Haftungsbeschränkung der GmbH fällt weg, sobald Ihnen persönliches Fehlverhalten nachgewiesen wird. Dann haften Sie mit Ihrem Privatvermögen.</p>
     </div>
     <div class="haftung-grid">
       <div class="haftung-card">
@@ -340,6 +345,29 @@ button{font-family:inherit;border:none;cursor:pointer}
         <p class="haftung-num">0 €</p>
         <p class="haftung-card-title">Versicherungsdeckung</p>
         <p class="haftung-card-sub">Datenschutzbußgelder sind nicht versicherbar. Sie tragen das Risiko vollständig persönlich.</p>
+      </div>
+    </div>
+    <div class="haftung-triggers">
+      <div class="haftung-trigger">
+        <div class="haftung-trigger-dot">!</div>
+        <div class="haftung-trigger-txt">
+          <strong>Organisationsverschulden</strong>
+          <span>Fehlende Datenschutzstrukturen und interne Prozesse im Betrieb</span>
+        </div>
+      </div>
+      <div class="haftung-trigger">
+        <div class="haftung-trigger-dot">!</div>
+        <div class="haftung-trigger-txt">
+          <strong>Vorsatz oder grobe Fahrlässigkeit</strong>
+          <span>Bekannte Risiken wurden ignoriert oder bewusst in Kauf genommen</span>
+        </div>
+      </div>
+      <div class="haftung-trigger">
+        <div class="haftung-trigger-dot">!</div>
+        <div class="haftung-trigger-txt">
+          <strong>Strafrechtliche Verstöße</strong>
+          <span>Bei besonders schwerwiegenden Datenschutzvorfällen</span>
+        </div>
       </div>
     </div>
   </div>
