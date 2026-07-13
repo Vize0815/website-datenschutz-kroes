@@ -39,7 +39,10 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 
 /* MAIN */
 main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 0}
-.ty-card{background:var(--white);border-radius:var(--r24);padding:60px 52px;box-shadow:var(--sh-md);text-align:center;max-width:640px;margin:0 auto}
+.ty-layout{display:flex;gap:40px;align-items:stretch;max-width:1020px;margin:0 auto;width:100%}
+.ty-card{flex:1;background:var(--white);border-radius:var(--r24);padding:60px 52px;box-shadow:var(--sh-md);text-align:center}
+.ty-side-img{width:280px;flex-shrink:0;border-radius:var(--r24);overflow:hidden;box-shadow:var(--sh-md)}
+.ty-side-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 
 .ty-check{width:72px;height:72px;background:var(--gold-lt);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:32px}
 .ty-eye{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
@@ -65,10 +68,6 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 
 .ty-tel svg{width:20px;height:20px;color:var(--gold)}
 .ty-tel-sub{font-size:12px;color:var(--slate);margin-top:10px}
 
-/* BRIDGE IMAGE */
-.bridge{background:var(--bg);padding:0}
-.bridge-img{width:100%;max-height:420px;object-fit:cover;object-position:center 20%;display:block}
-
 /* CALENDLY */
 .cal-sec{background:var(--white);padding:64px 0 80px;border-top:1px solid var(--mist)}
 .cal-hd{text-align:center;margin-bottom:32px}
@@ -84,6 +83,10 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 
 .ftr-links a{font-size:12px;color:rgba(255,255,255,.45);transition:color var(--t)}
 .ftr-links a:hover{color:var(--gold)}
 
+@media(max-width:768px){
+  .ty-layout{flex-direction:column}
+  .ty-side-img{display:none}
+}
 @media(max-width:640px){
   .w{padding:0 20px}
   main{padding:32px 0}
@@ -102,6 +105,7 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 
 
 <main>
   <div class="w">
+    <div class="ty-layout">
     <div class="ty-card">
       <div class="ty-check">✓</div>
       <p class="ty-eye">Anfrage eingegangen</p>
@@ -133,12 +137,12 @@ main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 
       </div>
 
     </div>
+    <div class="ty-side-img">
+      <img src="../alexander-kroes-20.webp" alt="Alexander Kroes. Externer Datenschutzbeauftragter" loading="lazy">
+    </div>
+    </div>
   </div>
 </main>
-
-<div class="bridge">
-  <img class="bridge-img" src="../alexander-kroes-20.webp" alt="Alexander Kroes. Externer Datenschutzbeauftragter" loading="lazy">
-</div>
 
 <section class="cal-sec">
   <div class="w">
