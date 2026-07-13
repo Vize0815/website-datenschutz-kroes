@@ -115,7 +115,7 @@ button{font-family:inherit;border:none;cursor:pointer}
 .rl.sel .rd::after{content:'';width:5px;height:5px;border-radius:50%;background:white}
 .fld{margin-bottom:14px}
 .fld label{display:block;font-size:11px;font-weight:700;color:var(--navy);margin-bottom:5px;letter-spacing:.06em;text-transform:uppercase}
-.fld input{width:100%;padding:13px 15px;border:2px solid var(--mist);border-radius:var(--r8);font-size:15px;color:var(--ink);background:var(--bg);transition:border-color var(--t),background var(--t);outline:none;font-family:var(--f-sans)}
+.fld input{width:100%;padding:13px 15px;border:2px solid var(--mist);border-radius:var(--r8);font-size:15px;color:var(--ink);background:var(--bg);transition:border-color var(--t),background var(--t);outline:none;font-family:var(--f-sans)}.fld select{width:100%;padding:13px 15px;border:2px solid var(--mist);border-radius:var(--r8);font-size:15px;color:var(--ink);background:var(--bg);outline:none;font-family:var(--f-sans);cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235C6B82' stroke-width='2' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 .fld input:focus{border-color:var(--gold);background:var(--white)}
 .fld input::placeholder{color:#9AA5B4}
 .btn-next{width:100%;padding:15px;font-size:15px;font-weight:600;background:var(--navy);color:var(--white);border:none;border-radius:var(--r8);cursor:pointer;transition:background var(--t);margin-top:4px;font-family:var(--f-sans)}
@@ -367,6 +367,13 @@ button{font-family:inherit;border:none;cursor:pointer}
             <p class="fs-h3">Wie darf ich Sie kontaktieren?</p>
             <p class="fs-lbl" style="margin-bottom:22px">ALEXANDER KROES MELDET SICH PERSÖNLICH</p>
             <div class="fld">
+              <label for="f_anrede">Anrede</label>
+              <select id="f_anrede" name="anrede">
+                <option value="Herr">Herr</option>
+                <option value="Frau">Frau</option>
+              </select>
+            </div>
+            <div class="fld">
               <label for="f_name">Ihr Name</label>
               <input type="text" id="f_name" name="name" placeholder="Vor. und Nachname" required>
             </div>
@@ -496,7 +503,10 @@ document.getElementById('lpform').addEventListener('submit', async function(e) {
     const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
     if (res.ok) {
       if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'Lead', event_label: 'LP Arztpraxis', value: 1 });
-      window.location.href = '../danke/';
+      const np = name.split(/\s+/);
+      const nachname = encodeURIComponent(np[np.length - 1]);
+      const anrede = encodeURIComponent(document.getElementById('f_anrede').value);
+      window.location.href = '../danke/?n=' + nachname + '&a=' + anrede;
     } else { throw new Error(); }
   } catch { btn.disabled = false; btn.textContent = 'Kostenloses Erstgespräch anfragen →'; alert('Fehler beim Senden. Bitte rufen Sie uns an: +43 5338 20105'); }
 });

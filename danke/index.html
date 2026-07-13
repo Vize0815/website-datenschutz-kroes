@@ -145,6 +145,15 @@ if (typeof gtag !== 'undefined') {
     value: 1
   });
 }
+// Personalize heading from URL params
+(function() {
+  const p = new URLSearchParams(window.location.search);
+  const n = p.get('n'), a = p.get('a');
+  if (n) {
+    const h = document.querySelector('.ty-h1');
+    if (h) h.textContent = 'Vielen Dank für Ihre Anfrage, ' + (a ? a + ' ' : '') + n + '!';
+  }
+})();
 </script>
 </body>
 </html>
