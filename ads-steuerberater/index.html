@@ -77,6 +77,15 @@ button{font-family:inherit;border:none;cursor:pointer}
 .tb-item:last-child{border-right:none}
 .tb-item svg{width:18px;height:18px;color:var(--gold);flex-shrink:0}
 
+/* KPI */
+.kpi{background:var(--white);padding:52px 0;border-bottom:1px solid var(--mist)}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.kpi-item{padding:0 12px}
+.kpi-num{display:flex;align-items:baseline;justify-content:center;gap:4px;margin-bottom:10px;line-height:1}
+.kpi-val{font-family:var(--f-serif);font-size:clamp(42px,5vw,64px);font-weight:700;color:var(--gold);line-height:1}
+.kpi-unit{font-family:var(--f-sans);font-size:clamp(20px,2.5vw,30px);font-weight:600;color:var(--navy)}
+.kpi-txt{font-size:13px;color:var(--navy);line-height:1.55;max-width:180px;margin:0 auto}
+
 /* FEATURES */
 .features{padding:80px 0;background:var(--bg)}
 .sec-eye{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;text-align:center}
@@ -219,6 +228,7 @@ button{font-family:inherit;border:none;cursor:pointer}
   .case-strip{padding:36px 0}
   .cs-rows{grid-template-columns:1fr;gap:12px}
   .cs-img-wrap{display:none}
+  .kpi-grid{grid-template-columns:repeat(2,1fr);gap:24px}
   .tb-item{padding:8px 16px;font-size:12px}
   .trustbar-grid{flex-direction:column;gap:0}
   .tb-item{border-right:none;border-bottom:1px solid var(--mist);width:100%;justify-content:center}
@@ -290,6 +300,29 @@ button{font-family:inherit;border:none;cursor:pointer}
       <div class="tb-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         Persönliche Betreuung
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kpi">
+  <div class="w">
+    <div class="kpi-grid">
+      <div class="kpi-item">
+        <div class="kpi-num"><span class="kpi-val">100</span><span class="kpi-unit">%</span></div>
+        <p class="kpi-txt">der betreuten Bußgeldverfahren, bei denen wir rechtzeitig einbezogen wurden, konnten abgewendet oder reduziert werden</p>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-num"><span class="kpi-val">48</span><span class="kpi-unit">h</span></div>
+        <p class="kpi-txt">durchschnittliche Reaktionszeit bei akuten Datenschutzvorfällen und Bußgeldbescheiden</p>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-num"><span class="kpi-val">0</span></div>
+        <p class="kpi-txt">Beanstandungen bei Behördenprüfungen von Mandanten, die wir vollständig betreut haben</p>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-num"><span class="kpi-val">6</span><span class="kpi-unit">Wo.</span></div>
+        <p class="kpi-txt">typische Dauer bis zur vollständigen DSGVO-Compliance bei einem neuen KMU-Mandat</p>
       </div>
     </div>
   </div>
