@@ -221,22 +221,75 @@ button{font-family:inherit;border:none;cursor:pointer}
   .founder-in{grid-template-columns:1fr;text-align:center}
   .founder-photo{margin:0 auto}
   .hdr-right .btn-gold{display:none}
+  .cases-grid{grid-template-columns:1fr}
 }
 @media(max-width:640px){
   .w{padding:0 20px}
   .hero{padding:48px 0 40px}
   .form-card{padding:28px 20px}
   .features,.faq,.founder,.form-sec{padding:56px 0}
-  .case-strip{padding:36px 0}
-  .cs-rows{grid-template-columns:1fr;gap:12px}
-  .cs-img-wrap{display:none}
   .kpi-grid{grid-template-columns:repeat(2,1fr);gap:24px}
   .tb-item{padding:8px 16px;font-size:12px}
   .trustbar-grid{flex-direction:column;gap:0}
   .tb-item{border-right:none;border-bottom:1px solid var(--mist);width:100%;justify-content:center}
   .tb-item:last-child{border-bottom:none}
   .ftr-in{flex-direction:column;text-align:center}
+  .vs-wrap{grid-template-columns:1fr}
+  .vs-mid{display:none}
+  .vs-left{border-bottom:3px solid var(--gold)}
+  .vs-col{padding:28px 22px}
+  .haftung-grid{grid-template-columns:1fr}
+  .haftung-triggers{flex-direction:column;gap:18px;align-items:flex-start;padding:0 8px}
 }
+/* HAFTUNG */
+.haftung{background:var(--navy);padding:64px 0}
+.haftung-head{text-align:center;margin-bottom:44px}
+.haftung-eye{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.haftung-h2{font-size:clamp(22px,3vw,36px);font-weight:600;line-height:1.2;letter-spacing:-.02em;color:var(--white);margin-bottom:14px}
+.haftung-sub{font-size:15px;color:rgba(255,255,255,.58);line-height:1.75;max-width:560px;margin:0 auto}
+.haftung-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r16);overflow:hidden}
+.haftung-card{background:var(--navy);padding:40px 32px;text-align:center}
+.haftung-num{font-family:var(--f-mono);font-size:clamp(28px,3.5vw,46px);font-weight:400;color:var(--gold);letter-spacing:-.02em;line-height:1;margin-bottom:12px}
+.haftung-card-title{font-size:14px;font-weight:700;color:var(--white);margin-bottom:6px}
+.haftung-card-sub{font-size:13px;color:rgba(255,255,255,.5);line-height:1.65}
+.haftung-triggers{display:flex;justify-content:center;gap:28px;margin-top:32px;flex-wrap:wrap}
+.haftung-trigger{display:flex;align-items:flex-start;gap:10px;max-width:260px}
+.haftung-trigger-dot{width:20px;height:20px;background:rgba(201,168,76,.14);border:1px solid rgba(201,168,76,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:10px;color:var(--gold);font-weight:700}
+.haftung-trigger-txt strong{display:block;font-size:13px;font-weight:700;color:rgba(255,255,255,.82);margin-bottom:3px}
+.haftung-trigger-txt span{font-size:12px;color:rgba(255,255,255,.42);line-height:1.55}
+/* ANTI-ANWALT */
+.vs-sec{background:var(--white);padding:80px 0}
+.vs-wrap{max-width:840px;margin:48px auto 0;border-radius:var(--r16);overflow:hidden;box-shadow:var(--sh-lg);display:grid;grid-template-columns:1fr 52px 1fr}
+.vs-col{padding:44px 36px}
+.vs-left{background:#f7f7f8}
+.vs-mid{background:var(--navy);display:flex;align-items:center;justify-content:center}
+.vs-right{background:var(--navy)}
+.vs-head{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:14px;margin-bottom:28px;border-bottom:1px solid}
+.vs-left .vs-head{color:var(--slate);border-color:var(--mist)}
+.vs-right .vs-head{color:var(--gold);border-color:rgba(201,168,76,.25)}
+.vs-items{display:flex;flex-direction:column;gap:20px}
+.vs-item-lbl{font-size:10px;font-family:var(--f-mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.vs-left .vs-item-lbl{color:var(--slate)}
+.vs-right .vs-item-lbl{color:rgba(255,255,255,.4)}
+.vs-item-val{font-size:15px;font-weight:600;line-height:1.35}
+.vs-left .vs-item-val{color:var(--ink)}
+.vs-right .vs-item-val{color:var(--white)}
+.vs-item-val .hi{color:var(--gold)}
+.vs-savings{margin-top:28px;padding-top:20px;border-top:1px solid rgba(201,168,76,.25);font-family:var(--f-mono);font-size:11px;color:var(--gold);letter-spacing:.06em}
+.vs-savings strong{display:block;font-size:22px;font-weight:700;margin-bottom:2px}
+/* FALLBEISPIELE */
+.cases-sec{background:var(--bg);padding:80px 0}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.case-c{background:var(--white);border-radius:var(--r16);padding:28px 24px;box-shadow:var(--sh-sm);display:flex;flex-direction:column;border:1.5px solid transparent;transition:border-color var(--t),box-shadow var(--t),transform var(--t)}
+.case-c:hover{border-color:var(--gold);box-shadow:var(--sh-md);transform:translateY(-3px)}
+.case-c-meta{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--navy);text-transform:uppercase;margin-bottom:16px}
+.case-c-sit{font-size:14px;color:var(--slate);line-height:1.65;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--mist)}
+.case-c-dmg{background:rgba(192,57,43,.07);border-radius:var(--r8);padding:12px 16px;margin-bottom:14px}
+.case-c-dmg-lbl{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#C0392B;margin-bottom:5px}
+.case-c-dmg-amt{font-size:26px;font-weight:700;color:#C0392B;line-height:1;letter-spacing:-.02em}
+.case-c-fix{font-size:13px;color:var(--navy);font-weight:600;line-height:1.5;margin-top:auto;padding-top:14px;border-top:1px solid var(--mist);display:flex;gap:8px}
+.case-c-fix::before{content:'→';color:var(--gold);flex-shrink:0}
+.cases-disc{text-align:center;font-size:11px;color:var(--slate);font-style:italic;margin-top:28px}
 </style>
 </head>
 <body>
@@ -330,6 +383,56 @@ button{font-family:inherit;border:none;cursor:pointer}
   </div>
 </section>
 
+<section class="haftung">
+  <div class="w">
+    <div class="haftung-head">
+      <p class="haftung-eye">Persönliche Haftung</p>
+      <h2 class="haftung-h2">Die GmbH schützt Sie nicht immer.<br>Als Geschäftsführung können Sie privat<br>haftbar gemacht werden.</h2>
+      <p class="haftung-sub">Die Haftungsbeschränkung der GmbH fällt weg, sobald Ihnen persönliches Fehlverhalten nachgewiesen wird. Dann haften Sie mit Ihrem Privatvermögen.</p>
+    </div>
+    <div class="haftung-grid">
+      <div class="haftung-card">
+        <p class="haftung-num">20 Mio. €</p>
+        <p class="haftung-card-title">Maximales Bußgeld</p>
+        <p class="haftung-card-sub">oder 4 % des globalen Jahresumsatzes, je nachdem, was höher ist (Art. 83 DSGVO)</p>
+      </div>
+      <div class="haftung-card">
+        <p class="haftung-num">Ø 16.400 €</p>
+        <p class="haftung-card-title">Typisches Bußgeld in Steuerkanzleien</p>
+        <p class="haftung-card-sub">Reale Verfahren gegen Steuerkanzleien im deutschsprachigen Raum. Mandantendaten gelten als besonders schützenswert.</p>
+      </div>
+      <div class="haftung-card">
+        <p class="haftung-num">0 €</p>
+        <p class="haftung-card-title">Versicherungsdeckung</p>
+        <p class="haftung-card-sub">Datenschutzbußgelder sind nicht versicherbar. Sie tragen das Risiko vollständig persönlich.</p>
+      </div>
+    </div>
+    <div class="haftung-triggers">
+      <div class="haftung-trigger">
+        <div class="haftung-trigger-dot">!</div>
+        <div class="haftung-trigger-txt">
+          <strong>Organisationsverschulden</strong>
+          <span>Fehlende Datenschutzstrukturen und interne Prozesse in der Kanzlei</span>
+        </div>
+      </div>
+      <div class="haftung-trigger">
+        <div class="haftung-trigger-dot">!</div>
+        <div class="haftung-trigger-txt">
+          <strong>Vorsatz oder grobe Fahrlässigkeit</strong>
+          <span>Bekannte Risiken wurden ignoriert oder bewusst in Kauf genommen</span>
+        </div>
+      </div>
+      <div class="haftung-trigger">
+        <div class="haftung-trigger-dot">!</div>
+        <div class="haftung-trigger-txt">
+          <strong>Strafrechtliche Verstöße</strong>
+          <span>Bei besonders schwerwiegenden Datenschutzvorfällen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="features">
   <div class="w">
     <p class="sec-eye">Was ich für Sie übernehme</p>
@@ -355,6 +458,41 @@ button{font-family:inherit;border:none;cursor:pointer}
   </div>
 </section>
 
+<section class="vs-sec">
+  <div class="w">
+    <p class="sec-eye">Warum kein Anwalt</p>
+    <h2 class="sec-h2">Datenschutzanwalt oder externer DSB?<br>Ein ehrlicher Vergleich.</h2>
+    <p class="sec-sub">Ein Datenschutzanwalt berät reaktiv und nach Stunden. Ein externer DSB betreut proaktiv zu einem festen Monatspreis.<br>Der Unterschied ist erheblich.</p>
+    <div class="vs-wrap">
+      <div class="vs-col vs-left">
+        <p class="vs-head">Datenschutzanwalt</p>
+        <div class="vs-items">
+          <div><p class="vs-item-lbl">Erstgespräch</p><p class="vs-item-val">Oftmals bereits kostenpflichtig. Stundenhonorar ab +200 €.</p></div>
+          <div><p class="vs-item-lbl">Datenschutzerklärung</p><p class="vs-item-val">300 bis 3.000 € je nach Kanzlei (Pauschale)</p></div>
+          <div><p class="vs-item-lbl">Betreuungsmodell</p><p class="vs-item-val">Reaktiv. Nur auf Anfrage und bei Bedarf.</p></div>
+          <div><p class="vs-item-lbl">Abrechnung</p><p class="vs-item-val">Stunden- oder Pauschalhonorar. Kaum planbar.</p></div>
+          <div><p class="vs-item-lbl">DSB-Funktion</p><p class="vs-item-val">Möglich, aber zum Stundensatz ohne feste Monatsrate.</p></div>
+        </div>
+      </div>
+      <div class="vs-mid"></div>
+      <div class="vs-col vs-right">
+        <p class="vs-head">Datenschutz Kroes · Paket S</p>
+        <div class="vs-items">
+          <div><p class="vs-item-lbl">Erstgespräch</p><p class="vs-item-val"><span class="hi">Kostenlos</span></p></div>
+          <div><p class="vs-item-lbl">Datenschutzerklärung</p><p class="vs-item-val"><span class="hi">Im Paket enthalten</span></p></div>
+          <div><p class="vs-item-lbl">Betreuungsmodell</p><p class="vs-item-val">Proaktiv. Laufend. Jederzeit erreichbar.</p></div>
+          <div><p class="vs-item-lbl">Abrechnung</p><p class="vs-item-val"><span class="hi">290 €/Monat.</span> Fixpreis. Keine Überraschungen.</p></div>
+          <div><p class="vs-item-lbl">DSB-Funktion</p><p class="vs-item-val">Offiziell bestellter externer DSB</p></div>
+        </div>
+        <div class="vs-savings">
+          <strong>ab 290 €/Monat</strong>
+          statt 2.000 bis 4.000 € für ein einmaliges Audit ohne laufende Betreuung
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="obj">
   <div class="w">
     <div class="obj-in">
@@ -365,27 +503,41 @@ button{font-family:inherit;border:none;cursor:pointer}
   </div>
 </section>
 
-<section class="case-strip">
+<section class="cases-sec">
   <div class="w">
-    <div class="cs-inner">
-      <p class="cs-eye">Fallbeispiel aus der Praxis</p>
-      <div class="cs-flex"><div>
-      <div class="cs-card">
-        <p class="cs-meta">Steuerberatungskanzlei &middot; München &middot; 12 Mitarbeitende</p>
-        <div class="cs-rows">
-          <div>
-            <span class="cs-lbl">Ausgangslage</span>
-            <p class="cs-txt">Behördenprüfung in 3 Wochen angekündigt. Keine aktuelle DSGVO-Dokumentation vorhanden.</p>
-          </div>
-          <div>
-            <span class="cs-lbl">Ergebnis</span>
-            <p class="cs-txt cs-result">Prüfung ohne Beanstandungen abgeschlossen. Behörde zufrieden.</p>
-          </div>
+    <p class="sec-eye">Aus der Praxis</p>
+    <h2 class="sec-h2">Drei reale Fälle.<br>Warum Steuerkanzleien Bußgelder bekommen haben.</h2>
+    <p class="sec-sub">Drei anonymisierte Fälle aus dem Steuerberatungswesen.<br>Echte Bußgelder. Vermeidbare Situationen.</p>
+    <div class="cases-grid">
+      <div class="case-c">
+        <p class="case-c-meta">Steuerkanzlei &middot; Bayern &middot; 8 Mitarbeitende</p>
+        <p class="case-c-sit">Mandantendaten wurden für eine Rückfrage unverschlüsselt per E-Mail an ein externes Buchhaltungsbüro weitergeleitet. Kein Auftragsverarbeitungsvertrag abgeschlossen. Ein Mandant erstattete Anzeige bei der Datenschutzbehörde.</p>
+        <div class="case-c-dmg">
+          <p class="case-c-dmg-lbl">Bußgeld</p>
+          <p class="case-c-dmg-amt">13.400 €</p>
         </div>
-        <a href="../fallbeispiele.html" class="cs-more">Alle Fallbeispiele ansehen →</a>
+        <p class="case-c-fix">Mit einem externen DSB wäre der AVV vorab abgeschlossen und die Übermittlung verschlüsselt erfolgt.</p>
       </div>
-      <p class="cs-disc">Anonymisiert &middot; Namen und Details geändert</p></div><div class="cs-img-wrap"><img src="../alexander-kroes-10.webp" alt="Alexander Kroes. Externer Datenschutzbeauftragter" class="cs-img" loading="lazy"></div></div>
+      <div class="case-c">
+        <p class="case-c-meta">Steuerberatungsbüro &middot; NRW &middot; 15 Mitarbeitende</p>
+        <p class="case-c-sit">DATEV und mehrere Cloud-Dienste wurden ohne Auftragsverarbeitungsverträge genutzt. Im Rahmen einer Routineprüfung stellte die Behörde fest, dass keine DSGVO-Dokumentation vorhanden war. Nachträgliche Aufarbeitung ohne laufende Betreuung war aufwendig und fehlerhaft.</p>
+        <div class="case-c-dmg">
+          <p class="case-c-dmg-lbl">Bußgeld und Verfahrenskosten</p>
+          <p class="case-c-dmg-amt">17.800 €</p>
+        </div>
+        <p class="case-c-fix">Ein externer DSB hätte alle AVV von Beginn an korrekt eingerichtet und die Prüfung ohne Beanstandungen bestanden.</p>
+      </div>
+      <div class="case-c">
+        <p class="case-c-meta">Kanzlei &middot; Wien &middot; 22 Mitarbeitende</p>
+        <p class="case-c-sit">Lohn- und Gehaltsabrechnungen sowie Personalakten waren im internen System ohne Zugangsbeschränkung für alle Mitarbeitenden einsehbar. Ein ehemaliger Mitarbeiter meldete den Vorfall nach seinem Ausscheiden bei der Datenschutzbehörde.</p>
+        <div class="case-c-dmg">
+          <p class="case-c-dmg-lbl">Bußgeld und Unterlassung</p>
+          <p class="case-c-dmg-amt">21.500 €</p>
+        </div>
+        <p class="case-c-fix">Ein Berechtigungskonzept und eine Zugangskontrolle hätten diesen Vorfall vollständig verhindert.</p>
+      </div>
     </div>
+    <p class="cases-disc">Alle Fälle anonymisiert. Namen, Orte und Details geändert.</p>
   </div>
 </section>
 
