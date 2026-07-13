@@ -374,8 +374,8 @@ button{font-family:inherit;border:none;cursor:pointer}
               </select>
             </div>
             <div class="fld">
-              <label for="f_name">Ihr Name</label>
-              <input type="text" id="f_name" name="name" placeholder="Vor. und Nachname" required>
+              <label for="f_name">Nachname</label>
+              <input type="text" id="f_name" name="nachname" placeholder="Ihr Nachname" required>
             </div>
             <div class="fld">
               <label for="f_email">E-Mail-Adresse</label>
@@ -503,8 +503,7 @@ document.getElementById('lpform').addEventListener('submit', async function(e) {
     const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
     if (res.ok) {
       if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'Lead', event_label: 'LP Handwerk', value: 1 });
-      const np = name.split(/\s+/);
-      const nachname = encodeURIComponent(np[np.length - 1]);
+      const nachname = encodeURIComponent(name);
       const anrede = encodeURIComponent(document.getElementById('f_anrede').value);
       window.location.href = '../danke/?n=' + nachname + '&a=' + anrede;
     } else { throw new Error(); }
