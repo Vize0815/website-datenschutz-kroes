@@ -96,6 +96,19 @@ button{font-family:inherit;border:none;cursor:pointer}
 .obj-a{font-size:16px;color:var(--slate);line-height:1.75;max-width:580px;margin:0 auto 30px}
 .obj-a strong{color:var(--navy);font-weight:600}
 
+/* CASE STRIP */
+.case-strip{background:#EEF2F8;padding:52px 0}
+.cs-inner{max-width:720px;margin:0 auto}
+.cs-eye{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.cs-card{background:var(--white);border-radius:var(--r16);border-left:3px solid var(--gold);padding:28px 32px;box-shadow:var(--sh-sm);margin-bottom:10px}
+.cs-meta{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--slate);margin-bottom:16px}
+.cs-rows{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;margin-bottom:18px}
+.cs-lbl{display:block;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:3px}
+.cs-txt{font-size:14px;color:var(--ink);line-height:1.55}
+.cs-result{font-weight:600;color:var(--navy)}
+.cs-more{font-size:13px;color:var(--gold);font-weight:600;transition:opacity var(--t)}
+.cs-more:hover{opacity:.75}
+.cs-disc{font-size:11px;color:var(--slate);font-style:italic}
 /* FORM SECTION */
 .form-sec{background:var(--navy);padding:84px 0}
 .form-wrap{display:grid;grid-template-columns:1fr 460px;gap:56px;align-items:start}
@@ -199,6 +212,8 @@ button{font-family:inherit;border:none;cursor:pointer}
   .hero{padding:48px 0 40px}
   .form-card{padding:28px 20px}
   .features,.faq,.founder,.form-sec{padding:56px 0}
+  .case-strip{padding:36px 0}
+  .cs-rows{grid-template-columns:1fr;gap:12px}
   .tb-item{padding:8px 16px;font-size:12px}
   .trustbar-grid{flex-direction:column;gap:0}
   .tb-item{border-right:none;border-bottom:1px solid var(--mist);width:100%;justify-content:center}
@@ -306,6 +321,29 @@ button{font-family:inherit;border:none;cursor:pointer}
       <p class="obj-q">„Datenschutz klingt nach viel Aufwand und hohen Kosten."</p>
       <p class="obj-a">Der Aufwand liegt bei mir, nicht bei Ihnen. Ein externer Datenschutzbeauftragter kostet einen <strong>Bruchteil einer internen Lösung</strong> und schützt Sie vor Bußgeldern von bis zu <strong>20 Millionen Euro</strong> nach DSGVO. Ich übernehme alles. Sie machen weiter, was Sie am besten können.</p>
       <a href="#anfragen" class="btn btn-gold">Jetzt absichern →</a>
+    </div>
+  </div>
+</section>
+
+<section class="case-strip">
+  <div class="w">
+    <div class="cs-inner">
+      <p class="cs-eye">Fallbeispiel aus der Praxis</p>
+      <div class="cs-card">
+        <p class="cs-meta">Steuerberatungskanzlei &middot; München &middot; 12 Mitarbeitende</p>
+        <div class="cs-rows">
+          <div>
+            <span class="cs-lbl">Ausgangslage</span>
+            <p class="cs-txt">Behördenprüfung in 3 Wochen angekündigt. Keine aktuelle DSGVO-Dokumentation vorhanden.</p>
+          </div>
+          <div>
+            <span class="cs-lbl">Ergebnis</span>
+            <p class="cs-txt cs-result">Prüfung ohne Beanstandungen abgeschlossen. Behörde zufrieden.</p>
+          </div>
+        </div>
+        <a href="../fallbeispiele.html" class="cs-more">Alle Fallbeispiele ansehen →</a>
+      </div>
+      <p class="cs-disc">Anonymisiert &middot; Namen und Details geändert</p>
     </div>
   </div>
 </section>
