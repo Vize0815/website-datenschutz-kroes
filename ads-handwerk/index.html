@@ -164,6 +164,7 @@ button{font-family:inherit;border:none;cursor:pointer}
   .founder-in{grid-template-columns:1fr;text-align:center}
   .founder-photo{margin:0 auto}
   .hdr-right .btn-gold{display:none}
+  .cases-grid{grid-template-columns:1fr}
 }
 @media(max-width:640px){
   .w{padding:0 20px}
@@ -174,7 +175,49 @@ button{font-family:inherit;border:none;cursor:pointer}
   .tb-item{border-right:none;border-bottom:1px solid var(--mist);width:100%;justify-content:center}
   .tb-item:last-child{border-bottom:none}
   .ftr-in{flex-direction:column;text-align:center}
+  .vs-wrap{grid-template-columns:1fr}
+  .vs-mid{display:none}
+  .vs-left{border-bottom:3px solid var(--gold)}
+  .vs-col{padding:28px 22px}
 }
+/* HERO ALERT */
+.hero-alert{background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.32);border-radius:var(--r8);padding:14px 18px;margin-bottom:24px;display:flex;align-items:flex-start;gap:12px}
+.hero-alert svg{width:18px;height:18px;color:#E57373;flex-shrink:0;margin-top:2px}
+.hero-alert-txt{font-size:13px;color:rgba(255,255,255,.85);line-height:1.55}
+.hero-alert-txt strong{color:#fff;font-weight:700;display:block;margin-bottom:2px;font-size:14px}
+/* ANTI-ANWALT */
+.vs-sec{background:var(--white);padding:80px 0}
+.vs-wrap{max-width:840px;margin:48px auto 0;border-radius:var(--r16);overflow:hidden;box-shadow:var(--sh-lg);display:grid;grid-template-columns:1fr 52px 1fr}
+.vs-col{padding:44px 36px}
+.vs-left{background:#f7f7f8}
+.vs-mid{background:var(--navy);display:flex;align-items:center;justify-content:center}
+.vs-mid-txt{font-family:var(--f-mono);font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg)}
+.vs-right{background:var(--navy)}
+.vs-head{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:14px;margin-bottom:28px;border-bottom:1px solid}
+.vs-left .vs-head{color:var(--slate);border-color:var(--mist)}
+.vs-right .vs-head{color:var(--gold);border-color:rgba(201,168,76,.25)}
+.vs-items{display:flex;flex-direction:column;gap:20px}
+.vs-item-lbl{font-size:10px;font-family:var(--f-mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.vs-left .vs-item-lbl{color:var(--slate)}
+.vs-right .vs-item-lbl{color:rgba(255,255,255,.4)}
+.vs-item-val{font-size:15px;font-weight:600;line-height:1.35}
+.vs-left .vs-item-val{color:var(--ink)}
+.vs-right .vs-item-val{color:var(--white)}
+.vs-item-val .hi{color:var(--gold)}
+.vs-savings{margin-top:28px;padding-top:20px;border-top:1px solid rgba(201,168,76,.25);font-family:var(--f-mono);font-size:11px;color:var(--gold);letter-spacing:.06em}
+.vs-savings strong{display:block;font-size:22px;font-weight:700;margin-bottom:2px}
+/* FALLBEISPIELE */
+.cases-sec{background:var(--sky);padding:80px 0;border-top:1px solid var(--mist)}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.case-c{background:var(--white);border-radius:var(--r16);padding:28px 24px;box-shadow:var(--sh-sm);display:flex;flex-direction:column}
+.case-c-meta{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--slate);text-transform:uppercase;margin-bottom:16px}
+.case-c-sit{font-size:14px;color:var(--slate);line-height:1.65;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--mist)}
+.case-c-dmg{background:rgba(192,57,43,.07);border-radius:var(--r8);padding:12px 16px;margin-bottom:14px}
+.case-c-dmg-lbl{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#C0392B;margin-bottom:5px}
+.case-c-dmg-amt{font-size:26px;font-weight:700;color:#C0392B;line-height:1;letter-spacing:-.02em}
+.case-c-fix{font-size:13px;color:var(--navy);font-weight:600;line-height:1.5;margin-top:auto;padding-top:14px;border-top:1px solid var(--mist);display:flex;gap:8px}
+.case-c-fix::before{content:'→';color:var(--gold);flex-shrink:0}
+.cases-disc{text-align:center;font-size:11px;color:var(--slate);font-style:italic;margin-top:28px}
 </style>
 </head>
 <body>
@@ -195,6 +238,13 @@ button{font-family:inherit;border:none;cursor:pointer}
         <p class="hero-eye">Externer Datenschutzbeauftragter · Speziell für Handwerksbetriebe</p>
         <h1 class="hero-h1">DSGVO für Ihren Betrieb.<br><em>Damit Sie sich auf Ihr Handwerk konzentrieren.</em></h1>
         <p class="hero-sub">Alexander Kroes übernimmt alle Datenschutzpflichten für Ihren Handwerksbetrieb. Von Kundendaten und WhatsApp bis zu Baustellenfotos und mobilen Geräten. Praxisgerecht. Zertifiziert. Ohne Mehraufwand für Sie.</p>
+        <div class="hero-alert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div class="hero-alert-txt">
+            <strong>Als Betriebsinhaber haften Sie persönlich.</strong>
+            Bußgelder bis 20 Millionen Euro. Keine Versicherung deckt das ab.
+          </div>
+        </div>
         <div class="hero-proof">
           <span class="hero-stars">★★★★★</span>
           <span class="hero-proof-txt"><strong>Über 50 Betriebe und Unternehmen</strong> vertrauen Datenschutz Kroes</span>
@@ -293,6 +343,71 @@ button{font-family:inherit;border:none;cursor:pointer}
   </div>
 </section>
 
+<section class="vs-sec">
+  <div class="w">
+    <p class="sec-eye">Warum kein Anwalt</p>
+    <h2 class="sec-h2">Datenschutzanwalt oder externer DSB? Ein ehrlicher Vergleich.</h2>
+    <p class="sec-sub">Ein Datenschutzanwalt berät reaktiv und nach Stunden. Ein externer DSB betreut proaktiv zu einem festen Monatspreis. Der Unterschied ist erheblich.</p>
+    <div class="vs-wrap">
+      <div class="vs-col vs-left">
+        <p class="vs-head">Datenschutzanwalt</p>
+        <div class="vs-items">
+          <div>
+            <p class="vs-item-lbl">Erstgespräch</p>
+            <p class="vs-item-val">300 bis 500 € pro Stunde</p>
+          </div>
+          <div>
+            <p class="vs-item-lbl">Erstaudit Ihres Betriebs</p>
+            <p class="vs-item-val">2.000 bis 4.000 € einmalig</p>
+          </div>
+          <div>
+            <p class="vs-item-lbl">Betreuungsmodell</p>
+            <p class="vs-item-val">Reaktiv. Nur wenn Sie anrufen.</p>
+          </div>
+          <div>
+            <p class="vs-item-lbl">Abrechnung</p>
+            <p class="vs-item-val">Stundensatz. Kaum kalkulierbar.</p>
+          </div>
+          <div>
+            <p class="vs-item-lbl">DSB-Funktion</p>
+            <p class="vs-item-val">Kein offizieller Datenschutzbeauftragter</p>
+          </div>
+        </div>
+      </div>
+      <div class="vs-mid"><span class="vs-mid-txt">vs.</span></div>
+      <div class="vs-col vs-right">
+        <p class="vs-head">Datenschutz Kroes · Paket S</p>
+        <div class="vs-items">
+          <div>
+            <p class="vs-item-lbl">Erstgespräch</p>
+            <p class="vs-item-val"><span class="hi">Kostenlos</span></p>
+          </div>
+          <div>
+            <p class="vs-item-lbl">Erstaudit Ihres Betriebs</p>
+            <p class="vs-item-val"><span class="hi">Im Paket enthalten</span></p>
+          </div>
+          <div>
+            <p class="vs-item-lbl">Betreuungsmodell</p>
+            <p class="vs-item-val">Proaktiv. Laufend. Jederzeit erreichbar.</p>
+          </div>
+          <div>
+            <p class="vs-item-lbl">Abrechnung</p>
+            <p class="vs-item-val"><span class="hi">290 €/Monat.</span> Fixpreis. Keine Überraschungen.</p>
+          </div>
+          <div>
+            <p class="vs-item-lbl">DSB-Funktion</p>
+            <p class="vs-item-val">Offiziell bestellter externer DSB</p>
+          </div>
+        </div>
+        <div class="vs-savings">
+          <strong>ab 290 €/Monat</strong>
+          statt 2.000 bis 4.000 € für ein einmaliges Audit ohne laufende Betreuung
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="obj">
   <div class="w">
     <div class="obj-in">
@@ -303,27 +418,41 @@ button{font-family:inherit;border:none;cursor:pointer}
   </div>
 </section>
 
-<section class="case-strip">
+<section class="cases-sec">
   <div class="w">
-    <div class="cs-inner">
-      <p class="cs-eye">Fallbeispiel aus der Praxis</p>
-      <div class="cs-flex"><div>
-      <div class="cs-card">
-        <p class="cs-meta">Installationsbetrieb &middot; Zillertal &middot; 28 Mitarbeitende</p>
-        <div class="cs-rows">
-          <div>
-            <span class="cs-lbl">Ausgangslage</span>
-            <p class="cs-txt">Bußgeldbescheid über 12.800&nbsp;€ wegen fehlender Auftragsverarbeitungsverträge mit drei Software-Anbietern.</p>
-          </div>
-          <div>
-            <span class="cs-lbl">Ergebnis</span>
-            <p class="cs-txt cs-result">AVV innerhalb von 72&nbsp;Stunden nachgereicht. Bußgeld vollständig abgewendet. Verfahren eingestellt.</p>
-          </div>
+    <p class="sec-eye">Aus der Praxis</p>
+    <h2 class="sec-h2">Was passiert, wenn Datenschutz fehlt.</h2>
+    <p class="sec-sub">Drei anonymisierte Fälle aus dem Handwerk. Echte Bußgelder. Vermeidbare Situationen.</p>
+    <div class="cases-grid">
+      <div class="case-c">
+        <p class="case-c-meta">Malerbetrieb &middot; Bayern &middot; 8 Mitarbeitende</p>
+        <p class="case-c-sit">Kundenadressen und Auftragsdaten wurden über private WhatsApp-Gruppen koordiniert. Kein Auftragsverarbeitungsvertrag mit dem Anbieter. Keine Datenschutzinformation für Kunden. Ein Kunde beschwerte sich bei der Behörde.</p>
+        <div class="case-c-dmg">
+          <p class="case-c-dmg-lbl">Bußgeld</p>
+          <p class="case-c-dmg-amt">6.400 €</p>
         </div>
-        <a href="../fallbeispiele.html" class="cs-more">Alle Fallbeispiele ansehen →</a>
+        <p class="case-c-fix">Mit einem externen DSB wäre die WhatsApp-Nutzung von Beginn an rechtskonform geregelt gewesen.</p>
       </div>
-      <p class="cs-disc">Anonymisiert &middot; Namen und Details geändert</p></div><div class="cs-img-wrap"><img src="../alexander-kroes-10.webp" alt="Alexander Kroes. Externer Datenschutzbeauftragter" class="cs-img" loading="lazy"></div></div>
+      <div class="case-c">
+        <p class="case-c-meta">Zimmerei &middot; Tirol &middot; 14 Mitarbeitende</p>
+        <p class="case-c-sit">Fotos von Baustellen mit erkennbaren Kunden und Mitarbeitenden wurden ohne Einwilligung auf Instagram veröffentlicht. Mehrere Beschwerden bei der Datenschutzbehörde. Nachträgliche Löschung war nicht mehr ausreichend.</p>
+        <div class="case-c-dmg">
+          <p class="case-c-dmg-lbl">Bußgeld und Unterlassung</p>
+          <p class="case-c-dmg-amt">9.800 €</p>
+        </div>
+        <p class="case-c-fix">Eine klare Fotorichtlinie und Einwilligungsformulare hätten diesen Vorfall vollständig verhindert.</p>
+      </div>
+      <div class="case-c">
+        <p class="case-c-meta">Elektroinstallationsbetrieb &middot; Salzburg &middot; 22 Mitarbeitende</p>
+        <p class="case-c-sit">Mitarbeiterdaten wurden bei einem Softwarewechsel unverschlüsselt an den neuen Anbieter übermittelt. Kein Auftragsverarbeitungsvertrag abgeschlossen. Meldepflicht innerhalb von 72 Stunden ausgelöst.</p>
+        <div class="case-c-dmg">
+          <p class="case-c-dmg-lbl">Bußgeld und Verfahrenskosten</p>
+          <p class="case-c-dmg-amt">14.200 €</p>
+        </div>
+        <p class="case-c-fix">Mit AVV und einer Datenschutzprüfung vor der Migration wäre diese Datenpanne nicht entstanden.</p>
+      </div>
     </div>
+    <p class="cases-disc">Alle Fälle anonymisiert. Namen, Orte und Details geändert.</p>
   </div>
 </section>
 
