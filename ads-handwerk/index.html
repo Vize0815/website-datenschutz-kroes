@@ -83,7 +83,7 @@ button{font-family:inherit;border:none;cursor:pointer}
 .obj-q{font-family:var(--f-serif);font-size:clamp(19px,2.2vw,26px);color:var(--navy);margin-bottom:18px;font-style:italic;font-weight:400;line-height:1.4}
 .obj-a{font-size:16px;color:var(--slate);line-height:1.75;max-width:580px;margin:0 auto 30px}
 .obj-a strong{color:var(--navy);font-weight:600}
-.case-strip{background:#EEF2F8;padding:52px 0}.cs-inner{max-width:720px;margin:0 auto}.cs-eye{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}.cs-card{background:var(--white);border-radius:var(--r16);border-left:3px solid var(--gold);padding:28px 32px;box-shadow:var(--sh-sm);margin-bottom:10px}.cs-meta{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--slate);margin-bottom:16px}.cs-rows{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;margin-bottom:18px}.cs-lbl{display:block;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:3px}.cs-txt{font-size:14px;color:var(--ink);line-height:1.55}.cs-result{font-weight:600;color:var(--navy)}.cs-more{font-size:13px;color:var(--gold);font-weight:600;transition:opacity var(--t)}.cs-more:hover{opacity:.75}.cs-disc{font-size:11px;color:var(--slate);font-style:italic}@media(max-width:640px){.cs-rows{grid-template-columns:1fr;gap:12px}.case-strip{padding:36px 0}}
+.case-strip{background:#EEF2F8;padding:52px 0}.cs-inner{max-width:900px;margin:0 auto}.cs-flex{display:flex;gap:28px;align-items:center}.cs-img-wrap{width:260px;flex-shrink:0;border-radius:var(--r16);overflow:hidden;box-shadow:0 4px 24px rgba(15,31,61,.12)}.cs-img{width:100%;height:320px;object-fit:cover;object-position:top center;display:block}.cs-eye{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}.cs-card{background:var(--white);border-radius:var(--r16);border-left:3px solid var(--gold);padding:28px 32px;box-shadow:var(--sh-sm);margin-bottom:10px}.cs-meta{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--slate);margin-bottom:16px}.cs-rows{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;margin-bottom:18px}.cs-lbl{display:block;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:3px}.cs-txt{font-size:14px;color:var(--ink);line-height:1.55}.cs-result{font-weight:600;color:var(--navy)}.cs-more{font-size:13px;color:var(--gold);font-weight:600;transition:opacity var(--t)}.cs-more:hover{opacity:.75}.cs-disc{font-size:11px;color:var(--slate);font-style:italic}@media(max-width:640px){.cs-rows{grid-template-columns:1fr;gap:12px}.case-strip{padding:36px 0}.cs-img-wrap{display:none}}
 .form-sec{background:var(--navy);padding:84px 0}
 .form-wrap{display:grid;grid-template-columns:1fr 460px;gap:56px;align-items:start}
 .fl-eye{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
@@ -282,6 +282,7 @@ button{font-family:inherit;border:none;cursor:pointer}
   <div class="w">
     <div class="cs-inner">
       <p class="cs-eye">Fallbeispiel aus der Praxis</p>
+      <div class="cs-flex"><div>
       <div class="cs-card">
         <p class="cs-meta">Installationsbetrieb &middot; Zillertal &middot; 28 Mitarbeitende</p>
         <div class="cs-rows">
@@ -296,7 +297,7 @@ button{font-family:inherit;border:none;cursor:pointer}
         </div>
         <a href="../fallbeispiele.html" class="cs-more">Alle Fallbeispiele ansehen →</a>
       </div>
-      <p class="cs-disc">Anonymisiert &middot; Namen und Details geändert</p>
+      <p class="cs-disc">Anonymisiert &middot; Namen und Details geändert</p></div><div class="cs-img-wrap"><img src="../alexander-kroes-10.webp" alt="Alexander Kroes. Externer Datenschutzbeauftragter" class="cs-img" loading="lazy"></div></div>
     </div>
   </div>
 </section>
