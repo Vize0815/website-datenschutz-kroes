@@ -180,11 +180,18 @@ button{font-family:inherit;border:none;cursor:pointer}
   .vs-left{border-bottom:3px solid var(--gold)}
   .vs-col{padding:28px 22px}
 }
-/* HERO ALERT */
-.hero-alert{background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.32);border-radius:var(--r8);padding:14px 18px;margin-bottom:24px;display:flex;align-items:flex-start;gap:12px}
-.hero-alert svg{width:18px;height:18px;color:#E57373;flex-shrink:0;margin-top:2px}
-.hero-alert-txt{font-size:13px;color:rgba(255,255,255,.85);line-height:1.55}
-.hero-alert-txt strong{color:#fff;font-weight:700;display:block;margin-bottom:2px;font-size:14px}
+/* HAFTUNG */
+.haftung{background:var(--navy-deep);padding:64px 0}
+.haftung-head{text-align:center;margin-bottom:44px}
+.haftung-eye{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.haftung-h2{font-size:clamp(22px,3vw,36px);font-weight:600;line-height:1.2;letter-spacing:-.02em;color:var(--white);margin-bottom:14px}
+.haftung-sub{font-size:15px;color:rgba(255,255,255,.58);line-height:1.75;max-width:560px;margin:0 auto}
+.haftung-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);border-radius:var(--r16);overflow:hidden}
+.haftung-card{background:var(--navy-deep);padding:40px 32px;text-align:center}
+.haftung-num{font-family:var(--f-mono);font-size:clamp(28px,3.5vw,46px);font-weight:400;color:var(--gold);letter-spacing:-.02em;line-height:1;margin-bottom:12px}
+.haftung-card-title{font-size:14px;font-weight:700;color:var(--white);margin-bottom:6px}
+.haftung-card-sub{font-size:13px;color:rgba(255,255,255,.5);line-height:1.65}
+@media(max-width:640px){.haftung-grid{grid-template-columns:1fr}}
 /* ANTI-ANWALT */
 .vs-sec{background:var(--white);padding:80px 0}
 .vs-wrap{max-width:840px;margin:48px auto 0;border-radius:var(--r16);overflow:hidden;box-shadow:var(--sh-lg);display:grid;grid-template-columns:1fr 52px 1fr}
@@ -238,13 +245,6 @@ button{font-family:inherit;border:none;cursor:pointer}
         <p class="hero-eye">Externer Datenschutzbeauftragter · Speziell für Handwerksbetriebe</p>
         <h1 class="hero-h1">DSGVO für Ihren Betrieb.<br><em>Damit Sie sich auf Ihr Handwerk konzentrieren.</em></h1>
         <p class="hero-sub">Alexander Kroes übernimmt alle Datenschutzpflichten für Ihren Handwerksbetrieb. Von Kundendaten und WhatsApp bis zu Baustellenfotos und mobilen Geräten. Praxisgerecht. Zertifiziert. Ohne Mehraufwand für Sie.</p>
-        <div class="hero-alert">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <div class="hero-alert-txt">
-            <strong>Als Geschäftsführung haften Sie persönlich, das unabhängig von der Rechtsform des Unternehmens.</strong>
-            Bußgelder bis zu 20 Millionen Euro oder 4 % des Jahresumsatzes. Keine Versicherung deckt das ab.
-          </div>
-        </div>
         <div class="hero-proof">
           <span class="hero-stars">★★★★★</span>
           <span class="hero-proof-txt"><strong>Über 50 Betriebe und Unternehmen</strong> vertrauen Datenschutz Kroes</span>
@@ -313,6 +313,33 @@ button{font-family:inherit;border:none;cursor:pointer}
       <div class="kpi-item">
         <div class="kpi-num"><span class="kpi-val">6</span><span class="kpi-unit">Wo.</span></div>
         <p class="kpi-txt">typische Dauer bis zur vollständigen DSGVO-Compliance bei einem neuen KMU-Mandat</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="haftung">
+  <div class="w">
+    <div class="haftung-head">
+      <p class="haftung-eye">Persönliche Haftung</p>
+      <h2 class="haftung-h2">Als Geschäftsführung haften Sie persönlich.<br>Unabhängig von der Rechtsform des Unternehmens.</h2>
+      <p class="haftung-sub">Die DSGVO kennt keine GmbH-Haftungsbeschränkung. Verantwortliche Personen haften direkt, auch als Inhaber eines Handwerksbetriebs.</p>
+    </div>
+    <div class="haftung-grid">
+      <div class="haftung-card">
+        <p class="haftung-num">20 Mio. €</p>
+        <p class="haftung-card-title">Maximales Bußgeld</p>
+        <p class="haftung-card-sub">oder 4 % des globalen Jahresumsatzes, je nachdem, was höher ist (Art. 83 DSGVO)</p>
+      </div>
+      <div class="haftung-card">
+        <p class="haftung-num">Ø 8.700 €</p>
+        <p class="haftung-card-title">Typisches Bußgeld im Handwerk</p>
+        <p class="haftung-card-sub">Reale Verfahren gegen Handwerksbetriebe im deutschsprachigen Raum. Tendenz steigend.</p>
+      </div>
+      <div class="haftung-card">
+        <p class="haftung-num">0 €</p>
+        <p class="haftung-card-title">Versicherungsdeckung</p>
+        <p class="haftung-card-sub">Datenschutzbußgelder sind nicht versicherbar. Sie tragen das Risiko vollständig persönlich.</p>
       </div>
     </div>
   </div>
