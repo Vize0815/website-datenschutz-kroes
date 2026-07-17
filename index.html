@@ -32,7 +32,8 @@
   <link rel="icon" type="image/png" href="logo-datenschutz-kroes.png">
   <link rel="apple-touch-icon" href="logo-datenschutz-kroes.png">
 
-  <!-- ===== LCP Preloads ===== -->
+  <!-- ===== Render-Critical Preloads ===== -->
+  <link rel="preload" as="style" fetchpriority="high" href="style.css">
   <link rel="preload" as="image" href="alexander-kroes-mobile.webp" type="image/webp" media="(max-width: 480px)" fetchpriority="high">
   <link rel="preload" as="image" href="alexander-kroes-tablet.webp" type="image/webp" media="(min-width: 481px) and (max-width: 768px)" fetchpriority="high">
   <link rel="preload" as="image" href="alexander-kroes-desktop.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
@@ -87,7 +88,6 @@
   }
   </script>
 
-  <link rel="preload" as="style" fetchpriority="high" href="style.css">
   <link rel="stylesheet" href="style.css">
   <link rel="preload" as="style" href="cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="cookie-banner.css"></noscript>
