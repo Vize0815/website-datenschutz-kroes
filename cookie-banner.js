@@ -381,17 +381,9 @@
     }
   };
 
-  function scheduleInit() {
-    if (window.requestIdleCallback) {
-      window.requestIdleCallback(init, { timeout: 1500 });
-    } else {
-      setTimeout(init, 800);
-    }
-  }
-
-  if (document.readyState === 'complete') {
-    scheduleInit();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
   } else {
-    window.addEventListener('load', scheduleInit, { once: true });
+    init();
   }
 })();
