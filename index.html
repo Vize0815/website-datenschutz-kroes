@@ -3910,11 +3910,13 @@
 .lp-card__cover::before { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(135deg, rgba(15,31,61,0.78) 0%, rgba(27,79,138,0.62) 100%); }
 .lp-card__cover--branche::before { background: linear-gradient(135deg, rgba(10,42,29,0.84) 0%, rgba(20,68,46,0.7) 55%, rgba(45,106,79,0.58) 100%); }
 .lp-card__cover--behoerde::before { background: linear-gradient(135deg, rgba(28,16,56,0.86) 0%, rgba(60,34,112,0.72) 55%, rgba(124,92,191,0.58) 100%); }
+.lp-card__cover--ki::before { background: linear-gradient(135deg, rgba(4,45,46,0.86) 0%, rgba(9,90,90,0.72) 55%, rgba(13,148,136,0.58) 100%); }
 .lp-card__badge { position: absolute; top: 16px; left: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(255,255,255,0.95); color: var(--color-navy, #0F1F3D); border-radius: 100px; backdrop-filter: blur(6px); }
 .lp-card__badge-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 .lp-card__badge-dot--howto { background: var(--color-prussian, #1B4F8A); }
 .lp-card__badge-dot--branche { background: #2D6A4F; }
 .lp-card__badge-dot--behoerde { background: #7C5CBF; }
+.lp-card__badge-dot--ki { background: #0D9488; }
 .lp-card__body { padding: 26px 28px 28px; display: flex; flex-direction: column; flex: 1; }
 .lp-card__meta { display: flex; align-items: center; gap: 12px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8A99AD; margin-bottom: 14px; }
 .lp-card__meta-dot { width: 3px; height: 3px; border-radius: 50%; background: #8A99AD; flex-shrink: 0; }
@@ -4686,6 +4688,28 @@
         </div>
         <div class="latest-posts__grid">
 
+          <a class="lp-card" href="datenschutz-blog/ki-kennzeichnungspflicht-ai-act-august-2026/">
+            <div class="lp-card__cover lp-card__cover--ki" style="background-image:url('KI-Kennzeichnungspflicht%20.webp');" role="img" aria-label="KI-Inhalte kennzeichnen. Was Unternehmen ab 2. August 2026 wissen müssen">
+              <span class="lp-card__badge">
+                <span class="lp-card__badge-dot lp-card__badge-dot--ki" aria-hidden="true"></span>
+                KI &amp; Recht
+              </span>
+            </div>
+            <div class="lp-card__body">
+              <div class="lp-card__meta">
+                <time datetime="2026-07-23">23. Juli 2026</time>
+                <span class="lp-card__meta-dot" aria-hidden="true"></span>
+                <span>8 Min. Lesezeit</span>
+              </div>
+              <h3 class="lp-card__title">KI-Inhalte kennzeichnen. Was Unternehmen ab 2. August 2026 wissen müssen</h3>
+              <p class="lp-card__excerpt">Ab dem 2. August 2026 gilt die Kennzeichnungspflicht für KI-generierte Inhalte nach Artikel 50 EU AI Act. Vier Pflichtenkreise, Bußgelder bis 15 Mio. Euro und was Ihr Unternehmen jetzt umsetzen muss.</p>
+              <span class="lp-card__read">
+                Weiterlesen
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
           <a class="lp-card" href="datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/">
             <div class="lp-card__cover lp-card__cover--howto" style="background-image:url('datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/cover.webp');" role="img" aria-label="DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026">
               <span class="lp-card__badge">
@@ -4723,28 +4747,6 @@
               </div>
               <h3 class="lp-card__title">Datenschutz im Steuerrecht: Was Steuerkanzleien wissen müssen</h3>
               <p class="lp-card__excerpt">Steuerkanzleien verarbeiten täglich hochsensible Finanz- und Gesundheitsdaten. Was DSGVO, BAO und AO fordern, welche Risiken drohen und wie das Spannungsfeld Aufbewahrungspflicht kontra Löschgebot aufgelöst wird.</p>
-              <span class="lp-card__read">
-                Weiterlesen
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <a class="lp-card" href="datenschutz-blog/pruefbereiche-datenschutzbehoerden/">
-            <div class="lp-card__cover lp-card__cover--behoerde" style="background-image:url('Datenschutzbehoerde.webp');" role="img" aria-label="Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden">
-              <span class="lp-card__badge">
-                <span class="lp-card__badge-dot lp-card__badge-dot--behoerde" aria-hidden="true"></span>
-                Datenschutzbehörde
-              </span>
-            </div>
-            <div class="lp-card__body">
-              <div class="lp-card__meta">
-                <time datetime="2026-06-05">05. Juni 2026</time>
-                <span class="lp-card__meta-dot" aria-hidden="true"></span>
-                <span>12 Min. Lesezeit</span>
-              </div>
-              <h3 class="lp-card__title">Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden</h3>
-              <p class="lp-card__excerpt">Was Aufsichtsbehörden bei einer DSGVO-Prüfung wirklich kontrollieren. Mit Fokus auf Verarbeitungsverzeichnis, TOMs, AVVs und den besonderen Risiken für Steuerkanzleien.</p>
               <span class="lp-card__read">
                 Weiterlesen
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
