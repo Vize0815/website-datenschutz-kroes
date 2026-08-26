@@ -4,7 +4,7 @@
   <!-- Startseite -->
   <url>
     <loc>https://www.datenschutz-kroes.at/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -44,13 +44,13 @@
   </url>
   <url>
     <loc>https://www.datenschutz-kroes.at/dsgvo-seminar.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.datenschutz-kroes.at/nis2-seminar.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -84,9 +84,33 @@
   <!-- Blog -->
   <url>
     <loc>https://www.datenschutz-kroes.at/datenschutz-blog/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/ki-kennzeichnungspflicht-ai-act-august-2026/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/pruefbereiche-datenschutzbehoerden/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.datenschutz-kroes.at/datenschutz-blog/dsgvo-compliance-5-schritte-kmu/</loc>
