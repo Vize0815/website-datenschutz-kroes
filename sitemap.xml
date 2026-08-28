@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Startseite -->
   <url>
-    <loc>https://www.datenschutz-kroes.at/</loc>
+    <loc>https://datenschutz-kroes.at/</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,71 +11,97 @@
 
   <!-- Regionale Landingpages -->
   <url>
-    <loc>https://www.datenschutz-kroes.at/muenchen/</loc>
+    <loc>https://datenschutz-kroes.at/tirol/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://datenschutz-kroes.at/muenchen/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/salzburg/</loc>
+    <loc>https://datenschutz-kroes.at/salzburg/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/rosenheim/</loc>
+    <loc>https://datenschutz-kroes.at/rosenheim/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Branchenseiten -->
   <url>
-    <loc>https://www.datenschutz-kroes.at/tirol/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://datenschutz-kroes.at/arztpraxen/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://datenschutz-kroes.at/handwerk/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://datenschutz-kroes.at/steuerberater/</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Leistungen -->
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-flatrate.html</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-flatrate.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/dsgvo-seminar.html</loc>
+    <loc>https://datenschutz-kroes.at/dsgvo-seminar.html</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/nis2-seminar.html</loc>
+    <loc>https://datenschutz-kroes.at/nis2-seminar.html</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/benennungsurkunde.html</loc>
+    <loc>https://datenschutz-kroes.at/benennungsurkunde.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/downloads.html</loc>
+    <loc>https://datenschutz-kroes.at/downloads.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://datenschutz-kroes.at/fallbeispiele.html</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Unternehmen -->
   <url>
-    <loc>https://www.datenschutz-kroes.at/karriere.html</loc>
+    <loc>https://datenschutz-kroes.at/karriere.html</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/newsletter-leseprobe.html</loc>
+    <loc>https://datenschutz-kroes.at/newsletter-leseprobe.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
@@ -83,91 +109,91 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/ki-kennzeichnungspflicht-ai-act-august-2026/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/ki-kennzeichnungspflicht-ai-act-august-2026/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/datenschutz-steuerrecht-was-zu-beachten/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/pruefbereiche-datenschutzbehoerden/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/pruefbereiche-datenschutzbehoerden/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/dsgvo-compliance-5-schritte-kmu/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/dsgvo-compliance-5-schritte-kmu/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/meta-bussgeld-12-milliarden-lehren-kmu/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/meta-bussgeld-12-milliarden-lehren-kmu/</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/datenschutz-im-handwerk-7-fallstricke/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/datenschutz-im-handwerk-7-fallstricke/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/nis2-richtlinie-was-kmu-umsetzen-muessen/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/nis2-richtlinie-was-kmu-umsetzen-muessen/</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/ki-und-datenschutz-dsgvo-konform-einsetzen/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/ki-und-datenschutz-dsgvo-konform-einsetzen/</loc>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/ki-und-claude-dsgvo-konform-einsetzen/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/ki-und-claude-dsgvo-konform-einsetzen/</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/isms-informationssicherheitsmanagement-erklaert/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/isms-informationssicherheitsmanagement-erklaert/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/dora-verordnung-digitale-betriebsstabilitaet/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/dora-verordnung-digitale-betriebsstabilitaet/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/lieferketten-compliance-sorgfaltspflichten/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/lieferketten-compliance-sorgfaltspflichten/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz-blog/was-ist-ein-datenschutz-audit/</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/was-ist-ein-datenschutz-audit/</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -175,13 +201,13 @@
 
   <!-- Rechtliches -->
   <url>
-    <loc>https://www.datenschutz-kroes.at/impressum.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://datenschutz-kroes.at/impressum.html</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.datenschutz-kroes.at/datenschutz.html</loc>
+    <loc>https://datenschutz-kroes.at/datenschutz.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
