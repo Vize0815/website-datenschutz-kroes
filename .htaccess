@@ -10,6 +10,28 @@
   # Redirect /agb/ to /impressum/
   RewriteRule ^agb/?$ /impressum/ [R=301,L]
 
+  # Legacy WordPress-URLs → aktuelle Seiten (301-Redirects)
+  RewriteRule ^downloads/?$ /downloads.html [R=301,L]
+  RewriteRule ^pauschalpreise-datenschutz/?$ /datenschutz-flatrate.html [R=301,L]
+  RewriteRule ^dsgvo-news/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^kontakt/?$ /#kontakt [R=301,L]
+  RewriteRule ^alexander-kroes-6/?$ / [R=301,L]
+  RewriteRule ^interessenskonflikte-bei-internen-dsb/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^datenschutz-zertifizierungen-gewinnen-an-bedeutung/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^310-mio-euro-dsgvo-strafe-fuer-linkedin/?$ /datenschutz-blog/meta-bussgeld-12-milliarden-lehren-kmu/ [R=301,L]
+  RewriteRule ^vodafone-zahlt-rekordstrafe/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^google-verliert-prozess-um-datenschutz/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^deutsche-bahn-klage-wegen-db-navigator/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^so-minimieren-kmu-rechtliche-risiken-beim-einsatz-von-ki/?$ /datenschutz-blog/ki-und-datenschutz-dsgvo-konform-einsetzen/ [R=301,L]
+  RewriteRule ^datenpannen-im-unternehmen/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^seminar-dsgvo-fuer-geschaeftsfuehrer/?$ /dsgvo-seminar.html [R=301,L]
+  RewriteRule ^datenschutzerklaerung/?$ /datenschutz.html [R=301,L]
+  RewriteRule ^datenschutzerklaerung-fuer-bewerber/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^download-bewerbungsverfahren/?$ /downloads.html [R=301,L]
+  RewriteRule ^category/dsgvo-news/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^dsgvo-beratung-fuer-unternehmen/?$ / [R=301,L]
+  RewriteRule ^nis2-richtlinie-fuer-unternehmen/?$ /datenschutz-blog/nis2-richtlinie-was-kmu-umsetzen-muessen/ [R=301,L]
+
   # Redirect www to non-www
   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
   RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]

@@ -17,8 +17,8 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026 | Datenschutz Kroes</title>
-  <meta name="description" content="Welche KI-Plattformen 2026 wirklich DSGVO-konform sind: Multi-Tenant SaaS, Self-Hosted, On-Premise. Vier Kriterien, drei Hosting-Modelle und was österreichische KMU bei der Auswahl beachten müssen.">
+  <title>DSGVO konforme KI Plattformen: Welche Anbieter sind sicher? (2026) | Datenschutz Kroes</title>
+  <meta name="description" content="ChatGPT, Copilot und Co. DSGVO-konform nutzen: Welche KI-Plattformen 2026 wirklich legal sind, welche Anbieter EU-Hosting bieten und was österreichische KMU vor dem Einsatz prüfen müssen.">
   <meta name="keywords" content="DSGVO konforme KI, KI Plattform Unternehmen, DSGVO KI Vergleich, ChatGPT DSGVO, EU AI Act 2026, KI Datensouveränität, Zero Data Retention, Self-Hosted KI">
   <link rel="canonical" href="https://datenschutz-kroes.at/datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/">
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
@@ -27,7 +27,7 @@
   <link rel="preload" as="image" href="../../logo-datenschutz-kroes.webp" type="image/webp" fetchpriority="high">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026">
+  <meta property="og:title" content="DSGVO konforme KI Plattformen: Welche Anbieter sind sicher? (2026)">
   <meta property="og:description" content="Multi-Tenant, Self-Hosted oder On-Premise? Vier Kriterien, drei Hosting-Modelle und was österreichische KMU bei der Auswahl DSGVO-konformer KI-Plattformen wissen müssen.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://datenschutz-kroes.at/datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/">
@@ -64,6 +64,64 @@
       "@type": "WebPage",
       "@id": "https://datenschutz-kroes.at/datenschutz-blog/dsgvo-konforme-ki-plattformen-unternehmen/"
     }
+  }
+  </script>
+
+  <!-- FAQ Schema für AEO (KI-Suchmaschinen) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ist ChatGPT DSGVO-konform?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ChatGPT von OpenAI ist in der kostenlosen und Pro-Version nicht automatisch DSGVO-konform für Unternehmen. Die ChatGPT Enterprise-Version bietet einen Auftragsverarbeitungsvertrag (AVV) und die Option, Daten nicht für das Training zu verwenden. Für österreichische und deutsche KMU empfiehlt sich die Enterprise-Variante oder eine Alternative mit nachgewiesenem EU-Hosting und Zero Data Retention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche KI-Plattformen bieten EU-Hosting an?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KI-Anbieter mit nachgewiesenem EU-Hosting und DSGVO-Konformität (Stand 2026): Microsoft Azure OpenAI Service (EU-Regionen wählbar), Google Workspace AI (EU-Rechenzentren), Aleph Alpha (deutsches Unternehmen, Server in Deutschland), Mistral AI (Frankreich), sowie Self-Hosted-Lösungen wie Ollama oder vLLM auf eigener EU-Infrastruktur. Wichtig: EU-Hosting allein genügt nicht, es braucht auch einen gültigen AVV."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was bedeutet Zero Data Retention bei KI-Tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zero Data Retention (ZDR) bedeutet, dass der KI-Anbieter Ihre Eingaben (Prompts) und Antworten nicht speichert und nicht für das Training des Modells verwendet. Dies ist besonders wichtig für Unternehmen, die personenbezogene Daten in KI-Tools eingeben. Anbieter wie OpenAI API, Anthropic Claude API und einige Enterprise-Versionen bieten ZDR an. Wichtig: ZDR gilt nur für den API-Modus, nicht für die Consumer-Apps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Brauche ich für KI-Tools im Unternehmen einen Auftragsverarbeitungsvertrag?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Wenn Sie personenbezogene Daten (z.B. Kundennamen, E-Mail-Adressen, Mitarbeiterdaten) in ein KI-Tool eingeben oder verarbeiten lassen, handelt es sich um Auftragsverarbeitung nach Art. 28 DSGVO. Sie benötigen zwingend einen Auftragsverarbeitungsvertrag (AVV) mit dem KI-Anbieter. Ohne AVV drohen Bußgelder und Abmahnrisiken. Viele kostenlose KI-Versionen bieten keinen AVV an."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Darf ich mit KI-Tools Mitarbeiterdaten oder Patientendaten verarbeiten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Verarbeitung von Mitarbeiterdaten oder Patientendaten (besondere Kategorien nach Art. 9 DSGVO) mit KI-Tools ist nur erlaubt wenn: (1) ein gültiger AVV mit dem Anbieter besteht, (2) die Daten in der EU verarbeitet werden oder ein Angemessenheitsbeschluss vorliegt, (3) die Betriebsvereinbarung oder der Betriebsrat zugestimmt hat und (4) Patientendaten nur in speziell geprüften Systemen mit Gesundheitsdaten-Zertifizierung verarbeitet werden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist der EU AI Act und was bedeutet er für Unternehmen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Der EU AI Act ist die weltweit erste umfassende KI-Regulierung, die seit August 2024 schrittweise in Kraft tritt. Für Unternehmen bedeutet er: (1) Verbotene KI-Praktiken (Social Scoring, manipulative KI) sind ab sofort untersagt, (2) Hochrisiko-KI (HR-Entscheidungen, Kreditwürdigkeitsprüfung) benötigt Konformitätsbewertungen, (3) KI-generierte Inhalte müssen ab August 2026 gekennzeichnet werden. Verstöße können bis zu 35 Mio. Euro oder 7% des Jahresumsatzes kosten."
+        }
+      }
+    ]
   }
   </script>
 
