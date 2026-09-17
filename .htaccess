@@ -1,6 +1,6 @@
 # ============================================================
 # datenschutz-kroes.at
-# Stand: 17.09.2026
+# Stand: 17.09.2026, Fassung 2
 #
 # Geaendert gegenueber der Vorgaengerfassung:
 #  1. Options -MultiViews ergaenzt
@@ -21,6 +21,10 @@
 #     festgeschrieben, verhindert doppelte Inhalte
 #  9. Cache Zeiten erhoeht, Schriften und SVG ergaenzt
 # 10. Zwei Sicherheitsheader ergaenzt
+#
+# Fassung 2 vom 17.09.2026:
+# 11. Cookie Banner Artikel: Umleitung auf die neue Adresse
+#     im Blog aktiviert. Damit ist kein 404 mehr offen.
 # ============================================================
 
 
@@ -124,14 +128,13 @@ Options -Indexes
   RewriteRule ^deutsche-bahn-klage-wegen-db-navigator/?$ /datenschutz-blog/ [R=301,L]
 
   # ----------------------------------------------------------
-  # Cookie Banner Artikel, 2.632 Impressionen, Position 16,5
-  # Bewusst DEAKTIVIERT. Empfehlung ist, den Artikel unter
-  # derselben Adresse neu zu veroeffentlichen. Eine Umleitung
-  # auf die Bloguebersicht wertet Google haeufig als Soft 404
-  # und der Rankingwert verfaellt.
-  # Nur aktivieren, wenn der Artikel NICHT zurueckkommt:
-  # RewriteRule ^cookie-banner-brauchen-alles-ablehnen-schaltflaeche/?$ /datenschutz-blog/ [R=301,L]
+  # 2.632 Impr. | Position 16,5 | sichtbarste Einzeladresse
+  # Artikel wurde unter neuer Adresse im Blog wieder
+  # veroeffentlicht. Damit ist die Umleitung inhaltlich
+  # gedeckt und kein Soft 404 mehr.
+  # Geprueft am 17.09.2026: Ziel liefert 200.
   # ----------------------------------------------------------
+  RewriteRule ^cookie-banner-brauchen-alles-ablehnen-schaltflaeche/?$ /datenschutz-blog/cookie-banner-brauchen-alles-ablehnen-schaltflaeche/ [R=301,L]
 
 
   # ----------------------------------------------------------
@@ -152,8 +155,7 @@ Options -Indexes
   # existiert. Verzeichnisse wie /tirol/ oder /arztpraxen/
   # werden dadurch nicht angefasst.
   # ----------------------------------------------------------
-  RewriteCond %{DOCUMENT_ROOT}/$1.html -f [OR]
-  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^([^/.]+)/?$ /$1.html [R=301,L]
 
 </IfModule>
