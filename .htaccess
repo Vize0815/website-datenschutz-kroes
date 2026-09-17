@@ -1,57 +1,204 @@
-# Redirect index.html to root
+# ============================================================
+# datenschutz-kroes.at
+# Stand: 17.09.2026
+#
+# Geaendert gegenueber der Vorgaengerfassung:
+#  1. Options -MultiViews ergaenzt
+#     Behebt den 404 auf /downloads/ und beendet die doppelte
+#     Erreichbarkeit jeder Seite mit und ohne .html Endung
+#  2. HTTPS und www Umleitung nach vorne gezogen
+#     Vorher entstanden bei http Aufrufen zwei Spruenge
+#  3. /agb/ zeigte auf /impressum/ und damit in einen 404
+#     Ziel korrigiert auf /impressum.html
+#  4. /kontakt/ leitete auf /%23kontakt
+#     NE Flag ergaenzt, damit der Anker funktioniert
+#  5. /datenschutzerklaerung-fuer-bewerber/ zeigte auf den Blog
+#     Ziel korrigiert auf /datenschutz.html
+#  6. Weiterleitung fuer /impressum/ ergaenzt, fehlte komplett
+#     375 Impressionen, Position 2,9
+#  7. WordPress Reste abgefangen: tag, author, feed, wp-content
+#  8. Endungslose Adressen werden auf die .html Fassung
+#     festgeschrieben, verhindert doppelte Inhalte
+#  9. Cache Zeiten erhoeht, Schriften und SVG ergaenzt
+# 10. Zwei Sicherheitsheader ergaenzt
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Servereinstellungen
+# MultiViews raet bei Adressen ohne Endung, welche Datei
+# gemeint sein koennte, und greift VOR den Regeln unten.
+# Das war die Ursache des Downloads Fehlers.
+# ------------------------------------------------------------
+Options -MultiViews
+Options -Indexes
+
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Redirect index.html to /
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP
-  RewriteRule ^index\.html$ / [R=301,L]
+  # ----------------------------------------------------------
+  # 1. Kanonische Adresse zuerst
+  # Muss ganz oben stehen, sonst entstehen Weiterleitungsketten
+  # ----------------------------------------------------------
 
-  # Redirect /agb/ to /impressum/
-  RewriteRule ^agb/?$ /impressum/ [R=301,L]
+  # HTTPS erzwingen
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-  # Legacy WordPress-URLs → aktuelle Seiten (301-Redirects)
-  RewriteRule ^downloads/?$ /downloads.html [R=301,L]
-  RewriteRule ^pauschalpreise-datenschutz/?$ /datenschutz-flatrate.html [R=301,L]
-  RewriteRule ^dsgvo-news/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^kontakt/?$ /#kontakt [R=301,L]
-  RewriteRule ^alexander-kroes-6/?$ / [R=301,L]
-  RewriteRule ^interessenskonflikte-bei-internen-dsb/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^datenschutz-zertifizierungen-gewinnen-an-bedeutung/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^310-mio-euro-dsgvo-strafe-fuer-linkedin/?$ /datenschutz-blog/meta-bussgeld-12-milliarden-lehren-kmu/ [R=301,L]
-  RewriteRule ^vodafone-zahlt-rekordstrafe/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^google-verliert-prozess-um-datenschutz/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^deutsche-bahn-klage-wegen-db-navigator/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^so-minimieren-kmu-rechtliche-risiken-beim-einsatz-von-ki/?$ /datenschutz-blog/ki-und-datenschutz-dsgvo-konform-einsetzen/ [R=301,L]
-  RewriteRule ^datenpannen-im-unternehmen/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^seminar-dsgvo-fuer-geschaeftsfuehrer/?$ /dsgvo-seminar.html [R=301,L]
-  RewriteRule ^datenschutzerklaerung/?$ /datenschutz.html [R=301,L]
-  RewriteRule ^datenschutzerklaerung-fuer-bewerber/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^download-bewerbungsverfahren/?$ /downloads.html [R=301,L]
-  RewriteRule ^category/dsgvo-news/?$ /datenschutz-blog/ [R=301,L]
-  RewriteRule ^dsgvo-beratung-fuer-unternehmen/?$ / [R=301,L]
-  RewriteRule ^nis2-richtlinie-fuer-unternehmen/?$ /datenschutz-blog/nis2-richtlinie-was-kmu-umsetzen-muessen/ [R=301,L]
-
-  # Redirect www to non-www
+  # www entfernen
   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
   RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]
 
-  # HTTPS enforcement
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  # index.html auf das Wurzelverzeichnis
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP
+  RewriteRule ^index\.html$ / [R=301,L]
+
+
+  # ----------------------------------------------------------
+  # 2. Weiterleitungen der Altstruktur
+  # Sortiert nach Impressionen aus der Search Console,
+  # 12 Monate bis 07.09.2026
+  # ----------------------------------------------------------
+
+  # 951 Impr. | Position 25,5
+  RewriteRule ^downloads/?$ /downloads.html [R=301,L]
+
+  # 683 Impr. | Position 35,3
+  RewriteRule ^pauschalpreise-datenschutz/?$ /datenschutz-flatrate.html [R=301,L]
+
+  # 577 Impr. | Position 5,8 | staerkste Markenanfrage
+  RewriteRule ^alexander-kroes-6/?$ / [R=301,L]
+
+  # 517 Impr. | Position 11,8
+  RewriteRule ^dsgvo-news/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^category/dsgvo-news/?$ /datenschutz-blog/ [R=301,L]
+
+  # 375 Impr. | Position 2,9 | NEU, fehlte bisher
+  RewriteRule ^impressum/?$ /impressum.html [R=301,L]
+
+  # 331 Impr. | Position 20,2
+  RewriteRule ^interessenskonflikte-bei-internen-dsb/?$ /datenschutz-blog/ [R=301,L]
+
+  # 311 Impr. | Position 3,7
+  # KORRIGIERT: NE Flag, sonst wird das # zu %23 kodiert
+  RewriteRule ^kontakt/?$ /#kontakt [R=301,NE,L]
+
+  # 147 Impr. | Position 34,3
+  RewriteRule ^nis2-richtlinie-fuer-unternehmen/?$ /datenschutz-blog/nis2-richtlinie-was-kmu-umsetzen-muessen/ [R=301,L]
+
+  # 122 Impr. | Position 28,1
+  RewriteRule ^dsgvo-beratung-fuer-unternehmen/?$ / [R=301,L]
+
+  # 92 Impr. | Position 19,8
+  RewriteRule ^datenschutz-zertifizierungen-gewinnen-an-bedeutung/?$ /datenschutz-blog/ [R=301,L]
+
+  # 90 Impr. | Position 69,1
+  RewriteRule ^310-mio-euro-dsgvo-strafe-fuer-linkedin/?$ /datenschutz-blog/meta-bussgeld-12-milliarden-lehren-kmu/ [R=301,L]
+
+  # 70 Impr. | Position 7,6
+  RewriteRule ^so-minimieren-kmu-rechtliche-risiken-beim-einsatz-von-ki/?$ /datenschutz-blog/ki-und-datenschutz-dsgvo-konform-einsetzen/ [R=301,L]
+
+  # 69 Impr. | Position 3,9
+  RewriteRule ^datenschutzerklaerung/?$ /datenschutz.html [R=301,L]
+
+  # 64 Impr. | Position 6,6
+  RewriteRule ^datenpannen-im-unternehmen/?$ /datenschutz-blog/ [R=301,L]
+
+  # 49 Impr. | Position 6,5
+  # KORRIGIERT: Ziel war /impressum/ und damit selbst ein 404
+  RewriteRule ^agb/?$ /impressum.html [R=301,L]
+
+  # 43 Impr. | Position 18,7
+  # KORRIGIERT: Ziel war der Blog, inhaltlich passt die Datenschutzerklaerung
+  RewriteRule ^datenschutzerklaerung-fuer-bewerber/?$ /datenschutz.html [R=301,L]
+
+  # 32 Impr. | Position 17,5
+  RewriteRule ^seminar-dsgvo-fuer-geschaeftsfuehrer/?$ /dsgvo-seminar.html [R=301,L]
+
+  # unter 15 Impr.
+  RewriteRule ^vodafone-zahlt-rekordstrafe/?$ /datenschutz-blog/meta-bussgeld-12-milliarden-lehren-kmu/ [R=301,L]
+  RewriteRule ^download-bewerbungsverfahren/?$ /downloads.html [R=301,L]
+  RewriteRule ^google-verliert-prozess-um-datenschutz/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^deutsche-bahn-klage-wegen-db-navigator/?$ /datenschutz-blog/ [R=301,L]
+
+  # ----------------------------------------------------------
+  # Cookie Banner Artikel, 2.632 Impressionen, Position 16,5
+  # Bewusst DEAKTIVIERT. Empfehlung ist, den Artikel unter
+  # derselben Adresse neu zu veroeffentlichen. Eine Umleitung
+  # auf die Bloguebersicht wertet Google haeufig als Soft 404
+  # und der Rankingwert verfaellt.
+  # Nur aktivieren, wenn der Artikel NICHT zurueckkommt:
+  # RewriteRule ^cookie-banner-brauchen-alles-ablehnen-schaltflaeche/?$ /datenschutz-blog/ [R=301,L]
+  # ----------------------------------------------------------
+
+
+  # ----------------------------------------------------------
+  # 3. WordPress Reste
+  # ----------------------------------------------------------
+  RewriteRule ^tag/(.*)$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^author/(.*)$ / [R=301,L]
+  RewriteRule ^feed/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^wp-content/(.*)$ / [R=301,L]
+  RewriteRule ^wp-includes/(.*)$ / [R=301,L]
+
+
+  # ----------------------------------------------------------
+  # 4. Endungslose Adressen auf die .html Fassung festlegen
+  #
+  # Muss als LETZTE Regel stehen.
+  # Die Bedingung prueft, ob die passende .html Datei wirklich
+  # existiert. Verzeichnisse wie /tirol/ oder /arztpraxen/
+  # werden dadurch nicht angefasst.
+  # ----------------------------------------------------------
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([^/.]+)/?$ /$1.html [R=301,L]
+
 </IfModule>
 
-# Cache headers
+
+# ============================================================
+# Cache
+# Vorher 30 Tage fuer Bilder. Bilder und Schriften aendern sich
+# praktisch nie, deshalb auf ein Jahr angehoben.
+# ============================================================
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType image/webp "access plus 30 days"
-  ExpiresByType image/png "access plus 30 days"
-  ExpiresByType image/jpeg "access plus 30 days"
-  ExpiresByType text/css "access plus 7 days"
-  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/webp             "access plus 1 year"
+  ExpiresByType image/png              "access plus 1 year"
+  ExpiresByType image/jpeg             "access plus 1 year"
+  ExpiresByType image/svg+xml          "access plus 1 year"
+  ExpiresByType image/x-icon           "access plus 1 year"
+  ExpiresByType font/woff2             "access plus 1 year"
+  ExpiresByType font/woff              "access plus 1 year"
+  ExpiresByType text/css               "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html              "access plus 1 hour"
 </IfModule>
 
-# Gzip compression
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|png|jpe?g|svg|ico|woff2?|css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+
+# ============================================================
+# Komprimierung
+# ============================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+
+# ============================================================
+# Eigene Fehlerseite
+# Erst aktivieren, wenn 404.html tatsaechlich existiert
+# ============================================================
+# ErrorDocument 404 /404.html
