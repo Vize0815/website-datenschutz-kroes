@@ -44,8 +44,9 @@ jobs:
         run: |
           SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
           rsync -avz \
+            --no-perms --no-owner --no-group \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='.claude' \
             -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
-            ./ "$SSH_USER@$SSH_HOST:~/"
+            ./ "$SSH_USER@$SSH_HOST:~/html/"
