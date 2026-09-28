@@ -275,7 +275,7 @@
     .law-section { background: var(--color-sky-tint); border-radius: var(--radius-lg); padding: 48px; }
     .country-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .country-card { background: var(--color-surface); border-radius: var(--radius-md); padding: 32px; border-top: 3px solid var(--color-gold); }
-    .country-card__flag { font-size: 44px; line-height: 1; margin-bottom: 16px; display: block; }
+    .country-card__flag { width: 56px; height: auto; display: block; margin-bottom: 16px; border-radius: 3px; }
     .country-card__title { font-family: var(--font-sans); font-size: 20px; font-weight: 700; color: var(--color-navy); margin-bottom: 16px; }
     .country-card__text { font-family: var(--font-sans); font-size: 15px; color: var(--color-slate); line-height: 1.7; }
 
@@ -1220,12 +1220,12 @@ Ihre Mandanten vertrauen Ihnen ihre Finanzen an. Einkommen, Betriebszahlen, Steu
       <div class="law-section" style="margin-top:40px;" data-reveal data-reveal-delay="1">
         <div class="country-grid">
           <div class="country-card">
-            <span class="country-card__flag">🇩🇪</span>
+            <svg class="country-card__flag" viewBox="0 0 5 3" role="img" aria-label="Flagge Deutschland"><rect width="5" height="3" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg>
             <h3 class="country-card__title">Deutschland</h3>
             <p class="country-card__text">Steuerkanzleien unterliegen einem besonders dichten Regelwerk. DSGVO und BDSG werden durch die Verschwiegenheitspflicht nach Steuerberatungsgesetz und § 203 StGB ergänzt. Ein Datenschutzvorfall hat damit schnell auch berufs und strafrechtliche Folgen. Sie erhalten eine Betreuung, die alle Ebenen zusammenführt.</p>
           </div>
           <div class="country-card">
-            <span class="country-card__flag">🇦🇹</span>
+            <svg class="country-card__flag" viewBox="0 0 9 6" role="img" aria-label="Flagge Österreich"><rect width="9" height="6" fill="#ed2939"/><rect y="2" width="9" height="2" fill="#fff"/></svg>
             <h3 class="country-card__title">Österreich</h3>
             <p class="country-card__text">Steuerberater unterliegen einem besonders dichten Regelwerk. Neben DSGVO und Datenschutzgesetz (DSG) verpflichtet Sie das WTBG 2017 zur beruflichen Verschwiegenheit. Ein Datenschutzvorfall ist damit schnell auch ein berufsrechtliches Thema. Sie erhalten eine Betreuung, die beide Ebenen zusammenführt.</p>
           </div>
