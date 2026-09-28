@@ -435,6 +435,34 @@
 .nav__mobile-social a { width: 36px !important; height: 36px !important; border-radius: 50% !important; border: 1px solid var(--color-mist, #DDE3EC) !important; color: var(--color-slate-light, #8A99AD) !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transition: color 200ms ease, border-color 200ms ease !important; background-color: transparent !important; }
 .nav__mobile-social a:hover { color: var(--color-navy, #0F1F3D) !important; border-color: var(--color-navy, #0F1F3D) !important; }
 /* ===== END FLUID NAVIGATION ===== */
+
+    /* ===== ARCHIV ===== */
+    .archive { padding: 0 0 80px; }
+    .archive__header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    .archive__heading { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-slate-light); white-space: nowrap; }
+    .archive__heading-line { flex: 1; height: 1px; background-color: var(--color-mist); }
+    .archive__year { background-color: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-md); margin-bottom: 10px; overflow: hidden; }
+    .archive__year summary { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; cursor: pointer; list-style: none; user-select: none; transition: background-color var(--transition-base); }
+    .archive__year summary::-webkit-details-marker { display: none; }
+    .archive__year summary:hover { background-color: var(--color-sky-tint); }
+    .archive__year-left { display: flex; align-items: center; gap: 12px; }
+    .archive__year-num { font-size: 15px; font-weight: 600; color: var(--color-navy); font-family: var(--font-mono); letter-spacing: -0.01em; }
+    .archive__year-count { font-size: 12px; color: var(--color-slate-light); background-color: var(--color-bg); padding: 2px 8px; border-radius: 99px; }
+    .archive__year-chevron { width: 16px; height: 16px; color: var(--color-slate-light); transition: transform 280ms ease; flex-shrink: 0; }
+    details.archive__year[open] .archive__year-chevron { transform: rotate(180deg); }
+    .archive__list { padding: 4px 20px 12px; border-top: 1px solid var(--color-mist); }
+    .archive__item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid rgba(221,227,236,0.5); text-decoration: none; }
+    .archive__item:last-child { border-bottom: none; }
+    .archive__item:hover .archive__item-title { color: var(--color-prussian); }
+    .archive__item-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+    .archive__item-dot--howto { background-color: var(--color-verdant); }
+    .archive__item-dot--ki { background-color: var(--color-prussian); }
+    .archive__item-dot--bussgeld { background-color: var(--color-rose); }
+    .archive__item-dot--branche { background-color: var(--color-gold); }
+    .archive__item-dot--behoerde { background-color: var(--color-slate); }
+    .archive__item-body { flex: 1; min-width: 0; }
+    .archive__item-title { font-size: 14px; font-weight: 500; color: var(--color-ink); line-height: 1.4; transition: color var(--transition-base); display: block; }
+    .archive__item-meta { font-size: 11px; color: var(--color-slate-light); font-family: var(--font-mono); margin-top: 2px; display: block; }
 </style>
 </head>
 <body>
@@ -972,6 +1000,156 @@
           </a>
 
         </div>
+      </div>
+    </section>
+
+    <!-- ===== ARCHIV =====
+         AB JANUAR 2027 AKTIVIEREN — 3 Schritte:
+         1. Das Attribut  hidden  von der <section> unten entfernen
+         2. Alle <a class="article-card" ...> Einträge von 2026 aus dem #articles-grid löschen
+         3. Die Zähler in der .filter-bar aktualisieren (nur noch 2027er Artikel zählen)
+         Neue 2026-Artikel bitte auch in .archive__list eintragen (von oben, neueste zuerst)
+    -->
+    <section class="archive" aria-label="Ältere Beiträge" hidden>
+      <div class="container">
+        <div class="archive__header">
+          <p class="archive__heading">Archiv</p>
+          <div class="archive__heading-line"></div>
+        </div>
+
+        <details class="archive__year">
+          <summary>
+            <span class="archive__year-left">
+              <span class="archive__year-num">2026</span>
+              <span class="archive__year-count">15 Beiträge</span>
+            </span>
+            <svg class="archive__year-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+          </summary>
+          <div class="archive__list">
+
+            <a href="ki-kennzeichnungspflicht-ai-act-august-2026/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--ki"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">KI-Inhalte kennzeichnen. Was Unternehmen ab 2. August 2026 wissen müssen</span>
+                <span class="archive__item-meta">23. Juli 2026 · KI &amp; Recht · 8 Min.</span>
+              </span>
+            </a>
+
+            <a href="dsgvo-konforme-ki-plattformen-unternehmen/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--ki"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">DSGVO konforme KI-Plattformen für Unternehmen: Vergleich 2026</span>
+                <span class="archive__item-meta">18. Juni 2026 · KI &amp; Recht · 10 Min.</span>
+              </span>
+            </a>
+
+            <a href="datenschutz-steuerrecht-was-zu-beachten/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--branche"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">Datenschutz im Steuerrecht: Was Steuerkanzleien wissen müssen</span>
+                <span class="archive__item-meta">16. Juni 2026 · Branche · 9 Min.</span>
+              </span>
+            </a>
+
+            <a href="pruefbereiche-datenschutzbehoerden/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--behoerde"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">Die 10 wichtigsten Prüfbereiche der Datenschutzbehörden</span>
+                <span class="archive__item-meta">05. Juni 2026 · Datenschutzbehörde · 12 Min.</span>
+              </span>
+            </a>
+
+            <a href="was-ist-ein-datenschutz-audit/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--howto"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">Was ist ein Datenschutz Audit. Und warum das Mini Audit so wertvoll ist</span>
+                <span class="archive__item-meta">01. Juni 2026 · How To · 7 Min.</span>
+              </span>
+            </a>
+
+            <a href="lieferketten-compliance-sorgfaltspflichten/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--howto"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">Lieferketten Compliance: Überblick und Pflichten für Unternehmen</span>
+                <span class="archive__item-meta">27. Mai 2026 · How To · 9 Min.</span>
+              </span>
+            </a>
+
+            <a href="isms-informationssicherheitsmanagement-erklaert/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--howto"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">Was ist ein ISMS — und wofür braucht Ihr Unternehmen es?</span>
+                <span class="archive__item-meta">20. Mai 2026 · How To · 10 Min.</span>
+              </span>
+            </a>
+
+            <a href="dora-verordnung-digitale-betriebsstabilitaet/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--howto"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">DORA: Die EU Verordnung zur digitalen Betriebsstabilität — wer betroffen ist</span>
+                <span class="archive__item-meta">13. Mai 2026 · How To · 8 Min.</span>
+              </span>
+            </a>
+
+            <a href="dsgvo-compliance-5-schritte-kmu/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--howto"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">DSGVO Compliance in 5 Schritten: Der Fahrplan für KMU 2026</span>
+                <span class="archive__item-meta">06. Mai 2026 · How To · 8 Min.</span>
+              </span>
+            </a>
+
+            <a href="meta-bussgeld-12-milliarden-lehren-kmu/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--bussgeld"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">Das Meta Bußgeld von 1,2 Mrd.: drei Lehren für österreichische KMU</span>
+                <span class="archive__item-meta">22. April 2026 · Bußgeldfall · 6 Min.</span>
+              </span>
+            </a>
+
+            <a href="datenschutz-im-handwerk-7-fallstricke/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--branche"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">Datenschutz im Handwerk: 7 typische Fallstricke — und wie Sie sie vermeiden</span>
+                <span class="archive__item-meta">08. April 2026 · Branche · 7 Min.</span>
+              </span>
+            </a>
+
+            <a href="nis2-richtlinie-was-kmu-umsetzen-muessen/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--howto"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">NIS2 Richtlinie: Was österreichische KMU jetzt umsetzen müssen</span>
+                <span class="archive__item-meta">25. März 2026 · How To · 9 Min.</span>
+              </span>
+            </a>
+
+            <a href="ki-und-datenschutz-dsgvo-konform-einsetzen/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--ki"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">KI und Datenschutz: ChatGPT, Copilot &amp; Co. DSGVO konform einsetzen</span>
+                <span class="archive__item-meta">11. März 2026 · KI &amp; Recht · 8 Min.</span>
+              </span>
+            </a>
+
+            <a href="ki-und-claude-dsgvo-konform-einsetzen/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--ki"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">KI und Claude: Den Anthropic Assistant DSGVO konform einsetzen</span>
+                <span class="archive__item-meta">25. Februar 2026 · KI &amp; Recht · 7 Min.</span>
+              </span>
+            </a>
+
+            <a href="cookie-banner-brauchen-alles-ablehnen-schaltflaeche/" class="archive__item">
+              <span class="archive__item-dot archive__item-dot--howto"></span>
+              <span class="archive__item-body">
+                <span class="archive__item-title">Cookie Banner: Brauchen Sie eine "Alles ablehnen" Schaltfläche?</span>
+                <span class="archive__item-meta">16. Januar 2026 · How To · 6 Min.</span>
+              </span>
+            </a>
+
+          </div>
+        </details>
+
       </div>
     </section>
 
