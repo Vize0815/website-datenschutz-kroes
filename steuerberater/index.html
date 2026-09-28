@@ -274,7 +274,8 @@
     /* LAW SECTION */
     .law-section { background: var(--color-sky-tint); border-radius: var(--radius-lg); padding: 48px; }
     .country-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    .country-card { background: var(--color-surface); border-radius: var(--radius-md); padding: 32px; border-top: 3px solid var(--color-gold); }
+    .country-card { background: var(--color-surface); border-radius: var(--radius-md); padding: 32px; border-top: 3px solid var(--color-gold); transition: box-shadow var(--transition-base), transform var(--transition-base); }
+    .country-card:hover { box-shadow: var(--shadow-elevated); transform: translateY(-4px); }
     .country-card__flag { width: 56px; height: auto; display: block; margin-bottom: 16px; border-radius: 3px; }
     .country-card__title { font-family: var(--font-sans); font-size: 20px; font-weight: 700; color: var(--color-navy); margin-bottom: 16px; }
     .country-card__text { font-family: var(--font-sans); font-size: 15px; color: var(--color-slate); line-height: 1.7; }
