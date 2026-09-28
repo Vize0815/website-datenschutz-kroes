@@ -224,7 +224,7 @@
 
     /* HERO */
     .hero { background-color: var(--color-surface); padding: 80px 0 96px; }
-    .hero__grid { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: start; }
+    .hero__grid { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: stretch; }
     .hero__breadcrumb { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 28px; }
     .hero__breadcrumb a { color: var(--color-gold); transition: color var(--transition-base); } .hero__breadcrumb a:hover { color: var(--color-navy); }
     .hero__eyebrow { margin-bottom: 20px; }
@@ -232,8 +232,8 @@
     .hero__title em { font-style: normal; color: var(--color-prussian); }
     .hero__desc { max-width: 540px; margin-bottom: 40px; }
     .hero__cta-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-    .hero__photo-col { flex-shrink: 0; }
-    .hero__photo { width: 400px; height: 520px; object-fit: cover; object-position: top center; border-radius: var(--radius-lg); display: block; box-shadow: var(--shadow-elevated); }
+    .hero__photo-col { flex-shrink: 0; display: flex; align-items: stretch; }
+    .hero__photo { width: 400px; height: 100%; min-height: 440px; object-fit: cover; object-position: top center; border-radius: var(--radius-lg); display: block; box-shadow: var(--shadow-elevated); }
     .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: var(--color-danger-light); border: 1px solid rgba(192,57,43,0.2); border-radius: 20px; padding: 6px 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-danger); margin-bottom: 20px; }
     .hero__badge svg { flex-shrink: 0; }
 
@@ -1811,19 +1811,6 @@ Steuerkanzleien verarbeiten täglich die sensibelsten Finanzdaten ihrer Mandante
       });
     })();
 
-    (function alignHeroPhoto() {
-      function update() {
-        const desc = document.querySelector('.hero__desc');
-        const photoCol = document.querySelector('.hero__photo-col');
-        if (!desc || !photoCol) return;
-        if (window.innerWidth <= 1024) { photoCol.style.paddingTop = ''; return; }
-        const grid = document.querySelector('.hero__grid');
-        const offset = desc.getBoundingClientRect().top - grid.getBoundingClientRect().top;
-        photoCol.style.paddingTop = (offset > 0 ? offset : 0) + 'px';
-      }
-      document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', update) : update();
-      window.addEventListener('resize', update);
-    })();
   </script>
 
   <script src="../cookie-banner.js" defer></script>
