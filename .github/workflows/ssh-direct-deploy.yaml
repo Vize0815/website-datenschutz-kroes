@@ -32,6 +32,11 @@ jobs:
           echo "=== Looking for webroot ==="
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "ls -la ~/html 2>/dev/null || ls -la ~/public_html 2>/dev/null || ls -la ~/www 2>/dev/null || echo 'no standard webroot found'"
 
+      - name: Remove html subfolder to free disk space
+        run: |
+          SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -rf ~/html && echo 'html folder removed'"
+
       - name: Deploy files directly to webroot
         run: |
           SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
