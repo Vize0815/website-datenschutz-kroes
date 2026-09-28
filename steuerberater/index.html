@@ -273,11 +273,11 @@
 
     /* LAW SECTION */
     .law-section { background: var(--color-sky-tint); border-radius: var(--radius-lg); padding: 48px; }
-    .law-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 36px; }
-    .law-card { background: var(--color-surface); border-radius: var(--radius-md); padding: 28px; border-left: 3px solid var(--color-gold); }
-    .law-card__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
-    .law-card__title { font-family: var(--font-sans); font-size: 18px; font-weight: 600; color: var(--color-navy); margin-bottom: 12px; }
-    .law-card__text { font-family: var(--font-sans); font-size: 14px; color: var(--color-slate); line-height: 1.65; }
+    .country-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .country-card { background: var(--color-surface); border-radius: var(--radius-md); padding: 32px; border-top: 3px solid var(--color-gold); }
+    .country-card__flag { font-size: 44px; line-height: 1; margin-bottom: 16px; display: block; }
+    .country-card__title { font-family: var(--font-sans); font-size: 20px; font-weight: 700; color: var(--color-navy); margin-bottom: 16px; }
+    .country-card__text { font-family: var(--font-sans); font-size: 15px; color: var(--color-slate); line-height: 1.7; }
 
     /* ABOUT */
     .about-grid { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: start; }
@@ -360,7 +360,7 @@
       .hero__title { hyphens: auto; }
       .hero__photo-col { display: none; }
       .hero__cta-row { flex-direction: column; align-items: flex-start; }
-      .services__grid { grid-template-columns: 1fr; } .law-grid { grid-template-columns: 1fr; }
+      .services__grid { grid-template-columns: 1fr; } .country-grid { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr; }
       .about-stats .about-stat + .about-stat { border-left: none; padding-left: 0; margin-left: 0; border-top: 1px solid var(--color-mist); padding-top: 20px; }
       .footer__grid { grid-template-columns: 1fr; gap: 32px; }
@@ -384,7 +384,7 @@
       .trust-item { justify-content: center; font-size: 14px; }
       .service-card { padding: 24px; }
       .law-section { padding: 24px 16px; }
-      .law-card { padding: 20px; }
+      .country-card { padding: 24px; }
       .pain-card { padding: 28px 24px; }
       .pain-card__num { font-size: 48px; }
       .faq-trigger { font-size: 15px; padding: 18px 18px; }
@@ -1215,29 +1215,19 @@ Ihre Mandanten vertrauen Ihnen ihre Finanzen an. Einkommen, Betriebszahlen, Steu
       <div data-reveal>
         <p class="t-eyebrow" style="margin-bottom:12px;">Rechtlicher Rahmen für Steuerkanzleien</p>
         <h2 class="t-h2" id="recht-title">Das gilt für Ihre Kanzlei</h2>
-        <p class="t-lead" style="max-width:600px;margin-top:16px;">Steuerberater unterliegen einem besonders dichten Regelwerk. DSGVO und BDSG werden durch das Berufsrecht des Steuerberatungsgesetzes ergänzt. Ich kenne alle Ebenen.</p>
+        <p class="t-lead" style="max-width:780px;margin-top:16px;">Ob in Österreich oder Deutschland: Neben der DSGVO gelten nationales Datenschutzrecht und strenge berufsrechtliche Verschwiegenheitspflichten. Sie erhalten eine Betreuung, die die Regeln Ihres Standorts kennt und zusammenführt.</p>
       </div>
       <div class="law-section" style="margin-top:40px;" data-reveal data-reveal-delay="1">
-        <div class="law-grid">
-          <div class="law-card">
-            <p class="law-card__label">EU-Recht</p>
-            <h3 class="law-card__title">DSGVO</h3>
-            <p class="law-card__text">Die Datenschutzgrundverordnung gilt für jede Steuerkanzlei, die personenbezogene Daten verarbeitet. Das betrifft Mandantendaten, Mitarbeiterdaten und alle digitalen Kommunikationswege. Transparenzpflichten, Betroffenenrechte und Datensicherheit sind verpflichtend umzusetzen.</p>
+        <div class="country-grid">
+          <div class="country-card">
+            <span class="country-card__flag">🇩🇪</span>
+            <h3 class="country-card__title">Deutschland</h3>
+            <p class="country-card__text">Steuerkanzleien unterliegen einem besonders dichten Regelwerk. DSGVO und BDSG werden durch die Verschwiegenheitspflicht nach Steuerberatungsgesetz und § 203 StGB ergänzt. Ein Datenschutzvorfall hat damit schnell auch berufs und strafrechtliche Folgen. Sie erhalten eine Betreuung, die alle Ebenen zusammenführt.</p>
           </div>
-          <div class="law-card">
-            <p class="law-card__label">Bundesdatenschutzgesetz</p>
-            <h3 class="law-card__title">BDSG (neu)</h3>
-            <p class="law-card__text">Das BDSG regelt unter anderem den Beschäftigtendatenschutz und die Pflicht zur Bestellung eines Datenschutzbeauftragten. Ab 20 Personen mit regelmäßiger automatisierter Verarbeitung besteht Bestellungspflicht. Auch viele kleinere Kanzleien sind aus anderen Gründen verpflichtet.</p>
-          </div>
-          <div class="law-card">
-            <p class="law-card__label">§ 57 StBerG</p>
-            <h3 class="law-card__title">Berufsrechtliche Verschwiegenheit</h3>
-            <p class="law-card__text">Das Steuerberatungsgesetz verpflichtet Steuerberater zur Verschwiegenheit über alle ihnen anvertrauten Mandanteninformationen. Datenschutz und Verschwiegenheitspflicht ergänzen sich, können aber auch in Spannung zueinander stehen. Etwa bei Auskunftsersuchen Betroffener.</p>
-          </div>
-          <div class="law-card">
-            <p class="law-card__label">Auftragsverarbeitung</p>
-            <h3 class="law-card__title">AVV mit DATEV und Co.</h3>
-            <p class="law-card__text">Jede Kanzlei, die DATEV oder andere Cloud-Dienste nutzt, benötigt einen wirksamen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO. Ich prüfe bestehende AVVs auf Vollständigkeit und schließe fehlende ab. Auch für Steuerberatersoftware, E-Mail-Dienste und Dokumentenmanagement.</p>
+          <div class="country-card">
+            <span class="country-card__flag">🇦🇹</span>
+            <h3 class="country-card__title">Österreich</h3>
+            <p class="country-card__text">Steuerberater unterliegen einem besonders dichten Regelwerk. Neben DSGVO und Datenschutzgesetz (DSG) verpflichtet Sie das WTBG 2017 zur beruflichen Verschwiegenheit. Ein Datenschutzvorfall ist damit schnell auch ein berufsrechtliches Thema. Sie erhalten eine Betreuung, die beide Ebenen zusammenführt.</p>
           </div>
         </div>
       </div>
