@@ -1,0 +1,46 @@
+name: "Direct SSH Deploy"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOYMENT_ID: dbed54b8-8c64-4693-acd3-add7dd4eb016
+      SSH_HOST: access-5020246730.app-ionos.space
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set SSH username secret name
+        run: |
+          echo "SSH_USERNAME_SECRET=IONOS_DEPLOYMENT_$(echo $DEPLOYMENT_ID | tr '[:lower:]' '[:upper:]' | tr '-' '_')_SSH_USERNAME" >> $GITHUB_ENV
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.IONOS_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Find webroot path
+        run: |
+          SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
+          echo "=== Home directory ==="
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "pwd && ls -la ~"
+          echo "=== Looking for webroot ==="
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "ls -la ~/html 2>/dev/null || ls -la ~/public_html 2>/dev/null || ls -la ~/www 2>/dev/null || echo 'no standard webroot found'"
+
+      - name: Deploy files directly to webroot
+        run: |
+          SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
+          rsync -avz --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.claude' \
+            --exclude='*.md' \
+            --exclude='*.code-workspace' \
+            --exclude='*.txt' \
+            -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
+            ./ "$SSH_USER@$SSH_HOST:~/html/"
