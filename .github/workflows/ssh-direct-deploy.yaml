@@ -40,25 +40,13 @@ jobs:
           echo "=== File timestamp ==="
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "ls -la steuerberater/index.html"
 
-      - name: Free disk space (remove root-level duplicates)
-        run: |
-          SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "
-            find ~ -maxdepth 1 -type f -delete
-            for d in \$(ls -d ~/* 2>/dev/null | grep -v '\/html$' | grep -v '\/logs$' | grep -v '\/.deploy-now$'); do
-              rm -rf \"\$d\"
-            done
-            echo 'Root cleanup done'
-            df -h . 2>/dev/null || true
-          "
-
       - name: Deploy files directly to webroot
         run: |
           SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
-          rsync -avz --delete \
+          rsync -avz \
             --no-perms --no-owner --no-group \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='.claude' \
             -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
-            ./ "$SSH_USER@$SSH_HOST:~/html/"
+            ./ "$SSH_USER@$SSH_HOST:~/"
