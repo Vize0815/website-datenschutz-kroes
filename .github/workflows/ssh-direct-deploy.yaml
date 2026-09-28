@@ -32,14 +32,6 @@ jobs:
           echo "=== Looking for webroot ==="
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "ls -la ~/html 2>/dev/null || ls -la ~/public_html 2>/dev/null || ls -la ~/www 2>/dev/null || echo 'no standard webroot found'"
 
-      - name: Check current file on server
-        run: |
-          SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
-          echo "=== steuerberater/index.html last lines ==="
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "grep -o 'Steuerkanzleien\|Steuerberater\|Bewährt in der Praxis\|Mandantenkommunikation' steuerberater/index.html | head -10"
-          echo "=== File timestamp ==="
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "ls -la steuerberater/index.html"
-
       - name: Deploy files directly to webroot
         run: |
           SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
