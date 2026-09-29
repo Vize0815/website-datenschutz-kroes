@@ -255,6 +255,12 @@
     .article-card:hover .article-card__title { color: var(--color-prussian); }
     .article-card__excerpt { font-size: 14.5px; font-weight: 300; color: var(--color-slate); line-height: 1.65; margin-bottom: 22px; flex: 1; }
     .article-card__read { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--color-navy); align-self: flex-start; transition: gap var(--transition-base), color var(--transition-base); }
+    .card-bottom-row { display: flex; justify-content: space-between; align-items: center; }
+    .card-bottom-row .article-card__read { margin-top: 0; }
+    .card-rating-badge { display: flex; flex-direction: column; gap: 2px; align-items: flex-end; }
+    .card-rating-item { display: flex; align-items: center; gap: 4px; }
+    .card-rating-item__label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-slate-light); }
+    .card-rating-item__stars { color: var(--color-gold); font-size: 12px; letter-spacing: -0.5px; }
     .article-card__read svg { transition: transform var(--transition-base); }
     .article-card:hover .article-card__read { color: var(--color-prussian); gap: 10px; }
     .article-card:hover .article-card__read svg { transform: translateX(2px); }
@@ -1388,6 +1394,38 @@
   </script>
 
   <script src="../cookie-banner.js" defer></script>
+
+  <script>
+    (function(){
+      try {
+        document.querySelectorAll('.article-card').forEach(function(card){
+          var href = card.getAttribute('href') || '';
+          var fullPath = new URL(href, window.location.href).pathname;
+          var qual = parseInt(localStorage.getItem('qual_' + fullPath)) || 0;
+          var mehr = parseInt(localStorage.getItem('mehr_' + fullPath)) || 0;
+          if (!qual || !mehr) return;
+          function stars(n){ return '★'.repeat(n) + '☆'.repeat(5-n); }
+          var badge = document.createElement('div');
+          badge.className = 'card-rating-badge';
+          badge.innerHTML =
+            '<div class="card-rating-item"><span class="card-rating-item__label">Q</span><span class="card-rating-item__stars">' + stars(qual) + '</span></div>' +
+            '<div class="card-rating-item"><span class="card-rating-item__label">M</span><span class="card-rating-item__stars">' + stars(mehr) + '</span></div>';
+          var readEl = card.querySelector('.article-card__read');
+          if (readEl) {
+            var row = document.createElement('div');
+            row.className = 'card-bottom-row';
+            readEl.parentNode.insertBefore(row, readEl);
+            row.appendChild(readEl);
+            row.appendChild(badge);
+          } else {
+            var body = card.querySelector('.article-card__body');
+            if (body) body.appendChild(badge);
+          }
+        });
+      } catch(e){}
+    })();
+  </script>
+
   <script>
     document.querySelectorAll('.article-card').forEach(function(card) {
       card.addEventListener('click', function() {
