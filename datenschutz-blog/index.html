@@ -245,6 +245,8 @@
     .article-card__cover--behoerde::before { background: linear-gradient(135deg, rgba(28,16,56,0.86) 0%, rgba(60,34,112,0.72) 55%, rgba(124,92,191,0.58) 100%); }
     .article-card__category-dot--ki { background: #0D9488; }
     .article-card__cover--ki::before { background: linear-gradient(135deg, rgba(4,45,46,0.86) 0%, rgba(9,90,90,0.72) 55%, rgba(13,148,136,0.58) 100%); }
+    .article-card__category-dot--it-sicherheit { background: #C05621; }
+    .article-card__cover--it-sicherheit::before { background: linear-gradient(135deg, rgba(50,18,4,0.86) 0%, rgba(120,45,10,0.72) 55%, rgba(192,86,33,0.58) 100%); }
 
     .article-card__body { padding: 26px 28px 28px; display: flex; flex-direction: column; flex: 1; }
     .article-card__meta { display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--color-slate-light); margin-bottom: 14px; }
@@ -460,6 +462,7 @@
     .archive__item-dot--bussgeld { background-color: var(--color-rose); }
     .archive__item-dot--branche { background-color: var(--color-gold); }
     .archive__item-dot--behoerde { background-color: var(--color-slate); }
+    .archive__item-dot--it-sicherheit { background-color: #C05621; }
     .archive__item-body { flex: 1; min-width: 0; }
     .archive__item-title { font-size: 14px; font-weight: 500; color: var(--color-ink); line-height: 1.4; transition: color var(--transition-base); display: block; }
     .archive__item-meta { font-size: 11px; color: var(--color-slate-light); font-family: var(--font-mono); margin-top: 2px; display: block; }
@@ -593,7 +596,10 @@
             Branchen <span class="filter-chip__count">2</span>
           </button>
           <button class="filter-chip" data-filter="howto" aria-pressed="false">
-            How To <span class="filter-chip__count">7</span>
+            How To <span class="filter-chip__count">6</span>
+          </button>
+          <button class="filter-chip" data-filter="it-sicherheit" aria-pressed="false">
+            IT-Sicherheit &amp; Recht <span class="filter-chip__count">1</span>
           </button>
           <button class="filter-chip" data-filter="ki" aria-pressed="false">
             KI &amp; Recht <span class="filter-chip__count">4</span>
@@ -611,11 +617,11 @@
         <div class="articles__grid" id="articles-grid">
 
           <!-- Article 16: IT-Sicherheit (CRA-Meldepflichten) — 29. September 2026 -->
-          <a href="cyber-resilience-act-cra-meldepflichten-september-2026/" class="article-card" data-category="howto">
-            <div class="article-card__cover article-card__cover--howto" style="background-image: url('cyber-resilience-act-cra-meldepflichten-september-2026/cover.webp');">
+          <a href="cyber-resilience-act-cra-meldepflichten-september-2026/" class="article-card" data-category="it-sicherheit">
+            <div class="article-card__cover article-card__cover--it-sicherheit" style="background-image: url('cyber-resilience-act-cra-meldepflichten-september-2026/cover.webp');">
               <span class="article-card__cover-mark">CRA</span>
               <span class="article-card__category">
-                <span class="article-card__category-dot article-card__category-dot--howto"></span>
+                <span class="article-card__category-dot article-card__category-dot--it-sicherheit"></span>
                 IT-Sicherheit &amp; Recht
               </span>
             </div>
@@ -1054,7 +1060,7 @@
           <div class="archive__list">
 
             <a href="cyber-resilience-act-cra-meldepflichten-september-2026/" class="archive__item">
-              <span class="archive__item-dot archive__item-dot--howto"></span>
+              <span class="archive__item-dot archive__item-dot--it-sicherheit"></span>
               <span class="archive__item-body">
                 <span class="archive__item-title">CRA-Meldepflichten ab 11. September 2026. Was Hersteller digitaler Produkte jetzt brauchen</span>
                 <span class="archive__item-meta">29. September 2026 · IT-Sicherheit &amp; Recht · 8 Min.</span>
