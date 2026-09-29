@@ -351,6 +351,9 @@
       *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
       .reading-progress { transition: none; }
     }
+    .article-header__share { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--color-mist); }
+    .article-share__email { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-slate); border: 1px solid var(--color-mist); padding: 9px 18px; border-radius: 4px; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .article-share__email:hover { border-color: var(--color-navy); color: var(--color-navy); }
   </style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
@@ -562,6 +565,12 @@
               <span class="article-header__meta-label">Lesezeit</span>
               <span class="article-header__meta-value">12 Min.</span>
             </div>
+          </div>
+          <div class="article-header__share">
+            <a href="#" class="article-share__email" id="shareEmailBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Per E-Mail empfehlen
+            </a>
           </div>
         </div>
       </div>
@@ -1055,5 +1064,13 @@
   </script>
 
   <script src="../../cookie-banner.js" defer></script>
+  <script>
+    (function(){
+      var btn = document.getElementById('shareEmailBtn');
+      if (!btn) return;
+      btn.href = 'mailto:?subject=' + encodeURIComponent('Leseempfehlung: ' + document.title) + '&body=' + encodeURIComponent('Ich habe diesen Beitrag f\u00fcr Sie herausgesucht:\n\n' + window.location.href);
+    })();
+  </script>
+
 </body>
 </html>
