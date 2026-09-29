@@ -118,9 +118,21 @@
   <!-- Blog -->
   <url>
     <loc>https://datenschutz-kroes.at/datenschutz-blog/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/it-sicherheitskonzept-erstellen-7-schritte/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/cyber-resilience-act-cra-meldepflichten-september-2026/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://datenschutz-kroes.at/datenschutz-blog/ki-kennzeichnungspflicht-ai-act-august-2026/</loc>
