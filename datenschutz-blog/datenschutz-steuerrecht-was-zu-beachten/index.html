@@ -359,7 +359,10 @@
     .article-share__email { display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; background: var(--color-navy); padding: 15px 24px; border-radius: 4px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
     .article-share__email:hover { background: var(--color-prussian); transform: translateY(-1px); }
     .article-share__note { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; color: var(--color-slate-light); text-align: center; }
-  </style>
+    .article-rating { display: flex; gap: 3px; }
+    .article-rating__star { background: none; border: none; cursor: pointer; font-size: 20px; color: #d1d9e2; padding: 0 1px; line-height: 1; transition: color 0.12s; }
+    .article-rating__star.is-lit { color: var(--color-gold); }
+    .article-rating.is-rated .article-rating__star { cursor: default; }  </style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -450,7 +453,10 @@
 .nav__mobile-social a { width: 36px !important; height: 36px !important; border-radius: 50% !important; border: 1px solid var(--color-mist, #DDE3EC) !important; color: var(--color-slate-light, #8A99AD) !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transition: color 200ms ease, border-color 200ms ease !important; background-color: transparent !important; }
 .nav__mobile-social a:hover { color: var(--color-navy, #0F1F3D) !important; border-color: var(--color-navy, #0F1F3D) !important; }
 /* ===== END FLUID NAVIGATION ===== */
-</style>
+    .article-rating { display: flex; gap: 3px; }
+    .article-rating__star { background: none; border: none; cursor: pointer; font-size: 20px; color: #d1d9e2; padding: 0 1px; line-height: 1; transition: color 0.12s; }
+    .article-rating__star.is-lit { color: var(--color-gold); }
+    .article-rating.is-rated .article-rating__star { cursor: default; }</style>
 </head>
 <body>
 
@@ -570,7 +576,17 @@
               <span class="article-header__meta-label">Lesezeit</span>
               <span class="article-header__meta-value">9 Min.</span>
             </div>
-          </div>
+            <div class="article-header__meta-divider"></div>
+            <div class="article-header__meta-item">
+              <span class="article-header__meta-label">Bewertung</span>
+              <div class="article-rating" id="articleRating" role="group" aria-label="Beitrag bewerten">
+                <button class="article-rating__star" data-v="1" aria-label="1 Stern">&#9733;</button>
+                <button class="article-rating__star" data-v="2" aria-label="2 Sterne">&#9733;</button>
+                <button class="article-rating__star" data-v="3" aria-label="3 Sterne">&#9733;</button>
+                <button class="article-rating__star" data-v="4" aria-label="4 Sterne">&#9733;</button>
+                <button class="article-rating__star" data-v="5" aria-label="5 Sterne">&#9733;</button>
+              </div>
+            </div>          </div>
           <div class="article-header__share">
             <a href="#" class="article-share__email" id="shareEmailBtn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -999,5 +1015,23 @@
     })();
   </script>
 
+  <script>
+    (function(){
+      var el = document.getElementById('articleRating');
+      if (!el) return;
+      var stars = [].slice.call(el.querySelectorAll('.article-rating__star'));
+      var key = 'rating_' + location.pathname;
+      var saved = parseInt(localStorage.getItem(key)) || 0;
+      function light(n){ stars.forEach(function(s,i){ s.classList.toggle('is-lit', i < n); }); }
+      if (saved){ light(saved); el.classList.add('is-rated'); }
+      stars.forEach(function(s,i){
+        s.addEventListener('mouseenter', function(){ if(!el.classList.contains('is-rated')) light(i+1); });
+        s.addEventListener('mouseleave', function(){ if(!el.classList.contains('is-rated')) light(saved); });
+        s.addEventListener('click', function(){
+          if(!el.classList.contains('is-rated')){ saved=i+1; try{localStorage.setItem(key,saved);}catch(e){} light(saved); el.classList.add('is-rated'); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
