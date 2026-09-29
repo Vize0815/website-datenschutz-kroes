@@ -383,7 +383,18 @@
     .article-rating { display: flex; gap: 3px; }
     .article-rating__star { background: none; border: none; cursor: pointer; font-size: 20px; color: #d1d9e2; padding: 0 1px; line-height: 1; transition: color 0.12s; }
     .article-rating__star.is-lit { color: var(--color-gold); }
-    .article-rating.is-rated .article-rating__star { cursor: default; }  </style>
+    .article-rating.is-rated .article-rating__star { cursor: default; }    .back-wrap { position: relative; display: inline-flex; }
+    .rating-popup { position: absolute; top: calc(100% + 12px); left: 0; background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: 10px; padding: 18px 20px 16px; box-shadow: 0 12px 32px rgba(15,31,61,0.13); width: 248px; opacity: 0; pointer-events: none; transition: opacity 0.17s, transform 0.17s; transform: translateY(-6px); z-index: 300; }
+    .rating-popup::before { content: ''; position: absolute; top: -7px; left: 18px; width: 13px; height: 13px; background: var(--color-surface); border-top: 1px solid var(--color-mist); border-left: 1px solid var(--color-mist); transform: rotate(45deg); }
+    .rating-popup.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .rating-popup__heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-slate-light); margin: 0 0 14px; }
+    .rating-popup__row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .rating-popup__label { font-size: 13px; font-weight: 500; color: var(--color-navy); }
+    .rating-popup__stars { display: flex; gap: 3px; }
+    .rating-popup__star { background: none; border: none; cursor: pointer; font-size: 20px; color: #d1d9e2; padding: 0 1px; line-height: 1; transition: color 0.1s; }
+    .rating-popup__star.is-lit { color: var(--color-gold); }
+    .rating-popup__star:disabled { cursor: default; }
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -477,7 +488,18 @@
     .article-rating { display: flex; gap: 3px; }
     .article-rating__star { background: none; border: none; cursor: pointer; font-size: 20px; color: #d1d9e2; padding: 0 1px; line-height: 1; transition: color 0.12s; }
     .article-rating__star.is-lit { color: var(--color-gold); }
-    .article-rating.is-rated .article-rating__star { cursor: default; }</style>
+    .article-rating.is-rated .article-rating__star { cursor: default; }    .back-wrap { position: relative; display: inline-flex; }
+    .rating-popup { position: absolute; top: calc(100% + 12px); left: 0; background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: 10px; padding: 18px 20px 16px; box-shadow: 0 12px 32px rgba(15,31,61,0.13); width: 248px; opacity: 0; pointer-events: none; transition: opacity 0.17s, transform 0.17s; transform: translateY(-6px); z-index: 300; }
+    .rating-popup::before { content: ''; position: absolute; top: -7px; left: 18px; width: 13px; height: 13px; background: var(--color-surface); border-top: 1px solid var(--color-mist); border-left: 1px solid var(--color-mist); transform: rotate(45deg); }
+    .rating-popup.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .rating-popup__heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-slate-light); margin: 0 0 14px; }
+    .rating-popup__row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .rating-popup__label { font-size: 13px; font-weight: 500; color: var(--color-navy); }
+    .rating-popup__stars { display: flex; gap: 3px; }
+    .rating-popup__star { background: none; border: none; cursor: pointer; font-size: 20px; color: #d1d9e2; padding: 0 1px; line-height: 1; transition: color 0.1s; }
+    .rating-popup__star.is-lit { color: var(--color-gold); }
+    .rating-popup__star:disabled { cursor: default; }
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }</style>
 </head>
 <body>
 
@@ -574,10 +596,34 @@
     <header class="article-header">
       <div class="container">
         <div class="article-header__inner">
-          <a href="../" class="article-header__back">
+          <div class="back-wrap"><a href="../" class="article-header__back">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Zurück zum Blog
           </a>
+            <div class="rating-popup" id="ratingPopup" role="dialog" aria-label="Beitrag bewerten">
+              <p class="rating-popup__heading">Beitrag bewerten</p>
+              <div class="rating-popup__row">
+                <span class="rating-popup__label">Qualit&auml;t</span>
+                <div class="rating-popup__stars" data-dim="qual">
+                  <button class="rating-popup__star" aria-label="1 Stern">&#9733;</button>
+                  <button class="rating-popup__star" aria-label="2 Sterne">&#9733;</button>
+                  <button class="rating-popup__star" aria-label="3 Sterne">&#9733;</button>
+                  <button class="rating-popup__star" aria-label="4 Sterne">&#9733;</button>
+                  <button class="rating-popup__star" aria-label="5 Sterne">&#9733;</button>
+                </div>
+              </div>
+              <div class="rating-popup__row">
+                <span class="rating-popup__label">Mehrwert</span>
+                <div class="rating-popup__stars" data-dim="mehr">
+                  <button class="rating-popup__star" aria-label="1 Stern">&#9733;</button>
+                  <button class="rating-popup__star" aria-label="2 Sterne">&#9733;</button>
+                  <button class="rating-popup__star" aria-label="3 Sterne">&#9733;</button>
+                  <button class="rating-popup__star" aria-label="4 Sterne">&#9733;</button>
+                  <button class="rating-popup__star" aria-label="5 Sterne">&#9733;</button>
+                </div>
+              </div>
+              <p class="rating-popup__thanks" id="ratingThanks" hidden>Danke f&uuml;r Ihre Bewertung!</p>
+            </div>          </div>
           <span class="article-header__category">
             <span class="article-header__category-dot"></span>
             How-To
@@ -954,6 +1000,45 @@
           if(!el.classList.contains('is-rated')){ saved=i+1; try{localStorage.setItem(key,saved);}catch(e){} light(saved); el.classList.add('is-rated'); }
         });
       });
+    })();
+  </script>
+  <script>
+    (function(){
+      var backLink = document.querySelector('.article-header__back');
+      var popup = document.getElementById('ratingPopup');
+      var thanks = document.getElementById('ratingThanks');
+      if (!backLink || !popup) return;
+      var overBtn = false, overPopup = false, timer;
+      function show(){ popup.classList.add('is-visible'); }
+      function tryHide(){ if (!overBtn && !overPopup) popup.classList.remove('is-visible'); }
+      backLink.addEventListener('mouseenter', function(){ overBtn = true; clearTimeout(timer); timer = setTimeout(show, 220); });
+      backLink.addEventListener('mouseleave', function(){ overBtn = false; clearTimeout(timer); setTimeout(tryHide, 120); });
+      popup.addEventListener('mouseenter', function(){ overPopup = true; });
+      popup.addEventListener('mouseleave', function(){ overPopup = false; setTimeout(tryHide, 120); });
+      var path = location.pathname;
+      var groups = [].slice.call(popup.querySelectorAll('.rating-popup__stars'));
+      function checkAllDone(){
+        var all = groups.every(function(g){ return !!localStorage.getItem(g.getAttribute('data-dim')+'_'+path); });
+        if (all && thanks){ thanks.hidden = false; setTimeout(function(){ popup.classList.remove('is-visible'); }, 1600); }
+      }
+      groups.forEach(function(group){
+        var dim = group.getAttribute('data-dim');
+        var key = dim + '_' + path;
+        var saved = parseInt(localStorage.getItem(key)) || 0;
+        var stars = [].slice.call(group.querySelectorAll('.rating-popup__star'));
+        function light(n){ stars.forEach(function(s,i){ s.classList.toggle('is-lit', i < n); }); }
+        if (saved){ light(saved); stars.forEach(function(s){ s.disabled = true; }); }
+        stars.forEach(function(s,i){
+          s.addEventListener('mouseenter', function(){ if (!s.disabled) light(i+1); });
+          s.addEventListener('mouseleave', function(){ if (!s.disabled) light(parseInt(localStorage.getItem(key))||0); });
+          s.addEventListener('click', function(){
+            if (s.disabled) return;
+            try{ localStorage.setItem(key, i+1); }catch(e){}
+            light(i+1); stars.forEach(function(x){ x.disabled = true; }); checkAllDone();
+          });
+        });
+      });
+      if (groups.every(function(g){ return !!localStorage.getItem(g.getAttribute('data-dim')+'_'+path); }) && thanks) thanks.hidden = false;
     })();
   </script>
 </body>
