@@ -246,6 +246,15 @@
     .badge--pruefen { background: #fdf6e3; color: #b47e00; }
     .badge--nein { background: #f0f7f4; color: var(--color-verdant); }
 
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+
     /* Abbildung */
     .article-figure { margin: 2.4em 0; }
     .article-figure__caption { margin-top: 12px; font-size: 13px; font-weight: 300; color: var(--color-slate); line-height: 1.65; }
@@ -586,7 +595,20 @@
             Dieser Beitrag erklärt, was eine DSFA ist, in welchen Fällen sie verpflichtend wird, welche 7 Schritte durch die Durchführung führen und was die österreichische Datenschutzbehörde als Standard erwartet.
           </p>
 
-          <h2>Was ist eine Datenschutz-Folgenabschätzung?</h2>
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#was-ist-dsfa">Was ist eine Datenschutz-Folgenabschätzung?</a></li>
+              <li><a href="#dsfa-verpflichtend">Wann ist eine DSFA verpflichtend?</a></li>
+              <li><a href="#keine-dsfa">Wann ist keine DSFA nötig?</a></li>
+              <li><a href="#7-schritte">Die 7 Schritte durch die DSFA</a></li>
+              <li><a href="#verantwortung">Wer ist verantwortlich für die DSFA?</a></li>
+              <li><a href="#konsultation">DSFA und vorherige Konsultation der Datenschutzbehörde</a></li>
+              <li><a href="#fehler">Häufige Fehler in der Praxis</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="was-ist-dsfa">Was ist eine Datenschutz-Folgenabschätzung?</h2>
 
           <p>
             Eine Datenschutz-Folgenabschätzung ist eine strukturierte Vorabprüfung, mit der Sie analysieren, welche Risiken eine geplante Verarbeitungstätigkeit für die Rechte und Freiheiten der betroffenen Personen mit sich bringt. Und ob diese Risiken durch geeignete Maßnahmen auf ein vertretbares Niveau gesenkt werden können.
@@ -603,7 +625,7 @@
             </div>
           </div>
 
-          <h2>Wann ist eine DSFA verpflichtend?</h2>
+          <h2 id="dsfa-verpflichtend">Wann ist eine DSFA verpflichtend?</h2>
 
           <p>
             Artikel 35 Absatz 1 DSGVO formuliert das Kriterium klar: Eine DSFA ist erforderlich, wenn eine Verarbeitung voraussichtlich ein <strong>hohes Risiko</strong> für die Rechte und Freiheiten natürlicher Personen mit sich bringt. Der Begriff „voraussichtlich" ist entscheidend: Die Pflicht entsteht bei begründeter Annahme, nicht erst bei eingetretenem Schaden.
@@ -659,7 +681,7 @@
             </div>
           </div>
 
-          <h2>Wann ist keine DSFA nötig?</h2>
+          <h2 id="keine-dsfa">Wann ist keine DSFA nötig?</h2>
 
           <p>
             Nicht jede neue Verarbeitung löst eine DSFA-Pflicht aus. Artikel 35 Absatz 10 DSGVO sieht Ausnahmen vor, wenn die Verarbeitung auf einer Rechtsgrundlage beruht, die bereits eine Risikoprüfung enthält. Und Art. 35 Abs. 1 formuliert die Schwelle bewusst hoch: Es geht um ein <em>voraussichtlich hohes Risiko</em>.
@@ -681,7 +703,7 @@
             <li>Verarbeitung, die Betroffene hindert, ein Recht auszuüben oder einen Vertrag zu nutzen</li>
           </ul>
 
-          <h2>Die 7 Schritte durch die DSFA</h2>
+          <h2 id="7-schritte">Die 7 Schritte durch die DSFA</h2>
 
           <p>
             Die DSGVO schreibt keinen einheitlichen Ablauf vor, gibt aber in Art. 35 Abs. 7 die Mindestinhalte einer DSFA vor. Der folgende Ablauf orientiert sich an der Methodik der österreichischen DSB und an den EDSA-Leitlinien.
@@ -775,7 +797,7 @@
             </figcaption>
           </figure>
 
-          <h2>Wer ist verantwortlich für die DSFA?</h2>
+          <h2 id="verantwortung">Wer ist verantwortlich für die DSFA?</h2>
 
           <p>
             Verantwortlich für die Durchführung und das Ergebnis der DSFA ist der Verantwortliche im Sinne der DSGVO: die Geschäftsleitung. Diese Pflicht kann nicht delegiert werden. Der Datenschutzbeauftragte berät und begleitet, aber er entscheidet nicht.
@@ -786,7 +808,7 @@
             <cite>Aus der Beratungspraxis als externer Datenschutzbeauftragter</cite>
           </blockquote>
 
-          <h2>DSFA und vorherige Konsultation der Datenschutzbehörde</h2>
+          <h2 id="konsultation">DSFA und vorherige Konsultation der Datenschutzbehörde</h2>
 
           <p>
             Ergibt die DSFA, dass das Restrisiko trotz aller Maßnahmen <strong>hoch bleibt</strong>, greift Art. 36 DSGVO: Die zuständige Datenschutzbehörde muss vor Beginn der Verarbeitung konsultiert werden. In Österreich ist das die Datenschutzbehörde (DSB) in Wien.
@@ -803,7 +825,7 @@
             </div>
           </div>
 
-          <h2>Häufige Fehler in der Praxis</h2>
+          <h2 id="fehler">Häufige Fehler in der Praxis</h2>
 
           <ul>
             <li><strong>DSFA wird nachgeholt statt vorher durchgeführt:</strong> Die DSFA muss vor dem Start der Verarbeitung abgeschlossen sein. Eine nachträgliche Dokumentation erfüllt die Pflicht nicht.</li>
