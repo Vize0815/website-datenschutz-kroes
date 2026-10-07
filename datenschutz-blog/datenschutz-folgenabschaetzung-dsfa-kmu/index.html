@@ -246,6 +246,15 @@
     .badge--pruefen { background: #fdf6e3; color: #b47e00; }
     .badge--nein { background: #f0f7f4; color: var(--color-verdant); }
 
+    /* Fallgruppen-Karten (statt Tabelle) */
+    .fallgruppen { display: flex; flex-direction: column; gap: 12px; margin: 2em 0; }
+    .fallgruppe-card { background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-md); padding: 20px 24px; }
+    .fallgruppe-card__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .fallgruppe-card__num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--color-gold); }
+    .fallgruppe-card__title { font-size: 15px; font-weight: 600; color: var(--color-navy); line-height: 1.5; margin-bottom: 8px; }
+    .fallgruppe-card__examples { font-size: 14px; font-weight: 300; color: var(--color-slate); line-height: 1.6; }
+    .fallgruppe-card__examples strong { font-weight: 600; color: var(--color-navy); }
+
     /* Tags */
     .article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--color-mist); }
     .article-tag { display: inline-flex; align-items: center; padding: 6px 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--color-slate); background: var(--color-bg); border-radius: 100px; }
@@ -599,33 +608,31 @@
             Artikel 35 Absatz 3 DSGVO nennt drei Fallgruppen, bei denen die DSFA in jedem Fall Pflicht ist:
           </p>
 
-          <div class="rollen-table-wrap">
-            <table class="rollen-table">
-              <thead>
-                <tr>
-                  <th>Fallgruppe</th>
-                  <th>Typische Beispiele</th>
-                  <th>DSFA</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Systematische, umfangreiche Bewertung persönlicher Aspekte durch automatisierte Verarbeitung einschließlich Profiling</td>
-                  <td>Kredit-Scoring, KI-gestützte Personalauswahl, Verhaltensanalyse auf Plattformen</td>
-                  <td><span class="badge badge--pflicht">Pflicht</span></td>
-                </tr>
-                <tr>
-                  <td>Umfangreiche Verarbeitung besonderer Datenkategorien (Art. 9) oder strafrechtlicher Daten (Art. 10)</td>
-                  <td>Gesundheitsdaten in der Arztpraxis in großem Maßstab, biometrische Zugangskontrolle für Mitarbeitende</td>
-                  <td><span class="badge badge--pflicht">Pflicht</span></td>
-                </tr>
-                <tr>
-                  <td>Systematische großflächige Überwachung öffentlich zugänglicher Bereiche</td>
-                  <td>Videoüberwachung von Einkaufszentren, Bahnhöfen, Plätzen mit Gesichtserkennung oder Bewegungstracking</td>
-                  <td><span class="badge badge--pflicht">Pflicht</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="fallgruppen">
+            <div class="fallgruppe-card">
+              <div class="fallgruppe-card__head">
+                <span class="fallgruppe-card__num">01</span>
+                <span class="badge badge--pflicht">Pflicht</span>
+              </div>
+              <p class="fallgruppe-card__title">Systematische, umfangreiche Bewertung persönlicher Aspekte durch automatisierte Verarbeitung einschließlich Profiling</p>
+              <p class="fallgruppe-card__examples"><strong>Beispiele:</strong> Kredit-Scoring, KI-gestützte Personalauswahl, Verhaltensanalyse auf Plattformen</p>
+            </div>
+            <div class="fallgruppe-card">
+              <div class="fallgruppe-card__head">
+                <span class="fallgruppe-card__num">02</span>
+                <span class="badge badge--pflicht">Pflicht</span>
+              </div>
+              <p class="fallgruppe-card__title">Umfangreiche Verarbeitung besonderer Datenkategorien (Art. 9) oder strafrechtlicher Daten (Art. 10)</p>
+              <p class="fallgruppe-card__examples"><strong>Beispiele:</strong> Gesundheitsdaten in der Arztpraxis in großem Maßstab, biometrische Zugangskontrolle für Mitarbeitende</p>
+            </div>
+            <div class="fallgruppe-card">
+              <div class="fallgruppe-card__head">
+                <span class="fallgruppe-card__num">03</span>
+                <span class="badge badge--pflicht">Pflicht</span>
+              </div>
+              <p class="fallgruppe-card__title">Systematische großflächige Überwachung öffentlich zugänglicher Bereiche</p>
+              <p class="fallgruppe-card__examples"><strong>Beispiele:</strong> Videoüberwachung von Einkaufszentren, Bahnhöfen, Plätzen mit Gesichtserkennung oder Bewegungstracking</p>
+            </div>
           </div>
 
           <p>
