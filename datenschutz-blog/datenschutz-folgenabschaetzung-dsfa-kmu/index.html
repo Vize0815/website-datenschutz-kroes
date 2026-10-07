@@ -246,6 +246,11 @@
     .badge--pruefen { background: #fdf6e3; color: #b47e00; }
     .badge--nein { background: #f0f7f4; color: var(--color-verdant); }
 
+    /* Abbildung */
+    .article-figure { margin: 2.4em 0; }
+    .article-figure__caption { margin-top: 12px; font-size: 13px; font-weight: 300; color: var(--color-slate); line-height: 1.65; }
+    .article-figure__caption a { color: var(--color-prussian); text-decoration: underline; text-decoration-color: rgba(27,79,138,0.35); text-underline-offset: 3px; }
+
     /* Fallgruppen-Karten (statt Tabelle) */
     .fallgruppen { display: flex; flex-direction: column; gap: 12px; margin: 2em 0; }
     .fallgruppe-card { background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-md); padding: 20px 24px; }
@@ -760,6 +765,13 @@
               <p>Und: Die DSFA ist keine Einmalübung. Sie muss überprüft werden, wenn sich die Verarbeitungstätigkeit ändert, neue Risiken bekannt werden oder die ursprünglich geplanten Maßnahmen nicht wie vorgesehen umgesetzt wurden. Eine regelmäßige Überprüfung, mindestens bei wesentlichen Änderungen, gehört zum laufenden Datenschutzmanagement.</p>
             </div>
           </div>
+
+          <figure class="article-figure">
+            <img src="../../DSFA.webp" alt="Risikomatrix zur Datenschutz-Folgenabschätzung: farbkodierte Bewertungstabelle mit Eintrittswahrscheinlichkeit und Schadenschwere" loading="lazy" style="width:100%;border-radius:8px;border:1px solid var(--color-mist);">
+            <figcaption class="article-figure__caption">
+              Risikomatrix zur DSFA: Jedes Risiko wird nach Wahrscheinlichkeit (W) und Schwere (S) bewertet. Das Produkt ergibt den Risikowert. Grün: niedriges Risiko (1 bis 3). Gelb: mittleres Risiko (4 bis 6). Rot: hohes Risiko (8 bis 16). Erst ohne Maßnahmen bewerten (Brutto), dann mit Maßnahmen (Netto). Bleibt der Nettowert rot, ist vor Verarbeitungsbeginn die Datenschutzbehörde zu konsultieren (Art. 36 DSGVO). Die kostenlose Excel-Vorlage zur Risikomatrix mit automatischer Ampel-Berechnung können Sie unter <a href="mailto:info@datenschutz-kroes.at?subject=Risikomatrix">info@datenschutz-kroes.at</a> anfordern (Betreff: Risikomatrix). Diese Darstellung dient der allgemeinen Orientierung und ersetzt keine rechtliche Beratung im Einzelfall.
+            </figcaption>
+          </figure>
 
           <h2>Wer ist verantwortlich für die DSFA?</h2>
 
