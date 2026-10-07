@@ -311,7 +311,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -545,7 +554,20 @@
             Dieser Beitrag zeigt, wie ein IT-Sicherheitskonzept aufgebaut ist, was es von anderen Begriffen wie Datenschutzkonzept oder ISMS unterscheidet und wie die 7 Schritte zur Erstellung für KMU konkret aussehen. Am Ende wissen Sie, ob Ihr Betrieb bereits ein tragfähiges Fundament hat oder wo die dringendsten Lücken liegen.
           </p>
 
-          <h2>Was ist ein IT-Sicherheitskonzept eigentlich?</h2>
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#was-ist-itsicherheitskonzept">Was ist ein IT-Sicherheitskonzept eigentlich?</a></li>
+              <li><a href="#wer-braucht-es">Wer braucht ein IT-Sicherheitskonzept?</a></li>
+              <li><a href="#7-schritte">Die 7 Schritte zur Erstellung</a></li>
+              <li><a href="#verantwortung">Wer trägt im Betrieb die Verantwortung?</a></li>
+              <li><a href="#verbindung-dsgvo">Die Verbindung zur DSGVO</a></li>
+              <li><a href="#kein-konzept">Was tun, wenn Sie noch kein Konzept haben?</a></li>
+            </ol>
+          </nav>
+
+
+          <h2 id="was-ist-itsicherheitskonzept">Was ist ein IT-Sicherheitskonzept eigentlich?</h2>
 
           <p>
             Ein IT-Sicherheitskonzept dokumentiert, welche Systeme, Daten und Prozesse Ihr Betrieb schützen muss, welche Risiken dafür bestehen und welche technischen sowie organisatorischen Maßnahmen diese Risiken auf ein akzeptables Niveau senken. Es ist kein einmaliges Dokument, sondern ein Steuerungsinstrument, das regelmäßig aktualisiert wird.
@@ -563,7 +585,7 @@
             Ein IT-Sicherheitskonzept ist kein ISMS (Informationssicherheitsmanagementsystem). Das ISMS ist der organisatorische Rahmen und die Managementstruktur. Das IT-Sicherheitskonzept ist das konkrete Dokument darin: Was wird geschützt und wie. Für KMU ohne zertifiziertes ISMS ist das Konzept häufig der pragmatischere Einstieg.
           </p>
 
-          <h2>Wer braucht ein IT-Sicherheitskonzept?</h2>
+          <h2 id="wer-braucht-es">Wer braucht ein IT-Sicherheitskonzept?</h2>
 
           <p>
             Die ehrliche Antwort: Jeder Betrieb, der digitale Systeme nutzt, Kundendaten verarbeitet oder auf eine funktionierende IT angewiesen ist. Und das ist heute nahezu jedes Unternehmen.
@@ -587,7 +609,7 @@
             </div>
           </div>
 
-          <h2>Die 7 Schritte zur Erstellung</h2>
+          <h2 id="7-schritte">Die 7 Schritte zur Erstellung</h2>
 
           <p>
             Die gute Nachricht für KMU: Ein IT-Sicherheitskonzept muss nicht von Grund auf neu erfunden werden. Der Aufbau folgt einer bewährten Logik, die sich an der BSI IT-Grundschutz-Methodik orientiert und für kleine Betriebe vereinfacht angewendet werden kann.
@@ -692,7 +714,7 @@
             </div>
           </div>
 
-          <h2>Wer trägt im Betrieb die Verantwortung?</h2>
+          <h2 id="verantwortung">Wer trägt im Betrieb die Verantwortung?</h2>
 
           <p>
             IT-Sicherheit ist Chefsache. Das klingt nach einer Floskel, hat aber eine klare rechtliche Grundlage: Die Geschäftsleitung trägt die Letztverantwortung dafür, dass angemessene Sicherheitsmaßnahmen bestehen. Wer das an die IT-Abteilung delegiert, ohne Ressourcen und klare Ziele mitzugeben, hat das Problem nicht gelöst, sondern nur verschoben.
@@ -731,7 +753,7 @@
             </table>
           </div>
 
-          <h2>Die Verbindung zur DSGVO</h2>
+          <h2 id="verbindung-dsgvo">Die Verbindung zur DSGVO</h2>
 
           <p>
             Datenschutz und IT-Sicherheit werden in der Praxis häufig getrennt behandelt. Das ist ein Fehler. Artikel 32 DSGVO verpflichtet zur Implementierung geeigneter technischer und organisatorischer Maßnahmen. Ein IT-Sicherheitskonzept ist die Grundlage, um diese Pflicht systematisch und nachweisbar zu erfüllen.
@@ -753,7 +775,7 @@
             </div>
           </div>
 
-          <h2>Was tun, wenn Sie noch kein Konzept haben?</h2>
+          <h2 id="kein-konzept">Was tun, wenn Sie noch kein Konzept haben?</h2>
 
           <p>
             Fangen Sie an. Nicht mit dem perfekten Dokument, sondern mit Schritt 1. Ein begrenzter Geltungsbereich, der wirklich durchdacht ist, hat mehr Wert als ein umfassendes Konzept, das nie vollständig umgesetzt wird.

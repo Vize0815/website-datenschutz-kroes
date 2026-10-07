@@ -313,7 +313,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -596,7 +605,23 @@
             Das klingt nach einem reinen IT-Thema. Ist es aber nicht. Wer Software entwickelt und verkauft, wer vernetzte Geräte herstellt oder wer Softwareprodukte in seinen Betriebsabläufen einsetzt, ist jetzt Teil eines neuen Compliance-Rahmens. Und weil Datenpannen bei Sicherheitsvorfällen häufig Hand in Hand gehen, berührt der CRA auch die DSGVO direkt.
           </p>
 
-          <h2>Was ist der Cyber Resilience Act?</h2>
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#was-ist-cra">Was ist der Cyber Resilience Act?</a></li>
+              <li><a href="#wen-trifft-meldepflicht">Wen trifft die Meldepflicht?</a></li>
+              <li><a href="#ausloeser-meldepflicht">Die zwei Auslöser der Meldepflicht</a></li>
+              <li><a href="#fristen-meldepflicht">Die drei Fristen ab bestätigter Kenntnis</a></li>
+              <li><a href="#meldeweg-enisa">Der Meldeweg über die ENISA-Plattform</a></li>
+              <li><a href="#verbindung-dsgvo">Die Verbindung zur DSGVO</a></li>
+              <li><a href="#unternehmen-aufbauen">Was Unternehmen jetzt konkret aufbauen müssen</a></li>
+              <li><a href="#risiko-marktzugang">Das größere Risiko liegt im Marktzugang</a></li>
+              <li><a href="#kanzlei-pruefen">Was Ihre Kanzlei oder Ihr Betrieb jetzt prüfen sollte</a></li>
+            </ol>
+          </nav>
+
+
+          <h2 id="was-ist-cra">Was ist der Cyber Resilience Act?</h2>
 
           <p>
             Der Cyber Resilience Act ist eine EU-Verordnung, die Cybersicherheitsanforderungen für Produkte mit digitalen Elementen einheitlich regelt. Gemeint sind Hardware und Software, die mit Netzwerken oder anderen Geräten verbunden werden können. Das reicht von vernetzten Haushaltsgeräten über Industriesteuerungen bis hin zu Unternehmenssoftware.
@@ -614,7 +639,7 @@
             </div>
           </div>
 
-          <h2>Wen trifft die Meldepflicht?</h2>
+          <h2 id="wen-trifft-meldepflicht">Wen trifft die Meldepflicht?</h2>
 
           <p>
             Die Meldepflicht nach Artikel 14 richtet sich an <strong>Hersteller von Produkten mit digitalen Elementen</strong>. Das sind Unternehmen, die solche Produkte entwickeln, herstellen oder auf dem europäischen Markt anbieten, egal wo der Unternehmenssitz ist.
@@ -635,7 +660,7 @@
             Reine Anwender, also Unternehmen, die fertige Software kaufen und betreiben, sind nicht direkt meldepflichtig nach Artikel 14. Für sie ist aber relevant, dass ihre Softwarelieferanten diese Pflichten erfüllen. Wer Kanzleisoftware, ERP oder Cloud-Dienste einsetzt, sollte prüfen, ob die jeweiligen Anbieter CRA-konform aufgestellt sind.
           </p>
 
-          <h2>Die zwei Auslöser der Meldepflicht</h2>
+          <h2 id="ausloeser-meldepflicht">Die zwei Auslöser der Meldepflicht</h2>
 
           <p>
             Nicht jede Schwachstelle und nicht jeder Vorfall löst die Meldepflicht aus. Der CRA kennt zwei präzise definierte Auslöser.
@@ -659,7 +684,7 @@
             </div>
           </div>
 
-          <h2>Die drei Fristen ab bestätigter Kenntnis</h2>
+          <h2 id="fristen-meldepflicht">Die drei Fristen ab bestätigter Kenntnis</h2>
 
           <p>
             Sobald ein Auslöser festgestellt ist, beginnt die Uhr zu laufen. Der CRA kennt drei aufeinander aufbauende Meldestufen.
@@ -707,7 +732,7 @@
             24 Stunden klingt nach wenig. In der Praxis bedeutet das: Ein Meldeprozess muss rund um die Uhr funktionieren. Der Auslöser kommt selten montags um 10 Uhr. Er kommt freitags nachts oder an Feiertagen. Wer keine klaren Verantwortlichkeiten und keinen definierten Entscheidungsprozess hat, wird diese Frist regelmäßig reißen.
           </p>
 
-          <h2>Der Meldeweg über die ENISA-Plattform</h2>
+          <h2 id="meldeweg-enisa">Der Meldeweg über die ENISA-Plattform</h2>
 
           <p>
             Meldungen erfolgen über die <strong>Single Reporting Platform der ENISA</strong>, der EU-Agentur für Cybersicherheit. Diese Plattform informiert gleichzeitig das zuständige nationale CSIRT. In Österreich ist das das CERT.at, in Deutschland das BSI.
@@ -720,7 +745,7 @@
             </div>
           </div>
 
-          <h2>Die Verbindung zur DSGVO</h2>
+          <h2 id="verbindung-dsgvo">Die Verbindung zur DSGVO</h2>
 
           <p>
             Ein Sicherheitsvorfall, der CRA-meldepflichtig ist, enthält häufig auch personenbezogene Daten. Damit greift gleichzeitig Artikel 33 DSGVO, der eine Meldung an die zuständige Datenschutzbehörde innerhalb von 72 Stunden vorsieht. Beide Fristen beginnen mit Bekanntwerden des Vorfalls.
@@ -743,7 +768,7 @@
             </div>
           </div>
 
-          <h2>Was Unternehmen jetzt konkret aufbauen müssen</h2>
+          <h2 id="unternehmen-aufbauen">Was Unternehmen jetzt konkret aufbauen müssen</h2>
 
           <p>
             Die Meldepflicht entscheidet sich nicht am Gesetzestext, sondern an der Entscheidungsfähigkeit im Ereignisfall. Drei Dinge sind dafür notwendig.
@@ -776,7 +801,7 @@
             </div>
           </div>
 
-          <h2>Das größere Risiko liegt im Marktzugang</h2>
+          <h2 id="risiko-marktzugang">Das größere Risiko liegt im Marktzugang</h2>
 
           <p>
             Wer jetzt denkt, Bußgelder seien das eigentliche Problem, unterschätzt den CRA. Die Verordnung enthält einen Mechanismus, der über finanzielle Sanktionen hinausgeht: Produkte ohne nachweisbare Sicherheitsprozesse können vom Markt ausgeschlossen werden. Händler und Plattformbetreiber in der EU müssen ab Dezember 2027 sicherstellen, dass sie nur CRA-konforme Produkte anbieten. Wer nicht liefern kann, verliert Listungen.
@@ -786,7 +811,7 @@
             Das bedeutet: Die Umsetzung der CRA-Anforderungen ist keine reine Compliance-Übung. Sie ist ein Marktvoraussetzung. Und die Meldepflichten, die seit dem 11. September 2026 gelten, sind der erste sichtbare Teil davon.
           </p>
 
-          <h2>Was Ihre Kanzlei oder Ihr Betrieb jetzt prüfen sollte</h2>
+          <h2 id="kanzlei-pruefen">Was Ihre Kanzlei oder Ihr Betrieb jetzt prüfen sollte</h2>
 
           <p>
             Auch wenn Sie selbst kein Softwarehersteller sind, lohnt sich ein konkreter Blick auf die eigene Lieferkette. Fünf Fragen helfen dabei:

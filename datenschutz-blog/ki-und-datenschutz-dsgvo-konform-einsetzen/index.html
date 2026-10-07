@@ -399,7 +399,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -695,15 +704,30 @@
             <svg class="callout__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             <div class="callout__body">
               <p><strong>Praxis-Beispiel:</strong> Ein Mitarbeiter kopiert eine vertrauliche Bewerbungsmappe in die kostenlose ChatGPT-Version, um sie zusammenfassen zu lassen. Das ist eine Datenschutzverletzung nach Art.&nbsp;4 DSGVO — meldepflichtig binnen 72&nbsp;Stunden. Mit der richtigen KI-Richtlinie wäre der Vorfall vermeidbar gewesen.</p>
+
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#warum-ki-dsgvo">Warum KI ein DSGVO-Thema ist</a></li>
+              <li><a href="#risiken">Die drei zentralen Risiken</a></li>
+              <li><a href="#schritt-01">Schritt 01: Welche Tools sind tatsächlich im Einsatz?</a></li>
+              <li><a href="#schritt-02">Schritt 02: Auftragsverarbeitungsvertrag mit dem Anbieter</a></li>
+              <li><a href="#schritt-03">Schritt 03: Schriftliche Regeln für Mitarbeiter</a></li>
+              <li><a href="#schritt-04">Schritt 04: Praktische KI-Schulung mit Branchenbezug</a></li>
+              <li><a href="#ai-act">Was bringt der EU AI Act?</a></li>
+              <li><a href="#kmu-status">Wo viele KMU heute stehen</a></li>
+            </ol>
+          </nav>
+
             </div>
           </div>
 
-          <h2>Warum KI ein DSGVO-Thema ist</h2>
+          <h2 id="warum-ki-dsgvo">Warum KI ein DSGVO-Thema ist</h2>
           <p>
             Sobald in einem Prompt personenbezogene Daten vorkommen — ein Kundenname, eine E-Mail-Adresse, ein Bewerbungstext, eine Krankheitsschilderung — greift die DSGVO. Die KI verarbeitet diese Daten, häufig auf US-Servern, häufig mit Trainings-Klauseln im Kleingedruckten. Genau hier entstehen die Bußgeld-Risiken.
           </p>
 
-          <h2>Die drei zentralen Risiken</h2>
+          <h2 id="risiken">Die drei zentralen Risiken</h2>
 
           <h3>1. Eingaben fließen ins Training</h3>
           <p>
@@ -721,7 +745,7 @@
           </p>
 
           <!-- ===== STEP 1 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-01">
             <p class="step-card__num">Schritt 01 · KI-Inventur</p>
             <h3 class="step-card__title">Welche Tools sind tatsächlich im Einsatz?</h3>
             <div class="step-card__body">
@@ -744,7 +768,7 @@
           </div>
 
           <!-- ===== STEP 2 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-02">
             <p class="step-card__num">Schritt 02 · AVV abschließen</p>
             <h3 class="step-card__title">Auftragsverarbeitungsvertrag mit dem Anbieter</h3>
             <div class="step-card__body">
@@ -754,7 +778,7 @@
           </div>
 
           <!-- ===== STEP 3 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-03">
             <p class="step-card__num">Schritt 03 · KI-Richtlinie</p>
             <h3 class="step-card__title">Schriftliche Regeln für Mitarbeiter</h3>
             <div class="step-card__body">
@@ -764,7 +788,7 @@
           </div>
 
           <!-- ===== STEP 4 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-04">
             <p class="step-card__num">Schritt 04 · Schulung</p>
             <h3 class="step-card__title">Praktische KI-Schulung mit Branchenbezug</h3>
             <div class="step-card__body">
@@ -772,7 +796,7 @@
             </div>
           </div>
 
-          <h2>Was bringt der EU AI Act?</h2>
+          <h2 id="ai-act">Was bringt der EU AI Act?</h2>
           <p>
             Der EU AI Act tritt schrittweise in Kraft (vollständig ab August&nbsp;2026). Für KMU als <em>Anwender</em> von KI sind die Pflichten überschaubar: Transparenz gegenüber Betroffenen (z.&nbsp;B. Hinweis bei KI-generierten Texten), Verbot bestimmter Hochrisiko-Anwendungen (Social Scoring, Emotion Detection am Arbeitsplatz) und eine ausdrückliche Schulungspflicht für KI-Nutzer.
           </p>
@@ -792,7 +816,7 @@
             <cite>Aus der Beratungspraxis</cite>
           </blockquote>
 
-          <h2>Wo viele KMU heute stehen</h2>
+          <h2 id="kmu-status">Wo viele KMU heute stehen</h2>
           <p>
             Aus der Beratungspraxis: rund 70&nbsp;% der KMU nutzen KI ohne AVV. 50&nbsp;% haben keine schriftliche Richtlinie. 80&nbsp;% schulen Mitarbeiter nicht zur sicheren KI-Nutzung. Das Risiko ist real — die Lösung ist es ebenfalls. Vier Wochen strukturierte Arbeit, und das Thema ist auditfest.
           </p>

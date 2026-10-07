@@ -395,7 +395,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -687,8 +696,23 @@
             Im Folgenden die sieben häufigsten Fallstricke aus der Beratungspraxis — jeweils mit der konkreten Lösung, mit der Sie das Risiko in unter zwei Stunden eliminieren.
           </p>
 
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#fallstrick-01">Fallstrick 01: Kundenstamm in Excel-Listen und WhatsApp-Gruppen</a></li>
+              <li><a href="#fallstrick-02">Fallstrick 02: Bewerbungsunterlagen ohne Löschkonzept</a></li>
+              <li><a href="#fallstrick-03">Fallstrick 03: Personen im Hintergrund von Baustellen-Fotos</a></li>
+              <li><a href="#fallstrick-04">Fallstrick 04: Subunternehmer ohne Auftragsverarbeitungsvertrag</a></li>
+              <li><a href="#fallstrick-05">Fallstrick 05: Mitarbeiter nutzen private Smartphones für Kundendaten</a></li>
+              <li><a href="#fallstrick-06">Fallstrick 06: Kundenanfragen über Instagram- und Facebook-DM</a></li>
+              <li><a href="#fallstrick-07">Fallstrick 07: Mitarbeiterdaten unverschlüsselt im Cloud-Tool</a></li>
+              <li><a href="#aufwand">Wie viel Aufwand kommt auf Ihren Betrieb zu?</a></li>
+            </ol>
+          </nav>
+
+
           <!-- ===== FALLSTRICK 1 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="fallstrick-01">
             <p class="step-card__num">Fallstrick 01 · Kundendaten</p>
             <h3 class="step-card__title">Kundenstamm in Excel-Listen und WhatsApp-Gruppen</h3>
             <div class="step-card__body">
@@ -698,7 +722,7 @@
           </div>
 
           <!-- ===== FALLSTRICK 2 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="fallstrick-02">
             <p class="step-card__num">Fallstrick 02 · Bewerbungen</p>
             <h3 class="step-card__title">Bewerbungsunterlagen ohne Löschkonzept</h3>
             <div class="step-card__body">
@@ -708,7 +732,7 @@
           </div>
 
           <!-- ===== FALLSTRICK 3 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="fallstrick-03">
             <p class="step-card__num">Fallstrick 03 · Baustellen-Fotos</p>
             <h3 class="step-card__title">Personen im Hintergrund von Baustellen-Fotos</h3>
             <div class="step-card__body">
@@ -718,7 +742,7 @@
           </div>
 
           <!-- ===== FALLSTRICK 4 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="fallstrick-04">
             <p class="step-card__num">Fallstrick 04 · Subunternehmer</p>
             <h3 class="step-card__title">Subunternehmer ohne Auftragsverarbeitungsvertrag</h3>
             <div class="step-card__body">
@@ -728,7 +752,7 @@
           </div>
 
           <!-- ===== FALLSTRICK 5 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="fallstrick-05">
             <p class="step-card__num">Fallstrick 05 · Privatgeräte</p>
             <h3 class="step-card__title">Mitarbeiter nutzen private Smartphones für Kundendaten</h3>
             <div class="step-card__body">
@@ -738,7 +762,7 @@
           </div>
 
           <!-- ===== FALLSTRICK 6 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="fallstrick-06">
             <p class="step-card__num">Fallstrick 06 · Social-Media-DMs</p>
             <h3 class="step-card__title">Kundenanfragen über Instagram- und Facebook-DM</h3>
             <div class="step-card__body">
@@ -748,7 +772,7 @@
           </div>
 
           <!-- ===== FALLSTRICK 7 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="fallstrick-07">
             <p class="step-card__num">Fallstrick 07 · Cloud-Sicherheit</p>
             <h3 class="step-card__title">Mitarbeiterdaten unverschlüsselt im Cloud-Tool</h3>
             <div class="step-card__body">
@@ -757,7 +781,7 @@
             </div>
           </div>
 
-          <h2>Wie viel Aufwand kommt auf Ihren Betrieb zu?</h2>
+          <h2 id="aufwand">Wie viel Aufwand kommt auf Ihren Betrieb zu?</h2>
           <p>
             Realistisch: 15–25&nbsp;Stunden über vier bis sechs Wochen verteilt, plus die Kosten für ggf. neue Tools (CRM, Diensthandys, AVV-Vorlagen). Bei einem Stundensatz von 80&nbsp;€ in der Geschäftsführung sind das rund 1.500&nbsp;€ Eigenleistung — gegenüber Bußgeldern, die ab 5.000&nbsp;€ beginnen und in vergleichbaren Fällen auch sechsstellig werden können.
           </p>

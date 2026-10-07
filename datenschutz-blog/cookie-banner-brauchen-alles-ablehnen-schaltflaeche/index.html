@@ -353,7 +353,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script>
@@ -521,7 +530,21 @@
         <div class="article-body__inner">
           <div class="article-body">
 
-            <h2>Die Rechtslage: Was sagen EuGH und Datenschutzbehörden?</h2>
+
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#rechtslage">Die Rechtslage: Was sagen EuGH und Datenschutzbehörden?</a></li>
+              <li><a href="#dark-patterns">Was sind Dark Patterns bei Cookie Bannern?</a></li>
+              <li><a href="#cookie-banner-inhalt">Was muss ein DSGVO-konformer Cookie Banner 2026 enthalten?</a></li>
+              <li><a href="#cookies-einwilligung">Welche Cookies brauchen überhaupt eine Einwilligung?</a></li>
+              <li><a href="#cookie-banner-folgen">Was droht bei einem rechtswidrigen Cookie Banner?</a></li>
+              <li><a href="#cookie-tools">Welche Cookie-Banner-Tools sind empfehlenswert?</a></li>
+              <li><a href="#fazit">Fazit: Der "Alles ablehnen" Button ist eine rechtliche Anforderung!</a></li>
+            </ol>
+          </nav>
+
+            <h2 id="rechtslage">Die Rechtslage: Was sagen EuGH und Datenschutzbehörden?</h2>
             <p>
               Der Europäische Gerichtshof hat in mehreren Urteilen klargestellt, dass eine Einwilligung nur dann gültig ist, wenn sie <strong>freiwillig, spezifisch, informiert und unmissverständlich</strong> erteilt wird (DSGVO Art. 7 i.V.m. Art. 4 Nr. 11). Eine Einwilligung ist nicht freiwillig, wenn das Ablehnen deutlich komplizierter ist als das Akzeptieren.
             </p>
@@ -534,7 +557,7 @@
               <p>Die österreichische Datenschutzbehörde (DSB) und die deutschen Landesbehörden beziehen sich in Prüfungen aktiv auf die EDSA-Leitlinien zu Dark Patterns. Ein nicht konformer Cookie Banner ist kein Bagatell, sondern ein aktiv prüfbarer DSGVO-Verstoß.</p>
             </div>
 
-            <h2>Was sind Dark Patterns bei Cookie Bannern?</h2>
+            <h2 id="dark-patterns">Was sind Dark Patterns bei Cookie Bannern?</h2>
             <p>
               Dark Patterns sind Gestaltungsmuster, die Nutzer durch psychologische Tricks zu einer breiteren Einwilligung als gewünscht bewegen. Beim Cookie Banner zeigen sie sich am häufigsten in diesen Formen:
             </p>
@@ -546,7 +569,7 @@
               <li>Irreführende Texte wie "Cookies verwalten" statt "Ablehnen"</li>
             </ul>
 
-            <h2>Was muss ein DSGVO-konformer Cookie Banner 2026 enthalten?</h2>
+            <h2 id="cookie-banner-inhalt">Was muss ein DSGVO-konformer Cookie Banner 2026 enthalten?</h2>
             <p>
               Aus der Kombination von DSGVO-Text, EuGH-Rechtsprechung und EDSA-Leitlinien ergibt sich eine klare Anforderungsliste für Ihren Cookie Banner:
             </p>
@@ -583,7 +606,7 @@
               </div>
             </div>
 
-            <h2>Welche Cookies brauchen überhaupt eine Einwilligung?</h2>
+            <h2 id="cookies-einwilligung">Welche Cookies brauchen überhaupt eine Einwilligung?</h2>
             <p>
               Nicht alle Cookies sind einwilligungspflichtig. Hier die Abgrenzung:
             </p>
@@ -608,7 +631,7 @@
               <p>Google Analytics 4 (GA4) ist auch in der Standardkonfiguration einwilligungspflichtig, solange es IP-Adressen verarbeitet oder Nutzer geräteübergreifend verfolgt. Die Aktivierung von IP-Anonymisierung allein reicht nicht aus.</p>
             </div>
 
-            <h2>Was droht bei einem rechtswidrigen Cookie Banner?</h2>
+            <h2 id="cookie-banner-folgen">Was droht bei einem rechtswidrigen Cookie Banner?</h2>
             <p>
               Der Rahmen der DSGVO-Sanktionen reicht bis zu 20 Millionen Euro oder 4 % des weltweiten Jahresumsatzes. In der Praxis für KMU relevanter sind:
             </p>
@@ -619,7 +642,7 @@
               <li>Reputationsschäden durch öffentliche Bußgeldbescheide der Behörden</li>
             </ul>
 
-            <h2>Welche Cookie-Banner-Tools sind empfehlenswert?</h2>
+            <h2 id="cookie-tools">Welche Cookie-Banner-Tools sind empfehlenswert?</h2>
             <p>
               Für Österreich und Deutschland haben sich folgende Lösungen in der Praxis bewährt. Alle bieten eine "Alles ablehnen" Schaltfläche auf der ersten Ebene:
             </p>
@@ -633,7 +656,7 @@
               Wichtig: Auch mit einem guten Tool ist die korrekte Konfiguration entscheidend. Viele Bußgelder entstehen nicht durch fehlendes Tool, sondern durch falsche Einstellungen.
             </p>
 
-            <h2>Fazit: Der "Alles ablehnen" Button ist eine rechtliche Anforderung!</h2>
+            <h2 id="fazit">Fazit: Der "Alles ablehnen" Button ist eine rechtliche Anforderung!</h2>
             <p>
               Eine gleichwertige "Alles ablehnen" Schaltfläche auf der ersten Ebene des Cookie Banners ist nach aktueller Rechtslage in Österreich und Deutschland keine Empfehlung, sondern eine rechtliche Anforderung. Wer dies noch nicht umgesetzt hat, sollte schnell handeln. Die Datenschutzbehörden prüfen Cookie Banner aktiv und verhängen auch ohne Beschwerde Bußgelder.
             </p>

@@ -399,7 +399,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -687,7 +696,22 @@
             Wer „Claude einsetzen" sagt, meint je nach Kontext sehr unterschiedliche Dinge. Zwischen der kostenlosen Version unter claude.ai und einem Enterprise-Workspace mit eigener EU-Region, AVV und Audit-Logs liegen Welten — datenschutzrechtlich wie funktional. Dieser Beitrag ordnet die vier Varianten ein und zeigt, welche für KMU tragfähig ist.
           </p>
 
-          <h2>Warum Claude für KMU interessant ist</h2>
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#warum-claude">Warum Claude für KMU interessant ist</a></li>
+              <li><a href="#claude-varianten">Die vier Claude-Varianten im Vergleich</a></li>
+              <li><a href="#schritt-01">Schritt 01: Free oder Pro reicht nicht aus</a></li>
+              <li><a href="#schritt-02">Schritt 02: Standard-AVV von Anthropic prüfen</a></li>
+              <li><a href="#schritt-03">Schritt 03: Claude in die KI-Richtlinie aufnehmen</a></li>
+              <li><a href="#schritt-04">Schritt 04: Logging und Audit. Nachweisbarkeit der Verarbeitung</a></li>
+              <li><a href="#claude-staerken">Wo Claude besonders glänzt. Und wo nicht</a></li>
+              <li><a href="#naechste-schritte">Was als Nächstes</a></li>
+            </ol>
+          </nav>
+
+
+          <h2 id="warum-claude">Warum Claude für KMU interessant ist</h2>
           <p>
             Anthropic — das Unternehmen hinter Claude — wurde 2021 von ehemaligen OpenAI-Mitarbeitern gegründet. Der zentrale Unterschied zu ChatGPT: Claude ist von Beginn an mit einem stärkeren Fokus auf <strong>Sicherheit, Erklärbarkeit und Datenkontrolle</strong> entwickelt worden. Für DSGVO-affine Branchen (Gesundheit, Finanzen, Beratung) ist das ein nicht zu unterschätzender Vorteil.
           </p>
@@ -695,7 +719,7 @@
             Hinzu kommt: Claude bietet einen außergewöhnlich großen Kontextspeicher (200&nbsp;000 Token, ca.&nbsp;500&nbsp;Seiten), was vor allem für die Analyse längerer Dokumente — Verträge, Studien, Akten — relevant ist.
           </p>
 
-          <h2>Die vier Claude-Varianten im Vergleich</h2>
+          <h2 id="claude-varianten">Die vier Claude-Varianten im Vergleich</h2>
 
           <h3>1. Claude Free (claude.ai)</h3>
           <p>
@@ -725,7 +749,7 @@
           </div>
 
           <!-- ===== STEP 1 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-01">
             <p class="step-card__num">Schritt 01 · Variante wählen</p>
             <h3 class="step-card__title">Free oder Pro reicht nicht aus</h3>
             <div class="step-card__body">
@@ -748,7 +772,7 @@
           </div>
 
           <!-- ===== STEP 2 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-02">
             <p class="step-card__num">Schritt 02 · AVV abschließen</p>
             <h3 class="step-card__title">Standard-AVV von Anthropic prüfen</h3>
             <div class="step-card__body">
@@ -758,7 +782,7 @@
           </div>
 
           <!-- ===== STEP 3 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-03">
             <p class="step-card__num">Schritt 03 · Claude in die KI-Richtlinie aufnehmen</p>
             <h3 class="step-card__title">Klare Vorgaben für Mitarbeiter</h3>
             <div class="step-card__body">
@@ -767,7 +791,7 @@
           </div>
 
           <!-- ===== STEP 4 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-04">
             <p class="step-card__num">Schritt 04 · Logging &amp; Audit</p>
             <h3 class="step-card__title">Nachweisbarkeit der Verarbeitung</h3>
             <div class="step-card__body">
@@ -782,7 +806,7 @@
             </div>
           </div>
 
-          <h2>Wo Claude besonders glänzt — und wo nicht</h2>
+          <h2 id="claude-staerken">Wo Claude besonders glänzt — und wo nicht</h2>
           <p>
             Claude punktet bei längeren Dokumenten (200&nbsp;k Token Kontext = ca.&nbsp;500&nbsp;Seiten), bei rechtlich-analytischen Aufgaben und bei Sachverhalts-Zusammenfassungen. Schwächer ist Claude bei sehr aktuellen Tagesnachrichten und bei Bildgenerierung (gar nicht).
           </p>
@@ -795,7 +819,7 @@
             <cite>Aus der Beratungspraxis</cite>
           </blockquote>
 
-          <h2>Was als Nächstes</h2>
+          <h2 id="naechste-schritte">Was als Nächstes</h2>
           <p>
             Wenn Sie Claude (oder eine andere KI) bereits einsetzen oder einsetzen wollen: ein <a href="../../index.html#kontakt">kostenloses Erstgespräch</a> klärt, welche Variante zu Ihrem Anwendungsfall passt, ob ein AVV vorliegt und welche zwei bis drei Regelungen die KI-Richtlinie auf jeden Fall enthalten muss. In den meisten Fällen ist die Umsetzung in zwei bis drei Wochen erledigt.
           </p>

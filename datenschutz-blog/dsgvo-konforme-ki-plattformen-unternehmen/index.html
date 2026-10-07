@@ -471,7 +471,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -767,10 +776,25 @@
             <svg class="callout__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             <div class="callout__body">
               <p><strong>Wichtig ab August 2026:</strong> Mit dem EU AI Act gelten neben der DSGVO zusätzliche Pflichten für Unternehmen, die KI einsetzen. Klassifizierung von KI-Systemen, Schulungspflichten und Audit-Logs sind keine optionalen Extras mehr, sondern gesetzliche Anforderungen. Wer DSGVO und AI Act gemeinsam umsetzt, hat den Aufwand einmal.</p>
+
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#ki-anforderungen">Was eine DSGVO-konforme KI-Plattform leisten muss</a></li>
+              <li><a href="#hosting-modelle">Die drei Hosting-Modelle im Überblick</a></li>
+              <li><a href="#schritt-01">Schritt 01: Wo werden Ihre Daten tatsächlich verarbeitet?</a></li>
+              <li><a href="#schritt-02">Schritt 02: Auftragsverarbeitungsvertrag vor der ersten Eingabe</a></li>
+              <li><a href="#schritt-03">Schritt 03: Eingaben dürfen das Unternehmen nicht verlassen</a></li>
+              <li><a href="#schritt-04">Schritt 04: EU AI Act und DSGVO. Was 2026 gilt</a></li>
+              <li><a href="#plattformen-vergleich">Welche Plattformen für welches Unternehmen geeignet sind</a></li>
+              <li><a href="#kmu-handlung">Was österreichische KMU jetzt konkret tun sollten</a></li>
+            </ol>
+          </nav>
+
             </div>
           </div>
 
-          <h2>Was eine DSGVO-konforme KI-Plattform leisten muss</h2>
+          <h2 id="ki-anforderungen">Was eine DSGVO-konforme KI-Plattform leisten muss</h2>
           <p>
             Die DSGVO stellt keine spezifischen Anforderungen an KI-Plattformen als Kategorie. Sie stellt Anforderungen an <em>jede</em> Verarbeitung personenbezogener Daten. Daraus ergeben sich vier konkrete Prüfpunkte für jede KI-Lösung im Unternehmen.
           </p>
@@ -782,7 +806,7 @@
             <li><strong>Datensouveränität:</strong> Das Spektrum reicht von Multi-Tenant-SaaS über Self-Hosting in der eigenen Cloud bis zu On-Premise-Lösungen. Je sensibler die verarbeiteten Daten, desto mehr Kontrolle braucht das Unternehmen über die Infrastruktur.</li>
           </ul>
 
-          <h2>Die drei Hosting-Modelle im Überblick</h2>
+          <h2 id="hosting-modelle">Die drei Hosting-Modelle im Überblick</h2>
 
           <div class="hosting-grid">
             <div class="hosting-card">
@@ -807,7 +831,7 @@
           </p>
 
           <!-- ===== STEP 1 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-01">
             <p class="step-card__num">Schritt 01 · Hosting-Architektur</p>
             <h3 class="step-card__title">Wo werden Ihre Daten tatsächlich verarbeitet?</h3>
             <div class="step-card__body">
@@ -830,7 +854,7 @@
           </div>
 
           <!-- ===== STEP 2 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-02">
             <p class="step-card__num">Schritt 02 · AVV abschließen</p>
             <h3 class="step-card__title">Auftragsverarbeitungsvertrag vor der ersten Eingabe</h3>
             <div class="step-card__body">
@@ -840,7 +864,7 @@
           </div>
 
           <!-- ===== STEP 3 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-03">
             <p class="step-card__num">Schritt 03 · Zero-Data-Retention</p>
             <h3 class="step-card__title">Eingaben dürfen das Unternehmen nicht verlassen</h3>
             <div class="step-card__body">
@@ -863,7 +887,7 @@
           </div>
 
           <!-- ===== STEP 4 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-04">
             <p class="step-card__num">Schritt 04 · EU AI Act Compliance</p>
             <h3 class="step-card__title">EU AI Act und DSGVO: Was 2026 gilt</h3>
             <div class="step-card__body">
@@ -881,7 +905,7 @@
             <cite>Aus der Beratungspraxis</cite>
           </blockquote>
 
-          <h2>Welche Plattformen für welches Unternehmen geeignet sind</h2>
+          <h2 id="plattformen-vergleich">Welche Plattformen für welches Unternehmen geeignet sind</h2>
           <p>
             Der DACH-Markt ist 2026 reif. Die Wahl hängt von drei Faktoren ab: Datensouveränitätsanforderung, Kostenmodell und Compliance-Reifegrad des Unternehmens.
           </p>
@@ -924,7 +948,7 @@
             </div>
           </div>
 
-          <h2>Was österreichische KMU jetzt konkret tun sollten</h2>
+          <h2 id="kmu-handlung">Was österreichische KMU jetzt konkret tun sollten</h2>
           <p>
             Die meisten KMU stehen vor drei offenen Punkten: kein AVV mit dem aktuell genutzten KI-Anbieter, keine schriftliche KI-Richtlinie und keine Schulungsdokumentation für den EU AI Act. Diese drei Punkte sind in vier bis sechs Wochen schließbar.
           </p>

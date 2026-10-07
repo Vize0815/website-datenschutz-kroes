@@ -370,7 +370,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -670,12 +679,32 @@
             <svg class="callout__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             <div class="callout__body">
               <p><strong>Hinweis zur österreichischen Schwerpunktprüfung 2026:</strong> Die Datenschutzbehörde hat für 2026 ausdrücklich technische und organisatorische Maßnahmen (Art. 32 DSGVO) als Prüfungsschwerpunkt benannt. Unternehmen, die hier Lücken haben, müssen mit gezielten Nachfragen rechnen.</p>
+
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#uebersicht">Die 10 Prüfbereiche im Überblick</a></li>
+              <li><a href="#pruefbereich-01">Prüfbereich 01: Verzeichnis der Verarbeitungstätigkeiten (Art. 30)</a></li>
+              <li><a href="#pruefbereich-02">Prüfbereich 02: Technische und organisatorische Maßnahmen (Art. 32)</a></li>
+              <li><a href="#pruefbereich-03">Prüfbereich 03: Auftragsverarbeitungsverträge (Art. 28)</a></li>
+              <li><a href="#pruefbereich-04">Prüfbereich 04: Rechtsgrundlagen der Datenverarbeitung (Art. 6)</a></li>
+              <li><a href="#pruefbereich-05">Prüfbereich 05: Datenschutzerklärung (Art. 13/14)</a></li>
+              <li><a href="#pruefbereich-06">Prüfbereich 06: Löschkonzept (Art. 5)</a></li>
+              <li><a href="#pruefbereich-07">Prüfbereich 07: Betroffenenrechte (Art. 15 bis 22)</a></li>
+              <li><a href="#pruefbereich-08">Prüfbereich 08: Datenschutzverletzungen und Meldeprozesse (Art. 33/34)</a></li>
+              <li><a href="#pruefbereich-09">Prüfbereich 09: Datenschutz-Folgenabschätzung (Art. 35)</a></li>
+              <li><a href="#pruefbereich-10">Prüfbereich 10: Gesamtorganisation</a></li>
+              <li><a href="#steuerberater">Was Steuerberater und Steuerkanzleien besonders betrifft</a></li>
+              <li><a href="#konkret-tun">Was Sie jetzt tun können</a></li>
+            </ol>
+          </nav>
+
             </div>
           </div>
 
-          <h2>Die 10 Prüfbereiche im Überblick</h2>
+          <h2 id="uebersicht">Die 10 Prüfbereiche im Überblick</h2>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-01">
             <p class="step-card__num">Prüfbereich 01 · Art. 30 DSGVO</p>
             <h3 class="step-card__title">Verzeichnis der Verarbeitungstätigkeiten</h3>
             <div class="step-card__body">
@@ -707,7 +736,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-02">
             <p class="step-card__num">Prüfbereich 02 · Art. 32 DSGVO</p>
             <h3 class="step-card__title">Technische und organisatorische Maßnahmen</h3>
             <div class="step-card__body">
@@ -738,7 +767,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-03">
             <p class="step-card__num">Prüfbereich 03 · Art. 28 DSGVO</p>
             <h3 class="step-card__title">Auftragsverarbeitungsverträge</h3>
             <div class="step-card__body">
@@ -770,7 +799,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-04">
             <p class="step-card__num">Prüfbereich 04 · Art. 6 DSGVO</p>
             <h3 class="step-card__title">Rechtsgrundlagen der Datenverarbeitung</h3>
             <div class="step-card__body">
@@ -779,7 +808,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-05">
             <p class="step-card__num">Prüfbereich 05 · Art. 13 / 14 DSGVO</p>
             <h3 class="step-card__title">Datenschutzerklärung</h3>
             <div class="step-card__body">
@@ -793,7 +822,7 @@
             <cite>Aus der Beratungspraxis von Alexander Kroes</cite>
           </blockquote>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-06">
             <p class="step-card__num">Prüfbereich 06 · Art. 5 DSGVO</p>
             <h3 class="step-card__title">Löschkonzept</h3>
             <div class="step-card__body">
@@ -820,7 +849,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-07">
             <p class="step-card__num">Prüfbereich 07 · Art. 15–22 DSGVO</p>
             <h3 class="step-card__title">Betroffenenrechte</h3>
             <div class="step-card__body">
@@ -829,7 +858,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-08">
             <p class="step-card__num">Prüfbereich 08 · Art. 33 / 34 DSGVO</p>
             <h3 class="step-card__title">Datenschutzverletzungen und Meldeprozesse</h3>
             <div class="step-card__body">
@@ -856,7 +885,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-09">
             <p class="step-card__num">Prüfbereich 09 · Art. 35 DSGVO</p>
             <h3 class="step-card__title">Datenschutz-Folgenabschätzung</h3>
             <div class="step-card__body">
@@ -865,7 +894,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="pruefbereich-10">
             <p class="step-card__num">Prüfbereich 10 · Gesamtorganisation</p>
             <h3 class="step-card__title">Datenschutzorganisation</h3>
             <div class="step-card__body">
@@ -892,7 +921,7 @@
             </div>
           </div>
 
-          <h2>Was Steuerberater und Steuerkanzleien besonders betrifft</h2>
+          <h2 id="steuerberater">Was Steuerberater und Steuerkanzleien besonders betrifft</h2>
 
           <p>
             Bei Steuerkanzleien liegen die drei sensibelsten Prüfbereiche meist in denselben Bereichen. Das hat einen einfachen Grund: Kanzleien verarbeiten große Mengen besonders sensibler Finanzdaten — und das über lange Zeiträume, mit vielen Schnittstellen nach außen.
@@ -927,7 +956,7 @@
             </div>
           </div>
 
-          <h2>Was Sie jetzt tun können</h2>
+          <h2 id="konkret-tun">Was Sie jetzt tun können</h2>
 
           <p>
             Dieser Überblick zeigt: Eine Behördenprüfung lässt sich vorbereiten. Wer die zehn Prüfbereiche kennt und systematisch abarbeitet, kann einer Prüfung mit deutlich mehr Ruhe entgegenblicken.

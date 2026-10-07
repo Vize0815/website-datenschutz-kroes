@@ -395,7 +395,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -691,10 +700,25 @@
             <svg class="callout__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v5M10 14h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             <div class="callout__body">
               <p><strong>Für wen ist dieser Fahrplan gedacht?</strong> Für Geschäftsführer und Inhaber von KMU mit 10–250 Mitarbeitern, die DSGVO-Compliance nicht aussitzen, sondern strukturiert abschließen wollen — mit dem nötigen Maß an Pragmatismus.</p>
+
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#reihenfolge">Warum die Reihenfolge entscheidet</a></li>
+              <li><a href="#schritt-01">Schritt 01: Verarbeitungsverzeichnis erstellen</a></li>
+              <li><a href="#schritt-02">Schritt 02: Auftragsverarbeitungsverträge prüfen</a></li>
+              <li><a href="#schritt-03">Schritt 03: Datenschutzbeauftragten benennen</a></li>
+              <li><a href="#schritt-04">Schritt 04: Verbindliche Schulung dokumentieren</a></li>
+              <li><a href="#schritt-05">Schritt 05: Incident-Response-Prozess etablieren</a></li>
+              <li><a href="#nach-den-schritten">Was nach den 5 Schritten kommt</a></li>
+              <li><a href="#ausblick">Was uns von hier aus erwartet</a></li>
+            </ol>
+          </nav>
+
             </div>
           </div>
 
-          <h2>Warum die Reihenfolge entscheidet</h2>
+          <h2 id="reihenfolge">Warum die Reihenfolge entscheidet</h2>
           <p>
             Die meisten KMU starten DSGVO-Projekte mit der Datenschutzerklärung auf der Website. Das ist nachvollziehbar — sichtbar, abhakbar, schnell erledigt. Es ist aber genau die <strong>falsche Reihenfolge</strong>. Eine Datenschutzerklärung ist die Beschreibung dessen, was Sie tun. Wenn Sie nicht wissen, was Sie tun, beschreiben Sie etwas, das nicht stimmt — und das ist im Bußgeldfall belastender als gar keine Erklärung.
           </p>
@@ -703,7 +727,7 @@
           </p>
 
           <!-- ===== STEP 1 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-01">
             <p class="step-card__num">Schritt 01 · Bestandsaufnahme</p>
             <h3 class="step-card__title">Verarbeitungsverzeichnis erstellen</h3>
             <div class="step-card__body">
@@ -727,7 +751,7 @@
           </div>
 
           <!-- ===== STEP 2 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-02">
             <p class="step-card__num">Schritt 02 · Rechtsgrundlagen</p>
             <h3 class="step-card__title">Auftragsverarbeitungsverträge prüfen</h3>
             <div class="step-card__body">
@@ -737,7 +761,7 @@
           </div>
 
           <!-- ===== STEP 3 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-03">
             <p class="step-card__num">Schritt 03 · Pflichten klären</p>
             <h3 class="step-card__title">Datenschutzbeauftragten benennen</h3>
             <div class="step-card__body">
@@ -747,7 +771,7 @@
           </div>
 
           <!-- ===== STEP 4 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-04">
             <p class="step-card__num">Schritt 04 · Mitarbeiter schulen</p>
             <h3 class="step-card__title">Verbindliche Schulung dokumentieren</h3>
             <div class="step-card__body">
@@ -757,7 +781,7 @@
           </div>
 
           <!-- ===== STEP 5 ===== -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-05">
             <p class="step-card__num">Schritt 05 · Notfall vorbereiten</p>
             <h3 class="step-card__title">Incident-Response-Prozess etablieren</h3>
             <div class="step-card__body">
@@ -766,7 +790,7 @@
             </div>
           </div>
 
-          <h2>Was nach den 5 Schritten kommt</h2>
+          <h2 id="nach-den-schritten">Was nach den 5 Schritten kommt</h2>
           <p>
             Nach diesen fünf Schritten haben Sie die Grundlage. Das heißt nicht, dass Sie fertig sind — aber Sie sind <em>auditfest</em>. Die Aufsichtsbehörde findet im Ernstfall ein vollständiges Verarbeitungsverzeichnis, gültige AVVs, einen benannten DSB, dokumentierte Schulungen und einen funktionierenden Notfallprozess. Das ist der Unterschied zwischen Bußgeld und Verwarnung.
           </p>
@@ -783,7 +807,7 @@
             </div>
           </div>
 
-          <h2>Was uns von hier aus erwartet</h2>
+          <h2 id="ausblick">Was uns von hier aus erwartet</h2>
           <p>
             Der Aufwand für KMU ist überschaubar: rund 30–40&nbsp;Stunden Geschäftsführungszeit über 8&nbsp;Wochen verteilt, plus die Begleitung durch einen erfahrenen DSB. Wer das in Eigenregie macht, plant realistisch das Doppelte ein. Wer es professionell begleiten lässt, hat die Rechtssicherheit — und die Geschäftsführung den Kopf für das Kerngeschäft frei.
           </p>

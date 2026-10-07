@@ -374,7 +374,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -666,7 +675,22 @@
             Wer als Steuerberater oder Kanzlei die DSGVO als Thema für Großkonzerne abtut, unterschätzt das eigene Risiko erheblich. Aufsichtsbehörden prüfen zunehmend auch kleine und mittelgroße Kanzleien. Und die häufigsten Mängel sind nicht technischer Natur, sondern organisatorische Lücken, die sich in wenigen Wochen schließen lassen.
           </p>
 
-          <h2>Welche Daten verarbeitet eine Steuerkanzlei?</h2>
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#welche-daten">Welche Daten verarbeitet eine Steuerkanzlei?</a></li>
+              <li><a href="#rechtsgrundlage">Rechtsgrundlage: Auf was stützt sich die Verarbeitung?</a></li>
+              <li><a href="#verantwortlicher">Verantwortlicher oder Auftragsverarbeiter?</a></li>
+              <li><a href="#datenschutzrisiken">Die vier größten Datenschutzrisiken im Steuerrecht</a></li>
+              <li><a href="#aufbewahrungsfristen">Aufbewahrungsfristen und Löschpflicht: Der Widerspruch auflösen</a></li>
+              <li><a href="#tom-steuerkanzleien">Technische und organisatorische Maßnahmen für Steuerkanzleien</a></li>
+              <li><a href="#dsb-steuerkanzlei">Wann braucht eine Steuerkanzlei einen Datenschutzbeauftragten?</a></li>
+              <li><a href="#steuerkanzleien-handlung">Was Steuerkanzleien jetzt konkret tun sollten</a></li>
+            </ol>
+          </nav>
+
+
+          <h2 id="welche-daten">Welche Daten verarbeitet eine Steuerkanzlei?</h2>
 
           <p>
             Die Bandbreite ist außergewöhnlich: Lohnzettel, Kontoauszüge, Kreditverträge, Scheidungsunterlagen mit Unterhaltszahlungen, Krankenhausrechnungen als steuerliche Absetzposten, Behinderungsnachweise für Steuerfreibeträge. All das landet im Datensatz eines einzigen Mandanten.
@@ -683,7 +707,7 @@
             Dazu kommen Daten von Familienangehörigen der Mandanten (Unterhaltsempfänger, Kinder für Familienbonus), Mitarbeiterdaten bei Lohnverrechnung sowie Bankverbindungen und Vermögensverhältnisse. Kaum eine Branche bündelt so viele personenbezogene Daten in einem einzigen Mandat.
           </p>
 
-          <h2>Rechtsgrundlage: Auf was stützt sich die Verarbeitung?</h2>
+          <h2 id="rechtsgrundlage">Rechtsgrundlage: Auf was stützt sich die Verarbeitung?</h2>
 
           <p>
             Die DSGVO verlangt für jede Datenverarbeitung eine eindeutige Rechtsgrundlage. In Steuerkanzleien kommen typischerweise drei in Frage:
@@ -713,7 +737,7 @@
             </div>
           </div>
 
-          <h2>Verantwortlicher oder Auftragsverarbeiter?</h2>
+          <h2 id="verantwortlicher">Verantwortlicher oder Auftragsverarbeiter?</h2>
 
           <p>
             Eine Frage, die viele Steuerkanzleien falsch beantworten: Sind sie gegenüber ihren Mandanten Verantwortliche oder Auftragsverarbeiter?
@@ -730,7 +754,7 @@
             </div>
           </div>
 
-          <h2>Die vier größten Datenschutzrisiken im Steuerrecht</h2>
+          <h2 id="datenschutzrisiken">Die vier größten Datenschutzrisiken im Steuerrecht</h2>
 
           <div class="step-card">
             <p class="step-card__num">Risiko 01 · Kommunikation</p>
@@ -773,7 +797,7 @@
             <cite>Aus der Beratungspraxis von Alexander Kroes</cite>
           </blockquote>
 
-          <h2>Aufbewahrungsfristen und Löschpflicht: Der Widerspruch auflösen</h2>
+          <h2 id="aufbewahrungsfristen">Aufbewahrungsfristen und Löschpflicht: Der Widerspruch auflösen</h2>
 
           <p>
             Das größte Spannungsfeld im Datenschutz für Steuerkanzleien ist der scheinbare Widerspruch zwischen steuerrechtlicher Aufbewahrungspflicht und datenschutzrechtlichem Löschgebot. Die Lösung ist weniger kompliziert als befürchtet.
@@ -795,7 +819,7 @@
             </div>
           </div>
 
-          <h2>Technische und organisatorische Maßnahmen für Steuerkanzleien</h2>
+          <h2 id="tom-steuerkanzleien">Technische und organisatorische Maßnahmen für Steuerkanzleien</h2>
 
           <p>
             Art. 32 DSGVO verlangt dem Risiko angemessene technische und organisatorische Maßnahmen. Für Steuerkanzleien bedeutet das konkret:
@@ -834,7 +858,7 @@
             </div>
           </div>
 
-          <h2>Wann braucht eine Steuerkanzlei einen Datenschutzbeauftragten?</h2>
+          <h2 id="dsb-steuerkanzlei">Wann braucht eine Steuerkanzlei einen Datenschutzbeauftragten?</h2>
 
           <p>
             Nach Art. 37 DSGVO ist ein Datenschutzbeauftragter in Steuerkanzleien dann Pflicht, wenn mindestens 20 Mitarbeiter regelmäßig und dauerhaft mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind. In Österreich gilt entsprechend die Regelung des DSG 2018.
@@ -851,7 +875,7 @@
             </div>
           </div>
 
-          <h2>Was Steuerkanzleien jetzt konkret tun sollten</h2>
+          <h2 id="steuerkanzleien-handlung">Was Steuerkanzleien jetzt konkret tun sollten</h2>
 
           <p>
             Die gute Nachricht: Die meisten Datenschutzlücken in Steuerkanzleien lassen sich mit überschaubarem Aufwand schließen. Der erste Schritt ist immer derselbe: den eigenen Ist-Zustand kennenlernen.

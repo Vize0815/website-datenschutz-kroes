@@ -347,7 +347,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -639,7 +648,21 @@
             Das deutsche <strong>Lieferkettensorgfaltspflichtengesetz (LkSG)</strong>, die EU-Richtlinie zur unternehmerischen Sorgfaltspflicht (<strong>CSDDD</strong>) und die Lieferkettenanforderungen aus <strong>NIS2</strong> stellen zwar unterschiedliche Anforderungen — aber alle drei fordern dasselbe Grundprinzip: strukturierte Risikoanalyse, vertragliche Absicherung und Dokumentation entlang der Lieferkette.
           </p>
 
-          <h2>Der Rechtsrahmen im Überblick</h2>
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#rechtsrahmen">Der Rechtsrahmen im Überblick</a></li>
+              <li><a href="#schritt-01">Schritt 01: Lieferkette kartieren. Tier 1 und Tier 2</a></li>
+              <li><a href="#schritt-02">Schritt 02: Menschenrechts-, Umwelt- und IT-Sicherheitsrisiken bewerten</a></li>
+              <li><a href="#schritt-03">Schritt 03: Vertragliche Anforderungen und Verhaltenskodex</a></li>
+              <li><a href="#schritt-04">Schritt 04: Beschwerdemechanismus einrichten und Maßnahmen dokumentieren</a></li>
+              <li><a href="#nis2-lieferketten">NIS2 und die Lieferketten-IT-Sicherheit</a></li>
+              <li><a href="#konkret-tun">Was konkret zu tun ist</a></li>
+            </ol>
+          </nav>
+
+
+          <h2 id="rechtsrahmen">Der Rechtsrahmen im Überblick</h2>
           <p>
             Das <strong>LkSG</strong> (Deutschland, seit 1.&nbsp;Januar 2023) gilt für Unternehmen mit mindestens 1&nbsp;000 Mitarbeitern in Deutschland. Es verpflichtet sie, Menschenrechts- und Umweltrisiken in der eigenen Lieferkette — einschließlich direkter Zulieferer (Tier 1) — zu analysieren, zu reduzieren und zu dokumentieren.
           </p>
@@ -655,7 +678,7 @@
           </div>
 
           <!-- STEP 1 -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-01">
             <p class="step-card__num">Schritt 01 · Kartierung</p>
             <h3 class="step-card__title">Lieferkette kartieren — Tier 1 und Tier 2</h3>
             <div class="step-card__body">
@@ -679,7 +702,7 @@
           </div>
 
           <!-- STEP 2 -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-02">
             <p class="step-card__num">Schritt 02 · Risikoanalyse</p>
             <h3 class="step-card__title">Menschenrechts-, Umwelt- und IT-Sicherheitsrisiken bewerten</h3>
             <div class="step-card__body">
@@ -690,7 +713,7 @@
           </div>
 
           <!-- STEP 3 -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-03">
             <p class="step-card__num">Schritt 03 · Präventionsmaßnahmen</p>
             <h3 class="step-card__title">Vertragliche Anforderungen und Verhaltenskodex</h3>
             <div class="step-card__body">
@@ -718,7 +741,7 @@
           </div>
 
           <!-- STEP 4 -->
-          <div class="step-card">
+          <div class="step-card" id="schritt-04">
             <p class="step-card__num">Schritt 04 · Beschwerdeverfahren &amp; Dokumentation</p>
             <h3 class="step-card__title">Beschwerdemechanismus einrichten und Maßnahmen dokumentieren</h3>
             <div class="step-card__body">
@@ -734,7 +757,7 @@
             </div>
           </div>
 
-          <h2>NIS2 und die Lieferketten-IT-Sicherheit</h2>
+          <h2 id="nis2-lieferketten">NIS2 und die Lieferketten-IT-Sicherheit</h2>
           <p>
             NIS2 enthält eine eigenständige Lieferkettenpflicht für IT-Sicherheit: Betroffene Unternehmen müssen sicherstellen, dass ihre IKT-Lieferanten und Dienstleister angemessene Sicherheitsstandards einhalten. Das umfasst vertragliche Mindestanforderungen, Audit-Rechte und — für kritische Dienstleister — regelmäßige Sicherheitsüberprüfungen.
           </p>
@@ -747,7 +770,7 @@
             <cite>Aus der Beratungspraxis</cite>
           </blockquote>
 
-          <h2>Was konkret zu tun ist</h2>
+          <h2 id="konkret-tun">Was konkret zu tun ist</h2>
           <p>
             Der erste Schritt ist eine Betroffenheitsanalyse: Beliefern Sie deutsche oder EU-weit tätige Großunternehmen, die unter LkSG oder CSDDD fallen? Sind Sie selbst NIS2-betroffen? Und haben Sie bereits strukturierte Lieferantenverträge mit den notwendigen Compliance-Klauseln?
           </p>

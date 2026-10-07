@@ -302,7 +302,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -593,7 +602,20 @@
             Die gute Nachricht: Die Anforderungen sind für die meisten KMU handhabbar. Die schlechte Nachricht: Kaum ein Unternehmen hat sich bisher systematisch damit befasst, welche KI-Inhalte es überhaupt produziert und wo diese veröffentlicht werden. Genau das ist der erste Schritt.
           </p>
 
-          <h2>Was gilt ab 2. August 2026?</h2>
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#was-gilt-ab-august">Was gilt ab 2. August 2026?</a></li>
+              <li><a href="#pflichtenkreise">Die vier Pflichtenkreise im Detail</a></li>
+              <li><a href="#ausnahmen">Die Ausnahmen kennen und richtig anwenden</a></li>
+              <li><a href="#bussgeld">Bußgelder. Was droht bei Verstößen?</a></li>
+              <li><a href="#doppelte-pflichten">Datenschutz und AI Act. Doppelte Pflichten bei personenbezogenen Daten</a></li>
+              <li><a href="#unternehmen-handlung">Was Ihr Unternehmen jetzt konkret tun sollte</a></li>
+            </ol>
+          </nav>
+
+
+          <h2 id="was-gilt-ab-august">Was gilt ab 2. August 2026?</h2>
 
           <p>
             Der EU AI Act unterscheidet bei der Kennzeichnungspflicht vier sogenannte Pflichtenkreise. Sie gelten unabhängig davon, in welcher Risikoklasse das eingesetzte KI-System eingestuft ist. Entscheidend ist allein: Wurde der Inhalt von einer KI generiert? Und in welchem Kontext wird er verwendet?
@@ -610,7 +632,7 @@
             </div>
           </div>
 
-          <h2>Die vier Pflichtenkreise im Detail</h2>
+          <h2 id="pflichtenkreise">Die vier Pflichtenkreise im Detail</h2>
 
           <div class="step-card">
             <p class="step-card__num">Pflichtenkreis 01 · Interaktion</p>
@@ -648,7 +670,7 @@
             </div>
           </div>
 
-          <h2>Die Ausnahmen kennen und richtig anwenden</h2>
+          <h2 id="ausnahmen">Die Ausnahmen kennen und richtig anwenden</h2>
 
           <p>
             Nicht jeder KI-generierte Inhalt muss mit einem auffälligen Label versehen werden. Der AI Act sieht zwei wesentliche Ausnahmeregelungen vor. Beide müssen aber aktiv und nachweisbar angewendet werden, sie entstehen nicht automatisch.
@@ -669,7 +691,7 @@
             </div>
           </div>
 
-          <h2>Bußgelder. Was droht bei Verstößen?</h2>
+          <h2 id="bussgeld">Bußgelder. Was droht bei Verstößen?</h2>
 
           <p>
             Verstöße gegen die Transparenzpflichten nach Artikel 50 AI Act können mit Geldbußen von bis zu <strong>15 Millionen Euro oder 3 Prozent des weltweiten Jahresumsatzes</strong> geahndet werden, je nachdem welcher Betrag höher ist. Für ein Unternehmen mit 5 Millionen Euro Jahresumsatz entspricht das bis zu 150.000 Euro.
@@ -684,7 +706,7 @@
             Hinzu kommen Reputationsschäden und das Risiko, dass Betroffene oder Wettbewerber Beschwerden einreichen. Anders als bei vielen technischen DSGVO-Verstößen ist ein Kennzeichnungsverstoß für Dritte in der Regel leicht dokumentierbar.
           </p>
 
-          <h2>Datenschutz und AI Act. Doppelte Pflichten bei personenbezogenen Daten</h2>
+          <h2 id="doppelte-pflichten">Datenschutz und AI Act. Doppelte Pflichten bei personenbezogenen Daten</h2>
 
           <p>
             KI-generierte Inhalte, die personenbezogene Daten enthalten oder verarbeiten, unterliegen gleichzeitig den Anforderungen der DSGVO. Wer hier nur einen der beiden Rechtsrahmen im Blick hat, tappt in eine Compliance-Lücke.
@@ -702,7 +724,7 @@
             In der Praxis empfiehlt sich deshalb eine kombinierte Betrachtung: KI-Einsatz und Datenschutz sind keine getrennten Themen mehr. Wer seinen Datenschutzstatus kennt, hat die bessere Ausgangsposition, um auch AI-Act-Anforderungen strukturiert umzusetzen.
           </p>
 
-          <h2>Was Ihr Unternehmen jetzt konkret tun sollte</h2>
+          <h2 id="unternehmen-handlung">Was Ihr Unternehmen jetzt konkret tun sollte</h2>
 
           <p>
             Die meisten KMU sind nicht grundsätzlich schlecht aufgestellt. Was fehlt, ist eine systematische Bestandsaufnahme. Sechs Schritte helfen dabei:

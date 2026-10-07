@@ -428,7 +428,16 @@
     .rating-popup__star.is-lit { color: var(--color-gold); }
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
-    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  </style>
+    .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }  
+    /* Inhaltsverzeichnis */
+    .toc { background: var(--color-sky-tint); border: 1px solid #c5d6ed; border-radius: var(--radius-md); padding: 24px 28px; margin: 2em 0 2.4em; }
+    .toc__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-slate-light); margin-bottom: 14px; }
+    .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: toc; }
+    .toc__list li { counter-increment: toc; display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 300; }
+    .toc__list li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10px; color: var(--color-gold); flex-shrink: 0; }
+    .toc__list a { color: var(--color-navy); text-decoration: underline; text-decoration-color: rgba(15,31,61,0.2); text-underline-offset: 3px; transition: text-decoration-color var(--transition-base), color var(--transition-base); }
+    .toc__list a:hover { color: var(--color-prussian); text-decoration-color: var(--color-prussian); }
+</style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
@@ -720,7 +729,21 @@
             In über zwölf Jahren Beratungspraxis habe ich noch kein Unternehmen erlebt, das seinen tatsächlichen Datenschutzstatus korrekt eingeschätzt hat. Die einen unterschätzen ihre Lücken. Die anderen überblicken schlicht nicht, was alles relevant ist. Und beide tragen ein Risiko, das sie nicht sehen können.
           </p>
 
-          <h2>Was ist ein Datenschutz Audit?</h2>
+          <nav class="toc" aria-label="Inhaltsverzeichnis">
+            <p class="toc__label">Inhalt</p>
+            <ol class="toc__list">
+              <li><a href="#was-ist-audit">Was ist ein Datenschutz Audit?</a></li>
+              <li><a href="#warum-audit">Warum ist ein Datenschutz Audit so wichtig?</a></li>
+              <li><a href="#risiko-01">Risiko 01: Aufsichtsbehörden prüfen aktiv und anlassbezogen</a></li>
+              <li><a href="#risiko-02">Risiko 02: Man weiß nicht, was man nicht weiß</a></li>
+              <li><a href="#risiko-03">Risiko 03: Kunden und Partner prüfen zunehmend selbst</a></li>
+              <li><a href="#mini-audit">Warum das kostenlose Mini Audit so wertvoll ist</a></li>
+              <li><a href="#nach-audit">Was nach dem Mini Audit passiert</a></li>
+            </ol>
+          </nav>
+
+
+          <h2 id="was-ist-audit">Was ist ein Datenschutz Audit?</h2>
 
           <p>
             Ein Datenschutz Audit ist eine systematische, strukturierte Überprüfung aller datenschutzrelevanten Prozesse, Dokumente und technischen Maßnahmen in einem Unternehmen. Es geht darum, den Ist-Zustand mit den Anforderungen aus DSGVO, DSG 2018 und TKG 2021 abzugleichen und daraus konkrete Handlungsempfehlungen abzuleiten.
@@ -741,13 +764,13 @@
             Das Ergebnis eines Audits ist kein Bescheid und kein Urteil. Es ist ein <strong>GAP Bericht</strong>. Er zeigt mit einer Ampelbewertung, was gut ist, was fehlt und was dringend ist. Auf dieser Basis lässt sich handeln. Ohne diesen Bericht tappt man im Dunkeln.
           </p>
 
-          <h2>Warum ist ein Datenschutz Audit so wichtig?</h2>
+          <h2 id="warum-audit">Warum ist ein Datenschutz Audit so wichtig?</h2>
 
           <p>
             Die nüchterne Antwort: weil die Konsequenzen eines Verstoßes erheblich sind. Die DSGVO sieht Bußgelder von bis zu 20 Millionen Euro oder 4 Prozent des weltweiten Jahresumsatzes vor. Für ein KMU mit 2 Millionen Euro Umsatz sind das bis zu 80.000 Euro. Und das ist nur das Bußgeld. Hinzu kommen Reputationsschäden, Vertrauensverlust bei Kunden und Partnern sowie die persönliche Haftung der Geschäftsführung.
           </p>
 
-          <div class="step-card">
+          <div class="step-card" id="risiko-01">
             <p class="step-card__num">Risiko 01 · Behörden</p>
             <h3 class="step-card__title">Aufsichtsbehörden prüfen aktiv und anlassbezogen</h3>
             <div class="step-card__body">
@@ -755,7 +778,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="risiko-02">
             <p class="step-card__num">Risiko 02 · Blinde Flecken</p>
             <h3 class="step-card__title">Man weiß nicht, was man nicht weiß</h3>
             <div class="step-card__body">
@@ -763,7 +786,7 @@
             </div>
           </div>
 
-          <div class="step-card">
+          <div class="step-card" id="risiko-03">
             <p class="step-card__num">Risiko 03 · Vertrauen</p>
             <h3 class="step-card__title">Kunden und Partner prüfen zunehmend selbst</h3>
             <div class="step-card__body">
@@ -776,7 +799,7 @@
             <cite>Aus der Beratungspraxis von Alexander Kroes</cite>
           </blockquote>
 
-          <h2>Warum das kostenlose Mini Audit so wertvoll ist</h2>
+          <h2 id="mini-audit">Warum das kostenlose Mini Audit so wertvoll ist</h2>
 
           <p>
             Das Mini Audit ist kein verkürzter Audit und kein Einstiegsangebot mit verstecktem Folgeauftrag. Es ist ein 60-minütiges Gespräch mit einem zertifizierten Datenschutzbeauftragten, das genau das liefert, was die meisten KMU brauchen: einen ehrlichen Blick von außen.
@@ -808,7 +831,7 @@
             </div>
           </div>
 
-          <h2>Was nach dem Mini Audit passiert</h2>
+          <h2 id="nach-audit">Was nach dem Mini Audit passiert</h2>
 
           <p>
             Nach dem Gespräch erhalten Sie einen persönlichen GAP-Bericht als PDF. Er enthält eine Ampelbewertung Ihrer aktuellen Datenschutzsituation und konkrete Handlungsempfehlungen nach Dringlichkeit. Kein Verkaufsgespräch, keine Verpflichtung. Nur eine ehrliche Einschätzung, auf die Sie sich stützen können.
