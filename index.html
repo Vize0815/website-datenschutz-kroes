@@ -4064,94 +4064,116 @@
 @media (max-width: 1024px) { .latest-posts__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .latest-posts__grid { grid-template-columns: 1fr; } .latest-posts { padding: 56px 0; } }
 
-/* ===== IT-SA BANNER ===== */
-.itsa-banner {
-  background: linear-gradient(135deg, #0d1e38 0%, #0f2a50 60%, #0d1e38 100%);
-  border-top: 1px solid rgba(201,168,76,0.18);
-  border-bottom: 1px solid rgba(201,168,76,0.18);
-  padding: 40px 0;
+/* ===== IT-SA EVENT ===== */
+.itsa {
+  padding: 64px 0;
+  background: var(--color-bg);
 }
-.itsa-banner__inner {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  justify-content: space-between;
+.itsa__card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 48px rgba(15,31,61,0.14);
 }
-.itsa-banner__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(201,168,76,0.12);
-  border: 1px solid rgba(201,168,76,0.35);
-  border-radius: 20px;
-  padding: 4px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #C9A84C;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-.itsa-banner__badge-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #C9A84C;
-  animation: itsa-pulse 2s ease-in-out infinite;
-}
-@keyframes itsa-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-.itsa-banner__content { flex: 1; min-width: 0; }
-.itsa-banner__title {
-  font-family: var(--font-serif);
-  font-size: clamp(22px, 2.5vw, 30px);
-  font-weight: 600;
-  color: #fff;
-  margin: 0 0 10px;
-  line-height: 1.25;
-}
-.itsa-banner__text {
-  font-size: 15px;
-  color: rgba(255,255,255,0.70);
-  line-height: 1.6;
-  max-width: 520px;
-  margin: 0;
-}
-.itsa-banner__actions {
+.itsa__date-panel {
+  background: #0F1F3D;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 44px;
+  position: relative;
+  min-width: 180px;
 }
-.itsa-banner__cta {
+.itsa__date-panel::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: 12%;
+  height: 76%;
+  border-right: 2px dashed rgba(255,255,255,0.12);
+}
+.itsa__day {
+  font-family: var(--font-serif);
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1;
+  color: #C9A84C;
+  letter-spacing: -2px;
+}
+.itsa__month {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-top: 4px;
+}
+.itsa__year {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: rgba(255,255,255,0.30);
+  margin-top: 2px;
+}
+.itsa__info-panel {
+  background: #132540;
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+.itsa__eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #C9A84C;
-  color: #0d1e38;
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 13px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 220ms, transform 220ms;
-  white-space: nowrap;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  margin-bottom: 14px;
 }
-.itsa-banner__cta:hover { background: #e0bc5c; transform: translateY(-1px); }
-.itsa-banner__meta {
-  font-size: 12px;
-  color: rgba(255,255,255,0.38);
-  text-align: right;
+.itsa__eyebrow-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #C9A84C;
+  animation: itsa-pulse 2.4s ease-in-out infinite;
 }
-@media (max-width: 768px) {
-  .itsa-banner__inner { flex-direction: column; align-items: flex-start; gap: 24px; }
-  .itsa-banner__actions { align-items: flex-start; width: 100%; }
-  .itsa-banner__cta { width: 100%; justify-content: center; }
-  .itsa-banner__meta { text-align: left; }
+@keyframes itsa-pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+.itsa__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+.itsa__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 0;
+}
+.itsa__detail-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+}
+.itsa__detail-row svg { flex-shrink: 0; color: #C9A84C; }
+.itsa__detail-row strong { color: rgba(255,255,255,0.90); font-weight: 500; }
+@media (max-width: 640px) {
+  .itsa__card { grid-template-columns: 1fr; }
+  .itsa__date-panel { flex-direction: row; gap: 16px; padding: 28px 24px; min-width: 0; }
+  .itsa__date-panel::after { display: none; }
+  .itsa__day { font-size: 52px; }
+  .itsa__info-panel { padding: 28px 24px; }
 }
 
 /* ===== INFOBAR ===== */
@@ -5009,29 +5031,6 @@
       </div>
     </section>
 
-    <!-- ============= IT-SA BANNER ============= -->
-    <div class="itsa-banner" role="region" aria-label="it-sa Messe 2026">
-      <div class="container itsa-banner__inner">
-        <div class="itsa-banner__content">
-          <div class="itsa-banner__badge">
-            <span class="itsa-banner__badge-dot"></span>
-            it&#8209;sa Expo&amp;Congress · Nürnberg
-          </div>
-          <h2 class="itsa-banner__title">Alexander Kroes auf der it&#8209;sa 2026</h2>
-          <p class="itsa-banner__text">
-            Kein eigener Stand, aber Zeit für persönliche Gespräche. Treffen Sie mich vom 27. bis 29. Oktober in Nürnberg. Kostenloses Ticket sichern und vor Ort kennenlernen.
-          </p>
-        </div>
-        <div class="itsa-banner__actions">
-          <a href="https://www.proliance.ai/lp-messen/it-sa?hsCtaAttrib=485885418727" target="_blank" rel="noopener noreferrer" class="itsa-banner__cta">
-            Kostenloses Ticket sichern
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <span class="itsa-banner__meta">in Kooperation mit Proliance</span>
-        </div>
-      </div>
-    </div>
-
     <!-- ============= TESTIMONIALS ============= -->
     <section class="testimonials" aria-label="Kundenstimmen">
       <div class="testimonials__bg-quote" aria-hidden="true">„</div>
@@ -5079,6 +5078,40 @@
         </div>
 
         <div class="testimonials__controls">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= IT-SA 2026 ============= -->
+    <section class="itsa" aria-label="it-sa Messe 2026">
+      <div class="container">
+        <div class="itsa__card">
+          <div class="itsa__date-panel">
+            <span class="itsa__day">28</span>
+            <span class="itsa__month">Oktober</span>
+            <span class="itsa__year">2026</span>
+          </div>
+          <div class="itsa__info-panel">
+            <div class="itsa__eyebrow">
+              <span class="itsa__eyebrow-dot"></span>
+              it&#8209;sa Expo &amp; Congress · Nürnberg
+            </div>
+            <h2 class="itsa__headline">Alexander Kroes ist<br>auf der it&#8209;sa vor Ort</h2>
+            <div class="itsa__details">
+              <div class="itsa__detail-row">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M7.5 1.5C5.015 1.5 3 3.515 3 6c0 3.75 4.5 7.5 4.5 7.5s4.5-3.75 4.5-7.5c0-2.485-2.015-4.5-4.5-4.5zm0 6a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" fill="currentColor"/></svg>
+                <span><strong>Halle 7, Stand 316</strong> · Messestand der WKO Außenstelle München</span>
+              </div>
+              <div class="itsa__detail-row">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.3"/><path d="M7.5 4.5v3l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+                <span>Mittwoch, 28. Oktober 2026</span>
+              </div>
+              <div class="itsa__detail-row">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M2 4a1 1 0 011-1h9a1 1 0 011 1v7a1 1 0 01-1 1H3a1 1 0 01-1-1V4zm0 2h11" stroke="currentColor" stroke-width="1.3"/></svg>
+                <span>Persönliche Gespräche zu DSGVO, NIS2 und Datenschutz für KMU</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
