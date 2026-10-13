@@ -45,26 +45,15 @@
     }
 
     .gate__wordmark {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
+      display: inline-block;
       text-decoration: none;
     }
 
-    .gate__wordmark-top {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .gate__wordmark-bottom {
-      font-size: 22px;
-      font-weight: 600;
-      color: #ffffff;
-      letter-spacing: -0.01em;
+    .gate__wordmark img {
+      height: 48px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
     }
 
     .gate__card {
@@ -194,8 +183,7 @@
   <div class="gate">
     <div class="gate__logo">
       <a href="../" class="gate__wordmark">
-        <span class="gate__wordmark-top">Datenschutz</span>
-        <span class="gate__wordmark-bottom">Kroes</span>
+        <img src="../logo-datenschutz-kroes.png" alt="Datenschutz Kroes" width="200" height="163">
       </a>
     </div>
 
