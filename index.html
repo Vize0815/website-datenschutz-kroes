@@ -4185,6 +4185,23 @@
 }
 .itsa__detail-row svg { flex-shrink: 0; color: #C9A84C; }
 .itsa__detail-row strong { color: rgba(255,255,255,0.90); font-weight: 500; }
+.itsa__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  background: #C9A84C;
+  color: #0d1e38;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 200ms, transform 200ms;
+  align-self: flex-start;
+}
+.itsa__cta:hover { background: #e0bc5c; transform: translateY(-1px); }
 @media (max-width: 768px) {
   .itsa__card { grid-template-columns: 1fr; }
   .itsa__date-panel { flex-direction: row; gap: 16px; padding: 24px; min-width: 0; }
@@ -4576,6 +4593,10 @@
                 <span>Persönliche Gespräche zu DSGVO, NIS2 und Datenschutz für KMU</span>
               </div>
             </div>
+            <a href="https://calendly.com/d/d345-5kf-2kn/it-sa-nurnberg" target="_blank" rel="noopener noreferrer" class="itsa__cta">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1" y="2" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M1 5h12M4.5 1v2M9.5 1v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Termin vereinbaren
+            </a>
           </div>
           <div class="itsa__logo-panel">
             <a href="https://www.it-sa.de" target="_blank" rel="noopener noreferrer" class="itsa__logo-link" aria-label="it-sa Expo&Congress Website">
