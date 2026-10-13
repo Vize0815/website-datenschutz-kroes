@@ -1,10 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Datenschutz Kroes Signatur</title>
 </head>
 <body style="margin:0; padding:0;">
+  <!-- ============= INFOBAR ============= -->
+  <div class="infobar" id="infobar" role="region" aria-label="Aktuelle Information">
+    <span class="infobar__text">
+      Die CRA Meldepflichten gelten bereits seit <span class="infobar__count" id="infobar-days">32</span> Tagen.
+      Bis 11.12.2027 muss der CRA zu 100% fur alle Produkte umgesetzt sein.
+      <a href="/datenschutz-blog/cyber-resilience-act-cra-meldepflichten-september-2026/" class="infobar__link">Erfahren Sie mehr!</a>
+    </span>
+    <button class="infobar__close" id="infobar-close" aria-label="Infobar schliessen">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+        <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
 
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: Calibri, 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #333333; line-height: 1.4; border-collapse: collapse;">
 
@@ -105,5 +118,35 @@
 
 </table>
 
-</body>
+
+  <!-- ============= INFOBAR SCRIPT ============= -->
+  <script>
+  (function() {
+    var DISMISS_KEY = 'infobar_cra_v1';
+    var DISMISS_TTL = 7 * 24 * 60 * 60 * 1000;
+    var bar = document.getElementById('infobar');
+    var closeBtn = document.getElementById('infobar-close');
+    var daysEl = document.getElementById('infobar-days');
+    if (!bar) return;
+    try {
+      var stored = localStorage.getItem(DISMISS_KEY);
+      if (stored && (Date.now() - parseInt(stored, 10)) < DISMISS_TTL) {
+        bar.classList.add('infobar--hidden');
+        return;
+      }
+    } catch(e) {}
+    if (daysEl) {
+      var start = new Date('2026-09-11T00:00:00');
+      var days = Math.floor((Date.now() - start.getTime()) / 86400000);
+      if (days >= 0) { daysEl.textContent = days; }
+      else { bar.classList.add('infobar--hidden'); return; }
+    }
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        bar.classList.add('infobar--hidden');
+        try { localStorage.setItem(DISMISS_KEY, Date.now().toString()); } catch(e) {}
+      });
+    }
+  })();
+  </script></body>
 </html>
