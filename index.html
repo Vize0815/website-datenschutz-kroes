@@ -4095,12 +4095,12 @@
   border-right: 2px dashed rgba(255,255,255,0.12);
 }
 .itsa__day {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 76px;
   font-weight: 700;
   line-height: 1;
   color: #C9A84C;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
 }
 .itsa__month {
   font-family: var(--font-sans);
@@ -4125,6 +4125,13 @@
   justify-content: center;
   gap: 0;
 }
+.itsa__logo-link {
+  display: inline-block;
+  margin-bottom: 14px;
+  opacity: 0.95;
+  transition: opacity 200ms;
+}
+.itsa__logo-link:hover { opacity: 1; }
 .itsa__eyebrow {
   display: inline-flex;
   align-items: center;
@@ -4145,7 +4152,7 @@
 }
 @keyframes itsa-pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
 .itsa__headline {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(22px, 2.8vw, 32px);
   font-weight: 600;
   color: #fff;
@@ -5092,9 +5099,16 @@
             <span class="itsa__year">2026</span>
           </div>
           <div class="itsa__info-panel">
+            <a href="https://www.it-sa.de" target="_blank" rel="noopener noreferrer" class="itsa__logo-link" aria-label="it-sa Expo&Congress Website">
+              <svg width="72" height="28" viewBox="0 0 72 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="72" height="28" rx="4" fill="#E8501A"/>
+                <text x="7" y="20" font-family="'DM Sans', Arial, sans-serif" font-size="15" font-weight="700" fill="#fff" letter-spacing="0.5">it-sa</text>
+                <text x="43" y="20" font-family="'DM Sans', Arial, sans-serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.80)">2026</text>
+              </svg>
+            </a>
             <div class="itsa__eyebrow">
               <span class="itsa__eyebrow-dot"></span>
-              it&#8209;sa Expo &amp; Congress · Nürnberg
+              Expo &amp; Congress · Nürnberg
             </div>
             <h2 class="itsa__headline">Alexander Kroes ist<br>auf der it&#8209;sa vor Ort</h2>
             <div class="itsa__details">
