@@ -4203,13 +4203,25 @@
 }
 .itsa__cta:hover { background: #e0bc5c; transform: translateY(-1px); }
 @media (max-width: 768px) {
+  .itsa { padding: 48px 0; }
   .itsa__card { grid-template-columns: 1fr; }
-  .itsa__date-panel { flex-direction: row; gap: 16px; padding: 24px; min-width: 0; }
+  .itsa__date-panel { flex-direction: row; gap: 12px; padding: 20px 24px; min-width: 0; align-items: center; justify-content: flex-start; }
   .itsa__date-panel::after { display: none; }
-  .itsa__day { font-size: 52px; }
+  .itsa__day { font-size: 48px; letter-spacing: -2px; }
+  .itsa__month { margin-top: 0; font-size: 12px; }
+  .itsa__year { margin-top: 0; font-size: 12px; }
   .itsa__info-panel { padding: 24px; }
-  .itsa__logo-panel { padding: 24px; border-top: 1px solid rgba(15,31,61,0.08); }
-  .itsa__logo-link img { width: 120px; }
+  .itsa__logo-panel { padding: 20px 24px; border-top: 1px solid rgba(15,31,61,0.08); justify-content: flex-start; }
+  .itsa__logo-link img { width: 110px; }
+}
+@media (max-width: 480px) {
+  .itsa { padding: 40px 0; }
+  .itsa__day { font-size: 40px; }
+  .itsa__headline { font-size: clamp(18px, 5vw, 22px); }
+  .itsa__detail-row { font-size: 13px; align-items: flex-start; }
+  .itsa__detail-row svg { margin-top: 2px; }
+  .itsa__info-panel { padding: 20px; }
+  .itsa__logo-panel { padding: 16px 20px; }
 }
 
 /* ===== INFOBAR ===== */
