@@ -4064,6 +4064,96 @@
 @media (max-width: 1024px) { .latest-posts__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .latest-posts__grid { grid-template-columns: 1fr; } .latest-posts { padding: 56px 0; } }
 
+/* ===== IT-SA BANNER ===== */
+.itsa-banner {
+  background: linear-gradient(135deg, #0d1e38 0%, #0f2a50 60%, #0d1e38 100%);
+  border-top: 1px solid rgba(201,168,76,0.18);
+  border-bottom: 1px solid rgba(201,168,76,0.18);
+  padding: 40px 0;
+}
+.itsa-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+}
+.itsa-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #C9A84C;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.itsa-banner__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C9A84C;
+  animation: itsa-pulse 2s ease-in-out infinite;
+}
+@keyframes itsa-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.itsa-banner__content { flex: 1; min-width: 0; }
+.itsa-banner__title {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+.itsa-banner__text {
+  font-size: 15px;
+  color: rgba(255,255,255,0.70);
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0;
+}
+.itsa-banner__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.itsa-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #C9A84C;
+  color: #0d1e38;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 220ms, transform 220ms;
+  white-space: nowrap;
+}
+.itsa-banner__cta:hover { background: #e0bc5c; transform: translateY(-1px); }
+.itsa-banner__meta {
+  font-size: 12px;
+  color: rgba(255,255,255,0.38);
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .itsa-banner__inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .itsa-banner__actions { align-items: flex-start; width: 100%; }
+  .itsa-banner__cta { width: 100%; justify-content: center; }
+  .itsa-banner__meta { text-align: left; }
+}
+
 /* ===== INFOBAR ===== */
 .infobar {
   background: #0d1e38;
@@ -4918,6 +5008,29 @@
         </div>
       </div>
     </section>
+
+    <!-- ============= IT-SA BANNER ============= -->
+    <div class="itsa-banner" role="region" aria-label="it-sa Messe 2026">
+      <div class="container itsa-banner__inner">
+        <div class="itsa-banner__content">
+          <div class="itsa-banner__badge">
+            <span class="itsa-banner__badge-dot"></span>
+            it&#8209;sa Expo&amp;Congress · Nürnberg
+          </div>
+          <h2 class="itsa-banner__title">Alexander Kroes auf der it&#8209;sa 2026</h2>
+          <p class="itsa-banner__text">
+            Kein eigener Stand, aber Zeit für persönliche Gespräche. Treffen Sie mich vom 27. bis 29. Oktober in Nürnberg. Kostenloses Ticket sichern und vor Ort kennenlernen.
+          </p>
+        </div>
+        <div class="itsa-banner__actions">
+          <a href="https://www.proliance.ai/lp-messen/it-sa?hsCtaAttrib=485885418727" target="_blank" rel="noopener noreferrer" class="itsa-banner__cta">
+            Kostenloses Ticket sichern
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <span class="itsa-banner__meta">in Kooperation mit Proliance</span>
+        </div>
+      </div>
+    </div>
 
     <!-- ============= TESTIMONIALS ============= -->
     <section class="testimonials" aria-label="Kundenstimmen">
