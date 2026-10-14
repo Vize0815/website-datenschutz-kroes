@@ -4128,8 +4128,10 @@
 .itsa__logo-panel {
   background: #fff;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
   padding: 32px 40px;
   min-width: 200px;
 }
@@ -4142,6 +4144,23 @@
 }
 .itsa__logo-link:hover { opacity: 1; }
 .itsa__logo-link img { width: 140px; height: auto; display: block; }
+.itsa__logo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 9px 16px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background 200ms;
+}
+.itsa__logo-btn:hover { background: #162847; }
+.itsa__logo-btn svg { flex-shrink: 0; }
 .itsa__eyebrow {
   display: inline-flex;
   align-items: center;
@@ -4211,7 +4230,7 @@
   .itsa__month { margin-top: 0; font-size: 12px; }
   .itsa__year { margin-top: 0; font-size: 12px; }
   .itsa__info-panel { padding: 24px; }
-  .itsa__logo-panel { padding: 20px 24px; border-top: 1px solid rgba(15,31,61,0.08); justify-content: flex-start; }
+  .itsa__logo-panel { padding: 20px 24px; border-top: 1px solid rgba(15,31,61,0.08); align-items: flex-start; justify-content: center; }
   .itsa__logo-link img { width: 110px; }
 }
 @media (max-width: 480px) {
@@ -4609,6 +4628,10 @@
           <div class="itsa__logo-panel">
             <a href="https://www.it-sa.de" target="_blank" rel="noopener noreferrer" class="itsa__logo-link" aria-label="it-sa Expo&Congress Website">
               <img src="It-sa_Logo.svg" alt="it-sa Expo&Congress 2026" loading="lazy">
+            </a>
+            <a href="https://www.it-sa.de" target="_blank" rel="noopener noreferrer" class="itsa__logo-btn">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2 6.5h9M7.5 3l3.5 3.5L7.5 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Zur Messe
             </a>
           </div>
         </div>
