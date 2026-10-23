@@ -342,6 +342,9 @@
     .end-cta__btn-primary:hover { background: #e0bc5a; transform: translateY(-1px); }
     .end-cta__btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 15px 28px; font-size: 14px; font-weight: 600; color: var(--color-navy); background: transparent; border: 1.5px solid var(--color-mist); border-radius: var(--radius-md); transition: border-color var(--transition-base), color var(--transition-base); }
     .end-cta__btn-ghost:hover { border-color: var(--color-navy); color: var(--color-prussian); }
+    .end-cta__checklist { list-style: none; padding: 0; margin: 0 auto 36px; max-width: 460px; display: flex; flex-direction: column; gap: 12px; text-align: left; }
+    .end-cta__checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; font-weight: 400; color: var(--color-prussian); line-height: 1.55; }
+    .end-cta__checklist li::before { content: '✓'; color: var(--color-gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
     /* ===== FOOTER ===== */
     .footer { background-color: #0A1828; padding: 80px 0 0; }
@@ -838,14 +841,19 @@
     <section class="end-cta" aria-label="Kontakt-Aufruf">
       <div class="container">
         <div class="end-cta__inner">
-          <p class="end-cta__eyebrow">Bereit für den nächsten Schritt?</p>
-          <h2 class="end-cta__title">KI-Agenten DSGVO-konform einsetzen</h2>
+          <p class="end-cta__eyebrow">KI-Agenten sicher einsetzen</p>
+          <h2 class="end-cta__title">KI-Nutzung datenschutzrechtlich einordnen</h2>
           <p class="end-cta__lead">
-            In 30 Minuten klären wir, welche KI-Werkzeuge in Ihrem Betrieb datenschutzkonform aufgestellt sind, welche Maßnahmen konkret fehlen und wie Sie das Risiko dauerhaft senken. Kostenlos. Unverbindlich. Ohne Verkaufsdruck.
+            Im Strategiegespräch prüfen wir, welche KI-Werkzeuge in Ihrem Betrieb datenschutzrechtlich bedenklich sind, wo AVV und DSFA-Pflicht greifen und wie Sie die Kontrolle über Ihre Daten zurückgewinnen.
           </p>
+          <ul class="end-cta__checklist">
+            <li>KI-Nutzung anhand Ihrer Verarbeitungstätigkeiten einordnen</li>
+            <li>AVV-Pflicht und DSFA-Auslöser für KI-Agenten prüfen</li>
+            <li>Technische und organisatorische Maßnahmen DSGVO-konform aufsetzen</li>
+          </ul>
           <div class="end-cta__buttons">
             <a href="../../index.html#kontakt" class="end-cta__btn-primary">
-              Erstes Strategiegespräch
+              Strategiegespräch vereinbaren
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
