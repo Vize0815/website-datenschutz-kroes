@@ -869,9 +869,21 @@
 
     .hero__claim-em {
       font-weight: 300;
-      color: var(--color-navy);
+      color: #1F4D39;
       white-space: nowrap;
+      background-color: rgba(45, 106, 79, 0.14);
+      padding: 0.08em 0.35em;
+      border-radius: 4px;
     }
+
+    /* Mit JS übernimmt jedes getippte Zeichen die Markierung, sie wächst beim Tippen mit */
+    .hero__claim-em.is-typing { background-color: transparent; padding: 0; }
+    .hero__claim-em.is-typing .tw-char.is-on {
+      background-color: rgba(45, 106, 79, 0.14);
+      padding: 0.08em 0;
+    }
+    .hero__claim-em.is-typing .tw-first { padding-left: 0.35em !important; border-radius: 4px 0 0 4px; }
+    .hero__claim-em.is-typing .tw-last { padding-right: 0.35em !important; border-radius: 0 4px 4px 0; }
 
     /* Schreibmaschine: Zeichen belegen ihren Platz schon vorab, dadurch kein Layoutsprung */
     .tw-char { visibility: hidden; }
@@ -881,7 +893,7 @@
       width: 0;
       height: 1.1em;
       margin-right: -2px;
-      border-right: 2px solid var(--color-gold);
+      border-right: 2px solid #2D6A4F;
       vertical-align: -0.2em;
       animation: twBlink 0.8s steps(1) infinite;
     }
@@ -7304,6 +7316,9 @@
       el.appendChild(s);
       chars.push(s);
     }
+    chars[0].classList.add('tw-first');
+    chars[chars.length - 1].classList.add('tw-last');
+    el.classList.add('is-typing');
     var caret = document.createElement('span');
     caret.className = 'tw-caret';
     caret.setAttribute('aria-hidden', 'true');
@@ -7319,6 +7334,7 @@
       } else {
         el.appendChild(caret);
         caret.classList.add('is-done');
+        setTimeout(function() { caret.remove(); }, 2400);
       }
     }
     // Start, sobald die Zeile eingeblendet ist
