@@ -250,6 +250,16 @@
     .section__lead { font-size: 16px; font-weight: 300; color: var(--color-slate); line-height: 1.7; }
     .section--navy .section__lead { color: rgba(255,255,255,0.7); }
 
+    /* ===== PAUSCHALE: KUNDENVORTEILE ===== */
+    .pauschale-plus .section__header { margin-bottom: 40px; }
+    .pauschale-plus__list { list-style: none; margin: 0 auto; padding: 0; max-width: 1040px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .pauschale-plus__item { display: flex; align-items: center; gap: 10px; padding: 12px 20px 12px 14px; border: 1px solid rgba(255,255,255,0.14); border-radius: 999px; background: rgba(255,255,255,0.04); font-size: 15px; font-weight: 500; color: var(--color-surface); line-height: 1.4; }
+    .pauschale-plus__check { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--color-gold); color: var(--color-navy); display: flex; align-items: center; justify-content: center; }
+    @media (max-width: 768px) {
+      .pauschale-plus__list { flex-direction: column; align-items: stretch; max-width: 420px; }
+      .pauschale-plus__item { border-radius: var(--radius-md); }
+    }
+
     /* ===== VORTEILE ===== */
     .vorteile__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
     .vorteil-card { background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); padding: 32px 28px; transition: transform var(--transition-base), box-shadow var(--transition-base); }
@@ -1185,6 +1195,23 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== PAUSCHALE: KUNDENVORTEILE ===== -->
+    <section class="section section--navy pauschale-plus" aria-labelledby="pauschale-plus-title">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Monatspauschale</p>
+          <h2 class="section__title" id="pauschale-plus-title">Warum unsere Kunden die Monatspauschale lieben</h2>
+        </div>
+        <ul class="pauschale-plus__list">
+          <li class="pauschale-plus__item"><span class="pauschale-plus__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Planbare Kosten</li>
+          <li class="pauschale-plus__item"><span class="pauschale-plus__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Keine Stundenabrechnung</li>
+          <li class="pauschale-plus__item"><span class="pauschale-plus__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Keine versteckten Zusatzkosten</li>
+          <li class="pauschale-plus__item"><span class="pauschale-plus__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Laufende Betreuung inklusive</li>
+          <li class="pauschale-plus__item"><span class="pauschale-plus__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Direkter Ansprechpartner inklusive</li>
+        </ul>
       </div>
     </section>
 
