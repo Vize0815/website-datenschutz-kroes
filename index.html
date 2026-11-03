@@ -846,6 +846,11 @@
       animation-delay: 0.2s;
     }
 
+    .hero__lead strong {
+      font-weight: 600;
+      color: var(--color-navy, inherit);
+    }
+
     .hero__cta-row {
       display: flex;
       align-items: center;
@@ -4510,7 +4515,8 @@
         </h1>
 
         <p class="hero__lead">
-          Als externer Datenschutzbeauftragter übernehme ich die rechtliche Verantwortung für Ihr Unternehmen. Zuverlässig, rechtssicher und ohne Ablenkung von Ihrem Kerngeschäft.
+          Als externer Datenschutzbeauftragter übernehme ich die rechtliche Verantwortung für DSGVO, NIS2 und Datenschutz, damit Sie sich auf Ihr Unternehmen konzentrieren können.<br><br>
+          <strong>Persönlich. Rechtssicher. Zum Fixpreis.</strong>
         </p>
 
         <div class="hero__cta-row">
@@ -7107,11 +7113,16 @@
       try {
         var payload = { email: email, name: name, company: company };
 
+        var controller = new AbortController();
+        var timeoutId = setTimeout(function() { controller.abort(); }, 10000);
+
         var res = await fetch('https://brevo-newsletter-proxy.alexanderkrosse.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
+          signal: controller.signal
         });
+        clearTimeout(timeoutId);
 
         if (res.ok) {
           this.innerHTML = '<p style="text-align:center;padding:40px 16px;font-family:var(--font-sans);font-size:16px;color:#1a5c2e;background-color:#eaf6ee;border-radius:10px;border:1px solid #b7dfc3;">Vielen Dank! Sie erhalten in Kürze eine Bestätigungsmail.</p>';
