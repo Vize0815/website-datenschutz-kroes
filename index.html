@@ -869,21 +869,21 @@
 
     .hero__claim-em {
       font-weight: 300;
-      color: #1F4D39;
+      color: var(--color-navy);
       white-space: nowrap;
-      background-color: rgba(45, 106, 79, 0.14);
-      padding: 0.08em 0.35em;
-      border-radius: 4px;
+      background-color: #2EA043;
+      padding: 0.12em 0.5em;
+      border-radius: 6px;
     }
 
     /* Mit JS übernimmt jedes getippte Zeichen die Markierung, sie wächst beim Tippen mit */
     .hero__claim-em.is-typing { background-color: transparent; padding: 0; }
     .hero__claim-em.is-typing .tw-char.is-on {
-      background-color: rgba(45, 106, 79, 0.14);
-      padding: 0.08em 0;
+      background-color: #2EA043;
+      padding: 0.12em 0;
     }
-    .hero__claim-em.is-typing .tw-first { padding-left: 0.35em !important; border-radius: 4px 0 0 4px; }
-    .hero__claim-em.is-typing .tw-last { padding-right: 0.35em !important; border-radius: 0 4px 4px 0; }
+    .hero__claim-em.is-typing .tw-first { padding-left: 0.5em !important; border-radius: 6px 0 0 6px; }
+    .hero__claim-em.is-typing .tw-last { padding-right: 0.5em !important; border-radius: 0 6px 6px 0; }
 
     /* Schreibmaschine: Zeichen belegen ihren Platz schon vorab, dadurch kein Layoutsprung */
     .tw-char { visibility: hidden; }
@@ -893,7 +893,7 @@
       width: 0;
       height: 1.1em;
       margin-right: -2px;
-      border-right: 2px solid #2D6A4F;
+      border-right: 2px solid var(--color-navy);
       vertical-align: -0.2em;
       animation: twBlink 0.8s steps(1) infinite;
     }
