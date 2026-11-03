@@ -11,7 +11,7 @@ jobs:
       SSH_HOST: access-5020246730.app-ionos.space
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set SSH username secret name
         run: |
