@@ -61,6 +61,14 @@
       var top = footer.getBoundingClientRect().top;
       if (top < window.innerHeight) lift = window.innerHeight - top;
     }
+    /* Nicht in den Mini Audit Button hineinschieben */
+    var fab = document.querySelector('.fab-audit');
+    if (fab && lift) {
+      var fr = fab.getBoundingClientRect();
+      var base = parseFloat(getComputedStyle(btn).getPropertyValue('--st-base')) || 24;
+      var restTop = window.innerHeight - base - btn.offsetHeight;
+      if (fr.bottom < restTop) lift = Math.min(lift, Math.max(0, restTop - fr.bottom - 16));
+    }
     btn.style.bottom = lift ? 'calc(var(--st-base) + ' + lift + 'px)' : '';
   }
 
