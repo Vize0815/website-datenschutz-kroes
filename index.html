@@ -4348,10 +4348,10 @@
   align-items: center;
   justify-content: center;
 }
-/* Flyer Scan: weißen Scanrand per Zuschnitt ausblenden */
+/* Webinar Grafik */
 .webinar__flyer {
   width: min(100%, 240px);
-  aspect-ratio: 1150 / 1640;
+  aspect-ratio: 1080 / 1350;
   margin: 0;
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -4364,8 +4364,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 45% 45%;
-  transform: scale(1.08);
+  display: block;
 }
 .webinar__text { display: grid; gap: 20px; }
 .webinar__title {
@@ -4831,7 +4830,7 @@
     </section>
 
     <!-- ============= WEBINAR (blendet sich nach dem Termin automatisch aus) ============= -->
-    <section class="webinar" id="webinar" aria-labelledby="webinar-title" data-webinar-end="2026-11-19T15:30:00+01:00">
+    <section class="webinar" id="webinar" aria-labelledby="webinar-title" data-webinar-end="2026-11-19T16:30:00+01:00">
       <div class="container">
         <article class="webinar__ticket" data-reveal>
           <div class="webinar__main">
@@ -4844,11 +4843,11 @@
             </div>
             <div class="webinar__visual">
               <figure class="webinar__flyer">
-                <img src="PECBWebinar.webp" alt="Flyer PECB Regional Webinars: Alexander Kroes, Inhaber von Datenschutz Kroes und Cybersicherheitsexperte, 19. November 2026, 14:00 Uhr MEZ" width="1240" height="1754" loading="lazy" decoding="async">
+                <img src="Alexander%20Kroes%20-%20PECBWebinar.webp" alt="PECB Regional Webinars mit Alexander Kroes: Nach der NIS 2 Umsetzung. Was Geschäftsführer in Österreich jetzt organisatorisch nachweisen müssen. 19. November 2026, 15:00 Uhr MEZ" width="1080" height="1350" loading="lazy" decoding="async">
               </figure>
             </div>
             <div class="webinar__text">
-              <h2 class="webinar__title" id="webinar-title">„Über die NIS2 Umsetzung hinaus:<span>Compliance und Vorsorge in der Cybersicherheit in Österreich“</span></h2>
+              <h2 class="webinar__title" id="webinar-title">Nach der NIS 2 Umsetzung:<span>Was Geschäftsführer in Österreich jetzt organisatorisch nachweisen müssen</span></h2>
               <a href="https://www.learn.pecb.com/webinar/dach" class="webinar__cta" target="_blank" rel="noopener">
                 Infos und Anmeldung
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
@@ -4858,8 +4857,8 @@
           </div>
           <div class="webinar__stub">
             <span class="webinar__day" aria-hidden="true">19</span>
-            <time class="webinar__month" datetime="2026-11-19T14:00:00+01:00" aria-label="19. November 2026">November 2026</time>
-            <span class="webinar__time">14:00 Uhr (MEZ) · Online</span>
+            <time class="webinar__month" datetime="2026-11-19T15:00:00+01:00" aria-label="19. November 2026">November 2026</time>
+            <span class="webinar__time">15:00 Uhr (MEZ) · Online</span>
             <span class="webinar__count" data-webinar-count></span>
           </div>
         </article>
@@ -4868,7 +4867,7 @@
         (function () {
           var s = document.getElementById('webinar');
           if (!s) return;
-          var start = new Date('2026-11-19T14:00:00+01:00'), end = new Date(s.getAttribute('data-webinar-end')), now = new Date();
+          var start = new Date('2026-11-19T15:00:00+01:00'), end = new Date(s.getAttribute('data-webinar-end')), now = new Date();
           if (now > end) { s.hidden = true; return; }
           var el = s.querySelector('[data-webinar-count]');
           var d0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
