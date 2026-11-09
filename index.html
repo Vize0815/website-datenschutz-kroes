@@ -4346,33 +4346,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  gap: 14px;
-  padding-top: 24px;
+  justify-content: center;
 }
-.webinar__arches {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 400px;
-  max-width: none;
+/* Flyer Scan: weißen Scanrand per Zuschnitt ausblenden */
+.webinar__flyer {
+  width: min(100%, 240px);
+  aspect-ratio: 1150 / 1640;
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.25), 0 20px 44px rgba(80, 0, 20, .45);
+  transform: rotate(-2deg);
+  transition: transform var(--transition-base);
+}
+.webinar__flyer:hover { transform: rotate(0deg) scale(1.02); }
+.webinar__flyer img {
+  width: 100%;
   height: 100%;
-  transform: translateX(-50%);
-  z-index: -1;
-}
-.webinar__photo {
-  position: relative;
-  width: 168px;
-  height: 168px;
-  border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 20%;
-  background: linear-gradient(180deg, #fff 0%, #F6D6DE 100%);
-  box-shadow: 0 0 0 6px rgba(255,255,255,.18), 0 16px 40px rgba(80, 0, 20, .35);
+  object-position: 45% 45%;
+  transform: scale(1.08);
 }
-.webinar__speaker { text-align: center; }
-.webinar__name { font-weight: 700; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.2; margin: 0 0 4px; color: #fff; }
-.webinar__role { font-size: 15px; line-height: 1.45; color: rgba(255,255,255,.85); margin: 0; }
 .webinar__text { display: grid; gap: 20px; }
 .webinar__title {
   font-family: var(--pecb-font);
@@ -4488,7 +4482,7 @@
 @media (min-width: 1025px) {
   .webinar { padding: var(--space-section) 0; }
   .webinar__ticket { grid-template-columns: minmax(0, 1fr) 280px; }
-  .webinar__photo { width: 200px; height: 200px; }
+  .webinar__flyer { width: min(100%, 270px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .webinar__live::before { animation: none; }
@@ -4849,17 +4843,9 @@
               <span class="webinar__live">Live Webinar</span>
             </div>
             <div class="webinar__visual">
-              <svg class="webinar__arches" viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1.2" aria-hidden="true">
-                <path d="M110 300V140a90 90 0 0 1 180 0v160"/>
-                <path d="M80 300V140a120 120 0 0 1 240 0v160"/>
-                <path d="M50 300V140a150 150 0 0 1 300 0v160"/>
-                <path d="M20 300V140a180 180 0 0 1 360 0v160"/>
-              </svg>
-              <img class="webinar__photo" src="alexander-kroes-mobile.webp" alt="Alexander Kroes" width="200" height="200" loading="lazy" decoding="async">
-              <div class="webinar__speaker">
-                <p class="webinar__name">Alexander Kroes</p>
-                <p class="webinar__role">Inhaber von Datenschutz Kroes<br>und Cybersicherheitsexperte</p>
-              </div>
+              <figure class="webinar__flyer">
+                <img src="PECBWebinar.webp" alt="Flyer PECB Regional Webinars: Alexander Kroes, Inhaber von Datenschutz Kroes und Cybersicherheitsexperte, 19. November 2026, 14:00 Uhr MEZ" width="1240" height="1754" loading="lazy" decoding="async">
+              </figure>
             </div>
             <div class="webinar__text">
               <h2 class="webinar__title" id="webinar-title">„Über die NIS2 Umsetzung hinaus:<span>Compliance und Vorsorge in der Cybersicherheit in Österreich“</span></h2>
