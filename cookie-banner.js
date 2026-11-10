@@ -172,9 +172,9 @@
       '<p>Wir verwenden technisch notwendige Cookies, damit diese Website funktioniert. ' +
       'Darüber hinaus würden wir optional Funktionen wie eingebettete YouTube-Videos anbieten, die erst nach Ihrer ausdrücklichen Zustimmung geladen werden. ' +
       'Sie können einzelne Kategorien gezielt aktivieren oder deaktivieren.</p>' +
-      '<p class="cc-meta"><strong>Verantwortlicher:</strong> Datenschutz Kroes, Alexander Kroes, 6322 Kirchbichl, Österreich. ' +
+      '<p class="cc-meta"><strong>Verantwortlicher:</strong> Alexander Kroes e.U., Datenschutz Kroes, Glatzham 19, 6252 Breitenbach am Inn, Österreich. ' +
       'Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse bei technisch notwendigen Cookies). ' +
-      'Details und Ihre Rechte finden Sie in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>';
+      'Details und Ihre Rechte finden Sie in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>';
 
     var catGrid = el('div', { class: 'cc-categories', role: 'group', 'aria-label': 'Cookie-Kategorien' });
     CATEGORIES.forEach(function (cat) {
@@ -236,7 +236,7 @@
       '<p>Cookies sind kleine Textdateien, die Websites auf Ihrem Endgerät speichern. Sie dienen dazu, Webseiten funktionsfähig zu machen, sie sicherer zu gestalten, eine bessere Benutzererfahrung zu bieten und zu verstehen, wie die Website genutzt wird.</p>' +
       '<p>Diese Website nutzt zusätzlich den <strong>localStorage</strong> des Browsers, um Ihre Cookie-Entscheidung zu speichern, ohne dabei Daten an unseren Server zu übertragen. Ihre Einwilligung wird ausschließlich lokal in Ihrem Browser abgelegt.</p>' +
       '<p><strong>Ihre Einwilligung wird dokumentiert:</strong> Zeitstempel, gewählte Kategorien und Einwilligungsmethode werden gemeinsam mit einer Versions-ID gespeichert. Nach einem Jahr erlischt die Einwilligung automatisch und der Banner erscheint erneut (DSGVO-Konformität).</p>' +
-      '<p><strong>Widerruf und Änderung:</strong> Sie können Ihre Einwilligung jederzeit über den Link in der <a href="datenschutz.html#cookies">Datenschutzerklärung (Abschnitt 11)</a> widerrufen oder anpassen. Der Widerruf ist genauso einfach wie die Zustimmung.</p>' +
+      '<p><strong>Widerruf und Änderung:</strong> Sie können Ihre Einwilligung jederzeit über den Link in der <a href="/datenschutz.html#cookies">Datenschutzerklärung (Abschnitt 11)</a> widerrufen oder anpassen. Der Widerruf ist genauso einfach wie die Zustimmung.</p>' +
       '<p class="cc-meta">Diese Website nutzt bei Zustimmung zur Kategorie „Statistiken" <strong>Google Analytics 4</strong> zur anonymisierten Reichweitenanalyse. Marketing- und Präferenz-Cookies werden derzeit nicht eingesetzt. Alle optionalen Kategorien bleiben ohne Ihre ausdrückliche Zustimmung deaktiviert.</p>';
 
     panels.appendChild(consentPanel);

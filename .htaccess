@@ -143,6 +143,7 @@ Options -Indexes
   RewriteRule ^tag/(.*)$ /datenschutz-blog/ [R=301,L]
   RewriteRule ^author/(.*)$ / [R=301,L]
   RewriteRule ^feed/?$ /datenschutz-blog/ [R=301,L]
+  RewriteRule ^comments/feed/?$ /datenschutz-blog/ [R=301,L]
   RewriteRule ^wp-content/(.*)$ / [R=301,L]
   RewriteRule ^wp-includes/(.*)$ / [R=301,L]
 
