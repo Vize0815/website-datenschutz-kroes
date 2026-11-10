@@ -164,28 +164,28 @@ Alle Seminare werden auch als **Inhouse-Schulung** direkt im Unternehmen des Kun
 ## FAQ (#faq)
 
 **Q: Ab wann bin ich verpflichtet, einen Datenschutzbeauftragten zu benennen?**
-A: Unternehmen müssen einen DSB benennen, wenn mindestens 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind. Darüber hinaus gibt es branchenspezifische Pflichten, z. B. für Gesundheitsdienstleister oder Unternehmen, die besondere Datenkategorien verarbeiten.
+A: In Deutschland besteht die Pflicht, sobald mindestens 20 Personen ständig personenbezogene Daten automatisiert verarbeiten. In Österreich und Deutschland gilt sie zudem unabhängig von der Größe, wenn Sie besondere Datenkategorien wie Gesundheitsdaten umfangreich verarbeiten oder Personen systematisch überwachen. Das betrifft etwa Arztpraxen und Pflegedienste. Im Erstgespräch prüfen wir Ihre konkrete Situation.
 
 **Q: Was ist der Unterschied zwischen einem internen und externen DSB?**
-A: Ein externer DSB bietet mehrere Vorteile: keine Weisungsgebundenheit, kein Abberufungsschutz-Problem, spezialisiertes Fachwissen ohne Schulungsaufwand und volle Haftungsübernahme für die DSB-Funktion. Für die meisten KMU ist der externe DSB die kosteneffizientere und rechtssicherere Lösung.
+A: Ein interner DSB ist ein eigener Mitarbeiter, der die nötige Fachkunde erst aufbauen und laufend auffrischen muss. In Deutschland genießt er zudem besonderen Kündigungsschutz. Ein externer DSB bringt das Fachwissen mit, vermeidet Interessenkonflikte im eigenen Haus und ist per Dienstleistungsvertrag flexibel kündbar. Für die meisten KMU ist das die kosteneffizientere und rechtssicherere Lösung.
 
 **Q: Wie schnell können wir starten?**
-A: Nach unserem Erstgespräch und der Vertragsunterzeichnung ist die Bestellungsmeldung an die zuständige Aufsichtsbehörde in der Regel innerhalb von 5 Werktagen abgeschlossen. Die eigentliche Betreuung beginnt unmittelbar nach Vertragsabschluss.
+A: Direkt nach dem kostenlosen Erstgespräch erhalten Sie ein Angebot. Sobald der Vertrag unterzeichnet ist, beginnt die Betreuung sofort. Die Meldung des Datenschutzbeauftragten an die zuständige Aufsichtsbehörde ist in der Regel innerhalb von fünf Werktagen erledigt. Anschließend prüfen wir gemeinsam Ihren aktuellen Stand und legen die ersten Prioritäten fest.
 
 **Q: Was kostet ein externer Datenschutzbeauftragter?**
-A: Die Kosten hängen von der Unternehmensgröße, Branche und dem gewünschten Leistungsumfang ab. Transparente Monats-/oder Jahrespauschalen und das ohne versteckte Stundenabrechnung. Ihr genaues Angebot erhalten Sie nach einem kostenlosen und unverbindlichen Erstgespräch.
+A: Die Kosten richten sich nach Unternehmensgröße, Branche und gewünschtem Leistungsumfang. Sie zahlen eine transparente monatliche oder jährliche Pauschale ohne versteckte Stundenabrechnung, sodass Ihre Kosten jederzeit planbar bleiben. Ein externer DSB ist meist deutlich günstiger als ein interner Mitarbeiter mit Schulungsaufwand. Ihr genaues Angebot erhalten Sie nach einem kostenlosen und unverbindlichen Erstgespräch.
 
 **Q: Gilt die DSGVO auch für kleine Unternehmen und Selbstständige?**
-A: Ja. Die DSGVO gilt grundsätzlich für jedes Unternehmen, das personenbezogene Daten verarbeitet und das unabhängig von der Größe. Für Kleinunternehmen gibt es vereinfachte Pflichten, aber keine vollständige Ausnahme.
+A: Ja. Die DSGVO gilt für jedes Unternehmen, das personenbezogene Daten verarbeitet, unabhängig von seiner Größe. Auch Selbstständige mit Kundendaten, einer Website oder einem Newsletter sind betroffen. Für kleine Betriebe gibt es einzelne Erleichterungen, etwa beim Verarbeitungsverzeichnis, aber keine vollständige Ausnahme. Im Erstgespräch klären wir, welche Pflichten für Sie konkret gelten.
 
 **Q: Was passiert bei einem Datenschutzvorfall in meinem Unternehmen?**
-A: Bei einem Datenschutzvorfall muss dieser innerhalb von 72 Stunden der zuständigen Aufsichtsbehörde gemeldet werden. Als Ihr DSB übernehme ich diese Meldung, koordiniere die gesamte Reaktion und begleite Sie durch den Prozess.
+A: Ein Datenschutzvorfall muss in der Regel innerhalb von 72 Stunden der zuständigen Aufsichtsbehörde gemeldet werden. Bei hohem Risiko sind auch die Betroffenen zu informieren. Als Ihr DSB bewerte ich den Vorfall, übernehme die Meldung, koordiniere die nötigen Maßnahmen und dokumentiere alles lückenlos. So können Sie sich auf Ihr Geschäft konzentrieren.
 
 **Q: In welchen Branchen sind Sie tätig?**
-A: Ich betreue Unternehmen aus Dienstleistung, Handwerk, Gesundheitswesen und freien Berufen. Die DSGVO-Anforderungen variieren je nach Branche. Entsprechend ist meine Beratung stets branchenspezifisch angepasst.
+A: Ich betreue kleine und mittlere Unternehmen aus Dienstleistung, Handwerk, Gesundheitswesen und freien Berufen in Österreich und Deutschland. Jede Branche bringt eigene Anforderungen mit, etwa beim Umgang mit Patientendaten, Mandantengeheimnissen oder Kundendaten im Handwerksbetrieb. Deshalb passe ich meine Beratung stets an Ihre Branche, Ihre Prozesse und Ihre Unternehmensgröße an.
 
-**Q: Bieten Sie auch Datenschutz-Schulungen für Mitarbeiter an?**
-A: Ja. Mitarbeiterschulungen sind ein zentraler Bestandteil eines wirksamen Datenschutzprogramms. Ich biete Präsenzschulungen und Online-Formate an zugeschnitten auf Ihre Unternehmensstruktur und Branche, mit dokumentierten Teilnahmenachweisen.
+**Q: Bieten Sie auch Datenschutzschulungen für Mitarbeiter an?**
+A: Ja. Mitarbeiterschulungen sind ein zentraler Bestandteil eines wirksamen Datenschutzes, denn die meisten Vorfälle entstehen durch menschliche Fehler. Ich biete Präsenzschulungen und Onlineformate an, zugeschnitten auf Ihre Unternehmensstruktur und Branche. Jede Teilnahme wird dokumentiert, sodass Sie Ihre Schulungspflicht gegenüber der Aufsichtsbehörde jederzeit nachweisen können.
 
 ## Final CTA (#kontakt)
 
