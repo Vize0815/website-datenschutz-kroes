@@ -88,7 +88,7 @@
 3. **Haftung — Persönliche Haftung**
    Als Geschäftsführer haften Sie persönlich für Versäumnisse im Datenschutz — unabhängig von der Unternehmensform.
 
-**Hinweis:** Ein Datenschutzbeauftragter (DSB) ist nach Art. 9 DSGVO zwingend zu benennen, wenn mindestens 20 Mitarbeiter ständig automatisiert personenbezogene Daten verarbeiten (z.B. PC-Arbeitsplätze, Smartphones). Dies gilt auch bei geringerer Mitarbeiterzahl, falls die Kerntätigkeit in der Verarbeitung sensibler Daten, Videoüberwachung oder Datenübermittlung besteht.
+**Hinweis:** Ein Datenschutzbeauftragter (DSB) ist nach Art. 37 DSGVO zwingend zu benennen, wenn die Kerntätigkeit des Unternehmens in der umfangreichen Verarbeitung sensibler Daten oder in der umfangreichen, regelmäßigen und systematischen Überwachung von Personen besteht, etwa durch Videoüberwachung oder Tracking. In Deutschland gilt zusätzlich § 38 BDSG: Dort besteht die Pflicht bereits, wenn in der Regel mindestens 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind, zum Beispiel an PC oder Smartphone.
 
 ## Leistungen (#leistungen)
 
