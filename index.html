@@ -60,7 +60,6 @@
     "name": "Datenschutz Kroes",
     "description": "Externer Datenschutzbeauftragter für KMU und Mittelstandsunternehmen in Tirol, Salzburg, München und Rosenheim. DSGVO-Compliance, Datenschutz-Beratung und zertifizierter externer DSB.",
     "url": "https://datenschutz-kroes.at",
-    "telephone": "+43-5338-20105",
     "email": "info@datenschutz-kroes.at",
     "founder": {
       "@type": "Person",
@@ -94,7 +93,8 @@
     "priceRange": "€€",
     "knowsAbout": ["DSGVO", "Datenschutz", "KMU", "Datenschutzbeauftragter", "NIS2", "DSGVO-Beratung"],
     "sameAs": [
-      "https://firmen.wko.at/alexander-kroes-eu-datenschutz-kroes/tirol/?firmaid=2cf95da7-0215-48cc-a65d-2c5ee363b620"
+      "https://firmen.wko.at/alexander-kroes-eu-datenschutz-kroes/tirol/?firmaid=2cf95da7-0215-48cc-a65d-2c5ee363b620",
+      "https://www.linkedin.com/in/datenschutz-kroes"
     ]
   }
   </script>
@@ -6295,7 +6295,7 @@
         submit.disabled = false;
         submit.innerHTML = originalLabel;
         console.error('[Rückruf] Error:', err);
-        alert('Senden fehlgeschlagen. Bitte rufen Sie uns direkt an: +43 (0) 5338-20105 oder schreiben Sie an info@datenschutz-kroes.at.');
+        alert('Senden fehlgeschlagen. Bitte schreiben Sie an info@datenschutz-kroes.at.');
       }
     });
   </script>
@@ -6938,7 +6938,7 @@
         const disLines = doc.splitTextToSize(disclaimer, COL_W);
         disLines.forEach((line, idx) => doc.text(line, M_X, PAGE_H - 16 + (idx * 3)));
         setFont('normal', 8, NAVY);
-        doc.text('datenschutz-kroes.at · info@datenschutz-kroes.at · +43 (0) 5338-20105', M_X, PAGE_H - 8);
+        doc.text('datenschutz-kroes.at · info@datenschutz-kroes.at', M_X, PAGE_H - 8);
         setFont('normal', 8, SLATE);
         doc.text('Seite ' + i + ' / ' + pages, PAGE_W - M_X, PAGE_H - 8, { align: 'right' });
       }

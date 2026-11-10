@@ -5,7 +5,6 @@
 - **Anbieter:** Alexander Kroes e.U. – Datenschutz Kroes
 - **Adresse:** Glatzham 19, 6252 Breitenbach am Inn, Österreich
 - **Standort/Region:** Kufstein, Tirol
-- **Telefon:** +43 (0) 5338-20105
 - **E-Mail:** info@datenschutz-kroes.at
 - **Website:** https://datenschutz-kroes.at
 - **UID:** ATU81332979
@@ -631,7 +630,6 @@ Glatzham 19
 Österreich
 
 ## Kontaktinformationen
-- **Telefon:** +43 (0) 5338-20105
 - **E-Mail:** info@datenschutz-kroes.at
 
 ## Unternehmensgegenstand
@@ -674,7 +672,7 @@ Datenschutz Kroes nimmt nicht an Streitbeilegungsverfahren vor Verbraucherschlic
 **Stand:** April 2026
 
 ## 1. Verantwortlicher
-Alexander Kroes e.U. – Datenschutz Kroes, Glatzham 19, 6252 Breitenbach am Inn, Österreich. Tel: +43 (0) 5338-20105, E-Mail: info@datenschutz-kroes.at. UID: ATU81332979, FN 639208 m (LG Innsbruck).
+Alexander Kroes e.U. – Datenschutz Kroes, Glatzham 19, 6252 Breitenbach am Inn, Österreich. E-Mail: info@datenschutz-kroes.at. UID: ATU81332979, FN 639208 m (LG Innsbruck).
 
 ## 2. Allgemeines zur Datenverarbeitung
 Verarbeitung personenbezogener Daten nur soweit zur Bereitstellung der Website und Leistungen erforderlich, regelmäßig nur nach Einwilligung.
@@ -774,7 +772,7 @@ Beispielausgabe des Newsflash-Newsletters mit aktuellen Datenschutz-News, praxis
 **Spalten:**
 - **Leistungen:** Externer DSB · DSGVO-Erstanalyse · Mitarbeiterschulungen · Dokumentation · Datenschutz-Folgenabschätzung · Incident Response
 - **Unternehmen:** Alexander Kroes · Prozess · FAQ · Kontakt
-- **Kontakt:** info@datenschutz-kroes.at · +43 (0) 5338-20105 · Kufstein, Tirol
+- **Kontakt:** info@datenschutz-kroes.at · Kufstein, Tirol
 
 **Social:** Facebook · YouTube · Instagram
 **Copyright:** © 2026 Datenschutz Kroes

@@ -718,7 +718,7 @@ document.getElementById('lpform').addEventListener('submit', async function(e) {
       const anrede = encodeURIComponent(document.getElementById('f_anrede').value);
       window.location.href = '../danke/?n=' + nachname + '&a=' + anrede;
     } else { throw new Error(); }
-  } catch { btn.disabled = false; btn.textContent = 'Kostenloses Erstgespräch anfragen →'; alert('Fehler beim Senden. Bitte rufen Sie uns an: +43 5338 20105'); }
+  } catch { btn.disabled = false; btn.textContent = 'Kostenloses Erstgespräch anfragen →'; alert('Fehler beim Senden. Bitte schreiben Sie an info@datenschutz-kroes.at'); }
 });
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
