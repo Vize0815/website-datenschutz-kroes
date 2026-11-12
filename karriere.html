@@ -1239,6 +1239,20 @@
         privacyToggle.setAttribute('aria-expanded', String(!isOpen));
         privacyBody.classList.toggle('open', !isOpen);
       });
+
+      // Links auf #bewerber-datenschutz öffnen das Panel
+      const openPrivacyPanel = () => {
+        privacyToggle.setAttribute('aria-expanded', 'true');
+        privacyBody.classList.add('open');
+        document.getElementById('bewerber-datenschutz').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+      document.querySelectorAll('a[href="#bewerber-datenschutz"]').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          openPrivacyPanel();
+        });
+      });
+      if (location.hash === '#bewerber-datenschutz') openPrivacyPanel();
     }
 
     // Scroll reveal
