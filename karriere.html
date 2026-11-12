@@ -330,6 +330,9 @@
     .priv-contact-box__item { font-size: 14px; color: var(--color-slate); }
     .priv-contact-box__item a { color: var(--color-prussian); text-decoration: none; transition: color var(--transition-base); }
     .priv-contact-box__item a:hover { color: var(--color-gold); }
+    .priv-download { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 10px 18px; font-size: 14px; font-weight: 600; color: #fff; background: var(--color-navy); border-radius: 999px; text-decoration: none; transition: background-color var(--transition-base); }
+    .priv-download:hover { background: var(--color-prussian); }
+    .priv-download svg { flex-shrink: 0; }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
@@ -1009,6 +1012,11 @@
                 <div class="priv-contact-box__item"><a href="mailto:info@datenschutz-kroes.at">info@datenschutz-kroes.at</a></div>
               </div>
             </div>
+
+            <a class="priv-download" href="Datenschutzinformationen_Bewerber_Datenschutz_Kroes.pdf" download>
+              <svg width="16" height="16" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Als PDF herunterladen
+            </a>
 
           </div>
         </div>
