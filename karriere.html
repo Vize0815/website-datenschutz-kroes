@@ -231,6 +231,24 @@
     .job-row__apply-link { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--color-navy); background-color: var(--color-gold); padding: 11px 22px; border-radius: var(--radius-md); transition: background-color var(--transition-base), transform var(--transition-base); }
     .job-row__apply-link:hover { background-color: var(--color-gold-light); transform: translateY(-1px); }
 
+    /* ===== BEWERBUNGSPROZESS ===== */
+    .proc-head { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+    .proc-head .section__title { margin-bottom: 0; }
+    .proc-head .section__lead { margin-bottom: 0; }
+    .proc-title__em { font-style: italic; color: var(--color-prussian); }
+    .proc-list { border-top: 1px solid var(--color-mist); }
+    .proc-step { display: grid; grid-template-columns: 40px 1fr; gap: 8px 16px; padding: 24px 0; border-bottom: 1px solid var(--color-mist); }
+    .proc-step__num { font-family: var(--font-mono); font-size: 13px; color: var(--color-gold); padding-top: 4px; }
+    .proc-step__title { font-size: 20px; font-weight: 600; color: var(--color-navy); line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 6px; }
+    .proc-step__text { font-size: 15px; color: var(--color-slate); line-height: 1.65; }
+    .proc-step__meta { grid-column: 2; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-navy); }
+    @media (min-width: 900px) {
+      .proc-head { grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: end; margin-bottom: 56px; }
+      .proc-step { grid-template-columns: 120px 1fr 220px; align-items: center; gap: 24px; padding: 28px 0; }
+      .proc-step__num { padding-top: 0; }
+      .proc-step__meta { grid-column: auto; }
+    }
+
     /* ===== APPLICATION FORM ===== */
     .apply-form-wrap { max-width: 760px; }
     .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -620,6 +638,51 @@
           <p class="value-card__text">Datenschutz schützt Menschen – nicht nur Unternehmen. Was wir tun, hat Bedeutung. Das spüren auch unsere Mandanten.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== BEWERBUNGSPROZESS ===== -->
+  <section class="section section--white" id="ablauf">
+    <div class="container">
+      <p class="section__eyebrow" data-reveal>Bewerbungsprozess</p>
+      <div class="proc-head">
+        <h2 class="section__title" data-reveal data-reveal-delay="1">So läuft es <span class="proc-title__em">bei uns</span>.</h2>
+        <p class="section__lead" data-reveal data-reveal-delay="2">Vier Schritte. Maximal 10 Werktage von Bewerbung bis Vertrag. Keine künstlichen Wartezeiten, kein Ghosting.</p>
+      </div>
+      <ol class="proc-list" role="list">
+        <li class="proc-step" data-reveal data-reveal-delay="1">
+          <span class="proc-step__num" aria-hidden="true">01</span>
+          <div>
+            <h3 class="proc-step__title">Bewerbung in 5 Minuten</h3>
+            <p class="proc-step__text">Anschreiben kannst du dir sparen. Lebenslauf rein, ein Satz dazu, fertig.</p>
+          </div>
+          <span class="proc-step__meta">Lebenslauf reicht</span>
+        </li>
+        <li class="proc-step" data-reveal data-reveal-delay="2">
+          <span class="proc-step__num" aria-hidden="true">02</span>
+          <div>
+            <h3 class="proc-step__title">Erstes Gespräch</h3>
+            <p class="proc-step__text">Ein einfaches Kennenlernen ohne Druck. Keine Stresstests, keine Trickfragen.</p>
+          </div>
+          <span class="proc-step__meta">30 Minuten per Video</span>
+        </li>
+        <li class="proc-step" data-reveal data-reveal-delay="3">
+          <span class="proc-step__num" aria-hidden="true">03</span>
+          <div>
+            <h3 class="proc-step__title">Fachgespräch</h3>
+            <p class="proc-step__text">Fachgespräch auf Augenhöhe. Du fragst, wir fragen.</p>
+          </div>
+          <span class="proc-step__meta">60 Minuten im Büro</span>
+        </li>
+        <li class="proc-step" data-reveal data-reveal-delay="3">
+          <span class="proc-step__num" aria-hidden="true">04</span>
+          <div>
+            <h3 class="proc-step__title">Angebot &amp; Vertrag</h3>
+            <p class="proc-step__text">Wir entscheiden gemeinsam und schnell. Kein wochenlanges Warten.</p>
+          </div>
+          <span class="proc-step__meta">Innerhalb von 5 Tagen</span>
+        </li>
+      </ol>
     </div>
   </section>
 
