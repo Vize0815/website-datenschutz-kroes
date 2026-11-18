@@ -353,7 +353,7 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 # 3. NIS2 Kompakt Seminar (nis2-seminar.html)
 
 **Title:** NIS2 Schulung für Geschäftsführer nach NISG 2026
-**Meta-Description:** NIS2 Kompakt: die Pflichtschulung für Geschäftsführer und Leitungsorgane nach dem NISG 2026. 4 Stunden, 450 € zzgl. MwSt., mit Teilnahmezertifikat als Schulungsnachweis.
+**Meta-Description:** NIS2 Kompakt: die Pflichtschulung für Geschäftsführer und Leitungsorgane nach dem NISG 2026. 4 Stunden, 450 € zzgl. MwSt., mit Teilnahmebestätigung nach §31 Abs 2 NISG 2026.
 
 ## Hero
 
@@ -361,6 +361,7 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 **H1:** NIS Schulung für Geschäftsführer nach § 31 NISG 2026
 **Unterzeile:** Ihre Pflicht als Leitung, verständlich und praxisnah erklärt
 **Lead:** Seit 1. Oktober 2026 gilt in Österreich das NISG 2026. Es nimmt die Geschäftsführung direkt in die Pflicht: Sie müssen die Maßnahmen zur Cybersicherheit sicherstellen, überwachen und selbst an einer Schulung teilnehmen, die speziell für Leitungsorgane gestaltet ist. In dieser Schulung erhalten Sie genau das Wissen, das Sie auf oberster Ebene brauchen, ohne sich in technischen Details zu verlieren.
+**Hinweis:** Mit diesem Seminar erfüllen Sie Ihre gesetzlich vorgesehene Schulungspflicht nach §31 Abs 2 NISG 2026.
 
 **Ihr Nutzen (Kurzform):**
 - Sie wissen, was das Gesetz von Ihnen persönlich verlangt
@@ -434,7 +435,7 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 
 ## Abschluss
 
-- Teilnahmezertifikat mit Datum, Dauer und Inhalten, das die Schulung als Leitungsorgan nach dem NISG 2026 dokumentiert
+- Teilnahmebestätigung nach §31 Abs 2 NISG 2026
 - Seminarunterlagen zum Nachlesen
 - Checkliste für die Geschäftsführung zu Pflichten, Delegation und Nachweisen
 
