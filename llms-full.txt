@@ -155,7 +155,7 @@ Einleitung der gesetzlich vorgeschriebenen Reaktionsfrist auf Datenschutzvorfäl
 **Headline:** Datenschutz-Seminare für Unternehmen
 **Lead:** Alles Wichtige zu NIS2, DSGVO und Datenschutz – praxisnah für Unternehmen mit Verantwortung gestaltet.
 
-- **NIS2 Kompakt** (Cybersicherheit) → siehe `/nis2-seminar.html`
+- **NIS2 Kompakt** (Pflichtschulung für Geschäftsführungen nach § 31 NISG 2026, in Tirol, Salzburg und online) → siehe `/nis2-seminar.html`
 - **DSGVO Grundlagen** (EU-Datenschutz-Grundverordnung) → siehe `/dsgvo-seminar.html`
 
 Alle Seminare werden auch als **Inhouse-Schulung** direkt im Unternehmen des Kunden angeboten.
