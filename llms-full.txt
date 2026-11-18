@@ -352,8 +352,8 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 
 # 3. NIS2 Kompakt Seminar (nis2-seminar.html)
 
-**Title:** NIS2 Schulung für Geschäftsführungen nach NISG 2026
-**Meta-Description:** NIS2 Kompakt: die Pflichtschulung für Geschäftsführungen und Leitungsorgane nach dem NISG 2026. 4 Stunden, 450 € zzgl. MwSt., mit Teilnahmebestätigung nach §31 Abs 2 NISG 2026.
+**Title:** NIS2 Schulung für Geschäftsführungen in Tirol und Salzburg
+**Meta-Description:** NIS2 Kompakt: die Pflichtschulung für Geschäftsführungen nach § 31 NISG 2026. In Kufstein und Salzburg, inhouse in ganz Tirol und Salzburg oder online. 4 Stunden, 450 € zzgl. MwSt.
 
 ## Hero
 
@@ -422,6 +422,14 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 - Vorsitzende und Mitglieder von Aufsichtsrat und Beirat
 - Leitungen von IT, Informationssicherheit, Compliance, Datenschutz, Risikomanagement und Revision, die die Geschäftsführung beraten
 
+## NIS2 Schulung in Tirol und Salzburg
+
+Die NIS2 Schulung für Geschäftsführungen findet in Präsenz in Kufstein und in Salzburg statt. Auf Wunsch kommt die Schulung als Inhouse Schulung direkt in Ihr Unternehmen, in ganz Tirol und im Bundesland Salzburg. Online nehmen Sie aus ganz Österreich teil.
+
+- **Tirol:** Präsenz in Kufstein, inhouse etwa in Innsbruck, Kufstein, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol
+- **Salzburg:** Präsenz in Salzburg, inhouse etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau
+- **Online:** aus ganz Österreich
+
 ## Voraussetzungen
 
 - Keine technischen oder juristischen Vorkenntnisse notwendig
@@ -439,13 +447,30 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 - Seminarunterlagen zum Nachlesen
 - Checkliste für die Geschäftsführung zu Pflichten, Delegation und Nachweisen
 
+## Häufige Fragen zur NIS2 Schulung
+
+**Q: Gibt es die NIS2 Schulung auch in Salzburg?**
+A: Ja. Die NIS2 Schulung für Geschäftsführungen findet in Präsenz in Salzburg statt. Als Inhouse Schulung kommt sie in Ihr Unternehmen, etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau. Alternativ nehmen Sie online teil.
+
+**Q: Wo findet die NIS2 Schulung in Tirol statt?**
+A: In Präsenz in Kufstein. Als Inhouse Schulung kommt sie direkt in Ihr Unternehmen, etwa in Innsbruck, Kufstein, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol.
+
+**Q: Erfüllt die Schulung die Pflicht nach § 31 NISG 2026?**
+A: Ja. NIS2 Kompakt ist speziell für Leitungsorgane gestaltet, so wie es das NISG 2026 verlangt. Sie erhalten eine Teilnahmebestätigung nach §31 Abs 2 NISG 2026 für Ihre Dokumentation.
+
+**Q: Kann ich die NIS2 Schulung online besuchen?**
+A: Ja, aus ganz Österreich. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen.
+
+**Q: Was kostet die NIS2 Schulung und wie lange dauert sie?**
+A: Die Schulung dauert 4 Stunden, von 09:00 bis 13:00 Uhr, mit mindestens 2 und höchstens 8 Teilnehmern. Sie kostet 450,00 € zzgl. MwSt. pro Teilnehmer / Buchung.
+
 ## Termine 2026 (Auswahl)
 
 21.05. · 18.06. · 23.07. · 20.08. · 24.09. · 15.10. · 19.11. · 15.12. · oder individueller Termin
 
 ## Anfrage-Formular
 
-Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Online / Inhouse / Kufstein, Tirol), Seminartermin, Anforderungen & Ziele, Einwilligung.
+Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Online / Inhouse / Kufstein, Tirol / Salzburg), Seminartermin, Anforderungen & Ziele, Einwilligung.
 
 ---
 
