@@ -347,6 +347,16 @@
     .seminar-detail__list li { font-size: 15px; font-weight: 300; color: var(--color-slate); padding-left: 20px; position: relative; line-height: 1.65; }
     .seminar-detail__list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--color-gold); }
     .seminar-detail__divider { border: none; border-top: 1px solid var(--color-mist); margin: 36px 0; }
+    /* NIS2 FAQ aufklappbar */
+    .nis2-faq { border-bottom: 1px solid var(--color-mist); }
+    .nis2-faq:first-of-type { border-top: 1px solid var(--color-mist); margin-top: 8px; }
+    .nis2-faq__q { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; cursor: pointer; list-style: none; }
+    .nis2-faq__q::-webkit-details-marker { display: none; }
+    .nis2-faq__title { font-size: 16px; font-weight: 600; color: var(--color-navy); line-height: 1.4; }
+    .nis2-faq__icon { flex-shrink: 0; color: var(--color-gold); transition: transform var(--transition-base); }
+    .nis2-faq[open] .nis2-faq__icon { transform: rotate(180deg); }
+    .nis2-faq__q:hover .nis2-faq__title { color: var(--color-prussian); }
+    .nis2-faq__a { padding-bottom: 16px; margin-bottom: 0; }
 
     /* Right column — Form */
     .seminar-form__wrap { position: sticky; top: 24px; }
@@ -708,14 +718,6 @@
           "@type": "Answer",
           "text": "Ja, aus ganz Österreich. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen."
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Was kostet die NIS2 Schulung und wie lange dauert sie?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Schulung dauert 4 Stunden, von 09:00 bis 13:00 Uhr, mit mindestens 2 und höchstens 8 Teilnehmern. Sie kostet 450,00 € zzgl. MwSt. pro Teilnehmer / Buchung."
-        }
       }
     ]
   }
@@ -997,16 +999,22 @@
 
             <div class="seminar-detail__block">
               <h2 class="seminar-detail__heading">Häufige Fragen zur NIS2 Schulung</h2>
-              <h3 class="seminar-detail__heading" style="font-size:16px;margin:20px 0 6px;">Gibt es die NIS2 Schulung auch in Salzburg?</h3>
-              <p class="seminar-detail__text">Ja. Die NIS2 Schulung für Geschäftsführungen findet in Präsenz in Salzburg statt. Als Inhouse Schulung kommt sie in Ihr Unternehmen, etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau. Alternativ nehmen Sie online teil.</p>
-              <h3 class="seminar-detail__heading" style="font-size:16px;margin:20px 0 6px;">Wo findet die NIS2 Schulung in Tirol statt?</h3>
-              <p class="seminar-detail__text">In Präsenz in Kufstein. Als Inhouse Schulung kommt sie direkt in Ihr Unternehmen, etwa in Innsbruck, Kufstein, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol.</p>
-              <h3 class="seminar-detail__heading" style="font-size:16px;margin:20px 0 6px;">Erfüllt die Schulung die Pflicht nach § 31 NISG 2026?</h3>
-              <p class="seminar-detail__text">Ja. NIS2 Kompakt ist speziell für Leitungsorgane gestaltet, so wie es das NISG 2026 verlangt. Sie erhalten eine Teilnahmebestätigung nach §31 Abs 2 NISG 2026 für Ihre Dokumentation.</p>
-              <h3 class="seminar-detail__heading" style="font-size:16px;margin:20px 0 6px;">Kann ich die NIS2 Schulung online besuchen?</h3>
-              <p class="seminar-detail__text">Ja, aus ganz Österreich. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen.</p>
-              <h3 class="seminar-detail__heading" style="font-size:16px;margin:20px 0 6px;">Was kostet die NIS2 Schulung und wie lange dauert sie?</h3>
-              <p class="seminar-detail__text">Die Schulung dauert 4 Stunden, von 09:00 bis 13:00 Uhr, mit mindestens 2 und höchstens 8 Teilnehmern. Sie kostet 450,00 € zzgl. MwSt. pro Teilnehmer / Buchung.</p>
+              <details class="nis2-faq">
+                <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Gibt es die NIS2 Schulung auch in Salzburg?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+                <p class="seminar-detail__text nis2-faq__a">Ja. Die NIS2 Schulung für Geschäftsführungen findet in Präsenz in Salzburg statt. Als Inhouse Schulung kommt sie in Ihr Unternehmen, etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau. Alternativ nehmen Sie online teil.</p>
+              </details>
+              <details class="nis2-faq">
+                <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Wo findet die NIS2 Schulung in Tirol statt?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+                <p class="seminar-detail__text nis2-faq__a">In Präsenz in Kufstein. Als Inhouse Schulung kommt sie direkt in Ihr Unternehmen, etwa in Innsbruck, Kufstein, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol.</p>
+              </details>
+              <details class="nis2-faq">
+                <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Erfüllt die Schulung die Pflicht nach § 31 NISG 2026?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+                <p class="seminar-detail__text nis2-faq__a">Ja. NIS2 Kompakt ist speziell für Leitungsorgane gestaltet, so wie es das NISG 2026 verlangt. Sie erhalten eine Teilnahmebestätigung nach §31 Abs 2 NISG 2026 für Ihre Dokumentation.</p>
+              </details>
+              <details class="nis2-faq">
+                <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Kann ich die NIS2 Schulung online besuchen?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+                <p class="seminar-detail__text nis2-faq__a">Ja, aus ganz Österreich. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen.</p>
+              </details>
             </div>
           </div>
 
