@@ -25,7 +25,7 @@
 | `/index.html` | Startseite – Datenschutzbeauftragter für KMU & Mittelstand | Hauptseite mit Hero, Leistungen, Prozess, FAQ, Kontakt, Newsletter |
 | `/datenschutz-flatrate.html` | Datenschutz-Flatrate – Externer DSB ab 290 €/Monat | Pakete & Preise, DSB-Flatrate-Modell mit 4 Tarifen |
 | `/dsgvo-seminar.html` | DSGVO für Geschäftsführungen – Praxis-Seminar | Detail-Seite zum DSGVO-Seminar |
-| `/nis2-seminar.html` | NIS2 Kompakt – Cybersicherheit Seminar | Detail-Seite zum NIS2-Seminar |
+| `/nis2-seminar.html` | NIS2 Schulung für Geschäftsführer nach NISG 2026 | Pflichtschulung NIS2 Kompakt für Leitungsorgane |
 | `/downloads.html` | Downloads | Kostenlose Checklisten, Leitfäden, Vorlagen (PDF) |
 | `/benennungsurkunde.html` | Benennungsurkunde | Interaktives PDF-Formular zur DSB-Bestellung |
 | `/impressum.html` | Impressum | Rechtliche Pflichtangaben |
@@ -346,64 +346,74 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 **Headline:** Welches Paket passt zu Ihrem Unternehmen?
 **Text:** Vereinbaren Sie ein kostenloses, unverbindliches Erstgespräch. In 30 Minuten klären wir gemeinsam, welches Paket zu Ihrer Mitarbeiterzahl, Branche und Datenschutz-Ausgangslage passt — und wann Sie starten können.
 **CTA:** Kostenloses Erstgespräch vereinbaren (mailto:info@datenschutz-kroes.at)
-**Micro:** Kein Risiko · Keine Verpflichtung · Antwort innerhalb von 24 Stunden
+**Micro:** Kein Risiko · Keine Verpflichtung · Antwort inn# 3. NIS2 Kompakt Seminar (nis2-seminar.html)
 
----
-
-# 3. NIS2 Kompakt Seminar (nis2-seminar.html)
-
-**Title:** NIS2 Kompakt – Cybersicherheit Seminar
-**Meta-Description:** NIS2 Kompakt: Das Praxis-Seminar für Geschäftsführer und Entscheider. 120 Minuten, 349€ zzgl. MwSt. Ob und warum Ihr Unternehmen unter NIS2 fällt – klar erklärt.
+**Title:** NIS2 Schulung für Geschäftsführer nach NISG 2026
+**Meta-Description:** NIS2 Kompakt: die Pflichtschulung für Geschäftsführer und Leitungsorgane nach dem NISG 2026. 4 Stunden, 495 € zzgl. MwSt., mit Teilnahmezertifikat als Schulungsnachweis.
 
 ## Hero
 
-**Eyebrow:** Seminar-Reihe · Cybersicherheit
-**H1:** NIS2 – Die neue EU Richtlinie zur Cybersicherheit
-**Lead:** In diesem praxisnahen Datenschutz-Seminar erhalten Sie einen klaren Überblick über NIS2, DSGVO und die tatsächlichen Auswirkungen auf Ihr Unternehmen – als Orientierung, Entscheidungsgrundlage und realistische Handlungsrichtlinie.
+**Eyebrow:** Pflichtschulung · NISG 2026
+**H1:** NIS2 Schulung für Geschäftsführer nach dem NISG 2026
+**Lead:** Seit 1. Oktober 2026 müssen Leitungsorgane wesentlicher und wichtiger Einrichtungen an Cybersicherheitsschulungen teilnehmen, die speziell für sie gestaltet sind. NIS2 Kompakt ist diese Schulung: verständlich ohne technisches Vorwissen, mit Fokus auf Ihre Entscheidungen als Geschäftsführer und mit Zertifikat als Nachweis.
 
 **Was Sie lernen:**
-- Ob und warum Ihr Unternehmen unter NIS2 fällt
-- Welche Verantwortung Geschäftsführer tatsächlich tragen
-- Welche rechtlichen und organisatorischen Mindestanforderungen gelten
-- Welche Fehlannahmen aktuell teuer werden können
-- Welche Entscheidungen sinnvoll sind – ausgehend von Ihrer Ausgangslage
+- Ob und warum Ihr Unternehmen unter das NISG 2026 fällt
+- Welche Pflichten bei der Geschäftsführung bleiben und was Sie delegieren können
+- Wie Sie Risikomanagement und Meldewege angemessen beurteilen
+- Welche Haftungsrisiken Sie persönlich tragen
+- Wie Sie Schulung und Überwachung gegenüber Behörde und Gremien nachweisen
 
 ## Eckdaten
 
-- **Dauer:** 120 Minuten
+- **Dauer:** 4 Stunden
 - **Teilnehmer:** min. 2 – max. 8
-- **Uhrzeit:** 16:00 – 18:00 Uhr
+- **Uhrzeit:** 09:00 bis 13:00 Uhr
 - **Format:** Online / Präsenz / Inhouse
 - **Preis:** 495,00 € zzgl. MwSt. pro Teilnehmer / Buchung
 - **Anfrage:** mailto:info@datenschutz-kroes.at?subject=Anfrage%3A%20NIS2%20Kompakt%20Seminar
 
-## Ziel des Praxis-Seminars
+## Ziel der Pflichtschulung
 
-Das Seminar vermittelt Grundlagen, Zusammenhänge und Entscheidungsgrundlagen zu NIS2 aus unternehmerischer und organisatorischer Perspektive. Ziel ist es, Teilnehmer in die Lage zu versetzen, Risiken einzuordnen, Verantwortlichkeiten zu verstehen und nächste Schritte strukturiert zu planen.
+Das NISG 2026 verlangt von Leitungsorganen, dass sie die Maßnahmen zum Cybersicherheitsrisikomanagement genehmigen, ihre Umsetzung überwachen und an Schulungen teilnehmen, die speziell für Leitungsorgane gestaltet sind. Allgemeine Mitarbeiterschulungen reichen dafür nicht aus. NIS2 Kompakt erfüllt diese Fortbildungspflicht und stärkt Ihr Risikomanagement. Sie lernen, Risiken einzuordnen, die Angemessenheit von Maßnahmen zu beurteilen und Ihre Verantwortung als Geschäftsführer nachweisbar wahrzunehmen.
+
+## Lernziele
+
+- Prüfen, ob und warum Ihr Unternehmen als wesentliche oder wichtige Einrichtung unter das NISG 2026 fällt
+- Die Pflichten der Leitungsorgane kennen und von delegierbaren Aufgaben abgrenzen
+- Die Angemessenheit von Maßnahmen zu Informationssicherheit, Risikomanagement und Business Continuity beurteilen
+- Verantwortlichkeiten organisieren, delegieren und überwachen, inklusive Dokumentation und Berichtswesen
+- Haftungsrisiken und Strafrahmen erkennen und Gegenmaßnahmen ableiten
+- Schulung und Überwachung gegenüber Behörde, Prüfern und Gremien nachweisen
 
 ## Kursinhalte
 
-- Einordnung der NIS2-Richtlinie: Was ist neu, was wurde verschärft?
-- Betroffenheitslogik: Wann und warum Unternehmen unter NIS2 fallen
-- Abgrenzung: NIS2 vs. DSGVO vs. IT-Sicherheit
-- Einordnung: Rechtsformen, Zertifizierung von Lieferanten
-- Rolle und Verantwortung von Geschäftsführung & Leitung
-- Typische Fehlannahmen und Praxisrisiken
-- Bußgelder (Höhe, Haftung, Verantwortlichkeiten)
-- Überblick über organisatorische, technische und dokumentarische Pflichten
-- Entscheidungsoptionen je nach Ausgangslage des Unternehmens
-- Strukturierter Ausblick auf nächste sinnvolle Schritte
+- **Modul 1, Rechtlicher Rahmen:** NIS2 Richtlinie und NISG 2026, zentrale Begriffe, Zusammenspiel mit der DSGVO, Rolle von Cybersicherheitsbehörde und CSIRT
+- **Modul 2, Betroffenheit und Registrierung:** Sektoren, Größenschwellen, Einstufung als wesentliche oder wichtige Einrichtung, Ablauf der Prüfung, Registrierungspflicht
+- **Modul 3, Pflichten und Haftung:** Pflichten der Leitungsorgane, Risikomanagementmaßnahmen, Strafrahmen für Einrichtungen bis 10 Mio. Euro oder 2 % des weltweiten Jahresumsatzes, persönliche Haftung bei Organisations, Auswahl und Überwachungsverschulden
+- **Modul 4, Verantwortung und Delegation:** Was bei der Geschäftsführung bleibt, Delegation an Informationssicherheit, IT, Datenschutz oder Compliance, Berichtswege an die Leitung
+- **Modul 5, Risikomanagement:** Risiken erkennen, bewerten und behandeln, Business Impact Analyse, Lieferkette und Dienstleister
+- **Modul 6, Business Continuity und Vorfälle:** Mindestanforderungen an die Notfallvorsorge, Meldepflichten und Fristen bei erheblichen Sicherheitsvorfällen, Krisenstab und Meldewege
+- **Modul 7, Nachweise:** Was Sie dokumentieren müssen, was darüber hinaus sinnvoll ist und wie Sie gegenüber Behörde, Aufsichtsrat und Prüfern belegen, dass Sie Ihrer Verantwortung nachkommen
+
+## Ablauf
+
+- Kurze Impulse, Praxisbeispiele und Fallstudien statt Folienschlacht
+- Leitfragen und Diskussion auf Ebene der Geschäftsführung
+- Raum für Ihre eigenen Fragen aus dem Unternehmen
 
 ## Zielgruppe
 
-- Geschäftsführer:innen
-- Vorstände
-- Bereichs- und Abteilungsleiter
-- Verantwortliche für Organisation, Datenschutz & Risikomanagement
+- Geschäftsführer:innen und Vorstände wesentlicher und wichtiger Einrichtungen
+- Unternehmen, die noch prüfen, ob sie unter das NISG 2026 fallen
+- Mitglieder der obersten Leitung, etwa Werks oder Standortleitungen
+- Vorsitzende und Mitglieder von Aufsichtsrat und Beirat
+- Leitungen von IT, Informationssicherheit, Compliance, Datenschutz, Risikomanagement und Revision, die die Geschäftsführung beraten
 
 ## Voraussetzungen
 
-Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von Vorteil.
+- Keine technischen oder juristischen Vorkenntnisse notwendig
+- Für die Online Teilnahme genügen ein aktueller Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen
 
 ## Was nicht Bestandteil ist
 
@@ -413,7 +423,11 @@ Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von 
 
 ## Abschluss
 
-- Teilnehmer erhalten ein Teilnahmezertifikat
+- Teilnahmezertifikat mit Datum, Dauer und Inhalten, das die Schulung als Leitungsorgan nach dem NISG 2026 dokumentiert
+- Seminarunterlagen zum Nachlesen
+- Checkliste für die Geschäftsführung zu Pflichten, Delegation und Nachweisen
+
+en ein Teilnahmezertifikat
 
 ## Termine 2026 (Auswahl)
 
