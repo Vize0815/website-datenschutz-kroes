@@ -25,7 +25,7 @@
 | `/index.html` | Startseite – Datenschutzbeauftragter für KMU & Mittelstand | Hauptseite mit Hero, Leistungen, Prozess, FAQ, Kontakt, Newsletter |
 | `/datenschutz-flatrate.html` | Datenschutz-Flatrate – Externer DSB ab 290 €/Monat | Pakete & Preise, DSB-Flatrate-Modell mit 4 Tarifen |
 | `/dsgvo-seminar.html` | DSGVO für Geschäftsführungen – Praxis-Seminar | Detail-Seite zum DSGVO-Seminar |
-| `/nis2-seminar.html` | NIS2 Schulung für Geschäftsführer nach NISG 2026 | Pflichtschulung NIS2 Kompakt für Leitungsorgane |
+| `/nis2-seminar.html` | NIS2 Schulung für Geschäftsführungen nach NISG 2026 | Pflichtschulung NIS2 Kompakt für Leitungsorgane |
 | `/downloads.html` | Downloads | Kostenlose Checklisten, Leitfäden, Vorlagen (PDF) |
 | `/benennungsurkunde.html` | Benennungsurkunde | Interaktives PDF-Formular zur DSB-Bestellung |
 | `/impressum.html` | Impressum | Rechtliche Pflichtangaben |
@@ -352,13 +352,13 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 
 # 3. NIS2 Kompakt Seminar (nis2-seminar.html)
 
-**Title:** NIS2 Schulung für Geschäftsführer nach NISG 2026
-**Meta-Description:** NIS2 Kompakt: die Pflichtschulung für Geschäftsführer und Leitungsorgane nach dem NISG 2026. 4 Stunden, 450 € zzgl. MwSt., mit Teilnahmebestätigung nach §31 Abs 2 NISG 2026.
+**Title:** NIS2 Schulung für Geschäftsführungen nach NISG 2026
+**Meta-Description:** NIS2 Kompakt: die Pflichtschulung für Geschäftsführungen und Leitungsorgane nach dem NISG 2026. 4 Stunden, 450 € zzgl. MwSt., mit Teilnahmebestätigung nach §31 Abs 2 NISG 2026.
 
 ## Hero
 
 **Eyebrow:** Pflichtschulung · NISG 2026
-**H1:** NIS Schulung für Geschäftsführer nach § 31 NISG 2026
+**H1:** NIS2 Schulung für Geschäftsführungen nach § 31 NISG 2026
 **Unterzeile:** Ihre Pflicht als Leitung, verständlich und praxisnah erklärt
 **Lead:** Seit 1. Oktober 2026 gilt in Österreich das NISG 2026. Es nimmt die Geschäftsführung direkt in die Pflicht: Sie müssen die Maßnahmen zur Cybersicherheit sicherstellen, überwachen und selbst an einer Schulung teilnehmen, die speziell für Leitungsorgane gestaltet ist. In dieser Schulung erhalten Sie genau das Wissen, das Sie auf oberster Ebene brauchen, ohne sich in technischen Details zu verlieren.
 **Hinweis:** Mit diesem Seminar erfüllen Sie Ihre gesetzlich vorgesehene Schulungspflicht nach §31 Abs 2 NISG 2026.
@@ -392,7 +392,7 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 ## Nach der Schulung können Sie diese Fragen beantworten
 
 - Sind wir betroffen, und ist das dokumentiert?
-- Welche Pflichten habe ich als Geschäftsführer, und wie weise ich sie nach?
+- Welche Pflichten habe ich als Geschäftsführung, und wie weise ich sie nach?
 - Welche der 10 Mindestmaßnahmen betreffen mich direkt?
 - Was ist ein erheblicher Vorfall, und wer meldet ihn binnen 24 Stunden?
 - Was erwartet die Behörde in der Selbstdeklaration bis 30.9.2027?
@@ -416,7 +416,7 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 
 ## Zielgruppe
 
-- Geschäftsführer:innen und Vorstände wesentlicher und wichtiger Einrichtungen
+- Geschäftsführungen und Vorstände wesentlicher und wichtiger Einrichtungen
 - Unternehmen, die noch prüfen, ob sie unter das NISG 2026 fallen
 - Mitglieder der obersten Leitung, etwa Werks oder Standortleitungen
 - Vorsitzende und Mitglieder von Aufsichtsrat und Beirat
