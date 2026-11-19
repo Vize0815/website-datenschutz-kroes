@@ -25,7 +25,8 @@
 | `/index.html` | Startseite – Datenschutzbeauftragter für KMU & Mittelstand | Hauptseite mit Hero, Leistungen, Prozess, FAQ, Kontakt, Newsletter |
 | `/datenschutz-flatrate.html` | Datenschutz-Flatrate – Externer DSB ab 290 €/Monat | Pakete & Preise, DSB-Flatrate-Modell mit 4 Tarifen |
 | `/dsgvo-seminar.html` | DSGVO für Geschäftsführungen – Praxis-Seminar | Detail-Seite zum DSGVO-Seminar |
-| `/nis2-seminar.html` | NIS2 Schulung für Geschäftsführungen nach NISG 2026 | Pflichtschulung NIS2 Kompakt für Leitungsorgane |
+| `/nis2-seminar.html` | NIS2 Schulung für Geschäftsführungen in Tirol und Salzburg | Pflichtschulung NIS2 Kompakt für Leitungsorgane nach § 31 NISG 2026 (Österreich) |
+| `/nis2-schulung-deutschland.html` | NIS2 Schulung für Geschäftsleitungen in Rosenheim und München | Pflichtschulung für Geschäftsleitungen nach § 38 Abs. 3 BSIG (Deutschland) |
 | `/downloads.html` | Downloads | Kostenlose Checklisten, Leitfäden, Vorlagen (PDF) |
 | `/benennungsurkunde.html` | Benennungsurkunde | Interaktives PDF-Formular zur DSB-Bestellung |
 | `/impressum.html` | Impressum | Rechtliche Pflichtangaben |
@@ -155,7 +156,8 @@ Einleitung der gesetzlich vorgeschriebenen Reaktionsfrist auf Datenschutzvorfäl
 **Headline:** Datenschutz-Seminare für Unternehmen
 **Lead:** Alles Wichtige zu NIS2, DSGVO und Datenschutz – praxisnah für Unternehmen mit Verantwortung gestaltet.
 
-- **NIS2 Kompakt** (Pflichtschulung für Geschäftsführungen nach § 31 NISG 2026, in Tirol, Salzburg und online) → siehe `/nis2-seminar.html`
+- **NIS2 Schulung für Geschäftsführungen, Österreich** (Pflichtschulung nach § 31 NISG 2026, in Tirol, Salzburg und online) → siehe `/nis2-seminar.html`
+- **NIS2 Schulung für Geschäftsleitungen, Deutschland** (Pflichtschulung nach § 38 Abs. 3 BSIG, in Rosenheim, München und online) → siehe `/nis2-schulung-deutschland.html`
 - **DSGVO Grundlagen** (EU-Datenschutz-Grundverordnung) → siehe `/dsgvo-seminar.html`
 
 Alle Seminare werden auch als **Inhouse-Schulung** direkt im Unternehmen des Kunden angeboten.
@@ -461,6 +463,8 @@ A: Ja. NIS2 Kompakt ist speziell für Leitungsorgane gestaltet, so wie es das NI
 **Q: Kann ich die NIS2 Schulung online besuchen?**
 A: Ja, aus ganz Österreich. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen.
 
+Ihr Unternehmen sitzt in Deutschland? Siehe `/nis2-schulung-deutschland.html` (NIS2 Schulung für Geschäftsleitungen nach § 38 BSIG).
+
 ## Termine 2026 (Auswahl)
 
 21.05. · 18.06. · 23.07. · 20.08. · 24.09. · 15.10. · 19.11. · 15.12. · oder individueller Termin
@@ -468,6 +472,116 @@ A: Ja, aus ganz Österreich. Sie brauchen einen aktuellen Browser, Mikrofon und 
 ## Anfrage-Formular
 
 Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Online / Inhouse / Kufstein, Tirol / Salzburg), Seminartermin, Anforderungen & Ziele, Einwilligung.
+
+---
+
+# 3b. NIS2 Schulung Deutschland (nis2-schulung-deutschland.html)
+
+**Title:** NIS2 Schulung für Geschäftsleitungen in Rosenheim und München
+**Meta-Description:** NIS2 Schulung für Geschäftsleitungen nach § 38 Abs. 3 BSIG. In Rosenheim und München, inhouse in Ihrem Unternehmen oder online. 4 Stunden, 450 € zzgl. MwSt.
+
+## Hero
+
+**Eyebrow:** Pflichtschulung · BSIG
+**H1:** NIS2 Schulung für Geschäftsleitungen nach § 38 Abs. 3 BSIG
+**Unterzeile:** Ihre Pflicht als Leitung, verständlich und praxisnah erklärt
+**Lead:** Seit 6. Dezember 2025 gilt in Deutschland das NIS2 Umsetzungsgesetz mit dem neuen BSI Gesetz (BSIG). Es nimmt die Geschäftsleitung direkt in die Pflicht: Sie müssen die Maßnahmen zum Risikomanagement umsetzen, ihre Umsetzung überwachen und regelmäßig an Schulungen teilnehmen. In dieser Schulung erhalten Sie genau das Wissen, das Sie auf oberster Ebene brauchen, ohne sich in technischen Details zu verlieren.
+**Hinweis:** Mit diesem Seminar erfüllen Sie Ihre gesetzlich vorgesehene Schulungspflicht nach § 38 Abs. 3 BSIG.
+
+## Eckdaten
+
+- **Dauer:** 4 Stunden
+- **Teilnehmer:** min. 2 – max. 8
+- **Uhrzeit:** 09:00 bis 13:00 Uhr
+- **Format:** Online / Präsenz / Inhouse
+- **Preis:** 450,00 € zzgl. MwSt. pro Teilnehmer / Buchung
+- **Anfrage:** mailto:info@datenschutz-kroes.at?subject=Anfrage%3A%20NIS2%20Schulung%20Deutschland
+
+## Ihr Nutzen
+
+- **Sie wissen, was das Gesetz von Ihnen persönlich verlangt**, und was Sie delegieren können und was nicht. Die Verantwortung bleibt nach § 38 BSIG bei der Geschäftsleitung.
+- **Sie stellen die richtigen Fragen**, an Ihre IT, Ihre Dienstleister und Ihre Lieferanten, statt sich auf pauschale Zusagen zu verlassen.
+- **Sie senken Ihr persönliches Haftungsrisiko**, weil Sie Zuständigkeiten, Kontrolle und Dokumentation bewusst gestalten.
+- **Sie sind auf den Ernstfall vorbereitet** und wissen, was in den ersten 24 Stunden zu tun ist.
+- **Sie erfüllen Ihre Schulungspflicht** und erhalten eine Teilnahmebestätigung für Ihre Dokumentation.
+
+## Nach der Schulung können Sie diese Fragen beantworten
+
+- Sind wir betroffen, und ist das dokumentiert?
+- Welche Pflichten habe ich als Geschäftsleitung, und wie weise ich sie nach?
+- Welche der 10 Mindestmaßnahmen betreffen mich direkt?
+- Was ist ein erheblicher Sicherheitsvorfall, und wer meldet ihn binnen 24 Stunden an das BSI?
+- Sind wir beim BSI registriert, und welche Nachweise kann das BSI verlangen?
+- Wie sichern wir unsere Lieferkette ab?
+
+## Inhalte
+
+- Rechtsrahmen BSIG: Betroffenheit, Registrierung, Pflichten der Geschäftsleitung
+- Haftung nach § 38 Abs. 2 BSIG: Was Sie persönlich trifft und wie Sie sich schützen
+- Risikomanagement und die 10 Mindestmaßnahmen nach § 30 BSIG aus Sicht der Leitung
+- Meldepflicht nach § 32 BSIG und Krisenmanagement: der Ablauf im Ernstfall
+- Lieferkette und Dienstleister
+- Typische Angriffe auf Führungskräfte, etwa CEO Fraud und Phishing
+- Fälle aus deutschen Unternehmen
+
+## Ablauf
+
+- Kurze Impulse, Praxisbeispiele und Fallstudien statt Folienschlacht
+- Leitfragen und Diskussion auf Ebene der Geschäftsleitung
+- Raum für Ihre eigenen Fragen aus dem Unternehmen
+
+## Zielgruppe
+
+- Geschäftsführungen und Vorstände besonders wichtiger und wichtiger Einrichtungen
+- Unternehmen, die noch prüfen, ob sie unter das BSIG fallen
+- Mitglieder der obersten Leitung, etwa Werks oder Standortleitungen
+- Vorsitzende und Mitglieder von Aufsichtsrat und Beirat
+- Leitungen von IT, Informationssicherheit, Compliance, Datenschutz, Risikomanagement und Revision, die die Geschäftsleitung beraten
+
+## NIS2 Schulung in Rosenheim und München
+
+Die NIS2 Schulung für Geschäftsleitungen findet in Präsenz in Rosenheim und in München statt. Auf Wunsch kommt die Schulung als Inhouse Schulung direkt in Ihr Unternehmen. Online nehmen Sie aus ganz Deutschland teil.
+
+- **Rosenheim:** Präsenz in Rosenheim, inhouse etwa in Rosenheim, Bad Aibling, Kolbermoor, Wasserburg am Inn und Prien am Chiemsee
+- **München:** Präsenz in München, inhouse etwa in München, Freising, Erding, Dachau, Starnberg und Ebersberg
+- **Online:** aus ganz Deutschland
+
+## Voraussetzungen
+
+- Keine technischen oder juristischen Vorkenntnisse notwendig
+- Für die Online Teilnahme genügen ein aktueller Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen
+
+## Was nicht Bestandteil ist
+
+- Keine individuelle Rechtsberatung (Einzelfallprüfung optional im Anschluss möglich)
+- Keine Prüfung konkreter Unternehmensfälle (Einzelfallprüfung optional im Anschluss möglich)
+- Verbindliche rechtliche oder technische Handlungsempfehlungen, da Verantwortung zur Umsetzung beim jeweiligen Unternehmen liegt. (Einzelberatung optional im Anschluss möglich)
+
+## Abschluss
+
+- Teilnahmebestätigung nach § 38 Abs. 3 BSIG
+- Seminarunterlagen zum Nachlesen
+- Checkliste für die Geschäftsleitung zu Pflichten, Delegation und Nachweisen
+
+## Häufige Fragen zur NIS2 Schulung
+
+**Q: Gibt es die NIS2 Schulung auch in München?**
+A: Ja. Die NIS2 Schulung für Geschäftsleitungen findet in Präsenz in München statt. Als Inhouse Schulung kommt sie in Ihr Unternehmen, etwa in München, Freising, Erding, Dachau, Starnberg und Ebersberg. Alternativ nehmen Sie online teil.
+
+**Q: Wo findet die NIS2 Schulung in Rosenheim statt?**
+A: In Präsenz in Rosenheim. Als Inhouse Schulung kommt sie direkt in Ihr Unternehmen, etwa in Rosenheim, Bad Aibling, Kolbermoor, Wasserburg am Inn und Prien am Chiemsee.
+
+**Q: Erfüllt die Schulung die Pflicht nach § 38 Abs. 3 BSIG?**
+A: Ja. Die Schulung ist speziell für Geschäftsleitungen gestaltet, so wie es § 38 Abs. 3 BSIG verlangt. Sie erhalten eine Teilnahmebestätigung nach § 38 Abs. 3 BSIG für Ihre Dokumentation. Da das Gesetz eine regelmäßige Teilnahme verlangt, empfehlen wir eine Auffrischung in festen Abständen.
+
+**Q: Kann ich die NIS2 Schulung online besuchen?**
+A: Ja, aus ganz Deutschland. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen.
+
+Ihr Unternehmen sitzt in Österreich? Siehe `/nis2-seminar.html` (NIS2 Schulung für Geschäftsführungen nach § 31 NISG 2026).
+
+## Anfrage-Formular
+
+Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Online / Inhouse / Rosenheim / München), Seminartermin, Anforderungen & Ziele, Einwilligung.
 
 ---
 
@@ -744,7 +858,7 @@ Let's Encrypt, https-Verbindung mit Schloss-Symbol.
 
 **6.2 Rückruf-Formular:** Felder Name, Unternehmen, Telefonnummer. Übermittlung über mailto-Link, keine serverseitige Verarbeitung.
 
-**6.3 Seminar-Anfrage:** Anrede, Titel (optional), Vor-/Nachname, Firma, E-Mail, Nachricht (optional). Übermittlung mailto, keine Server-Verarbeitung.
+**6.3 Seminar-Anfrage:** Anrede, Titel (optional), Vor und Nachname, Firma, Website (optional), E-Mail, Telefon, Teilnehmerzahl, Seminarort, Termin, Anforderungen und Ziele. Übermittlung an ein eigenes Skript auf dem IONOS Webspace (Server in Deutschland, AVV mit IONOS SE), Weiterleitung per E-Mail, keine Speicherung auf dem Server, kein externer Formulardienst. Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
 
 **6.4 Benennungsurkunde:** Unternehmensname, Anrede, Titel, Vor-/Nachname, E-Mail, Datum. Verarbeitung ausschließlich lokal im Browser; PDF wird clientseitig erzeugt.
 

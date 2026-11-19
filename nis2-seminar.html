@@ -1015,6 +1015,7 @@
                 <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Kann ich die NIS2 Schulung online besuchen?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
                 <p class="seminar-detail__text nis2-faq__a">Ja, aus ganz Österreich. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen.</p>
               </details>
+              <p class="seminar-detail__text" style="margin-top:20px;">Ihr Unternehmen sitzt in Deutschland? Dann ist die <a href="nis2-schulung-deutschland.html" style="text-decoration:underline;">NIS2 Schulung für Geschäftsleitungen nach § 38 BSIG</a> die richtige Wahl.</p>
             </div>
           </div>
 
@@ -1025,6 +1026,8 @@
                 <h2 class="seminar-form__title">Sie haben Fragen zum Seminar?</h2>
                 <p class="seminar-form__lead">Gerne klären wir Ihre Fragen persönlich und geben Ihnen eine realistische Einschätzung, ob das Seminar für Ihr Unternehmen sinnvoll ist. Nutzen Sie das Formular für eine unverbindliche Anfrage.</p>
                 <form class="sf-form" id="seminarForm" novalidate>
+                  <input type="hidden" name="seminar" value="NIS2 Schulung Österreich">
+                  <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
 
                   <div class="sf-field">
                     <label class="sf-label" for="sf-anrede">Anrede <span class="sf-required">*</span></label>
@@ -1134,7 +1137,8 @@
                     <span class="sf-error-msg" id="sf-consent-err">Bitte stimmen Sie der Einwilligungserklärung zu.</span>
                   </div>
 
-                  <button type="submit" class="sf-submit">Anfrage absenden</button>
+                  <button type="submit" class="sf-submit" id="sf-submit">Anfrage absenden</button>
+                  <p class="sf-error-msg" id="sf-send-err" role="alert">Die Übertragung ist fehlgeschlagen. Bitte senden Sie Ihre Anfrage direkt an <a href="mailto:info@datenschutz-kroes.at" style="text-decoration:underline;">info@datenschutz-kroes.at</a>.</p>
                 </form>
               </div>
               <!-- Success -->
@@ -1379,7 +1383,7 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && navOpen) closeMobileNav(); });
 
     // Form validation
-    document.getElementById('seminarForm').addEventListener('submit', function(e) {
+    document.getElementById('seminarForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       let valid = true;
 
@@ -1423,9 +1427,25 @@
 
       if (!valid) return;
 
-      // Show success
-      document.getElementById('seminarFormContent').style.display = 'none';
-      document.getElementById('seminarSuccess').classList.add('visible');
+      // Senden über seminar-anfrage.php (IONOS Webspace)
+      const form = e.target;
+      const btn = document.getElementById('sf-submit');
+      const sendErr = document.getElementById('sf-send-err');
+      sendErr.classList.remove('visible');
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet…';
+      try {
+        const res = await fetch('seminar-anfrage.php', { method: 'POST', body: new FormData(form) });
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error || 'Fehler');
+        document.getElementById('seminarFormContent').style.display = 'none';
+        document.getElementById('seminarSuccess').classList.add('visible');
+      } catch (err) {
+        sendErr.classList.add('visible');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Anfrage absenden';
+      }
     });
 
   </script>

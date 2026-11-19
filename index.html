@@ -2554,6 +2554,9 @@
       background: radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.15) 0%, transparent 60%);
     }
 
+    /* Laenderkennzeichnung NIS2 Karten */
+    .semflag { position: absolute; bottom: 16px; left: 16px; z-index: 1; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-navy); background: #FFFFFF; padding: 5px 12px 5px 8px; border-radius: 20px; box-shadow: 0 2px 8px rgba(15,31,61,0.15); }
+    .semflag__flag { width: 18px; height: 12px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(15,31,61,0.12); display: block; }
     .seminar-card__badge {
       position: absolute;
       top: 16px;
@@ -5379,6 +5382,7 @@
           <!-- Seminar 1: NIS2 -->
           <article class="seminar-card" data-reveal data-reveal-delay="1">
             <div class="seminar-card__visual seminar-card__visual--img">
+              <span class="semflag"><svg class="semflag__flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#C8102E"/><rect y="0.667" width="3" height="0.667" fill="#FFFFFF"/></svg>Österreich</span>
               <img src="NIS2-Seminar.png" alt="NIS2 Schulung für Geschäftsführungen nach § 31 NISG 2026" class="seminar-card__img">
             </div>
             <div class="seminar-card__body">
@@ -5392,6 +5396,31 @@
                 <li>Meldepflicht binnen 24 Stunden und Krisenmanagement</li>
               </ul>
               <a href="nis2-seminar.html" class="seminar-card__cta">
+                Mehr erfahren
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Seminar 1b: NIS2 Deutschland -->
+          <article class="seminar-card" data-reveal data-reveal-delay="2">
+            <div class="seminar-card__visual seminar-card__visual--img">
+              <span class="semflag"><svg class="semflag__flag" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>Deutschland</span>
+              <img src="NIS2-Seminar.png" alt="NIS2 Schulung für Geschäftsleitungen nach § 38 BSIG" class="seminar-card__img" loading="lazy">
+            </div>
+            <div class="seminar-card__body">
+              <p class="seminar-card__eyebrow">Pflichtschulung · BSIG</p>
+              <h3 class="seminar-card__title">NIS2 Schulung für Geschäftsleitungen</h3>
+              <p class="seminar-card__text">Seit 6. Dezember 2025 müssen Geschäftsleitungen besonders wichtiger und wichtiger Einrichtungen regelmäßig an Schulungen teilnehmen. In 4 Stunden erfahren Sie, was das BSIG von Ihnen persönlich verlangt, inklusive Teilnahmebestätigung nach § 38 Abs. 3 BSIG. Die <a href="nis2-schulung-deutschland.html" style="text-decoration:underline;">NIS2 Schulung für Geschäftsleitungen</a> gibt es in Rosenheim, München und online.</p>
+              <ul class="seminar-card__topics">
+                <li>Rechtsrahmen BSIG, Betroffenheit und Registrierung</li>
+                <li>Haftung der Geschäftsleitung nach § 38 BSIG</li>
+                <li>Die 10 Mindestmaßnahmen nach § 30 BSIG</li>
+                <li>Meldepflicht an das BSI binnen 24 Stunden</li>
+              </ul>
+              <a href="nis2-schulung-deutschland.html" class="seminar-card__cta">
                 Mehr erfahren
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
