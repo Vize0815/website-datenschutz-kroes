@@ -202,7 +202,7 @@ A: Ja. Mitarbeiterschulungen sind ein zentraler Bestandteil eines wirksamen Date
 **Headline:** Datenschutz-Praxis-Wissen, direkt in Ihr Postfach.
 **Zielgruppe:** Inhaber, Geschäftsführungen und Verantwortliche
 **Inhalt:** Monatlich aktuelle News im Datenschutzrecht, praxisnahe Tipps und Hinweise auf neue Bußgeldentscheidungen. Kompakt und ohne Juristendeutsch.
-**Versand:** Mailchimp (Intuit Inc., USA, EU-U.S. DPF zertifiziert), Double-Opt-In
+**Versand:** Brevo (Sendinblue SAS, Paris, Server in der EU) über einen Cloudflare Worker als Proxy, Double-Opt-In
 **Felder:** Vorname & Name (Pflicht), E-Mail (Pflicht), Unternehmen (optional), Einwilligung (Pflicht)
 
 ## Rückruf-Modal
@@ -921,89 +921,113 @@ Datenschutz Kroes nimmt nicht an Streitbeilegungsverfahren vor Verbraucherschlic
 # 8. Datenschutzerklärung (datenschutz.html)
 
 **Title:** Datenschutzerklärung
-**Stand:** April 2026
+**Stand:** Juni 2026, letzte Anpassung November 2026 (Formulare über Formspree)
 
 ## 1. Verantwortlicher
-Alexander Kroes e.U. – Datenschutz Kroes, Glatzham 19, 6252 Breitenbach am Inn, Österreich. E-Mail: info@datenschutz-kroes.at. UID: ATU81332979, FN 639208 m (LG Innsbruck).
+Alexander Kroes e.U. – Datenschutz Kroes, Glatzham 19, 6252 Breitenbach am Inn, Österreich. Büro: Unterer Stadtplatz 11, 6330 Kufstein. E-Mail: info@datenschutz-kroes.at. UID: ATU81332979, FN 639208 m (LG Innsbruck).
 
 ## 2. Allgemeines zur Datenverarbeitung
 Verarbeitung personenbezogener Daten nur soweit zur Bereitstellung der Website und Leistungen erforderlich, regelmäßig nur nach Einwilligung.
 
 ## 3. Rechtsgrundlagen
-- Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) — z. B. Newsletter
-- Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO) — z. B. Kontaktanfragen
+- Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), z. B. Newsletter
+- Vertragserfüllung und vorvertragliche Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO), z. B. Kontaktanfragen
 - Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)
-- Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) — Bereitstellung/Sicherheit Website
+- Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO), z. B. Bereitstellung und Sicherheit der Website
 
 ## 4. Hosting und Server-Log-Dateien
 
 **Hosting:** IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland. AVV gemäß Art. 28 DSGVO. Server in Deutschland.
 
-**Server-Log-Dateien:** IP-Adresse, Datum/Uhrzeit, abgerufene Datei, Datenmenge, HTTP-Status, Browsertyp/-version, Betriebssystem, Referrer-URL. Speicherung 30 Tage zur Sicherstellung des Betriebs und Angriffsabwehr.
+**Server-Log-Dateien:** IP-Adresse, Datum/Uhrzeit, abgerufene Datei, Datenmenge, HTTP-Status, Browsertyp/-version, Betriebssystem, Referrer-URL. Löschung in der Regel nach 30 Tagen. Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO.
 
 ## 5. SSL-/TLS-Verschlüsselung
-Let's Encrypt, https-Verbindung mit Schloss-Symbol.
+Let's Encrypt, https-Verbindung.
 
 ## 6. Kontaktaufnahme
 
-**6.1 E-Mail/Telefon:** Verarbeitung übermittelter Daten zur Bearbeitung der Anfrage; Löschung sobald nicht mehr erforderlich.
+**6.1 E-Mail/Telefon:** Verarbeitung der mitgeteilten Daten zur Bearbeitung der Anfrage; Löschung, sobald nicht mehr erforderlich.
 
-**6.2 Rückruf-Formular:** Felder Name, Unternehmen, Telefonnummer. Übermittlung über Formspree (Formspree, Inc., USA, AVV und Standardvertragsklauseln, siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
+**6.2 Rückruf-Formular:** Name, Unternehmen, Telefonnummer. Übermittlung über Formspree (siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO. Löschung spätestens nach sechs Monaten, wenn kein Vertrag zustande kommt.
 
-**6.3 Seminar-Anfrage:** Anrede, Titel (optional), Vor und Nachname, Firma, Website (optional), E-Mail, Telefon, Teilnehmerzahl, Seminarort, Termin, Anforderungen und Ziele. Übermittlung über Formspree (Formspree, Inc., USA, AVV und Standardvertragsklauseln, siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
+**6.3 Seminar-Anfrage-Formular** (NIS2 Schulung Österreich und Deutschland, DSGVO Seminar): Anrede, Titel (optional), Vor- und Nachname, Firma, Website (optional), E-Mail, Telefon, Teilnehmerzahl, Seminarort, Termin, Anforderungen und Ziele. Übermittlung über Formspree (siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO. Löschung spätestens nach sechs Monaten, wenn kein Vertrag zustande kommt.
 
-**6.4 Benennungsurkunde:** Unternehmensname, Anrede, Titel, Vor-/Nachname, E-Mail, Datum. Verarbeitung ausschließlich lokal im Browser; PDF wird clientseitig erzeugt.
+**6.4 Benennungsurkunde:** Unternehmensname, Anrede, Titel, Vor- und Nachname, E-Mail, Datum. Verarbeitung ausschließlich lokal im Browser; das PDF wird clientseitig erzeugt, keine Übermittlung an einen Server.
+
+**6.5 NIS-2 Selbsttest-Quiz:** Fragen und Auswertung laufen lokal im Browser, das Ergebnis-PDF entsteht auf dem Gerät. Nur wenn das Ergebnis-Formular abgesendet wird, werden Name (Pflicht), optional E-Mail, Firma, Branche, Telefon, Newsletter-Einwilligung sowie Quiz-Antworten und Ergebnis an info@datenschutz-kroes.at übermittelt, technisch über Formspree (siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO, für den Newsletter Art. 6 Abs. 1 lit. a DSGVO. Löschung spätestens nach sechs Monaten ohne Mandat. Das Ergebnis ist eine unverbindliche Orientierung.
+
+**6.6 Quick-Check-Terminbuchung (Cal.com und Microsoft Teams):** Buchung über Cal.com, Inc. (USA; EU-U.S. Data Privacy Framework, ergänzend Standardvertragsklauseln, AVV). Verarbeitet werden Name, E-Mail, Firma (optional), Zeit-Slot und technische Verbindungsdaten. Der Termin selbst läuft über Microsoft Teams (Microsoft Ireland Operations Limited; mögliche Übermittlung an Microsoft Corporation USA auf Grundlage DPF und Standardvertragsklauseln; DPA). Keine Aufzeichnung. Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
+
+**6.7 Kombi-Anfrage-Formular (Tally):** Anfrage für ein ISMS und DSB Bundle über Tally BV, Lochristi, Belgien. Verarbeitung in der EU, kein Drittlandtransfer, AVV. Automatische Eingangsbestätigung per E-Mail. Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
+
+**6.8 Online-Meetings über Zoom:** Zoom Video Communications, Inc. (USA; DPF, ergänzend Standardvertragsklauseln, Zoom Data Processing Agreement). Keine Aufzeichnung ohne gesonderte Einwilligung. Meeting-Metadaten werden nach spätestens 30 Tagen gelöscht. Rechtsgrundlage Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO.
+
+**6.9 Formspree:** Formspree, Inc., 340 S Lemon Ave #9007, Walnut, CA 91789, USA. Eingesetzt für die Kontaktformulare der Branchenseiten (Steuerberater, Arztpraxen, Handwerk) sowie für Rückruf-Formular (6.2), Seminar-Anfrage-Formular (6.3) und NIS-2 Quiz (6.5). Drittlandtransfer auf Grundlage von Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO; AVV gemäß Art. 28 DSGVO. Einsendungen im Formspree-Konto werden nach Abschluss der Bearbeitung manuell entfernt.
 
 ## 7. Newsletter
 
-Daten: Vor-/Nachname, E-Mail, Unternehmen (optional). Versand über **Mailchimp** (Intuit Inc. – The Rocket Science Group LLC, 675 Ponce de Leon Ave NE, Suite 5000, Atlanta, GA 30308, USA). Mailchimp ist nach EU-U.S. Data Privacy Framework (DPF) zertifiziert.
+Daten: Vor- und Nachname, E-Mail, Unternehmen (optional). Versand über **Brevo** (Sendinblue SAS, 7 rue de Madrid, 75008 Paris, Frankreich). Speicherung auf Servern in der EU. AVV gemäß Art. 28 DSGVO.
 
-Double-Opt-In-Verfahren. Widerruf jederzeit über Abmeldelink im Newsletter oder per E-Mail. Speicherung nur für Dauer des Abos. Mailchimp-Analyse von Öffnungs-/Klickraten zur Optimierung der Inhalte.
+Technische Übermittlung über einen **Cloudflare Worker** als Proxy zur Brevo-API (Cloudflare, Inc., USA; im EWR Cloudflare Germany GmbH, München). Keine dauerhafte Speicherung bei Cloudflare; Cloudflare ist nach dem EU-U.S. Data Privacy Framework zertifiziert.
+
+Double-Opt-In-Verfahren. Rechtsgrundlage Art. 6 Abs. 1 lit. a DSGVO. Widerruf jederzeit über den Abmeldelink oder per E-Mail. Löschung unverzüglich nach Abmeldung.
 
 ## 8. Eingebettete Inhalte (YouTube)
 
-YouTube-Einbettung von Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland) im erweiterten Datenschutzmodus (`youtube-nocookie.com`). Zwei-Klick-Lösung mit aktiver Einwilligung. Bei Wiedergabe können erfasst werden: IP-Adresse, Datum/Uhrzeit, Browsertyp, OS, Geräte-ID. Bei eingeloggtem Google-Konto Zuordnung zum Profil möglich.
+YouTube von Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland) im erweiterten Datenschutzmodus (`youtube-nocookie.com`). Zwei-Klick-Lösung: Vor dem aktiven Abspielen werden keine Daten an YouTube übertragen. Rechtsgrundlage Art. 6 Abs. 1 lit. a DSGVO.
 
 ## 9. Social-Media-Links
-Hyperlinks zu Facebook, YouTube und Instagram (keine Plugins). Datenübermittlung erst nach Klick.
+Einfache Hyperlinks zu den Profilen bei Facebook, Instagram, LinkedIn und YouTube, keine Plugins. Datenübermittlung erst nach Klick.
 
 ## 10. Schriftarten
-DM Sans und DM Mono — lokal auf dem Server gespeichert, **keine** Verbindung zu Google-Servern.
+DM Sans und DM Mono, lokal auf dem Server gespeichert, **keine** Verbindung zu Google-Servern.
 
 ## 11. Cookies und Cookie-Banner
 
 **Kategorien:**
 - Notwendig (immer aktiv, keine Einwilligung nötig)
 - Präferenzen (aktuell nicht im Einsatz)
-- Statistiken (aktuell nicht im Einsatz)
-- Marketing (eingebettete YouTube-Videos auf Unterseiten – Google Ireland Ltd.)
+- Statistiken (Google Analytics 4, nur bei ausdrücklicher Einwilligung)
+- Marketing (eingebettete YouTube-Videos, nur bei Einwilligung)
 
-**Optionen:** Ablehnen / Auswahl erlauben / Alle zulassen — Privacy by Default. Speicherung Einwilligung mit Zeitstempel, Kategorien, Methode, Versions-ID nur in localStorage (Browser), keine Server-Übertragung. Gültigkeit 1 Jahr.
+**Optionen:** Ablehnen / Auswahl erlauben / Alle zulassen, gleichwertig. Privacy by Default. Einwilligungsnachweis mit Zeitstempel, Kategorien, Methode und Versions-ID nur im localStorage des Browsers, keine Übertragung an den Server. Gültigkeit 1 Jahr. Rechtsgrundlage Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 6 Abs. 1 lit. f DSGVO i.V.m. § 165 Abs. 3 TKG 2021.
 
 **Verwendete Technologien:**
 
 | Bezeichnung | Zweck | Kategorie | Speicherort | Speicherdauer |
 |---|---|---|---|---|
 | dsk_cookie_consent_v2 | Einwilligungsnachweis | Notwendig | localStorage (Browser) | 1 Jahr |
-| YouTube-Embed (optional) | Einbettung Videos | Marketing | Drittanbieter-Cookies (Google Ireland Ltd.) | bis zu 2 Jahre |
+| YouTube-Embed (optional) | Laden eingebetteter Videos | Marketing | Drittanbieter-Cookies (Google Ireland Ltd.) | bis zu 2 Jahre |
+| _ga | Client-ID Google Analytics 4 | Statistiken | Cookie (First-Party) | 2 Jahre |
+| _ga_VEP7SSRXMT | Session-Status Google Analytics 4 | Statistiken | Cookie (First-Party) | 2 Jahre |
 
-## 12. Keine Tracking- oder Analyse-Tools
-Kein Google Analytics, Matomo, Facebook Pixel oder vergleichbare Dienste.
+## 12. Google Analytics 4
 
-## 13. Betroffenenrechte (DSGVO)
-- 13.1 Auskunftsrecht (Art. 15 DSGVO)
-- 13.2 Berichtigungsrecht (Art. 16 DSGVO)
-- 13.3 Löschrecht (Art. 17 DSGVO)
-- 13.4 Recht auf Einschränkung (Art. 18 DSGVO)
-- 13.5 Datenübertragbarkeit (Art. 20 DSGVO)
-- 13.6 Widerspruchsrecht (Art. 21 DSGVO)
-- 13.7 Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)
+Google Analytics 4 der Google Ireland Limited mit **Consent Mode v2**. Ohne Einwilligung werden nur anonymisierte Signale ohne Cookies und ohne User-ID gesendet; personenbezogene Nutzungsdaten erst nach Zustimmung zur Kategorie „Statistiken“. Rechtsgrundlage Art. 6 Abs. 1 lit. a DSGVO. Mögliche Übermittlung an Google LLC (USA) auf Grundlage des EU-U.S. Data Privacy Framework, ergänzend Standardvertragsklauseln. Cookies maximal 2 Jahre, Rohdaten bei Google 14 Monate. Widerruf jederzeit über die Cookie-Einstellungen.
 
-## 14. Beschwerderecht
+## 13. Cloudflare Web Analytics
+
+Cookielose Reichweitenmessung der Cloudflare, Inc. (USA; im EWR Cloudflare Germany GmbH, München). Keine Cookies, kein localStorage, kein Fingerprinting, keine Profilbildung; nur aggregierte Kennzahlen wie Seitenaufrufe, Referrer, Browser, Land und Core Web Vitals. Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO. DPF Zertifizierung, ergänzend Standardvertragsklauseln und AVV. Aggregierte Daten maximal sechs Monate. Widerspruch über „Do Not Track“, GPC oder Blockieren von static.cloudflareinsights.com.
+
+Darüber hinaus keine weiteren Tracking-, Analyse- oder Werbe-Tools (z. B. kein Matomo, kein Facebook Pixel).
+
+## 14. Betroffenenrechte (DSGVO)
+- Auskunftsrecht (Art. 15 DSGVO)
+- Berichtigung (Art. 16 DSGVO)
+- Löschung (Art. 17 DSGVO)
+- Einschränkung der Verarbeitung (Art. 18 DSGVO)
+- Datenübertragbarkeit (Art. 20 DSGVO)
+- Widerspruch (Art. 21 DSGVO)
+- Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)
+
+## 15. Beschwerderecht
 Österreichische Datenschutzbehörde, Barichgasse 40-42, 1030 Wien. Tel: +43 1 52 152-0, E-Mail: dsb@dsb.gv.at, Website: www.dsb.gv.at
 
-## 15. Datensicherheit
-Technische und organisatorische Sicherheitsmaßnahmen, fortlaufend an technologische Entwicklung angepasst.
+## 16. Datensicherheit
+Technische und organisatorische Sicherheitsmaßnahmen, fortlaufend an die technologische Entwicklung angepasst.
+
+## 17. Aktualität
+Stand Juni 2026. Die jeweils aktuelle Fassung ist auf datenschutz.html abrufbar.
 
 ---
 
