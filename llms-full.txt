@@ -24,7 +24,8 @@
 |---|---|---|
 | `/index.html` | Startseite – Datenschutzbeauftragter für KMU & Mittelstand | Hauptseite mit Hero, Leistungen, Prozess, FAQ, Kontakt, Newsletter |
 | `/datenschutz-flatrate.html` | Datenschutz-Flatrate – Externer DSB ab 290 €/Monat | Pakete & Preise, DSB-Flatrate-Modell mit 4 Tarifen |
-| `/dsgvo-seminar.html` | DSGVO für Geschäftsführungen – Praxis-Seminar | Detail-Seite zum DSGVO-Seminar |
+| `/dsgvo-seminar.html` | DSGVO Seminar für Geschäftsführungen in Tirol und Salzburg | DSGVO Seminar nach DSGVO und DSG (Österreich) |
+| `/dsgvo-seminar-deutschland.html` | DSGVO Seminar für Geschäftsführungen in Rosenheim und München | DSGVO Seminar nach DSGVO und BDSG (Deutschland) |
 | `/nis2-seminar.html` | NIS2 Schulung für Geschäftsführungen in Tirol und Salzburg | Pflichtschulung NIS2 Kompakt für Leitungsorgane nach § 31 NISG 2026 (Österreich) |
 | `/nis2-schulung-deutschland.html` | NIS2 Schulung für Geschäftsleitungen in Rosenheim und München | Pflichtschulung für Geschäftsleitungen nach § 38 Abs. 3 BSIG (Deutschland) |
 | `/downloads.html` | Downloads | Kostenlose Checklisten, Leitfäden, Vorlagen (PDF) |
@@ -158,7 +159,8 @@ Einleitung der gesetzlich vorgeschriebenen Reaktionsfrist auf Datenschutzvorfäl
 
 - **NIS2 Schulung für Geschäftsführungen, Österreich** (Pflichtschulung nach § 31 NISG 2026, in Tirol, Salzburg und online) → siehe `/nis2-seminar.html`
 - **NIS2 Schulung für Geschäftsleitungen, Deutschland** (Pflichtschulung nach § 38 Abs. 3 BSIG, in Rosenheim, München und online) → siehe `/nis2-schulung-deutschland.html`
-- **DSGVO Grundlagen** (EU-Datenschutz-Grundverordnung) → siehe `/dsgvo-seminar.html`
+- **DSGVO Seminar für Geschäftsführungen, Österreich** (DSGVO und DSG, in Kufstein, Salzburg und inhouse) → siehe `/dsgvo-seminar.html`
+- **DSGVO Seminar für Geschäftsführungen, Deutschland** (DSGVO und BDSG, in Rosenheim, München und inhouse) → siehe `/dsgvo-seminar-deutschland.html`
 
 Alle Seminare werden auch als **Inhouse-Schulung** direkt im Unternehmen des Kunden angeboten.
 
@@ -585,45 +587,36 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 
 ---
 
-# 4. DSGVO für Geschäftsführungen Seminar (dsgvo-seminar.html)
+# 4. DSGVO Seminar Österreich (dsgvo-seminar.html)
 
-**Title:** DSGVO für Geschäftsführungen – Praxis-Seminar
-**Meta-Description:** DSGVO für Geschäftsführungen: Das Praxis-Seminar für Entscheider. 120 Minuten, 495€ zzgl. MwSt. Was Geschäftsführer wirklich wissen müssen – klar, verständlich, ohne Juristendeutsch.
+**Title:** DSGVO Seminar für Geschäftsführungen in Tirol und Salzburg
+**Meta-Description:** DSGVO Seminar für Geschäftsführungen nach DSGVO und DSG. In Kufstein und Salzburg oder inhouse in ganz Tirol und Salzburg. 3 Stunden, 350 € zzgl. MwSt.
 
 ## Hero
 
-**Eyebrow:** Seminar-Reihe · Datenschutz
-**H1:** DSGVO für Geschäftsführungen
+**Eyebrow:** Seminar · DSGVO und DSG
+**H1:** DSGVO Seminar für Geschäftsführungen in Österreich
 **Lead:** In diesem praxisnahen Seminar erhalten Geschäftsführer und Entscheider einen klaren Überblick über die DSGVO – ihre Pflichten, ihre Haftung und die konkreten Anforderungen an ihr Unternehmen. Ohne Juristendeutsch, direkt anwendbar.
-
-**Was Sie lernen:**
-- Was die DSGVO konkret von Ihrem Unternehmen verlangt
-- Welche persönliche Haftung Geschäftsführer tragen
-- Welche Fehler in der Praxis teuer werden können
-- Wie Sie Datenschutz effizient in den Betrieb integrieren
-- Welche nächsten Schritte für Ihr Unternehmen sinnvoll sind
+**Hinweis:** In Österreich gilt neben der DSGVO das Datenschutzgesetz (DSG). Zuständig für die Aufsicht ist die Datenschutzbehörde in Wien. Das Seminar zeigt Ihnen, was beides für Ihr Unternehmen bedeutet.
 
 ## Eckdaten
 
-- **Dauer:** 240 min
+- **Dauer:** 3 Stunden
 - **Teilnehmer:** min. 2 – max. 8
-- **Uhrzeit:** 14:00 – 18:00 Uhr
+- **Uhrzeit:** 09:00 – 12:00 Uhr
 - **Format:** Präsenz / Inhouse
-- **Preis:** 895,00 € zzgl. MwSt. pro Teilnehmer / Buchung
-- **Anfrage:** mailto:info@datenschutz-kroes.at?subject=Anfrage%3A%20DSGVO%20f%C3%BCr%20Gesch%C3%A4ftsf%C3%BChrungen%20Seminar
-
-## Ziel des Praxis-Seminars
-
-Das Seminar vermittelt Grundlagen, Zusammenhänge und Entscheidungsgrundlagen der DSGVO aus unternehmerischer und organisatorischer Perspektive. Ziel ist es, die Teilnehmer in die Lage zu versetzen, Datenschutzthemen zu verstehen, Verantwortlichkeiten klar zu benennen und die wichtigsten Maßnahmen für eine datenschutzkonforme Umsetzung im Unternehmen zu planen.
+- **Preis:** 350,00 € zzgl. MwSt. pro Teilnehmer / Buchung
 
 ## Kursinhalte
 
+- Rechtsrahmen in Österreich: DSGVO, Datenschutzgesetz (DSG) und die Rolle der Datenschutzbehörde
+- Haftung der Geschäftsführung nach § 25 GmbHG: Die Haftungsbeschränkung fällt weg, wenn Ihnen persönlich ein Fehlverhalten nachgewiesen wird, etwa durch Organisationsverschulden, Vorsatz oder grobe Fahrlässigkeit oder strafrechtliche Verstöße
 - Verarbeitungsverzeichnis: Typische Fehler in KMU, aktuelle Bußgelder und Bereiche, die häufig übersehen werden
 - Verarbeitungsverzeichnis und Rollen: Wer ist verantwortlich für welche Daten
 - Datenschutz-Folgenabschätzung: Wann ist eine DSFA gefordert und wie wird sie durchgeführt
-- Praktische Umsetzung: 30-Tage-Umsetzungsplan, Quick Wins, weitere Empfehlungen
-- Praxisbeispiele: Wie Datenschutz in bestehende Unternehmensprozesse eingebunden wird
-- Dokumentation: Mustertexte, Tools und Checklisten für DSGVO-Konformität
+- Praktische Umsetzung: Erstellung eines 30-Tage-Umsetzungsplans, Quick Wins für sofortige Verbesserungen und weitere Empfehlungen
+- Praxisbeispiele: Wie Datenschutz in bestehende Unternehmensprozesse eingebunden werden kann und wie Maßnahmen im Team umgesetzt werden
+- Dokumentation: Mustertexte, Tools und Checklisten für die Datenschutzdokumentation und Überwachung der DSGVO-Konformität
 
 ## Zielgruppe
 
@@ -632,16 +625,23 @@ Das Seminar vermittelt Grundlagen, Zusammenhänge und Entscheidungsgrundlagen de
 - Verantwortliche für Organisation, Datenschutz und Risikomanagement
 - Inhaber von KMU, die Datenschutz selbst verantworten
 
+## DSGVO Seminar in Tirol und Salzburg
+
+Das DSGVO Seminar für Geschäftsführungen findet in Präsenz in Kufstein und in Salzburg statt. Auf Wunsch kommt das Seminar als Inhouse Schulung direkt in Ihr Unternehmen, in ganz Tirol und im Bundesland Salzburg.
+
+- **Tirol:** Präsenz in Kufstein, inhouse etwa in Innsbruck, Kufstein, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol
+- **Salzburg:** Präsenz in Salzburg, inhouse etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau
+
 ## Voraussetzungen
 
-Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von Vorteil.
+- Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von Vorteil.
 
 ## Was nicht Bestandteil ist
 
-- Keine individuelle Rechtsberatung
-- Keine Prüfung konkreter Unternehmensfälle
-- Verbindliche rechtliche oder technische Handlungsempfehlungen
-- Keine formellen Zertifikate oder Prüfungen
+- Keine individuelle Rechtsberatung (Einzelfallprüfung optional im Anschluss möglich)
+- Keine Prüfung konkreter Unternehmensfälle (Einzelfallprüfung optional im Anschluss möglich)
+- Verbindliche rechtliche oder technische Handlungsempfehlungen, da Verantwortung zur Umsetzung beim jeweiligen Unternehmen liegt (Einzelberatung optional im Anschluss möglich)
+- Es werden keine formellen Zertifikate oder Prüfungen vergeben
 
 ## Abschluss
 
@@ -650,27 +650,119 @@ Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von 
 - Tools & Vorlagen für Prozesse
 - Klarheit über Risiken & Handlungsoptionen
 
-## Termine 2026 (Auswahl)
+## Häufige Fragen zum DSGVO Seminar
 
-05.05. · 11.06. · 21.07. · 11.08. · 10.09. · 06.10. · 12.11. · 10.12. · oder individueller Termin
+**Q: Gibt es das DSGVO Seminar auch in Salzburg?**
+A: Ja. Das DSGVO Seminar für Geschäftsführungen findet in Präsenz in Salzburg statt. Als Inhouse Schulung kommt es in Ihr Unternehmen, etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau.
 
-## Testimonials zum Seminar
+**Q: Wo findet das DSGVO Seminar in Tirol statt?**
+A: In Präsenz in Kufstein. Als Inhouse Schulung kommt es direkt in Ihr Unternehmen, etwa in Innsbruck, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol.
 
-> ★★★★★ „Nach dem Seminar hatte ich zum ersten Mal das Gefühl, wirklich zu verstehen, was von mir als Geschäftsführerin erwartet wird." — Christine Berger, Geschäftsführerin
+**Q: Welche Gesetze gelten in Österreich neben der DSGVO?**
+A: Neben der DSGVO gilt das österreichische Datenschutzgesetz (DSG). Es ergänzt die DSGVO etwa beim Datenschutz im Beschäftigungskontext und bei der Bildverarbeitung. Die Aufsicht führt die Datenschutzbehörde in Wien.
 
-> ★★★★★ „Der 30-Tage-Plan war Gold wert. Wir haben in einem Monat mehr umgesetzt als in den zwei Jahren davor." — Robert Fischler, Inhaber
+**Q: Kann ich das DSGVO Seminar online besuchen?**
+A: Das DSGVO Seminar findet in Präsenz in Kufstein und Salzburg oder als Inhouse Schulung in Ihrem Unternehmen statt. Für eine Online Variante sprechen Sie uns gerne an.
 
-> ★★★★★ „Kompetent, praxisnah und ohne Fachjargon. Genau das, was wir gebraucht haben." — Stefan Niedermayr, Geschäftsführer
+Ihr Unternehmen sitzt in Deutschland? Dann ist das DSGVO Seminar für Geschäftsführungen in Deutschland (`/dsgvo-seminar-deutschland.html`) die richtige Wahl.
 
-> ★★★★★ „Ich dachte, wir sind bereits gut aufgestellt. Das Seminar hat gezeigt, wo wir noch Lücken haben – und wie wir sie schließen." — Eva Schneider, Abteilungsleiterin
+## Termine 2026
 
-> ★★★★★ „Vier Stunden, die sich gelohnt haben. Klare Struktur, relevante Inhalte, sofort umsetzbar." — Michael Bruckner, Geschäftsführer
-
-> ★★★★★ „Herr Kroes erklärt Datenschutz so, dass man ihn versteht und nicht fürchtet. Das war für unser Team ein echter Wendepunkt." — Sabine Hofer, Inhaberin
+12.11.2026 (ausgebucht) · 26.11.2026 · 10.12.2026 · 17.12.2026 · oder individueller Termin
 
 ## Anfrage-Formular
 
-Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Inhouse / Kufstein, Tirol), Seminartermin, Anforderungen & Ziele, Einwilligung.
+Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Inhouse / Kufstein, Tirol / Salzburg), Seminartermin, Anforderungen & Ziele, Einwilligung.
+
+---
+
+# 4b. DSGVO Seminar Deutschland (dsgvo-seminar-deutschland.html)
+
+**Title:** DSGVO Seminar für Geschäftsführungen in Rosenheim und München
+**Meta-Description:** DSGVO Seminar für Geschäftsführungen nach DSGVO und BDSG. In Rosenheim und München oder inhouse in Ihrem Unternehmen. 3 Stunden, 350 € zzgl. MwSt.
+
+## Hero
+
+**Eyebrow:** Seminar · DSGVO und BDSG
+**H1:** DSGVO Seminar für Geschäftsführungen in Deutschland
+**Lead:** In diesem praxisnahen Seminar erhalten Geschäftsführer und Entscheider einen klaren Überblick über die DSGVO – ihre Pflichten, ihre Haftung und die konkreten Anforderungen an ihr Unternehmen. Ohne Juristendeutsch, direkt anwendbar.
+**Hinweis:** In Deutschland gilt neben der DSGVO das Bundesdatenschutzgesetz (BDSG). Für Unternehmen in Bayern ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA) zuständig. Das Seminar zeigt Ihnen, was beides für Ihr Unternehmen bedeutet.
+
+## Eckdaten
+
+- **Dauer:** 3 Stunden
+- **Teilnehmer:** min. 2 – max. 8
+- **Uhrzeit:** 09:00 – 12:00 Uhr
+- **Format:** Präsenz / Inhouse
+- **Preis:** 350,00 € zzgl. MwSt. pro Teilnehmer / Buchung
+
+## Kursinhalte
+
+- Rechtsrahmen in Deutschland: DSGVO, Bundesdatenschutzgesetz (BDSG) und die Aufsicht durch das BayLDA
+- Datenschutzbeauftragter: Wann er nach Art. 37 DSGVO und § 38 BDSG Pflicht ist, etwa ab 20 Personen, die ständig personenbezogene Daten automatisiert verarbeiten
+- Haftung der Geschäftsführung nach § 43 GmbHG: Die Haftungsbeschränkung fällt weg, wenn Ihnen persönlich ein Fehlverhalten nachgewiesen wird, etwa durch Organisationsverschulden, Vorsatz oder grobe Fahrlässigkeit oder strafrechtliche Verstöße
+- Verarbeitungsverzeichnis: Typische Fehler in KMU, aktuelle Bußgelder und Bereiche, die häufig übersehen werden
+- Verarbeitungsverzeichnis und Rollen: Wer ist verantwortlich für welche Daten
+- Datenschutz-Folgenabschätzung: Wann ist eine DSFA gefordert und wie wird sie durchgeführt
+- Praktische Umsetzung: Erstellung eines 30-Tage-Umsetzungsplans, Quick Wins für sofortige Verbesserungen und weitere Empfehlungen
+- Praxisbeispiele: Wie Datenschutz in bestehende Unternehmensprozesse eingebunden werden kann und wie Maßnahmen im Team umgesetzt werden
+- Dokumentation: Mustertexte, Tools und Checklisten für die Datenschutzdokumentation und Überwachung der DSGVO-Konformität
+
+## Zielgruppe
+
+- Geschäftsführer:innen
+- Bereichs- und Abteilungsleiter
+- Verantwortliche für Organisation, Datenschutz und Risikomanagement
+- Inhaber von KMU, die Datenschutz selbst verantworten
+
+## DSGVO Seminar in Rosenheim und München
+
+Das DSGVO Seminar für Geschäftsführungen findet in Präsenz in Rosenheim und in München statt. Auf Wunsch kommt das Seminar als Inhouse Schulung direkt in Ihr Unternehmen.
+
+- **Rosenheim:** Präsenz in Rosenheim, inhouse etwa in Rosenheim, Bad Aibling, Kolbermoor, Wasserburg am Inn und Prien am Chiemsee
+- **München:** Präsenz in München, inhouse etwa in München, Freising, Erding, Dachau, Starnberg und Ebersberg
+
+## Voraussetzungen
+
+- Keine besonderen Vorkenntnisse notwendig. PC- bzw. Internet-Grundkenntnisse von Vorteil.
+
+## Was nicht Bestandteil ist
+
+- Keine individuelle Rechtsberatung (Einzelfallprüfung optional im Anschluss möglich)
+- Keine Prüfung konkreter Unternehmensfälle (Einzelfallprüfung optional im Anschluss möglich)
+- Verbindliche rechtliche oder technische Handlungsempfehlungen, da Verantwortung zur Umsetzung beim jeweiligen Unternehmen liegt (Einzelberatung optional im Anschluss möglich)
+- Es werden keine formellen Zertifikate oder Prüfungen vergeben
+
+## Abschluss
+
+- Praxisnahe Seminarunterlagen
+- 30-Tage-Umsetzungsplan
+- Tools & Vorlagen für Prozesse
+- Klarheit über Risiken & Handlungsoptionen
+
+## Häufige Fragen zum DSGVO Seminar
+
+**Q: Gibt es das DSGVO Seminar auch in München?**
+A: Ja. Das DSGVO Seminar für Geschäftsführungen findet in Präsenz in München statt. Als Inhouse Schulung kommt es in Ihr Unternehmen, etwa in München, Freising, Erding, Dachau, Starnberg und Ebersberg.
+
+**Q: Wo findet das DSGVO Seminar in Rosenheim statt?**
+A: In Präsenz in Rosenheim. Als Inhouse Schulung kommt es direkt in Ihr Unternehmen, etwa in Bad Aibling, Kolbermoor, Wasserburg am Inn und Prien am Chiemsee.
+
+**Q: Ab wann braucht mein Unternehmen einen Datenschutzbeauftragten?**
+A: In Deutschland in der Regel, sobald mindestens 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind (§ 38 BDSG). Unabhängig davon besteht die Pflicht nach Art. 37 DSGVO, etwa bei umfangreicher Verarbeitung sensibler Daten.
+
+**Q: Kann ich das DSGVO Seminar online besuchen?**
+A: Das DSGVO Seminar findet in Präsenz in Rosenheim und München oder als Inhouse Schulung in Ihrem Unternehmen statt. Für eine Online Variante sprechen Sie uns gerne an.
+
+Ihr Unternehmen sitzt in Österreich? Dann ist das DSGVO Seminar für Geschäftsführungen in Österreich (`/dsgvo-seminar.html`) die richtige Wahl.
+
+## Termine 2026
+
+12.11.2026 (ausgebucht) · 26.11.2026 · 08.12.2026 · oder individueller Termin
+
+## Anfrage-Formular
+
+Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilnehmer (2–8), Seminar-Ort (Inhouse / Rosenheim / München), Seminartermin, Anforderungen & Ziele, Einwilligung.
 
 ---
 

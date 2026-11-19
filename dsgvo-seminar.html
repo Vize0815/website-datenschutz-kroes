@@ -17,8 +17,8 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DSGVO für Geschäftsführungen – Praxis-Seminar | Datenschutz Kroes</title>
-  <meta name="description" content="DSGVO für Geschäftsführungen: Das Praxis-Seminar für Entscheider. 120 Minuten, 495€ zzgl. MwSt. Was Geschäftsführer wirklich wissen müssen – klar, verständlich, ohne Juristendeutsch.">
+  <title>DSGVO Seminar für Geschäftsführungen in Tirol und Salzburg | Datenschutz Kroes</title>
+  <meta name="description" content="DSGVO Seminar für Geschäftsführungen nach DSGVO und DSG. In Kufstein und Salzburg oder inhouse in ganz Tirol und Salzburg. 3 Stunden, 350 € zzgl. MwSt.">
   <link rel="canonical" href="https://datenschutz-kroes.at/dsgvo-seminar.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="logo-datenschutz-kroes.png">
@@ -291,6 +291,16 @@
     .seminar-detail__list li { font-size: 15px; font-weight: 300; color: var(--color-slate); padding-left: 20px; position: relative; line-height: 1.65; }
     .seminar-detail__list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--color-gold); }
     .seminar-detail__divider { border: none; border-top: 1px solid var(--color-mist); margin: 36px 0; }
+    /* FAQ aufklappbar */
+    .nis2-faq { border-bottom: 1px solid var(--color-mist); }
+    .nis2-faq:first-of-type { border-top: 1px solid var(--color-mist); margin-top: 8px; }
+    .nis2-faq__q { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; cursor: pointer; list-style: none; }
+    .nis2-faq__q::-webkit-details-marker { display: none; }
+    .nis2-faq__title { font-size: 16px; font-weight: 600; color: var(--color-navy); line-height: 1.4; }
+    .nis2-faq__icon { flex-shrink: 0; color: var(--color-gold); transition: transform var(--transition-base); }
+    .nis2-faq[open] .nis2-faq__icon { transform: rotate(180deg); }
+    .nis2-faq__q:hover .nis2-faq__title { color: var(--color-prussian); }
+    .nis2-faq__a { padding-bottom: 16px; margin-bottom: 0; }
 
     /* Right column — Form */
     .seminar-form__wrap { position: sticky; top: 24px; }
@@ -541,6 +551,120 @@
 .infobar__close { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; color: rgba(255,255,255,0.40); cursor: pointer; padding: 6px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: color 200ms; border-radius: 4px; }
 .infobar__close:hover { color: rgba(255,255,255,0.80); }
 @media (max-width: 640px) { .infobar { font-size: 11.5px; padding: 9px 42px 9px 12px; } }</style>
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "DSGVO Seminar für Geschäftsführungen in Österreich",
+    "description": "DSGVO Seminar für Geschäftsführungen nach DSGVO und DSG. In Kufstein und Salzburg oder inhouse in ganz Tirol und Salzburg. 3 Stunden, 350 € zzgl. MwSt.",
+    "url": "https://datenschutz-kroes.at/dsgvo-seminar.html",
+    "inLanguage": "de-AT",
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Geschäftsführungen und Entscheider"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Datenschutz Kroes",
+      "url": "https://datenschutz-kroes.at/",
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Tirol"
+        },
+        {
+          "@type": "State",
+          "name": "Salzburg"
+        }
+      ]
+    },
+    "offers": {
+      "@type": "Offer",
+      "category": "Paid",
+      "price": "350.00",
+      "priceCurrency": "EUR",
+      "url": "https://datenschutz-kroes.at/dsgvo-seminar.html",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "350.00",
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      }
+    },
+    "hasCourseInstance": [
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "courseWorkload": "PT3H",
+        "location": {
+          "@type": "Place",
+          "name": "Kufstein",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kufstein",
+            "addressRegion": "Tirol",
+            "addressCountry": "AT"
+          }
+        }
+      },
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "courseWorkload": "PT3H",
+        "location": {
+          "@type": "Place",
+          "name": "Salzburg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Salzburg",
+            "addressRegion": "Salzburg",
+            "addressCountry": "AT"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Gibt es das DSGVO Seminar auch in Salzburg?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Das DSGVO Seminar für Geschäftsführungen findet in Präsenz in Salzburg statt. Als Inhouse Schulung kommt es in Ihr Unternehmen, etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wo findet das DSGVO Seminar in Tirol statt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Präsenz in Kufstein. Als Inhouse Schulung kommt es direkt in Ihr Unternehmen, etwa in Innsbruck, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Gesetze gelten in Österreich neben der DSGVO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Neben der DSGVO gilt das österreichische Datenschutzgesetz (DSG). Es ergänzt die DSGVO etwa beim Datenschutz im Beschäftigungskontext und bei der Bildverarbeitung. Die Aufsicht führt die Datenschutzbehörde in Wien."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich das DSGVO Seminar online besuchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Das DSGVO Seminar findet in Präsenz in Kufstein und Salzburg oder als Inhouse Schulung in Ihrem Unternehmen statt. Für eine Online Variante sprechen Sie uns gerne an."
+        }
+      }
+    ]
+  }
+]
+  </script>
 </head>
 <body>
   <!-- ============= INFOBAR ============= -->
@@ -631,9 +755,10 @@
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Zurück zu den Seminaren
           </a>
-          <p class="page-hero__eyebrow">Seminar-Reihe · Datenschutz</p>
-          <h1 class="page-hero__title">DSGVO für Geschäftsführungen</h1>
+          <p class="page-hero__eyebrow">Seminar · DSGVO und DSG</p>
+          <h1 class="page-hero__title">DSGVO Seminar für Geschäftsführungen in Österreich</h1>
           <p class="page-hero__lead">In diesem praxisnahen Seminar erhalten Geschäftsführer und Entscheider einen klaren Überblick über die DSGVO – ihre Pflichten, ihre Haftung und die konkreten Anforderungen an ihr Unternehmen. Ohne Juristendeutsch, direkt anwendbar.</p>
+          <p class="page-hero__lead" style="font-weight:600;color:var(--color-prussian);">In Österreich gilt neben der DSGVO das Datenschutzgesetz (DSG). Zuständig für die Aufsicht ist die Datenschutzbehörde in Wien. Das Seminar zeigt Ihnen, was beides für Ihr Unternehmen bedeutet.</p>
           <div class="page-hero__checks">
             <div class="page-hero__check">
               <div class="page-hero__check-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -660,13 +785,13 @@
 
         <!-- Right: Info Box -->
         <div class="seminar-info-box">
-          <img src="DSGVO-Seminar.webp" alt="DSGVO für Geschäftsführungen Seminar" class="seminar-info-box__img">
+          <img src="DSGVO-Seminar.webp" alt="DSGVO Seminar für Geschäftsführungen in Österreich" class="seminar-info-box__img">
           <div class="seminar-info-box__body">
             <p class="seminar-info-box__title">DSGVO für Geschäftsführungen – Seminar-Übersicht</p>
             <div class="seminar-info-box__stats">
               <div class="seminar-info-box__stat">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/><path d="M8 5v3.5l2 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span>Dauer: <strong>240min</strong></span>
+                <span>Dauer: <strong>3 Stunden</strong></span>
               </div>
               <div class="seminar-info-box__stat">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1a4 4 0 100 8A4 4 0 008 1zM1.5 15c0-2.5 2.91-4.5 6.5-4.5s6.5 2 6.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
@@ -674,14 +799,14 @@
               </div>
               <div class="seminar-info-box__stat">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v3M11 1.5v3M2 7h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span>Uhrzeit: <strong>14.00 – 18.00 Uhr</strong></span>
+                <span>Uhrzeit: <strong>09.00 – 12.00 Uhr</strong></span>
               </div>
               <div class="seminar-info-box__stat">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 8.5s.5 1.5 2.5 1.5 2.5-1.5 2.5-1.5M6 6h.01M10 6h.01" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
                 <span>Format: <strong>Präsenz / Inhouse</strong></span>
               </div>
             </div>
-            <p class="seminar-info-box__price">895,00 €</p>
+            <p class="seminar-info-box__price">350,00 €</p>
             <p class="seminar-info-box__price-note">zzgl. MwSt. pro Teilnehmer / Buchung</p>
             <a href="mailto:info@datenschutz-kroes.at?subject=Anfrage%3A%20DSGVO%20f%C3%BCr%20Gesch%C3%A4ftsf%C3%BChrungen%20Seminar" class="btn-download">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -712,6 +837,8 @@
           <div class="seminar-detail__block">
             <h2 class="seminar-detail__heading">Welche Kursinhalte werden im Seminar behandelt?</h2>
             <ul class="seminar-detail__list">
+              <li>Rechtsrahmen in Österreich: DSGVO, Datenschutzgesetz (DSG) und die Rolle der Datenschutzbehörde</li>
+              <li>Haftung der Geschäftsführung nach § 25 GmbHG: Die Haftungsbeschränkung fällt weg, wenn Ihnen persönlich ein Fehlverhalten nachgewiesen wird, etwa durch Organisationsverschulden, Vorsatz oder grobe Fahrlässigkeit oder strafrechtliche Verstöße</li>
               <li>Verarbeitungsverzeichnis: Typische Fehler in KMU, aktuelle Bußgelder und Bereiche, die häufig übersehen werden</li>
               <li>Verarbeitungsverzeichnis und Rollen: Wer ist verantwortlich für welche Daten</li>
               <li>Datenschutz-Folgenabschätzung: Wann ist eine DSFA gefordert und wie wird sie durchgeführt</li>
@@ -730,6 +857,17 @@
               <li>Bereichs- und Abteilungsleiter</li>
               <li>Verantwortliche für Organisation, Datenschutz und Risikomanagement</li>
               <li>Inhaber von KMU, die Datenschutz selbst verantworten</li>
+            </ul>
+          </div>
+
+          <hr class="seminar-detail__divider">
+
+          <div class="seminar-detail__block">
+            <h2 class="seminar-detail__heading">DSGVO Seminar in Tirol und Salzburg</h2>
+            <p class="seminar-detail__text">Das DSGVO Seminar für Geschäftsführungen findet in Präsenz in Kufstein und in Salzburg statt. Auf Wunsch kommt das Seminar als Inhouse Schulung direkt in Ihr Unternehmen, in ganz Tirol und im Bundesland Salzburg.</p>
+            <ul class="seminar-detail__list">
+              <li><strong>Tirol:</strong> Präsenz in Kufstein, inhouse etwa in Innsbruck, Kufstein, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol</li>
+              <li><strong>Salzburg:</strong> Präsenz in Salzburg, inhouse etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau</li>
             </ul>
           </div>
 
@@ -765,6 +903,29 @@
               <li>Klarheit über Risiken &amp; Handlungsoptionen</li>
             </ul>
           </div>
+
+          <hr class="seminar-detail__divider">
+
+          <div class="seminar-detail__block">
+            <h2 class="seminar-detail__heading">Häufige Fragen zum DSGVO Seminar</h2>
+            <details class="nis2-faq">
+              <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Gibt es das DSGVO Seminar auch in Salzburg?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+              <p class="seminar-detail__text nis2-faq__a">Ja. Das DSGVO Seminar für Geschäftsführungen findet in Präsenz in Salzburg statt. Als Inhouse Schulung kommt es in Ihr Unternehmen, etwa in Salzburg Stadt, Hallein, Flachgau, Zell am See, Saalfelden, Bischofshofen und St. Johann im Pongau.</p>
+            </details>
+            <details class="nis2-faq">
+              <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Wo findet das DSGVO Seminar in Tirol statt?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+              <p class="seminar-detail__text nis2-faq__a">In Präsenz in Kufstein. Als Inhouse Schulung kommt es direkt in Ihr Unternehmen, etwa in Innsbruck, Wörgl, Schwaz, Hall in Tirol, Kitzbühel und St. Johann in Tirol.</p>
+            </details>
+            <details class="nis2-faq">
+              <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Welche Gesetze gelten in Österreich neben der DSGVO?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+              <p class="seminar-detail__text nis2-faq__a">Neben der DSGVO gilt das österreichische Datenschutzgesetz (DSG). Es ergänzt die DSGVO etwa beim Datenschutz im Beschäftigungskontext und bei der Bildverarbeitung. Die Aufsicht führt die Datenschutzbehörde in Wien.</p>
+            </details>
+            <details class="nis2-faq">
+              <summary class="nis2-faq__q"><h3 class="nis2-faq__title">Kann ich das DSGVO Seminar online besuchen?</h3><svg class="nis2-faq__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+              <p class="seminar-detail__text nis2-faq__a">Das DSGVO Seminar findet in Präsenz in Kufstein und Salzburg oder als Inhouse Schulung in Ihrem Unternehmen statt. Für eine Online Variante sprechen Sie uns gerne an.</p>
+            </details>
+            <p class="seminar-detail__text" style="margin-top:20px;">Ihr Unternehmen sitzt in Deutschland? Dann ist das <a href="dsgvo-seminar-deutschland.html" style="text-decoration:underline;">DSGVO Seminar für Geschäftsführungen in Deutschland</a> die richtige Wahl.</p>
+          </div>
         </div>
 
         <!-- Right: Form -->
@@ -774,8 +935,8 @@
               <h2 class="seminar-form__title">Sie haben Fragen zum Seminar?</h2>
               <p class="seminar-form__lead">Gerne klären wir Ihre Fragen persönlich und geben Ihnen eine realistische Einschätzung, ob das Seminar für Ihr Unternehmen sinnvoll ist. Nutzen Sie das Formular für eine unverbindliche Anfrage.</p>
               <form class="sf-form" id="seminarForm" novalidate>
-                <input type="hidden" name="_subject" value="Neue Seminaranfrage: DSGVO Seminar">
-                <input type="hidden" name="seminar" value="DSGVO Seminar">
+                <input type="hidden" name="_subject" value="Neue Seminaranfrage: DSGVO Seminar Österreich">
+                <input type="hidden" name="seminar" value="DSGVO Seminar Österreich">
                 <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
 
                 <div class="sf-field">
@@ -853,6 +1014,7 @@
                     <option value="">— Auswahl treffen —</option>
                     <option>Inhouse (bei Ihnen im Unternehmen)</option>
                     <option>Kufstein, Tirol</option>
+                    <option>Salzburg</option>
                   </select>
                   <span class="sf-error-msg" id="sf-ort-err">Bitte wählen Sie einen Seminarort.</span>
                 </div>
@@ -862,7 +1024,9 @@
                   <select class="sf-select" id="sf-termin" name="termin" required>
                     <option value="">— Auswahl treffen —</option>
                     <option disabled style="text-decoration: line-through; color: #999;">12.11.2026 (Ausgebucht)</option>
+                    <option>26.11.2026</option>
                     <option>10.12.2026</option>
+                    <option>17.12.2026</option>
                     <option>Individueller Termin erwünscht</option>
                   </select>
                   <span class="sf-error-msg" id="sf-termin-err">Bitte wählen Sie einen Termin.</span>
@@ -949,7 +1113,7 @@
 
         <div class="seminar-tcard">
           <div class="seminar-tcard__stars">★★★★★</div>
-          <p class="seminar-tcard__quote">„Vier Stunden, die sich gelohnt haben. Klare Struktur, relevante Inhalte, sofort umsetzbar."</p>
+          <p class="seminar-tcard__quote">„Drei Stunden, die sich gelohnt haben. Klare Struktur, relevante Inhalte, sofort umsetzbar."</p>
           <div>
             <p class="seminar-tcard__author">Michael Bruckner</p>
             <p class="seminar-tcard__role">Geschäftsführer</p>
