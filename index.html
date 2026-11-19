@@ -4153,12 +4153,7 @@
 
       <!-- Form -->
       <div class="callback-modal__body" id="callbackFormWrap">
-        <form class="callback-form" id="callbackForm" action="https://api.web3forms.com/submit" method="post" novalidate>
-          <input type="hidden" name="access_key" value="ee750d9b-7d35-47e1-a2a2-b5da2c3e93c9">
-          <input type="hidden" name="subject" value="Neue Rückruf-Anfrage von der Website">
-          <input type="hidden" name="from_name" value="Datenschutz Kroes Website">
-          <input type="hidden" name="to_email" value="info@datenschutz-kroes.at">
-          <input type="hidden" name="redirect" value="https://datenschutz-kroes.at/">
+        <form class="callback-form" id="callbackForm" action="rueckruf.php" method="post" novalidate>
           <!-- Honeypot (Spam-Schutz, für Menschen unsichtbar) -->
           <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
             <label for="cb-website">Website</label>
@@ -6119,9 +6114,9 @@
           body: formData,
           headers: { 'Accept': 'application/json' }
         });
-        const data = await res.json().catch(() => ({ success: false }));
+        const data = await res.json().catch(() => ({ ok: false }));
 
-        if (!data.success) {
+        if (!data.ok) {
           console.error('[Rückruf] Request failed:', data);
           throw new Error('send_failed');
         }
