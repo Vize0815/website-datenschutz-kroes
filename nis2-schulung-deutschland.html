@@ -1030,8 +1030,9 @@
                 <h2 class="seminar-form__title">Sie haben Fragen zum Seminar?</h2>
                 <p class="seminar-form__lead">Gerne klären wir Ihre Fragen persönlich und geben Ihnen eine realistische Einschätzung, ob das Seminar für Ihr Unternehmen sinnvoll ist. Nutzen Sie das Formular für eine unverbindliche Anfrage.</p>
                 <form class="sf-form" id="seminarForm" novalidate>
+                  <input type="hidden" name="_subject" value="Neue Seminaranfrage: NIS2 Schulung Deutschland">
                   <input type="hidden" name="seminar" value="NIS2 Schulung Deutschland">
-                  <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+                  <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
 
                   <div class="sf-field">
                     <label class="sf-label" for="sf-anrede">Anrede <span class="sf-required">*</span></label>
@@ -1431,7 +1432,7 @@
 
       if (!valid) return;
 
-      // Senden über seminar-anfrage.php (IONOS Webspace)
+      // Senden über Formspree
       const form = e.target;
       const btn = document.getElementById('sf-submit');
       const sendErr = document.getElementById('sf-send-err');
@@ -1439,9 +1440,9 @@
       btn.disabled = true;
       btn.textContent = 'Wird gesendet…';
       try {
-        const res = await fetch('seminar-anfrage.php', { method: 'POST', body: new FormData(form) });
+        const res = await fetch('https://formspree.io/f/xdaqoepy', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
         const data = await res.json();
-        if (!data.ok) throw new Error(data.error || 'Fehler');
+        if (!res.ok || !data.ok) throw new Error('Fehler');
         document.getElementById('seminarFormContent').style.display = 'none';
         document.getElementById('seminarSuccess').classList.add('visible');
       } catch (err) {

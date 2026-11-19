@@ -4153,11 +4153,13 @@
 
       <!-- Form -->
       <div class="callback-modal__body" id="callbackFormWrap">
-        <form class="callback-form" id="callbackForm" action="rueckruf.php" method="post" novalidate>
+        <form class="callback-form" id="callbackForm" action="https://formspree.io/f/xdaqoepy" method="post" novalidate>
+          <input type="hidden" name="_subject" value="Neue Rückruf-Anfrage von der Website">
+          <input type="hidden" name="formular" value="Rückruf">
           <!-- Honeypot (Spam-Schutz, für Menschen unsichtbar) -->
           <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
             <label for="cb-website">Website</label>
-            <input type="text" id="cb-website" name="website" tabindex="-1" autocomplete="off">
+            <input type="text" id="cb-website" name="_gotcha" tabindex="-1" autocomplete="off">
           </div>
 
           <div class="callback-form__field">
@@ -6116,7 +6118,7 @@
         });
         const data = await res.json().catch(() => ({ ok: false }));
 
-        if (!data.ok) {
+        if (!res.ok || !data.ok) {
           console.error('[Rückruf] Request failed:', data);
           throw new Error('send_failed');
         }
@@ -6783,15 +6785,17 @@
       doc.save(filename);
     }
 
-    /* ---- LEAD AN SERVER (quiz-lead.php) ---- */
+    /* ---- LEAD AN FORMSPREE ---- */
     function sendLead(payload) {
       // Lead-Versand läuft "fire and forget" — Fehler werden geschluckt,
       // damit der PDF-Download für den Besucher immer funktioniert.
       try {
-        return fetch('quiz-lead.php', {
+        const lead = Object.assign({ _subject: 'NIS2 Quiz: neuer Lead', formular: 'NIS2 Quiz' }, payload);
+        if (lead.website) return Promise.resolve();
+        return fetch('https://formspree.io/f/xdaqoepy', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(lead),
           keepalive: true
         }).catch(() => {});
       } catch (_) {

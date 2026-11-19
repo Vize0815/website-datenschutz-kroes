@@ -206,7 +206,7 @@ A: Ja. Mitarbeiterschulungen sind ein zentraler Bestandteil eines wirksamen Date
 ## Rückruf-Modal
 
 **Felder:** Name (Pflicht), Unternehmen (Pflicht), Telefonnummer (Pflicht)
-**Versand:** eigenes Skript auf dem IONOS Webspace (rueckruf.php), Weiterleitung per E-Mail an info@datenschutz-kroes.at, keine Speicherung auf dem Server
+**Versand:** Formspree (Formspree, Inc., USA, AVV und Standardvertragsklauseln) an info@datenschutz-kroes.at
 **Hinweis:** Antwort innerhalb von 24 Stunden
 
 ---
@@ -856,9 +856,9 @@ Let's Encrypt, https-Verbindung mit Schloss-Symbol.
 
 **6.1 E-Mail/Telefon:** Verarbeitung übermittelter Daten zur Bearbeitung der Anfrage; Löschung sobald nicht mehr erforderlich.
 
-**6.2 Rückruf-Formular:** Felder Name, Unternehmen, Telefonnummer. Übermittlung an ein eigenes Skript auf dem IONOS Webspace (Server in Deutschland, AVV mit IONOS SE), Weiterleitung per E-Mail, keine Speicherung auf dem Server, kein externer Formulardienst. Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
+**6.2 Rückruf-Formular:** Felder Name, Unternehmen, Telefonnummer. Übermittlung über Formspree (Formspree, Inc., USA, AVV und Standardvertragsklauseln, siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
 
-**6.3 Seminar-Anfrage:** Anrede, Titel (optional), Vor und Nachname, Firma, Website (optional), E-Mail, Telefon, Teilnehmerzahl, Seminarort, Termin, Anforderungen und Ziele. Übermittlung an ein eigenes Skript auf dem IONOS Webspace (Server in Deutschland, AVV mit IONOS SE), Weiterleitung per E-Mail, keine Speicherung auf dem Server, kein externer Formulardienst. Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
+**6.3 Seminar-Anfrage:** Anrede, Titel (optional), Vor und Nachname, Firma, Website (optional), E-Mail, Telefon, Teilnehmerzahl, Seminarort, Termin, Anforderungen und Ziele. Übermittlung über Formspree (Formspree, Inc., USA, AVV und Standardvertragsklauseln, siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
 
 **6.4 Benennungsurkunde:** Unternehmensname, Anrede, Titel, Vor-/Nachname, E-Mail, Datum. Verarbeitung ausschließlich lokal im Browser; PDF wird clientseitig erzeugt.
 

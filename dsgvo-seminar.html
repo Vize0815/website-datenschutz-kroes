@@ -799,6 +799,9 @@
               <h2 class="seminar-form__title">Sie haben Fragen zum Seminar?</h2>
               <p class="seminar-form__lead">Gerne klären wir Ihre Fragen persönlich und geben Ihnen eine realistische Einschätzung, ob das Seminar für Ihr Unternehmen sinnvoll ist. Nutzen Sie das Formular für eine unverbindliche Anfrage.</p>
               <form class="sf-form" id="seminarForm" novalidate>
+                <input type="hidden" name="_subject" value="Neue Seminaranfrage: DSGVO Seminar">
+                <input type="hidden" name="seminar" value="DSGVO Seminar">
+                <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
 
                 <div class="sf-field">
                   <label class="sf-label" for="sf-anrede">Anrede <span class="sf-required">*</span></label>
@@ -905,7 +908,8 @@
                   <span class="sf-error-msg" id="sf-consent-err">Bitte stimmen Sie der Einwilligungserklärung zu.</span>
                 </div>
 
-                <button type="submit" class="sf-submit">Anfrage absenden</button>
+                <button type="submit" class="sf-submit" id="sf-submit">Anfrage absenden</button>
+                <p class="sf-error-msg" id="sf-send-err" role="alert">Die Übertragung ist fehlgeschlagen. Bitte senden Sie Ihre Anfrage direkt an <a href="mailto:info@datenschutz-kroes.at" style="text-decoration:underline;">info@datenschutz-kroes.at</a>.</p>
               </form>
             </div>
 
@@ -1124,7 +1128,7 @@
 
 
     // Form validation
-    document.getElementById('seminarForm').addEventListener('submit', function(e) {
+    document.getElementById('seminarForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       let valid = true;
 
@@ -1163,9 +1167,26 @@
         valid = false;
       }
 
-      if (valid) {
+      if (!valid) return;
+
+      // Senden über Formspree
+      const form = e.target;
+      const btn = document.getElementById('sf-submit');
+      const sendErr = document.getElementById('sf-send-err');
+      sendErr.classList.remove('visible');
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet…';
+      try {
+        const res = await fetch('https://formspree.io/f/xdaqoepy', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error('Fehler');
         document.getElementById('seminarFormContent').style.display = 'none';
         document.getElementById('seminarSuccess').classList.add('visible');
+      } catch (err) {
+        sendErr.classList.add('visible');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Anfrage absenden';
       }
     });
   </script>
