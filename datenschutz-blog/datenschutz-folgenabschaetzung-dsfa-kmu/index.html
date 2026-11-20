@@ -376,6 +376,14 @@
     .rating-popup__star:disabled { cursor: default; }
     .rating-popup__message { font-size: 12.5px; color: var(--color-slate); line-height: 1.55; margin: 0 0 14px; }
     .rating-popup__thanks { font-size: 13px; font-weight: 500; color: var(--color-verdant, #2D6A4F); text-align: center; margin: 6px 0 0; }
+  
+    /* ===== Zitat mit Autorenfoto (Präfix bqa) ===== */
+    .article-body__inner blockquote .bqa-by { display: flex; align-items: center; gap: 14px; margin-top: 18px; font-style: normal; }
+    .bqa-by__photo { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: 50% 15%; background: var(--color-mist); box-shadow: 0 1px 0 rgba(15, 23, 42, .08), 0 8px 22px rgba(27, 79, 138, .14); display: block; }
+    .bqa-by__text { display: flex; flex-direction: column; min-width: 0; }
+    .bqa-by__name { font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--color-navy); letter-spacing: 0; }
+    .bqa-by__role { font-size: 13px; font-weight: 400; line-height: 1.4; color: var(--color-prussian); margin-top: 2px; letter-spacing: 0.02em; }
+    @media (max-width: 480px) { .bqa-by__photo { width: 48px; height: 48px; } }
   </style>
   <link rel="preload" as="style" href="../../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../../cookie-banner.css"></noscript>
@@ -853,7 +861,10 @@
 
           <blockquote>
             In der Praxis erlebe ich häufig, dass Betriebe die DSFA als Bürokratie empfinden und versuchen, sie möglichst schlank zu halten. Das ist verständlich, aber riskant. Die DSFA ist das einzige Instrument, das zwingt, Risiken vor dem Start zu denken statt danach. Diese Vorabarbeit ist fast immer günstiger als eine nachträgliche Korrektur.
-            <cite>Aus der Beratungspraxis als externer Datenschutzbeauftragter</cite>
+            <footer class="bqa-by">
+              <img class="bqa-by__photo" src="../../alexander-kroes-2.webp" alt="Alexander Kroes, externer zertifizierter Datenschutzbeauftragter" width="56" height="56" loading="lazy" decoding="async">
+              <span class="bqa-by__text"><span class="bqa-by__name">Alexander Kroes</span><span class="bqa-by__role">Externer zertifizierter DSB</span></span>
+            </footer>
           </blockquote>
 
           <h2 id="konsultation">DSFA und vorherige Konsultation der Datenschutzbehörde</h2>
