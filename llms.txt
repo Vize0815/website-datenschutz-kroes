@@ -44,6 +44,7 @@ Firmenbuch: FN 639208 m, Landesgericht Innsbruck
 - NIS2 Seminar Österreich: https://datenschutz-kroes.at/nis2-seminar.html
 - NIS2 Schulung Deutschland: https://datenschutz-kroes.at/nis2-schulung-deutschland.html
 - Blog: https://datenschutz-kroes.at/datenschutz-blog/
+- Blogbeitrag "Schreiben der Datenschutzbehörde erhalten?" (Leitfaden für Österreich und Deutschland mit Checkliste): https://datenschutz-kroes.at/datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/
 - Downloads: https://datenschutz-kroes.at/downloads.html
 - Impressum: https://datenschutz-kroes.at/impressum.html
 

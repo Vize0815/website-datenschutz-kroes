@@ -33,6 +33,7 @@
 | `/impressum.html` | Impressum | Rechtliche Pflichtangaben |
 | `/datenschutz.html` | Datenschutzerklärung | Datenschutz-Information nach DSGVO |
 | `/newsletter-leseprobe.html` | Newsflash – Leseprobe | Leseprobe des monatlichen Newsletters |
+| `/datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/` | Schreiben der Datenschutzbehörde erhalten? Der Leitfaden für Österreich und Deutschland | Blogbeitrag: Reaktion auf Post von der Datenschutzbehörde, mit Checkliste |
 
 ---
 
@@ -779,12 +780,17 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 
 **Filter-Kategorien:** Alle / Checklisten / Leitfäden / Vorlagen
 
-## Checklisten (1 Dokument)
+## Checklisten (2 Dokumente)
 
 ### NIS2-Selbstcheck für Unternehmen
 **Format:** PDF (2 Seiten)
 **Datei:** `NIS2-Selbstcheck-Unternehmen.pdf`
 **Beschreibung:** Mit nur 10 Fragen zu mehr Klarheit und Sicherheit für Ihr Unternehmen. Die NIS2-Richtlinie betrifft deutlich mehr Unternehmen als ihr Vorgänger NIS — von kritischen Infrastrukturen bis hin zu zahlreichen Dienstleistern. Doch wer genau ist betroffen und wer nicht? Mit diesem Quick-Check prüfen Sie, ob Ihr Unternehmen unter die NIS2-Richtlinie fällt.
+
+### Schreiben der Datenschutzbehörde erhalten? Die Checkliste zum Abhaken
+**Format:** PDF (3 Seiten)
+**Datei:** `Checkliste_Schreiben_Datenschutzbehoerde_Datenschutz_Kroes.pdf`
+**Beschreibung:** Zehn Schritte vom Eingang des Schreibens bis zur Archivierung, mit Feldern für Aktenzeichen, Frist und interne Vorfrist. Dazu die Einordnung des Schreibens, der Aufbau jeder Antwort in vier Bausteinen und die wichtigsten Fristen für Österreich und Deutschland. Passend zum Blogbeitrag in Abschnitt 10.
 
 ## Leitfäden (5 Dokumente)
 
@@ -1037,6 +1043,67 @@ Stand Juni 2026. Die jeweils aktuelle Fassung ist auf datenschutz.html abrufbar.
 **Meta-Description:** Leseprobe des monatlichen Datenschutz-Newsletters für Inhaber, Geschäftsführungen und Verantwortliche.
 
 Beispielausgabe des Newsflash-Newsletters mit aktuellen Datenschutz-News, praxisnahen Tipps und Hinweisen auf Bußgeldentscheidungen — kompakt, ohne Juristendeutsch, monatlich. Anmeldung über die Startseite (#newsletter).
+
+---
+
+# 10. Blogbeitrag: Schreiben der Datenschutzbehörde erhalten? (datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/)
+
+**URL:** https://datenschutz-kroes.at/datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/
+**Veröffentlicht:** 20. November 2026 · **Autor:** Alexander Kroes · **Kategorie:** Datenschutzbehörde
+**Meta-Description:** Post von der Datenschutzbehörde: die ersten 48 Stunden, Antwortpflicht, Fristverlängerung, Akteneinsicht und der richtige Aufbau der Antwort. Mit Checkliste für Österreich und Deutschland.
+
+## Das Wichtigste in Kürze
+- Antworten ist Pflicht: Unternehmen müssen mit der Aufsichtsbehörde zusammenarbeiten (Art. 31 DSGVO).
+- Erst einordnen, dann antworten: formlose Anfrage, Aufforderung zur Stellungnahme, Bescheid und Strafbescheid haben unterschiedliche Folgen und Fristen.
+- Behördliche Fristen liegen meist bei zwei bis vier Wochen. Eine Verlängerung ist möglich, aber kein Anspruch.
+- Jede Aussage braucht einen Beleg. Abhilfe verbessert die Position im Verfahren.
+
+## Die ersten 48 Stunden
+1. Echtheit prüfen (Briefkopf, Aktenzeichen, Kontaktdaten mit der offiziellen Website abgleichen)
+2. Adressat klären (Gesellschaft, Standort, Verarbeitung)
+3. Eine Fallleitung benennen
+4. Eingang und Frist festhalten, interne Vorfrist etwa eine Woche vor Ablauf
+5. Datenschutzbeauftragten und Fachbereiche einbinden
+6. Unterlagen sichern, Ablauf als Zeitleiste festhalten
+7. Laufende Verstöße sofort stoppen
+Keine spontanen inhaltlichen Zusagen am Telefon.
+
+## Antwortpflicht
+- Art. 31 und Art. 58 Abs. 1 DSGVO. Österreich: § 22 Abs. 1 DSG. Deutschland: § 40 Abs. 4 BDSG mit Auskunftsverweigerungsrecht bei Selbstbelastung.
+- Keine Antwort: Geldbuße bis 10 Mio. Euro oder 2 % des weltweiten Jahresumsatzes (Art. 83 Abs. 4 lit. a DSGVO). Missachtung einer Anordnung oder Zugangsverweigerung: bis 20 Mio. Euro oder 4 % (Art. 83 Abs. 5 lit. e DSGVO).
+- Grundsatz: Alles muss stimmen, aber nicht mehr sagen als gefragt.
+
+## Frist, Verlängerung, Akteneinsicht
+- Verlängerung früh, sachlich begründet, schriftlich bestätigen lassen. Österreich: § 33 Abs. 4 AVG. Deutschland: § 31 Abs. 7 VwVfG.
+- Akteneinsicht: Österreich § 17 AVG, Deutschland § 29 VwVfG.
+
+## Aufbau der Antwort
+Je Frage: Frage, Antwort, Nachweis, Maßnahme. Chronologisch, belegbar, ohne Vermutungen. Freigabe durch die Geschäftsführung. Geschäftsführungen haften persönlich vor allem bei Organisationsverschulden, Vorsatz oder grober Fahrlässigkeit und strafrechtlichen Verstößen.
+
+## Bußgeld und Abhilfe
+Art. 83 Abs. 2 lit. c, f und h DSGVO. Nach den EDSA Leitlinien 04/2022 wirkt bloße Pflichtkooperation neutral, mildernd nur, was darüber hinausgeht. Viele Verfahren enden ohne Geldbuße.
+
+## Österreich und Deutschland im Vergleich
+| | Österreich | Deutschland |
+|---|---|---|
+| Behörde | Datenschutzbehörde in Wien | Aufsichtsbehörde des Bundeslandes, in Bayern das BayLDA |
+| Verfahrensrecht | DSG, AVG, VStG | BDSG, VwVfG, OWiG (§ 41 BDSG) |
+| Rechtsmittel gegen Bescheid | Beschwerde an das BVwG binnen vier Wochen (§ 7 Abs. 4 VwGVG) | Klage beim Verwaltungsgericht binnen eines Monats (§ 20 BDSG, § 74 VwGO) |
+| Strafbescheid | Einspruch gegen Strafverfügung binnen zwei Wochen (§ 49 Abs. 1 VStG) | Einspruch gegen Bußgeldbescheid binnen zwei Wochen (§ 67 Abs. 1 OWiG) |
+| Verjährung | drei Jahre (§ 31 Abs. 2 VStG) | drei Jahre (§ 31 Abs. 2 Nr. 1 OWiG) |
+
+## Dokumentation
+Schriftverkehr, Nachweise, Entscheidungen und Maßnahmen mindestens drei Jahre aufbewahren (Rechenschaftspflicht Art. 5 Abs. 2 DSGVO).
+
+## Download
+Checkliste zum Abhaken (PDF, 3 Seiten) im Downloadbereich: https://datenschutz-kroes.at/downloads.html
+
+## FAQ
+- **Was passiert, wenn ich nicht antworte?** Verstoß gegen Art. 31 DSGVO, eigene Geldbuße bis 10 Mio. Euro oder 2 % möglich, zusätzlich Anordnung per Bescheid.
+- **Wie lange habe ich Zeit?** Frist laut Schreiben, meist zwei bis vier Wochen. Behördliche Fristen verlängerbar, Rechtsmittelfristen nicht.
+- **Erfahre ich, wer sich beschwert hat?** Häufig steht der Name schon im Schreiben. Akteneinsicht möglich, Teile können geschwärzt sein.
+- **Endet jedes Verfahren mit einem Bußgeld?** Nein. Häufig Einstellung, Hinweis, Verwarnung oder Anweisung.
+- **Brauche ich einen Datenschutzbeauftragten?** Ist einer benannt, gehört er von Anfang an dazu. Ohne DSB lohnt externe Unterstützung.
 
 ---
 
