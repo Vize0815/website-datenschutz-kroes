@@ -271,6 +271,10 @@
       margin-bottom: 20px;
     }
 
+    /* Zurück zur Startseite (wie Blog) */
+    .dlh-back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: #8A99AD; margin-bottom: 24px; transition: color 280ms cubic-bezier(0.4, 0, 0.2, 1); }
+    .dlh-back:hover { color: var(--color-gold); }
+
     .hero__headline {
       font-family: var(--font-sans);
       font-size: clamp(36px, 5vw, 64px);
@@ -859,6 +863,10 @@
     <div class="container">
       <div class="hero__inner">
         <div class="hero__text">
+          <a href="index.html" class="dlh-back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Zurück zur Startseite
+          </a>
           <p class="hero__eyebrow">Kostenlose Unterlagen</p>
           <h1 class="hero__headline">Datenschutz-Wissen zum Mitnehmen.</h1>
           <p class="hero__lead">Checklisten, Leitfäden, Vorlagen und Benennungsurkunde — kostenlos für Inhaber, Geschäftsführungen und Verantwortliche. Einfach herunterladen und direkt einsetzen.</p>
