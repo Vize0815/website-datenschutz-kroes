@@ -1950,9 +1950,6 @@
       margin-bottom: 20px;
     }
 
-    /* Grid Spalten dürfen schmaler werden als lange Wörter */
-    .faq__layout > * { min-width: 0; }
-
     .faq__aside-text {
       margin-bottom: 28px;
     }
@@ -2724,7 +2721,10 @@
        RESPONSIVE — 1280px (Large Desktop)
     ============================================= */
     @media (max-width: 1280px) {
-      .hero__inner { padding: 0 48px; column-gap: 72px; }
+      .hero__inner { padding: 0 48px; column-gap: 72px; grid-template-columns: minmax(0, 1fr) auto; }
+      /* Sonst schiebt die Vertrauensleiste das Foto bei kleinen Laptops aus dem Bild */
+      .hero__trust-row { flex-wrap: wrap; row-gap: 4px; }
+      .hero__headline { font-size: clamp(40px, calc((100vw - 600px) / 10), 60px); }
     }
 
     /* =============================================
@@ -2764,6 +2764,8 @@
 
       /* FAQ */
       .faq__layout { grid-template-columns: 1fr; gap: 48px; }
+      /* Einspaltig: Spalte darf schmaler werden als lange Wörter (nur hier, am Desktop sonst Überlappung) */
+      .faq__layout > * { min-width: 0; }
       .faq__aside  { position: static; }
 
       /* Footer */
