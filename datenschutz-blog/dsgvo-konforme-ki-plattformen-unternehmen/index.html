@@ -351,6 +351,8 @@
     .callout--info .callout__icon { color: var(--color-prussian); }
     .callout__icon { flex-shrink: 0; margin-top: 2px; }
     .callout__body { font-size: 15px; font-weight: 300; line-height: 1.65; color: var(--color-ink); }
+    .callout__body { min-width: 0; overflow-wrap: break-word; }
+    @media (max-width: 480px) { .callout { padding: 18px 16px; gap: 12px; } }
     .callout__body strong { color: var(--color-navy); font-weight: 600; }
     .callout__body p + p { margin-top: 0.6em; }
 
@@ -786,6 +788,9 @@
             <div class="callout__body">
               <p><strong>Wichtig ab August 2026:</strong> Mit dem EU AI Act gelten neben der DSGVO zusätzliche Pflichten für Unternehmen, die KI einsetzen. Klassifizierung von KI-Systemen, Schulungspflichten und Audit-Logs sind keine optionalen Extras mehr, sondern gesetzliche Anforderungen. Wer DSGVO und AI Act gemeinsam umsetzt, hat den Aufwand einmal.</p>
 
+            </div>
+          </div>
+
           <nav class="toc" aria-label="Inhaltsverzeichnis">
             <p class="toc__label">Inhalt</p>
             <ol class="toc__list">
@@ -799,9 +804,6 @@
               <li><a href="#kmu-handlung">Was österreichische KMU jetzt konkret tun sollten</a></li>
             </ol>
           </nav>
-
-            </div>
-          </div>
 
           <h2 id="ki-anforderungen">Was eine DSGVO-konforme KI-Plattform leisten muss</h2>
           <p>

@@ -266,6 +266,8 @@
     .callout--gold .callout__icon { color: var(--color-gold); }
     .callout__icon { flex-shrink: 0; margin-top: 2px; }
     .callout__body { font-size: 15px; font-weight: 300; line-height: 1.65; color: var(--color-ink); }
+    .callout__body { min-width: 0; overflow-wrap: break-word; }
+    @media (max-width: 480px) { .callout { padding: 18px 16px; gap: 12px; } }
     .callout__body strong { color: var(--color-navy); font-weight: 600; }
     .callout__body p + p { margin-top: 0.6em; }
 
@@ -692,6 +694,9 @@
             <div class="callout__body">
               <p><strong>Hinweis zur österreichischen Schwerpunktprüfung 2026:</strong> Die Datenschutzbehörde hat für 2026 ausdrücklich technische und organisatorische Maßnahmen (Art. 32 DSGVO) als Prüfungsschwerpunkt benannt. Unternehmen, die hier Lücken haben, müssen mit gezielten Nachfragen rechnen.</p>
 
+            </div>
+          </div>
+
           <nav class="toc" aria-label="Inhaltsverzeichnis">
             <p class="toc__label">Inhalt</p>
             <ol class="toc__list">
@@ -710,9 +715,6 @@
               <li><a href="#konkret-tun">Was Sie jetzt tun können</a></li>
             </ol>
           </nav>
-
-            </div>
-          </div>
 
           <h2 id="uebersicht">Die 10 Prüfbereiche im Überblick</h2>
 

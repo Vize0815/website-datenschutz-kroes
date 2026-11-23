@@ -293,6 +293,8 @@
     .callout--info .callout__icon { color: var(--color-prussian); }
     .callout__icon { flex-shrink: 0; margin-top: 2px; }
     .callout__body { font-size: 15px; font-weight: 300; line-height: 1.65; color: var(--color-ink); }
+    .callout__body { min-width: 0; overflow-wrap: break-word; }
+    @media (max-width: 480px) { .callout { padding: 18px 16px; gap: 12px; } }
     .callout__body strong { color: var(--color-navy); font-weight: 600; }
     .callout__body p + p { margin-top: 0.6em; }
 
@@ -710,6 +712,9 @@
             <div class="callout__body">
               <p><strong>Für wen ist dieser Fahrplan gedacht?</strong> Für Geschäftsführer und Inhaber von KMU mit 10–250 Mitarbeitern, die DSGVO-Compliance nicht aussitzen, sondern strukturiert abschließen wollen — mit dem nötigen Maß an Pragmatismus.</p>
 
+            </div>
+          </div>
+
           <nav class="toc" aria-label="Inhaltsverzeichnis">
             <p class="toc__label">Inhalt</p>
             <ol class="toc__list">
@@ -723,9 +728,6 @@
               <li><a href="#ausblick">Was uns von hier aus erwartet</a></li>
             </ol>
           </nav>
-
-            </div>
-          </div>
 
           <h2 id="reihenfolge">Warum die Reihenfolge entscheidet</h2>
           <p>

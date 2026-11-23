@@ -356,7 +356,8 @@
       .footer__grid { grid-template-columns: 1fr; gap: 36px; }
       .footer__bottom { flex-direction: column; align-items: flex-start; }
       .footer__made-by { position: static; transform: none; }
-      .content-section__body table { font-size: 13px; }
+      .content-section__body table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .content-section__body table th { white-space: nowrap; }
       .content-section__body table th,
       .content-section__body table td { padding: 8px 10px; }
     }

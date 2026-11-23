@@ -418,8 +418,11 @@
     @media (max-width: 480px) {
       .topbar { display: none; }
       .hero { padding: 60px 0 72px; }
-      .industries__grid { grid-template-columns: repeat(2, 1fr); }
+      .industries__grid { grid-template-columns: 1fr; }
+      /* "Datenschutzbeauftragter" passt sonst nicht in die Zeile */
+      .hero__title { font-size: clamp(24px, 7.2vw, 36px); }
     }
+    .hero__content { min-width: 0; }
   </style>
   <link rel="preload" as="style" href="../cookie-banner.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../cookie-banner.css"></noscript>

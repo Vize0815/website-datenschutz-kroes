@@ -231,6 +231,9 @@ button{font-family:inherit;border:none;cursor:pointer}
 .case-c-fix{font-size:13px;color:var(--navy);font-weight:600;line-height:1.5;margin-top:auto;padding-top:14px;border-top:1px solid var(--mist);display:flex;gap:8px}
 .case-c-fix::before{content:'→';color:var(--gold);flex-shrink:0}
 .cases-disc{text-align:center;font-size:11px;color:var(--slate);font-style:italic;margin-top:28px}
+/* Mobil: steht nach der Grundregel, sonst bleibt das Raster dreispaltig */
+@media(max-width:900px){.cases-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.kpi-item{padding:24px 12px;min-width:0}.kpi-item:nth-child(2n){border-right:none}}
 </style>
 </head>
 <body>

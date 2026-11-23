@@ -297,6 +297,8 @@
     .callout--info .callout__icon { color: var(--color-prussian); }
     .callout__icon { flex-shrink: 0; margin-top: 2px; }
     .callout__body { font-size: 15px; font-weight: 300; line-height: 1.65; color: var(--color-ink); }
+    .callout__body { min-width: 0; overflow-wrap: break-word; }
+    @media (max-width: 480px) { .callout { padding: 18px 16px; gap: 12px; } }
     .callout__body strong { color: var(--color-navy); font-weight: 600; }
     .callout__body p + p { margin-top: 0.6em; }
 
@@ -714,6 +716,9 @@
             <div class="callout__body">
               <p><strong>Praxis-Beispiel:</strong> Ein Mitarbeiter kopiert eine vertrauliche Bewerbungsmappe in die kostenlose ChatGPT-Version, um sie zusammenfassen zu lassen. Das ist eine Datenschutzverletzung nach Art.&nbsp;4 DSGVO — meldepflichtig binnen 72&nbsp;Stunden. Mit der richtigen KI-Richtlinie wäre der Vorfall vermeidbar gewesen.</p>
 
+            </div>
+          </div>
+
           <nav class="toc" aria-label="Inhaltsverzeichnis">
             <p class="toc__label">Inhalt</p>
             <ol class="toc__list">
@@ -727,9 +732,6 @@
               <li><a href="#kmu-status">Wo viele KMU heute stehen</a></li>
             </ol>
           </nav>
-
-            </div>
-          </div>
 
           <h2 id="warum-ki-dsgvo">Warum KI ein DSGVO-Thema ist</h2>
           <p>
