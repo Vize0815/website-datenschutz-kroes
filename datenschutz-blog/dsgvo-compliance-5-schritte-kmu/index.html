@@ -278,6 +278,7 @@
     .step-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--color-gold); }
     .step-card__num { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
     .step-card__title { font-size: 24px; font-weight: 600; color: var(--color-navy); line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 16px; }
+    @media (max-width: 480px) { .step-card__title { font-size: 20px; } }
     .step-card__body { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--color-slate); }
     .step-card__body p + p { margin-top: 0.8em; }
     .step-card__body strong { color: var(--color-navy); font-weight: 600; }
@@ -764,7 +765,7 @@
           <!-- ===== STEP 2 ===== -->
           <div class="step-card" id="schritt-02">
             <p class="step-card__num">Schritt 02 · Rechtsgrundlagen</p>
-            <h3 class="step-card__title">Auftragsverarbeitungsverträge prüfen</h3>
+            <h3 class="step-card__title">Auftragsverarbeitungs<wbr>verträge prüfen</h3>
             <div class="step-card__body">
               <p>Jeder Dienstleister, der für Sie personenbezogene Daten verarbeitet — vom Lohnverrechner über den Webhoster bis zum Newsletter-Tool — braucht einen <strong>Auftragsverarbeitungsvertrag (AVV) nach Art.&nbsp;28 DSGVO</strong>. Ohne AVV ist die Datenübermittlung rechtswidrig. Ohne Ausnahme.</p>
               <p>Aus dem Verarbeitungsverzeichnis (Schritt 1) entsteht automatisch eine Liste aller Auftragsverarbeiter. Prüfen Sie für jeden: Liegt ein AVV vor? Ist er aktuell? Erfüllt er die Anforderungen aus Art.&nbsp;28 (Abs.&nbsp;3 a–h)?</p>
@@ -883,7 +884,7 @@
           </div>
           <div style="display:flex;gap:16px;margin-top:6px;">
             <p class="footer__cert-caption" style="margin-top:0;width:88px;">Zertifiziert nach<br>ÖVE/ÖNORM<br>EN ISO / IEC<br>17024</p>
-            <p style="font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;margin-top:0;width:88px;">Registriertes<br>Beratungsunternehmen</p>
+            <p style="font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;margin-top:0;min-width:88px;">Registriertes<br>Beratungsunternehmen</p>
           </div>
         </div>
 

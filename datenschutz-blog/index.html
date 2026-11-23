@@ -253,7 +253,7 @@
     .article-card__meta-divider { width: 3px; height: 3px; border-radius: 50%; background: var(--color-slate-light); }
     .article-card__title { font-size: 20px; font-weight: 600; color: var(--color-navy); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 12px; }
     .article-card:hover .article-card__title { color: var(--color-prussian); }
-    .article-card__excerpt { font-size: 14.5px; font-weight: 300; color: var(--color-slate); line-height: 1.65; margin-bottom: 22px; flex: 1; }
+    .article-card__excerpt { font-size: 14.5px; font-weight: 300; color: var(--color-slate); line-height: 1.65; margin-bottom: 22px; flex: 1; overflow-wrap: break-word; }
     .article-card__read { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--color-navy); align-self: flex-start; transition: gap var(--transition-base), color var(--transition-base); }
     .card-rating-avg { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--color-mist); }
     .card-rating-avg__stars { color: var(--color-gold); font-size: 15px; letter-spacing: -0.5px; margin-bottom: 3px; }
@@ -1420,7 +1420,7 @@
           </div>
           <div style="display:flex;gap:16px;margin-top:6px;">
             <p class="footer__cert-caption" style="margin-top:0;width:88px;">Zertifiziert nach<br>ÖVE/ÖNORM<br>EN ISO / IEC<br>17024</p>
-            <p style="font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;margin-top:0;width:88px;">Registriertes<br>Beratungsunternehmen</p>
+            <p style="font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;margin-top:0;min-width:88px;">Registriertes<br>Beratungsunternehmen</p>
           </div>
         </div>
 

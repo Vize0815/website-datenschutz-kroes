@@ -278,6 +278,7 @@
     .step-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--color-gold); }
     .step-card__num { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
     .step-card__title { font-size: 24px; font-weight: 600; color: var(--color-navy); line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 16px; }
+    @media (max-width: 480px) { .step-card__title { font-size: 20px; } }
     .step-card__body { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--color-slate); }
     .step-card__body p + p { margin-top: 0.8em; }
     .step-card__body strong { color: var(--color-navy); font-weight: 600; }
@@ -753,7 +754,7 @@
           <!-- ===== FALLSTRICK 4 ===== -->
           <div class="step-card" id="fallstrick-04">
             <p class="step-card__num">Fallstrick 04 · Subunternehmer</p>
-            <h3 class="step-card__title">Subunternehmer ohne Auftragsverarbeitungsvertrag</h3>
+            <h3 class="step-card__title">Subunternehmer ohne Auftragsverarbeitungs<wbr>vertrag</h3>
             <div class="step-card__body">
               <p>Sie geben Kundendaten an einen Subunternehmer (Elektriker, Bodenleger, Gerüstbauer). Damit wird er zum <strong>Auftragsverarbeiter nach Art.&nbsp;28 DSGVO</strong> — und braucht einen schriftlichen Auftragsverarbeitungsvertrag (AVV). Ohne AVV ist die Datenweitergabe rechtswidrig — auch wenn der Sub die Daten zur Auftragserfüllung braucht.</p>
               <p><strong>Lösung:</strong> Standard-AVV-Vorlage (z. B. von der WKO) erstellen und mit jedem regelmäßigen Subunternehmer abschließen. Bei einmaliger Tätigkeit reicht meist eine kurze Datenschutz-Klausel im Werkvertrag.</p>
@@ -869,7 +870,7 @@
           </div>
           <div style="display:flex;gap:16px;margin-top:6px;">
             <p class="footer__cert-caption" style="margin-top:0;width:88px;">Zertifiziert nach<br>ÖVE/ÖNORM<br>EN ISO / IEC<br>17024</p>
-            <p style="font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;margin-top:0;width:88px;">Registriertes<br>Beratungsunternehmen</p>
+            <p style="font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;margin-top:0;min-width:88px;">Registriertes<br>Beratungsunternehmen</p>
           </div>
         </div>
 

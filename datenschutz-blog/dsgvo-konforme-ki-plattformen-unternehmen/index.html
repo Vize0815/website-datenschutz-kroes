@@ -336,6 +336,7 @@
     .step-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--color-gold); }
     .step-card__num { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 8px; }
     .step-card__title { font-size: 24px; font-weight: 600; color: var(--color-navy); line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 16px; }
+    @media (max-width: 480px) { .step-card__title { font-size: 20px; } }
     .step-card__body { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--color-slate); }
     .step-card__body p + p { margin-top: 0.8em; }
     .step-card__body strong { color: var(--color-navy); font-weight: 600; }
@@ -867,7 +868,7 @@
           <!-- ===== STEP 2 ===== -->
           <div class="step-card" id="schritt-02">
             <p class="step-card__num">Schritt 02 · AVV abschließen</p>
-            <h3 class="step-card__title">Auftragsverarbeitungsvertrag vor der ersten Eingabe</h3>
+            <h3 class="step-card__title">Auftragsverarbeitungs<wbr>vertrag vor der ersten Eingabe</h3>
             <div class="step-card__body">
               <p>Ohne AVV ist jede Eingabe personenbezogener Daten in eine KI-Plattform eine Datenschutzverletzung nach Art. 4 DSGVO. Das gilt unabhängig davon, wie bekannt der Anbieter ist oder wie unkritisch die Daten erscheinen.</p>
               <p><strong>Praktische Konsequenz:</strong> Free-Versionen von ChatGPT, Gemini oder Claude schließen einen AVV ausdrücklich aus. Für die berufliche Nutzung mit Personenbezug sind ausschließlich Business- oder Enterprise-Tarife geeignet. Wer mit der Free-Version arbeitet, muss sicherstellen, dass niemals personenbezogene Daten eingegeben werden.</p>
@@ -1039,7 +1040,7 @@
           </div>
           <div style="display:flex;gap:16px;margin-top:6px;">
             <p class="footer__cert-caption" style="margin-top:0;width:88px;">Zertifiziert nach<br>ÖVE/ÖNORM<br>EN ISO / IEC<br>17024</p>
-            <p style="font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;margin-top:0;width:88px;">Registriertes<br>Beratungsunternehmen</p>
+            <p style="font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;margin-top:0;min-width:88px;">Registriertes<br>Beratungsunternehmen</p>
           </div>
         </div>
 
