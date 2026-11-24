@@ -6199,7 +6199,7 @@
     stepTotalEl.textContent = totalSteps;
 
     /* ---- STEP NAVIGATION ---- */
-    function setStep(n) {
+    function setStep(n, noScroll) {
       currentStep = Math.max(1, Math.min(totalSteps, n));
       steps.forEach(s => {
         s.classList.toggle('is-active', Number(s.dataset.quizStep) === currentStep);
@@ -6212,8 +6212,8 @@
       backBtn.classList.toggle('is-visible', currentStep > 1);
       nextLabel.textContent = currentStep === totalSteps ? 'Ergebnis anzeigen' : 'Weiter';
       updateNextDisabled();
-      // Scroll Card into view on mobile
-      if (window.innerWidth < 768) {
+      // Scroll Card into view on mobile, nicht beim Laden der Seite
+      if (!noScroll && window.innerWidth < 768) {
         root.querySelector('.quiz-nis2__card').scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
@@ -6472,7 +6472,7 @@
       stepsRoot.style.display = '';
       navEl.style.display = '';
       progressWrap.style.display = '';
-      setStep(1);
+      setStep(1, true);
       root.querySelector('.quiz-nis2__card').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
@@ -6886,7 +6886,7 @@
     });
 
     /* ---- INIT ---- */
-    setStep(1);
+    setStep(1, true);
   })();
   </script>
 
