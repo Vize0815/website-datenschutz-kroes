@@ -1081,15 +1081,6 @@
       opacity: 0.7;
     }
 
-    /* Bereiche unterhalb des Startbereichs erst setzen, wenn sie in die Nähe
-       des Bildschirms kommen. Das erste Layout der langen Seite sinkt damit
-       auf etwa ein Drittel, das erste Bild erscheint früher. */
-    main > section:not(.hero),
-    body > footer {
-      content-visibility: auto;
-      contain-intrinsic-size: auto 900px;
-    }
-
     /* =============================================
        8. HERO ANIMATIONS
     ============================================= */
