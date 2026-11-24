@@ -4120,7 +4120,7 @@
     <div class="container">
       <div class="nav__inner">
         <a href="#" class="nav__logo" aria-label="Datenschutz Kroes – Startseite">
-          <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
+          <img src="logo-datenschutz-kroes.webp" alt="Datenschutz Kroes – Externer Datenschutzbeauftragter für KMU" class="nav__logo-mark" width="200" height="163" fetchpriority="high" decoding="async">
         </a>
 
         <ul class="nav__links" role="list">
@@ -4814,7 +4814,7 @@
         <div class="latest-posts__grid">
 
           <a class="lp-card" href="datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/">
-            <div class="lp-card__cover lp-card__cover--behoerde" style="background-image:url('datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/cover.webp?v=3');" role="img" aria-label="Schreiben der Datenschutzbehörde erhalten? Der Leitfaden für Österreich und Deutschland">
+            <div class="lp-card__cover lp-card__cover--behoerde" data-bg="datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/cover.webp?v=3" role="img" aria-label="Schreiben der Datenschutzbehörde erhalten? Der Leitfaden für Österreich und Deutschland">
               <span class="lp-card__badge">
                 <span class="lp-card__badge-dot lp-card__badge-dot--behoerde" aria-hidden="true"></span>
                 Datenschutzbehörde
@@ -4836,7 +4836,7 @@
           </a>
 
           <a class="lp-card" href="datenschutz-blog/ki-agenten-openai-sicherheitsvorfaelle-2026/">
-            <div class="lp-card__cover lp-card__cover--ki" style="background-image:url('KI%20Open%20AI%20.webp');" role="img" aria-label="Wenn KI selbst entscheidet. Was der OpenAI-Bericht über unkontrollierte Agenten für Betriebe bedeutet">
+            <div class="lp-card__cover lp-card__cover--ki" data-bg="KI%20Open%20AI%20.webp" role="img" aria-label="Wenn KI selbst entscheidet. Was der OpenAI-Bericht über unkontrollierte Agenten für Betriebe bedeutet">
               <span class="lp-card__badge">
                 <span class="lp-card__badge-dot lp-card__badge-dot--ki" aria-hidden="true"></span>
                 KI &amp; Datenschutz
@@ -4858,7 +4858,7 @@
           </a>
 
           <a class="lp-card" href="datenschutz-blog/whatsapp-dsgvo-makler/">
-            <div class="lp-card__cover lp-card__cover--branche" style="background-image:url('makler.webp');" role="img" aria-label="WhatsApp und DSGVO: Was Makler bei der Kundenkommunikation beachten müssen">
+            <div class="lp-card__cover lp-card__cover--branche" data-bg="makler.webp" role="img" aria-label="WhatsApp und DSGVO: Was Makler bei der Kundenkommunikation beachten müssen">
               <span class="lp-card__badge">
                 <span class="lp-card__badge-dot lp-card__badge-dot--branche" aria-hidden="true"></span>
                 Branche
@@ -5735,7 +5735,7 @@
       <div class="footer__grid">
         <div>
           <div class="footer__logo">
-            <img src="logo-datenschutz-kroes.png" alt="Datenschutz Kroes" style="height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
+            <img src="logo-datenschutz-kroes.webp" alt="Datenschutz Kroes" loading="lazy" style="height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;">
             Datenschutz Kroes
           </div>
           <p class="footer__tagline">Externer Datenschutzbeauftragter für KMU & Handwerk.</p>
@@ -6960,6 +6960,19 @@
     }
     w.scrollIntoView({behavior:'smooth'});
   }
+  </script>
+
+  <!-- Blogkartenbilder erst kurz vor dem Sichtbarwerden laden (data-bg statt style) -->
+  <script>
+  (function () {
+    var els = document.querySelectorAll('[data-bg]');
+    function show(el) { el.style.backgroundImage = "url('" + el.getAttribute('data-bg') + "')"; el.removeAttribute('data-bg'); }
+    if (!('IntersectionObserver' in window)) { els.forEach(show); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '600px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
   </script>
 
   <!-- ============= INFOBAR SCRIPT ============= -->
