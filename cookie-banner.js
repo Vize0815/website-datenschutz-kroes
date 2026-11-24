@@ -332,7 +332,26 @@
     });
 
     var firstFocusable = nodes.banner.querySelector('.cc-tab');
-    if (firstFocusable) firstFocusable.focus();
+    if (firstFocusable) firstFocusable.focus({ preventScroll: true });
+  }
+
+  /* Erst öffnen, wenn cookie-banner.css angewendet ist. Sonst landet der
+     ungestylte Banner am Seitenende, der Fokus scrollt dorthin und die
+     Seite springt, sobald das CSS ankommt. */
+  function cssReady() {
+    var sheets = document.styleSheets;
+    for (var i = 0; i < sheets.length; i++) {
+      if (sheets[i].href && sheets[i].href.indexOf('cookie-banner.css') !== -1) return true;
+    }
+    return !document.querySelector('link[href*="cookie-banner.css"]');
+  }
+
+  function whenCssReady(cb) {
+    var start = Date.now();
+    (function check() {
+      if (cssReady() || Date.now() - start > 5000) { cb(); return; }
+      setTimeout(check, 30);
+    })();
   }
 
   function closeBanner() {
@@ -354,7 +373,7 @@
       return;
     }
     /* no valid consent → show banner with defaults (only necessary = true) */
-    openBanner(null);
+    whenCssReady(function () { openBanner(null); });
   }
 
   window.DSKCookieConsent = {
