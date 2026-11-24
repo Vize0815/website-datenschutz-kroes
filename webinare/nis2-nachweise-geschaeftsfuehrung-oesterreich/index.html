@@ -285,6 +285,15 @@
     .btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; color: #fff; border: 1px solid rgba(255,255,255,0.28); padding: 13px 22px; border-radius: var(--radius-md); transition: border-color var(--transition-base), color var(--transition-base); }
     .btn-ghost:hover { border-color: var(--color-gold); color: var(--color-gold-light); }
     @media (min-width: 720px) { .cta { padding: 40px; } }
+    /* Persönlicher Baustein in der blauen Box (wie Startseite) */
+    .cta__person { display: flex; align-items: flex-start; gap: 16px; margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); position: relative; }
+    .cta__photo { flex-shrink: 0; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; background: var(--color-mist); box-shadow: 0 0 0 2px rgba(201,168,76,0.55), 0 8px 22px rgba(0,0,0,0.3); }
+    .cta__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; display: block; }
+    .cta__quote { font-family: var(--font-serif); font-style: italic; font-size: 16px; line-height: 1.5; color: #fff; margin: 0 0 10px; }
+    .cta__name { font-weight: 700; font-size: 15px; color: #fff; margin: 0; line-height: 1.3; }
+    .cta__role { font-size: 13px; color: var(--color-gold-light); margin: 4px 0 0; letter-spacing: 0.02em; }
+    @media (min-width: 641px) { .cta__photo { width: 88px; height: 88px; } .cta__quote { font-size: 17px; } }
+
 
     /* WEITERLESEN */
     .more { background: var(--color-bg); padding: 56px 0 64px; }
@@ -667,6 +676,14 @@
                 </a>
                 <a href="../../nis2-seminar.html" class="btn-ghost">NIS 2 Seminar ansehen</a>
               </div>
+            <figure class="cta__person">
+              <div class="cta__photo"><img src="../../alexander-kroes-2.webp" alt="Alexander Kroes, externer zertifizierter Datenschutzbeauftragter" width="88" height="88" loading="lazy" decoding="async"></div>
+              <figcaption>
+                <p class="cta__quote">„Mit mir reden Sie persönlich, nicht mit einer Hotline."</p>
+                <p class="cta__name">Alexander Kroes</p>
+                <p class="cta__role">Externer zertifizierter DSB</p>
+              </figcaption>
+            </figure>
             </div>
 
             <p class="disclaimer">Das Webinar wurde von PECB veranstaltet und aufgezeichnet. Ich bin kein Jurist, sondern Praktiker. Dieses Video dient der allgemeinen Information und ersetzt keine Rechtsberatung im Einzelfall.</p>
