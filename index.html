@@ -7052,7 +7052,6 @@
     var caret = document.createElement('span');
     caret.className = 'tw-caret';
     caret.setAttribute('aria-hidden', 'true');
-    el.insertBefore(caret, chars[0]);
 
     var idx = 0;
     function typeNext() {
@@ -7067,8 +7066,21 @@
         setTimeout(function() { caret.remove(); }, 2400);
       }
     }
-    // Start, sobald die Zeile eingeblendet ist
-    setTimeout(typeNext, 1000);
+    // Start, sobald die Zeile eingeblendet ist. Solange der Cookie Banner
+    // offen ist, wird gewartet: hinter dem Banner sieht niemand die
+    // Animation, sie würde nur den Seitenaufbau (Speed Index) verlängern.
+    function startTyping() {
+      el.insertBefore(caret, chars[0]);
+      setTimeout(typeNext, 600);
+    }
+    setTimeout(function waitForBanner() {
+      var api = window.DSKCookieConsent;
+      if (document.querySelector('.cc-overlay') || (api && !api.get())) {
+        setTimeout(waitForBanner, 300);
+        return;
+      }
+      startTyping();
+    }, 1000);
   })();
   </script>
 
