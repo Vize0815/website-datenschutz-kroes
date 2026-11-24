@@ -1,8 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="de">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VEP7SSRXMT"></script>
+<!-- Google tag (gtag.js): Bibliothek erst nach dem Laden der Seite holen,
+     damit sie den ersten Bildaufbau nicht bremst. Die Befehle unten werden
+     bis dahin in dataLayer gesammelt und dann abgearbeitet. -->
+<script>
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VEP7SSRXMT';
+    document.head.appendChild(s);
+  }, { once: true });
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
