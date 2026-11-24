@@ -37,6 +37,14 @@
 Options -MultiViews
 Options -Indexes
 
+# Rechtschreibkorrektur aus. Sie antwortete auf unbekannte
+# Adressen mit 300 statt 404 und nannte dabei Dateinamen im
+# Webverzeichnis (Befund im Zugriffsprotokoll vom 20.11.2026)
+<IfModule mod_speling.c>
+  CheckSpelling Off
+  CheckCaseOnly Off
+</IfModule>
+
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -126,6 +134,13 @@ Options -Indexes
   RewriteRule ^download-bewerbungsverfahren/?$ /downloads.html [R=301,L]
   RewriteRule ^google-verliert-prozess-um-datenschutz/?$ /datenschutz-blog/ [R=301,L]
   RewriteRule ^deutsche-bahn-klage-wegen-db-navigator/?$ /datenschutz-blog/ [R=301,L]
+
+  # Adressen, die der Meta Crawler abruft (Protokoll 20.11.2026)
+  RewriteRule ^preise-datenschutz/?$ /datenschutz-flatrate.html [R=301,L]
+  RewriteRule ^externer-datenschutzbeauftragter-kosten/?$ /datenschutz-flatrate.html [R=301,L]
+  RewriteRule ^nis2-richtlinie-fuer-kmu/?$ /datenschutz-blog/nis2-richtlinie-was-kmu-umsetzen-muessen/ [R=301,L]
+  RewriteRule ^dsgvo-umsetzung-unternehmen/?$ /datenschutz-blog/dsgvo-compliance-5-schritte-kmu/ [R=301,L]
+  RewriteRule ^typische-fehler-im-datenschutz-vermeiden/?$ /datenschutz-blog/dsgvo-compliance-5-schritte-kmu/ [R=301,L]
 
   # ----------------------------------------------------------
   # 2.632 Impr. | Position 16,5 | sichtbarste Einzeladresse

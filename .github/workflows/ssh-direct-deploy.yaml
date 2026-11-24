@@ -45,5 +45,8 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='.claude' \
+            --exclude='.gitignore' \
             -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
             ./ "$SSH_USER@$SSH_HOST:~/"
+          # Frueher mitkopierte Werkzeugdatei vom Webspace entfernen
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -f ~/.gitignore"
