@@ -196,6 +196,15 @@
     .feature__text { font-size: 15px; color: var(--color-slate); line-height: 1.7; margin-bottom: 18px; }
     .feature__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
     .feature__tags span { font-family: var(--font-mono); font-size: 11px; color: var(--color-prussian); background: var(--color-sky-tint); padding: 4px 9px; border-radius: 100px; }
+    .feature { position: relative; }
+    .feature__stretch { color: inherit; }
+    .feature__stretch::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+    .feature__stretch:focus-visible { outline: none; }
+    .feature:has(.feature__stretch:focus-visible) { outline: 2px solid var(--color-gold); outline-offset: 3px; }
+    .feature__actions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; }
+    .feature__pecb { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 500; color: var(--color-prussian); text-decoration: underline; text-underline-offset: 3px; }
+    .feature__pecb:hover { color: var(--color-navy); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     .feature__go { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: var(--color-navy); }
     .feature__go svg { transition: transform var(--transition-base); }
     .feature:hover .feature__go svg { transform: translateX(4px); }
@@ -502,7 +511,7 @@
     <section class="library" aria-label="Aufzeichnungen">
       <div class="container">
         <div class="library__inner">
-          <a href="nis2-nachweise-geschaeftsfuehrung-oesterreich/" class="feature">
+          <article class="feature">
             <div class="feature__media">
               <img src="nis2-nachweise-geschaeftsfuehrung-oesterreich/cover-640.webp" srcset="nis2-nachweise-geschaeftsfuehrung-oesterreich/cover-640.webp 640w, nis2-nachweise-geschaeftsfuehrung-oesterreich/cover.webp 1280w" sizes="(min-width: 1100px) 560px, (min-width: 860px) 54vw, 100vw" alt="Titelbild des Webinars: Nach der NIS 2 Umsetzung, mit Alexander Kroes" width="1280" height="720" fetchpriority="high" decoding="async">
               <span class="feature__play" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.2-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z"/></svg></span>
@@ -510,13 +519,15 @@
             </div>
             <div class="feature__body">
               <p class="feature__eyebrow">PECB Regional Webinar · 19.11.2026</p>
-              <h2 class="feature__title">Nach der NIS 2 Umsetzung: Was Geschäftsführer in Österreich jetzt organisatorisch nachweisen müssen</h2>
+              <h2 class="feature__title"><a href="nis2-nachweise-geschaeftsfuehrung-oesterreich/" class="feature__stretch">Nach der NIS 2 Umsetzung: Was Geschäftsführer in Österreich jetzt organisatorisch nachweisen müssen</a></h2>
               <p class="feature__text">Betroffenheit, Fristen, Pflichten und Haftung der Geschäftsführung nach dem NISG 2026 und wie ein Nachweisordner aussieht, der im Ernstfall hält.</p>
               <div class="feature__tags"><span>NIS 2</span><span>NISG 2026</span><span>Geschäftsführung</span><span>23 Kapitel</span></div>
-              <span class="feature__go">Webinar ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              <div class="feature__actions">
+                <span class="feature__go">Webinar ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                <a href="https://growth.pecb.com/past-webinars/nach-der-nis-2-umsetzung-was-geschaftsfuhrer-in-osterreich-jetzt-organisatorisch-nachweisen-mussen/" class="feature__pecb" target="_blank" rel="noopener">Webinar bei PECB <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="sr-only"> (öffnet in neuem Fenster)</span></a>
+              </div>
             </div>
-          </a>
-
+          </article>
 
           <div class="next">
             <div class="next__card"><strong>Weitere Aufzeichnungen folgen</strong>Neue Webinare und Videos erscheinen hier, sobald sie aufgezeichnet sind.</div>
