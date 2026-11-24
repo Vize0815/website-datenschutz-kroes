@@ -73,8 +73,12 @@
     window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
   });
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
+  /* resize erst beachten, wenn schon gescrollt wurde. Beim Laden löst die
+     Scrollsperre des Cookie Banners ein resize aus, das sonst ein unnötiges
+     Layout erzwingt. */
+  var scrolled = false;
+  window.addEventListener('scroll', function () { scrolled = true; onScroll(); }, { passive: true });
+  window.addEventListener('resize', function () { if (scrolled) onScroll(); });
   /* Keine Berechnung beim Start: Die Seite steht oben, der Knopf ist
      unsichtbar. Springt der Browser zu einem Anker oder stellt er die
      Scrollposition wieder her, löst das ein scroll Ereignis aus.
