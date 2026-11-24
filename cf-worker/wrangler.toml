@@ -3,6 +3,5 @@ main = "worker.js"
 compatibility_date = "2024-01-01"
 workers_dev = true
 
-[[kv_namespaces]]
-binding = "CLICKS"
-id = "PLACEHOLDER_ERSETZEN"
+# Secret BREVO_API_KEY liegt bei Cloudflare (wrangler secret put BREVO_API_KEY).
+# Kein KV Speicher gebunden: Die Live Version nutzt keinen.

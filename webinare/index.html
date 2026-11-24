@@ -761,7 +761,7 @@
         }).then(function (res) {
           clearTimeout(t);
           if (!res.ok) throw new Error('api');
-          form.innerHTML = '<p class="nl__done">Vielen Dank! Sie erhalten in Kürze eine Bestätigungsmail.</p>';
+          form.innerHTML = '<p class="nl__done">Fast geschafft! Bitte bestätigen Sie Ihre Anmeldung über den Link in der Mail, die wir Ihnen gerade geschickt haben.</p>';
         }).catch(function () {
           clearTimeout(t); btn.disabled = false; btn.innerHTML = label;
           err.textContent = 'Anmeldung fehlgeschlagen. Bitte versuchen Sie es erneut.'; err.hidden = false;
