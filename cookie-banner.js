@@ -37,7 +37,7 @@
       required: false,
       description: 'Werden verwendet, um Besuchern auf Websites zu folgen. Ermöglicht eingebettete Drittinhalte wie YouTube-Videos, die beim Abspielen eigene Cookies setzen können.',
       items: [
-        { name: 'YouTube-Embed', purpose: 'Bei Zustimmung werden auf Unterseiten (DSGVO-Seminar, NIS2-Seminar) eingebettete YouTube-Videos (youtube-nocookie.com) geladen. Anbieter: Google Ireland Ltd., Irland.', storage: 'Drittanbieter-Cookies', duration: 'Bis zu 2 Jahre (Google)' }
+        { name: 'YouTube-Embed', purpose: 'Bei Zustimmung werden auf Unterseiten (DSGVO-Seminar, NIS2-Seminar, Webinare & Videos) eingebettete YouTube-Videos (youtube-nocookie.com) geladen. Anbieter: Google Ireland Ltd., Irland.', storage: 'Drittanbieter-Cookies', duration: 'Bis zu 2 Jahre (Google)' }
       ]
     }
   ];

@@ -3943,6 +3943,7 @@
 .nav__mobile-overlay.open ul li:nth-child(7) .nav__mobile-link { animation-delay: 0.42s; }
 .nav__mobile-overlay.open ul li:nth-child(8) .nav__mobile-link { animation-delay: 0.47s; }
 .nav__mobile-overlay.open ul li:nth-child(9) .nav__mobile-link { animation-delay: 0.52s; }
+.nav__mobile-overlay.open ul li:nth-child(10) .nav__mobile-link { animation-delay: 0.57s; }
 /* Social Icons */
 .nav__mobile-social { position: static !important; flex-shrink: 0 !important; width: 100% !important; justify-content: flex-start !important; display: flex !important; gap: 10px !important; padding: 20px 40px 32px !important; box-sizing: border-box !important; background-color: transparent !important; }
 .nav__mobile-social a { width: 36px !important; height: 36px !important; border-radius: 50% !important; border: 1px solid var(--color-mist, #DDE3EC) !important; color: var(--color-slate-light, #8A99AD) !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transition: color 200ms ease, border-color 200ms ease !important; background-color: transparent !important; }
@@ -4143,6 +4144,7 @@
         <li><a href="#leistungen" class="nav__mobile-link" onclick="closeMobileNav()">Leistungen</a></li>
         <li><a href="datenschutz-flatrate.html" class="nav__mobile-link" onclick="closeMobileNav()">Pakete &amp; Preise</a></li>
         <li><a href="#seminare" class="nav__mobile-link" onclick="closeMobileNav()">Seminare</a></li>
+        <li><a href="webinare/" class="nav__mobile-link" onclick="closeMobileNav()">Webinare &amp; Videos</a></li>
         <li><a href="karriere.html" class="nav__mobile-link" onclick="closeMobileNav()">Karriere</a></li>
         <li><a href="fallbeispiele.html" class="nav__mobile-link" onclick="closeMobileNav()">Fallbeispiele</a></li>
         <li><a href="#kontakt" class="nav__mobile-link" onclick="closeMobileNav()">Kontakt</a></li>
@@ -4187,6 +4189,7 @@
           <li><a href="#leistungen" class="nav__link">Leistungen</a></li>
           <li><a href="datenschutz-flatrate.html" class="nav__link">Pakete &amp; Preise</a></li>
           <li><a href="#seminare" class="nav__link">Seminare</a></li>
+          <li><a href="webinare/" class="nav__link">Webinare &amp; Videos</a></li>
           <li><a href="karriere.html" class="nav__link">Karriere</a></li>
           <li><a href="fallbeispiele.html" class="nav__link">Fallbeispiele</a></li>
           <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
@@ -5830,6 +5833,7 @@
             <li><a href="#prozess" class="footer__link">Prozess</a></li>
             <li><a href="#faq" class="footer__link">FAQ</a></li>
             <li><a href="datenschutz-blog/" class="footer__link">Blog</a></li>
+            <li><a href="webinare/" class="footer__link">Webinare &amp; Videos</a></li>
             <li><a href="fallbeispiele.html" class="footer__link">Fallbeispiele</a></li>
             <li><a href="karriere.html" class="footer__link">Karriere</a></li>
             <li><a href="#kontakt" class="footer__link">Kontakt</a></li>
@@ -7125,6 +7129,76 @@
       }
       startTyping();
     }, 1000);
+  })();
+  </script>
+
+  <!-- Webinar Hinweis: erscheint ab 40 % Scrolltiefe, nie bei offenem Cookie Banner, einmal pro Besuch -->
+  <script>
+  (function () {
+    var KEY = 'dsk_webinar_popup_nis2';
+    var URL = 'webinare/nis2-nachweise-geschaeftsfuehrung-oesterreich/';
+    try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
+    var done = false;
+    function blocked() {
+      if (!window.DSKCookieConsent || !DSKCookieConsent.get()) return true;
+      if (document.querySelector('.cc-overlay')) return true;
+      var mo = document.getElementById('mobile-overlay');
+      return !!(mo && mo.classList.contains('open'));
+    }
+    function check() {
+      if (done) return;
+      var d = document.documentElement, max = d.scrollHeight - window.innerHeight;
+      if (max <= 0 || (window.pageYOffset || d.scrollTop) / max < 0.4 || blocked()) return;
+      done = true;
+      window.removeEventListener('scroll', onScroll);
+      show();
+    }
+    var ticking = false;
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; check(); }); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    function show() {
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+      var css = document.createElement('style');
+      css.textContent =
+        '.wbp{position:fixed;z-index:940;left:16px;right:76px;bottom:16px;max-width:380px;background:#fff;border:1px solid #DDE3EC;border-radius:14px;box-shadow:0 18px 50px rgba(15,31,61,.28);overflow:hidden;font-family:"DM Sans",-apple-system,sans-serif;opacity:0;transform:translateY(24px);transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.2,1)}' +
+        '.wbp.is-in{opacity:1;transform:none}' +
+        '.wbp__link{display:grid;grid-template-columns:104px 1fr;gap:12px;align-items:center;padding:10px 38px 10px 10px;color:#0F1F3D;text-decoration:none}' +
+        '.wbp__img{width:104px!important;height:59px!important;max-width:none!important;object-fit:cover;border-radius:8px;display:block;background:#0F1F3D}' +
+        '.wbp__eyebrow{display:flex;align-items:center;gap:6px;font-family:"DM Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9a7b2c;margin-bottom:3px}' +
+        '.wbp__dot{width:6px;height:6px;border-radius:50%;background:#B23A48;flex-shrink:0}' +
+        '.wbp__title{display:block;font-size:14px;font-weight:600;line-height:1.3;margin-bottom:4px}' +
+        '.wbp__go{font-size:12.5px;font-weight:500;color:#1B4F8A}' +
+        '.wbp__link:hover .wbp__go{text-decoration:underline}' +
+        '.wbp__x{position:absolute;top:6px;right:6px;width:30px;height:30px;border:0;background:transparent;border-radius:50%;color:#8A99AD;cursor:pointer;display:flex;align-items:center;justify-content:center}' +
+        '.wbp__x:hover{background:#F4F5F7;color:#0F1F3D}' +
+        '@media (min-width:641px){.wbp{left:24px;right:auto;bottom:24px;width:370px}.wbp__link{grid-template-columns:128px 1fr;padding:12px 40px 12px 12px}.wbp__img{width:128px!important;height:72px!important}.wbp__title{font-size:15px}}' +
+        '@media (prefers-reduced-motion:reduce){.wbp{transition:none}}';
+      document.head.appendChild(css);
+      var box = document.createElement('aside');
+      box.className = 'wbp';
+      box.setAttribute('aria-label', 'Neues Webinar');
+      box.innerHTML =
+        '<a class="wbp__link" href="' + URL + '">' +
+          '<img class="wbp__img" src="' + URL + 'cover-640.webp" width="640" height="360" alt="">' +
+          '<span><span class="wbp__eyebrow"><span class="wbp__dot" aria-hidden="true"></span>Neu · Webinar</span>' +
+          '<span class="wbp__title">NIS 2: Was Geschäftsführer jetzt nachweisen müssen</span>' +
+          '<span class="wbp__go">Jetzt ansehen →</span></span>' +
+        '</a>' +
+        '<button type="button" class="wbp__x" aria-label="Hinweis schließen"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>';
+      document.body.appendChild(box);
+      function close() {
+        box.classList.remove('is-in');
+        document.removeEventListener('keydown', onKey);
+        setTimeout(function () { if (box.parentNode) box.parentNode.removeChild(box); }, 450);
+      }
+      function onKey(e) { if (e.key === 'Escape') close(); }
+      box.querySelector('.wbp__x').addEventListener('click', close);
+      document.addEventListener('keydown', onKey);
+      var img = box.querySelector('img');
+      function enter() { requestAnimationFrame(function () { box.classList.add('is-in'); }); }
+      if (img.complete) enter(); else { img.addEventListener('load', enter); img.addEventListener('error', enter); }
+    }
   })();
   </script>
 
