@@ -805,7 +805,8 @@
       line-height: 1.75;
       margin-bottom: 40px;
       max-width: 560px;
-      animation: fadeSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+      /* Nur Bewegung, keine Einblendung: der Text ist das LCP Element und soll sofort zählen */
+      animation: slideUpOnly 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
       animation-delay: 0.2s;
     }
 
@@ -1077,6 +1078,11 @@
     @keyframes lineReveal {
       from { transform: translateY(100%); opacity: 0; }
       to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    @keyframes slideUpOnly {
+      from { transform: translateY(20px); }
+      to   { transform: translateY(0); }
     }
 
     @keyframes fadeSlideUp {
