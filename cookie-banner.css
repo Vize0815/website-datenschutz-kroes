@@ -22,7 +22,9 @@ html.cc-lock, html.cc-lock body { overflow: hidden !important; }
 }
 .cc-overlay[aria-hidden="false"] { display: flex; }
 
-@keyframes cc-fade-in { from { opacity: 0; } to { opacity: 1; } }
+/* Nur der Hintergrund blendet ein, der Inhalt ist sofort sichtbar.
+   Sonst wird der Bannertext auf dem Handy zum spät gezählten LCP Element. */
+@keyframes cc-fade-in { from { background-color: rgba(15, 31, 61, 0); } to { background-color: rgba(15, 31, 61, 0.55); } }
 
 /* ---------- Banner (centered modal card) ---------- */
 .cc-banner {
@@ -46,8 +48,8 @@ html.cc-lock, html.cc-lock body { overflow: hidden !important; }
 }
 
 @keyframes cc-pop-in {
-  from { opacity: 0; transform: translateY(12px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from { transform: translateY(12px) scale(0.97); }
+  to   { transform: translateY(0) scale(1); }
 }
 
 .cc-banner *, .cc-banner *::before, .cc-banner *::after { box-sizing: border-box; }
