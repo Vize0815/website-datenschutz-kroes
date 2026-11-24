@@ -75,5 +75,8 @@
 
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
-  update();
+  /* Erste Berechnung erst nach dem Laden: vorher erzwang sie ein komplettes
+     Layout der Seite, bevor der Browser selbst gerendert hatte */
+  if (document.readyState === 'complete') onScroll();
+  else window.addEventListener('load', onScroll, { once: true });
 })();
