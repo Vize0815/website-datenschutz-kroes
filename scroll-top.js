@@ -75,8 +75,8 @@
 
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
-  /* Erste Berechnung erst nach dem Laden: vorher erzwang sie ein komplettes
-     Layout der Seite, bevor der Browser selbst gerendert hatte */
-  if (document.readyState === 'complete') onScroll();
-  else window.addEventListener('load', onScroll, { once: true });
+  /* Keine Berechnung beim Start: Die Seite steht oben, der Knopf ist
+     unsichtbar. Springt der Browser zu einem Anker oder stellt er die
+     Scrollposition wieder her, löst das ein scroll Ereignis aus.
+     Jede Berechnung erzwingt ein Layout und verlängert den Speed Index. */
 })();
