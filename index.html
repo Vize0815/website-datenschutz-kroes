@@ -3883,10 +3883,16 @@
   overflow-x: hidden !important;
   transform: translateX(100%) !important;
   box-shadow: -100vw 0 0 100vw rgba(15,31,61,0), -12px 0 48px rgba(15,31,61,0) !important;
-  transition: transform 0.38s cubic-bezier(0.4,0,0.2,1), box-shadow 0.38s ease !important;
+  /* Geschlossen ganz ausgeblendet, damit die Ebene mit ihrem bildschirmbreiten
+     Schatten nicht bei jedem Bild mitgezeichnet wird. visibility schaltet erst
+     nach dem Hinausgleiten um, damit das Schließen weich bleibt. */
+  visibility: hidden !important;
+  transition: transform 0.38s cubic-bezier(0.4,0,0.2,1), box-shadow 0.38s ease, visibility 0s linear 0.38s !important;
   z-index: 103 !important;
 }
 .nav__mobile-overlay.open {
+  visibility: visible !important;
+  transition: transform 0.38s cubic-bezier(0.4,0,0.2,1), box-shadow 0.38s ease, visibility 0s !important;
   transform: translateX(0) !important;
   pointer-events: all !important;
   box-shadow: -100vw 0 0 100vw rgba(15,31,61,0.28), -12px 0 48px rgba(15,31,61,0.15) !important;
