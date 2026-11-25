@@ -27,7 +27,7 @@
 | `/dsgvo-seminar.html` | DSGVO Seminar für Geschäftsführungen in Tirol und Salzburg | DSGVO Seminar nach DSGVO und DSG (Österreich) |
 | `/dsgvo-seminar-deutschland.html` | DSGVO Seminar für Geschäftsführungen in Rosenheim und München | DSGVO Seminar nach DSGVO und BDSG (Deutschland) |
 | `/nis2-seminar-oesterreich.html` | NIS2 Schulung für Geschäftsführungen in Tirol und Salzburg | Pflichtschulung NIS2 Kompakt für Leitungsorgane nach § 31 NISG 2026 (Österreich) |
-| `/nis2-schulung-deutschland.html` | NIS2 Schulung für Geschäftsleitungen in Rosenheim und München | Pflichtschulung für Geschäftsleitungen nach § 38 Abs. 3 BSIG (Deutschland) |
+| `/nis2-seminar-deutschland.html` | NIS2 Schulung für Geschäftsleitungen in Rosenheim und München | Pflichtschulung für Geschäftsleitungen nach § 38 Abs. 3 BSIG (Deutschland) |
 | `/downloads.html` | Downloads | Kostenlose Checklisten, Leitfäden, Vorlagen (PDF) |
 | `/benennungsurkunde.html` | Benennungsurkunde | Interaktives PDF-Formular zur DSB-Bestellung |
 | `/impressum.html` | Impressum | Rechtliche Pflichtangaben |
@@ -159,7 +159,7 @@ Einleitung der gesetzlich vorgeschriebenen Reaktionsfrist auf Datenschutzvorfäl
 **Lead:** Alles Wichtige zu NIS2, DSGVO und Datenschutz – praxisnah für Unternehmen mit Verantwortung gestaltet.
 
 - **NIS2 Schulung für Geschäftsführungen, Österreich** (Pflichtschulung nach § 31 NISG 2026, in Tirol, Salzburg und online) → siehe `/nis2-seminar-oesterreich.html`
-- **NIS2 Schulung für Geschäftsleitungen, Deutschland** (Pflichtschulung nach § 38 Abs. 3 BSIG, in Rosenheim, München und online) → siehe `/nis2-schulung-deutschland.html`
+- **NIS2 Schulung für Geschäftsleitungen, Deutschland** (Pflichtschulung nach § 38 Abs. 3 BSIG, in Rosenheim, München und online) → siehe `/nis2-seminar-deutschland.html`
 - **DSGVO Seminar für Geschäftsführungen, Österreich** (DSGVO und DSG, in Kufstein, Salzburg und inhouse) → siehe `/dsgvo-seminar.html`
 - **DSGVO Seminar für Geschäftsführungen, Deutschland** (DSGVO und BDSG, in Rosenheim, München und inhouse) → siehe `/dsgvo-seminar-deutschland.html`
 
@@ -466,7 +466,7 @@ A: Ja. NIS2 Kompakt ist speziell für Leitungsorgane gestaltet, so wie es das NI
 **Q: Kann ich die NIS2 Schulung online besuchen?**
 A: Ja, aus ganz Österreich. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen.
 
-Ihr Unternehmen sitzt in Deutschland? Siehe `/nis2-schulung-deutschland.html` (NIS2 Schulung für Geschäftsleitungen nach § 38 BSIG).
+Ihr Unternehmen sitzt in Deutschland? Siehe `/nis2-seminar-deutschland.html` (NIS2 Schulung für Geschäftsleitungen nach § 38 BSIG).
 
 ## Termine 2026 (Auswahl)
 
@@ -478,7 +478,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 
 ---
 
-# 3b. NIS2 Schulung Deutschland (nis2-schulung-deutschland.html)
+# 3b. NIS2 Schulung Deutschland (nis2-seminar-deutschland.html)
 
 **Title:** NIS2 Schulung für Geschäftsleitungen in Rosenheim und München
 **Meta-Description:** NIS2 Schulung für Geschäftsleitungen nach § 38 Abs. 3 BSIG. In Rosenheim und München, inhouse in Ihrem Unternehmen oder online. 4 Stunden, 450 € zzgl. MwSt.
