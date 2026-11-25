@@ -39,7 +39,7 @@ Firmenbuch: FN 639208 m, Landesgericht Innsbruck
 - Arztpraxen: https://datenschutz-kroes.at/arztpraxen/
 - Handwerk: https://datenschutz-kroes.at/handwerk/
 - Steuerberater: https://datenschutz-kroes.at/steuerberater/
-- DSGVO Seminar Österreich: https://datenschutz-kroes.at/dsgvo-seminar.html
+- DSGVO Seminar Österreich: https://datenschutz-kroes.at/dsgvo-seminar-oesterreich.html
 - DSGVO Seminar Deutschland: https://datenschutz-kroes.at/dsgvo-seminar-deutschland.html
 - NIS2 Seminar Österreich: https://datenschutz-kroes.at/nis2-seminar-oesterreich.html
 - NIS2 Schulung Deutschland: https://datenschutz-kroes.at/nis2-seminar-deutschland.html

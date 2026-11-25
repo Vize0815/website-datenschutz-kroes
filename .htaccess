@@ -74,9 +74,10 @@ Options -Indexes
   # 12 Monate bis 07.09.2026
   # ----------------------------------------------------------
 
-  # Neue URL NIS2 Seminar Österreich (25.11.2026)
+  # Neue Seminar URLs (25.11.2026)
   RewriteRule ^nis2-seminar\.html$ /nis2-seminar-oesterreich.html [R=301,L]
   RewriteRule ^nis2-schulung-deutschland\.html$ /nis2-seminar-deutschland.html [R=301,L]
+  RewriteRule ^dsgvo-seminar\.html$ /dsgvo-seminar-oesterreich.html [R=301,L]
 
   # 951 Impr. | Position 25,5
   RewriteRule ^downloads/?$ /downloads.html [R=301,L]
@@ -131,7 +132,7 @@ Options -Indexes
   RewriteRule ^datenschutzerklaerung-fuer-bewerber/?$ /datenschutz.html [R=301,L]
 
   # 32 Impr. | Position 17,5
-  RewriteRule ^seminar-dsgvo-fuer-geschaeftsfuehrer/?$ /dsgvo-seminar.html [R=301,L]
+  RewriteRule ^seminar-dsgvo-fuer-geschaeftsfuehrer/?$ /dsgvo-seminar-oesterreich.html [R=301,L]
 
   # unter 15 Impr.
   RewriteRule ^vodafone-zahlt-rekordstrafe/?$ /datenschutz-blog/meta-bussgeld-12-milliarden-lehren-kmu/ [R=301,L]
