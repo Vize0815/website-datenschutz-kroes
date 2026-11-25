@@ -74,6 +74,9 @@ Options -Indexes
   # 12 Monate bis 07.09.2026
   # ----------------------------------------------------------
 
+  # Neue URL NIS2 Seminar Österreich (25.11.2026)
+  RewriteRule ^nis2-seminar\.html$ /nis2-seminar-oesterreich.html [R=301,L]
+
   # 951 Impr. | Position 25,5
   RewriteRule ^downloads/?$ /downloads.html [R=301,L]
 

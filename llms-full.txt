@@ -26,7 +26,7 @@
 | `/datenschutz-flatrate.html` | Datenschutz-Flatrate – Externer DSB ab 290 €/Monat | Pakete & Preise, DSB-Flatrate-Modell mit 4 Tarifen |
 | `/dsgvo-seminar.html` | DSGVO Seminar für Geschäftsführungen in Tirol und Salzburg | DSGVO Seminar nach DSGVO und DSG (Österreich) |
 | `/dsgvo-seminar-deutschland.html` | DSGVO Seminar für Geschäftsführungen in Rosenheim und München | DSGVO Seminar nach DSGVO und BDSG (Deutschland) |
-| `/nis2-seminar.html` | NIS2 Schulung für Geschäftsführungen in Tirol und Salzburg | Pflichtschulung NIS2 Kompakt für Leitungsorgane nach § 31 NISG 2026 (Österreich) |
+| `/nis2-seminar-oesterreich.html` | NIS2 Schulung für Geschäftsführungen in Tirol und Salzburg | Pflichtschulung NIS2 Kompakt für Leitungsorgane nach § 31 NISG 2026 (Österreich) |
 | `/nis2-schulung-deutschland.html` | NIS2 Schulung für Geschäftsleitungen in Rosenheim und München | Pflichtschulung für Geschäftsleitungen nach § 38 Abs. 3 BSIG (Deutschland) |
 | `/downloads.html` | Downloads | Kostenlose Checklisten, Leitfäden, Vorlagen (PDF) |
 | `/benennungsurkunde.html` | Benennungsurkunde | Interaktives PDF-Formular zur DSB-Bestellung |
@@ -158,7 +158,7 @@ Einleitung der gesetzlich vorgeschriebenen Reaktionsfrist auf Datenschutzvorfäl
 **Headline:** Datenschutz-Seminare für Unternehmen
 **Lead:** Alles Wichtige zu NIS2, DSGVO und Datenschutz – praxisnah für Unternehmen mit Verantwortung gestaltet.
 
-- **NIS2 Schulung für Geschäftsführungen, Österreich** (Pflichtschulung nach § 31 NISG 2026, in Tirol, Salzburg und online) → siehe `/nis2-seminar.html`
+- **NIS2 Schulung für Geschäftsführungen, Österreich** (Pflichtschulung nach § 31 NISG 2026, in Tirol, Salzburg und online) → siehe `/nis2-seminar-oesterreich.html`
 - **NIS2 Schulung für Geschäftsleitungen, Deutschland** (Pflichtschulung nach § 38 Abs. 3 BSIG, in Rosenheim, München und online) → siehe `/nis2-schulung-deutschland.html`
 - **DSGVO Seminar für Geschäftsführungen, Österreich** (DSGVO und DSG, in Kufstein, Salzburg und inhouse) → siehe `/dsgvo-seminar.html`
 - **DSGVO Seminar für Geschäftsführungen, Deutschland** (DSGVO und BDSG, in Rosenheim, München und inhouse) → siehe `/dsgvo-seminar-deutschland.html`
@@ -355,7 +355,7 @@ A: Nach dem Erstgespräch und der Vertragsunterzeichnung beginnt die Betreuung s
 
 ---
 
-# 3. NIS2 Kompakt Seminar (nis2-seminar.html)
+# 3. NIS2 Kompakt Seminar (nis2-seminar-oesterreich.html)
 
 **Title:** NIS2 Schulung für Geschäftsführungen in Tirol und Salzburg
 **Meta-Description:** NIS2 Kompakt: die Pflichtschulung für Geschäftsführungen nach § 31 NISG 2026. In Kufstein und Salzburg, inhouse in ganz Tirol und Salzburg oder online. 4 Stunden, 450 € zzgl. MwSt.
@@ -580,7 +580,7 @@ A: Ja. Die Schulung ist speziell für Geschäftsleitungen gestaltet, so wie es �
 **Q: Kann ich die NIS2 Schulung online besuchen?**
 A: Ja, aus ganz Deutschland. Sie brauchen einen aktuellen Browser, Mikrofon und Lautsprecher, ein Headset wird empfohlen.
 
-Ihr Unternehmen sitzt in Österreich? Siehe `/nis2-seminar.html` (NIS2 Schulung für Geschäftsführungen nach § 31 NISG 2026).
+Ihr Unternehmen sitzt in Österreich? Siehe `/nis2-seminar-oesterreich.html` (NIS2 Schulung für Geschäftsführungen nach § 31 NISG 2026).
 
 ## Anfrage-Formular
 
