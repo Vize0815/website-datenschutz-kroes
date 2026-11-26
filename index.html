@@ -3194,11 +3194,14 @@
       letter-spacing: -0.04em;
     }
 
+    /* Kopfbereich: mobil einspaltig, ab 900px Text links, Grafik rechts */
     .quiz-nis2__header {
-      max-width: 760px;
-      margin: 0 auto 56px;
-      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 48px;
       position: relative;
+      display: grid;
+      gap: 32px;
+      align-items: center;
     }
 
     .quiz-nis2__eyebrow {
@@ -3211,9 +3214,124 @@
 
     .quiz-nis2__lead {
       margin-top: 16px;
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
+    }
+
+    .quiz-nis2__audience {
+      margin-top: 14px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-navy);
+    }
+
+    .quiz-nis2__perks {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quiz-nis2__perks li {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px 7px 10px;
+      border: 1px solid var(--color-mist);
+      border-radius: 999px;
+      background: var(--color-bg);
+      font-size: 13px;
+      color: var(--color-navy);
+      line-height: 1.2;
+    }
+
+    .quiz-nis2__perks li::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      flex: none;
+      border-radius: 50%;
+      background: var(--color-gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M4 7.2l2 2 4-4.4' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
+    }
+
+    .quiz-nis2__liability {
+      margin-top: 20px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--color-gold);
+      background: var(--color-bg);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--color-slate);
+    }
+
+    .quiz-nis2__liability strong {
+      color: var(--color-navy);
+      font-weight: 500;
+    }
+
+    .quiz-nis2__aside > :first-child {
+      margin-top: 0;
+    }
+
+    .quiz-nis2__visual {
+      margin: 0;
+      padding: 12px;
+      background: #fff;
+      border: 1px solid var(--color-mist);
+      border-radius: var(--radius-md);
+      box-shadow: 0 8px 32px -16px rgba(15, 31, 61, 0.08);
+    }
+
+    .quiz-nis2__visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .quiz-nis2__visual-link {
+      display: block;
+      cursor: zoom-in;
+      border-radius: 4px;
+    }
+
+    .quiz-nis2__visual-link:focus-visible {
+      outline: 2px solid var(--color-gold);
+      outline-offset: 4px;
+    }
+
+    .quiz-nis2__visual-zoom {
+      display: inline-flex;
+      margin-top: 10px;
+      padding: 0 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+    }
+
+    .quiz-nis2__visual figcaption {
+      margin-top: 10px;
+      padding: 0 4px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--color-slate);
+    }
+
+    @media (min-width: 900px) {
+      .quiz-nis2__header {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+        column-gap: 48px;
+        row-gap: 40px;
+        align-items: end;
+        margin-bottom: 40px;
+      }
+      .quiz-nis2__visual {
+        grid-column: 1 / -1;
+        padding: 20px;
+      }
+      .quiz-nis2__visual-zoom { display: none; }
     }
 
     .quiz-nis2__card {
@@ -5007,11 +5125,30 @@
       <div class="quiz-nis2__bg-mark" aria-hidden="true">NIS2</div>
       <div class="container">
         <header class="quiz-nis2__header" data-reveal>
-          <p class="t-eyebrow quiz-nis2__eyebrow">Selbsttest · 2 Minuten</p>
-          <h2 class="t-h2 quiz-nis2__headline">NIS-2 Richtlinie: Sind Sie betroffen?</h2>
-          <p class="t-lead quiz-nis2__lead">
-            Beantworten Sie 6 kurze Fragen und erhalten Sie eine orientierende Einschätzung — mit klaren Quellenangaben zur NIS-2-Richtlinie sowie zum österreichischen NISG&nbsp;2024 bzw. deutschen NIS2UmsuCG. Auf Wunsch laden Sie das Ergebnis als PDF herunter.
-          </p>
+          <div class="quiz-nis2__intro">
+            <p class="t-eyebrow quiz-nis2__eyebrow">Selbsttest · 2 Minuten</p>
+            <h2 class="t-h2 quiz-nis2__headline">NIS-2 Richtlinie: Sind Sie betroffen?</h2>
+            <p class="t-lead quiz-nis2__lead">
+              Beantworten Sie 6 kurze Fragen und erhalten Sie eine orientierende Einschätzung — mit klaren Quellenangaben zur NIS-2-Richtlinie sowie zum österreichischen NISG&nbsp;2024 bzw. deutschen NIS2UmsuCG. Auf Wunsch laden Sie das Ergebnis als PDF herunter.
+            </p>
+          </div>
+          <div class="quiz-nis2__aside">
+            <p class="quiz-nis2__audience">Für Geschäftsführung und Verantwortliche. Ohne Fachjargon, ohne lange Analyse.</p>
+            <ul class="quiz-nis2__perks" aria-label="Vorteile des Selbsttests">
+              <li>Kostenlos</li>
+              <li>Ca. 2 Minuten</li>
+              <li>Ergebnis sofort, ohne Anmeldung</li>
+              <li>PDF auf Wunsch</li>
+            </ul>
+            <p class="quiz-nis2__liability"><strong>Wichtig für die Geschäftsleitung:</strong> NIS2 verpflichtet sie, die Maßnahmen zum Risikomanagement zu billigen und ihre Umsetzung zu überwachen. Bei schuldhafter Pflichtverletzung kann sie persönlich haften.</p>
+          </div>
+          <figure class="quiz-nis2__visual">
+            <a class="quiz-nis2__visual-link" href="datenschutz-kroes-datenschutz-sicherheitsbereiche.webp" target="_blank" rel="noopener" aria-label="Grafik in voller Größe öffnen">
+              <img src="datenschutz-kroes-datenschutz-sicherheitsbereiche.webp" width="3207" height="1836" loading="lazy" decoding="async" alt="Balkendiagramm zum Reifegrad von elf Datenschutz und Sicherheitsbereichen auf einer Skala von 0 bis 10. Stark sind Governance, Asset, Lieferkette und Awareness mit 8. Am schwächsten sind Meldeprozesse mit 3 sowie Schwachstellenmanagement und Incident Management mit 4.">
+              <span class="quiz-nis2__visual-zoom" aria-hidden="true">Antippen zum Vergrößern</span>
+            </a>
+            <figcaption>Beispiel einer Reifegradauswertung aus unserer NIS2 Beratung. Den vollständigen Check erstellen wir im Strategiegespräch.</figcaption>
+          </figure>
         </header>
 
         <div class="quiz-nis2__card" data-reveal data-reveal-delay="1">
