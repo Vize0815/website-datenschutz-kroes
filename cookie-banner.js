@@ -400,7 +400,15 @@
     }
   };
 
-  if (document.readyState === 'loading') {
+  /* Mit data-early am Script Tag (nur Startseite, Tag direkt nach <body>)
+     öffnet der Banner sofort, sofern noch keine Einwilligung gespeichert ist.
+     Eine gespeicherte Einwilligung wird weiterhin erst nach dem Einlesen der
+     Seite angewendet. */
+  var earlyTag = document.currentScript;
+  if (document.readyState === 'loading' && earlyTag && earlyTag.hasAttribute('data-early') &&
+      document.body && !getConsent()) {
+    init();
+  } else if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init, { once: true });
   } else {
     init();

@@ -4429,7 +4429,7 @@ html.cc-lock, html.cc-lock body { overflow: hidden !important; }
 /* Nur Startseite: ohne Einblendung, senkt den Speed Index */
 .cc-overlay, .cc-banner { animation: none; }
   </style>
-  <script src="cookie-banner.js" defer></script>
+  <link rel="preload" as="script" href="cookie-banner.js">
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "94af11998e82410b91eeb459329d8ae9"}'></script><!-- End Cloudflare Web Analytics -->
 
 
@@ -4698,11 +4698,15 @@ html.cc-lock, html.cc-lock body { overflow: hidden !important; }
 </style>
 </head>
 <body>
+  <!-- Cookie Banner gleich am Anfang des Inhalts: ohne gespeicherte Einwilligung
+       erscheint er mit dem ersten Bild, statt sich nachträglich über die fertige
+       Seite zu legen (das trieb den Speed Index nach oben). -->
+  <script src="cookie-banner.js" data-early></script>
 
   <!-- ============= INFOBAR ============= -->
   <div class="infobar" id="infobar" role="region" aria-label="Aktuelle Information">
     <span class="infobar__text">
-      Die CRA Meldepflichten gelten bereits seit <span class="infobar__count" id="infobar-days">32</span> Tagen.
+      Die CRA Meldepflichten gelten bereits seit <span class="infobar__count" id="infobar-days">76</span><script>(function(){var d=Math.floor((Date.now()-new Date('2026-09-11T00:00:00').getTime())/86400000);if(d>=0)document.getElementById('infobar-days').textContent=d;})();</script> Tagen.
       Bis 11.12.2027 muss der CRA zu 100% für alle Produkte umgesetzt sein.
       <a href="/datenschutz-blog/cyber-resilience-act-cra-meldepflichten-september-2026/" class="infobar__link">Erfahren Sie mehr!</a>
     </span>
