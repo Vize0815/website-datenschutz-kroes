@@ -49,4 +49,5 @@ jobs:
             -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
             ./ "$SSH_USER@$SSH_HOST:~/"
           # Frueher mitkopierte Werkzeugdatei vom Webspace entfernen
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -f ~/.gitignore"
+          # 26.11.2026: ungenutzten Quiz Endpoint samt Protokoll entfernen
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -f ~/.gitignore ~/quiz-lead.php ~/quiz-lead.log"
