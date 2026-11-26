@@ -3282,6 +3282,36 @@
       font-weight: 500;
     }
 
+    .quiz-nis2__liability p + p {
+      margin-top: 10px;
+    }
+
+    .quiz-nis2__liability-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 10px 16px;
+      border: 1.5px solid var(--color-navy);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--color-navy);
+      text-decoration: none;
+      transition: background-color var(--transition-base), color var(--transition-base);
+    }
+
+    .quiz-nis2__liability-btn::after {
+      content: "→";
+    }
+
+    .quiz-nis2__liability-btn:hover,
+    .quiz-nis2__liability-btn:focus-visible {
+      background: var(--color-navy);
+      color: #fff;
+    }
+
     .quiz-nis2__aside > :first-child {
       margin-top: 0;
     }
@@ -5167,7 +5197,11 @@
               <li>Ergebnis sofort, ohne Anmeldung</li>
               <li>PDF auf Wunsch</li>
             </ul>
-            <p class="quiz-nis2__liability"><strong>Wichtig für die Geschäftsleitung:</strong> NIS2 verpflichtet sie, die Maßnahmen zum Risikomanagement zu billigen und ihre Umsetzung zu überwachen. Bei schuldhafter Pflichtverletzung kann sie persönlich haften.</p>
+            <div class="quiz-nis2__liability">
+              <p><strong>Wichtig für die Geschäftsleitung:</strong> NIS2 verpflichtet sie, die Maßnahmen zum Risikomanagement zu billigen und ihre Umsetzung zu überwachen. Bei schuldhafter Pflichtverletzung kann sie persönlich haften.</p>
+              <p><strong>Dazu kommt eine Schulungspflicht:</strong> Geschäftsleitungen müssen regelmäßig an einer Cybersicherheitsschulung teilnehmen, in Österreich nach §&nbsp;31 NISG&nbsp;2026, in Deutschland nach §&nbsp;38 Abs.&nbsp;3 BSIG. So können sie Risiken und Maßnahmen selbst beurteilen und ihre Überwachungspflicht nachweisbar erfüllen.</p>
+              <a href="#seminare" class="quiz-nis2__liability-btn">Zu den Seminaren für Geschäftsführer</a>
+            </div>
           </div>
           <figure class="quiz-nis2__visual">
             <a class="quiz-nis2__visual-link" href="datenschutz-kroes-datenschutz-sicherheitsbereiche.webp" target="_blank" rel="noopener" aria-label="Grafik in voller Größe öffnen">
