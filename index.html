@@ -5245,7 +5245,7 @@
                     <span class="quiz-nis2__option-content">
                       <svg class="quiz-nis2__land-flag" viewBox="0 0 9 6" role="img" aria-label="Flagge Österreich"><rect width="9" height="6" fill="#ed2939"/><rect y="2" width="9" height="2" fill="#fff"/></svg>
                       <span class="quiz-nis2__option-title">Österreich</span>
-                      <span class="quiz-nis2__option-desc">Umsetzung über NISG&nbsp;2024 — zuständige Behörde: BMI / Cybersicherheitsbehörde, Meldewege über die nationale Meldeplattform.</span>
+                      <span class="quiz-nis2__option-desc">Umsetzung über NISG&nbsp;2026 — zuständige Behörde: BMI / Cybersicherheitsbehörde, Meldewege über die nationale Meldeplattform.</span>
                     </span>
                   </span>
                 </label>
@@ -5638,7 +5638,7 @@
         </div>
 
         <p class="quiz-nis2__disclaimer">
-          <strong>Wichtiger Hinweis:</strong> Dieses Quiz dient ausschließlich der orientierenden Selbsteinschätzung und ersetzt keine rechtsverbindliche Prüfung. Maßgeblich sind die Richtlinie (EU) 2022/2555 (NIS2 Richtlinie), das österreichische Netz- und Informationssystemsicherheitsgesetz 2024 (NISG 2024) sowie etwaige delegierte Rechtsakte und Durchführungsrechtsakte der EU-Kommission. Eine verbindliche Bewertung Ihrer NIS2 Pflichten erfordert eine einzelfallbezogene rechtliche Analyse. Stand der zugrundeliegenden Rechtsquellen: Mai 2026.
+          <strong>Wichtiger Hinweis:</strong> Dieses Quiz dient ausschließlich der orientierenden Selbsteinschätzung und ersetzt keine rechtsverbindliche Prüfung. Maßgeblich sind die Richtlinie (EU) 2022/2555 (NIS2 Richtlinie), das österreichische Netz- und Informationssystemsicherheitsgesetz 2026 (NISG 2026, BGBl. I Nr. 94/2025) sowie etwaige delegierte Rechtsakte und Durchführungsrechtsakte der EU-Kommission. Eine verbindliche Bewertung Ihrer NIS2 Pflichten erfordert eine einzelfallbezogene rechtliche Analyse. Stand der zugrundeliegenden Rechtsquellen: November 2026.
         </p>
       </div>
     </section>
@@ -6634,12 +6634,12 @@
     const resolveSrc = (s, land) => (typeof s === 'string') ? s : (s[land] || s.at);
 
     const SRC = {
-      risk:    { at: 'Art. 21 NIS2 RL · §§ 28 ff. NISG 2024',          de: 'Art. 21 NIS2 RL · § 30 BSIG (NIS2UmsuCG)' },
-      report:  { at: 'Art. 23 NIS2 RL · § 32 NISG 2024',                de: 'Art. 23 NIS2 RL · § 32 BSIG (NIS2UmsuCG)' },
-      reg:     { at: 'Art. 27 NIS2 RL · § 35 NISG 2024',                de: 'Art. 27 NIS2 RL · § 33 BSIG (NIS2UmsuCG)' },
-      mgmt:    { at: 'Art. 20 NIS2 RL · § 31 NISG 2024',                de: 'Art. 20 NIS2 RL · § 38 BSIG (NIS2UmsuCG)' },
-      penHigh: { at: 'Art. 34 Abs. 4 NIS2 RL · §§ 56 ff. NISG 2024',   de: 'Art. 34 Abs. 4 NIS2 RL · § 60 BSIG (NIS2UmsuCG)' },
-      penMid:  { at: 'Art. 34 Abs. 5 NIS2 RL · §§ 56 ff. NISG 2024',   de: 'Art. 34 Abs. 5 NIS2 RL · § 60 BSIG (NIS2UmsuCG)' }
+      risk:    { at: 'Art. 21 NIS2 RL · § 32 NISG 2026',              de: 'Art. 21 NIS2 RL · § 30 BSIG (NIS2UmsuCG)' },
+      report:  { at: 'Art. 23 NIS2 RL · § 34 NISG 2026',                de: 'Art. 23 NIS2 RL · § 32 BSIG (NIS2UmsuCG)' },
+      reg:     { at: 'Art. 27 NIS2 RL · § 29 NISG 2026',                de: 'Art. 27 NIS2 RL · § 33 BSIG (NIS2UmsuCG)' },
+      mgmt:    { at: 'Art. 20 NIS2 RL · § 31 NISG 2026',                de: 'Art. 20 NIS2 RL · § 38 BSIG (NIS2UmsuCG)' },
+      penHigh: { at: 'Art. 34 Abs. 4 NIS2 RL · § 45 NISG 2026',       de: 'Art. 34 Abs. 4 NIS2 RL · § 60 BSIG (NIS2UmsuCG)' },
+      penMid:  { at: 'Art. 34 Abs. 5 NIS2 RL · § 45 NISG 2026',       de: 'Art. 34 Abs. 5 NIS2 RL · § 60 BSIG (NIS2UmsuCG)' }
     };
 
     // Länder-spezifische Behörden-Texte für die Registrierungs-Beschreibung
@@ -6823,10 +6823,10 @@
       const land    = (lastResult && lastResult.land) || 'at';
       const isDE    = land === 'de';
       const landName  = isDE ? 'Deutschland' : 'Österreich';
-      const lawShort  = isDE ? 'NIS2UmsuCG' : 'NISG 2024';
+      const lawShort  = isDE ? 'NIS2UmsuCG' : 'NISG 2026';
       const lawFull   = isDE
         ? 'das deutsche NIS2 Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG) zur Änderung des BSI-Gesetzes'
-        : 'das österreichische Netz- und Informationssystemsicherheitsgesetz 2024 (NISG 2024)';
+        : 'das österreichische Netz- und Informationssystemsicherheitsgesetz 2026 (NISG 2026)';
       const obligations = buildObligations(land);
 
       const PAGE_W = 210, PAGE_H = 297;
@@ -7049,7 +7049,7 @@
         '(NIS2 Richtlinie), ' + lawFull + ' sowie etwaige delegierte Rechtsakte und ' +
         'Durchführungsrechtsakte der EU-Kommission. Eine verbindliche Bewertung Ihrer NIS2 Pflichten ' +
         'erfordert eine einzelfallbezogene rechtliche Analyse. Stand der zugrundeliegenden ' +
-        'Rechtsquellen: Mai 2026.';
+        'Rechtsquellen: November 2026.';
 
       setFont('normal', 9, INK);
       const hinweisLines = doc.splitTextToSize(hinweisText, COL_W - 10);
