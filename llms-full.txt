@@ -960,7 +960,7 @@ Let's Encrypt, https-Verbindung.
 
 **6.4 Benennungsurkunde:** Unternehmensname, Anrede, Titel, Vor- und Nachname, E-Mail, Datum. Verarbeitung ausschließlich lokal im Browser; das PDF wird clientseitig erzeugt, keine Übermittlung an einen Server.
 
-**6.5 NIS-2 Selbsttest-Quiz:** Fragen und Auswertung laufen lokal im Browser, das Ergebnis-PDF entsteht auf dem Gerät. Nur wenn das Ergebnis-Formular abgesendet wird, werden Name (Pflicht), optional E-Mail, Firma, Branche, Telefon, Newsletter-Einwilligung sowie Quiz-Antworten und Ergebnis an info@datenschutz-kroes.at übermittelt, technisch über Formspree (siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO, für den Newsletter Art. 6 Abs. 1 lit. a DSGVO. Löschung spätestens nach sechs Monaten ohne Mandat. Das Ergebnis ist eine unverbindliche Orientierung.
+**6.5 NIS2 Selbsttest-Quiz:** Fragen und Auswertung laufen lokal im Browser, das Ergebnis-PDF entsteht auf dem Gerät. Nur wenn das Ergebnis-Formular abgesendet wird, werden Name (Pflicht), optional E-Mail, Firma, Branche, Telefon, Newsletter-Einwilligung sowie Quiz-Antworten und Ergebnis an info@datenschutz-kroes.at übermittelt, technisch über Formspree (siehe 6.9). Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO, für den Newsletter Art. 6 Abs. 1 lit. a DSGVO. Löschung spätestens nach sechs Monaten ohne Mandat. Das Ergebnis ist eine unverbindliche Orientierung.
 
 **6.6 Quick-Check-Terminbuchung (Cal.com und Microsoft Teams):** Buchung über Cal.com, Inc. (USA; EU-U.S. Data Privacy Framework, ergänzend Standardvertragsklauseln, AVV). Verarbeitet werden Name, E-Mail, Firma (optional), Zeit-Slot und technische Verbindungsdaten. Der Termin selbst läuft über Microsoft Teams (Microsoft Ireland Operations Limited; mögliche Übermittlung an Microsoft Corporation USA auf Grundlage DPF und Standardvertragsklauseln; DPA). Keine Aufzeichnung. Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.
 
@@ -968,7 +968,7 @@ Let's Encrypt, https-Verbindung.
 
 **6.8 Online-Meetings über Zoom:** Zoom Video Communications, Inc. (USA; DPF, ergänzend Standardvertragsklauseln, Zoom Data Processing Agreement). Keine Aufzeichnung ohne gesonderte Einwilligung. Meeting-Metadaten werden nach spätestens 30 Tagen gelöscht. Rechtsgrundlage Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO.
 
-**6.9 Formspree:** Formspree, Inc., 340 S Lemon Ave #9007, Walnut, CA 91789, USA. Eingesetzt für die Kontaktformulare der Branchenseiten (Steuerberater, Arztpraxen, Handwerk) sowie für Rückruf-Formular (6.2), Seminar-Anfrage-Formular (6.3) und NIS-2 Quiz (6.5). Drittlandtransfer auf Grundlage von Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO; AVV gemäß Art. 28 DSGVO. Einsendungen im Formspree-Konto werden nach Abschluss der Bearbeitung manuell entfernt.
+**6.9 Formspree:** Formspree, Inc., 340 S Lemon Ave #9007, Walnut, CA 91789, USA. Eingesetzt für die Kontaktformulare der Branchenseiten (Steuerberater, Arztpraxen, Handwerk) sowie für Rückruf-Formular (6.2), Seminar-Anfrage-Formular (6.3) und NIS2 Quiz (6.5). Drittlandtransfer auf Grundlage von Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO; AVV gemäß Art. 28 DSGVO. Einsendungen im Formspree-Konto werden nach Abschluss der Bearbeitung manuell entfernt.
 
 ## 7. Newsletter
 

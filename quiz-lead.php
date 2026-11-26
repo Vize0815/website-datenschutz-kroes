@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /**
- * NIS-2 Quiz Lead Endpoint
+ * NIS2 Quiz Lead Endpoint
  * Empfängt JSON-POST aus index.html und schickt eine Benachrichtigung
  * an info@datenschutz-kroes.at via PHP mail().
  */
@@ -27,14 +27,14 @@ $logIt('--- Anfrage: ' . $_SERVER['REQUEST_METHOD'] . ' ' . ($_SERVER['REQUEST_U
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['test'])) {
     $testTo      = 'info@datenschutz-kroes.at';
     $testFrom    = 'info@datenschutz-kroes.at';
-    $testSubject = '=?UTF-8?B?' . base64_encode('NIS-2 Quiz: TEST-MAIL ' . date('H:i:s')) . '?=';
+    $testSubject = '=?UTF-8?B?' . base64_encode('NIS2 Quiz: TEST-MAIL ' . date('H:i:s')) . '?=';
     $testBody    = "Dies ist eine Test-Mail aus quiz-lead.php.\r\n" .
                    "Zeitpunkt: " . date('d.m.Y H:i:s') . "\r\n" .
                    "PHP-Version: " . PHP_VERSION . "\r\n" .
                    "Server: " . ($_SERVER['SERVER_SOFTWARE'] ?? '?') . "\r\n" .
                    "Wenn diese Mail ankommt, funktioniert mail() grundsätzlich.\r\n";
     $testHeaders = implode("\r\n", [
-        'From: NIS-2 Quiz Test <' . $testFrom . '>',
+        'From: NIS2 Quiz Test <' . $testFrom . '>',
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
         'Content-Transfer-Encoding: 8bit',
@@ -105,12 +105,12 @@ $verdictKey   = $clean($data['verdictKey']   ?? '');
 $answers = is_array($data['answers'] ?? null) ? $data['answers'] : [];
 
 $to      = 'info@datenschutz-kroes.at';
-$subjTxt = 'NIS-2 Quiz: ' . ($verdictTitle !== '' ? $verdictTitle : 'neuer Lead')
+$subjTxt = 'NIS2 Quiz: ' . ($verdictTitle !== '' ? $verdictTitle : 'neuer Lead')
          . ' – ' . ($firma !== '' ? $firma : $name);
 $subject = '=?UTF-8?B?' . base64_encode($subjTxt) . '?=';
 
 $lines = [];
-$lines[] = '=== NEUER NIS-2 QUIZ LEAD ===';
+$lines[] = '=== NEUER NIS2 QUIZ LEAD ===';
 $lines[] = '';
 $lines[] = 'Datum:        ' . date('d.m.Y H:i') . ' Uhr';
 $lines[] = '';
@@ -142,7 +142,7 @@ $lines[] = 'Sonderfall:   ' . (empty($sonderClean) ? '—' : implode(', ', $sond
 
 $lines[] = '';
 $lines[] = '---';
-$lines[] = 'Diese E-Mail wurde automatisch durch das NIS-2 Selbsttest-Quiz auf';
+$lines[] = 'Diese E-Mail wurde automatisch durch das NIS2 Selbsttest-Quiz auf';
 $lines[] = 'datenschutz-kroes.at erzeugt. Die Auswertung im PDF des Besuchers';
 $lines[] = 'entspricht dieser Einstufung.';
 
@@ -150,7 +150,7 @@ $body = implode("\r\n", $lines);
 
 $fromAddr  = 'info@datenschutz-kroes.at';
 $headers   = [];
-$headers[] = 'From: NIS-2 Quiz <' . $fromAddr . '>';
+$headers[] = 'From: NIS2 Quiz <' . $fromAddr . '>';
 if ($email !== '' && filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $headers[] = 'Reply-To: ' . $email;
 }
