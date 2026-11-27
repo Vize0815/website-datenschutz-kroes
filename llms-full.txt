@@ -849,12 +849,17 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Datei:** `Praxis-Leitfaden-DSGVO-KI-Deutschland.pdf`
 **Beschreibung:** 10 Praxistipps für den datenschutzkonformen Einsatz von KI wie ChatGPT und Copilot nach DSGVO und BDSG, Stand November 2026: von der Rechtsgrundlage über Schatten KI und Datenschutz Folgenabschätzung bis zur Dokumentation, mit Zeitplan der KI Verordnung nach dem Digital Omnibus 2026 und DSFA Fragebogen zum Ausfüllen.
 
-## Vorlagen (1 Dokument)
+## Vorlagen (2 Dokumente)
 
-### DSGVO-konforme Datenschutzerklärung für Bewerbungsverfahren
-**Format:** PDF (8 Seiten)
+### Datenschutzinformation für Bewerber Österreich
+**Format:** PDF (10 Seiten)
 **Datei:** `Datenschutzerklärung für Bewerbungsverfahren.pdf`
-**Beschreibung:** Fertige Muster-Vorlage zur individuellen Anpassung — rechtssicher auf Basis der DSGVO mit allen Pflichtangaben nach Art. 13 DSGVO.
+**Beschreibung:** Muster Vorlage der Datenschutzinformation für Bewerbungsverfahren nach DSGVO, DSG und GlBG, Stand November 2026, mit Platzhaltern zum Anpassen und allen Pflichtangaben nach Art. 13 DSGVO als Checkliste. Speicherdauer sieben Monate nach Absage.
+
+### Datenschutzinformation für Bewerber Deutschland
+**Format:** PDF (10 Seiten)
+**Datei:** `Datenschutzinformation-Bewerber-Deutschland.pdf`
+**Beschreibung:** Muster Vorlage der Datenschutzinformation für Bewerbungsverfahren nach DSGVO, BDSG und AGG, Stand November 2026, mit Platzhaltern zum Anpassen und allen Pflichtangaben nach Art. 13 DSGVO als Checkliste. Speicherdauer sechs Monate nach Absage.
 
 ---
 
