@@ -54,4 +54,5 @@ jobs:
           # 27.11.2026: altes Vorschaubild NIS2 Selbstcheck entfernen
           # 27.11.2026: altes Cover Management Briefing und alte Quick Steps entfernen
           # 27.11.2026: altes Vorschaubild Risikoanalyse entfernen
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -f ~/.gitignore ~/quiz-lead.php ~/quiz-lead.log ~/NIS2-Leitfaden-Deckblatt.jpg ~/'NIS2-Selbstcheck .jpg' ~/NIS2-Management-Briefing-Datenschutz-Kroes.webp ~/'NIS2-Quick-Steps .jpg' ~/'Quick-Steps NIS2-Richtlinie.pdf' ~/'Risikoanalyse nach NIS2 .png'"
+          # 27.11.2026: altes Vorschaubild Praxisleitfaden DSGVO und KI entfernen
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -f ~/.gitignore ~/quiz-lead.php ~/quiz-lead.log ~/NIS2-Leitfaden-Deckblatt.jpg ~/'NIS2-Selbstcheck .jpg' ~/NIS2-Management-Briefing-Datenschutz-Kroes.webp ~/'NIS2-Quick-Steps .jpg' ~/'Quick-Steps NIS2-Richtlinie.pdf' ~/'Risikoanalyse nach NIS2 .png' ~/'Praxis Leitfaden DSGVO und KI .jpg'"
