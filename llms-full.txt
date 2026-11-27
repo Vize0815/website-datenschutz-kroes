@@ -780,7 +780,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 
 **Filter-Kategorien:** Alle / Checklisten / Leitfäden / Vorlagen
 
-## Checklisten (3 Dokumente)
+## Checklisten (5 Dokumente)
 
 ### NIS2 Selbstcheck Österreich
 **Format:** PDF (11 Seiten)
@@ -791,6 +791,16 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Format:** PDF (11 Seiten)
 **Datei:** `NIS2-Selbstcheck-Deutschland.pdf`
 **Beschreibung:** Selbstcheck für Geschäftsführungen nach BSIG, Stand November 2026. 14 Fragen in zwei Teilen zum Ankreuzen: Teil A (6 Fragen) klärt, ob das Unternehmen als besonders wichtige oder wichtige Einrichtung gilt oder indirekt über Kunden betroffen ist. Teil B (8 Fragen) zeigt den Umsetzungsstand. Das BSIG gilt seit 6. Dezember 2025.
+
+### NIS2 Quick Steps Österreich
+**Format:** PDF (7 Seiten)
+**Datei:** `NIS2-Quick-Steps-Oesterreich.pdf`
+**Beschreibung:** Fünf konkrete Schritte für Geschäftsführungen nach NISG 2026, Stand November 2026, vom Überblick über Risiken und Basisschutz bis zu Dokumentation und Nachweis. 15 Aufgaben zum Abhaken mit Feld für Verantwortliche, Termin und Notiz.
+
+### NIS2 Quick Steps Deutschland
+**Format:** PDF (7 Seiten)
+**Datei:** `NIS2-Quick-Steps-Deutschland.pdf`
+**Beschreibung:** Fünf konkrete Schritte für Geschäftsführungen nach BSIG, Stand November 2026, vom Überblick über Risiken und Basisschutz bis zu Dokumentation und Nachweis. 15 Aufgaben zum Abhaken mit Feld für Verantwortliche, Termin und Notiz.
 
 ### Schreiben der Datenschutzbehörde erhalten? Die Checkliste zum Abhaken
 **Format:** PDF (3 Seiten)
