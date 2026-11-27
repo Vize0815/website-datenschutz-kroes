@@ -1,0 +1,50 @@
+name: "Server Speicher anzeigen"
+
+# Nur lesend: listet Belegung, groesste Ordner und Dateien sowie Dateien,
+# die auf dem Server liegen, aber nicht mehr im Repository sind.
+# Es wird nichts geloescht oder veraendert.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  usage:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOYMENT_ID: dbed54b8-8c64-4693-acd3-add7dd4eb016
+      SSH_HOST: access-5020246730.app-ionos.space
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set SSH username secret name
+        run: |
+          echo "SSH_USERNAME_SECRET=IONOS_DEPLOYMENT_$(echo $DEPLOYMENT_ID | tr '[:lower:]' '[:upper:]' | tr '-' '_')_SSH_USERNAME" >> $GITHUB_ENV
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.IONOS_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Belegung, groesste Ordner und Dateien
+        run: |
+          SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" '
+            echo "=== Belegung df ==="; df -h ~ 2>/dev/null
+            echo "=== Quota ==="; quota -s 2>/dev/null || echo "quota nicht verfuegbar"
+            echo "=== Gesamt ==="; du -sh ~ 2>/dev/null
+            echo "=== Groesste Ordner (Tiefe 2) ==="; du -h --max-depth=2 ~ 2>/dev/null | sort -hr | head -40
+            echo "=== Groesste 60 Dateien ==="; find ~ -type f -printf "%s\t%P\n" 2>/dev/null | sort -nr | head -60 | awk -F"\t" "{printf \"%8.1f MB  %s\n\", \$1/1048576, \$2}"
+          '
+
+      - name: Dateien auf dem Server, die nicht im Repository sind
+        run: |
+          SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" 'cd ~ && find . -type f -printf "%s\t%P\n"' | sort -t$'\t' -k2 > server.txt
+          git ls-files | sort > repo.txt
+          awk -F'\t' 'NR==FNR{repo[$0]=1; next} !($2 in repo){print}' repo.txt server.txt | sort -nr > verwaist.txt
+          echo "=== Anzahl verwaiste Dateien: $(wc -l < verwaist.txt) ==="
+          echo "=== Summe: $(awk -F'\t' '{s+=$1} END{printf "%.1f MB", s/1048576}' verwaist.txt) ==="
+          awk -F'\t' '{printf "%8.2f MB  %s\n", $1/1048576, $2}' verwaist.txt | head -300
