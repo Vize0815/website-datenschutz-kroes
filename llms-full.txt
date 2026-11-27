@@ -1164,7 +1164,7 @@ Checkliste zum Abhaken (PDF, 3 Seiten) im Downloadbereich: https://datenschutz-k
 5. Notfallhandbuch mit Kontakten auf Papier
 6. Ausfall einmal im Jahr am Tisch üben
 
-**Downloads im Beitrag:** NIS2 Selbstcheck, NIS2 Risikoanalyse und NIS2 Quick Steps, jeweils für Österreich und Deutschland.
+**Downloads im Beitrag:** NIS2 Risikoanalyse für Österreich und Deutschland.
 
 ---
 
