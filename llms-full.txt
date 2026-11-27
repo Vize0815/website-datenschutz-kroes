@@ -795,7 +795,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 ## Leitfäden (5 Dokumente)
 
 ### NIS2 – Management Briefing
-**Format:** PDF (8 Seiten)
+**Format:** PDF (14 Seiten)
 **Datei:** `NIS2 - Management Briefing.pdf`
 **Beschreibung:** Klarer, praxisorientierter Überblick über die NIS2-Richtlinie für Führungskräfte — ohne technischen Fachjargon. Welche Unternehmen sind betroffen, welche Pflichten ergeben sich, welche Konsequenzen drohen bei Nichteinhaltung.
 
