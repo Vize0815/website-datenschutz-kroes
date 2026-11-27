@@ -434,7 +434,7 @@
     .nis2-cta-pair__img img { display: block; width: 100%; height: auto; aspect-ratio: 394 / 559; object-fit: cover; border-radius: var(--radius-lg); border: 2px solid var(--color-navy); }
     .nis2-cta-pair__cta { margin-top: auto; }
     .nis2-cta-pair__foot { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-mist); display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; font-size: 13px; color: var(--color-slate-light); }
-    .nis2-cta-pair__foot .nis2-cta-band__more { margin-top: 0; }
+    .nis2-cta-pair__foot .nis2-cta-band__more { margin-top: 0; padding: 4px 0; }
     @media (min-width: 769px) {
       .nis2-cta-pair { padding: 80px 0; }
       .nis2-cta-pair__grid { grid-template-columns: repeat(2, 1fr); gap: 48px 32px; }
@@ -508,7 +508,8 @@
       .footer__grid { grid-template-columns: 1fr; gap: 36px; }
       .footer__bottom { flex-direction: column; align-items: center; text-align: center; }
       .footer__made-by { position: static; transform: none; }
-      .footer__legal { justify-content: center; }
+      .footer__legal { justify-content: center; flex-wrap: wrap; gap: 8px 20px; }
+      .footer__copy { max-width: 100%; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
