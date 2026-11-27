@@ -47,6 +47,7 @@ Firmenbuch: FN 639208 m, Landesgericht Innsbruck
 - Webinar NIS 2, Nachweise der Geschäftsführung in Österreich (PECB Regional Webinar, 19.11.2026, 49 Min.): https://datenschutz-kroes.at/webinare/nis2-nachweise-geschaeftsfuehrung-oesterreich/
 - Blog: https://datenschutz-kroes.at/datenschutz-blog/
 - Blogbeitrag "Schreiben der Datenschutzbehörde erhalten?" (Leitfaden für Österreich und Deutschland mit Checkliste): https://datenschutz-kroes.at/datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/
+- Blogbeitrag "Blackout durch KI Angriff" (Szenarien aus der Schweiz, NIS2 und DSGVO, Notfallplan für Unternehmen in Österreich und Deutschland): https://datenschutz-kroes.at/datenschutz-blog/blackout-ki-angriffe-kritische-infrastruktur/
 - Downloads: https://datenschutz-kroes.at/downloads.html
 - Impressum: https://datenschutz-kroes.at/impressum.html
 

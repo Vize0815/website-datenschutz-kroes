@@ -260,6 +260,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://datenschutz-kroes.at/datenschutz-blog/blackout-ki-angriffe-kritische-infrastruktur/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Rechtliches -->
   <url>

@@ -34,6 +34,7 @@
 | `/datenschutz.html` | Datenschutzerklärung | Datenschutz-Information nach DSGVO |
 | `/newsletter-leseprobe.html` | Newsflash – Leseprobe | Leseprobe des monatlichen Newsletters |
 | `/datenschutz-blog/schreiben-datenschutzbehoerde-richtig-reagieren/` | Schreiben der Datenschutzbehörde erhalten? Der Leitfaden für Österreich und Deutschland | Blogbeitrag: Reaktion auf Post von der Datenschutzbehörde, mit Checkliste |
+| `/datenschutz-blog/blackout-ki-angriffe-kritische-infrastruktur/` | Blackout durch KI Angriff: Was die Szenarien aus der Schweiz für Unternehmen in Österreich und Deutschland bedeuten | Blogbeitrag: KI Angriffe auf kritische Infrastruktur, Blackout Szenarien, NIS2, Notfallplan |
 
 ---
 
@@ -1139,6 +1140,31 @@ Checkliste zum Abhaken (PDF, 3 Seiten) im Downloadbereich: https://datenschutz-k
 - **Erfahre ich, wer sich beschwert hat?** Häufig steht der Name schon im Schreiben. Akteneinsicht möglich, Teile können geschwärzt sein.
 - **Endet jedes Verfahren mit einem Bußgeld?** Nein. Häufig Einstellung, Hinweis, Verwarnung oder Anweisung.
 - **Brauche ich einen Datenschutzbeauftragten?** Ist einer benannt, gehört er von Anfang an dazu. Ohne DSB lohnt externe Unterstützung.
+
+---
+
+# 11. Blogbeitrag: Blackout durch KI Angriff (datenschutz-blog/blackout-ki-angriffe-kritische-infrastruktur/)
+
+**URL:** https://datenschutz-kroes.at/datenschutz-blog/blackout-ki-angriffe-kritische-infrastruktur/
+**Veröffentlicht:** 27. November 2026 · **Autor:** Alexander Kroes · **Kategorie:** IT-Sicherheit & Recht
+**Meta-Description:** Die Schweiz meldet erste Angriffe mit KI Agenten auf kritische Infrastruktur. Was die Blackout Szenarien des Bundes zeigen, was NIS2 und DSGVO verlangen und wie Sie Ihr Unternehmen in sechs Schritten vorbereiten.
+
+## Das Wichtigste in Kürze
+- Das Schweizer Bundesamt für Cybersicherheit (BACS) bestätigt erstmals Angriffe mit KI Agenten auf kritische Infrastruktur (Bericht 20 Minuten, 27.11.2026).
+- Szenario Stromausfall des Bundesamts für Bevölkerungsschutz (BABS): ein bis vier Tage Blackout, rund 320 Todesopfer, 2,7 Mrd. Franken wirtschaftlicher Ausfall.
+- KI Agenten nutzen vor allem Standardpasswörter und bekannte, nicht geschlossene Sicherheitslücken.
+- NIS2 verlangt Aufrechterhaltung des Betriebs, Datensicherung, Wiederherstellung und Krisenmanagement (Art. 21 Abs. 2 lit. c). Österreich: § 32 NISG 2026, Deutschland: § 30 BSIG.
+- Die DSGVO verlangt rasche Wiederherstellung der Verfügbarkeit (Art. 32) und Meldung von Datenpannen binnen 72 Stunden (Art. 33).
+
+## Notfallplan in sechs Schritten
+1. Einfallstore schließen: Werkspasswörter ändern, Updates einspielen, ungenutzte Fernzugänge abschalten
+2. Kritische Abläufe und maximale Ausfallzeiten festlegen
+3. Mehrfaktor Anmeldung ohne SMS absichern
+4. Datensicherung offline aufbewahren und Wiederherstellung testen
+5. Notfallhandbuch mit Kontakten auf Papier
+6. Ausfall einmal im Jahr am Tisch üben
+
+**Downloads im Beitrag:** NIS2 Selbstcheck, NIS2 Risikoanalyse und NIS2 Quick Steps, jeweils für Österreich und Deutschland.
 
 ---
 
