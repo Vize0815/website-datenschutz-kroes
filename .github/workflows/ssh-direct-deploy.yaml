@@ -50,4 +50,5 @@ jobs:
             ./ "$SSH_USER@$SSH_HOST:~/"
           # Frueher mitkopierte Werkzeugdatei vom Webspace entfernen
           # 26.11.2026: ungenutzten Quiz Endpoint samt Protokoll entfernen
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -f ~/.gitignore ~/quiz-lead.php ~/quiz-lead.log"
+          # 27.11.2026: altes Deckblatt NIS2 Management Briefing entfernen
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -f ~/.gitignore ~/quiz-lead.php ~/quiz-lead.log ~/NIS2-Leitfaden-Deckblatt.jpg"
