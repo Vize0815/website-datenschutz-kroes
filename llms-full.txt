@@ -807,7 +807,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Datei:** `Checkliste_Schreiben_Datenschutzbehoerde_Datenschutz_Kroes.pdf`
 **Beschreibung:** Zehn Schritte vom Eingang des Schreibens bis zur Archivierung, mit Feldern für Aktenzeichen, Frist und interne Vorfrist. Dazu die Einordnung des Schreibens, der Aufbau jeder Antwort in vier Bausteinen und die wichtigsten Fristen für Österreich und Deutschland. Passend zum Blogbeitrag in Abschnitt 10.
 
-## Leitfäden (5 Dokumente)
+## Leitfäden (6 Dokumente)
 
 ### NIS2 Management Briefing Österreich
 **Format:** PDF (14 Seiten)
@@ -819,10 +819,15 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Datei:** `NIS2-Management-Briefing-Deutschland.pdf`
 **Beschreibung:** Überblick über NIS2 für Geschäftsführungen nach BSIG, Stand November 2026: wer betroffen ist, persönliche Haftung und Schulungspflicht der Geschäftsleitung nach § 38, das BSIG gilt seit 6. Dezember 2025 ohne Übergangsfrist, und eine Selbsteinschätzung des Handlungsbedarfs in fünf Minuten.
 
-### Risikoanalyse nach NIS2
-**Format:** PDF (6 Seiten)
+### NIS2 Risikoanalyse Österreich
+**Format:** PDF (10 Seiten)
 **Datei:** `Risikoanalyse-nach-NIS2.pdf`
-**Beschreibung:** Schritt-für-Schritt-Anleitung zur systematischen Risikoanalyse nach NIS2 — der zentralen Grundlage von NIS2: Bedrohungen und Schwachstellen erkennen, Auswirkungen bewerten, angemessene Schutzmaßnahmen einleiten.
+**Beschreibung:** Leitfaden zur Risikoanalyse nach § 32 NISG 2026, Stand November 2026: fünf Schritte vom Geltungsbereich bis zur laufenden Überprüfung, 5 × 5 Risikomatrix mit klaren Kriterien, Muster für das Risikoregister und die zehn Mindestmaßnahmen nach NIS2 als Checkliste zum Ankreuzen.
+
+### NIS2 Risikoanalyse Deutschland
+**Format:** PDF (11 Seiten)
+**Datei:** `NIS2-Risikoanalyse-Deutschland.pdf`
+**Beschreibung:** Leitfaden zur Risikoanalyse nach § 30 BSIG, Stand November 2026: fünf Schritte vom Geltungsbereich bis zur laufenden Überprüfung, 5 × 5 Risikomatrix mit klaren Kriterien, Muster für das Risikoregister und die zehn Mindestmaßnahmen nach NIS2 als Checkliste zum Ankreuzen.
 
 ### DSGVO – in 3 Schritten zu Ihrem Quick-Check
 **Format:** PDF (8 Seiten)
