@@ -780,12 +780,17 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 
 **Filter-Kategorien:** Alle / Checklisten / Leitfäden / Vorlagen
 
-## Checklisten (2 Dokumente)
+## Checklisten (3 Dokumente)
 
-### NIS2-Selbstcheck für Unternehmen
-**Format:** PDF (2 Seiten)
+### NIS2 Selbstcheck Österreich
+**Format:** PDF (11 Seiten)
 **Datei:** `NIS2-Selbstcheck-Unternehmen.pdf`
-**Beschreibung:** Mit nur 10 Fragen zu mehr Klarheit und Sicherheit für Ihr Unternehmen. Die NIS2-Richtlinie betrifft deutlich mehr Unternehmen als ihr Vorgänger NIS — von kritischen Infrastrukturen bis hin zu zahlreichen Dienstleistern. Doch wer genau ist betroffen und wer nicht? Mit diesem Quick-Check prüfen Sie, ob Ihr Unternehmen unter die NIS2-Richtlinie fällt.
+**Beschreibung:** Selbstcheck für Geschäftsführungen nach NISG 2026, Stand November 2026. 14 Fragen in zwei Teilen zum Ankreuzen: Teil A (6 Fragen) klärt, ob das Unternehmen als wesentliche oder wichtige Einrichtung gilt oder indirekt über Kunden betroffen ist. Teil B (8 Fragen) zeigt den Umsetzungsstand. Registrierung beim Bundesamt für Cybersicherheit bis 31. Dezember 2026.
+
+### NIS2 Selbstcheck Deutschland
+**Format:** PDF (11 Seiten)
+**Datei:** `NIS2-Selbstcheck-Deutschland.pdf`
+**Beschreibung:** Selbstcheck für Geschäftsführungen nach BSIG, Stand November 2026. 14 Fragen in zwei Teilen zum Ankreuzen: Teil A (6 Fragen) klärt, ob das Unternehmen als besonders wichtige oder wichtige Einrichtung gilt oder indirekt über Kunden betroffen ist. Teil B (8 Fragen) zeigt den Umsetzungsstand. Das BSIG gilt seit 6. Dezember 2025.
 
 ### Schreiben der Datenschutzbehörde erhalten? Die Checkliste zum Abhaken
 **Format:** PDF (3 Seiten)
