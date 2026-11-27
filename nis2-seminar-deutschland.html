@@ -425,21 +425,24 @@
     @media (max-width: 600px) { .seminar-testimonials__grid { grid-template-columns: 1fr; } }
 
     /* ===== CTA BAND ===== */
-    .nis2-cta-band { background: #ffffff; padding: 80px 0; }
-    .nis2-cta-band__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
     .nis2-cta-band__text { font-size: clamp(20px, 2.5vw, 28px); font-weight: 500; color: var(--color-navy); line-height: 1.35; }
     .nis2-cta-band__sub { font-size: 15px; font-weight: 300; color: var(--color-slate); margin-top: 12px; }
-    .nis2-cta-band__img { border-radius: var(--radius-lg); overflow: hidden; display: flex; justify-content: center; }
-    .nis2-cta-band__img img { width: 394px; height: 559px; object-fit: cover; border-radius: var(--radius-lg); border: 2px solid var(--color-navy); }
-    .nis2-cta-pair { background: #ffffff; padding: 0 0 56px; }
+    .nis2-cta-pair { background: #ffffff; padding: 56px 0; }
     .nis2-cta-pair__grid { display: grid; grid-template-columns: 1fr; gap: 56px; }
     .nis2-cta-pair__item { display: flex; flex-direction: column; align-items: flex-start; }
     .nis2-cta-pair__img { width: 100%; max-width: 320px; margin-bottom: 28px; }
     .nis2-cta-pair__img img { display: block; width: 100%; height: auto; aspect-ratio: 394 / 559; object-fit: cover; border-radius: var(--radius-lg); border: 2px solid var(--color-navy); }
     .nis2-cta-pair__cta { margin-top: auto; }
+    .nis2-cta-pair__foot { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--color-mist); display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; font-size: 13px; color: var(--color-slate-light); }
+    .nis2-cta-pair__foot .nis2-cta-band__more { margin-top: 0; }
     @media (min-width: 769px) {
-      .nis2-cta-pair { padding-bottom: 80px; }
-      .nis2-cta-pair__grid { grid-template-columns: 1fr 1fr; gap: 72px; }
+      .nis2-cta-pair { padding: 80px 0; }
+      .nis2-cta-pair__grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+      .nis2-cta-pair .nis2-cta-band__text { font-size: clamp(18px, 1.9vw, 24px); }
+      .nis2-cta-pair .nis2-cta-band__sub { font-size: 14px; }
+    }
+    @media (min-width: 1025px) {
+      .nis2-cta-pair__grid { gap: 48px; }
     }
     .nis2-cta-band__more { display: inline-block; margin-top: 18px; font-size: 14px; color: var(--color-navy); text-decoration: underline; text-underline-offset: 3px; }
     .btn-outline-gold {
@@ -485,7 +488,6 @@
       .container { padding: 0 32px; }
       .page-hero__inner { gap: 48px; }
       .seminar-content__grid { gap: 48px; }
-      .nis2-cta-band__inner { gap: 48px; }
       .footer__grid { grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
     }
     @media (max-width: 1024px) {
@@ -502,7 +504,6 @@
       .seminar-content__grid { grid-template-columns: 1fr; }
       .seminar-form__wrap { position: static; }
       .sf-field--row { grid-template-columns: 1fr; }
-      .nis2-cta-band__inner { grid-template-columns: 1fr; }
       .footer__grid { grid-template-columns: 1fr; gap: 36px; }
       .footer__bottom { flex-direction: column; align-items: center; text-align: center; }
       .footer__made-by { position: static; transform: none; }
@@ -1244,33 +1245,27 @@
       </div>
     </section>
 
-    <!-- PDF DOWNLOAD BAND -->
-    <section class="nis2-cta-band">
-      <div class="container">
-        <div class="nis2-cta-band__inner">
-          <div class="nis2-cta-band__img">
-            <img src="NIS2-Management-Briefing-Deutschland.webp" alt="NIS2 Management Briefing Deutschland, Deckblatt">
-          </div>
-          <div>
-            <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold);margin-bottom:12px;">Kostenloser Download</p>
-            <p class="nis2-cta-band__text">PDF Handout „NIS2 Management Briefing“, jetzt kostenlos herunterladen</p>
-            <p class="nis2-cta-band__sub">Was Geschäftsführungen zu NIS2 jetzt wissen müssen: Pflichten, Haftung und erste Schritte auf 14 Seiten. Ideal zur Vorbereitung oder als Nachschlagewerk.</p>
-            <a href="NIS2-Management-Briefing-Deutschland.pdf" download class="btn-download" style="display:inline-flex;width:auto;margin-top:28px;">
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                <path d="M7.5 1v9M4.5 7l3 3 3-3M2 12h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Management Briefing herunterladen
-            </a>
-            <p style="font-size:12px;color:var(--color-slate-light);margin-top:10px;">Kein E-Mail-Pflichtfeld, keine Registrierung – garantiert kostenlos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SELBSTCHECK UND QUICK STEPS NEBENEINANDER -->
+    <!-- DOWNLOADS NEBENEINANDER: BRIEFING, SELBSTCHECK, QUICK STEPS -->
     <section class="nis2-cta-pair">
       <div class="container">
         <div class="nis2-cta-pair__grid">
+          <article class="nis2-cta-pair__item">
+            <div class="nis2-cta-pair__img">
+              <img src="NIS2-Management-Briefing-Deutschland.webp" alt="NIS2 Management Briefing Deutschland, Deckblatt" loading="lazy">
+            </div>
+            <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold);margin-bottom:12px;">Kostenloser Download</p>
+            <p class="nis2-cta-band__text">NIS2 Management Briefing Deutschland: Sie haften, nicht Ihre IT.</p>
+            <p class="nis2-cta-band__sub">Was Geschäftsführungen zu NIS2 jetzt wissen müssen: Pflichten, Haftung und erste Schritte auf 14 Seiten. Ideal zur Vorbereitung oder als Nachschlagewerk.</p>
+            <div class="nis2-cta-pair__cta">
+              <a href="NIS2-Management-Briefing-Deutschland.pdf" download class="btn-download" style="display:inline-flex;width:auto;margin-top:24px;">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path d="M7.5 1v9M4.5 7l3 3 3-3M2 12h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Briefing herunterladen
+              </a>
+            </div>
+          </article>
           <article class="nis2-cta-pair__item">
             <div class="nis2-cta-pair__img">
               <img src="NIS2-Selbstcheck-Deutschland.webp" alt="NIS2 Selbstcheck Deutschland, Deckblatt" loading="lazy">
@@ -1285,8 +1280,6 @@
                 </svg>
                 Selbstcheck herunterladen
               </a>
-              <br>
-              <a href="downloads.html" class="nis2-cta-band__more">Alle kostenlosen Unterlagen im Downloadbereich</a>
             </div>
           </article>
           <article class="nis2-cta-pair__item">
@@ -1303,10 +1296,12 @@
                 </svg>
                 Quick Steps herunterladen
               </a>
-              <br>
-              <a href="downloads.html" class="nis2-cta-band__more">Alle kostenlosen Unterlagen im Downloadbereich</a>
             </div>
           </article>
+        </div>
+        <div class="nis2-cta-pair__foot">
+          <p>Kein E-Mail-Pflichtfeld, keine Registrierung – garantiert kostenlos.</p>
+          <a href="downloads.html" class="nis2-cta-band__more">Alle kostenlosen Unterlagen im Downloadbereich</a>
         </div>
       </div>
     </section>
