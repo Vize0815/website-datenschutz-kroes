@@ -307,6 +307,28 @@
     .article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--color-mist); }
     .article-tag { display: inline-flex; align-items: center; padding: 6px 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--color-slate); background: var(--color-bg); border-radius: 100px; }
 
+    /* ===== LEITFADEN DOWNLOAD (wie Whitepaper Boxen anderer Beitraege) ===== */
+    .wp-deepdive { background: var(--color-surface); padding: 72px 0 88px; border-top: 1px solid var(--color-mist); }
+    .wp-deepdive__inner { max-width: 980px; margin: 0 auto; }
+    .wp-deepdive__eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 12px; text-align: center; }
+    .wp-deepdive__title { font-size: clamp(24px, 3vw, 32px); font-weight: 500; color: var(--color-navy); line-height: 1.25; letter-spacing: -0.015em; text-align: center; margin-bottom: 14px; }
+    .wp-deepdive__lead { font-size: 15.5px; font-weight: 300; color: var(--color-slate); line-height: 1.7; text-align: center; max-width: 600px; margin: 0 auto 44px; }
+    .wp-deepdive__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .wp-card { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 24px; background: var(--color-surface); border: 1px solid var(--color-mist); border-radius: var(--radius-lg); transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base); }
+    .wp-card:hover { border-color: var(--color-gold-light); box-shadow: var(--shadow-card); transform: translateY(-2px); }
+    .wp-card__thumb { width: 110px; height: 142px; border-radius: var(--radius-sm); overflow: hidden; background: var(--color-sky-tint); border: 1px solid var(--color-mist); }
+    .wp-card__thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .wp-card__body { display: flex; flex-direction: column; }
+    .wp-card__country { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-prussian); margin-bottom: 6px; }
+    .wp-card__title { font-size: 17px; font-weight: 500; color: var(--color-navy); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 8px; }
+    .wp-card__desc { font-size: 13.5px; font-weight: 300; color: var(--color-slate); line-height: 1.6; margin-bottom: 16px; }
+    .wp-card__btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font-size: 13px; font-weight: 600; color: var(--color-navy); background: var(--color-gold); border-radius: var(--radius-md); transition: background var(--transition-base), transform var(--transition-base); align-self: flex-start; margin-top: auto; }
+    .wp-card__btn:hover { background: #e0bc5a; transform: translateY(-1px); }
+    @media (max-width: 480px) {
+      .wp-card { grid-template-columns: 84px 1fr; gap: 14px; padding: 18px; }
+      .wp-card__thumb { width: 84px; height: 108px; }
+    }
+
     /* ===== END CTA ===== */
     .end-cta { background: #F4F5F7; padding: 96px 0; position: relative; overflow: hidden; }
     .end-cta::before, .end-cta::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 80px; height: 1px; background: var(--color-gold); }
@@ -369,6 +391,10 @@
       .article-body__inner { font-size: 16.5px; }
       .step-card { padding: 28px 24px 24px; }
       .end-cta { padding: 72px 0; }
+      .wp-deepdive { padding: 56px 0 64px; }
+      .wp-deepdive__lead { margin-bottom: 32px; }
+      .wp-deepdive__grid { grid-template-columns: 1fr; gap: 16px; }
+      .wp-card__body { min-width: 0; }
       .footer__grid { grid-template-columns: 1fr; gap: 36px; }
       .footer__bottom { flex-direction: column; align-items: center; text-align: center; }
       .footer__made-by { position: static; transform: none; }
@@ -855,6 +881,49 @@
         </div>
       </div>
     </article>
+
+    <!-- ===== LEITFADEN DSGVO UND KI ===== -->
+    <section class="wp-deepdive" aria-label="Praxisleitfaden DSGVO und KI zum Download">
+      <div class="container">
+        <div class="wp-deepdive__inner">
+          <p class="wp-deepdive__eyebrow">Weiterführend · Kostenlos</p>
+          <h2 class="wp-deepdive__title">KI nutzen, Datenschutz im Griff: Praxisleitfaden zum Download</h2>
+          <p class="wp-deepdive__lead">
+            10 Praxistipps, wie Sie ChatGPT, Copilot und Co. rechtssicher einsetzen, ohne Innovation auszubremsen. Mit Zeitplan der KI Verordnung und DSFA Fragebogen zum Ausfüllen, pro Land getrennt.
+          </p>
+          <div class="wp-deepdive__grid">
+            <a href="../../Praxis-Leitfaden-DSGVO-KI.pdf" download class="wp-card" aria-label="Praxisleitfaden DSGVO und KI Österreich herunterladen (PDF)">
+              <div class="wp-card__thumb">
+                <img src="../../Praxis-Leitfaden-DSGVO-KI-Oesterreich.webp" alt="Praxisleitfaden DSGVO und KI Österreich, Deckblatt" width="110" height="142" loading="lazy">
+              </div>
+              <div class="wp-card__body">
+                <p class="wp-card__country">Österreich · DSGVO · DSG</p>
+                <h3 class="wp-card__title">Praxisleitfaden DSGVO und KI, Österreich</h3>
+                <p class="wp-card__desc">Von der Rechtsgrundlage über Schatten KI und Datenschutz Folgenabschätzung bis zur Dokumentation, nach DSGVO und DSG. 12 Seiten, Stand November 2026.</p>
+                <span class="wp-card__btn">
+                  Herunterladen
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </a>
+            <a href="../../Praxis-Leitfaden-DSGVO-KI-Deutschland.pdf" download class="wp-card" aria-label="Praxisleitfaden DSGVO und KI Deutschland herunterladen (PDF)">
+              <div class="wp-card__thumb">
+                <img src="../../Praxis-Leitfaden-DSGVO-KI-Deutschland.webp" alt="Praxisleitfaden DSGVO und KI Deutschland, Deckblatt" width="110" height="142" loading="lazy">
+              </div>
+              <div class="wp-card__body">
+                <p class="wp-card__country">Deutschland · DSGVO · BDSG</p>
+                <h3 class="wp-card__title">Praxisleitfaden DSGVO und KI, Deutschland</h3>
+                <p class="wp-card__desc">Von der Rechtsgrundlage über Schatten KI und Datenschutz Folgenabschätzung bis zur Dokumentation, nach DSGVO und BDSG. 14 Seiten, Stand November 2026.</p>
+                <span class="wp-card__btn">
+                  Herunterladen
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v8M3 7l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ===== END CTA ===== -->
     <section class="end-cta" aria-label="Kontakt-Aufruf">
