@@ -79,6 +79,9 @@ Options -Indexes
   RewriteRule ^nis2-schulung-deutschland\.html$ /nis2-seminar-deutschland.html [R=301,L]
   RewriteRule ^dsgvo-seminar\.html$ /dsgvo-seminar-oesterreich.html [R=301,L]
 
+  # Portraet als PNG ersetzt durch JPG, alte Links aus Vorschauen (27.11.2026)
+  RewriteRule ^alexander-kroes\.png$ /alexander-kroes.jpg [R=301,L]
+
   # 951 Impr. | Position 25,5
   RewriteRule ^downloads/?$ /downloads.html [R=301,L]
 

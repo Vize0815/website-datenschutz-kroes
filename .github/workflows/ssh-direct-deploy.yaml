@@ -37,6 +37,14 @@ jobs:
           SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -rf ~/html && echo 'html folder removed'"
 
+      - name: Remove orphaned files before upload
+        # Vor dem Upload, damit rsync genug Platz fuer seine Zwischenkopien hat
+        # 27.11.2026: verwaiste Dateien laut Auswertung server-usage.yaml entfernen
+        # (alte Seiten mit 301 in .htaccess, alte PHP Formulare, alte Schriften und Bilder)
+        run: |
+          SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "rm -f ~/PECBWebinar.webp ~/'Alexander Kroes - PECBWebinar.webp' ~/nis2-seminar.html ~/nis2-schulung-deutschland.html ~/dsgvo-seminar.html ~/partnerprogramm/onepager.htm ~/fonts/poppins-400-latin.woff2 ~/fonts/poppins-600-latin.woff2 ~/fonts/poppins-700-latin.woff2 ~/seminar-anfrage.php ~/rueckruf.php ~/alexander-kroes.png && echo 'verwaiste Dateien entfernt'"
+
       - name: Deploy files directly to webroot
         run: |
           SSH_USER="${{ secrets[env.SSH_USERNAME_SECRET] }}"
