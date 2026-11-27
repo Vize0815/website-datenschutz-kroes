@@ -807,7 +807,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Datei:** `Checkliste_Schreiben_Datenschutzbehoerde_Datenschutz_Kroes.pdf`
 **Beschreibung:** Zehn Schritte vom Eingang des Schreibens bis zur Archivierung, mit Feldern für Aktenzeichen, Frist und interne Vorfrist. Dazu die Einordnung des Schreibens, der Aufbau jeder Antwort in vier Bausteinen und die wichtigsten Fristen für Österreich und Deutschland. Passend zum Blogbeitrag in Abschnitt 10.
 
-## Leitfäden (7 Dokumente)
+## Leitfäden (8 Dokumente)
 
 ### NIS2 Management Briefing Österreich
 **Format:** PDF (14 Seiten)
@@ -829,10 +829,15 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Datei:** `NIS2-Risikoanalyse-Deutschland.pdf`
 **Beschreibung:** Leitfaden zur Risikoanalyse nach § 30 BSIG, Stand November 2026: fünf Schritte vom Geltungsbereich bis zur laufenden Überprüfung, 5 × 5 Risikomatrix mit klaren Kriterien, Muster für das Risikoregister und die zehn Mindestmaßnahmen nach NIS2 als Checkliste zum Ankreuzen.
 
-### DSGVO – in 3 Schritten zu Ihrem Quick-Check
-**Format:** PDF (8 Seiten)
+### DSGVO Quick Check Österreich
+**Format:** PDF (10 Seiten)
 **Datei:** `Praxis Leitfaden DSGVO Check.pdf`
-**Beschreibung:** Strukturierter DSGVO-Check in drei Schritten — ohne Juristendeutsch. Worauf es wirklich ankommt, wo häufig Lücken entstehen, wie gegensteuern.
+**Beschreibung:** DSGVO Quick Check für Geschäftsführungen nach DSGVO und DSG, Stand November 2026: in drei Schritten Standort bestimmen, Risiken bewerten und Maßnahmen priorisieren. 13 Fragen zum Ankreuzen mit Auswertung, von Verantwortung über Auftragsverarbeitung bis zur Datenschutz Folgenabschätzung.
+
+### DSGVO Quick Check Deutschland
+**Format:** PDF (10 Seiten)
+**Datei:** `DSGVO-Quick-Check-Deutschland.pdf`
+**Beschreibung:** DSGVO Quick Check für Geschäftsführungen nach DSGVO und BDSG, Stand November 2026: in drei Schritten Standort bestimmen, Risiken bewerten und Maßnahmen priorisieren. 13 Fragen zum Ankreuzen mit Auswertung, von Verantwortung über Auftragsverarbeitung bis zur Datenschutz Folgenabschätzung.
 
 ### Praxisleitfaden DSGVO und KI Österreich
 **Format:** PDF (12 Seiten)
