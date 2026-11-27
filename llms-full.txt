@@ -807,12 +807,17 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Datei:** `Checkliste_Schreiben_Datenschutzbehoerde_Datenschutz_Kroes.pdf`
 **Beschreibung:** Zehn Schritte vom Eingang des Schreibens bis zur Archivierung, mit Feldern für Aktenzeichen, Frist und interne Vorfrist. Dazu die Einordnung des Schreibens, der Aufbau jeder Antwort in vier Bausteinen und die wichtigsten Fristen für Österreich und Deutschland. Passend zum Blogbeitrag in Abschnitt 10.
 
-## Leitfäden (5 Dokumente)
+## Leitfäden (6 Dokumente)
 
-### NIS2 – Management Briefing
+### NIS2 Management Briefing Österreich
 **Format:** PDF (14 Seiten)
 **Datei:** `NIS2 - Management Briefing.pdf`
-**Beschreibung:** Klarer, praxisorientierter Überblick über die NIS2-Richtlinie für Führungskräfte — ohne technischen Fachjargon. Welche Unternehmen sind betroffen, welche Pflichten ergeben sich, welche Konsequenzen drohen bei Nichteinhaltung.
+**Beschreibung:** Überblick über NIS2 für Geschäftsführungen nach NISG 2026, Stand November 2026: wer betroffen ist, Pflichten der Geschäftsführung nach § 31, Registrierung beim Bundesamt für Cybersicherheit bis 31. Dezember 2026 und eine Selbsteinschätzung des Handlungsbedarfs in fünf Minuten.
+
+### NIS2 Management Briefing Deutschland
+**Format:** PDF (14 Seiten)
+**Datei:** `NIS2-Management-Briefing-Deutschland.pdf`
+**Beschreibung:** Überblick über NIS2 für Geschäftsführungen nach BSIG, Stand November 2026: wer betroffen ist, persönliche Haftung und Schulungspflicht der Geschäftsleitung nach § 38, das BSIG gilt seit 6. Dezember 2025 ohne Übergangsfrist, und eine Selbsteinschätzung des Handlungsbedarfs in fünf Minuten.
 
 ### Risikoanalyse nach NIS2
 **Format:** PDF (6 Seiten)
