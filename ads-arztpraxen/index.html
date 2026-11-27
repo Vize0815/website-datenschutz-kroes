@@ -243,7 +243,7 @@ button{font-family:inherit;border:none;cursor:pointer}
   <div class="w hdr-in">
     <a href="../index.html"><img class="hdr-logo" src="../logo-datenschutz-kroes.png" alt="Datenschutz Kroes"></a>
     <div class="hdr-right">
-      <a href="#anfragen" class="btn btn-gold btn-sm">Erstgespräch sichern</a>
+      <a href="#anfragen" class="btn btn-gold btn-sm">Strategiegespräch sichern</a>
     </div>
   </div>
 </header>
@@ -260,7 +260,7 @@ button{font-family:inherit;border:none;cursor:pointer}
           <span class="hero-proof-txt"><strong>Über 50 Praxen und Unternehmen</strong> vertrauen Datenschutz Kroes</span>
         </div>
         <div class="hero-cta">
-          <a href="#anfragen" class="btn btn-gold">Kostenloses Erstgespräch sichern →</a>
+          <a href="#anfragen" class="btn btn-gold">Strategiegespräch sichern →</a>
         </div>
         <div class="hero-chips">
           <span class="hero-chip">Zertifizierter DSB</span>
@@ -413,7 +413,7 @@ button{font-family:inherit;border:none;cursor:pointer}
         <p class="vs-head">Datenschutzanwalt</p>
         <div class="vs-items">
           <div>
-            <p class="vs-item-lbl">Erstgespräch</p>
+            <p class="vs-item-lbl">Strategiegespräch</p>
             <p class="vs-item-val">Oftmals bereits kostenpflichtig. Stundenhonorar ab +200 €.</p>
           </div>
           <div>
@@ -439,7 +439,7 @@ button{font-family:inherit;border:none;cursor:pointer}
         <p class="vs-head">Datenschutz Kroes · Paket S</p>
         <div class="vs-items">
           <div>
-            <p class="vs-item-lbl">Erstgespräch</p>
+            <p class="vs-item-lbl">Strategiegespräch</p>
             <p class="vs-item-val"><span class="hi">Kostenlos</span></p>
           </div>
           <div>
@@ -520,7 +520,7 @@ button{font-family:inherit;border:none;cursor:pointer}
   <div class="w">
     <div class="form-wrap">
       <div>
-        <p class="fl-eye">Kostenloses Erstgespräch</p>
+        <p class="fl-eye">Strategiegespräch</p>
         <h2 class="fl-h2">Persönlicher Rückruf innerhalb von 24 Stunden. Oder buchen Sie Ihren Wunschtermin direkt in meinem Kalender.</h2>
         <p class="fl-sub">Beantworten Sie 3 kurze Fragen, damit ich mich optimal auf unser Gespräch vorbereiten kann. Unverbindlich. Kostenlos.</p>
         <ul class="fl-items">
@@ -600,7 +600,7 @@ button{font-family:inherit;border:none;cursor:pointer}
               <input type="tel" id="f_tel" name="telefon" placeholder="+43 ..." required>
             </div>
             <p class="f-err" id="err2">Bitte füllen Sie alle Felder aus.</p>
-            <button type="submit" class="btn-submit" id="submit-btn">Kostenloses Erstgespräch anfragen →</button>
+            <button type="submit" class="btn-submit" id="submit-btn">Strategiegespräch anfragen →</button>
             <p class="f-priv">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer <a href="../datenschutz.html" target="_blank">Datenschutzerklärung</a> zu.</p>
           </div>
         </form>
@@ -637,7 +637,7 @@ button{font-family:inherit;border:none;cursor:pointer}
       </div>
       <div class="faq-item">
         <div class="faq-q">Was kostet ein externer Datenschutzbeauftragter für Arztpraxen? <span class="faq-ico">+</span></div>
-        <div class="faq-a"><p>Die Kosten richten sich nach Größe und Komplexität Ihrer Praxis. Im kostenlosen Erstgespräch erstellen wir gemeinsam ein transparentes Paket. Die Kosten sind ein Bruchteil der möglichen Bußgelder und schützen vor erheblichen Reputationsschäden.</p></div>
+        <div class="faq-a"><p>Die Kosten richten sich nach Größe und Komplexität Ihrer Praxis. Im Strategiegespräch erstellen wir gemeinsam ein transparentes Paket. Die Kosten sind ein Bruchteil der möglichen Bußgelder und schützen vor erheblichen Reputationsschäden.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Wie lange dauert die DSGVO-Ersteinrichtung? <span class="faq-ico">+</span></div>
@@ -658,10 +658,10 @@ button{font-family:inherit;border:none;cursor:pointer}
 <section class="scta">
   <div class="w">
     <div class="scta-in">
-      <p class="sec-eye">Kostenloses Erstgespräch</p>
+      <p class="sec-eye">Strategiegespräch</p>
       <h2 class="scta-h2">Bereit für DSGVO-Sicherheit in Ihrer Praxis?</h2>
       <p class="scta-sub">Unverbindlich. Kostenlos. Alexander Kroes meldet sich innerhalb von 24 Stunden persönlich bei Ihnen.</p>
-      <a href="#anfragen" class="btn btn-gold">Jetzt Erstgespräch sichern →</a>
+      <a href="#anfragen" class="btn btn-gold">Jetzt Strategiegespräch sichern →</a>
     </div>
   </div>
 </section>
@@ -722,7 +722,7 @@ document.getElementById('lpform').addEventListener('submit', async function(e) {
       const anrede = encodeURIComponent(document.getElementById('f_anrede').value);
       window.location.href = '../danke/?n=' + nachname + '&a=' + anrede;
     } else { throw new Error(); }
-  } catch { btn.disabled = false; btn.textContent = 'Kostenloses Erstgespräch anfragen →'; alert('Fehler beim Senden. Bitte schreiben Sie an info@datenschutz-kroes.at'); }
+  } catch { btn.disabled = false; btn.textContent = 'Strategiegespräch anfragen →'; alert('Fehler beim Senden. Bitte schreiben Sie an info@datenschutz-kroes.at'); }
 });
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
