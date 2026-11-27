@@ -807,7 +807,7 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Datei:** `Checkliste_Schreiben_Datenschutzbehoerde_Datenschutz_Kroes.pdf`
 **Beschreibung:** Zehn Schritte vom Eingang des Schreibens bis zur Archivierung, mit Feldern für Aktenzeichen, Frist und interne Vorfrist. Dazu die Einordnung des Schreibens, der Aufbau jeder Antwort in vier Bausteinen und die wichtigsten Fristen für Österreich und Deutschland. Passend zum Blogbeitrag in Abschnitt 10.
 
-## Leitfäden (6 Dokumente)
+## Leitfäden (5 Dokumente)
 
 ### NIS2 Management Briefing Österreich
 **Format:** PDF (14 Seiten)
@@ -823,11 +823,6 @@ Pflichtfelder: Anrede, Vorname, Nachname, Firma, E-Mail, Telefon, Anzahl Teilneh
 **Format:** PDF (6 Seiten)
 **Datei:** `Risikoanalyse-nach-NIS2.pdf`
 **Beschreibung:** Schritt-für-Schritt-Anleitung zur systematischen Risikoanalyse nach NIS2 — der zentralen Grundlage von NIS2: Bedrohungen und Schwachstellen erkennen, Auswirkungen bewerten, angemessene Schutzmaßnahmen einleiten.
-
-### NIS2-Quick-Steps – Wie kann ich heute mit der Umsetzung beginnen?
-**Format:** PDF (5 Seiten)
-**Datei:** `Quick-Steps NIS2-Richtlinie.pdf`
-**Beschreibung:** Praxisnahe Quick Steps für sofortige Fortschritte Richtung NIS2-Compliance.
 
 ### DSGVO – in 3 Schritten zu Ihrem Quick-Check
 **Format:** PDF (8 Seiten)
