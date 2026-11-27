@@ -1147,7 +1147,7 @@ Checkliste zum Abhaken (PDF, 3 Seiten) im Downloadbereich: https://datenschutz-k
 
 **URL:** https://datenschutz-kroes.at/datenschutz-blog/blackout-ki-angriffe-kritische-infrastruktur/
 **Veröffentlicht:** 27. November 2026 · **Autor:** Alexander Kroes · **Kategorie:** IT-Sicherheit & Recht
-**Meta-Description:** Die Schweiz meldet erste Angriffe mit KI Agenten auf kritische Infrastruktur. Was die Blackout Szenarien des Bundes zeigen, was NIS2 und DSGVO verlangen und wie Sie Ihr Unternehmen in sechs Schritten vorbereiten.
+**Meta-Description:** Die Schweiz meldet erste Angriffe mit KI Agenten auf kritische Infrastruktur. Im Szenario des Bundes sterben bei einem Blackout rund 320 Menschen. Was NIS2 und DSGVO verlangen und wie Sie vorsorgen.
 
 ## Das Wichtigste in Kürze
 - Das Schweizer Bundesamt für Cybersicherheit (BACS) bestätigt erstmals Angriffe mit KI Agenten auf kritische Infrastruktur (Bericht 20 Minuten, 27.11.2026).
